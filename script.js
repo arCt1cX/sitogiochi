@@ -1,10 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Array of game directories
+    // Games array with additional catchphrase information
     const games = [
-        "impostor", 
-        "colorgrid", 
-        "guessthepic", 
-        "timergame"
+        {
+            id: "impostor",
+            catchphrase: "Scopri chi mente nel gruppo!"
+        },
+        {
+            id: "colorgrid",
+            catchphrase: "Indovina la cella colorata segreta!"
+        },
+        {
+            id: "guessthepic",
+            catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!"
+        },
+        {
+            id: "timergame",
+            catchphrase: "Corri contro il tempo in questa sfida di parole!"
+        }
     ];
     
     // Select the container element
@@ -38,7 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Create game title
         const title = document.createElement('h3');
-        title.textContent = formatGameName(game);
+        title.textContent = formatGameName(game.id);
+        
+        // Create catchphrase
+        const catchphrase = document.createElement('p');
+        catchphrase.className = 'game-catchphrase';
+        catchphrase.textContent = game.catchphrase;
         
         // Create play button as a button element
         const playButton = document.createElement('button');
@@ -47,11 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Add click event for navigation
         playButton.addEventListener('click', () => {
-            window.location.href = `${game}/index.html`;
+            window.location.href = `${game.id}/index.html`;
         });
         
         // Append elements to card
         card.appendChild(title);
+        card.appendChild(catchphrase);
         card.appendChild(playButton);
         
         // Append card to container
@@ -65,6 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = 'Coming Soon';
     
+    const comingSoonCatchphrase = document.createElement('p');
+    comingSoonCatchphrase.className = 'game-catchphrase';
+    comingSoonCatchphrase.textContent = 'Nuovi giochi in arrivo...';
+    
     comingSoonCard.appendChild(comingSoonTitle);
+    comingSoonCard.appendChild(comingSoonCatchphrase);
     gamesContainer.appendChild(comingSoonCard);
 }); 
