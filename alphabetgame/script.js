@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let categories = [];
     let currentCategory = '';
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    let clickedLetters = 0;
     
     // Initialize the game
     init();
@@ -53,12 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function createAlphabetButtons() {
         alphabetContainer.innerHTML = '';
         
-        // Create a button for each letter
-        alphabet.forEach(letter => {
+        // Create a button for each letter with staggered animation delay
+        alphabet.forEach((letter, index) => {
             const button = document.createElement('button');
             button.className = 'letter-button';
             button.textContent = letter;
             button.dataset.letter = letter;
+            button.style.animationDelay = `${index * 0.05}s`;
             
             // Add click event
             button.addEventListener('click', handleLetterClick);
@@ -75,16 +77,98 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        // Play sound effect (optional)
+        playClickSound();
+        
         // Add click animation
         button.classList.add('click-animation');
         
         // Disable the button
         button.classList.add('disabled');
         
+        // Track clicked letters
+        clickedLetters++;
+        
+        // Add visual feedback
+        const letter = button.dataset.letter;
+        showLetterFeedback(letter);
+        
         // Remove animation class after animation completes
         setTimeout(() => {
             button.classList.remove('click-animation');
-        }, 300);
+        }, 500);
+    }
+    
+    function showLetterFeedback(letter) {
+        // Create a floating letter that animates and fades out
+        const feedback = document.createElement('div');
+        feedback.className = 'letter-feedback';
+        feedback.textContent = letter;
+        feedback.style.position = 'fixed';
+        feedback.style.fontSize = '3rem';
+        feedback.style.fontWeight = 'bold';
+        feedback.style.color = getRandomColor();
+        feedback.style.opacity = '0';
+        feedback.style.zIndex = '1000';
+        
+        // Random position near the center
+        const randomX = Math.random() * 200 - 100;
+        const randomY = Math.random() * 200 - 100;
+        
+        feedback.style.top = `calc(50% + ${randomY}px)`;
+        feedback.style.left = `calc(50% + ${randomX}px)`;
+        feedback.style.transform = 'translate(-50%, -50%)';
+        feedback.style.pointerEvents = 'none';
+        feedback.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.7)';
+        feedback.style.transition = 'all 1s ease-out';
+        
+        document.body.appendChild(feedback);
+        
+        // Animate
+        setTimeout(() => {
+            feedback.style.opacity = '1';
+            feedback.style.transform = `translate(-50%, -50%) translateY(-100px) scale(1.5)`;
+        }, 10);
+        
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+            feedback.style.transform = `translate(-50%, -50%) translateY(-200px) scale(0.5)`;
+        }, 500);
+        
+        setTimeout(() => {
+            document.body.removeChild(feedback);
+        }, 1500);
+    }
+    
+    function getRandomColor() {
+        const colors = [
+            '#FF416C', '#12c2e9', '#56ab2f', 
+            '#6a11cb', '#f953c6', '#c94b4b', 
+            '#f46b45', '#e040fb', '#43cea2'
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+    
+    function playClickSound() {
+        // Create a quick audio feedback (can be disabled by commenting this out)
+        try {
+            const context = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = context.createOscillator();
+            const gainNode = context.createGain();
+            
+            oscillator.type = 'sine';
+            oscillator.frequency.value = 300 + Math.random() * 200;
+            gainNode.gain.value = 0.1;
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(context.destination);
+            
+            oscillator.start(0);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, context.currentTime + 0.3);
+            oscillator.stop(context.currentTime + 0.3);
+        } catch (e) {
+            console.log('Audio not supported');
+        }
     }
     
     function getRandomCategory() {
@@ -94,31 +178,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function startGame() {
-        // Hide start screen and show game screen
-        startScreen.classList.remove('active');
-        gameScreen.classList.add('active');
-        
-        // Set initial category
-        setNewCategory();
+        // Hide start screen and show game screen with animation
+        startScreen.style.opacity = '0';
+        setTimeout(() => {
+            startScreen.classList.remove('active');
+            gameScreen.classList.add('active');
+            gameScreen.style.opacity = '0';
+            
+            setTimeout(() => {
+                gameScreen.style.opacity = '1';
+                
+                // Add animation to the alphabet buttons
+                const buttons = document.querySelectorAll('.letter-button');
+                buttons.forEach((button, index) => {
+                    button.style.opacity = '0';
+                    button.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        button.style.opacity = '1';
+                        button.style.transform = 'translateY(0)';
+                    }, index * 50);
+                });
+                
+                // Set initial category
+                setNewCategory();
+            }, 50);
+        }, 300);
     }
     
     function resetGame() {
-        // Reset alphabet buttons
+        // Add some animation to the reset process
         const letterButtons = document.querySelectorAll('.letter-button');
-        letterButtons.forEach(button => {
-            button.classList.remove('disabled');
-            button.classList.remove('click-animation');
+        
+        // First fade out all buttons
+        letterButtons.forEach((button, index) => {
+            setTimeout(() => {
+                button.style.opacity = '0';
+                button.style.transform = 'translateY(20px)';
+            }, index * 30);
         });
         
-        // Set new category
-        setNewCategory();
+        // Then reset and fade them back in
+        setTimeout(() => {
+            clickedLetters = 0;
+            
+            letterButtons.forEach((button, index) => {
+                button.classList.remove('disabled');
+                button.classList.remove('click-animation');
+                
+                setTimeout(() => {
+                    button.style.opacity = '1';
+                    button.style.transform = 'translateY(0)';
+                }, index * 30);
+            });
+            
+            // Set new category
+            setNewCategory();
+        }, letterButtons.length * 30 + 200);
     }
     
     function setNewCategory() {
-        // Get a new random category
-        currentCategory = getRandomCategory();
+        // Fade out the current category
+        categoryDisplay.style.opacity = '0';
+        categoryDisplay.style.transform = 'translateY(20px)';
         
-        // Update display
-        categoryDisplay.textContent = currentCategory;
+        setTimeout(() => {
+            // Get a new random category
+            currentCategory = getRandomCategory();
+            
+            // Update display
+            categoryDisplay.textContent = currentCategory;
+            
+            // Fade in the new category
+            categoryDisplay.style.opacity = '1';
+            categoryDisplay.style.transform = 'translateY(0)';
+        }, 300);
     }
 }); 
