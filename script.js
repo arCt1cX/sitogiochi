@@ -40,15 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('h3');
         title.textContent = formatGameName(game);
         
-        // Create play link with explicit path to index.html
-        const playLink = document.createElement('a');
-        playLink.className = 'play-button';
-        playLink.textContent = 'Gioca';
-        playLink.href = game + '/index.html';  // Explicit path to index.html
+        // Create play button as a button element for better accessibility
+        const playButton = document.createElement('button');
+        playButton.className = 'play-button';
+        playButton.textContent = 'Gioca ▶';  // Add a play icon
+        
+        // Add both click event and link navigation for reliability
+        playButton.addEventListener('click', () => {
+            console.log(`Navigating to ${game}/index.html`);
+            // Try first with relative path
+            window.location.href = `${game}/index.html`;
+        });
         
         // Append elements to card
         card.appendChild(title);
-        card.appendChild(playLink);
+        card.appendChild(playButton);
         
         // Append card to container
         gamesContainer.appendChild(card);
