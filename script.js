@@ -40,15 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('h3');
         title.textContent = formatGameName(game);
         
-        // Create play button as a button element for better accessibility
+        // Create play button as a button element
         const playButton = document.createElement('button');
         playButton.className = 'play-button';
-        playButton.textContent = 'Gioca ▶';  // Add a play icon
+        playButton.textContent = 'Gioca';
         
-        // Add both click event and link navigation for reliability
+        // Add click event for navigation
         playButton.addEventListener('click', () => {
-            console.log(`Navigating to ${game}/index.html`);
-            // Try first with relative path
             window.location.href = `${game}/index.html`;
         });
         

@@ -106,10 +106,10 @@ h2 {
 }
 
 .play-button {
-    background-color: #9c27b0;  /* Solid purple background */
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border: none;
-    padding: 0.8rem 0;
+    padding: 0.7rem 0;
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -120,19 +120,16 @@ h2 {
     display: block;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;  /* Ensure it's above other elements */
+    z-index: 10;  /* Keep this to ensure it's clickable */
 }
 
-.play-button:hover, .play-button:active {
-    background-color: #7b1fa2;  /* Darker purple on hover/active */
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .play-button:active {
-    transform: scale(0.98);  /* Slight press effect */
+    transform: scale(0.98);  /* Keep the slight press effect */
 }
 
 /* Coming Soon Card */
