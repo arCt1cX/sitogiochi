@@ -14,8 +14,36 @@
       gtag('config', 'G-72Y5QND8E8');
     </script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
+    
     <div id="app">
         <!-- Start Menu -->
         <div id="startMenu" class="screen active">
