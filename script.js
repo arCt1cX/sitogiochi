@@ -40,17 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('h3');
         title.textContent = formatGameName(game);
         
-        // Create play button
-        const button = document.createElement('button');
-        button.className = 'play-button';
-        button.textContent = 'Gioca';
-        button.addEventListener('click', () => {
-            window.location.href = `${game}/`;
-        });
+        // Create play link instead of button
+        const playLink = document.createElement('a');
+        playLink.className = 'play-button';
+        playLink.textContent = 'Gioca';
+        playLink.href = game + '/';  // Relative path to game directory
         
         // Append elements to card
         card.appendChild(title);
-        card.appendChild(button);
+        card.appendChild(playLink);
         
         // Append card to container
         gamesContainer.appendChild(card);
