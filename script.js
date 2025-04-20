@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('h3');
         title.textContent = formatGameName(game);
         
-        // Create play link instead of button
+        // Create play link with explicit path to index.html
         const playLink = document.createElement('a');
         playLink.className = 'play-button';
         playLink.textContent = 'Gioca';
-        playLink.href = game + '/';  // Relative path to game directory
+        playLink.href = game + '/index.html';  // Explicit path to index.html
         
         // Append elements to card
         card.appendChild(title);
