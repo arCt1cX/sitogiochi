@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e1e1e1;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, #121212, #1a1a2e);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#game-title {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3d3d3d;
+}
+
+#game-title h1 {
+    color: #bb86fc;
+    font-size: 2.2rem;
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+    letter-spacing: 1px;
+}
+
+.game-screen {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #212121;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.game-screen.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #bb86fc;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #e1e1e1;
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    background-color: #2d2d2d;
+    color: #e1e1e1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #bb86fc;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
+}
+
+.btn {
+    padding: 14px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.primary-btn {
+    background-color: #8a2be2; /* More vivid purple */
+    color: white;
+}
+
+.primary-btn:hover, .primary-btn:focus {
+    background-color: #bb86fc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(187, 134, 252, 0.4);
+}
+
+.secondary-btn {
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.secondary-btn:hover, .secondary-btn:focus {
+    background-color: #616161;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.prompt-text {
+    background-color: #2d2d2d;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 15px 0;
+    border-left: 4px solid #bb86fc;
+    color: #f1f1f1;
+}
+
+.impostor-text {
+    border-left: 4px solid #cf6679;
+}
+
+#prompt-container {
+    text-align: center;
+}
+
+.shared-prompt-container, .impostor-prompt-container {
+    margin: 15px 0;
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+p {
+    color: #b0b0b0;
+    font-size: 1.05rem;
+}
+
+.instructions {
+    font-weight: 600;
+    color: #d0d0d0;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.info-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 10px 0;
+    border-left: 4px solid #03dac6;
+}
+
+.info-card p {
+    margin-bottom: 8px;
+}
+
+.reveal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.impostor-reveal {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    margin-top: 10px;
+}
+
+#impostor-num {
+    color: #cf6679;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* Button animations */
+.pulse-btn {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(138, 43, 226, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+    }
+}
+
+.glow-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-btn:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(187,134,252,0.2) 0%, rgba(0,0,0,0) 70%);
+    animation: glowing 2s linear infinite;
+}
+
+@keyframes glowing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation for prompt appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.prompt-text {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation for screen changes */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.game-screen.active {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Media Query for very small devices */
+@media (max-width: 320px) {
+    #game-title h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .prompt-text {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+/* Special styling for the no-impostor surprise */
+.no-impostor-surprise {
+    color: #03dac6;
+    font-weight: bold;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Special emoji animation */
+.emoji-surprise {
+    display: inline-block;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+} 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco dei Colori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gioco dei Colori</h1>
+        
+        <div id="game-setup" class="game-section">
+            <p>Un gioco per 3+ giocatori. Un giocatore vedrà una cella segreta, poi gli altri dovranno indovinarla!</p>
+            <button id="start-game" class="btn">Nuova Partita</button>
+        </div>
+
+        <div id="target-reveal" class="game-section hidden">
+            <h2>Ricorda questa cella!</h2>
+            <div id="target-cell"></div>
+            <p id="target-coords"></p>
+            <button id="got-it" class="btn">Ho Capito!</button>
+        </div>
+
+        <div id="game-play" class="game-section hidden">
+            <div class="grid-container">
+                <div class="grid-labels-row">
+                    <div class="empty-corner"></div>
+                    <div class="col-label">A</div>
+                    <div class="col-label">B</div>
+                    <div class="col-label">C</div>
+                    <div class="col-label">D</div>
+                    <div class="col-label">E</div>
+                </div>
+                <div class="grid-with-labels">
+                    <div class="grid-labels-col">
+                        <div class="row-label">1</div>
+                        <div class="row-label">2</div>
+                        <div class="row-label">3</div>
+                        <div class="row-label">4</div>
+                        <div class="row-label">5</div>
+                    </div>
+                    <div id="color-grid" class="grid"></div>
+                </div>
+            </div>
+            
+            <div id="guessing-area">
+                <div id="player-inputs"></div>
+                <button id="add-player" class="btn">Aggiungi Giocatore</button>
+                <button id="reveal-answer" class="btn">Rivela Risposta</button>
+            </div>
+        </div>
+
+        <div id="game-result" class="game-section hidden">
+            <h2>Risultati</h2>
+            <div class="grid-container">
+                <div class="grid-labels-row">
+                    <div class="empty-corner"></div>
+                    <div class="col-label">A</div>
+                    <div class="col-label">B</div>
+                    <div class="col-label">C</div>
+                    <div class="col-label">D</div>
+                    <div class="col-label">E</div>
+                </div>
+                <div class="grid-with-labels">
+                    <div class="grid-labels-col">
+                        <div class="row-label">1</div>
+                        <div class="row-label">2</div>
+                        <div class="row-label">3</div>
+                        <div class="row-label">4</div>
+                        <div class="row-label">5</div>
+                    </div>
+                    <div id="result-grid" class="grid"></div>
+                </div>
+            </div>
+            <div id="results-list"></div>
+            <button id="play-again" class="btn">Gioca Ancora</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

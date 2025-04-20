@@ -1,0 +1,1001 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --purple-primary: #6C5CE7;
+    --purple-secondary: #8975FF;
+    --purple-dark: #5043AA;
+    --purple-inactive: #493C9F;
+    --active-green: #4CD137;
+    --inactive-gray: #444444;
+    --text-color: #FFFFFF;
+    --win-color: #4CD137;
+    --lose-color: #E84118;
+    --gold-color: #FFC312;
+    --silver-color: #B2BEC3;
+    --bronze-color: #CD6133;
+    --pewter-color: #718093;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: var(--text-color);
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    touch-action: manipulation;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+/* Start Menu Styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--purple-primary);
+}
+
+/* Game Instructions */
+.game-instructions {
+    background-color: rgba(50, 50, 50, 0.7);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.2);
+    border: 1px solid var(--purple-primary);
+}
+
+.game-instructions p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--purple-secondary);
+    text-align: center;
+    font-weight: bold;
+}
+
+.mode-instructions {
+    margin: 10px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.mode-instructions:last-of-type {
+    border-bottom: none;
+}
+
+.mode-instructions h3 {
+    font-size: 1.1rem;
+    color: var(--purple-secondary);
+    margin-bottom: 8px;
+}
+
+.game-instructions ul {
+    padding-left: 25px;
+}
+
+.game-instructions li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.game-instructions .tip {
+    background-color: rgba(76, 209, 55, 0.15);
+    border-left: 4px solid var(--active-green);
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: var(--active-green);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.menu-option {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu-option h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.option-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.option-buttons button {
+    background-color: #333333;
+    color: var(--text-color);
+    border: 2px solid #555555;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-buttons button.selected {
+    background-color: var(--purple-primary);
+    border-color: var(--purple-secondary);
+}
+
+.start-button {
+    background-color: var(--purple-primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.start-button:hover, .option-buttons button:hover {
+    transform: scale(1.05);
+}
+
+.start-button:active, .option-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Game Screen Styles */
+.game-screen {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-container {
+    width: 100%;
+    padding: 15px;
+    background-color: #222222;
+    border-radius: 10px;
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.category-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.category-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--purple-secondary);
+}
+
+/* 2-Player Layout */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.player-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+/* 3-Player Layout */
+.timer-container3p {
+    display: grid;
+    grid-template-areas: 
+        "left right"
+        "bottom bottom";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+}
+
+.player-section3p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.player-left {
+    grid-area: left;
+}
+
+.player-right {
+    grid-area: right;
+}
+
+.player-bottom {
+    grid-area: bottom;
+}
+
+.center-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Common Player Elements */
+.time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.player-button {
+    background-color: var(--purple-primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50px;
+    height: 80px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 0 var(--purple-dark);
+}
+
+.player-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 var(--purple-dark);
+}
+
+/* Active player button - this player is losing time */
+.player-button.active-turn {
+    background-color: var(--active-green);
+    box-shadow: 0 6px 0 #2D9721;
+    animation: pulse 1.5s infinite;
+}
+
+.player-button.active-turn:active {
+    box-shadow: 0 0 0 #2D9721;
+}
+
+/* Inactive player button - waiting for their turn */
+.player-button.inactive-turn {
+    background-color: var(--inactive-gray);
+    box-shadow: 0 6px 0 #333333;
+    opacity: 0.8;
+}
+
+.player-button.inactive-turn:active {
+    box-shadow: 0 0 0 #333333;
+}
+
+/* Ready player button - game hasn't started yet */
+.player-button.ready-turn {
+    background-color: var(--purple-secondary);
+    box-shadow: 0 6px 0 var(--purple-dark);
+    animation: ready-pulse 2s infinite;
+}
+
+.player-button.ready-turn:active {
+    box-shadow: 0 0 0 var(--purple-dark);
+}
+
+.player-button.disabled {
+    background-color: #555555;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.5;
+    animation: none;
+}
+
+/* Turn indicator */
+.turn-indicator {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--active-green);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none;
+}
+
+/* Custom turn indicators for 3-player mode */
+#indicator1_3p, #indicator2_3p, #indicator3_3p {
+    content: "PRESS NOW";
+}
+
+.turn-indicator.visible {
+    opacity: 1;
+    display: none;
+}
+
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: #555555;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--purple-primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 5;
+}
+
+.menu-button:hover {
+    background-color: var(--purple-secondary);
+}
+
+.menu-button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.status-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--purple-secondary);
+    height: 2.5rem;
+    transition: all 0.3s ease;
+    z-index: 15;
+    position: relative;
+}
+
+/* Reset button and Main Menu button */
+.reset-button, .main-menu-button {
+    background-color: var(--purple-primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 20;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.7);
+    position: absolute;
+}
+
+.reset-button {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-menu-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1rem;
+    padding: 12px 28px;
+}
+
+.reset-button:hover, .main-menu-button:hover {
+    background-color: var(--purple-secondary);
+}
+
+.reset-button:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.reset-button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.main-menu-button:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.main-menu-button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Game Over State */
+.game-over .player-section, 
+.game-over .player-section3p,
+.game-over .time-display, 
+.game-over .player-button,
+.game-over .category-container {
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
+}
+
+/* Game Over Messages - 2 Player */
+.player-result {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--win-color);
+    text-shadow: 0 0 20px rgba(76, 209, 55, 0.6);
+    z-index: 15;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#gameOverPlayer1 {
+    top: 0;
+}
+
+#gameOverPlayer2 {
+    bottom: 0;
+    top: auto;
+}
+
+.player-result.loser {
+    color: var(--lose-color);
+    text-shadow: 0 0 20px rgba(232, 65, 24, 0.6);
+}
+
+/* Game Over Messages - 3 Player */
+.player-result3p {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Placement displays for eliminated players */
+.placement-display {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    animation: pulsate 1.5s infinite alternate;
+    z-index: 5;
+    width: 100%;
+    /* Not full screen overlay but replacing player controls */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@keyframes pulsate {
+    from { opacity: 0.7; transform: translate(-50%, -50%) scale(0.97); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1.03); }
+}
+
+/* Color variants for different placements */
+#placement1_3p {
+    color: var(--gold-color);
+    text-shadow: 0 0 20px rgba(255, 195, 18, 0.6);
+}
+
+#placement2_3p {
+    color: var(--silver-color);
+    text-shadow: 0 0 20px rgba(178, 190, 195, 0.6);
+}
+
+#placement3_3p {
+    color: var(--bronze-color);
+    text-shadow: 0 0 20px rgba(205, 97, 51, 0.6);
+}
+
+/* When a player is eliminated, hide their controls and show placement */
+.player-section3p.eliminated .time-display,
+.player-section3p.eliminated .button-container,
+.player-section3p.eliminated .status-display {
+    visibility: hidden;
+}
+
+.player-section3p.eliminated .placement-display {
+    display: block;
+}
+
+/* Ensure player sections have relative positioning for absolute placement */
+.player-section3p {
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Confirmation Dialog */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.dialog-content {
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    max-width: 90%;
+    width: 300px;
+}
+
+.dialog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dialog-buttons button {
+    flex: 1;
+    background-color: #444444;
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#confirmButton {
+    background-color: var(--purple-primary);
+}
+
+.dialog-buttons button:hover {
+    filter: brightness(1.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ready-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 6px 0 var(--purple-dark);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px var(--purple-dark);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 6px 0 var(--purple-dark);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (min-height: 700px) {
+    .player-button {
+        height: 100px;
+    }
+    
+    .time-display {
+        font-size: 4rem;
+    }
+    
+    .player-result {
+        font-size: 6rem;
+    }
+    
+    .player-result3p {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .time-display {
+        font-size: 2.5rem;
+    }
+    
+    .player-button {
+        font-size: 1.2rem;
+    }
+    
+    .player-result {
+        font-size: 3.5rem;
+    }
+    
+    .player-result3p {
+        font-size: 3rem;
+    }
+    
+    .game-instructions {
+        padding: 10px 15px;
+    }
+    
+    .game-instructions p {
+        font-size: 1rem;
+    }
+    
+    .game-instructions li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-height: 700px) {
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .game-screen {
+        position: absolute;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
+    #app {
+        justify-content: flex-start;
+        height: auto;
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+    
+    .screen.active {
+        padding-bottom: 50px;
+    }
+    
+    .timer-container, .timer-container3p {
+        min-height: 85vh;
+        height: auto;
+    }
+    
+    .reset-button {
+        position: fixed;
+        bottom: 20px;
+    }
+    
+    .main-menu-button {
+        position: fixed;
+    }
+    
+    .player-result, .player-result3p {
+        position: fixed;
+        z-index: 25;
+    }
+    
+    .placement-display {
+        z-index: 25;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        margin: 15px 0;
+    }
+    
+    .game-instructions {
+        margin-bottom: 15px;
+    }
+    
+    .game-instructions p {
+        font-size: 1rem;
+    }
+    
+    .game-instructions li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .menu-option {
+        margin-bottom: 15px;
+    }
+    
+    .menu-option h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .option-buttons {
+        gap: 7px;
+    }
+    
+    .option-buttons button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .start-button {
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .time-display {
+        font-size: 2.5rem;
+    }
+    
+    .player-button {
+        font-size: 1.2rem;
+        height: 70px;
+    }
+    
+    .player-result {
+        font-size: 3.5rem;
+    }
+    
+    .player-result3p {
+        font-size: 3rem;
+    }
+    
+    .game-instructions {
+        padding: 10px 15px;
+    }
+    
+    .game-instructions p {
+        font-size: 1rem;
+    }
+    
+    .game-instructions li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .option-buttons button {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+        flex-grow: 1;
+    }
+}
+
+/* Additional mobile adjustments for very small screens */
+@media (max-height: 600px) {
+    .timer-container, .timer-container3p {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .player-button {
+        height: 60px;
+    }
+    
+    .time-display {
+        font-size: 2.3rem;
+    }
+}
+
+/* 4-Player Layout */
+.timer-container4p {
+    display: grid;
+    grid-template-areas: 
+        "topleft topright"
+        "bottomleft bottomright";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+}
+
+.player-section4p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.player-top-left {
+    grid-area: topleft;
+}
+
+.player-top-right {
+    grid-area: topright;
+}
+
+.player-bottom-left {
+    grid-area: bottomleft;
+}
+
+.player-bottom-right {
+    grid-area: bottomright;
+}
+
+/* Color variants for different placements */
+#placement1_3p, #placement1_4p {
+    color: var(--gold-color);
+    text-shadow: 0 0 20px rgba(255, 195, 18, 0.6);
+}
+
+#placement2_3p, #placement2_4p {
+    color: var(--silver-color);
+    text-shadow: 0 0 20px rgba(178, 190, 195, 0.6);
+}
+
+#placement3_3p, #placement3_4p {
+    color: var(--bronze-color);
+    text-shadow: 0 0 20px rgba(205, 97, 51, 0.6);
+}
+
+#placement4_4p {
+    color: var(--pewter-color);
+    text-shadow: 0 0 20px rgba(113, 128, 147, 0.6);
+}
+
+/* When a player is eliminated, hide their controls and show placement */
+.player-section3p.eliminated .time-display,
+.player-section3p.eliminated .button-container,
+.player-section3p.eliminated .status-display,
+.player-section4p.eliminated .time-display,
+.player-section4p.eliminated .button-container,
+.player-section4p.eliminated .status-display {
+    visibility: hidden;
+}
+
+.player-section3p.eliminated .placement-display,
+.player-section4p.eliminated .placement-display {
+    display: block;
+}
+
+/* Ensure player sections have relative positioning for absolute placement */
+.player-section3p,
+.player-section4p {
+    position: relative;
+}
+
+/* Game Over Messages - 4 Player */
+.player-result4p {
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: bold;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile adjustments */
+@media (max-height: 700px) {
+    /* ... existing code ... */
+    .timer-container, .timer-container3p, .timer-container4p {
+        min-height: 85vh;
+        height: auto;
+    }
+    /* ... existing code ... */
+}
+
+@media (max-width: 400px) {
+    /* ... existing code ... */
+    .player-result4p {
+        font-size: 2.5rem;
+    }
+    /* ... existing code ... */
+} 

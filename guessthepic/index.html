@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="A fun image guessing game across different categories">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>Image Guessing Game</h1>
+            <p>Try to guess what's in the images!</p>
+            <button id="open-player-setup">Start Game</button>
+        </div>
+
+        <div id="player-setup-screen" class="screen hidden">
+            <h2>Player Setup</h2>
+            <div class="player-setup-controls">
+                <label for="player-count">Number of Players:</label>
+                <select id="player-count">
+                    <option value="1">1 Player</option>
+                    <option value="2">2 Players</option>
+                    <option value="3">3 Players</option>
+                    <option value="4">4 Players</option>
+                    <option value="5">5 Players</option>
+                    <option value="6">6 Players</option>
+                    <option value="7">7 Players</option>
+                    <option value="8">8 Players</option>
+                    <option value="9">9 Players</option>
+                    <option value="10">10 Players</option>
+                </select>
+            </div>
+            
+            <div id="player-names-container" class="player-names-container">
+                <div class="player-input">
+                    <label for="player1-name">Player 1:</label>
+                    <input type="text" id="player1-name" placeholder="Player 1">
+                </div>
+            </div>
+            
+            <div class="buttons-row">
+                <button id="start-game" class="full-width-button">Start Game</button>
+            </div>
+        </div>
+
+        <div id="player-transition-screen" class="screen hidden">
+            <h2>Get Ready!</h2>
+            <div class="next-player-info">
+                <h3><span id="next-player-name">Player 2</span>'s Turn</h3>
+                <p>Pass the device to the next player</p>
+            </div>
+            <button id="start-player-turn" class="full-width-button">I'm Ready!</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="game-header">
+                <div class="score">Score: <span id="score">0</span>/5</div>
+                <div class="current-player">Player: <span id="current-player-name">Player 1</span></div>
+                <div class="timer">Time: <span id="time-remaining">60</span>s</div>
+            </div>
+
+            <div class="category-display">
+                Category: <span id="current-category">Unknown</span>
+            </div>
+
+            <div class="image-container">
+                <img id="game-image" src="" alt="Guess what this is">
+            </div>
+
+            <div class="navigation-controls">
+                <button id="prev-image" class="nav-button">&lt; Previous</button>
+                <div class="progress">Question <span id="current-question">1</span> of 5</div>
+                <button id="next-image" class="nav-button">Next &gt;</button>
+            </div>
+
+            <div class="guess-container">
+                <input type="text" id="guess-input" placeholder="Enter your guess...">
+                <button id="submit-guess">Submit</button>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+            
+            <div class="indicator-circles">
+                <div class="circle" data-index="0"></div>
+                <div class="circle" data-index="1"></div>
+                <div class="circle" data-index="2"></div>
+                <div class="circle" data-index="3"></div>
+                <div class="circle" data-index="4"></div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h2>Round Complete!</h2>
+            <div id="player-scores"></div>
+            <div id="result-details"></div>
+            <button id="play-again">Next Round</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 

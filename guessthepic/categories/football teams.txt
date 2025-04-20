@@ -1,0 +1,101 @@
+Juventus FC  
+Milan AC  
+Inter Milan  
+AS Roma FC  
+SSC Napoli  
+Lazio FC  
+AC Fiorentina  
+Atalanta BC  
+Torino FC  
+Sampdoria  
+Genoa CFC  
+Bologna FC  
+Parma Calcio 1913  
+Cagliari Calcio  
+Udinese Calcio  
+FC Barcelona  
+Real Madrid CF  
+Atletico Madrid  
+Valencia CF  
+Sevilla FC  
+Villarreal CF  
+Athletic Bilbao  
+Manchester United FC  
+Manchester City FC  
+Liverpool FC  
+Chelsea FC  
+Arsenal FC  
+Tottenham Hotspur FC  
+Leicester City FC  
+West Ham United FC  
+Newcastle United FC  
+Everton FC  
+Aston Villa FC  
+Leeds United FC  
+FC Bayern Munich  
+Borussia Dortmund  
+RB Leipzig  
+Bayer 04 Leverkusen  
+VfB Stuttgart  
+Wolfsburg  
+Hamburger SV  
+Paris Saint-Germain FC  
+Olympique de Marseille  
+Olympique Lyonnais  
+AS Monaco  
+FC Nantes  
+AS Saint-Étienne  
+SL Benfica  
+FC Porto  
+Sporting CP  
+Ajax Amsterdam  
+PSV Eindhoven  
+Feyenoord Rotterdam  
+RSC Anderlecht  
+Club Brugge KV  
+Galatasaray SK  
+Fenerbahçe SK  
+Beşiktaş JK  
+Celtic FC  
+Rangers FC  
+Shakhtar Donetsk  
+Dynamo Kyiv  
+Spartak Moscow  
+Zenit Saint Petersburg  
+Cruz Azul  
+Club América  
+Chivas Guadalajara  
+Boca Juniors  
+River Plate  
+Santos FC  
+Flamengo  
+Palmeiras  
+São Paulo FC  
+Corinthians  
+Grêmio  
+Internacional  
+Al Ahly SC  
+Zamalek SC  
+Kaizer Chiefs  
+Orlando Pirates  
+Al Hilal FC  
+Al Nassr FC  
+Los Angeles FC  
+LA Galaxy  
+New York Red Bulls  
+New York City FC  
+Toronto FC  
+Seattle Sounders FC  
+Atlanta United FC  
+CF Montréal  
+Cruzeiro  
+Rosario Central  
+Independiente  
+San Lorenzo  
+Estudiantes de La Plata  
+Pachuca  
+Tigres UANL  
+Club León  
+Red Bull Bragantino  
+Vasco da Gama  
+Botafogo FR  

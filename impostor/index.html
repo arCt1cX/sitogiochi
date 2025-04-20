@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco dell'Impostore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="game-title">
+            <h1>Gioco dell'Impostore</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2>Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="player-count">Numero di Giocatori:</label>
+                <input type="number" id="player-count" min="3" value="4">
+            </div>
+            <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
+        </div>
+
+        <!-- Player Turn Screen -->
+        <div id="player-turn-screen" class="game-screen">
+            <h2>Turno del Giocatore <span id="current-player-num">1</span></h2>
+            <p>Passa il telefono al giocatore <span id="current-player-num-text">1</span></p>
+            <button id="show-prompt" class="btn primary-btn pulse-btn">Mostra il mio Prompt</button>
+            
+            <div id="prompt-container" class="hidden">
+                <p class="prompt-text" id="player-prompt"></p>
+                <button id="hide-prompt" class="btn secondary-btn">Ho Visto</button>
+            </div>
+        </div>
+
+        <!-- Writing Answers Screen -->
+        <div id="writing-screen" class="game-screen">
+            <h2>Scrivete le Vostre Risposte</h2>
+            <div class="info-card">
+                <p>Tutti i giocatori hanno visto il loro prompt.</p>
+                <p>Ora scrivete le vostre risposte su carta.</p>
+                <p>Quando tutti hanno finito, cliccate sul pulsante per rivelare il prompt del gruppo.</p>
+            </div>
+            <button id="show-group-prompt" class="btn primary-btn glow-btn">Rivela il Prompt del Gruppo</button>
+        </div>
+
+        <!-- Group Discussion Screen -->
+        <div id="discussion-screen" class="game-screen">
+            <h2>Discussione di Gruppo</h2>
+            <div class="shared-prompt-container">
+                <p>Il prompt del gruppo è:</p>
+                <p id="shared-prompt" class="prompt-text"></p>
+            </div>
+            <p class="instructions">Discutete tra di voi e cercate di scoprire chi è l'impostore!</p>
+            <button id="reveal-impostor" class="btn primary-btn glow-btn">Rivela l'Impostore</button>
+        </div>
+
+        <!-- Reveal Screen -->
+        <div id="reveal-screen" class="game-screen">
+            <div class="reveal-header">
+                <h2>L'Impostore è...</h2>
+                <p class="impostor-reveal">Il giocatore <span id="impostor-num">X</span>!</p>
+            </div>
+            <div class="impostor-prompt-container">
+                <p>Il suo prompt era:</p>
+                <p id="impostor-prompt" class="prompt-text impostor-text"></p>
+            </div>
+            <button id="play-again" class="btn primary-btn">Gioca di Nuovo</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html> 

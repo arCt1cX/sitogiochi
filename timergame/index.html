@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Wordrace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Menu -->
+        <div id="startMenu" class="screen active">
+            <h1>Wordrace</h1>
+            
+            <div class="menu-option">
+                <h2>Modalità Giocatori</h2>
+                <div class="option-buttons">
+                    <button data-players="2" class="selected">2 Giocatori</button>
+                    <button data-players="3">3 Giocatori</button>
+                    <button data-players="4">4 Giocatori</button>
+                </div>
+            </div>
+            
+            <div class="menu-option">
+                <h2>Modalità Gioco</h2>
+                <div class="option-buttons">
+                    <button data-mode="timer" class="selected">Solo Timer</button>
+                    <button data-mode="category">Con Categorie</button>
+                </div>
+            </div>
+            
+            <div class="menu-option">
+                <h2>Tempo Iniziale</h2>
+                <div class="option-buttons">
+                    <button data-time="30">30 Secondi</button>
+                    <button data-time="60" class="selected">1 Minuto</button>
+                    <button data-time="120">2 Minuti</button>
+                    <button data-time="300">5 Minuti</button>
+                </div>
+            </div>
+            
+            <button id="startButton" class="start-button">Inizia Gioco</button>
+            
+            <div class="game-instructions">
+                <h2>Come Giocare</h2>
+                <p>Una sfida verbale veloce per giocatori:</p>
+                
+                <div class="mode-instructions mode-2p">
+                    <h3>Modalità 2 Giocatori:</h3>
+                    <ul>
+                        <li>Ogni giocatore ha il proprio timer.</li>
+                        <li>Quando è il tuo turno, il tuo timer diminuisce.</li>
+                        <li>Premi il pulsante quando finisci il turno per passare al giocatore successivo.</li>
+                        <li>Il gioco termina quando il timer di un giocatore raggiunge zero.</li>
+                    </ul>
+                </div>
+                
+                <div class="mode-instructions mode-3p">
+                    <h3>Modalità 3 Giocatori:</h3>
+                    <ul>
+                        <li>Quando un giocatore preme il pulsante:</li>
+                        <li>- Il suo timer inizia ad aumentare (guadagnando tempo)</li>
+                        <li>- I timer degli altri due giocatori iniziano a diminuire</li>
+                        <li>- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo turno</li>
+                        <li>I giocatori vengono eliminati quando il loro timer raggiunge zero</li>
+                        <li>L'ultimo giocatore rimasto vince!</li>
+                    </ul>
+                </div>
+                
+                <div class="mode-instructions mode-4p">
+                    <h3>Modalità 4 Giocatori:</h3>
+                    <ul>
+                        <li>Funziona come la modalità 3 giocatori, ma con 4 partecipanti</li>
+                        <li>Quando un giocatore preme il pulsante:</li>
+                        <li>- Il suo timer inizia ad aumentare (guadagnando tempo)</li>
+                        <li>- I timer degli altri tre giocatori iniziano a diminuire</li>
+                        <li>- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo turno</li>
+                        <li>I giocatori vengono eliminati quando il loro timer raggiunge zero</li>
+                        <li>L'ultimo giocatore rimasto vince!</li>
+                    </ul>
+                </div>
+                
+                <div class="tip">
+                    Consiglio: Premi il pulsante quando dici una parola per guadagnare tempo o cambiare turno!
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen - 2 Players -->
+        <div id="gameScreen2p" class="game-screen screen">
+            <div id="categoryDisplay2p" class="category-container hidden">
+                <h2>Categoria:</h2>
+                <p id="category2p"></p>
+            </div>
+            
+            <div class="timer-container">
+                <div id="player1" class="player-section">
+                    <div class="time-display">
+                        <span id="time1">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator1" class="turn-indicator">IL TUO TURNO</div>
+                        <button id="button1" class="player-button">Premi</button>
+                    </div>
+                    <div id="status1" class="status-display"></div>
+                </div>
+                
+                <div class="divider">
+                    <button id="menuButton2p" class="menu-button">Menu</button>
+                </div>
+                
+                <div id="player2" class="player-section rotated">
+                    <div class="time-display">
+                        <span id="time2">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator2" class="turn-indicator">IL TUO TURNO</div>
+                        <button id="button2" class="player-button">Premi</button>
+                    </div>
+                    <div id="status2" class="status-display"></div>
+                </div>
+            </div>
+            
+            <button id="resetButton2p" class="reset-button hidden">Ricomincia</button>
+            <button id="mainMenuButton2p" class="main-menu-button hidden">Menu Principale</button>
+            
+            <!-- Game Over Overlays - One for each player -->
+            <div id="gameOverPlayer1" class="player-result hidden">HAI VINTO!</div>
+            <div id="gameOverPlayer2" class="player-result rotated hidden">HAI VINTO!</div>
+        </div>
+
+        <!-- Game Screen - 3 Players -->
+        <div id="gameScreen3p" class="game-screen screen">
+            <div id="categoryDisplay3p" class="category-container hidden">
+                <h2>Categoria:</h2>
+                <p id="category3p"></p>
+            </div>
+            
+            <div class="timer-container3p">
+                <!-- Player 1 - Left -->
+                <div id="player1_3p" class="player-section3p player-left">
+                    <div class="time-display">
+                        <span id="time1_3p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator1_3p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button1_3p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status1_3p" class="status-display"></div>
+                    <div id="placement1_3p" class="placement-display">1° POSTO</div>
+                </div>
+                
+                <!-- Player 2 - Right -->
+                <div id="player2_3p" class="player-section3p player-right">
+                    <div class="time-display">
+                        <span id="time2_3p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator2_3p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button2_3p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status2_3p" class="status-display"></div>
+                    <div id="placement2_3p" class="placement-display">2° POSTO</div>
+                </div>
+                
+                <!-- Player 3 - Bottom -->
+                <div id="player3_3p" class="player-section3p player-bottom">
+                    <div class="time-display">
+                        <span id="time3_3p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator3_3p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button3_3p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status3_3p" class="status-display"></div>
+                    <div id="placement3_3p" class="placement-display">3° POSTO</div>
+                </div>
+                
+                <!-- Center menu button -->
+                <div class="center-controls">
+                    <button id="menuButton3p" class="menu-button">Menu</button>
+                </div>
+            </div>
+            
+            <button id="resetButton3p" class="reset-button hidden">Ricomincia</button>
+            <button id="mainMenuButton3p" class="main-menu-button hidden">Menu Principale</button>
+            
+            <!-- Game Over Overlays - One for each player in 3p mode -->
+            <div id="gameOverPlayer1_3p" class="player-result3p player-left hidden">1° POSTO</div>
+            <div id="gameOverPlayer2_3p" class="player-result3p player-right hidden">2° POSTO</div>
+            <div id="gameOverPlayer3_3p" class="player-result3p player-bottom hidden">3° POSTO</div>
+        </div>
+        
+        <!-- Game Screen - 4 Players -->
+        <div id="gameScreen4p" class="game-screen screen">
+            <div id="categoryDisplay4p" class="category-container hidden">
+                <h2>Categoria:</h2>
+                <p id="category4p"></p>
+            </div>
+            
+            <div class="timer-container4p">
+                <!-- Player 1 - Top Left -->
+                <div id="player1_4p" class="player-section4p player-top-left">
+                    <div class="time-display">
+                        <span id="time1_4p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator1_4p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button1_4p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status1_4p" class="status-display"></div>
+                    <div id="placement1_4p" class="placement-display">1° POSTO</div>
+                </div>
+                
+                <!-- Player 2 - Top Right -->
+                <div id="player2_4p" class="player-section4p player-top-right">
+                    <div class="time-display">
+                        <span id="time2_4p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator2_4p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button2_4p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status2_4p" class="status-display"></div>
+                    <div id="placement2_4p" class="placement-display">2° POSTO</div>
+                </div>
+                
+                <!-- Player 3 - Bottom Left -->
+                <div id="player3_4p" class="player-section4p player-bottom-left">
+                    <div class="time-display">
+                        <span id="time3_4p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator3_4p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button3_4p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status3_4p" class="status-display"></div>
+                    <div id="placement3_4p" class="placement-display">3° POSTO</div>
+                </div>
+                
+                <!-- Player 4 - Bottom Right -->
+                <div id="player4_4p" class="player-section4p player-bottom-right">
+                    <div class="time-display">
+                        <span id="time4_4p">01:00</span>
+                    </div>
+                    <div class="button-container">
+                        <div id="indicator4_4p" class="turn-indicator">PREMI ORA</div>
+                        <button id="button4_4p" class="player-button">Premi</button>
+                    </div>
+                    <div id="status4_4p" class="status-display"></div>
+                    <div id="placement4_4p" class="placement-display">4° POSTO</div>
+                </div>
+                
+                <!-- Center menu button -->
+                <div class="center-controls">
+                    <button id="menuButton4p" class="menu-button">Menu</button>
+                </div>
+            </div>
+            
+            <button id="resetButton4p" class="reset-button hidden">Ricomincia</button>
+            <button id="mainMenuButton4p" class="main-menu-button hidden">Menu Principale</button>
+            
+            <!-- Game Over Overlays - One for each player in 4p mode -->
+            <div id="gameOverPlayer1_4p" class="player-result4p player-top-left hidden">1° POSTO</div>
+            <div id="gameOverPlayer2_4p" class="player-result4p player-top-right hidden">2° POSTO</div>
+            <div id="gameOverPlayer3_4p" class="player-result4p player-bottom-left hidden">3° POSTO</div>
+            <div id="gameOverPlayer4_4p" class="player-result4p player-bottom-right hidden">4° POSTO</div>
+        </div>
+        
+        <!-- Confirmation Dialog -->
+        <div id="confirmDialog" class="dialog hidden">
+            <div class="dialog-content">
+                <p>Sei sicuro di voler tornare al menu?</p>
+                <div class="dialog-buttons">
+                    <button id="cancelButton">Annulla</button>
+                    <button id="confirmButton">Sì</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
