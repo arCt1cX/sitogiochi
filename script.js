@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.className = 'play-button';
         button.textContent = 'Gioca';
         button.addEventListener('click', () => {
-            window.location.href = `/${game}/`;
+            window.location.href = `${game}/`;
         });
         
         // Append elements to card
