@@ -1,3 +1,7 @@
+// This script is now disabled since we're using hardcoded cards in the HTML
+// Keeping it for reference if needed in the future
+
+/*
 document.addEventListener('DOMContentLoaded', () => {
     // Array of game directories
     const games = [
@@ -63,4 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     comingSoonCard.appendChild(comingSoonTitle);
     gamesContainer.appendChild(comingSoonCard);
-}); 
+});
+*/ 
