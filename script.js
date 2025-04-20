@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "timergame",
             catchphrase: "Corri contro il tempo in questa sfida di parole!"
+        },
+        {
+            id: "alphabetgame",
+            catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!"
         }
     ];
     
