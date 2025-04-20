@@ -33,7 +33,7 @@ header {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 6.5rem;
     font-weight: 700;
     background: linear-gradient(90deg, #9c27b0, #e040fb);
     -webkit-background-clip: text;
@@ -41,6 +41,8 @@ h1 {
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
+    text-shadow: 0 0 30px rgba(156, 39, 176, 0.3);
+    line-height: 1.1;
 }
 
 h2 {
