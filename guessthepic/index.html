@@ -49,59 +49,59 @@
     
     <div class="container">
         <div id="start-screen" class="screen">
-            <h1>Image Guessing Game</h1>
-            <p>Try to guess what's in the images!</p>
-            <button id="open-player-setup">Start Game</button>
+            <h1>Indovina l'Immagine</h1>
+            <p>Prova a indovinare cosa c'è nelle immagini!</p>
+            <button id="open-player-setup">Inizia Gioco</button>
         </div>
 
         <div id="player-setup-screen" class="screen hidden">
-            <h2>Player Setup</h2>
+            <h2>Configura Giocatori</h2>
             <div class="player-setup-controls">
-                <label for="player-count">Number of Players:</label>
+                <label for="player-count">Numero di Giocatori:</label>
                 <select id="player-count">
-                    <option value="1">1 Player</option>
-                    <option value="2">2 Players</option>
-                    <option value="3">3 Players</option>
-                    <option value="4">4 Players</option>
-                    <option value="5">5 Players</option>
-                    <option value="6">6 Players</option>
-                    <option value="7">7 Players</option>
-                    <option value="8">8 Players</option>
-                    <option value="9">9 Players</option>
-                    <option value="10">10 Players</option>
+                    <option value="1">1 Giocatore</option>
+                    <option value="2">2 Giocatori</option>
+                    <option value="3">3 Giocatori</option>
+                    <option value="4">4 Giocatori</option>
+                    <option value="5">5 Giocatori</option>
+                    <option value="6">6 Giocatori</option>
+                    <option value="7">7 Giocatori</option>
+                    <option value="8">8 Giocatori</option>
+                    <option value="9">9 Giocatori</option>
+                    <option value="10">10 Giocatori</option>
                 </select>
             </div>
             
             <div id="player-names-container" class="player-names-container">
                 <div class="player-input">
-                    <label for="player1-name">Player 1:</label>
-                    <input type="text" id="player1-name" placeholder="Player 1">
+                    <label for="player1-name">Giocatore 1:</label>
+                    <input type="text" id="player1-name" placeholder="Giocatore 1">
                 </div>
             </div>
             
             <div class="buttons-row">
-                <button id="start-game" class="full-width-button">Start Game</button>
+                <button id="start-game" class="full-width-button">Inizia Partita</button>
             </div>
         </div>
 
         <div id="player-transition-screen" class="screen hidden">
-            <h2>Get Ready!</h2>
+            <h2>Preparati!</h2>
             <div class="next-player-info">
-                <h3><span id="next-player-name">Player 2</span>'s Turn</h3>
-                <p>Pass the device to the next player</p>
+                <h3>Turno di <span id="next-player-name">Giocatore 2</span></h3>
+                <p>Passa il dispositivo al prossimo giocatore</p>
             </div>
-            <button id="start-player-turn" class="full-width-button">I'm Ready!</button>
+            <button id="start-player-turn" class="full-width-button">Sono Pronto!</button>
         </div>
 
         <div id="game-screen" class="screen hidden">
             <div class="game-header">
-                <div class="score">Score: <span id="score">0</span>/5</div>
-                <div class="current-player">Player: <span id="current-player-name">Player 1</span></div>
-                <div class="timer">Time: <span id="time-remaining">60</span>s</div>
+                <div class="score">Punteggio: <span id="score">0</span>/5</div>
+                <div class="current-player">Giocatore: <span id="current-player-name">Giocatore 1</span></div>
+                <div class="timer">Tempo: <span id="time-remaining">60</span>s</div>
             </div>
 
             <div class="category-display">
-                Category: <span id="current-category">Unknown</span>
+                Categoria: <span id="current-category">Sconosciuta</span>
             </div>
 
             <div class="image-container">
@@ -109,14 +109,14 @@
             </div>
 
             <div class="navigation-controls">
-                <button id="prev-image" class="nav-button">&lt; Previous</button>
-                <div class="progress">Question <span id="current-question">1</span> of 5</div>
-                <button id="next-image" class="nav-button">Next &gt;</button>
+                <button id="prev-image" class="nav-button">&lt; Precedente</button>
+                <div class="progress">Domanda <span id="current-question">1</span> di 5</div>
+                <button id="next-image" class="nav-button">Prossima &gt;</button>
             </div>
 
             <div class="guess-container">
-                <input type="text" id="guess-input" placeholder="Enter your guess...">
-                <button id="submit-guess">Submit</button>
+                <input type="text" id="guess-input" placeholder="Inserisci la tua risposta...">
+                <button id="submit-guess">Invia</button>
             </div>
 
             <div id="feedback" class="feedback hidden"></div>
@@ -131,10 +131,10 @@
         </div>
 
         <div id="result-screen" class="screen hidden">
-            <h2>Round Complete!</h2>
+            <h2>Round Completato!</h2>
             <div id="player-scores"></div>
             <div id="result-details"></div>
-            <button id="play-again">Next Round</button>
+            <button id="play-again">Prossimo Round</button>
         </div>
     </div>
 

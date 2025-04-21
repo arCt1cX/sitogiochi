@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 checkAnswer();
             } else {
                 // Show message requiring input
-                feedbackDiv.textContent = "Please enter a guess before submitting!";
+                feedbackDiv.textContent = "Inserisci una risposta prima di inviare!";
                 feedbackDiv.className = "feedback incorrect";
                 feedbackDiv.classList.remove("hidden");
                 guessInput.focus();
@@ -694,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Require the user to type something before submitting
         if (!userAnswer) {
             // Alert the user they need to enter a guess
-            feedbackDiv.textContent = "Please enter a guess before submitting!";
+            feedbackDiv.textContent = "Inserisci una risposta prima di inviare!";
             feedbackDiv.className = "feedback incorrect";
             feedbackDiv.classList.remove("hidden");
             
@@ -734,8 +734,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show feedback
         feedbackDiv.textContent = isCorrect 
-            ? `Correct! It's ${currentQuestion.item}` 
-            : `Incorrect. It was ${currentQuestion.item}`;
+            ? `Corretto! È ${currentQuestion.item}` 
+            : `Sbagliato. Era ${currentQuestion.item}`;
         
         feedbackDiv.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
         feedbackDiv.classList.remove('hidden');
@@ -865,8 +865,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the previous feedback for already answered questions
             const isCorrect = questionStatuses[currentQuestionIndex] === 'correct';
             feedbackDiv.textContent = isCorrect 
-                ? `Correct! It's ${currentQuestion.item}` 
-                : `Incorrect. It was ${currentQuestion.item}`;
+                ? `Corretto! È ${currentQuestion.item}` 
+                : `Sbagliato. Era ${currentQuestion.item}`;
             
             feedbackDiv.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
             feedbackDiv.classList.remove('hidden');
@@ -978,11 +978,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update title based on round number
         const resultTitle = document.querySelector('#result-screen h2');
         if (currentRoundNumber < totalRounds) {
-            resultTitle.textContent = `Round ${currentRoundNumber} Completed!`;
-            playAgainButton.textContent = `Start Round ${currentRoundNumber + 1}`;
+            resultTitle.textContent = `Round ${currentRoundNumber} Completato!`;
+            playAgainButton.textContent = `Inizia Round ${currentRoundNumber + 1}`;
         } else {
-            resultTitle.textContent = `Game Over - Final Results!`;
-            playAgainButton.textContent = `Play Again`;
+            resultTitle.textContent = `Gioco Terminato - Risultati Finali!`;
+            playAgainButton.textContent = `Gioca Ancora`;
         }
         
         // Sort players by score for the current round
@@ -1011,8 +1011,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const roundHeader = document.createElement('div');
         roundHeader.className = 'round-header';
         roundHeader.innerHTML = `
-            <h3>Round ${currentRoundNumber} Scores</h3>
-            ${currentRoundNumber === totalRounds ? '<h3>Total Scores</h3>' : ''}
+            <h3>Punteggi Round ${currentRoundNumber}</h3>
+            ${currentRoundNumber === totalRounds ? '<h3>Punteggi Totali</h3>' : ''}
         `;
         playerScoresElement.appendChild(roundHeader);
         
@@ -1032,7 +1032,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentRoundNumber === totalRounds) {
                 scoreInfo.innerHTML = `
                     <span class="round-score">${player.roundScore}/5</span>
-                    <span class="total-score">Total: ${player.totalScore}/${5 * totalRounds}</span>
+                    <span class="total-score">Totale: ${player.totalScore}/${5 * totalRounds}</span>
                 `;
             } else {
                 scoreInfo.textContent = `${player.roundScore}/5`;
@@ -1051,7 +1051,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add details section header
         const detailsHeader = document.createElement('h3');
-        detailsHeader.textContent = 'Question Details';
+        detailsHeader.textContent = 'Dettagli Domande';
         detailsHeader.style.marginBottom = '10px';
         resultDetailsElement.appendChild(detailsHeader);
         
@@ -1084,8 +1084,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const questionHeader = document.createElement('div');
                 questionHeader.className = 'question-header';
                 questionHeader.innerHTML = `
-                    <strong>Question ${questionIndex + 1}:</strong> ${item} (${category})<br>
-                    <small>${correctCount} out of ${players.length} players correct</small>
+                    <strong>Domanda ${questionIndex + 1}:</strong> ${item} (${category})<br>
+                    <small>${correctCount} su ${players.length} giocatori corretti</small>
                 `;
                 
                 questionContainer.appendChild(questionHeader);
@@ -1103,8 +1103,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const details = document.createElement('div');
                 details.innerHTML = `
-                    <strong>Question ${index % 5 + 1}:</strong> ${result.item} (${result.category})<br>
-                    <small>${result.player}: ${result.userAnswer || '(no answer)'}</small>
+                    <strong>Domanda ${index % 5 + 1}:</strong> ${result.item} (${result.category})<br>
+                    <small>${result.player}: ${result.userAnswer || '(nessuna risposta)'}</small>
                 `;
                 
                 resultItem.appendChild(icon);
