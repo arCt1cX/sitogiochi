@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft = 10;
     let timerRunning = false;
     let baseTimerValue = 10; // Starting timer value
+    let gameOver = false;
     
     // Initialize the game
     init();
@@ -118,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(timer);
                 timerRunning = false;
                 showTimeUpMessage();
-                restartTimer();
+                
+                if (!gameOver) {
+                    restartTimer();
+                }
             }
         }, 1000);
     }
@@ -129,6 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timer);
             startTimer();
         }
+    }
+    
+    // Stop timer
+    function stopTimer() {
+        clearInterval(timer);
+        timerRunning = false;
     }
     
     // Update timer base value based on number of clicked letters
@@ -180,6 +190,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500);
     }
     
+    // Show game over state
+    function showGameOverState() {
+        gameOver = true;
+        
+        // Stop the timer
+        stopTimer();
+        
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'game-over-overlay';
+        
+        // Create game over message
+        const gameOverMessage = document.createElement('div');
+        gameOverMessage.className = 'game-over-message';
+        gameOverMessage.textContent = 'Hai Usato Tutte Le Lettere!';
+        
+        // Create restart button
+        const restartButton = document.createElement('button');
+        restartButton.className = 'primary-button restart-button';
+        restartButton.textContent = 'Rigioca';
+        restartButton.addEventListener('click', () => {
+            // Remove overlay
+            document.body.removeChild(overlay);
+            
+            // Reset the game
+            resetGame();
+            
+            // Reset game over flag
+            gameOver = false;
+        });
+        
+        // Append elements to overlay
+        overlay.appendChild(gameOverMessage);
+        overlay.appendChild(restartButton);
+        
+        // Add overlay to body
+        document.body.appendChild(overlay);
+    }
+    
     // Show time's up message
     function showTimeUpMessage() {
         // Display the "Tempo Scaduto" message with animation
@@ -224,11 +273,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
     
+    // Check if all letters are used
+    function checkGameCompletion() {
+        if (clickedLetters >= alphabet.length) {
+            // All letters have been used - game over!
+            showGameOverState();
+        }
+    }
+    
     function handleLetterClick(event) {
         const button = event.target;
         
-        // Skip if button is already disabled
-        if (button.classList.contains('disabled')) {
+        // Skip if button is already disabled or game is over
+        if (button.classList.contains('disabled') || gameOver) {
             return;
         }
         
@@ -258,6 +315,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             button.classList.remove('click-animation');
         }, 500);
+        
+        // Check if game is completed
+        checkGameCompletion();
     }
     
     function showLetterFeedback(letter) {
@@ -342,6 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset game variables
         clickedLetters = 0;
         baseTimerValue = 10;
+        gameOver = false;
         
         // Clear alphabet container first to prevent duplicates
         alphabetContainer.innerHTML = '';
@@ -389,6 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset game variables
         clickedLetters = 0;
         baseTimerValue = 10;
+        gameOver = false;
         
         // Add some animation to the reset process
         const letterButtons = document.querySelectorAll('.letter-button');

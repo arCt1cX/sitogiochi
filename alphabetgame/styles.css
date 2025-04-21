@@ -446,4 +446,70 @@ h2 {
     #category-display {
         font-size: 1.5rem;
     }
+}
+
+/* Game Over Overlay */
+#game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-over-message {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #e040fb, #9c27b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(224, 64, 251, 0.5);
+    animation: gameOverPulse 2s infinite;
+}
+
+.restart-button {
+    margin-top: 1rem;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gameOverPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
 } 
