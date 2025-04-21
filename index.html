@@ -23,22 +23,55 @@
     <link rel="canonical" href="https://partygamesdrew.com/">
     <style>
         .tagline {
+            position: relative;
             font-size: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 1.2rem;
             text-align: center;
             font-style: italic;
-            background: linear-gradient(90deg, #e040fb, #9c27b0, #e040fb);
-            background-size: 200% auto;
+            background: linear-gradient(90deg, 
+                #e040fb, 
+                #ff00ff, 
+                #9c27b0, 
+                #e040fb);
+            background-size: 300% auto;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 3s linear infinite;
+            animation: shine 4s linear infinite;
+            filter: drop-shadow(0 0 2px rgba(224, 64, 251, 0.7));
+            text-shadow: 0 0 2px rgba(224, 64, 251, 0.1);
+        }
+        
+        .tagline::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 150%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.6), 
+                transparent);
+            animation: shimmer 3s ease-in-out infinite;
         }
         
         @keyframes shine {
-            to {
-                background-position: 200% center;
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 300% center;
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                left: -150%;
+            }
+            100% {
+                left: 150%;
             }
         }
         
