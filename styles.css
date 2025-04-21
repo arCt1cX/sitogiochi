@@ -37,13 +37,13 @@ h1 {
     font-weight: 700;
     color: #473c8b;
     -webkit-text-stroke: 1px #d2e768;
-    background: linear-gradient(90deg, #9c27b0, #e040fb);
+    background: linear-gradient(90deg, #473c8b, #7b68ee);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
-    text-shadow: 0 0 30px rgba(156, 39, 176, 0.3);
+    text-shadow: 0 0 30px rgba(71, 60, 139, 0.3);
     line-height: 1.05;
     max-width: 100%;
     overflow-wrap: break-word;
