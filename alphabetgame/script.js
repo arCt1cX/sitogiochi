@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = '';
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     let clickedLetters = 0;
+    let timer;
+    let timeLeft = 30;
+    let timerRunning = false;
     
     // Initialize the game
     init();
@@ -68,6 +71,109 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    // Create timer element
+    function createTimer() {
+        // Create timer container if it doesn't exist
+        let timerContainer = document.getElementById('timer-container');
+        if (!timerContainer) {
+            timerContainer = document.createElement('div');
+            timerContainer.id = 'timer-container';
+            
+            // Create timer display
+            const timerDisplay = document.createElement('div');
+            timerDisplay.id = 'timer-display';
+            timerDisplay.textContent = '30';
+            
+            // Add the timer display to the container
+            timerContainer.appendChild(timerDisplay);
+            
+            // Insert the timer container before the alphabet container
+            gameScreen.insertBefore(timerContainer, alphabetContainer);
+        }
+    }
+    
+    // Start the timer
+    function startTimer() {
+        // Reset time left
+        timeLeft = 30;
+        
+        // Update display
+        const timerDisplay = document.getElementById('timer-display');
+        timerDisplay.textContent = timeLeft;
+        
+        // Clear any existing timer
+        if (timer) {
+            clearInterval(timer);
+        }
+        
+        // Start new timer
+        timerRunning = true;
+        timer = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = timeLeft;
+            
+            // Time's up!
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                timerRunning = false;
+                showTimeUpMessage();
+                restartTimer();
+            }
+        }, 1000);
+    }
+    
+    // Reset timer
+    function resetTimer() {
+        if (timerRunning) {
+            clearInterval(timer);
+            startTimer();
+        }
+    }
+    
+    // Show time's up message
+    function showTimeUpMessage() {
+        // Display the "Tempo Scaduto" message with animation
+        const timeUpMessage = document.createElement('div');
+        timeUpMessage.className = 'time-up-message';
+        timeUpMessage.textContent = 'Tempo Scaduto!';
+        timeUpMessage.style.position = 'fixed';
+        timeUpMessage.style.fontSize = '3rem';
+        timeUpMessage.style.fontWeight = 'bold';
+        timeUpMessage.style.color = '#FF416C';
+        timeUpMessage.style.opacity = '0';
+        timeUpMessage.style.zIndex = '1000';
+        timeUpMessage.style.top = '50%';
+        timeUpMessage.style.left = '50%';
+        timeUpMessage.style.transform = 'translate(-50%, -50%)';
+        timeUpMessage.style.pointerEvents = 'none';
+        timeUpMessage.style.textShadow = '0 0 10px rgba(255, 65, 108, 0.7)';
+        timeUpMessage.style.transition = 'all 1s ease-out';
+        
+        document.body.appendChild(timeUpMessage);
+        
+        // Animate
+        setTimeout(() => {
+            timeUpMessage.style.opacity = '1';
+            timeUpMessage.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        }, 10);
+        
+        setTimeout(() => {
+            timeUpMessage.style.opacity = '0';
+            timeUpMessage.style.transform = 'translate(-50%, -50%) translateY(-100px) scale(0.5)';
+        }, 1500);
+        
+        setTimeout(() => {
+            document.body.removeChild(timeUpMessage);
+        }, 2500);
+    }
+    
+    // Restart timer after timeout
+    function restartTimer() {
+        setTimeout(() => {
+            startTimer();
+        }, 1000);
+    }
+    
     function handleLetterClick(event) {
         const button = event.target;
         
@@ -75,6 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (button.classList.contains('disabled')) {
             return;
         }
+        
+        // Reset the timer
+        resetTimer();
         
         // Play sound effect (optional)
         playClickSound();
@@ -183,6 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create alphabet buttons at game start
         createAlphabetButtons();
         
+        // Create and start the timer
+        createTimer();
+        
         // Set a new random category
         setNewCategory();
         
@@ -207,6 +319,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         button.style.transform = 'translateY(0)';
                     }, index * 50);
                 });
+                
+                // Start the timer after animations complete
+                setTimeout(() => {
+                    startTimer();
+                }, buttons.length * 50 + 100);
             }, 10);
         }, 300);
     }
@@ -214,6 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetGame() {
         // Add some animation to the reset process
         const letterButtons = document.querySelectorAll('.letter-button');
+        
+        // Reset timer
+        resetTimer();
         
         // First fade out all buttons
         letterButtons.forEach((button, index) => {
