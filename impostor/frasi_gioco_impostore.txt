@@ -125,156 +125,80 @@ Una tua stranezza | Una tua abitudine comune
 Un film che tutti dovrebbero vedere almeno una volta | L'ultimo film che hai visto
 Un capo d’abbigliamento che non metti mai | Un capo d'abbigliamento che proprio non ti piace
 Un luogo dove hai riso tanto | Un luogo dove ti diverti
-Un’attività creativa | Un’attività ripetitiva ma rassicurante
-Un hobby rilassante | Un hobby stimolante ma stancante
-Una cosa che ti rilassa a fine giornata | Una cosa che fai appena sveglio
-Un evento che aspetti ogni anno | Uno che eviti
-Un gusto di gelato preferito | Un gusto che provi solo ogni tanto
-Un oggetto vintage che vorresti avere | Un oggetto futuristico che ti incuriosisce
-Un sogno ricorrente | Un sogno che hai fatto solo una volta ma ricordi benissimo
-Un animale simbolico | Un animale che ti rappresenta personalmente
-Un animale veloce | Un animale incredibilmente paziente
-Una cosa che ti dà nostalgia | Una cosa che ti fa ridere ogni volta
-Una vacanza che sogni da tempo | Una vacanza che hai fatto e non rifaresti
-Una parola che suona bene | Una parola difficile da pronunciare
-Una città da visitare in autunno | Una città che sorprende in inverno
-Un gesto romantico | Un gesto buffo che ha funzionato
-Un regalo perfetto per un amico | Un regalo strano ma memorabile
+Un’attività creativa | Un tipo di arte
+Un hobby rilassante | Un hobby che proprio non ti piace
+Una cosa che ti rilassa a fine giornata | Una cosa che fai tornato a casa dopo scuola
+Un evento che aspetti ogni anno | Il giorno che salva l’anno
+Un gusto di gelato preferito | Un gusto di gelato che piace a tutti ma a te no
+Un oggetto vintage che vorresti avere | Un oggetto vintage che ancora utilizzi
+Il tuo animale preferito | Un animale che ti rappresenta personalmente
+Il Bolt del regno animale | Un animale veloce
+Una vacanza che sogni da tempo | La città più bella del mondo
+Una parola poco utilizzata | Una parola difficile da pronunciare
+Una città da visitare in autunno | Una città dove vorresti passare una giornata
+Un gesto romantico | Un regalo da fare a san Valentino
+Un regalo perfetto per un amico | Un regalo speciale per la tua dolce metà
 Un’attività da fare con amici | Un’attività da fare da soli
-Un gadget tecnologico che usi spesso | Un gadget che hai ma non usi mai
+Un gadget tecnologico che usi spesso | Un gadget tecnologico che vorresti comprare
 Un’attività tipica del weekend | Un’attività che fai nei momenti liberi in settimana
-Un capo d’abbigliamento comodo | Un capo d’abbigliamento elegante ma scomodo
-Un lavoro che faresti per passione | Un lavoro che non faresti mai
-Una cosa da portare in campeggio | Una cosa inutile da portare in campeggio
-Un piatto perfetto per un primo appuntamento | Un piatto da evitare al primo appuntamento
-Un oggetto inutile ma affascinante | Un oggetto utile ma brutto
-Una competenza che vuoi imparare | Una che ti piacerebbe insegnare
-Un luogo ideale per leggere un libro | Un luogo insolito in cui leggere un libro
-Un artista sottovalutato | Un artista conosciutissimo ma che non ti convince
-Un artista italiano che ti piace | Un artista straniero che segui da tempo
-Un’attività che ti rilassa | Un’attività che ti carica di energia
-Un’attività che ti faceva paura | Una che adesso ti rilassa
+Un capo d’abbigliamento comodo | Un capo d’abbigliamento che indossi spesso
+Un lavoro che faresti per passione | Un lavoro che faresti per i soldi
+Una cosa da portare in campeggio | Una cosa da portare in montagna
+Un piatto perfetto per un primo appuntamento | Un primo piatto
+Una competenza che vuoi imparare | Una competenza che stai imparando
+Un luogo ideale per leggere un libro | Il luogo dove leggi solitamente
+Un artista che ti piace | Un artista che secondo te è sopravvalutato
+Un’attività che ti faceva paura | Un'attività che non faresti mai
 Un film da vedere con la famiglia | Un film da vedere da soli
-Una persona che ammiri | Una persona che ti ha insegnato molto, anche involontariamente
+Una persona che ammiri | Una persona in cui non vorresti mai ritrovarti
 Un colore per una stanza | Un colore per un accessorio
 Una serie animata indimenticabile | Una serie animata che non tutti conoscono
 Un oggetto che porti sempre con te | Un oggetto che non usi mai ma non riesci a buttare
-Un profumo che ami | Un profumo che ti ricorda qualcosa
-Un ricordo recente | Un ricordo che sembra lontanissimo
+Un ricordo lontano che sembra recente | Un ricordo che sembra lontanissimo
 Un personaggio storico affascinante | Un personaggio storico controverso
-Un dolce per una festa | Un dolce che crea dibattito
-Una canzone che mette subito di buon umore | Una canzone che ti fa pensare
-Una pubblicità che ti è rimasta impressa | Una pubblicità che hai odiato
-Un libro che rileggi spesso | Un libro che ti ha sorpreso
-Un film che tutti amano | Uno che pochi conoscono ma che ti ha colpito
-Un colore che indossi spesso | Uno che eviti sempre
-Una citazione che ti ispira | Una frase che ti diverte
-Un’esperienza che consiglieresti | Una che non rifaresti ma è servita
+Un dolce per una festa | Un dolce che mangeresti senza mai stancarti
+Il miglior cibo per un brunch | Il miglior piatto per una colazione
+Una canzone che mette subito di buon umore | Una canzone di cui conosci tutto il testo
+Una pubblicità che ti ha sempre fatto ridere | Una pubblicità molto strana
+Un film che tutti amano | Un film che pochi conoscono ma che ti ha colpito
+Un colore che indossi spesso | Il tuo colore preferito
+Una citazione che ti ispira | Inventa una citazione
+Un’esperienza che consiglieresti | Un'esperienza che faresti con un amico
 Una meta per un viaggio on the road | Una meta per un viaggio di relax totale
 Un cibo da mangiare d’estate | Un cibo che ami anche fuori stagione
-Una bevanda da spiaggia | Una bevanda da serata invernale
-Un ricordo d’infanzia felice | Un ricordo d’infanzia buffo
-Un’esperienza che vuoi rifare | Un’esperienza che è stata unica ma non rifaresti
-Un animale domestico comune | Un animale domestico non convenzionale
-Un oggetto tecnologico utile | Uno superfluo ma divertente
+Una bevanda da spiaggia | Una bevanda da serata estiva
+Un animale domestico che vorresti | Un animale domestico particolare
+Un oggetto tecnologico utile | Un oggetto tecnologico superfluo ma divertente
 Una cosa che odi fare | Una cosa che ami anche se è faticosa
-Un regalo che hai ricevuto | Un regalo che hai fatto con amore
-Un film d’azione memorabile | Un film drammatico che ti ha colpito
-Un film che ti ha fatto piangere | Un film che ti ha fatto ridere a crepapelle
+Un film d’azione memorabile | Un film thriller che ti è piaciuto
+Un film comico che non ti fa ridere | Un film che ti ha fatto ridere a crepapelle
 Il miglior condimento per la pizza | La miglior farcitura per un panino
 Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Una canzone da cantare in auto | Una canzone che ti sveglia la mattina
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Un piatto che ti cucini da solo | Un piatto che ordini spesso
-Il miglior momento per allenarsi | Il momento in cui ti senti più attivo
-Un oggetto che hai sempre in borsa | Un oggetto che dimentichi spesso
+Un ingrediente particolare che si mangia a colazione | Un ingrediente che trovi sempre a pranzo
+Un colore che indossi spesso | Un colore che vorresti indossare di più
+Un piatto che ti cucini da solo | Un piatto che ordini spesso ma che ti piacerebbe saper fare
+Il miglior momento per allenarsi | Il momento della giornata in cui ti senti più attivo
 Un film da vedere in compagnia | Un film che ami riguardare
-Un animale che ti rilassa | Un animale che ti mette energia
-Il numero di ore ideali per dormire | Il numero di ore dopo cui ti svegli comunque
-Un’app che usi ogni giorno | Un sito che visiti ogni giorno
+Il numero di ore ideali per dormire | Il numero di ore che dormi
+Un’app che usi ogni giorno | Un sito che visiti ogni giorno (+100 punti se è partygamesdrew.com!)
 Una cosa che fai appena sveglio | Una cosa che fai prima di dormire
 Un’attività rilassante | Un’attività che ti fa staccare dal telefono
-Un posto dove ti concentri bene | Un posto dove riesci a fantasticare
+Un posto dove ti concentri bene | La stanza che ami di più della tua casa
 Una vacanza che sogni da tempo | Una vacanza che ti ha cambiato
-Una serie TV che hai amato | Una serie che consigli spesso
-Un cartone che guardavi da piccolo | Un film che ti ha segnato da piccolo
-Un numero di scarpe che usi spesso | Un numero di scarpe che hai ma non usi
+Una serie TV che hai amato | Una serie TV che consigli spesso
+Un cartone che guardavi da piccolo | Un cartone che guardi/guarderesti anche da adulto
 Una bevanda da spiaggia | Una bevanda da festa
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
+Una cosa che porti al mare | Una cosa che porti in vacanza
 Un piatto che ti cucini da solo | Un piatto che ordini spesso
 Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
 Un film da vedere in compagnia | Un film che ami riguardare
-Un piatto che ti cucini da solo | Un piatto che ordini spesso
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Un animale che ti rilassa | Un animale che ti mette energia
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Un cartone che guardavi da piccolo | Un film che ti ha segnato da piccolo
-Una vacanza che sogni da tempo | Una vacanza che ti ha cambiato
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un film da vedere in compagnia | Un film che ami riguardare
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un animale che ti rilassa | Un animale che ti mette energia
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Una serie TV che hai amato | Una serie che consigli spesso
-Un cartone che guardavi da piccolo | Un film che ti ha segnato da piccolo
-Una vacanza che sogni da tempo | Una vacanza che ti ha cambiato
-Una vacanza che sogni da tempo | Una vacanza che ti ha cambiato
-Un film da vedere in compagnia | Un film che ami riguardare
-Un numero di scarpe che usi spesso | Un numero di scarpe che hai ma non usi
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Una bevanda da spiaggia | Una bevanda da festa
-Un colore che indossi spesso | Un colore che vorresti indossare di più
-Un film da vedere in compagnia | Un film che ami riguardare
-Il miglior condimento per la pizza | La miglior farcitura per un panino
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Un piatto che ti cucini da solo | Un piatto che ordini spesso
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un film da vedere in compagnia | Un film che ami riguardare
-Il miglior momento per allenarsi | Il momento in cui ti senti più attivo
-Un film da vedere in compagnia | Un film che ami riguardare
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un cartone che guardavi da piccolo | Un film che ti ha segnato da piccolo
-Una bevanda da spiaggia | Una bevanda da festa
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un film da vedere in compagnia | Un film che ami riguardare
-Il miglior condimento per la pizza | La miglior farcitura per un panino
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un numero di scarpe che usi spesso | Un numero di scarpe che hai ma non usi
-Un film da vedere in compagnia | Un film che ami riguardare
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
-Un numero di scarpe che usi spesso | Un numero di scarpe che hai ma non usi
-Un animale che ti rilassa | Un animale che ti mette energia
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un animale che ti rilassa | Un animale che ti mette energia
-Il miglior momento per allenarsi | Il momento in cui ti senti più attivo
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un animale che ti rilassa | Un animale che ti mette energia
-Un film da vedere in compagnia | Un film che ami riguardare
-Un’app che usi ogni giorno | Un sito che visiti ogni giorno
-Un film da vedere in compagnia | Un film che ami riguardare
-Un animale che ti rilassa | Un animale che ti mette energia
-Un ingrediente che non deve mancare a colazione | Un ingrediente che trovi sempre a pranzo
-Un’app che usi ogni giorno | Un sito che visiti ogni giorno
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Un film da vedere in compagnia | Un film che ami riguardare
-Un film da vedere in compagnia | Un film che ami riguardare
-Un colore che indossi spesso | Un colore che vorresti usare di più
-Il numero perfetto di persone per una vacanza | Il numero ideale per una cena a casa
-Un film da vedere in compagnia | Un film che ami riguardare
-Un film da vedere in compagnia | Un film che ami riguardare
-Una cosa che porti al mare | Una cosa che usi solo in vacanza
+Il miglior personaggio di un videogioco | Un personaggio di un videogioco
+Quante password usi | Quante password ricordi a memoria
+Quanti sport hai provato nella vita | Quanti sport hai praticato per almeno 3 anni
+Quante ore passi al computer ogni giorno | Quante ore passi davanti al telefono ogni giorno
+Quanti paesi vuoi visitare nella vita | Quanti paesi hai già visitato
+Quante volte al mese vai in palestra | Quante volte al mese salti la palestra
+Quante foto hai nella galleria del telefono | Quante ne cancelleresti subito
+Quante lingue ti piacerebbe parlare | Quante lingue parli effettivamente
+Quante volte mangi fuori a settimana | Quante volte mangi a asporto
+Quanti televisori hai a casa | quanti telefoni hai avuto e cambiato
