@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backButton = document.createElement('button');
             backButton.id = 'back-button';
             backButton.className = 'back-button disabled';
-            backButton.innerHTML = '↩';
+            backButton.innerHTML = '<span class="arrow-icon">&#8592;</span>';
             backButton.title = 'Annulla ultima lettera';
             
             // Add click event
@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.style.position = 'fixed';
         feedback.style.fontSize = '3rem';
         feedback.style.fontWeight = 'bold';
-        feedback.style.color = '#ff4b2b';
+        feedback.style.color = '#bb86fc';
         feedback.style.opacity = '0';
         feedback.style.zIndex = '1000';
         
@@ -599,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.style.left = '50%';
         feedback.style.transform = 'translate(-50%, -50%)';
         feedback.style.pointerEvents = 'none';
-        feedback.style.textShadow = '0 0 10px rgba(255, 75, 43, 0.7)';
+        feedback.style.textShadow = '0 0 10px rgba(187, 134, 252, 0.7)';
         feedback.style.transition = 'all 1s ease-out';
         
         document.body.appendChild(feedback);

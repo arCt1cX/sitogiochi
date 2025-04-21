@@ -123,12 +123,12 @@ body {
 /* Back Button */
 .back-button {
     position: fixed;
-    top: 60px;
+    top: 100px;
     right: 15px;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f46b45, #eea849);
+    background: linear-gradient(135deg, #8a2be2, #bb86fc);
     border: none;
     color: white;
     font-size: 1.8rem;
@@ -136,14 +136,15 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(244, 107, 69, 0.5);
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.5);
     transition: all 0.3s ease;
     z-index: 1000;
+    outline: none;
 }
 
 .back-button:hover:not(.disabled) {
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(244, 107, 69, 0.7);
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.7);
 }
 
 .back-button.disabled {
@@ -153,9 +154,16 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.arrow-icon {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+    line-height: 1;
+}
+
 /* Undo animation */
 .undo-feedback {
-    color: #ff4b2b !important;
+    color: #bb86fc !important;
 }
 
 /* Time up message animation */
