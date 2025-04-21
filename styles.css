@@ -150,7 +150,7 @@ h2 {
 
 /* Coming Soon Card */
 .coming-soon-card {
-    background: linear-gradient(45deg, #333, #555);
+    background: linear-gradient(145deg, #222, #444);
     background-size: 200% 200%;
     animation: none;
     display: flex;
@@ -159,31 +159,62 @@ h2 {
     align-items: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .coming-soon-card h3 {
     font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
     margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 3;
 }
 
 .coming-soon-card .game-catchphrase {
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 0;
+    position: relative;
+    z-index: 3;
 }
 
-.coming-soon-card:after {
+.coming-soon-card:before {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    animation: shine 3s infinite linear;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0) 30%
+    );
+    z-index: 1;
+    animation: holographic 6s infinite linear;
+}
+
+.coming-soon-card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 2;
+    transform: skewX(-20deg);
+    animation: cdShine 4s infinite ease-in-out;
 }
 
 /* Footer */
@@ -205,6 +236,61 @@ footer {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        background-position: 0% 0%;
+    }
+    25% {
+        transform: translateY(-5px) scale(1.02);
+        background-position: 50% 50%;
+    }
+    50% {
+        transform: translateY(0) scale(1);
+        background-position: 100% 100%;
+    }
+    75% {
+        transform: translateY(5px) scale(0.98);
+        background-position: 50% 50%;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes holographic {
+    0% {
+        opacity: 0.2;
+        transform: rotate(0deg);
+    }
+    30% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.2;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cdShine {
+    0% {
+        left: -150%;
+    }
+    30% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
     }
 }
 
