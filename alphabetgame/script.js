@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Load categories from the file
         await loadCategories();
         
-        // Generate alphabet buttons
-        createAlphabetButtons();
+        // We'll create the alphabet buttons when the game starts, not on init
     }
     
     async function loadCategories() {
@@ -178,6 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function startGame() {
+        // Clear alphabet container first to prevent duplicates
+        alphabetContainer.innerHTML = '';
+        
+        // Create alphabet buttons at game start
+        createAlphabetButtons();
+        
+        // Set a new random category
+        setNewCategory();
+        
         // Hide start screen and show game screen with animation
         startScreen.style.opacity = '0';
         setTimeout(() => {
@@ -199,10 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         button.style.transform = 'translateY(0)';
                     }, index * 50);
                 });
-                
-                // Set initial category
-                setNewCategory();
-            }, 50);
+            }, 10);
         }, 300);
     }
     

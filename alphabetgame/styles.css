@@ -44,6 +44,29 @@ body {
     align-items: center;
 }
 
+/* Hide game screen contents completely when not active */
+#game-screen:not(.active) {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Ensure alphabet container is only visible in active game screen */
+#alphabet-container {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+}
+
+#game-screen.active #alphabet-container {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+}
+
 /* Headings */
 h1 {
     font-size: 3.2rem;
