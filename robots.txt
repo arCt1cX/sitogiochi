@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://partygamesdrew.com/sitemap.xml 
