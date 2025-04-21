@@ -75,7 +75,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Create timer element
+    // Start the timer
+    function startTimer() {
+        // Reset time left to the current base value
+        timeLeft = baseTimerValue;
+        
+        // Update display
+        const timerDisplay = document.getElementById('timer-display');
+        timerDisplay.textContent = timeLeft;
+        
+        // Clear any existing timer
+        if (timer) {
+            clearInterval(timer);
+        }
+        
+        // Start new timer
+        timerRunning = true;
+        timer = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = timeLeft;
+            
+            // Time's up!
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                timerRunning = false;
+                showTimeUpMessage();
+                
+                if (!gameOver) {
+                    restartTimer();
+                }
+            }
+        }, 1000);
+    }
+    
+    // Create timer with initial display but don't start it
     function createTimer() {
         // Create timer container if it doesn't exist
         let timerContainer = document.getElementById('timer-container');
@@ -86,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create timer display
             const timerDisplay = document.createElement('div');
             timerDisplay.id = 'timer-display';
+            
+            // Show base timer value but don't start counting
             timerDisplay.textContent = baseTimerValue;
             
             // Add the timer display to the container
@@ -119,39 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameScreen.insertBefore(backButton, alphabetContainer);
             }
         }
-    }
-    
-    // Start the timer
-    function startTimer() {
-        // Reset time left to the current base value
-        timeLeft = baseTimerValue;
-        
-        // Update display
-        const timerDisplay = document.getElementById('timer-display');
-        timerDisplay.textContent = timeLeft;
-        
-        // Clear any existing timer
-        if (timer) {
-            clearInterval(timer);
-        }
-        
-        // Start new timer
-        timerRunning = true;
-        timer = setInterval(() => {
-            timeLeft--;
-            timerDisplay.textContent = timeLeft;
-            
-            // Time's up!
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                timerRunning = false;
-                showTimeUpMessage();
-                
-                if (!gameOver) {
-                    restartTimer();
-                }
-            }
-        }, 1000);
     }
     
     // Reset timer
@@ -325,11 +327,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Track clicked letters
         clickedLetters++;
         
+        // Start timer on first letter click
+        if (clickedLetters === 1) {
+            startTimer();
+        } else {
+            // Otherwise just reset the timer
+            resetTimer();
+        }
+        
         // Update timer base value if needed
         updateTimerBaseValue();
-        
-        // Reset the timer
-        resetTimer();
         
         // Play sound effect (optional)
         playClickSound();
@@ -449,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create alphabet buttons at game start
         createAlphabetButtons();
         
-        // Create and start the timer
+        // Create timer but don't start it yet
         createTimer();
         
         // Create back button
@@ -480,10 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, index * 50);
                 });
                 
-                // Start the timer after animations complete
-                setTimeout(() => {
-                    startTimer();
-                }, buttons.length * 50 + 100);
+                // Timer will start on first letter click instead
             }, 10);
         }, 300);
     }
@@ -500,6 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Reset timer
         clearInterval(timer);
+        timerRunning = false;
         
         // First fade out all buttons
         letterButtons.forEach((button, index) => {
@@ -524,14 +529,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Set new category
             setNewCategory();
             
-            // Update timer
+            // Update timer display to show initial value without starting it
             const timerDisplay = document.getElementById('timer-display');
             if (timerDisplay) {
                 timerDisplay.textContent = baseTimerValue;
             }
             
-            // Restart timer
-            startTimer();
+            // Reset back button to disabled state
+            const backButton = document.getElementById('back-button');
+            if (backButton) {
+                backButton.classList.add('disabled');
+            }
+            
         }, letterButtons.length * 30 + 200);
     }
     
@@ -575,8 +584,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Decrease clicked letters count
             clickedLetters--;
             
-            // Update timer base value
-            updateTimerBaseValue();
+            // If we just removed the first and only letter, stop the timer
+            if (clickedLetters === 0) {
+                clearInterval(timer);
+                timerRunning = false;
+                const timerDisplay = document.getElementById('timer-display');
+                if (timerDisplay) {
+                    timerDisplay.textContent = baseTimerValue;
+                }
+            } else {
+                // Otherwise, update timer base value
+                updateTimerBaseValue();
+            }
             
             // Show visual feedback
             showUndoFeedback(lastLetter);

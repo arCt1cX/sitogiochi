@@ -367,16 +367,8 @@ h2 {
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #12c2e9, #c471ed);
 }
-
-/* Individual letter colors */
-.letter-button:nth-child(7n+1) { background: linear-gradient(135deg, #FF416C, #FF4B2B); }
-.letter-button:nth-child(7n+2) { background: linear-gradient(135deg, #12c2e9, #c471ed); }
-.letter-button:nth-child(7n+3) { background: linear-gradient(135deg, #56ab2f, #a8e063); }
-.letter-button:nth-child(7n+4) { background: linear-gradient(135deg, #6a11cb, #2575fc); }
-.letter-button:nth-child(7n+5) { background: linear-gradient(135deg, #f953c6, #b91d73); }
-.letter-button:nth-child(7n+6) { background: linear-gradient(135deg, #c94b4b, #4b134f); }
-.letter-button:nth-child(7n) { background: linear-gradient(135deg, #f46b45, #eea849); }
 
 .letter-button:before {
     content: '';
@@ -400,13 +392,13 @@ h2 {
 }
 
 .letter-button.disabled {
-    background: #333;
+    background: linear-gradient(135deg, #12c2e9, #c471ed);
     color: #666;
     cursor: not-allowed;
     transform: scale(0.9) rotateY(10deg);
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
-    opacity: 0.6;
-    filter: grayscale(1);
+    opacity: 0.4;
+    filter: grayscale(0.8);
 }
 
 /* Animation for letter click */
