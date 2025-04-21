@@ -1,4 +1,4 @@
-# DrewGames.com
+# partygamesdrew.com
 
 A collection of offline party games built with HTML, CSS, and JavaScript, hosted on GitHub Pages.
 
