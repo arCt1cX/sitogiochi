@@ -1,24 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Games array with additional catchphrase information
+    // Games array with additional catchphrase information and display names
     const games = [
         {
             id: "impostor",
+            displayName: "Impostor",
             catchphrase: "Scopri chi mente nel gruppo!"
         },
         {
             id: "colorgrid",
+            displayName: "Color Grid",
             catchphrase: "Indovina la cella colorata segreta!"
         },
         {
             id: "guessthepic",
+            displayName: "Indovina Immagini",
             catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!"
         },
         {
             id: "timergame",
+            displayName: "Wordrace",
             catchphrase: "Corri contro il tempo in questa sfida di parole!"
         },
         {
             id: "alphabetgame",
+            displayName: "Alphabet Game",
             catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!"
         }
     ];
@@ -52,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = `game-card ${gradientClasses[index % gradientClasses.length]}`;
         
-        // Create game title
+        // Create game title using the display name if available, otherwise format the ID
         const title = document.createElement('h3');
-        title.textContent = formatGameName(game.id);
+        title.textContent = game.displayName || formatGameName(game.id);
         
         // Create catchphrase
         const catchphrase = document.createElement('p');
