@@ -228,7 +228,7 @@ function revealAnswer() {
             resultItem.textContent = `${player.name}: Corretto! (${player.guess})`;
         } else {
             resultItem.classList.add('incorrect');
-            resultItem.textContent = `${player.name}: Sbagliato! Ha indovinato ${player.guess || 'niente'}`;
+            resultItem.textContent = `${player.name}: Sbagliato! `;
         }
         
         resultsList.appendChild(resultItem);
