@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     let clickedLetters = 0;
     let timer;
-    let timeLeft = 30;
+    let timeLeft = 10;
     let timerRunning = false;
+    let baseTimerValue = 10; // Starting timer value
     
     // Initialize the game
     init();
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create timer display
             const timerDisplay = document.createElement('div');
             timerDisplay.id = 'timer-display';
-            timerDisplay.textContent = '30';
+            timerDisplay.textContent = baseTimerValue;
             
             // Add the timer display to the container
             timerContainer.appendChild(timerDisplay);
@@ -94,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Start the timer
     function startTimer() {
-        // Reset time left
-        timeLeft = 30;
+        // Reset time left to the current base value
+        timeLeft = baseTimerValue;
         
         // Update display
         const timerDisplay = document.getElementById('timer-display');
@@ -128,6 +129,55 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timer);
             startTimer();
         }
+    }
+    
+    // Update timer base value based on number of clicked letters
+    function updateTimerBaseValue() {
+        // Calculate new base value: 10 seconds + 10 seconds for every 5 letters clicked
+        const letterMilestones = Math.floor(clickedLetters / 5);
+        baseTimerValue = 10 + (letterMilestones * 10);
+        
+        // Show message for time increase
+        if (clickedLetters > 0 && clickedLetters % 5 === 0) {
+            showTimerIncreasedMessage();
+        }
+    }
+    
+    // Show timer increased message
+    function showTimerIncreasedMessage() {
+        // Display the "Timer Increased" message with animation
+        const timerMessage = document.createElement('div');
+        timerMessage.className = 'timer-message';
+        timerMessage.textContent = `Tempo Aumentato: ${baseTimerValue}s!`;
+        timerMessage.style.position = 'fixed';
+        timerMessage.style.fontSize = '2rem';
+        timerMessage.style.fontWeight = 'bold';
+        timerMessage.style.color = '#56ab2f';
+        timerMessage.style.opacity = '0';
+        timerMessage.style.zIndex = '1000';
+        timerMessage.style.top = '50%';
+        timerMessage.style.left = '50%';
+        timerMessage.style.transform = 'translate(-50%, -50%)';
+        timerMessage.style.pointerEvents = 'none';
+        timerMessage.style.textShadow = '0 0 10px rgba(86, 171, 47, 0.7)';
+        timerMessage.style.transition = 'all 1s ease-out';
+        
+        document.body.appendChild(timerMessage);
+        
+        // Animate
+        setTimeout(() => {
+            timerMessage.style.opacity = '1';
+            timerMessage.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        }, 10);
+        
+        setTimeout(() => {
+            timerMessage.style.opacity = '0';
+            timerMessage.style.transform = 'translate(-50%, -50%) translateY(-100px) scale(0.5)';
+        }, 1500);
+        
+        setTimeout(() => {
+            document.body.removeChild(timerMessage);
+        }, 2500);
     }
     
     // Show time's up message
@@ -182,6 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        // Track clicked letters
+        clickedLetters++;
+        
+        // Update timer base value if needed
+        updateTimerBaseValue();
+        
         // Reset the timer
         resetTimer();
         
@@ -193,9 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Disable the button
         button.classList.add('disabled');
-        
-        // Track clicked letters
-        clickedLetters++;
         
         // Add visual feedback
         const letter = button.dataset.letter;
@@ -286,6 +339,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function startGame() {
+        // Reset game variables
+        clickedLetters = 0;
+        baseTimerValue = 10;
+        
         // Clear alphabet container first to prevent duplicates
         alphabetContainer.innerHTML = '';
         
@@ -329,11 +386,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function resetGame() {
+        // Reset game variables
+        clickedLetters = 0;
+        baseTimerValue = 10;
+        
         // Add some animation to the reset process
         const letterButtons = document.querySelectorAll('.letter-button');
         
         // Reset timer
-        resetTimer();
+        clearInterval(timer);
         
         // First fade out all buttons
         letterButtons.forEach((button, index) => {
@@ -345,8 +406,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Then reset and fade them back in
         setTimeout(() => {
-            clickedLetters = 0;
-            
             letterButtons.forEach((button, index) => {
                 button.classList.remove('disabled');
                 button.classList.remove('click-animation');
@@ -359,6 +418,15 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Set new category
             setNewCategory();
+            
+            // Update timer
+            const timerDisplay = document.getElementById('timer-display');
+            if (timerDisplay) {
+                timerDisplay.textContent = baseTimerValue;
+            }
+            
+            // Restart timer
+            startTimer();
         }, letterButtons.length * 30 + 200);
     }
     

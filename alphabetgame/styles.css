@@ -124,6 +124,30 @@ body {
     animation: fadeInOut 2.5s ease-in-out;
 }
 
+/* Timer increased message animation */
+.timer-message {
+    animation: timerIncrease 2.5s ease-in-out;
+}
+
+@keyframes timerIncrease {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-100px) scale(0.5);
+    }
+}
+
 @keyframes fadeInOut {
     0% {
         opacity: 0;
