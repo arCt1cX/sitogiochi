@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Create back button
     function createBackButton() {
-        // Create back button container if it doesn't exist
+        // Create back button if it doesn't exist
         let backButton = document.getElementById('back-button');
         if (!backButton) {
             backButton = document.createElement('button');
@@ -110,8 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add click event
             backButton.addEventListener('click', handleBackButtonClick);
             
-            // Insert the back button before the alphabet container
-            gameScreen.insertBefore(backButton, alphabetContainer);
+            // Get timer container to add the button there
+            const timerContainer = document.getElementById('timer-container');
+            if (timerContainer) {
+                timerContainer.appendChild(backButton);
+            } else {
+                // Fallback to inserting before the alphabet container
+                gameScreen.insertBefore(backButton, alphabetContainer);
+            }
         }
     }
     
