@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = '';
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     let clickedLetters = 0;
+    let lastClickedLetter = null;
+    let clickedLettersHistory = [];
     let timer;
     let timeLeft = 10;
     let timerRunning = false;
@@ -91,6 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Insert the timer container before the alphabet container
             gameScreen.insertBefore(timerContainer, alphabetContainer);
+        }
+    }
+    
+    // Create back button
+    function createBackButton() {
+        // Create back button container if it doesn't exist
+        let backButton = document.getElementById('back-button');
+        if (!backButton) {
+            backButton = document.createElement('button');
+            backButton.id = 'back-button';
+            backButton.className = 'back-button disabled';
+            backButton.innerHTML = '↩';
+            backButton.title = 'Annulla ultima lettera';
+            
+            // Add click event
+            backButton.addEventListener('click', handleBackButtonClick);
+            
+            // Insert the back button before the alphabet container
+            gameScreen.insertBefore(backButton, alphabetContainer);
         }
     }
     
@@ -289,6 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        // Get the letter
+        const letter = button.dataset.letter;
+        
+        // Add to history
+        clickedLettersHistory.push(letter);
+        
         // Track clicked letters
         clickedLetters++;
         
@@ -308,13 +335,18 @@ document.addEventListener('DOMContentLoaded', () => {
         button.classList.add('disabled');
         
         // Add visual feedback
-        const letter = button.dataset.letter;
         showLetterFeedback(letter);
         
         // Remove animation class after animation completes
         setTimeout(() => {
             button.classList.remove('click-animation');
         }, 500);
+        
+        // Enable back button if it's disabled
+        const backButton = document.getElementById('back-button');
+        if (backButton.classList.contains('disabled')) {
+            backButton.classList.remove('disabled');
+        }
         
         // Check if game is completed
         checkGameCompletion();
@@ -403,6 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clickedLetters = 0;
         baseTimerValue = 10;
         gameOver = false;
+        clickedLettersHistory = [];
         
         // Clear alphabet container first to prevent duplicates
         alphabetContainer.innerHTML = '';
@@ -412,6 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Create and start the timer
         createTimer();
+        
+        // Create back button
+        createBackButton();
         
         // Set a new random category
         setNewCategory();
@@ -451,6 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clickedLetters = 0;
         baseTimerValue = 10;
         gameOver = false;
+        clickedLettersHistory = [];
         
         // Add some animation to the reset process
         const letterButtons = document.querySelectorAll('.letter-button');
@@ -508,5 +545,78 @@ document.addEventListener('DOMContentLoaded', () => {
             categoryDisplay.style.opacity = '1';
             categoryDisplay.style.transform = 'translateY(0)';
         }, 300);
+    }
+    
+    // Handle back button click
+    function handleBackButtonClick() {
+        const backButton = document.getElementById('back-button');
+        
+        // If button is disabled or there's no history, do nothing
+        if (backButton.classList.contains('disabled') || clickedLettersHistory.length === 0 || gameOver) {
+            return;
+        }
+        
+        // Get the last clicked letter from history
+        const lastLetter = clickedLettersHistory.pop();
+        
+        // Find the button for this letter
+        const letterButton = document.querySelector(`.letter-button[data-letter="${lastLetter}"]`);
+        
+        if (letterButton) {
+            // Re-enable the button
+            letterButton.classList.remove('disabled');
+            
+            // Decrease clicked letters count
+            clickedLetters--;
+            
+            // Update timer base value
+            updateTimerBaseValue();
+            
+            // Show visual feedback
+            showUndoFeedback(lastLetter);
+            
+            // If there's no more history, disable the back button
+            if (clickedLettersHistory.length === 0) {
+                backButton.classList.add('disabled');
+            }
+        }
+    }
+    
+    // Show undo feedback animation
+    function showUndoFeedback(letter) {
+        // Create a floating letter that animates and fades out
+        const feedback = document.createElement('div');
+        feedback.className = 'letter-feedback undo-feedback';
+        feedback.textContent = letter;
+        feedback.style.position = 'fixed';
+        feedback.style.fontSize = '3rem';
+        feedback.style.fontWeight = 'bold';
+        feedback.style.color = '#ff4b2b';
+        feedback.style.opacity = '0';
+        feedback.style.zIndex = '1000';
+        
+        feedback.style.top = '50%';
+        feedback.style.left = '50%';
+        feedback.style.transform = 'translate(-50%, -50%)';
+        feedback.style.pointerEvents = 'none';
+        feedback.style.textShadow = '0 0 10px rgba(255, 75, 43, 0.7)';
+        feedback.style.transition = 'all 1s ease-out';
+        
+        document.body.appendChild(feedback);
+        
+        // Animate
+        setTimeout(() => {
+            feedback.style.opacity = '1';
+            feedback.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        }, 10);
+        
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+            feedback.style.transform = 'translate(-50%, -50%) translateY(100px) scale(0.5)';
+        }, 500);
+        
+        setTimeout(() => {
+            document.body.removeChild(feedback);
+        }, 1500);
     }
 }); 
