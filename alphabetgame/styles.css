@@ -482,6 +482,12 @@ h2 {
 .restart-button {
     margin-top: 1rem;
     animation: bounce 1s infinite alternate;
+    background: linear-gradient(45deg, #9c27b0, #e040fb);
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.5);
+}
+
+.restart-button:hover {
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.7);
 }
 
 @keyframes fadeIn {

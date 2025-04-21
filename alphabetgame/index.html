@@ -23,7 +23,7 @@
             position: fixed;
             top: 10px;
             left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(45deg, #9c27b0, #e040fb);
             color: white;
             border: none;
             border-radius: 5px;
@@ -34,10 +34,14 @@
             z-index: 1000;
             display: flex;
             align-items: center;
+            box-shadow: 0 2px 8px rgba(156, 39, 176, 0.5);
+            transition: all 0.3s ease;
         }
         
         .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(45deg, #8e24aa, #d500f9);
+            box-shadow: 0 4px 12px rgba(156, 39, 176, 0.7);
+            transform: translateY(-2px);
         }
         
         .home-icon {
