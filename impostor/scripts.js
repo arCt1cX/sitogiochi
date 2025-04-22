@@ -24,112 +24,114 @@ document.addEventListener('DOMContentLoaded', () => {
     const impostorPrompt = document.getElementById('impostor-prompt');
     const playAgainBtn = document.getElementById('play-again');
     
-    const discussionTimer = document.getElementById('discussion-timer');
-    const discussionTimerValue = 60; // Assuming a default value, you might want to fetch this from somewhere
-    const skipDiscussionBtn = document.getElementById('skip-discussion');
-    
     // Game State
-    const gameState = {
-        playerCount: 0,
-        currentPlayer: 0,
-        impostorIndices: [],
-        impostorCount: 1,
-        secretPrompt: "",
-        playerPrompts: [],
-        hasImpostor: true
+    let gameState = {
+        playerCount: 4,
+        currentPlayer: 1,
+        impostorIndex: -1,
+        prompts: [],
+        groupPrompt: '',
+        impostorPrompt: '',
+        allPhrasePairs: [],
+        hasImpostor: true // New property to track if there's an impostor
     };
     
-    // Load prompts from file
+    // Load prompts from the text file
     async function loadPrompts() {
         try {
             const response = await fetch('frasi_gioco_impostore.txt');
             const text = await response.text();
-            return text.split('\n').filter(line => line.trim() !== '');
+            
+            // Split by new line and filter out empty lines
+            const lines = text.split('\n').filter(line => line.trim().length > 0);
+            
+            // Parse each line into a phrase pair
+            gameState.allPhrasePairs = lines.map(line => {
+                const [groupPhrase, impostorPhrase] = line.split('|').map(phrase => phrase.trim());
+                return { groupPhrase, impostorPhrase };
+            });
+            
+            console.log(`Loaded ${gameState.allPhrasePairs.length} phrase pairs`);
         } catch (error) {
-            console.error('Errore nel caricamento delle frasi:', error);
-            return [
-                "Pizza", "Spaghetti", "Calcio", "Roma", "Venezia", 
-                "Firenze", "Leonardo da Vinci", "Colosseo", "Ferrari",
-                "Opera", "Gelato", "Cappuccino", "Pasta", "Vino"
-            ];
+            console.error('Error loading prompts:', error);
+            alert('Errore nel caricamento dei prompt. Ricarica la pagina per riprovare.');
         }
     }
     
-    // Initialize game
-    async function initializeGame() {
+    // Initialize the game
+    function initGame() {
+        // Set player count from input
+        gameState.playerCount = parseInt(playerCountInput.value) || 4;
+        
+        // Ensure minimum 3 players
+        if (gameState.playerCount < 3) {
+            gameState.playerCount = 3;
+            playerCountInput.value = 3;
+        }
+        
         // Reset game state
-        gameState.playerCount = parseInt(document.getElementById('player-count').value, 10);
-        gameState.impostorCount = parseInt(document.getElementById('impostor-count').value, 10);
-        gameState.currentPlayer = 0;
+        gameState.currentPlayer = 1;
+        gameState.prompts = [];
         
-        // Adjust impostor count based on player count
-        const maxImpostors = gameState.playerCount >= 10 ? 4 : 
-                             gameState.playerCount >= 8 ? 3 : 
-                             gameState.playerCount >= 5 ? 2 : 1;
-        
-        gameState.impostorCount = Math.min(gameState.impostorCount, maxImpostors);
-        document.getElementById('impostor-count').max = maxImpostors;
-        
-        // Generate impostor indices
-        gameState.impostorIndices = [];
-        gameState.hasImpostor = gameState.impostorCount > 0;
+        // Determine if this game will have an impostor (1/50 chance of no impostor)
+        gameState.hasImpostor = Math.random() > 0.02; // 98% chance to have an impostor
         
         if (gameState.hasImpostor) {
-            // Create array of player indices
-            const playerIndices = Array.from({ length: gameState.playerCount }, (_, i) => i);
+            // Randomly select the impostor
+            gameState.impostorIndex = Math.floor(Math.random() * gameState.playerCount);
             
-            // Randomly select impostor indices
-            for (let i = 0; i < gameState.impostorCount; i++) {
-                if (playerIndices.length > 0) {
-                    const randomIndex = Math.floor(Math.random() * playerIndices.length);
-                    gameState.impostorIndices.push(playerIndices[randomIndex]);
-                    playerIndices.splice(randomIndex, 1);
-                }
-            }
+            // Randomly select a phrase pair for this round
+            const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
+            const selectedPair = gameState.allPhrasePairs[randomPairIndex];
+            
+            gameState.groupPrompt = selectedPair.groupPhrase;
+            gameState.impostorPrompt = selectedPair.impostorPhrase;
+            
+            console.log(`Game started with ${gameState.playerCount} players, impostor is player ${gameState.impostorIndex + 1}`);
+            console.log(`Group prompt: ${gameState.groupPrompt}`);
+            console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
+        } else {
+            // No impostor game!
+            gameState.impostorIndex = -1;
+            
+            // Select just a group prompt
+            const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
+            const selectedPair = gameState.allPhrasePairs[randomPairIndex];
+            
+            gameState.groupPrompt = selectedPair.groupPhrase;
+            gameState.impostorPrompt = ""; // Not used in this game
+            
+            console.log("Special game: No impostor!");
+            console.log(`Group prompt for everyone: ${gameState.groupPrompt}`);
         }
-
-        // Load and set prompts
-        const prompts = await loadPrompts();
-        const randomPromptIndex = Math.floor(Math.random() * prompts.length);
-        gameState.secretPrompt = prompts[randomPromptIndex];
-        gameState.playerPrompts = Array(gameState.playerCount).fill(gameState.secretPrompt);
         
-        // Fill impostor prompts with blank
-        gameState.impostorIndices.forEach(index => {
-            gameState.playerPrompts[index] = "";
-        });
-
-        // Update UI
-        updatePlayerTurn();
+        // Update UI for first player
+        updatePlayerTurnUI();
         
-        // Switch to player turn screen
-        setupScreen.classList.add('hidden');
-        playerTurnScreen.classList.remove('hidden');
+        // Switch screen
+        showScreen(playerTurnScreen);
     }
     
     // Update player turn UI
-    function updatePlayerTurn() {
-        currentPlayerNum.textContent = gameState.currentPlayer + 1;
-        currentPlayerNumText.textContent = gameState.currentPlayer + 1;
+    function updatePlayerTurnUI() {
+        currentPlayerNum.textContent = gameState.currentPlayer;
+        currentPlayerNumText.textContent = gameState.currentPlayer;
         
         // Hide prompt container initially
         promptContainer.classList.add('hidden');
         showPromptBtn.classList.remove('hidden');
     }
     
-    // Show prompt for the current player
+    // Show prompt for current player
     function showPrompt() {
-        const isImpostor = gameState.impostorIndices.includes(gameState.currentPlayer);
+        // In a no-impostor game, everyone gets the same prompt
+        // Otherwise, the impostor gets a different prompt
+        const isImpostor = gameState.hasImpostor && (gameState.currentPlayer - 1) === gameState.impostorIndex;
         
-        if (isImpostor) {
-            playerPrompt.textContent = "Sei l'Impostore! Fai attenzione a non farti scoprire.";
-            impostorPrompt.textContent = "Non hai un suggerimento - dovrai fingere di conoscere l'argomento segreto!";
-            impostorPrompt.classList.remove('hidden');
-        } else {
-            playerPrompt.textContent = gameState.secretPrompt;
-            impostorPrompt.classList.add('hidden');
-        }
+        // Set the appropriate prompt
+        playerPrompt.textContent = isImpostor ? gameState.impostorPrompt : gameState.groupPrompt;
         
+        // Show prompt container
         promptContainer.classList.remove('hidden');
         showPromptBtn.classList.add('hidden');
     }
@@ -139,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameState.currentPlayer < gameState.playerCount) {
             // Move to next player
             gameState.currentPlayer++;
-            updatePlayerTurn();
+            updatePlayerTurnUI();
         } else {
             // All players have seen their prompts, move to writing screen
             showScreen(writingScreen);
@@ -148,47 +150,51 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show the group prompt and move to discussion
     function showGroupPrompt() {
-        sharedPrompt.textContent = gameState.secretPrompt;
+        sharedPrompt.textContent = gameState.groupPrompt;
         showScreen(discussionScreen);
     }
     
     // Reveal the impostor
     function revealImpostor() {
-        const impostorIndices = gameState.impostorIndices;
+        const impostorRevealElement = document.querySelector('.impostor-reveal');
         
-        if (impostorIndices.length === 0) {
-            impostorNum.textContent = "Nessun impostore";
-            impostorPrompt.textContent = "Non c'erano impostori in questa partita!";
-        } else if (impostorIndices.length === 1) {
-            impostorNum.textContent = `Giocatore ${impostorIndices[0] + 1}`;
-            impostorPrompt.textContent = `L'impostore era il Giocatore ${impostorIndices[0] + 1}!`;
+        // Remove any previous classes that might be applied
+        impostorRevealElement.classList.remove('no-impostor-surprise');
+        
+        // Update the reveal screen based on whether there was an impostor
+        if (gameState.hasImpostor) {
+            // Normal game with an impostor
+            document.querySelector('.reveal-header h2').textContent = "L'Impostore è...";
+            impostorRevealElement.innerHTML = `Il giocatore <span id="impostor-num">${gameState.impostorIndex + 1}</span>!`;
+            document.querySelector('.impostor-prompt-container p:first-child').textContent = "Il suo prompt era:";
+            impostorPrompt.textContent = gameState.impostorPrompt;
         } else {
-            const impostorsList = impostorIndices.map(index => `${index + 1}`).join(', ');
-            impostorNum.textContent = `Giocatori ${impostorsList}`;
-            impostorPrompt.textContent = `Gli impostori erano i Giocatori ${impostorsList}!`;
+            // Special game with no impostor!
+            document.querySelector('.reveal-header h2').textContent = "Sorpresa!";
+            impostorRevealElement.innerHTML = "Ahah! Nessuno era l'impostore! <span class='emoji-surprise'>😜</span>";
+            impostorRevealElement.classList.add('no-impostor-surprise');
+            document.querySelector('.impostor-prompt-container p:first-child').textContent = "Eravate tutti dalla stessa parte:";
+            impostorPrompt.textContent = gameState.groupPrompt;
         }
         
-        playerTurnScreen.classList.add('hidden');
-        writingScreen.classList.add('hidden');
-        discussionScreen.classList.add('hidden');
-        revealScreen.classList.remove('hidden');
+        showScreen(revealScreen);
     }
     
     // Helper to show a specific screen and hide others
     function showScreen(screenToShow) {
         // Hide all screens
-        setupScreen.classList.add('hidden');
-        playerTurnScreen.classList.add('hidden');
-        writingScreen.classList.add('hidden');
-        discussionScreen.classList.add('hidden');
-        revealScreen.classList.add('hidden');
+        setupScreen.classList.remove('active');
+        playerTurnScreen.classList.remove('active');
+        writingScreen.classList.remove('active');
+        discussionScreen.classList.remove('active');
+        revealScreen.classList.remove('active');
         
         // Show requested screen
-        screenToShow.classList.remove('hidden');
+        screenToShow.classList.add('active');
     }
     
     // Event Listeners
-    startGameBtn.addEventListener('click', initializeGame);
+    startGameBtn.addEventListener('click', initGame);
     
     showPromptBtn.addEventListener('click', showPrompt);
     
@@ -202,32 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showScreen(setupScreen);
     });
     
-    // Start the discussion phase
-    function startDiscussion() {
-        writingScreen.classList.add('hidden');
-        discussionScreen.classList.remove('hidden');
-        
-        // Start the timer
-        let timeLeft = discussionTimerValue;
-        discussionTimer.textContent = timeLeft;
-        
-        const timerInterval = setInterval(() => {
-            timeLeft--;
-            discussionTimer.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                revealImpostor();
-            }
-        }, 1000);
-        
-        // Allow skipping the timer
-        skipDiscussionBtn.onclick = () => {
-            clearInterval(timerInterval);
-            revealImpostor();
-        };
-    }
-    
     // Initial load
-    initializeGame();
+    loadPrompts();
 }); 

@@ -59,15 +59,9 @@
             <h2>Impostazioni del Gioco</h2>
             <div class="form-group">
                 <label for="player-count">Numero di Giocatori:</label>
-                <input type="number" id="player-count" value="4" min="3" max="10">
+                <input type="number" id="player-count" min="3" value="4">
             </div>
-            
-            <div class="form-group">
-                <label for="impostor-count">Numero di Impostori:</label>
-                <input type="number" id="impostor-count" value="1" min="1" max="4">
-            </div>
-            
-            <button id="start-game" class="btn primary-btn pulse-btn">Inizia Gioco</button>
+            <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
         </div>
 
         <!-- Player Turn Screen -->
@@ -78,7 +72,6 @@
             
             <div id="prompt-container" class="hidden">
                 <p class="prompt-text" id="player-prompt"></p>
-                <p id="impostor-note" class="hidden impostor-text">Non hai un suggerimento - dovrai fingere di conoscere l'argomento segreto!</p>
                 <button id="hide-prompt" class="btn secondary-btn">Ho Visto</button>
             </div>
         </div>
@@ -108,10 +101,12 @@
         <!-- Reveal Screen -->
         <div id="reveal-screen" class="game-screen">
             <div class="reveal-header">
-                <h2>Risultato Finale</h2>
+                <h2>L'Impostore è...</h2>
+                <p class="impostor-reveal">Il giocatore <span id="impostor-num">X</span>!</p>
             </div>
             <div class="impostor-prompt-container">
-                <p id="impostor-reveal-text" class="prompt-text impostor-text"></p>
+                <p>Il suo prompt era:</p>
+                <p id="impostor-prompt" class="prompt-text impostor-text"></p>
             </div>
             <button id="play-again" class="btn primary-btn">Gioca di Nuovo</button>
         </div>
