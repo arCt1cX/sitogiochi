@@ -92,6 +92,24 @@
             margin-top: 10px;
         }
         
+        .bmc-button-fallback {
+            display: inline-block;
+            line-height: 0;
+            text-decoration: none;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .bmc-button-fallback:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        
+        .bmc-button-fallback:active {
+            transform: translateY(-1px);
+        }
+        
         @media (max-width: 480px) {
             .footer-content {
                 gap: 15px;
@@ -119,7 +137,45 @@
         <div class="footer-content">
             <p>&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
             <div class="support-container">
-                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="partygamesdrew" data-color="#BD5FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+                <!-- Mobile-friendly BMC button implementation -->
+                <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                </a>
+                <script>
+                    // Load the official BMC script
+                    (function() {
+                        const script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+                        script.setAttribute('data-name', 'bmc-button');
+                        script.setAttribute('data-slug', 'partygamesdrew');
+                        script.setAttribute('data-color', '#BD5FFF');
+                        script.setAttribute('data-emoji', '');
+                        script.setAttribute('data-font', 'Cookie');
+                        script.setAttribute('data-text', 'Buy me a coffee');
+                        script.setAttribute('data-outline-color', '#000000');
+                        script.setAttribute('data-font-color', '#ffffff');
+                        script.setAttribute('data-coffee-color', '#FFDD00');
+                        
+                        // On script load, hide our fallback if the official button rendered properly
+                        script.onload = function() {
+                            setTimeout(function() {
+                                const bmcButton = document.querySelector('.bmc-btn');
+                                if (bmcButton) {
+                                    // If the official button is present, hide our fallback
+                                    document.getElementById('bmc-link').style.display = 'none';
+                                    
+                                    // Add touchend event listener for mobile devices
+                                    bmcButton.addEventListener('touchend', function(e) {
+                                        window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
+                                    });
+                                }
+                            }, 1000); // Wait a second for the button to render
+                        };
+                        
+                        document.body.appendChild(script);
+                    })();
+                </script>
             </div>
         </div>
     </footer>
