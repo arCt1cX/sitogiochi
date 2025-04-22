@@ -269,8 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                      'Scooby-Doo', 'Tom and Jerry', 'Shrek'];
                     break;
                 case 'football teams':
-                    category.items = ['Juventus FC', 'FC Barcelona', 'Real Madrid CF', 'Manchester United FC',
-                                     'Liverpool FC', 'Bayern Munich', 'Paris Saint-Germain FC'];
+                    category.items = ['Juventus', 'FC Barcelona', 'Real Madrid CF', 'Manchester United FC',
+                                     'Liverpool', 'Bayern Munich', 'Paris Saint-Germain FC'];
                     break;
                 case 'capitals':
                     category.items = ['Roma', 'Parigi', 'Londra', 'Berlino', 'Madrid',
@@ -632,8 +632,8 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 category: 'football teams',
-                item: 'Juventus FC',
-                imagePath: 'img/football teams/juventus_fc.jpg'
+                item: 'Juventus',
+                imagePath: 'img/football teams/juventus.jpg'
             },
             {
                 category: 'capitals',

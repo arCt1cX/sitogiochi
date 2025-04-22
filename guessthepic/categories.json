@@ -137,7 +137,9 @@
       "Cattedrale di Brasilia",
       "Sky Tree",
       "Burj Al Arab",
-      "Palm Jumeirah"
+      "Palm Jumeirah",
+      "Torre di Tokyo",
+      "Monte Fuji"
     ]
   },
   {
@@ -424,12 +426,12 @@
   {
     "name": "football teams",
     "items": [
-      "Juventus FC",
+      "Juventus",
       "Milan AC",
       "Inter Milan",
-      "AS Roma FC",
+      "AS Roma",
       "SSC Napoli",
-      "Lazio FC",
+      "Lazio",
       "AC Fiorentina",
       "Atalanta BC",
       "Torino FC",
@@ -448,9 +450,9 @@
       "Athletic Bilbao",
       "Manchester United FC",
       "Manchester City FC",
-      "Liverpool FC",
-      "Chelsea FC",
-      "Arsenal FC",
+      "Liverpool",
+      "Chelsea",
+      "Arsenal",
       "Tottenham Hotspur FC",
       "Leicester City FC",
       "West Ham United FC",
@@ -615,7 +617,26 @@
       "Vilnius",
       "Riga",
       "Tallinn",
-      "Astana"
+      "Astana",
+      "Tbilisi",
+      "Yerevan",
+      "Baku",
+      "Tripoli",
+      "Pretoria",
+      "Lusaka",
+      "Abuja",
+      "Kampala",
+      "Muscat",
+      "Colombo",
+      "Phnom Penh",
+      "Vientiane",
+      "Jakarta",
+      "Pyongyang",
+      "Montevideo",
+      "Panama City",
+      "San José",
+      "Kingston",
+      "Il Cairo"
     ]
   },
   {
@@ -703,6 +724,7 @@
       "Struzzo",
       "Pavone",
       "Pipistrello",
+      "Cane",
       "Gatto",
       "Criceto",
       "Coniglio",
@@ -763,7 +785,20 @@
       "Talpa",
       "Furetto",
       "Donnola",
-      "Mangusta"
+      "Mangusta",
+      "Armadillo",
+      "Cicala",
+      "Falco",
+      "Grillo",
+      "Salamandra",
+      "Avvoltoio",
+      "Boa",
+      "Calamaro",
+      "Colibrì",
+      "Drago di Komodo",
+      "Alpaca",
+      "Axolotl",
+      "Chimpanzé"
     ]
   },
   {
