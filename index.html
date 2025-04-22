@@ -78,6 +78,25 @@
                 font-size: 0.8rem;
             }
         }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+        }
+        
+        .support-container {
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 480px) {
+            .footer-content {
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -97,7 +116,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
+        <div class="footer-content">
+            <p>&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
+            <div class="support-container">
+                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="partygamesdrew" data-color="#BD5FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
