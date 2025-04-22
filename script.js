@@ -322,6 +322,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 <path d="M30,57 L50,57" stroke="rgba(255,255,255,0.8)" stroke-width="0.8" stroke-linecap="round" />
                 <text x="40" y="55" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
             </svg>`
+        },
+        {
+            id: "BluffMe",
+            displayName: "BluffMe",
+            catchphrase: "Sfida i tuoi amici su quante risposte puoi dare in una categoria!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Clock/timer for time element -->
+                <circle cx="15" cy="30" r="10" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1.5" />
+                <circle cx="15" cy="30" r="8" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                <line x1="15" y1="30" x2="15" y2="23" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                <line x1="15" y1="30" x2="19" y2="32" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                
+                <!-- Main category card -->
+                <rect x="25" y="15" width="40" height="25" rx="2" fill="rgba(106, 90, 205, 0.2)" stroke="white" stroke-width="1.5" />
+                <line x1="30" y1="25" x2="60" y2="25" stroke="white" stroke-width="0.8" stroke-dasharray="1 1" />
+                <text x="45" y="22" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
+                <text x="45" y="32" font-size="7" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Animali</text>
+                
+                <!-- Counter box -->
+                <rect x="35" y="45" width="25" height="15" rx="2" fill="rgba(78, 216, 224, 0.2)" stroke="white" stroke-width="1.5" />
+                <text x="48" y="55" font-size="10" fill="white" text-anchor="middle" font-family="Arial, sans-serif">12</text>
+                
+                <!-- Increment button -->
+                <circle cx="65" cy="52" r="8" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="1.2" />
+                <line x1="65" y1="48" x2="65" y2="56" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="61" y1="52" x2="69" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                
+                <!-- Players -->
+                <circle cx="25" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
+                <text x="25" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P1</text>
+                
+                <circle cx="15" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
+                <text x="15" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P2</text>
+                
+                <!-- Speech bubble -->
+                <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
+                <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
+            </svg>`
         }
     ];
     
