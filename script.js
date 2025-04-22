@@ -110,32 +110,91 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add CSS for icon styling
     const style = document.createElement('style');
     style.textContent = `
+        /* Create a flexbox layout for content and icon */
+        .game-card {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Content container for title, catchphrase and button */
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 15px;
+            z-index: 2;
+        }
+        
+        /* Icon container styles */
         .game-icon-container {
             display: flex;
             justify-content: center;
-            margin: 5px 0 15px 0;
-            height: 70px;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
+            position: relative;
         }
         
         .game-icon {
-            width: 70px;
-            height: 70px;
+            width: 110px;
+            height: 110px;
             filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
             transition: transform 0.3s ease, filter 0.3s ease;
         }
         
         .game-card:hover .game-icon {
-            transform: scale(1.05);
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
         }
         
-        /* Adjust card layout to accommodate the icon */
-        .game-card {
-            padding-top: 1.2rem;
-        }
-        
+        /* Adjust title margins */
         .game-card h3 {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Special case for coming soon card */
+        .coming-soon-card {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .coming-soon-card .card-content {
+            text-align: center;
+            margin-right: 0;
+        }
+        
+        .coming-soon-card .game-icon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+        }
+        
+        .coming-soon-card .game-icon {
+            width: 150px;
+            height: 150px;
+        }
+        
+        /* Make sure the play button stays at the bottom */
+        .play-button {
+            margin-top: 1rem;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .game-icon {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .card-content {
+                margin-right: 10px;
+            }
         }
     `;
     document.head.appendChild(style);
@@ -146,16 +205,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = `game-card ${gradientClasses[index % gradientClasses.length]}`;
         
+        // Create content container
+        const contentContainer = document.createElement('div');
+        contentContainer.className = 'card-content';
+        
         // Create game title using the display name if available, otherwise format the ID
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
-        
-        // Create icon container and add SVG
-        const iconContainer = document.createElement('div');
-        iconContainer.className = 'game-icon-container';
-        iconContainer.innerHTML = game.iconSvg;
-        const iconElement = iconContainer.querySelector('svg');
-        iconElement.classList.add('game-icon');
         
         // Create catchphrase
         const catchphrase = document.createElement('p');
@@ -172,11 +228,21 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `${game.id}/index.html`;
         });
         
-        // Append elements to card
-        card.appendChild(title);
+        // Add title, catchphrase and button to content container
+        contentContainer.appendChild(title);
+        contentContainer.appendChild(catchphrase);
+        contentContainer.appendChild(playButton);
+        
+        // Create icon container and add SVG
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'game-icon-container';
+        iconContainer.innerHTML = game.iconSvg;
+        const iconElement = iconContainer.querySelector('svg');
+        iconElement.classList.add('game-icon');
+        
+        // Append content and icon containers to card
+        card.appendChild(contentContainer);
         card.appendChild(iconContainer);
-        card.appendChild(catchphrase);
-        card.appendChild(playButton);
         
         // Append card to container
         gamesContainer.appendChild(card);
@@ -186,8 +252,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const comingSoonCard = document.createElement('div');
     comingSoonCard.className = 'game-card coming-soon-card';
     
+    // Create content container
+    const comingSoonContentContainer = document.createElement('div');
+    comingSoonContentContainer.className = 'card-content';
+    
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = 'Coming Soon';
+    
+    const comingSoonCatchphrase = document.createElement('p');
+    comingSoonCatchphrase.className = 'game-catchphrase';
+    comingSoonCatchphrase.textContent = 'Nuovi giochi in arrivo...';
     
     // Create icon for Coming Soon card
     const comingSoonIconContainer = document.createElement('div');
@@ -206,12 +280,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </svg>
     `;
     
-    const comingSoonCatchphrase = document.createElement('p');
-    comingSoonCatchphrase.className = 'game-catchphrase';
-    comingSoonCatchphrase.textContent = 'Nuovi giochi in arrivo...';
+    // Add elements to containers
+    comingSoonContentContainer.appendChild(comingSoonTitle);
+    comingSoonContentContainer.appendChild(comingSoonCatchphrase);
     
-    comingSoonCard.appendChild(comingSoonTitle);
+    comingSoonCard.appendChild(comingSoonContentContainer);
     comingSoonCard.appendChild(comingSoonIconContainer);
-    comingSoonCard.appendChild(comingSoonCatchphrase);
     gamesContainer.appendChild(comingSoonCard);
 }); 
