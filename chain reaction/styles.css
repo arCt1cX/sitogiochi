@@ -15,12 +15,12 @@
     --wrong-dark: #c85752;
     --pass-color: #e0a44c;
     --pass-dark: #be8b41;
-    --correct-accent: rgba(105, 177, 110, 0.5);
-    --wrong-accent: rgba(230, 109, 101, 0.5);
-    --pass-accent: rgba(224, 164, 76, 0.5);
-    --correct-glow: rgba(105, 177, 110, 0.4);
-    --wrong-glow: rgba(230, 109, 101, 0.4);
-    --pass-glow: rgba(224, 164, 76, 0.4);
+    --correct-accent: rgba(105, 177, 110, 0.4);
+    --wrong-accent: rgba(230, 109, 101, 0.4);
+    --pass-accent: rgba(224, 164, 76, 0.4);
+    --correct-glow: rgba(105, 177, 110, 0.3);
+    --wrong-glow: rgba(230, 109, 101, 0.3);
+    --pass-glow: rgba(224, 164, 76, 0.3);
 }
 
 * {
@@ -314,8 +314,6 @@ h2 {
     color: white;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-    border: 2px solid var(--primary-light);
 }
 
 .control-button::before {
@@ -363,17 +361,6 @@ h2 {
     transition: transform 0s, opacity 0.1s;
 }
 
-.control-button .btn-icon {
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
-    margin-right: 8px;
-}
-
-.control-button span {
-    color: white;
-    font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
 .continue-button {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     border: 2px solid var(--primary-light);
@@ -387,114 +374,86 @@ h2 {
     margin-bottom: 10px;
 }
 
+.continue-button .btn-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.continue-button span {
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 .continue-button:active {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-dark));
     transform: translateY(2px);
     box-shadow: 0 2px 3px var(--shadow-color);
 }
 
-/* Control buttons with wave effects */
 .correct-button {
-    position: relative;
-    overflow: hidden;
+    background: var(--correct-color);
+    border: 2px solid var(--correct-dark);
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 5px var(--correct-accent);
 }
 
-.correct-button .wave-effect {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        var(--correct-color) 50%,
-        transparent 100%);
-    opacity: 0.3;
-    z-index: 0;
-    animation: wave-animation 2.5s infinite linear;
+.correct-button .btn-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.correct-button span {
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .correct-button:active {
-    box-shadow: 0 2px 3px var(--shadow-color), 0 0 15px var(--correct-glow);
-}
-
-.correct-button:active::before {
-    background: radial-gradient(circle at center, var(--correct-color) 0%, transparent 70%);
-    opacity: 0.5;
+    background: var(--correct-dark);
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px var(--shadow-color);
 }
 
 .wrong-button {
-    position: relative;
-    overflow: hidden;
+    background: var(--wrong-color);
+    border: 2px solid var(--wrong-dark);
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 5px var(--wrong-accent);
 }
 
-.wrong-button .wave-effect {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        var(--wrong-color) 50%,
-        transparent 100%);
-    opacity: 0.3;
-    z-index: 0;
-    animation: wave-animation 2.5s infinite linear;
-    animation-delay: 0.8s;
+.wrong-button .btn-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.wrong-button span {
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .wrong-button:active {
-    box-shadow: 0 2px 3px var(--shadow-color), 0 0 15px var(--wrong-glow);
-}
-
-.wrong-button:active::before {
-    background: radial-gradient(circle at center, var(--wrong-color) 0%, transparent 70%);
-    opacity: 0.5;
+    background: var(--wrong-dark);
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px var(--shadow-color);
 }
 
 .pass-button {
-    position: relative;
-    overflow: hidden;
+    background: var(--pass-color);
+    border: 2px solid var(--pass-dark);
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 5px var(--pass-accent);
 }
 
-.pass-button .wave-effect {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        var(--pass-color) 50%,
-        transparent 100%);
-    opacity: 0.3;
-    z-index: 0;
-    animation: wave-animation 2.5s infinite linear;
-    animation-delay: 1.6s;
+.pass-button .btn-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.pass-button span {
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .pass-button:active {
-    box-shadow: 0 2px 3px var(--shadow-color), 0 0 15px var(--pass-glow);
-}
-
-.pass-button:active::before {
-    background: radial-gradient(circle at center, var(--pass-color) 0%, transparent 70%);
-    opacity: 0.5;
-}
-
-@keyframes wave-animation {
-    0% {
-        left: -100%;
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        left: 100%;
-        opacity: 0.3;
-    }
+    background: var(--pass-dark);
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px var(--shadow-color);
 }
 
 /* Game Over Screen */
