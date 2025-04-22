@@ -2,15 +2,19 @@
 :root {
     --primary-color: #7b68ee;
     --primary-dark: #473c8b;
+    --primary-light: #9685f4;
     --secondary-color: #ff6b6b;
     --accent-color: #4ecdc4;
     --background-color: #1e1e2e;
     --card-bg-color: #2d2d3f;
     --text-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --correct-color: #4CAF50;
-    --wrong-color: #f44336;
-    --pass-color: #ff9800;
+    --correct-accent: rgba(76, 175, 80, 0.3);
+    --wrong-accent: rgba(244, 67, 54, 0.3);
+    --pass-accent: rgba(255, 152, 0, 0.3);
+    --correct-glow: rgba(76, 175, 80, 0.5);
+    --wrong-glow: rgba(244, 67, 54, 0.5);
+    --pass-glow: rgba(255, 152, 0, 0.5);
 }
 
 * {
@@ -93,6 +97,7 @@ h2 {
 .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    background-color: var(--primary-light);
 }
 
 .button:active {
@@ -101,19 +106,31 @@ h2 {
 }
 
 .primary-button {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
+.primary-button:hover {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
 }
 
 .secondary-button {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(135deg, var(--card-bg-color), #3d3d55);
+}
+
+.secondary-button:hover {
+    background: linear-gradient(135deg, #3d3d55, #4d4d65);
 }
 
 .reset-button {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(135deg, var(--card-bg-color), #3d3d55);
     margin-top: 20px;
     font-size: 0.9rem;
     padding: 10px 20px;
     min-width: auto;
+}
+
+.reset-button:hover {
+    background: linear-gradient(135deg, #3d3d55, #4d4d65);
 }
 
 /* Start Screen */
@@ -146,7 +163,7 @@ h2 {
 }
 
 .timer-container {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(145deg, #262638, #2a2a3e);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -154,7 +171,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow-color), 
+                inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
 }
 
@@ -163,6 +182,10 @@ h2 {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 5px;
+    background: linear-gradient(135deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .timer-label {
@@ -178,14 +201,16 @@ h2 {
 }
 
 .score-box, .passes-box {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(145deg, #262638, #2a2a3e);
     border-radius: 8px;
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 100px;
-    box-shadow: 0 2px 4px var(--shadow-color);
+    box-shadow: 0 2px 4px var(--shadow-color),
+                inset 1px 1px 3px rgba(255, 255, 255, 0.1),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .score-label, .passes-label {
@@ -197,10 +222,14 @@ h2 {
 #score, #passes {
     font-size: 1.5rem;
     font-weight: 600;
+    background: linear-gradient(135deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .word-container {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(145deg, #262638, #2a2a3e);
     border-radius: 12px;
     padding: 30px 20px;
     width: 100%;
@@ -209,14 +238,55 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 20px 0;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow-color),
+                inset 1px 1px 3px rgba(255, 255, 255, 0.1),
+                inset -1px -1px 3px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: hidden;
+}
+
+.word-container::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, var(--primary-color) 0%, transparent 60%);
+    opacity: 0.05;
+    top: -50%;
+    left: -50%;
+    animation: pulsate 3s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+    0% { opacity: 0.05; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0.05; }
 }
 
 .word {
     font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
+    background: linear-gradient(135deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.word::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
 }
 
 .controls-container {
@@ -238,6 +308,25 @@ h2 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px var(--shadow-color);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.control-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.control-button:hover::before {
+    opacity: 1;
 }
 
 .control-button:hover {
@@ -250,33 +339,77 @@ h2 {
     box-shadow: 0 2px 4px var(--shadow-color);
 }
 
-.correct-button {
-    background-color: var(--correct-color);
-    color: white;
+.control-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.wrong-button {
-    background-color: var(--wrong-color);
-    color: white;
-}
-
-.pass-button {
-    background-color: var(--pass-color);
-    color: white;
+.control-button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: transform 0s, opacity 0.1s;
 }
 
 .continue-button {
-    background-color: var(--primary-color);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 15px rgba(123, 104, 238, 0.3);
     font-size: 1.2rem;
     padding: 15px 20px;
     width: 100%;
     border-radius: 8px;
 }
 
+.continue-button:hover {
+    box-shadow: 0 6px 10px var(--shadow-color), 0 0 20px rgba(123, 104, 238, 0.5);
+}
+
+.correct-button {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, var(--primary-color), var(--correct-accent));
+    border-image-slice: 1;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 10px var(--correct-accent);
+}
+
+.correct-button:hover {
+    box-shadow: 0 6px 10px var(--shadow-color), 0 0 15px var(--correct-glow);
+}
+
+.wrong-button {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, var(--primary-color), var(--wrong-accent));
+    border-image-slice: 1;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 10px var(--wrong-accent);
+}
+
+.wrong-button:hover {
+    box-shadow: 0 6px 10px var(--shadow-color), 0 0 15px var(--wrong-glow);
+}
+
+.pass-button {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, var(--primary-color), var(--pass-accent));
+    border-image-slice: 1;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 10px var(--pass-accent);
+}
+
+.pass-button:hover {
+    box-shadow: 0 6px 10px var(--shadow-color), 0 0 15px var(--pass-glow);
+}
+
 /* Game Over Screen */
 .final-score-container {
-    background-color: var(--card-bg-color);
+    background: linear-gradient(145deg, #262638, #2a2a3e);
     border-radius: 12px;
     padding: 25px;
     display: flex;
@@ -286,7 +419,9 @@ h2 {
     margin: 20px 0 30px;
     width: 200px;
     height: 200px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow-color),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .final-score-label {
@@ -297,7 +432,11 @@ h2 {
 .final-score {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(123, 104, 238, 0.5);
 }
 
 .hidden {
@@ -324,11 +463,11 @@ h2 {
         flex: 1;
     }
     
-    .word {
-        font-size: 2.8rem;
-    }
-    
     .continue-button {
         flex: 1;
+    }
+    
+    .word {
+        font-size: 2.8rem;
     }
 } 
