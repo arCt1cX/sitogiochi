@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const wrongButton = document.getElementById('wrongButton');
     const passButton = document.getElementById('passButton');
     const resetButton = document.getElementById('resetButton');
-    const pauseOverlay = document.getElementById('pauseOverlay');
     const continueButton = document.getElementById('continueButton');
     
     // DOM Elements - Game Over Screen
@@ -46,17 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(word => word.length > 0);
         } catch (error) {
             console.error('Error loading words:', error);
+            // Fallback list of Italian words in case of error
             return [
-                'Game', 'House', 'Book', 'Music', 'Friend',
-                'Pizza', 'Beach', 'Movie', 'Dance', 'Travel',
-                'Coffee', 'Party', 'Sports', 'Sleep', 'Computer'
-            ]; // Fallback list in case of error
+                'Amore', 'Gioia', 'Paura', 'Sogno', 'Speranza', 
+                'Tempo', 'Festa', 'Tavolo', 'Libro', 'Musica',
+                'Pizza', 'Mare', 'Cinema', 'Viaggio', 'Famiglia'
+            ];
         }
     }
     
     // Initialize the game
     async function initGame() {
         words = await fetchWords();
+        console.log("Loaded words:", words.length); // Debug log
         
         // Button event listeners
         startButton.addEventListener('click', startGame);
@@ -83,6 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update UI
         updateUI();
         
+        // Initially hide continue button and show action buttons
+        correctButton.style.display = 'block';
+        wrongButton.style.display = 'block';
+        passButton.style.display = 'block';
+        continueButton.style.display = 'none';
+        
         // Get first word
         getNewWord();
         
@@ -92,6 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Get a random word
     function getNewWord() {
+        if (words.length === 0) {
+            console.error("No words available!");
+            wordDisplay.textContent = "Errore nel caricamento delle parole";
+            return;
+        }
+        
         // Get a random index
         const randomIndex = Math.floor(Math.random() * words.length);
         currentWord = words[randomIndex];
@@ -142,13 +155,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pause the game
     function pauseGame() {
         isPaused = true;
-        pauseOverlay.classList.remove('hidden');
+        
+        // Hide action buttons and show continue button
+        correctButton.style.display = 'none';
+        wrongButton.style.display = 'none';
+        passButton.style.display = 'none';
+        continueButton.style.display = 'block';
     }
     
     // Continue the game
     function continueGame() {
         isPaused = false;
-        pauseOverlay.classList.add('hidden');
+        
+        // Show action buttons and hide continue button
+        correctButton.style.display = 'block';
+        wrongButton.style.display = 'block';
+        passButton.style.display = 'block';
+        continueButton.style.display = 'none';
+        
+        // Get new word
         getNewWord();
     }
     
@@ -174,6 +199,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update UI
         updateUI();
         
+        // Initially hide continue button and show action buttons
+        correctButton.style.display = 'block';
+        wrongButton.style.display = 'block';
+        passButton.style.display = 'block';
+        continueButton.style.display = 'none';
+        
         // Get first word
         getNewWord();
         
@@ -182,9 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timerInterval);
         }
         startTimer();
-        
-        // Make sure pause overlay is hidden
-        pauseOverlay.classList.add('hidden');
     }
     
     // Show start screen
