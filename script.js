@@ -4,27 +4,83 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "impostor",
             displayName: "Impostor",
-            catchphrase: "Scopri chi mente nel gruppo!"
+            catchphrase: "Scopri chi mente nel gruppo!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <circle cx="40" cy="30" r="15" fill="rgba(255,255,255,0.2)" />
+                <path d="M25,65 C25,50 30,45 40,45 C50,45 55,50 55,65" stroke-linecap="round" />
+                <text x="40" y="32" font-size="24" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">?</text>
+                <circle cx="60" cy="20" r="10" fill="rgba(255,255,255,0.15)" stroke="none" />
+                <circle cx="20" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="none" />
+            </svg>`
         },
         {
             id: "colorgrid",
             displayName: "Color Grid",
-            catchphrase: "Indovina la cella colorata segreta!"
+            catchphrase: "Indovina la cella colorata segreta!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <rect x="15" y="15" width="50" height="50" rx="4" stroke-width="1.5" />
+                <rect x="15" y="15" width="16.6" height="16.6" fill="rgba(255,0,0,0.6)" stroke="white" />
+                <rect x="31.6" y="15" width="16.6" height="16.6" fill="rgba(0,255,0,0.6)" stroke="white" />
+                <rect x="48.2" y="15" width="16.6" height="16.6" fill="rgba(255,255,0,0.6)" stroke="white" />
+                <rect x="15" y="31.6" width="16.6" height="16.6" fill="rgba(0,0,255,0.6)" stroke="white" />
+                <rect x="31.6" y="31.6" width="16.6" height="16.6" fill="rgba(255,0,255,0.6)" stroke="white" stroke-width="3" />
+                <rect x="48.2" y="31.6" width="16.6" height="16.6" fill="rgba(0,255,255,0.6)" stroke="white" />
+                <rect x="15" y="48.2" width="16.6" height="16.6" fill="rgba(255,165,0,0.6)" stroke="white" />
+                <rect x="31.6" y="48.2" width="16.6" height="16.6" fill="rgba(128,0,128,0.6)" stroke="white" />
+                <rect x="48.2" y="48.2" width="16.6" height="16.6" fill="rgba(0,128,0,0.6)" stroke="white" />
+            </svg>`
         },
         {
             id: "guessthepic",
             displayName: "Indovina Immagini",
-            catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!"
+            catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <rect x="15" y="15" width="50" height="40" rx="2" fill="rgba(255,255,255,0.15)" />
+                <path d="M25,45 L35,35 L45,45" stroke-linecap="round" />
+                <circle cx="30" cy="25" r="4" fill="rgba(255,255,255,0.4)" />
+                <path d="M55,35 L45,25" stroke="rgba(255,255,255,0.5)" stroke-dasharray="2" />
+                <path d="M65,46 L59,42 L54,47 L50,52 L54,58 L59,60 L65,58 L69,52 L65,46z" fill="rgba(255,255,255,0.3)" />
+                <circle cx="57" cy="50" r="8" stroke="white" fill="none" />
+                <line x1="63" y1="56" x2="68" y2="61" stroke-width="3" stroke-linecap="round" />
+            </svg>`
         },
         {
             id: "timergame",
             displayName: "Wordrace",
-            catchphrase: "Corri contro il tempo in questa sfida di parole!"
+            catchphrase: "Corri contro il tempo in questa sfida di parole!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.1)" />
+                <circle cx="40" cy="40" r="23" stroke-width="1" />
+                <line x1="40" y1="40" x2="40" y2="25" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="40" y1="40" x2="50" y2="50" stroke-width="2" stroke-linecap="round" />
+                <line x1="40" y1="15" x2="40" y2="20" stroke-width="2" stroke-linecap="round" />
+                <line x1="40" y1="60" x2="40" y2="65" stroke-width="2" stroke-linecap="round" />
+                <line x1="15" y1="40" x2="20" y2="40" stroke-width="2" stroke-linecap="round" />
+                <line x1="60" y1="40" x2="65" y2="40" stroke-width="2" stroke-linecap="round" />
+                <path d="M60,25 L65,20" transform="rotate(15, 40, 40)" fill="none" stroke-width="2" stroke-linecap="round" />
+                <path d="M20,25 L15,20" transform="rotate(-15, 40, 40)" fill="none" stroke-width="2" stroke-linecap="round" />
+                <path d="M65,35 L70,30 M15,50 L10,55" fill="none" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+            </svg>`
         },
         {
             id: "alphabetgame",
             displayName: "Alphabet Game",
-            catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!"
+            catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <rect x="15" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.2)" />
+                <text x="22.5" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">A</text>
+                <rect x="32.5" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.25)" />
+                <text x="40" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">B</text>
+                <rect x="50" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.3)" />
+                <text x="57.5" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">C</text>
+                <rect x="15" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.35)" />
+                <text x="22.5" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">X</text>
+                <rect x="32.5" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.4)" />
+                <text x="40" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Y</text>
+                <rect x="50" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.45)" />
+                <text x="57.5" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Z</text>
+                <path d="M25,65 L55,65" stroke-linecap="round" stroke-width="3" stroke-dasharray="2 4" />
+            </svg>`
         }
     ];
     
@@ -51,6 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
         'gradient-5', 'gradient-6', 'gradient-7', 'gradient-8'
     ];
     
+    // Add CSS for icon styling
+    const style = document.createElement('style');
+    style.textContent = `
+        .game-icon-container {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0 15px 0;
+            height: 70px;
+        }
+        
+        .game-icon {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .game-card:hover .game-icon {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+        }
+        
+        /* Adjust card layout to accommodate the icon */
+        .game-card {
+            padding-top: 1.2rem;
+        }
+        
+        .game-card h3 {
+            margin-bottom: 0.2rem;
+        }
+    `;
+    document.head.appendChild(style);
+    
     // Create and append game cards
     games.forEach((game, index) => {
         // Create card element
@@ -60,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game title using the display name if available, otherwise format the ID
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
+        
+        // Create icon container and add SVG
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'game-icon-container';
+        iconContainer.innerHTML = game.iconSvg;
+        const iconElement = iconContainer.querySelector('svg');
+        iconElement.classList.add('game-icon');
         
         // Create catchphrase
         const catchphrase = document.createElement('p');
@@ -78,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Append elements to card
         card.appendChild(title);
+        card.appendChild(iconContainer);
         card.appendChild(catchphrase);
         card.appendChild(playButton);
         
@@ -92,11 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = 'Coming Soon';
     
+    // Create icon for Coming Soon card
+    const comingSoonIconContainer = document.createElement('div');
+    comingSoonIconContainer.className = 'game-icon-container';
+    comingSoonIconContainer.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2" class="game-icon">
+            <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.1)" />
+            <rect x="30" y="30" width="20" height="20" rx="2" fill="none" stroke-dasharray="4 2" />
+            <path d="M35,65 L45,65 M40,65 L40,55" stroke-linecap="round" />
+            <path d="M35,15 L45,15 M40,15 L40,25" stroke-linecap="round" />
+            <path d="M15,35 L15,45 M15,40 L25,40" stroke-linecap="round" />
+            <path d="M65,35 L65,45 M65,40 L55,40" stroke-linecap="round" />
+            <path d="M40,40 L40,40" stroke-width="3" stroke-linecap="round">
+                <animate attributeName="d" values="M35,35 L45,45; M35,45 L45,35; M35,35 L45,45" dur="2s" repeatCount="indefinite" />
+            </path>
+        </svg>
+    `;
+    
     const comingSoonCatchphrase = document.createElement('p');
     comingSoonCatchphrase.className = 'game-catchphrase';
     comingSoonCatchphrase.textContent = 'Nuovi giochi in arrivo...';
     
     comingSoonCard.appendChild(comingSoonTitle);
+    comingSoonCard.appendChild(comingSoonIconContainer);
     comingSoonCard.appendChild(comingSoonCatchphrase);
     gamesContainer.appendChild(comingSoonCard);
 }); 
