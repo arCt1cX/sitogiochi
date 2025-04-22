@@ -6,28 +6,113 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: "Impostor",
             catchphrase: "Scopri chi mente nel gruppo!",
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <circle cx="40" cy="30" r="15" fill="rgba(255,255,255,0.2)" />
-                <path d="M25,65 C25,50 30,45 40,45 C50,45 55,50 55,65" stroke-linecap="round" />
-                <text x="40" y="32" font-size="24" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">?</text>
-                <circle cx="60" cy="20" r="10" fill="rgba(255,255,255,0.15)" stroke="none" />
-                <circle cx="20" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="none" />
+                <!-- Shadow element -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Group of silhouettes -->
+                <!-- Left character (suspicious) -->
+                <g class="suspicious-character">
+                    <!-- Body with connected head -->
+                    <path d="M16,65 C16,50 20,45 24,45 C28,45 32,50 32,65" stroke="white" stroke-linecap="round" />
+                    <path d="M18.5,39 C18,36 19,33 24,33 C29,33 30,36 29.5,39 C29,42 28,45 24,45 C20,45 19,42 18.5,39Z" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="24" cy="25" r="9" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+                    
+                    <!-- Suspicious elements -->
+                    <path d="M21,24 L23,22 M25,22 L27,24" stroke="white" stroke-width="1.2" />
+                    <path d="M24,31 C22,29 26,29 24,31" stroke="white" stroke-width="1" />
+                    <path d="M22,55 L26,55" stroke="rgba(255,0,0,0.5)" stroke-width="1.2" stroke-dasharray="1 1" />
+                </g>
+                
+                <!-- Middle character -->
+                <g>
+                    <!-- Body with connected head -->
+                    <path d="M33,65 C33,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
+                    <path d="M35.5,38 C35,35 36,32 40,32 C44,32 45,35 44.5,38 C44,41 43,45 40,45 C37,45 36,41 35.5,38Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="40" cy="22" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    
+                    <path d="M37,21 L39,21 M41,21 L43,21" stroke="white" stroke-width="1.2" />
+                    <path d="M40,27 C38,25 42,25 40,27" stroke="white" stroke-width="1" />
+                </g>
+                
+                <!-- Right character -->
+                <g>
+                    <!-- Body with connected head -->
+                    <path d="M49,65 C49,50 53,45 56,45 C59,45 63,50 63,65" stroke="white" stroke-linecap="round" />
+                    <path d="M51.5,39 C51,36 52,33 56,33 C60,33 61,36 60.5,39 C60,42 59,45 56,45 C53,45 52,42 51.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="56" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    
+                    <path d="M53,24 L55,24 M57,24 L59,24" stroke="white" stroke-width="1.2" />
+                    <path d="M56,30 C54,28 58,28 56,30" stroke="white" stroke-width="1" />
+                </g>
+                
+                <!-- Investigation elements -->
+                <circle cx="24" cy="25" r="14" fill="none" stroke="rgba(255,0,0,0.3)" stroke-width="1" stroke-dasharray="2 2" />
+                <path d="M12,33 L14,33.5 L13,35" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
+                <path d="M36,12 L34,15 L38,14" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
+                
+                <!-- Connection lines suggesting discussion -->
+                <path d="M32,25 L37,23" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
+                <path d="M48,24 L54,24" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
+                
+                <!-- Question mark hovering over the group -->
+                <text x="40" y="12" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+                <circle cx="40" cy="10" r="8" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="1 2" />
+                
+                <!-- Pointing gesture -->
+                <path d="M60,35 C63,38 65,40 63,35" stroke="white" stroke-width="1" />
+                <path d="M63,35 L55,30" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <path d="M45,38 C42,42 39,39 40,36" stroke="white" stroke-width="1" />
+                <path d="M40,36 L32,28" stroke="white" stroke-width="1" stroke-linecap="round" />
             </svg>`
         },
         {
             id: "colorgrid",
             displayName: "Color Grid",
             catchphrase: "Indovina la cella colorata segreta!",
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Grid shadow -->
+                <rect x="17" y="17" width="50" height="50" rx="4" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Main grid -->
                 <rect x="15" y="15" width="50" height="50" rx="4" stroke-width="1.5" />
-                <rect x="15" y="15" width="16.6" height="16.6" fill="rgba(255,0,0,0.6)" stroke="white" />
-                <rect x="31.6" y="15" width="16.6" height="16.6" fill="rgba(0,255,0,0.6)" stroke="white" />
-                <rect x="48.2" y="15" width="16.6" height="16.6" fill="rgba(255,255,0,0.6)" stroke="white" />
-                <rect x="15" y="31.6" width="16.6" height="16.6" fill="rgba(0,0,255,0.6)" stroke="white" />
-                <rect x="31.6" y="31.6" width="16.6" height="16.6" fill="rgba(255,0,255,0.6)" stroke="white" stroke-width="3" />
-                <rect x="48.2" y="31.6" width="16.6" height="16.6" fill="rgba(0,255,255,0.6)" stroke="white" />
-                <rect x="15" y="48.2" width="16.6" height="16.6" fill="rgba(255,165,0,0.6)" stroke="white" />
-                <rect x="31.6" y="48.2" width="16.6" height="16.6" fill="rgba(128,0,128,0.6)" stroke="white" />
-                <rect x="48.2" y="48.2" width="16.6" height="16.6" fill="rgba(0,128,0,0.6)" stroke="white" />
+                
+                <!-- Grid cells with improved colors and inner details -->
+                <rect x="15" y="15" width="16.6" height="16.6" fill="rgba(255,0,0,0.7)" stroke="white" />
+                <rect x="16.5" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="31.6" y="15" width="16.6" height="16.6" fill="rgba(0,255,0,0.7)" stroke="white" />
+                <rect x="33.1" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                <path d="M39.9,21 L39.9,25 M37.9,23 L41.9,23" stroke="rgba(255,255,255,0.7)" stroke-width="0.8" />
+                
+                <rect x="48.2" y="15" width="16.6" height="16.6" fill="rgba(255,255,0,0.7)" stroke="white" />
+                <rect x="49.7" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="15" y="31.6" width="16.6" height="16.6" fill="rgba(0,0,255,0.7)" stroke="white" />
+                <rect x="16.5" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <!-- Highlighted cell with special effects -->
+                <rect x="31.6" y="31.6" width="16.6" height="16.6" fill="rgba(255,0,255,0.7)" stroke="white" stroke-width="3" />
+                <rect x="33.1" y="33.1" width="13.6" height="13.6" fill="none" stroke="white" stroke-width="0.5" />
+                <circle cx="39.9" cy="39.9" r="5" fill="none" stroke="white" stroke-width="1" />
+                <path d="M35.9,35.9 L43.9,43.9 M43.9,35.9 L35.9,43.9" stroke="white" stroke-width="0.5" />
+                
+                <rect x="48.2" y="31.6" width="16.6" height="16.6" fill="rgba(0,255,255,0.7)" stroke="white" />
+                <rect x="49.7" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="15" y="48.2" width="16.6" height="16.6" fill="rgba(255,165,0,0.7)" stroke="white" />
+                <rect x="16.5" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="31.6" y="48.2" width="16.6" height="16.6" fill="rgba(128,0,128,0.7)" stroke="white" />
+                <rect x="33.1" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="48.2" y="48.2" width="16.6" height="16.6" fill="rgba(0,128,0,0.7)" stroke="white" />
+                <rect x="49.7" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <!-- Selection cursor -->
+                <path d="M31.6,31.6 L28,28" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <path d="M26,26 L22,22" stroke="white" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2" />
+                <circle cx="20" cy="20" r="3" stroke="white" fill="none" />
+                <path d="M22,18 L18,22 M18,18 L22,22" stroke="white" stroke-width="0.8" />
             </svg>`
         },
         {
@@ -35,13 +120,34 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: "Indovina Immagini",
             catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!",
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <rect x="15" y="15" width="50" height="40" rx="2" fill="rgba(255,255,255,0.15)" />
-                <path d="M25,45 L35,35 L45,45" stroke-linecap="round" />
-                <circle cx="30" cy="25" r="4" fill="rgba(255,255,255,0.4)" />
-                <path d="M55,35 L45,25" stroke="rgba(255,255,255,0.5)" stroke-dasharray="2" />
-                <path d="M65,46 L59,42 L54,47 L50,52 L54,58 L59,60 L65,58 L69,52 L65,46z" fill="rgba(255,255,255,0.3)" />
-                <circle cx="57" cy="50" r="8" stroke="white" fill="none" />
-                <line x1="63" y1="56" x2="68" y2="61" stroke-width="3" stroke-linecap="round" />
+                <!-- Shadow -->
+                <rect x="17" y="17" width="38" height="38" rx="2" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Photo frame -->
+                <rect x="15" y="15" width="38" height="38" rx="2" fill="rgba(255,255,255,0.15)" />
+                <rect x="17" y="17" width="34" height="34" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                
+                <!-- Photos stack effect -->
+                <path d="M53,19 L58,19 L58,53 L19,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="2 1" />
+                <path d="M55,17 L60,17 L60,51 L21,51" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="1 1" />
+                
+                <!-- Photo content -->
+                <path d="M20,42 L30,32 L40,42" stroke="white" stroke-linecap="round" />
+                <path d="M27,47 L37,38 L45,46" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" />
+                <circle cx="24" cy="25" r="3" fill="rgba(255,255,255,0.5)" />
+                <circle cx="24" cy="25" r="1.5" fill="rgba(255,255,255,0.8)" />
+                
+                <!-- Magnifying glass with detailed handle -->
+                <circle cx="57" cy="50" r="8" fill="rgba(0,0,0,0.1)" stroke="white" stroke-width="2" />
+                <circle cx="57" cy="50" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                <line x1="63" y1="56" x2="68" y2="61" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <line x1="63" y1="56" x2="68" y2="61" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M69,62 C70,63 72,65 74,63 C76,61 74,60 73,61" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+                
+                <!-- Question marks to represent mystery -->
+                <text x="33" y="32" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="28" y="38" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="39" y="28" font-size="6" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
             </svg>`
         },
         {
@@ -49,17 +155,50 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: "Wordrace",
             catchphrase: "Corri contro il tempo in questa sfida di parole!",
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.1)" />
-                <circle cx="40" cy="40" r="23" stroke-width="1" />
-                <line x1="40" y1="40" x2="40" y2="25" stroke-width="2.5" stroke-linecap="round" />
-                <line x1="40" y1="40" x2="50" y2="50" stroke-width="2" stroke-linecap="round" />
-                <line x1="40" y1="15" x2="40" y2="20" stroke-width="2" stroke-linecap="round" />
-                <line x1="40" y1="60" x2="40" y2="65" stroke-width="2" stroke-linecap="round" />
-                <line x1="15" y1="40" x2="20" y2="40" stroke-width="2" stroke-linecap="round" />
-                <line x1="60" y1="40" x2="65" y2="40" stroke-width="2" stroke-linecap="round" />
-                <path d="M60,25 L65,20" transform="rotate(15, 40, 40)" fill="none" stroke-width="2" stroke-linecap="round" />
-                <path d="M20,25 L15,20" transform="rotate(-15, 40, 40)" fill="none" stroke-width="2" stroke-linecap="round" />
-                <path d="M65,35 L70,30 M15,50 L10,55" fill="none" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+                <!-- Shadow -->
+                <ellipse cx="40" cy="45" rx="28" ry="5" fill="rgba(0,0,0,0.15)" />
+                
+                <!-- Clock body with enhanced details -->
+                <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.05)" />
+                <circle cx="40" cy="40" r="24" fill="none" stroke="white" stroke-width="1.5" />
+                <circle cx="40" cy="40" r="22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <!-- Clock face details -->
+                <circle cx="40" cy="40" r="2" fill="white" />
+                <circle cx="40" cy="40" r="1" fill="rgba(0,0,0,0.3)" />
+                
+                <!-- Hour markers -->
+                <line x1="40" y1="18" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <line x1="40" y1="60" x2="40" y2="62" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <line x1="18" y1="40" x2="20" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <line x1="60" y1="40" x2="62" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" />
+                
+                <!-- Secondary hour markers -->
+                <line x1="29" y1="20" x2="30" y2="22" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="20" y1="29" x2="22" y2="30" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="29" y1="60" x2="30" y2="58" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="20" y1="51" x2="22" y2="50" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="51" y1="20" x2="50" y2="22" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="60" y1="29" x2="58" y2="30" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="51" y1="60" x2="50" y2="58" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <line x1="60" y1="51" x2="58" y2="50" stroke="white" stroke-width="1" stroke-linecap="round" />
+                
+                <!-- Clock hands with detailed styling -->
+                <line x1="40" y1="40" x2="40" y2="22" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="40" y1="40" x2="52" y2="52" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M40,40 L33,30" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-linecap="round" stroke-dasharray="1 1" />
+                
+                <!-- Clock top -->
+                <path d="M36,15 A1,1 0 0,1 44,15" stroke="white" stroke-width="1.5" fill="none" />
+                <rect x="39" y="14" width="2" height="3" fill="white" />
+                
+                <!-- Word bubbles for racing concept -->
+                <path d="M15,20 A10,8 0 0,1 10,12 A10,8 0 0,1 20,8 A10,8 0 0,1 25,12 L22,18 L15,20Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="0.8" />
+                <path d="M65,27 A7,5 0 0,0 70,22 A7,5 0 0,0 63,18 A7,5 0 0,0 60,22 L61,25 L65,27Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="0.8" />
+                
+                <!-- Small text representing words -->
+                <path d="M14,12 L18,12 M12,14 L17,14" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
+                <path d="M64,20 L68,20 M65,22 L69,22" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
             </svg>`
         },
         {
@@ -67,19 +206,60 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: "Alphabet Game",
             catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!",
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <rect x="15" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.2)" />
-                <text x="22.5" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">A</text>
-                <rect x="32.5" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.25)" />
-                <text x="40" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">B</text>
-                <rect x="50" y="15" width="15" height="15" rx="2" fill="rgba(255,255,255,0.3)" />
-                <text x="57.5" y="27" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">C</text>
-                <rect x="15" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.35)" />
-                <text x="22.5" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">X</text>
-                <rect x="32.5" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.4)" />
-                <text x="40" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Y</text>
-                <rect x="50" y="32.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.45)" />
-                <text x="57.5" y="44.5" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Z</text>
-                <path d="M25,65 L55,65" stroke-linecap="round" stroke-width="3" stroke-dasharray="2 4" />
+                <!-- Shadow -->
+                <rect x="10" y="69" width="60" height="4" rx="2" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Letter blocks with enhanced 3D effect -->
+                <g transform="rotate(-5, 15, 15)">
+                    <rect x="11" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.25)" stroke="white" />
+                    <rect x="12" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="18.5" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">A</text>
+                </g>
+                
+                <g transform="rotate(3, 32.5, 15)">
+                    <rect x="28.5" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.3)" stroke="white" />
+                    <rect x="29.5" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="36" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">B</text>
+                </g>
+                
+                <g transform="rotate(-2, 50, 15)">
+                    <rect x="46" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.35)" stroke="white" />
+                    <rect x="47" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="53.5" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">C</text>
+                </g>
+                
+                <g transform="rotate(4, 15, 32.5)">
+                    <rect x="11" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.4)" stroke="white" />
+                    <rect x="12" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="18.5" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">X</text>
+                </g>
+                
+                <g transform="rotate(-3, 32.5, 32.5)">
+                    <rect x="28.5" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.45)" stroke="white" />
+                    <rect x="29.5" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="36" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Y</text>
+                </g>
+                
+                <g transform="rotate(5, 50, 32.5)">
+                    <rect x="46" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.5)" stroke="white" />
+                    <rect x="47" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                    <text x="53.5" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Z</text>
+                </g>
+                
+                <!-- Category connection elements -->
+                <path d="M25,65 L55,65" stroke="white" stroke-linecap="round" stroke-width="3" stroke-dasharray="2 4" />
+                
+                <!-- Word connections to letters -->
+                <path d="M18.5,27 C18.5,47 25,50 20,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                <path d="M36,27 C36,37 40,45 40,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                <path d="M53.5,27 C53.5,47 45,50 50,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                <path d="M18.5,44.5 C18.5,52 25,55 25,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                <path d="M36,44.5 C36,55 40,60 40,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                <path d="M53.5,44.5 C53.5,52 45,55 45,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
+                
+                <!-- Category label -->
+                <path d="M30,57 L50,57" stroke="rgba(255,255,255,0.8)" stroke-width="0.8" stroke-linecap="round" />
+                <text x="40" y="55" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
             </svg>`
         }
     ];
