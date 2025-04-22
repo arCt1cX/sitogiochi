@@ -202,6 +202,67 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
+            id: "chain reaction",
+            displayName: "Chain Reaction",
+            catchphrase: "Sfida di indovinelli a squadre con un solo suggerimento alla volta!",
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Two clue givers and guesser -->
+                <!-- Left clue giver -->
+                <g>
+                    <circle cx="25" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
+                    <circle cx="22" cy="28" r="1.5" fill="white" />
+                    <circle cx="28" cy="28" r="1.5" fill="white" />
+                    <path d="M22,35 C24,37 26,37 28,35" stroke="white" stroke-width="1" fill="none" />
+                    <path d="M21,45 C21,40 20,38 25,38 C30,38 29,40 29,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+                
+                <!-- Right clue giver -->
+                <g>
+                    <circle cx="55" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
+                    <circle cx="52" cy="28" r="1.5" fill="white" />
+                    <circle cx="58" cy="28" r="1.5" fill="white" />
+                    <path d="M52,35 C54,37 56,37 58,35" stroke="white" stroke-width="1" fill="none" />
+                    <path d="M51,45 C51,40 50,38 55,38 C60,38 59,40 59,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+                
+                <!-- The word -->
+                <rect x="30" y="15" width="20" height="10" rx="2" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1" />
+                <path d="M33,20 L47,20" stroke="white" stroke-width="1" stroke-dasharray="1 1" />
+                
+                <!-- Guesser (blindfolded) -->
+                <g>
+                    <circle cx="40" cy="55" r="12" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5" />
+                    <path d="M34,52 L46,52" stroke="white" stroke-width="1.5" />
+                    <path d="M34,52 C34,48 46,48 46,52" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.2)" />
+                    <path d="M35,60 C37,62 43,62 45,60" stroke="white" stroke-width="1" stroke-linecap="round" />
+                </g>
+                
+                <!-- Speech bubbles connecting people -->
+                <path d="M30,25 L35,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M50,25 L45,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M37,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M43,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                
+                <!-- Timer -->
+                <circle cx="65" cy="55" r="6" fill="none" stroke="white" stroke-width="1" />
+                <path d="M65,52 L65,55 L68,55" stroke="white" stroke-width="1" />
+                
+                <!-- Game controls -->
+                <path d="M15,55 L20,50 L25,55 L20,60 Z" fill="rgba(76,175,80,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M18,55 L22,55 M20,53 L20,57" stroke="white" stroke-width="0.8" />
+                
+                <path d="M15,65 L20,60 L25,65 L20,70 Z" fill="rgba(244,67,54,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M18,65 L22,65" stroke="white" stroke-width="0.8" />
+                
+                <path d="M60,65 C60,62 70,62 70,65 C70,68 60,68 60,65 Z" fill="rgba(255,152,0,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M62,65 C62,64 68,64 68,65" stroke="white" stroke-width="0.8" />
+                <path d="M62,65 C62,66 68,66 68,65" stroke="white" stroke-width="0.8" />
+            </svg>`
+        },
+        {
             id: "alphabetgame",
             displayName: "Alphabet Game",
             catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!",

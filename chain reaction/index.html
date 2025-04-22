@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Chain Reaction - Gioco di parole a squadre | DrewGames</title>
+    <meta name="description" content="Gioca a Chain Reaction: un emozionante gioco di parole a squadre. I due suggeritori forniscono indizi, mentre una persona deve indovinare la parola misteriosa. Ideale per serate con amici!">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://partygamesdrew.com/chain%20reaction/">
+    <meta name="robots" content="index, follow">
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
+    
+    <div id="app">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <h1>Chain Reaction</h1>
+            
+            <div class="game-instructions">
+                <h2>Come Giocare</h2>
+                <ul>
+                    <li>Il gioco è pensato per essere giocato con un telefono condiviso</li>
+                    <li>Due persone saranno i "suggeritori" e vedranno la parola sullo schermo</li>
+                    <li>La persona che indovina NON deve vedere lo schermo</li>
+                    <li>I suggeritori si alternano dicendo UNA sola parola ciascuno</li>
+                    <li>Se la parola viene indovinata, premete ✅ "Corretta"</li>
+                    <li>Se viene data una risposta sbagliata, premete ❌ "Errata" (-1 punto)</li>
+                    <li>Potete usare 🔁 "Passa" solo 3 volte per partita</li>
+                    <li>Il timer si ferma dopo ogni azione, premere ▶️ per continuare</li>
+                </ul>
+            </div>
+            
+            <button id="startButton" class="button primary-button">Inizia Gioco</button>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div class="game-header">
+                <div class="timer-container">
+                    <div id="timer">60</div>
+                    <div class="timer-label">secondi</div>
+                </div>
+                
+                <div class="score-container">
+                    <div class="score-box">
+                        <div class="score-label">Punteggio</div>
+                        <div id="score">0</div>
+                    </div>
+                    <div class="passes-box">
+                        <div class="passes-label">Pass rimasti</div>
+                        <div id="passes">3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="word-container">
+                <div id="wordDisplay" class="word"></div>
+                <div id="pauseOverlay" class="pause-overlay hidden">
+                    <button id="continueButton" class="control-button continue-button">▶️</button>
+                </div>
+            </div>
+            
+            <div class="controls-container">
+                <button id="correctButton" class="control-button correct-button">✅ Corretta</button>
+                <button id="wrongButton" class="control-button wrong-button">❌ Errata</button>
+                <button id="passButton" class="control-button pass-button">🔁 Passa</button>
+            </div>
+            
+            <button id="resetButton" class="button reset-button">🔄 Ricomincia</button>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen">
+            <h2>Tempo Scaduto!</h2>
+            <div class="final-score-container">
+                <div class="final-score-label">Punteggio Finale</div>
+                <div id="finalScore" class="final-score">0</div>
+            </div>
+            <button id="playAgainButton" class="button primary-button">Gioca Ancora</button>
+            <button id="mainMenuButton" class="button secondary-button">Menu Principale</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
