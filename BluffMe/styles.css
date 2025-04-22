@@ -200,6 +200,11 @@ h2 {
     font-size: 1rem;
 }
 
+.player-name-input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
 .player-name-input input:focus {
     outline: none;
     border-color: var(--primary-light);
@@ -485,4 +490,53 @@ h2 {
 
 .pulse {
     animation: pulse 0.5s;
+}
+
+/* Time's Up Overlay */
+.time-up-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    pointer-events: none;
+}
+
+.time-up-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear;
+}
+
+.time-up-message {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 107, 136, 0.8);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    animation: pulse-grow 0.5s ease-in-out;
+}
+
+@keyframes pulse-grow {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.fade-out {
+    animation: fade-out 1.5s forwards;
+}
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
 } 

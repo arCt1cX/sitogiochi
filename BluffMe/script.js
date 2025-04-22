@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const incrementButton = document.getElementById('incrementButton');
     const nextRoundButton = document.getElementById('nextRoundButton');
+    const timeUpOverlay = document.getElementById('timeUpOverlay');
     
     // Player Elements
     const playerLabels = {};
@@ -143,24 +144,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const input = document.createElement('input');
             input.type = 'text';
             input.id = `player${i}Name`;
-            input.placeholder = `Nome Giocatore ${i}`;
+            input.placeholder = `Giocatore ${i}`;
             
-            // Use saved name or default
+            // Use saved name or leave empty
             if (players[i-1] && players[i-1] !== `Giocatore ${i}`) {
                 input.value = players[i-1];
-            } else {
-                input.value = `Giocatore ${i}`;
             }
             
             // Add focus handler to select text when focused
             input.addEventListener('focus', function() {
-                this.select();
+                if (this.value) {
+                    this.select();
+                }
             });
             
             // Add blur handler to save the name
             input.addEventListener('blur', function() {
                 if (this.value.trim() !== '') {
                     players[i-1] = this.value.trim();
+                    savePlayerNames();
+                } else if (players[i-1] !== `Giocatore ${i}`) {
+                    // If field is left empty, revert to default name in players array
+                    players[i-1] = `Giocatore ${i}`;
                     savePlayerNames();
                 }
             });
@@ -190,10 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (nameInput && nameInput.value.trim() !== '') {
                 playerName = nameInput.value.trim();
                 players[i-1] = playerName; // Update the players array
-            } else if (players[i-1]) {
-                playerName = players[i-1];
             } else {
-                playerName = `Giocatore ${i}`;
+                // Use the stored player name or default to "Giocatore X"
+                playerName = players[i-1] || `Giocatore ${i}`;
             }
             
             // Create player score element
@@ -373,8 +377,27 @@ document.addEventListener('DOMContentLoaded', () => {
             timerDisplay.classList.remove('pulse');
         }, 500);
         
+        // Show time's up overlay
+        showTimeUpOverlay();
+        
         // Set focus on next round button for better UX
         nextRoundButton.focus();
+    }
+    
+    // Show the time's up overlay with animation
+    function showTimeUpOverlay() {
+        // Add active class to show the overlay
+        timeUpOverlay.classList.add('active');
+        
+        // Start fade out animation after a short delay
+        setTimeout(() => {
+            timeUpOverlay.classList.add('fade-out');
+            
+            // Reset the overlay after animation completes
+            setTimeout(() => {
+                timeUpOverlay.classList.remove('active', 'fade-out');
+            }, 1500); // This matches the duration of the fade-out animation
+        }, 800); // Show for 800ms before starting fade out
     }
     
     // Increment the count
