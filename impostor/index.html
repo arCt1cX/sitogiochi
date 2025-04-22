@@ -59,7 +59,26 @@
             <h2>Impostazioni del Gioco</h2>
             <div class="form-group">
                 <label for="player-count">Numero di Giocatori:</label>
-                <input type="number" id="player-count" min="3" value="4">
+                <select id="player-count">
+                    <option value="3">3 Giocatori</option>
+                    <option value="4" selected>4 Giocatori</option>
+                    <option value="5">5 Giocatori</option>
+                    <option value="6">6 Giocatori</option>
+                    <option value="7">7 Giocatori</option>
+                    <option value="8">8 Giocatori</option>
+                    <option value="9">9 Giocatori</option>
+                    <option value="10">10 Giocatori</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="impostor-count">Numero di Impostori:</label>
+                <select id="impostor-count">
+                    <option value="1" selected>1 Impostore</option>
+                    <option value="2">2 Impostori</option>
+                    <option value="3">3 Impostori</option>
+                    <option value="4">4 Impostori</option>
+                    <option value="5">5 Impostori</option>
+                </select>
             </div>
             <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
         </div>

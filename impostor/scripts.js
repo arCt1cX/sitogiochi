@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealScreen = document.getElementById('reveal-screen');
     
     const playerCountInput = document.getElementById('player-count');
+    const impostorCountInput = document.getElementById('impostor-count');
     const startGameBtn = document.getElementById('start-game');
     
     const currentPlayerNum = document.getElementById('current-player-num');
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Game State
     let gameState = {
         playerCount: 4,
+        impostorCount: 1,
         currentPlayer: 1,
-        impostorIndex: -1,
+        impostorIndices: [],
         prompts: [],
         groupPrompt: '',
         impostorPrompt: '',
@@ -69,16 +71,39 @@ document.addEventListener('DOMContentLoaded', () => {
             playerCountInput.value = 3;
         }
         
+        // Set impostor count from input
+        gameState.impostorCount = parseInt(impostorCountInput.value) || 1;
+        
+        // Ensure impostor count is valid (min 1, max half of players rounded down)
+        const maxImpostors = Math.floor(gameState.playerCount / 2);
+        if (gameState.impostorCount < 1) {
+            gameState.impostorCount = 1;
+            impostorCountInput.value = 1;
+        } else if (gameState.impostorCount > maxImpostors) {
+            gameState.impostorCount = maxImpostors;
+            impostorCountInput.value = maxImpostors;
+        }
+        
         // Reset game state
         gameState.currentPlayer = 1;
         gameState.prompts = [];
+        gameState.impostorIndices = [];
         
-        // Determine if this game will have an impostor (1/50 chance of no impostor)
-        gameState.hasImpostor = Math.random() > 0.02; // 98% chance to have an impostor
+        // Determine if this game will have impostors (1/50 chance of no impostor)
+        gameState.hasImpostor = Math.random() > 0.02; // 98% chance to have impostors
         
         if (gameState.hasImpostor) {
-            // Randomly select the impostor
-            gameState.impostorIndex = Math.floor(Math.random() * gameState.playerCount);
+            // Randomly select the impostors
+            const playerIndices = Array.from({ length: gameState.playerCount }, (_, i) => i);
+            
+            // Shuffle the player indices
+            for (let i = playerIndices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [playerIndices[i], playerIndices[j]] = [playerIndices[j], playerIndices[i]];
+            }
+            
+            // Take the first N indices as impostors
+            gameState.impostorIndices = playerIndices.slice(0, gameState.impostorCount);
             
             // Randomly select a phrase pair for this round
             const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
@@ -87,12 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
             gameState.groupPrompt = selectedPair.groupPhrase;
             gameState.impostorPrompt = selectedPair.impostorPhrase;
             
-            console.log(`Game started with ${gameState.playerCount} players, impostor is player ${gameState.impostorIndex + 1}`);
+            console.log(`Game started with ${gameState.playerCount} players, ${gameState.impostorCount} impostors`);
+            console.log(`Impostors are players: ${gameState.impostorIndices.map(idx => idx + 1).join(', ')}`);
             console.log(`Group prompt: ${gameState.groupPrompt}`);
             console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
         } else {
             // No impostor game!
-            gameState.impostorIndex = -1;
+            gameState.impostorIndices = [];
             
             // Select just a group prompt
             const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
@@ -125,8 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show prompt for current player
     function showPrompt() {
         // In a no-impostor game, everyone gets the same prompt
-        // Otherwise, the impostor gets a different prompt
-        const isImpostor = gameState.hasImpostor && (gameState.currentPlayer - 1) === gameState.impostorIndex;
+        // Otherwise, check if current player is an impostor
+        const isImpostor = gameState.hasImpostor && gameState.impostorIndices.includes(gameState.currentPlayer - 1);
         
         // Set the appropriate prompt
         playerPrompt.textContent = isImpostor ? gameState.impostorPrompt : gameState.groupPrompt;
@@ -163,10 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update the reveal screen based on whether there was an impostor
         if (gameState.hasImpostor) {
-            // Normal game with an impostor
-            document.querySelector('.reveal-header h2').textContent = "L'Impostore è...";
-            impostorRevealElement.innerHTML = `Il giocatore <span id="impostor-num">${gameState.impostorIndex + 1}</span>!`;
-            document.querySelector('.impostor-prompt-container p:first-child').textContent = "Il suo prompt era:";
+            // Normal game with impostors
+            if (gameState.impostorIndices.length === 1) {
+                // Single impostor
+                document.querySelector('.reveal-header h2').textContent = "L'Impostore è...";
+                impostorRevealElement.innerHTML = `Il giocatore <span id="impostor-num">${gameState.impostorIndices[0] + 1}</span>!`;
+            } else {
+                // Multiple impostors
+                document.querySelector('.reveal-header h2').textContent = "Gli Impostori sono...";
+                const impostorNumbers = gameState.impostorIndices.map(idx => `<span class="impostor-num">${idx + 1}</span>`).join(', ');
+                impostorRevealElement.innerHTML = `I giocatori ${impostorNumbers}!`;
+            }
+            
+            document.querySelector('.impostor-prompt-container p:first-child').textContent = 
+                gameState.impostorIndices.length > 1 ? "Il loro prompt era:" : "Il suo prompt era:";
             impostorPrompt.textContent = gameState.impostorPrompt;
         } else {
             // Special game with no impostor!
@@ -208,6 +244,58 @@ document.addEventListener('DOMContentLoaded', () => {
         showScreen(setupScreen);
     });
     
+    // Add impostor count validation
+    playerCountInput.addEventListener('change', () => {
+        const playerCount = parseInt(playerCountInput.value);
+        const maxImpostors = Math.floor(playerCount / 2);
+        
+        // Save the current selection if possible
+        const currentImpostorCount = parseInt(impostorCountInput.value);
+        
+        // Clear current options
+        impostorCountInput.innerHTML = '';
+        
+        // Add new options based on the player count
+        for (let i = 1; i <= maxImpostors; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = `${i} ${i === 1 ? 'Impostore' : 'Impostori'}`;
+            
+            // Set as selected if it matches the previous selection
+            if (i === currentImpostorCount && currentImpostorCount <= maxImpostors) {
+                option.selected = true;
+            }
+            
+            impostorCountInput.appendChild(option);
+        }
+        
+        // If no option was selected, select the first one
+        if (impostorCountInput.selectedIndex === -1 && impostorCountInput.options.length > 0) {
+            impostorCountInput.selectedIndex = 0;
+        }
+    });
+    
     // Initial load
     loadPrompts();
+    
+    // Initialize impostor count options based on default player count
+    const playerCount = parseInt(playerCountInput.value);
+    const maxImpostors = Math.floor(playerCount / 2);
+    
+    // Clear current options
+    impostorCountInput.innerHTML = '';
+    
+    // Add options based on the player count
+    for (let i = 1; i <= maxImpostors; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = `${i} ${i === 1 ? 'Impostore' : 'Impostori'}`;
+        
+        // Set first option as selected
+        if (i === 1) {
+            option.selected = true;
+        }
+        
+        impostorCountInput.appendChild(option);
+    }
 }); 
