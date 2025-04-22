@@ -46,7 +46,6 @@ Bandiera Albania
 Bandiera Moldavia  
 Bandiera Bielorussia  
 Bandiera Estonia  
-Bandiera Lettonia  
 Bandiera Lituania  
 Bandiera Georgia  
 Bandiera Armenia  

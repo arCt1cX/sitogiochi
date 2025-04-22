@@ -235,7 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'superheroes', items: [] },
             { name: 'animals', items: [] },
             { name: 'flags', items: [] },
-            { name: 'historical figures', items: [] }
+            { name: 'historical figures', items: [] },
+            { name: 'athletes', items: [] },
+            { name: 'influencers', items: [] }
         ];
         
         // For each category, try to populate items by checking the img directory
@@ -270,9 +272,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     category.items = ['Juventus FC', 'FC Barcelona', 'Real Madrid CF', 'Manchester United FC',
                                      'Liverpool FC', 'Bayern Munich', 'Paris Saint-Germain FC'];
                     break;
-                    category.items = ['Apple', 'Google', 'Microsoft', 'Amazon', 'Facebook',
-                                     'Coca-Cola', 'Nike'];
-                    break;
                 case 'capitals':
                     category.items = ['Roma', 'Parigi', 'Londra', 'Berlino', 'Madrid',
                                      'Washington D.C.', 'Tokyo'];
@@ -292,6 +291,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'historical figures':
                     category.items = ['Giulio Cesare', 'Alessandro Magno', 'Napoleone Bonaparte', 
                                      'Leonardo da Vinci', 'Albert Einstein', 'Winston Churchill', 'Abraham Lincoln'];
+                    break;
+                case 'athletes':
+                    category.items = ['Cristiano Ronaldo', 'Lionel Messi', 'LeBron James', 'Serena Williams',
+                                     'Usain Bolt', 'Roger Federer', 'Michael Jordan'];
+                    break;
+                case 'influencers':
+                    category.items = ['Cristiano Ronaldo', 'Selena Gomez', 'Kylie Jenner', 'Kim Kardashian',
+                                     'Dwayne Johnson', 'Taylor Swift', 'Justin Bieber'];
                     break;
             }
         }
@@ -652,6 +659,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 category: 'historical figures',
                 item: 'Leonardo da Vinci',
                 imagePath: 'img/historical figures/leonardo_da_vinci.jpg'
+            },
+            {
+                category: 'athletes',
+                item: 'Cristiano Ronaldo',
+                imagePath: 'img/athletes/cristiano_ronaldo.jpg'
+            },
+            {
+                category: 'influencers',
+                item: 'Dwayne Johnson',
+                imagePath: 'img/influencers/dwayne_johnson.jpg'
             }
         ];
         

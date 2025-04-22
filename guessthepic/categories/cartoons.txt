@@ -38,7 +38,7 @@ Kenny McCormick
 SpongeBob  
 Patrick Stella  
 Squiddi  
-Mr Krabs  
+Mr Krab  
 Sandy Cheeks  
 Vegeta  
 Gohan  
@@ -92,3 +92,10 @@ Simba
 Timone  
 Pumbaa  
 Scar  
+Dexter 
+Braccio di ferro
+Fred Flintstone
+Kim possible
+Perry l'ornitorinco
+Jimmy Neutron
+Teen Titans

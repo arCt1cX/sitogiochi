@@ -18,7 +18,6 @@ Giuseppe Conte
 Jacinda Ardern  
 Boris Johnson  
 Mahatma Gandhi
-Berlusconi
 Richard Nixon
 John Fitzgerald Kennedy
 Matteo Renzi  
@@ -29,4 +28,12 @@ Benito Mussolini
 Theodore Roosevelt  
 Camillo Benso Conte di Cavour  
 Papa Giovanni Paolo II
+Fidel Castro
+Silvio Berlusconi
+Che Guevara
+Mikhail Gorbachev
+Bill Clinton
+George Bush
+Saddam Hussein
+Adolf Hitler
 

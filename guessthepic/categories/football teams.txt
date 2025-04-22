@@ -1,9 +1,9 @@
-Juventus FC  
+Juventus 
 Milan AC  
 Inter Milan  
-AS Roma FC  
+AS Roma
 SSC Napoli  
-Lazio FC  
+Lazio 
 AC Fiorentina  
 Atalanta BC  
 Torino FC  
@@ -22,9 +22,9 @@ Villarreal CF
 Athletic Bilbao  
 Manchester United FC  
 Manchester City FC  
-Liverpool FC  
-Chelsea FC  
-Arsenal FC  
+Liverpool   
+Chelsea  
+Arsenal  
 Tottenham Hotspur FC  
 Leicester City FC  
 West Ham United FC  
@@ -99,3 +99,4 @@ Club León
 Red Bull Bragantino  
 Vasco da Gama  
 Botafogo FR  
+Hellas Verona
