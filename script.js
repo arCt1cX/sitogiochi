@@ -538,9 +538,17 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
         
+        // Folder name mapping for case sensitivity issues
+        const folderNameMap = {
+            'bluffme': 'BluffMe',
+            // Add any other case-sensitive folder mappings here if needed
+        };
+        
         // Add click event for navigation
         playButton.addEventListener('click', () => {
-            window.location.href = `${game.id}/index.html`;
+            // Use folder name mapping if available, otherwise use game.id
+            const folderName = folderNameMap[game.id] || game.id;
+            window.location.href = `${folderName}/index.html`;
         });
         
         // Add title, catchphrase and button to content container
