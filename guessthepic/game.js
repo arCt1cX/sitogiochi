@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Game state
     let categories = [];
-    let categories_it = []; // Store Italian categories for image paths
     let allPlayers = []; // Store players for the whole game
     let playerRounds = []; // Array to store each player's round images
     let currentQuestionIndex = 0;
@@ -49,226 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timer = null;
     let timeRemaining = 60;
     let questionStatuses = []; // Array to track the status of each image: null, 'correct', 'incorrect', or 'pending'
-    let currentLanguage = 'it'; // Default language
     
-    // *** RE-INSERTED FULL TRANSLATIONS OBJECT HERE ***
-    const translations = {
-        it: {
-            pageTitle: "GuessThePic - Indovina cosa mostrano le immagini | DrewGames",
-            metaDescription: "Gioca a GuessThePic: il gioco dove devi indovinare cosa mostrano le 5 immagini di diverse categorie. Sfida i tuoi amici e accumula più punti!",
-            home: "Home",
-            gameTitle: "Indovina l'Immagine",
-            gameDescription: "Prova a indovinare cosa c'è nelle immagini!",
-            openPlayerSetup: "Inizia Gioco",
-            playerSetupTitle: "Configura Giocatori",
-            playerCountLabel: "Numero di Giocatori:",
-            playerLabel: "Giocatore",
-            playerNamePlaceholder: "Giocatore",
-            startGame: "Inizia Partita",
-            transitionTitle: "Preparati!",
-            nextPlayerTurn: "Turno di %s",
-            passDevice: "Passa il dispositivo al prossimo giocatore",
-            readyButton: "Sono Pronto!",
-            scoreLabel: "Punteggio",
-            currentPlayerLabel: "Giocatore",
-            timerLabel: "Tempo",
-            timerSeconds: "s",
-            categoryLabel: "Categoria",
-            unknownCategory: "Sconosciuta",
-            prevImageButton: "< Precedente",
-            nextImageButton: "Prossima >",
-            questionProgress: "Domanda %s di 5",
-            guessPlaceholder: "Inserisci la tua risposta...",
-            submitGuessButton: "Invia",
-            feedbackCorrect: "Corretto!",
-            feedbackIncorrect: "Sbagliato!",
-            feedbackEmpty: "Inserisci una risposta prima di inviare!",
-            feedbackFinalAnswer: "La risposta era: %s",
-            roundCompleteTitle: "Round Completato!",
-            nextRoundButton: "Prossimo Round",
-            finalResultsTitle: "Risultati Finali!",
-            playAgainButton: "Gioca Ancora",
-            errorLoadingCategories: "Errore nel caricamento delle categorie. Usando dati di fallback.",
-            errorInitializing: "Errore durante l'inizializzazione del gioco:",
-            checkingImages: "Controllo directory immagini...",
-            testPath: "Test percorso per %s: %s",
-            dirTestResult: "Test directory %s: %s",
-            noItemsInCategory: "Categoria %s non ha elementi",
-            errorCheckingDir: "Errore controllo directory per %s:",
-            fallbackWarning: "Impossibile caricare %s. Usando dati di fallback.",
-            categoriesLoaded: "Categorie caricate con successo da %s",
-            totalItemsLoaded: "Caricate %s categorie con un totale di %s elementi",
-            categoriesList: "Categorie:",
-            scanningCategories: "Scansione categorie...",
-            imgAlt: "Immagine da indovinare - GuessThePic",
-            playerOption: " Giocatore", // Note the space for concatenation
-            playersOption: " Giocatori",
-            timeExpired: "Tempo scaduto!",
-            playerScoresTitle: "Punteggi Round %s:",
-            loading: "Caricamento..." // Added loading text
-        },
-        en: {
-            pageTitle: "GuessThePic - Guess what the images show | DrewGames",
-            metaDescription: "Play GuessThePic: the game where you guess what the 5 images from different categories show. Challenge your friends and score the most points!",
-            home: "Home",
-            gameTitle: "Guess The Picture",
-            gameDescription: "Try to guess what's in the pictures!",
-            openPlayerSetup: "Start Game",
-            playerSetupTitle: "Setup Players",
-            playerCountLabel: "Number of Players:",
-            playerLabel: "Player",
-            playerNamePlaceholder: "Player",
-            startGame: "Start Match",
-            transitionTitle: "Get Ready!",
-            nextPlayerTurn: "%s's Turn",
-            passDevice: "Pass the device to the next player",
-            readyButton: "I'm Ready!",
-            scoreLabel: "Score",
-            currentPlayerLabel: "Player",
-            timerLabel: "Time",
-            timerSeconds: "s",
-            categoryLabel: "Category",
-            unknownCategory: "Unknown",
-            prevImageButton: "< Previous",
-            nextImageButton: "Next >",
-            questionProgress: "Question %s of 5",
-            guessPlaceholder: "Enter your answer...",
-            submitGuessButton: "Submit",
-            feedbackCorrect: "Correct!",
-            feedbackIncorrect: "Wrong!",
-            feedbackEmpty: "Enter an answer before submitting!",
-            feedbackFinalAnswer: "The answer was: %s",
-            roundCompleteTitle: "Round Complete!",
-            nextRoundButton: "Next Round",
-            finalResultsTitle: "Final Results!",
-            playAgainButton: "Play Again",
-            errorLoadingCategories: "Error loading categories. Using fallback data.",
-            errorInitializing: "Error initializing game:",
-            checkingImages: "Checking image directories...",
-            testPath: "Testing path for %s: %s",
-            dirTestResult: "%s directory test: %s",
-            noItemsInCategory: "Category %s has no items",
-            errorCheckingDir: "Error checking directory for %s:",
-            fallbackWarning: "Could not load %s. Using fallback data.",
-            categoriesLoaded: "Successfully loaded categories from %s",
-            totalItemsLoaded: "Loaded %s categories with a total of %s items",
-            categoriesList: "Categories:",
-            scanningCategories: "Scanning categories...",
-            imgAlt: "Image to guess - GuessThePic",
-            playerOption: " Player", // Note the space for concatenation
-            playersOption: " Players",
-            timeExpired: "Time's up!",
-            playerScoresTitle: "Round %s Scores:",
-            loading: "Loading..." // Added loading text
-        }
-    };
-
-    // === FUNCTION DEFINITIONS MOVED HERE ===
-    
-    // Function to get translation
-    function getText(key, ...args) {
-        let text = translations[currentLanguage]?.[key] || translations['it']?.[key] || key; // Fallback to key itself
-        if (args.length > 0) {
-            args.forEach((arg) => {
-                text = text.replace('%s', arg);
-            });
-        }
-        return text;
-    }
-    
-    // Update UI elements with current language
-    function updateUILanguage() {
-        // Update meta tags
-        document.title = getText('pageTitle');
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.setAttribute('content', getText('metaDescription'));
-        document.documentElement.lang = currentLanguage;
-        
-        // Update home button
-        const homeButton = document.querySelector('.home-button span');
-        if (homeButton && homeButton.nextSibling) { 
-             homeButton.nextSibling.nodeValue = ` ${getText('home')}`; 
-        }
-        
-        // Start Screen
-        const startH1 = startScreen.querySelector('h1');
-        if(startH1) startH1.textContent = getText('gameTitle');
-        const startP = startScreen.querySelector('p');
-        if(startP) startP.textContent = getText('gameDescription');
-        if(openPlayerSetupButton) openPlayerSetupButton.textContent = getText('openPlayerSetup');
-
-        // Player Setup Screen
-        const setupH2 = playerSetupScreen.querySelector('h2');
-        if(setupH2) setupH2.textContent = getText('playerSetupTitle');
-        const setupLabel = playerSetupScreen.querySelector('label[for="player-count"]');
-        if(setupLabel) setupLabel.textContent = getText('playerCountLabel');
-        const startGameButton = document.getElementById('start-game');
-        if(startGameButton) startGameButton.textContent = getText('startGame');
-        // Update player count options
-        if(playerCountSelect) {
-            const options = playerCountSelect.options;
-            for (let i = 0; i < options.length; i++) {
-                const value = parseInt(options[i].value);
-                options[i].textContent = `${value}${value === 1 ? getText('playerOption') : getText('playersOption')}`;
-            }
-        }
-        // Re-run updatePlayerInputs to apply new labels/placeholders
-        updatePlayerInputs(); 
-
-        // Player Transition Screen
-        const transitionH2 = playerTransitionScreen.querySelector('h2');
-        if(transitionH2) transitionH2.textContent = getText('transitionTitle');
-        const passDeviceElement = playerTransitionScreen.querySelector('p');
-        if (passDeviceElement) passDeviceElement.textContent = getText('passDevice');
-        if(startPlayerTurnButton) startPlayerTurnButton.textContent = getText('readyButton');
-
-        // Game Screen
-        const scoreNode = gameScreen.querySelector('.score')?.childNodes[0];
-        if(scoreNode) scoreNode.nodeValue = `${getText('scoreLabel')}: `;
-        const playerNode = gameScreen.querySelector('.current-player')?.childNodes[0];
-        if(playerNode) playerNode.nodeValue = `${getText('currentPlayerLabel')}: `;
-        const timerNode = gameScreen.querySelector('.timer')?.childNodes[0];
-        if(timerNode) timerNode.nodeValue = `${getText('timerLabel')}: `;
-        const categoryNode = gameScreen.querySelector('.category-display')?.childNodes[0];
-        if(categoryNode) categoryNode.nodeValue = `${getText('categoryLabel')}: `;
-        if(prevImageButton) prevImageButton.textContent = getText('prevImageButton');
-        if(nextImageButton) nextImageButton.textContent = getText('nextImageButton');
-        if(guessInput) guessInput.placeholder = getText('guessPlaceholder');
-        if(submitButton) submitButton.textContent = getText('submitGuessButton');
-        if(gameImage) gameImage.alt = getText('imgAlt');
-
-        // Result Screen
-        if(playAgainButton) playAgainButton.textContent = getText('nextRoundButton'); // Initial state
-    }
-    
-    // Update player input fields based on selected player count
-    function updatePlayerInputs() {
-        if (!playerNamesContainer || !playerCountSelect) return; // Guard clause
-        const playerCount = parseInt(playerCountSelect.value);
-        playerNamesContainer.innerHTML = '';
-        
-        for (let i = 1; i <= playerCount; i++) {
-            const playerInput = document.createElement('div');
-            playerInput.className = 'player-input';
-            
-            const label = document.createElement('label');
-            label.setAttribute('for', `player${i}-name`);
-            label.textContent = `${getText('playerLabel')} ${i}:`;
-            
-            const input = document.createElement('input');
-            input.setAttribute('type', 'text');
-            input.setAttribute('id', `player${i}-name`);
-            input.setAttribute('placeholder', `${getText('playerNamePlaceholder')} ${i}`);
-            input.value = '';
-            
-            playerInput.appendChild(label);
-            playerInput.appendChild(input);
-            playerNamesContainer.appendChild(playerInput);
-        }
-    }
-    
-    // === END OF MOVED FUNCTION DEFINITIONS ===
-
     // Sound effects (optional)
     const correctSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAqAABHnwAFBwkMDhATFRcaHB8hJCYpKy4wMzU4Ojs+QUNGSEtNUFJVV1pcX2FkZ2lsbnFzdnl7foGDhoiLjZCSlZeanZ+ipKeprK6xtLa5vL7BxMbJy87R09bY293g4uXn6uzu8fP2+fv+AAAATGF2YzU4LjU0AAAAAAAAAAAAAAAAJAXaAAAAAAAAR5+fSpwoAAAAAAAAAAAAAAAAAAD/+0DEAAP7uuzoYwkAJ3VNOt7Pg3B7QwdgAsK6WTEsxoiWpnrJmDNDIwRtCY+g8BBIiDtHcMjAcMTCYAwCAmDkNzBIBuVP/1QLJcHgBmBYDAQMwNhmAK10MCQCzAzAcGA4AIHBMLTJm0MFgBwYBGCAHA2DphR+kDgCwSAYwFAGDgdHYZ+k14qigAYJgJAQCAAHgKHgRB/+NUB4gFwUAIwHAcS+VQj9rn//1QygNB3C//tAxAcAEn7s8f5iAAp8ZqH/sOAFLVBJ0iNTTy1DIMzIJPLTO3/xAAJDqIvGp9C5wJeJh3+LuH/5EAKjABG2aLu69F3C7sTzAEOwHBUJUNw6gdF36t80QmDIcCCFWXDtF3dF3d4O4nGQXB4MXSKlRuIgouIl3+r/yrVbiyUMDBBwfJcFYuAGTjXqP/7NKtQw2d8qsP/7QMQDARKq0uz+HgCKGFXh/5hQCbgzOYuIcUWkBIKQh/KqgxarILDEoJiYUZSfJjTaZMYU1FMy45OS41VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=');
     const incorrectSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAsAAAZyAAICgoNDQ8PEhIUFBcXGRkcHB4eISEjIyYmKCgrKy0tMDA0NDY2OTk7Oz4+QUFDRUhIS0tOTlFRU1NWVllZXFxfX2JiZWVnZ2pqbW1vb3JydXV3d3p6fX2AgIKChYWIiIqKjY2Pj5KSlZWXl5qanJyfn6KipKSnp6qqrKyvr7KytbW3t7q6vLy/v8LCxcXHx8rKzMzPz9LS1dXX19ra3d3f3+Li5eXn5+rq7e3v7/Ly9fX39/r6/f0AAAA5TEFNRTMuMTAwBLQAAAAAAAAAABUgJAjpTQABzAABmchOO7KBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//tAxAADwlwm9k5xAAhaV17dyKABECEVdjggAAkRFkcAABURc3K3K3KwICAgFQMDAwMDAwMYJ0CAoCAgFQoCpytytwICA3NzAwMDAwMD/K3AgCpwICAgIEaP/////+VuVuVg3Nzc3NzcqoHR0f/////KqoCAzNzc3Nzf///////++gICAgKqp0dHR0f/////+VUDp//6HAwMBAQEBGRkZGRnKqoCA3P//6qB0dH//tAxFuAE1J139vYbopP3rb7OqABqlVVf9+qodHR/wdOjAa+jt3a///70DoGB0dHR0dH//////6wPHDh////////kVERGPEDBP////////hgQEBR41SsrKysrK////////yqqqqsrKysr/////////////yssrP///////////6f/////////////////////////////////////////////////////7QMRFg9LaotbiMzxKIFrQsARAH////////////9JWWWXlf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////tAxF0AEiAAvYAQAAAAAA0gAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7QMRLAAAAAaQAAAAAAAAA0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==');
@@ -277,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let imageCache = {};
 
     // Event listeners for game navigation
-    if(openPlayerSetupButton) openPlayerSetupButton.addEventListener('click', openPlayerSetup);
-    if(startButton) startButton.addEventListener('click', startGame);
-    if(playAgainButton) playAgainButton.addEventListener('click', () => {
+    openPlayerSetupButton.addEventListener('click', openPlayerSetup);
+    startButton.addEventListener('click', startGame);
+    playAgainButton.addEventListener('click', () => {
         // Start a new round or go back to player setup if all rounds are finished
         if (currentRoundNumber < totalRounds) {
             currentRoundNumber++;
@@ -288,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
             openPlayerSetup();
         }
     });
-    if(submitButton) submitButton.addEventListener('click', checkAnswer);
-    if(prevImageButton) prevImageButton.addEventListener('click', navigateToPreviousImage);
-    if(nextImageButton) nextImageButton.addEventListener('click', navigateToNextImage);
-    if(startPlayerTurnButton) startPlayerTurnButton.addEventListener('click', startCurrentPlayerTurn);
+    submitButton.addEventListener('click', checkAnswer);
+    prevImageButton.addEventListener('click', navigateToPreviousImage);
+    nextImageButton.addEventListener('click', navigateToNextImage);
+    startPlayerTurnButton.addEventListener('click', startCurrentPlayerTurn);
     
     // Add click listeners to indicator circles for navigation
     indicatorCircles.forEach((circle, index) => {
@@ -299,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Player count selection changes the input fields
-    if(playerCountSelect) playerCountSelect.addEventListener('change', updatePlayerInputs);
+    playerCountSelect.addEventListener('change', updatePlayerInputs);
     
     // Handle Enter key press
-    if(guessInput) guessInput.addEventListener('keyup', function(e) {
+    guessInput.addEventListener('keyup', function(e) {
         if (e.key === 'Enter' && !submitButton.disabled) {
             // Only check answer if the submit button is not disabled
             // and there's text in the input
@@ -326,28 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     async function initGame() {
         try {
-            currentLanguage = getUserLanguage(); // Get language from global function
-            console.log("[initGame] Detected language via getUserLanguage():", currentLanguage);
-            updateUILanguage(); 
-
-            // --- Disable start button until categories are loaded ---
-            if(openPlayerSetupButton) {
-                 openPlayerSetupButton.disabled = true;
-                 // Use getText here now that it's defined
-                 openPlayerSetupButton.textContent = getText('loading', 'Loading...'); // Add fallback text
-            }
-            const categoryFile = currentLanguage === 'en' ? 'categories_en.json' : 'categories.json';
-            const categoryFileIt = 'categories.json'; 
-
-            const response = await fetch(categoryFile);
-            const responseIt = await fetch(categoryFileIt);
-
-            if (response.ok && responseIt.ok) {
-                categories = await response.json();
-                categories_it = await responseIt.json(); 
-                console.log(getText('categoriesLoaded', categoryFile));
-                console.log(getText('totalItemsLoaded', categories.length, categories.reduce((sum, cat) => sum + (cat.items?.length || 0), 0)));
-                console.log(getText('categoriesList'), categories.map(cat => `${cat.name} (${cat.items?.length || 0} items)`));
+            // Try to load categories from the file system
+            const response = await fetch('categories.json');
+            
+            if (response.ok) {
+                const data = await response.json();
+                categories = data;
+                console.log("Successfully loaded categories from categories.json");
+                console.log(`Loaded ${categories.length} categories with a total of ${categories.reduce((sum, cat) => sum + cat.items.length, 0)} items`);
+                console.log("Categories:", categories.map(cat => `${cat.name} (${cat.items.length} items)`));
                 
                 // Pre-check if any image directories exist
                 console.log("Checking image directories for each category...");
@@ -370,46 +137,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             } else {
-                if (!response.ok) console.warn(getText('fallbackWarning', categoryFile));
-                if (!responseIt.ok) console.warn(getText('fallbackWarning', categoryFileIt));
-                 console.warn(getText('errorLoadingCategories'));
-                await scanCategories(); // Fallback if any file fails
+                console.warn("Could not load categories.json. Using fallback data.");
+                // If categories.json doesn't exist, scan for categories manually
+                await scanCategories();
             }
         } catch (error) {
-            console.error(getText('errorInitializing'), error);
-            console.warn(getText('errorLoadingCategories'));
-            // Ensure scanCategories is called even if initial fetch fails badly
-            if (!categories || categories.length === 0) {
-                 await scanCategories(); 
-            }
+            console.error('Error initializing game:', error);
+            console.warn("Using fallback data.");
+            // Fallback to manual category scanning
+            await scanCategories();
         }
-        
-        // --- Enable the start button regardless of success/failure ---
-         if(openPlayerSetupButton) {
-             openPlayerSetupButton.disabled = false;
-             openPlayerSetupButton.textContent = getText('openPlayerSetup'); 
-        }
-        console.log("initGame finished, start button enabled.");
-        
-        // Watch for language changes
-        watchLanguageChanges();
-    }
-
-    // Watch for language changes
-    function watchLanguageChanges() {
-        setInterval(() => {
-            const newLang = getUserLanguage();
-            // console.log("[watchLanguageChanges] Checking storage. Current:", currentLanguage, "Storage:", newLang); // Optional: Verbose log
-            if (newLang !== currentLanguage) {
-                console.log(`[watchLanguageChanges] Language changed! From ${currentLanguage} to ${newLang}. Reloading page...`);
-                // Instead of trying to update in place, reload the page to ensure all data matches the new language
-                location.reload(); 
-                // The lines below are no longer needed:
-                // currentLanguage = newLang;
-                // updateUILanguage(); 
-                // initGame(); // Calling initGame again wasn't enough to fix existing game state
-            }
-        }, 1000); // Check every second
     }
 
     /**
@@ -453,6 +190,35 @@ document.addEventListener('DOMContentLoaded', function() {
         startRound();
     }
     
+    /**
+     * Update player input fields based on selected player count
+     */
+    function updatePlayerInputs() {
+        const playerCount = parseInt(playerCountSelect.value);
+        playerNamesContainer.innerHTML = '';
+        
+        for (let i = 1; i <= playerCount; i++) {
+            const playerInput = document.createElement('div');
+            playerInput.className = 'player-input';
+            
+            const label = document.createElement('label');
+            label.setAttribute('for', `player${i}-name`);
+            label.textContent = `Player ${i}:`;
+            
+            const input = document.createElement('input');
+            input.setAttribute('type', 'text');
+            input.setAttribute('id', `player${i}-name`);
+            input.setAttribute('placeholder', `Player ${i}`);
+            
+            // Don't prefill the name, just use placeholder
+            input.value = '';
+            
+            playerInput.appendChild(label);
+            playerInput.appendChild(input);
+            playerNamesContainer.appendChild(playerInput);
+        }
+    }
+
     /**
      * Scan for categories by checking directories in the img folder
      */
@@ -538,9 +304,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         console.log("Scanned categories:", categories);
-        
-        // Populate categories_it with the same data
-        categories_it = JSON.parse(JSON.stringify(categories));
     }
 
     /**
