@@ -30,10 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval = null;
     let isPaused = false;
     
-    // Fetch words from the words.txt file
+    // Fetch words from the appropriate words file based on language
     async function fetchWords() {
         try {
-            const response = await fetch('words.txt');
+            // Get user language
+            const lang = getUserLanguage();
+            
+            // Determine which file to load
+            const wordFile = lang === 'en' ? 'words_en.txt' : 'words.txt';
+            
+            const response = await fetch(wordFile);
             if (!response.ok) {
                 throw new Error('Failed to load words file');
             }
@@ -45,12 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(word => word.length > 0);
         } catch (error) {
             console.error('Error loading words:', error);
-            // Fallback list of Italian words in case of error
-            return [
-                'Amore', 'Gioia', 'Paura', 'Sogno', 'Speranza', 
-                'Tempo', 'Festa', 'Tavolo', 'Libro', 'Musica',
-                'Pizza', 'Mare', 'Cinema', 'Viaggio', 'Famiglia'
-            ];
+            
+            // Get user language for fallback
+            const lang = getUserLanguage();
+            
+            // Fallback list of words in case of error
+            return lang === 'en' ? 
+                // English fallback words
+                [
+                    'Love', 'Joy', 'Fear', 'Dream', 'Hope', 
+                    'Time', 'Party', 'Table', 'Book', 'Music',
+                    'Pizza', 'Sea', 'Cinema', 'Travel', 'Family'
+                ] : 
+                // Italian fallback words
+                [
+                    'Amore', 'Gioia', 'Paura', 'Sogno', 'Speranza', 
+                    'Tempo', 'Festa', 'Tavolo', 'Libro', 'Musica',
+                    'Pizza', 'Mare', 'Cinema', 'Viaggio', 'Famiglia'
+                ];
         }
     }
     
@@ -101,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function getNewWord() {
         if (words.length === 0) {
             console.error("No words available!");
-            wordDisplay.textContent = "Errore nel caricamento delle parole";
+            // Get translations
+            const lang = getUserLanguage();
+            const translations = gameTranslations[lang] || gameTranslations['en'];
+            wordDisplay.textContent = translations.loadError;
             return;
         }
         
