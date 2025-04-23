@@ -149,7 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load categories from file
     async function loadCategories() {
         try {
-            const response = await fetch('categorie.txt');
+            // Get user language and determine which file to load
+            const lang = getUserLanguage();
+            const categoryFile = lang === 'en' ? 'categories.txt' : 'categorie.txt';
+            
+            const response = await fetch(categoryFile);
             const text = await response.text();
             gameSettings.categories = text.split('\n').filter(line => line.trim() !== '');
         } catch (error) {
@@ -243,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     indicator3_3p.classList.add('visible');
                 }
             } else if (gameState3p.activePlayer === 2) {
-                // Player 2's timer is increasing (button should look inactive)
+                // Player 2 is active (button should look inactive)
                 player2Button3p.classList.add('inactive-turn');
                 
                 // Players 1 and 3 timers are decreasing (their buttons should look active)
@@ -256,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     indicator3_3p.classList.add('visible');
                 }
             } else if (gameState3p.activePlayer === 3) {
-                // Player 3's timer is increasing (button should look inactive)
+                // Player 3 is active (button should look inactive)
                 player3Button3p.classList.add('inactive-turn');
                 
                 // Players 1 and 2 timers are decreasing (their buttons should look active)
@@ -297,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     indicator4_4p.classList.add('visible');
                 }
             } else if (gameState4p.activePlayer === 2) {
-                // Player 2's timer is increasing (button should look inactive)
+                // Player 2 is active (button should look inactive)
                 player2Button4p.classList.add('inactive-turn');
                 
                 // Other players' timers are decreasing (their buttons should look active)
@@ -314,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     indicator4_4p.classList.add('visible');
                 }
             } else if (gameState4p.activePlayer === 3) {
-                // Player 3's timer is increasing (button should look inactive)
+                // Player 3 is active (button should look inactive)
                 player3Button4p.classList.add('inactive-turn');
                 
                 // Other players' timers are decreasing (their buttons should look active)
@@ -331,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     indicator4_4p.classList.add('visible');
                 }
             } else if (gameState4p.activePlayer === 4) {
-                // Player 4's timer is increasing (button should look inactive)
+                // Player 4 is active (button should look inactive)
                 player4Button4p.classList.add('inactive-turn');
                 
                 // Other players' timers are decreasing (their buttons should look active)

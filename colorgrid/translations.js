@@ -19,7 +19,12 @@ const gameTranslations = {
         'theSecret': 'La cella segreta era:',
         'notSelected': 'Non selezionato',
         'playerResults': 'Risultati Giocatore',
-        'winnerIs': 'Il vincitore è'
+        'winnerIs': 'Il vincitore è',
+        'newGame': 'Nuova Partita',
+        'rememberTitle': 'Ricorda questa cella!',
+        'correctGuess': 'Risposta corretta!',
+        'incorrectGuess': 'Sbagliato. La risposta corretta era:',
+        'invalidGuess': 'Risposta non valida'
     },
     'en': {
         'gameTitle': 'Color Grid',
@@ -40,13 +45,18 @@ const gameTranslations = {
         'theSecret': 'The secret cell was:',
         'notSelected': 'Not selected',
         'playerResults': 'Player Results',
-        'winnerIs': 'The winner is'
+        'winnerIs': 'The winner is',
+        'newGame': 'New Game',
+        'rememberTitle': 'Remember this cell!',
+        'correctGuess': 'Correct guess!',
+        'incorrectGuess': 'Incorrect. The correct answer was:',
+        'invalidGuess': 'Invalid guess'
     }
 };
 
 // Apply translations to the ColorGrid game
 function applyGameTranslations() {
-    const lang = getUserLanguage();
+    const lang = getLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
     
     // Update page title and meta description
@@ -62,8 +72,8 @@ function applyGameTranslations() {
     // Update the language toggle button
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
-        // Hide language toggle on game pages as requested
-        languageToggle.style.display = 'none';
+        // Update language toggle text
+        languageToggle.innerHTML = lang.toUpperCase();
     }
     
     // Update home button text

@@ -68,7 +68,9 @@
 </head>
 <body>
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
-    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">
+        <script>document.write(getUserLanguage().toUpperCase())</script>
+    </button>
     
     <div class="container">
         <h1 id="gameTitle">Gioco dei Colori</h1>

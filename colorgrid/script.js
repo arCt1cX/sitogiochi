@@ -1,41 +1,7 @@
 // Get language preference
 function getLanguage() {
-    return localStorage.getItem('language') || 'it';
+    return getUserLanguage(); // Use the main language utility function
 }
-
-// Translations for UI elements and game text
-const translations = {
-    en: {
-        gameTitle: "Color Grid Game",
-        gameDescription: "A game for 3+ players. One player will see a secret cell, then the others must guess it!",
-        newGame: "New Game",
-        rememberTitle: "Remember this cell!",
-        gotIt: "Got it!",
-        addPlayer: "Add Player",
-        revealAnswer: "Reveal Answer",
-        resultsTitle: "Results",
-        playAgain: "Play Again",
-        player: "Player",
-        correctGuess: "Correct guess!",
-        incorrectGuess: "Incorrect. The correct answer was:",
-        invalidGuess: "Invalid guess"
-    },
-    it: {
-        gameTitle: "Gioco dei Colori",
-        gameDescription: "Un gioco per 3+ giocatori. Un giocatore vedrà una cella segreta, poi gli altri dovranno indovinarla!",
-        newGame: "Nuova Partita",
-        rememberTitle: "Ricorda questa cella!",
-        gotIt: "Ho Capito!",
-        addPlayer: "Aggiungi Giocatore",
-        revealAnswer: "Rivela Risposta",
-        resultsTitle: "Risultati",
-        playAgain: "Gioca Ancora",
-        player: "Giocatore",
-        correctGuess: "Risposta corretta!",
-        incorrectGuess: "Sbagliato. La risposta corretta era:",
-        invalidGuess: "Risposta non valida"
-    }
-};
 
 // Color translations
 const colorTranslations = {
@@ -103,48 +69,20 @@ const gridLabelsCols = document.querySelectorAll('.grid-labels-col');
 
 // Get language from our central language utility
 function getCurrentLanguage() {
-    return getUserLanguage();
-}
-
-// Update UI with current language
-function updateUI() {
-    const t = translations[currentLanguage];
-    
-    // Update game title and description
-    document.getElementById('game-title').textContent = t.gameTitle;
-    document.getElementById('game-description').textContent = t.gameDescription;
-    
-    // Update buttons
-    document.getElementById('start-game').textContent = t.newGame;
-    document.getElementById('remember-title').textContent = t.rememberTitle;
-    document.getElementById('got-it').textContent = t.gotIt;
-    document.getElementById('add-player').textContent = t.addPlayer;
-    document.getElementById('reveal-answer').textContent = t.revealAnswer;
-    document.getElementById('results-title').textContent = t.resultsTitle;
-    document.getElementById('play-again').textContent = t.playAgain;
-    
-    // Update player inputs if they exist
-    updatePlayerLabels();
+    return getLanguage();
 }
 
 // Update player labels based on current language
 function updatePlayerLabels() {
     const lang = getCurrentLanguage();
-    const translations = gameTranslations[lang] || gameTranslations['en'];
+    const t = gameTranslations[lang] || gameTranslations['en'];
     
     // Update existing player labels
     const playerInputs = document.querySelectorAll('.player-input label');
     playerInputs.forEach((label, index) => {
-        label.textContent = `${translations.player} ${index + 1}: `;
+        label.textContent = `${t.player} ${index + 1}: `;
     });
 }
-
-// Event Listeners
-startGameButton.addEventListener('click', startGame);
-gotItButton.addEventListener('click', showGamePlay);
-addPlayerButton.addEventListener('click', addPlayer);
-revealAnswerButton.addEventListener('click', revealAnswer);
-playAgainButton.addEventListener('click', resetGame);
 
 // Initialize the game
 function init() {
@@ -158,12 +96,10 @@ function init() {
         const newLanguage = getLanguage();
         if (newLanguage !== currentLanguage) {
             currentLanguage = newLanguage;
-            updateUI();
+            applyGameTranslations();
+            updatePlayerLabels(); // Update player labels if they exist
         }
     }, 1000);
-    
-    // Initialize with correct language
-    updateUI();
     
     resetGame();
 }
@@ -215,8 +151,23 @@ function startGame() {
     const col = Math.floor(Math.random() * GRID_SIZE);
     targetCell = { row, col };
     
-    // Show target cell to first player
+    // Show target reveal to first player
     showTargetReveal();
+}
+
+// Show the target cell to the first player
+function showTargetReveal() {
+    // Update the target reveal screen
+    const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
+    targetCoordsDisplay.textContent = cellCoords;
+    
+    // Set the target cell color
+    const cellColor = getColorForCell(targetCell.row, targetCell.col);
+    targetCellDisplay.style.backgroundColor = cellColor;
+    
+    // Hide setup screen, show target reveal
+    gameSetupSection.classList.add('hidden');
+    targetRevealSection.classList.remove('hidden');
 }
 
 // Show the game play screen with full grid
@@ -284,14 +235,21 @@ function getColorForCell(row, col) {
 // Add a new player input
 function addPlayer() {
     const lang = getCurrentLanguage();
-    const translations = gameTranslations[lang] || gameTranslations['en'];
+    const t = gameTranslations[lang] || gameTranslations['en'];
     
     const playerCount = players.length + 1;
+    
+    // Create a player object
+    players.push({
+        name: `${t.player} ${playerCount}`,
+        guess: null
+    });
+    
     const playerDiv = document.createElement('div');
     playerDiv.classList.add('player-input');
     
     const playerLabel = document.createElement('label');
-    playerLabel.textContent = `${translations.player} ${playerCount}: `;
+    playerLabel.textContent = `${t.player} ${playerCount}: `;
     playerLabel.htmlFor = `player${playerCount}`;
     
     const input = document.createElement('input');
@@ -313,7 +271,7 @@ function addPlayer() {
 // Reveal the answer and show results
 function revealAnswer() {
     const lang = getCurrentLanguage();
-    const translations = gameTranslations[lang] || gameTranslations['en'];
+    const t = gameTranslations[lang] || gameTranslations['en'];
     
     generateColorGrid(resultGrid);
     
@@ -329,15 +287,15 @@ function revealAnswer() {
         const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
         
         if (!player.guess) {
-            resultItem.textContent = `${player.name}: ${translations.invalidGuess}`;
+            resultItem.textContent = `${player.name}: ${t.invalidGuess}`;
             resultItem.classList.add('invalid');
         }
         else if (player.guess === correctCoords) {
-            resultItem.textContent = `${player.name}: ${translations.correctGuess}`;
+            resultItem.textContent = `${player.name}: ${t.correctGuess}`;
             resultItem.classList.add('correct');
         }
         else {
-            resultItem.textContent = `${player.name}: ${player.guess} - ${translations.incorrectGuess} ${correctCoords}`;
+            resultItem.textContent = `${player.name}: ${player.guess} - ${t.incorrectGuess} ${correctCoords}`;
             resultItem.classList.add('incorrect');
         }
         
@@ -369,6 +327,13 @@ function resetGame() {
     gamePlaySection.classList.add('hidden');
     gameResultSection.classList.add('hidden');
 }
+
+// Event Listeners
+startGameButton.addEventListener('click', startGame);
+gotItButton.addEventListener('click', showGamePlay);
+addPlayerButton.addEventListener('click', addPlayer);
+revealAnswerButton.addEventListener('click', revealAnswer);
+playAgainButton.addEventListener('click', resetGame);
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', init); 
