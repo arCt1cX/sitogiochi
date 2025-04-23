@@ -101,6 +101,11 @@ const targetCoordsDisplay = document.getElementById('target-coords');
 const gridLabelsRows = document.querySelectorAll('.grid-labels-row');
 const gridLabelsCols = document.querySelectorAll('.grid-labels-col');
 
+// Get language from our central language utility
+function getCurrentLanguage() {
+    return getUserLanguage();
+}
+
 // Update UI with current language
 function updateUI() {
     const t = translations[currentLanguage];
@@ -124,12 +129,13 @@ function updateUI() {
 
 // Update player labels based on current language
 function updatePlayerLabels() {
-    const t = translations[currentLanguage];
+    const lang = getCurrentLanguage();
+    const translations = gameTranslations[lang] || gameTranslations['en'];
     
     // Update existing player labels
     const playerInputs = document.querySelectorAll('.player-input label');
     playerInputs.forEach((label, index) => {
-        label.textContent = `${t.player} ${index + 1}: `;
+        label.textContent = `${translations.player} ${index + 1}: `;
     });
 }
 
@@ -196,28 +202,21 @@ function updateGridLabels() {
 
 // Start the game
 function startGame() {
-    // Pick a random natural color base from our predefined list
-    const colorBases = colorTranslations[currentLanguage];
-    const randomColorIndex = Math.floor(Math.random() * colorBases.length);
-    startingHue = colorBases[randomColorIndex].hue;
+    // Use the color bases for current language
+    const lang = getCurrentLanguage();
+    const colorBases = colorTranslations[lang] || colorTranslations['en'];
     
-    // Generate and show the target cell
-    targetCell = {
-        row: Math.floor(Math.random() * GRID_SIZE),
-        col: Math.floor(Math.random() * GRID_SIZE)
-    };
+    // Pick a random natural color base
+    const randomBaseIndex = Math.floor(Math.random() * colorBases.length);
+    startingHue = colorBases[randomBaseIndex].hue;
     
-    // Update the target reveal screen
-    const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-    targetCoordsDisplay.textContent = cellCoords;
+    // Generate target cell (random row and column)
+    const row = Math.floor(Math.random() * GRID_SIZE);
+    const col = Math.floor(Math.random() * GRID_SIZE);
+    targetCell = { row, col };
     
-    // Set the target cell color
-    const cellColor = getColorForCell(targetCell.row, targetCell.col);
-    targetCellDisplay.style.backgroundColor = cellColor;
-    
-    // Hide setup screen, show target reveal
-    gameSetupSection.classList.add('hidden');
-    targetRevealSection.classList.remove('hidden');
+    // Show target cell to first player
+    showTargetReveal();
 }
 
 // Show the game play screen with full grid
@@ -284,20 +283,16 @@ function getColorForCell(row, col) {
 
 // Add a new player input
 function addPlayer() {
-    const t = translations[currentLanguage];
-    const playerNumber = players.length + 1;
-    const playerName = `${t.player} ${playerNumber}`;
+    const lang = getCurrentLanguage();
+    const translations = gameTranslations[lang] || gameTranslations['en'];
     
-    players.push({
-        name: playerName,
-        guess: null
-    });
-    
+    const playerCount = players.length + 1;
     const playerDiv = document.createElement('div');
     playerDiv.classList.add('player-input');
     
-    const label = document.createElement('label');
-    label.textContent = `${playerName}: `;
+    const playerLabel = document.createElement('label');
+    playerLabel.textContent = `${translations.player} ${playerCount}: `;
+    playerLabel.htmlFor = `player${playerCount}`;
     
     const input = document.createElement('input');
     input.type = 'text';
@@ -310,14 +305,16 @@ function addPlayer() {
         players[playerIndex].guess = this.value.trim().toUpperCase();
     });
     
-    playerDiv.appendChild(label);
+    playerDiv.appendChild(playerLabel);
     playerDiv.appendChild(input);
     playerInputsArea.appendChild(playerDiv);
 }
 
 // Reveal the answer and show results
 function revealAnswer() {
-    const t = translations[currentLanguage];
+    const lang = getCurrentLanguage();
+    const translations = gameTranslations[lang] || gameTranslations['en'];
+    
     generateColorGrid(resultGrid);
     
     // Clear previous results
@@ -332,15 +329,15 @@ function revealAnswer() {
         const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
         
         if (!player.guess) {
-            resultItem.textContent = `${player.name}: ${t.invalidGuess}`;
+            resultItem.textContent = `${player.name}: ${translations.invalidGuess}`;
             resultItem.classList.add('invalid');
         }
         else if (player.guess === correctCoords) {
-            resultItem.textContent = `${player.name}: ${t.correctGuess}`;
+            resultItem.textContent = `${player.name}: ${translations.correctGuess}`;
             resultItem.classList.add('correct');
         }
         else {
-            resultItem.textContent = `${player.name}: ${player.guess} - ${t.incorrectGuess} ${correctCoords}`;
+            resultItem.textContent = `${player.name}: ${player.guess} - ${translations.incorrectGuess} ${correctCoords}`;
             resultItem.classList.add('incorrect');
         }
         
