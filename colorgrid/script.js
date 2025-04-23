@@ -1,3 +1,77 @@
+// Get language preference
+function getLanguage() {
+    return localStorage.getItem('language') || 'it';
+}
+
+// Translations for UI elements and game text
+const translations = {
+    en: {
+        gameTitle: "Color Grid Game",
+        gameDescription: "A game for 3+ players. One player will see a secret cell, then the others must guess it!",
+        newGame: "New Game",
+        rememberTitle: "Remember this cell!",
+        gotIt: "Got it!",
+        addPlayer: "Add Player",
+        revealAnswer: "Reveal Answer",
+        resultsTitle: "Results",
+        playAgain: "Play Again",
+        player: "Player",
+        correctGuess: "Correct guess!",
+        incorrectGuess: "Incorrect. The correct answer was:",
+        invalidGuess: "Invalid guess"
+    },
+    it: {
+        gameTitle: "Gioco dei Colori",
+        gameDescription: "Un gioco per 3+ giocatori. Un giocatore vedrà una cella segreta, poi gli altri dovranno indovinarla!",
+        newGame: "Nuova Partita",
+        rememberTitle: "Ricorda questa cella!",
+        gotIt: "Ho Capito!",
+        addPlayer: "Aggiungi Giocatore",
+        revealAnswer: "Rivela Risposta",
+        resultsTitle: "Risultati",
+        playAgain: "Gioca Ancora",
+        player: "Giocatore",
+        correctGuess: "Risposta corretta!",
+        incorrectGuess: "Sbagliato. La risposta corretta era:",
+        invalidGuess: "Risposta non valida"
+    }
+};
+
+// Color translations
+const colorTranslations = {
+    en: [
+        { hue: 0, name: "Red" },
+        { hue: 30, name: "Orange" },
+        { hue: 50, name: "Yellow" },
+        { hue: 80, name: "Lime" },
+        { hue: 120, name: "Green" },
+        { hue: 160, name: "Teal" },
+        { hue: 200, name: "Sky Blue" },
+        { hue: 220, name: "Blue" },
+        { hue: 260, name: "Purple" },
+        { hue: 280, name: "Magenta" },
+        { hue: 320, name: "Pink" },
+        { hue: 350, name: "Rose" }
+    ],
+    it: [
+        { hue: 0, name: "Rosso" },
+        { hue: 30, name: "Arancione" },
+        { hue: 50, name: "Giallo" },
+        { hue: 80, name: "Lime" },
+        { hue: 120, name: "Verde" },
+        { hue: 160, name: "Turchese" },
+        { hue: 200, name: "Azzurro" },
+        { hue: 220, name: "Blu" },
+        { hue: 260, name: "Viola" },
+        { hue: 280, name: "Magenta" },
+        { hue: 320, name: "Rosa" },
+        { hue: 350, name: "Fucsia" }
+    ]
+};
+
+// Track current language
+let currentLanguage = getLanguage();
+
 // Game variables
 const GRID_SIZE = 5;
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -5,22 +79,6 @@ let targetCell = null;
 let players = [];
 let startingHue = 0; // Randomized for each game
 const HUE_RANGE = 120; // Further increased range for more distinct colors
-
-// Italian translations for color names
-const NATURAL_COLOR_BASES = [
-    { hue: 0, name: "Rosso" },         // Red (apples, strawberries)
-    { hue: 30, name: "Arancione" },    // Orange (oranges, pumpkins)
-    { hue: 50, name: "Giallo" },       // Yellow (bananas, lemons)
-    { hue: 80, name: "Lime" },         // Lime/Yellow-Green (limes, leaves)
-    { hue: 120, name: "Verde" },       // Green (grass, leaves)
-    { hue: 160, name: "Turchese" },    // Teal (turquoise, some ocean water)
-    { hue: 200, name: "Azzurro" },     // Sky Blue (clear sky)
-    { hue: 220, name: "Blu" },         // Blue (blueberries, jeans)
-    { hue: 260, name: "Viola" },       // Purple (grapes, lavender)
-    { hue: 280, name: "Magenta" },     // Magenta (some flowers)
-    { hue: 320, name: "Rosa" },        // Pink (pink flowers, cotton candy)
-    { hue: 350, name: "Fucsia" }       // Rose/Dark Pink (roses)
-];
 
 // DOM Elements
 const gameSetupSection = document.getElementById('game-setup');
@@ -43,6 +101,38 @@ const targetCoordsDisplay = document.getElementById('target-coords');
 const gridLabelsRows = document.querySelectorAll('.grid-labels-row');
 const gridLabelsCols = document.querySelectorAll('.grid-labels-col');
 
+// Update UI with current language
+function updateUI() {
+    const t = translations[currentLanguage];
+    
+    // Update game title and description
+    document.getElementById('game-title').textContent = t.gameTitle;
+    document.getElementById('game-description').textContent = t.gameDescription;
+    
+    // Update buttons
+    document.getElementById('start-game').textContent = t.newGame;
+    document.getElementById('remember-title').textContent = t.rememberTitle;
+    document.getElementById('got-it').textContent = t.gotIt;
+    document.getElementById('add-player').textContent = t.addPlayer;
+    document.getElementById('reveal-answer').textContent = t.revealAnswer;
+    document.getElementById('results-title').textContent = t.resultsTitle;
+    document.getElementById('play-again').textContent = t.playAgain;
+    
+    // Update player inputs if they exist
+    updatePlayerLabels();
+}
+
+// Update player labels based on current language
+function updatePlayerLabels() {
+    const t = translations[currentLanguage];
+    
+    // Update existing player labels
+    const playerInputs = document.querySelectorAll('.player-input label');
+    playerInputs.forEach((label, index) => {
+        label.textContent = `${t.player} ${index + 1}: `;
+    });
+}
+
 // Event Listeners
 startGameButton.addEventListener('click', startGame);
 gotItButton.addEventListener('click', showGamePlay);
@@ -56,6 +146,18 @@ function init() {
     
     // Update grid labels based on GRID_SIZE
     updateGridLabels();
+    
+    // Check for language changes
+    setInterval(() => {
+        const newLanguage = getLanguage();
+        if (newLanguage !== currentLanguage) {
+            currentLanguage = newLanguage;
+            updateUI();
+        }
+    }, 1000);
+    
+    // Initialize with correct language
+    updateUI();
     
     resetGame();
 }
@@ -95,8 +197,9 @@ function updateGridLabels() {
 // Start the game
 function startGame() {
     // Pick a random natural color base from our predefined list
-    const randomColorIndex = Math.floor(Math.random() * NATURAL_COLOR_BASES.length);
-    startingHue = NATURAL_COLOR_BASES[randomColorIndex].hue;
+    const colorBases = colorTranslations[currentLanguage];
+    const randomColorIndex = Math.floor(Math.random() * colorBases.length);
+    startingHue = colorBases[randomColorIndex].hue;
     
     // Generate and show the target cell
     targetCell = {
@@ -181,8 +284,9 @@ function getColorForCell(row, col) {
 
 // Add a new player input
 function addPlayer() {
+    const t = translations[currentLanguage];
     const playerNumber = players.length + 1;
-    const playerName = `Giocatore ${playerNumber}`;
+    const playerName = `${t.player} ${playerNumber}`;
     
     players.push({
         name: playerName,
@@ -198,11 +302,12 @@ function addPlayer() {
     const input = document.createElement('input');
     input.type = 'text';
     input.placeholder = 'B3';
-    input.setAttribute('data-player', playerNumber - 1);
-    input.maxLength = 2;
+    input.classList.add('coord-input');
+    input.dataset.playerIndex = players.length - 1;
+    
     input.addEventListener('change', function() {
-        const playerIndex = parseInt(this.getAttribute('data-player'));
-        players[playerIndex].guess = this.value.toUpperCase();
+        const playerIndex = parseInt(this.dataset.playerIndex);
+        players[playerIndex].guess = this.value.trim().toUpperCase();
     });
     
     playerDiv.appendChild(label);
@@ -212,38 +317,61 @@ function addPlayer() {
 
 // Reveal the answer and show results
 function revealAnswer() {
-    // Generate result grid with coordinates
+    const t = translations[currentLanguage];
     generateColorGrid(resultGrid);
     
-    // Show results for each player
+    // Clear previous results
     resultsList.innerHTML = '';
-    const targetCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
     
+    // Parse all guesses
     players.forEach(player => {
         const resultItem = document.createElement('div');
-        resultItem.classList.add('results-item');
+        resultItem.classList.add('result-item');
         
-        if (player.guess === targetCoords) {
+        // Get the correct cell coordinates
+        const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
+        
+        if (!player.guess) {
+            resultItem.textContent = `${player.name}: ${t.invalidGuess}`;
+            resultItem.classList.add('invalid');
+        }
+        else if (player.guess === correctCoords) {
+            resultItem.textContent = `${player.name}: ${t.correctGuess}`;
             resultItem.classList.add('correct');
-            resultItem.textContent = `${player.name}: Corretto! (${player.guess})`;
-        } else {
+        }
+        else {
+            resultItem.textContent = `${player.name}: ${player.guess} - ${t.incorrectGuess} ${correctCoords}`;
             resultItem.classList.add('incorrect');
-            resultItem.textContent = `${player.name}: Sbagliato! `;
         }
         
         resultsList.appendChild(resultItem);
     });
     
-    // Hide game play, show results
+    // Show result screen
     gamePlaySection.classList.add('hidden');
     gameResultSection.classList.remove('hidden');
 }
 
-// Reset the game to initial state
+// Reset game to initial state
 function resetGame() {
-    gameResultSection.classList.add('hidden');
+    // Clear all sections
+    targetCellDisplay.style.backgroundColor = '';
+    targetCoordsDisplay.textContent = '';
+    colorGrid.innerHTML = '';
+    resultGrid.innerHTML = '';
+    playerInputsArea.innerHTML = '';
+    resultsList.innerHTML = '';
+    
+    // Reset variables
+    targetCell = null;
+    players = [];
+    
+    // Show setup screen
     gameSetupSection.classList.remove('hidden');
+    targetRevealSection.classList.add('hidden');
+    gamePlaySection.classList.add('hidden');
+    gameResultSection.classList.add('hidden');
 }
 
-// Initialize the game on load
-window.addEventListener('DOMContentLoaded', init); 
+// Initialize on load
+document.addEventListener('DOMContentLoaded', init); 

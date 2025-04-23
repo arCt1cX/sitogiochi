@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,40 +44,60 @@
             margin-right: 5px;
             font-size: 16px;
         }
+        
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body>
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
     
     <div class="container">
         <div id="game-title">
-            <h1>Gioco dell'Impostore</h1>
+            <h1 id="gameTitle">Gioco dell'Impostore</h1>
         </div>
 
         <!-- Setup Screen -->
         <div id="setup-screen" class="game-screen active">
-            <h2>Impostazioni del Gioco</h2>
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
             <div class="form-group">
-                <label for="player-count">Numero di Giocatori:</label>
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
                 <select id="player-count">
-                    <option value="3">3 Giocatori</option>
-                    <option value="4" selected>4 Giocatori</option>
-                    <option value="5">5 Giocatori</option>
-                    <option value="6">6 Giocatori</option>
-                    <option value="7">7 Giocatori</option>
-                    <option value="8">8 Giocatori</option>
-                    <option value="9">9 Giocatori</option>
-                    <option value="10">10 Giocatori</option>
+                    <option value="3">3 <span class="players-text">Giocatori</span></option>
+                    <option value="4" selected>4 <span class="players-text">Giocatori</span></option>
+                    <option value="5">5 <span class="players-text">Giocatori</span></option>
+                    <option value="6">6 <span class="players-text">Giocatori</span></option>
+                    <option value="7">7 <span class="players-text">Giocatori</span></option>
+                    <option value="8">8 <span class="players-text">Giocatori</span></option>
+                    <option value="9">9 <span class="players-text">Giocatori</span></option>
+                    <option value="10">10 <span class="players-text">Giocatori</span></option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="impostor-count">Numero di Impostori:</label>
+                <label for="impostor-count" id="impostorCountLabel">Numero di Impostori:</label>
                 <select id="impostor-count">
-                    <option value="1" selected>1 Impostore</option>
-                    <option value="2">2 Impostori</option>
-                    <option value="3">3 Impostori</option>
-                    <option value="4">4 Impostori</option>
-                    <option value="5">5 Impostori</option>
+                    <option value="1" selected>1 <span class="impostor-text">Impostore</span></option>
+                    <option value="2">2 <span class="impostor-text">Impostori</span></option>
+                    <option value="3">3 <span class="impostor-text">Impostori</span></option>
+                    <option value="4">4 <span class="impostor-text">Impostori</span></option>
+                    <option value="5">5 <span class="impostor-text">Impostori</span></option>
                 </select>
             </div>
             <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
@@ -85,52 +105,54 @@
 
         <!-- Player Turn Screen -->
         <div id="player-turn-screen" class="game-screen">
-            <h2>Turno del Giocatore <span id="current-player-num">1</span></h2>
-            <p>Passa il telefono al giocatore <span id="current-player-num-text">1</span></p>
-            <button id="show-prompt" class="btn primary-btn pulse-btn">Mostra il mio Prompt</button>
+            <h2><span id="playerTurnText">Turno del Giocatore</span> <span id="current-player-num">1</span></h2>
+            <p><span id="passPhoneText">Passa il telefono al giocatore</span> <span id="current-player-num-text">1</span></p>
+            <button id="show-prompt" class="btn primary-btn pulse-btn"><span id="showPromptText">Mostra il mio Prompt</span></button>
             
             <div id="prompt-container" class="hidden">
                 <p class="prompt-text" id="player-prompt"></p>
-                <button id="hide-prompt" class="btn secondary-btn">Ho Visto</button>
+                <button id="hide-prompt" class="btn secondary-btn"><span id="seenItText">Ho Visto</span></button>
             </div>
         </div>
 
         <!-- Writing Answers Screen -->
         <div id="writing-screen" class="game-screen">
-            <h2>Scrivete le Vostre Risposte</h2>
+            <h2 id="writeAnswersTitle">Scrivete le Vostre Risposte</h2>
             <div class="info-card">
-                <p>Tutti i giocatori hanno visto il loro prompt.</p>
-                <p>Ora scrivete le vostre risposte su carta.</p>
-                <p>Quando tutti hanno finito, cliccate sul pulsante per rivelare il prompt del gruppo.</p>
+                <p id="allPlayersSeenText">Tutti i giocatori hanno visto il loro prompt.</p>
+                <p id="writeAnswersText">Ora scrivete le vostre risposte su carta.</p>
+                <p id="clickButtonText">Quando tutti hanno finito, cliccate sul pulsante per rivelare il prompt del gruppo.</p>
             </div>
-            <button id="show-group-prompt" class="btn primary-btn glow-btn">Rivela il Prompt del Gruppo</button>
+            <button id="show-group-prompt" class="btn primary-btn glow-btn"><span id="revealGroupPromptText">Rivela il Prompt del Gruppo</span></button>
         </div>
 
         <!-- Group Discussion Screen -->
         <div id="discussion-screen" class="game-screen">
-            <h2>Discussione di Gruppo</h2>
+            <h2 id="discussionTitle">Discussione di Gruppo</h2>
             <div class="shared-prompt-container">
-                <p>Il prompt del gruppo è:</p>
+                <p id="groupPromptIsText">Il prompt del gruppo è:</p>
                 <p id="shared-prompt" class="prompt-text"></p>
             </div>
-            <p class="instructions">Discutete tra di voi e cercate di scoprire chi è l'impostore!</p>
-            <button id="reveal-impostor" class="btn primary-btn glow-btn">Rivela l'Impostore</button>
+            <p class="instructions" id="discussInstructionsText">Discutete tra di voi e cercate di scoprire chi è l'impostore!</p>
+            <button id="reveal-impostor" class="btn primary-btn glow-btn"><span id="revealImpostorText">Rivela l'Impostore</span></button>
         </div>
 
         <!-- Reveal Screen -->
         <div id="reveal-screen" class="game-screen">
             <div class="reveal-header">
-                <h2>L'Impostore è...</h2>
-                <p class="impostor-reveal">Il giocatore <span id="impostor-num">X</span>!</p>
+                <h2 id="impostorIsText">L'Impostore è...</h2>
+                <p class="impostor-reveal"><span id="playerText">Il giocatore</span> <span id="impostor-num">X</span>!</p>
             </div>
             <div class="impostor-prompt-container">
-                <p>Il suo prompt era:</p>
+                <p id="theirPromptWasText">Il suo prompt era:</p>
                 <p id="impostor-prompt" class="prompt-text impostor-text"></p>
             </div>
-            <button id="play-again" class="btn primary-btn">Gioca di Nuovo</button>
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
         </div>
     </div>
 
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html> 

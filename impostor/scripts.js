@@ -1,3 +1,11 @@
+let phrases = [];
+let players = [];
+let impostors = [];
+let normalPlayers = [];
+let currentPlayerIndex = 0;
+let sharedPrompt = '';
+let impostorPrompt = '';
+
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const setupScreen = document.getElementById('setup-screen');
@@ -18,12 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const hidePromptBtn = document.getElementById('hide-prompt');
     
     const showGroupPromptBtn = document.getElementById('show-group-prompt');
-    const sharedPrompt = document.getElementById('shared-prompt');
+    const sharedPromptElement = document.getElementById('shared-prompt');
     const revealImpostorBtn = document.getElementById('reveal-impostor');
     
     const impostorNum = document.getElementById('impostor-num');
-    const impostorPrompt = document.getElementById('impostor-prompt');
+    const impostorPromptElement = document.getElementById('impostor-prompt');
     const playAgainBtn = document.getElementById('play-again');
+    
+    // Apply game translations
+    if (typeof applyGameTranslations === 'function') {
+        applyGameTranslations();
+    }
     
     // Game State
     let gameState = {
@@ -41,7 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load prompts from the text file
     async function loadPrompts() {
         try {
-            const response = await fetch('frasi_gioco_impostore.txt');
+            // Get correct language file based on user preference
+            const lang = getUserLanguage();
+            const translations = gameTranslations[lang] || gameTranslations['en'];
+            const phrasesFile = translations.phrasesFile;
+            
+            const response = await fetch(phrasesFile);
             const text = await response.text();
             
             // Split by new line and filter out empty lines
@@ -56,7 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Loaded ${gameState.allPhrasePairs.length} phrase pairs`);
         } catch (error) {
             console.error('Error loading prompts:', error);
-            alert('Errore nel caricamento dei prompt. Ricarica la pagina per riprovare.');
+            const lang = getUserLanguage();
+            const errorMsg = lang === 'it' 
+                ? 'Errore nel caricamento dei prompt. Ricarica la pagina per riprovare.'
+                : 'Error loading prompts. Reload the page to try again.';
+            alert(errorMsg);
         }
     }
     
@@ -176,13 +198,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show the group prompt and move to discussion
     function showGroupPrompt() {
-        sharedPrompt.textContent = gameState.groupPrompt;
+        sharedPromptElement.textContent = gameState.groupPrompt;
         showScreen(discussionScreen);
     }
     
     // Reveal the impostor
     function revealImpostor() {
         const impostorRevealElement = document.querySelector('.impostor-reveal');
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
         
         // Remove any previous classes that might be applied
         impostorRevealElement.classList.remove('no-impostor-surprise');
@@ -192,25 +216,34 @@ document.addEventListener('DOMContentLoaded', () => {
             // Normal game with impostors
             if (gameState.impostorIndices.length === 1) {
                 // Single impostor
-                document.querySelector('.reveal-header h2').textContent = "L'Impostore è...";
-                impostorRevealElement.innerHTML = `Il giocatore <span id="impostor-num">${gameState.impostorIndices[0] + 1}</span>!`;
+                document.getElementById('impostorIsText').textContent = translations.impostorIsText;
+                impostorRevealElement.innerHTML = `${translations.playerText} <span id="impostor-num">${gameState.impostorIndices[0] + 1}</span>!`;
             } else {
                 // Multiple impostors
-                document.querySelector('.reveal-header h2').textContent = "Gli Impostori sono...";
+                document.getElementById('impostorIsText').textContent = 
+                    lang === 'it' ? "Gli Impostori sono..." : "The Impostors are...";
                 const impostorNumbers = gameState.impostorIndices.map(idx => `<span class="impostor-num">${idx + 1}</span>`).join(', ');
-                impostorRevealElement.innerHTML = `I giocatori ${impostorNumbers}!`;
+                impostorRevealElement.innerHTML = 
+                    lang === 'it' ? `I giocatori ${impostorNumbers}!` : `Players ${impostorNumbers}!`;
             }
             
-            document.querySelector('.impostor-prompt-container p:first-child').textContent = 
-                gameState.impostorIndices.length > 1 ? "Il loro prompt era:" : "Il suo prompt era:";
-            impostorPrompt.textContent = gameState.impostorPrompt;
+            document.getElementById('theirPromptWasText').textContent = 
+                gameState.impostorIndices.length > 1 
+                    ? (lang === 'it' ? "Il loro prompt era:" : "Their prompt was:")
+                    : translations.theirPromptWasText;
+            impostorPromptElement.textContent = gameState.impostorPrompt;
         } else {
             // Special game with no impostor!
-            document.querySelector('.reveal-header h2').textContent = "Sorpresa!";
-            impostorRevealElement.innerHTML = "Ahah! Nessuno era l'impostore! <span class='emoji-surprise'>😜</span>";
+            document.getElementById('impostorIsText').textContent = 
+                lang === 'it' ? "Sorpresa!" : "Surprise!";
+            impostorRevealElement.innerHTML = 
+                lang === 'it' 
+                    ? "Ahah! Nessuno era l'impostore! <span class='emoji-surprise'>😜</span>"
+                    : "Haha! No one was the impostor! <span class='emoji-surprise'>😜</span>";
             impostorRevealElement.classList.add('no-impostor-surprise');
-            document.querySelector('.impostor-prompt-container p:first-child').textContent = "Eravate tutti dalla stessa parte:";
-            impostorPrompt.textContent = gameState.groupPrompt;
+            document.getElementById('theirPromptWasText').textContent = 
+                lang === 'it' ? "Eravate tutti dalla stessa parte:" : "You were all on the same side:";
+            impostorPromptElement.textContent = gameState.groupPrompt;
         }
         
         showScreen(revealScreen);
@@ -252,6 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Save the current selection if possible
         const currentImpostorCount = parseInt(impostorCountInput.value);
         
+        // Get translations for the current language
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+        
         // Clear current options
         impostorCountInput.innerHTML = '';
         
@@ -259,7 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= maxImpostors; i++) {
             const option = document.createElement('option');
             option.value = i;
-            option.textContent = `${i} ${i === 1 ? 'Impostore' : 'Impostori'}`;
+            const text = i === 1 ? translations.impostor : translations.impostors;
+            option.textContent = `${i} ${text}`;
             
             // Set as selected if it matches the previous selection
             if (i === currentImpostorCount && currentImpostorCount <= maxImpostors) {
@@ -282,6 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerCount = parseInt(playerCountInput.value);
     const maxImpostors = Math.floor(playerCount / 2);
     
+    // Get translations for the current language
+    const lang = getUserLanguage();
+    const translations = gameTranslations[lang] || gameTranslations['en'];
+    
     // Clear current options
     impostorCountInput.innerHTML = '';
     
@@ -289,7 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 1; i <= maxImpostors; i++) {
         const option = document.createElement('option');
         option.value = i;
-        option.textContent = `${i} ${i === 1 ? 'Impostore' : 'Impostori'}`;
+        const text = i === 1 ? translations.impostor : translations.impostors;
+        option.textContent = `${i} ${text}`;
         
         // Set first option as selected
         if (i === 1) {

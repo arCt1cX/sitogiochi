@@ -1,10 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Apply initial language based on user preference
+    applyTranslations();
+    
+    // Language toggle is now handled in applyTranslations() function in lang.js
+    
+    // Update page content with current language
+    document.getElementById('tagline').textContent = getTranslation('tagline');
+    document.getElementById('subtitle').textContent = getTranslation('subtitle');
+    document.getElementById('copyright').textContent = getTranslation('copyright');
+    
+    // Update page title and description
+    document.title = getTranslation('pageTitle');
+    const metaDesc = document.getElementById('pageDescription');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', getTranslation('pageDescription'));
+    }
+    
     // Games array with additional catchphrase information and display names
     const games = [
         {
             id: "impostor",
-            displayName: "Impostor",
-            catchphrase: "Scopri chi mente nel gruppo!",
+            displayName: getTranslation('impostor', 'title'),
+            catchphrase: getTranslation('impostor', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow element -->
                 <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
@@ -67,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: "colorgrid",
-            displayName: "Color Grid",
-            catchphrase: "Indovina la cella colorata segreta!",
+            displayName: getTranslation('colorgrid', 'title'),
+            catchphrase: getTranslation('colorgrid', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
                 <!-- Grid shadow -->
                 <rect x="17" y="17" width="50" height="50" rx="4" fill="rgba(0,0,0,0.2)" />
@@ -117,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: "guessthepic",
-            displayName: "Indovina Immagini",
-            catchphrase: "Indovina cosa mostrano le 5 immagini e accumula più punti!",
+            displayName: getTranslation('guessthepic', 'title'),
+            catchphrase: getTranslation('guessthepic', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
                 <rect x="17" y="17" width="38" height="38" rx="2" fill="rgba(0,0,0,0.2)" />
@@ -152,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: "timergame",
-            displayName: "Wordrace",
-            catchphrase: "Corri contro il tempo in questa sfida di parole!",
+            displayName: getTranslation('timergame', 'title'),
+            catchphrase: getTranslation('timergame', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
                 <ellipse cx="40" cy="45" rx="28" ry="5" fill="rgba(0,0,0,0.15)" />
@@ -198,13 +215,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <!-- Small text representing words -->
                 <path d="M14,12 L18,12 M12,14 L17,14" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
-                <path d="M64,20 L68,20 M65,22 L69,22" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
+                <path d="M64,20 L69,20 M66,23 L68,23" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
+                
+                <!-- Increment button -->
+                <circle cx="65" cy="52" r="8" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="1.2" />
+                <line x1="65" y1="48" x2="65" y2="56" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="61" y1="52" x2="69" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                
+                <!-- Players -->
+                <circle cx="25" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
+                <text x="25" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P1</text>
+                
+                <circle cx="15" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
+                <text x="15" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P2</text>
+                
+                <!-- Speech bubble -->
+                <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
+                <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
             </svg>`
         },
         {
-            id: "chain reaction",
-            displayName: "Chain Reaction",
-            catchphrase: "Sfida di indovinelli a squadre con un solo suggerimento alla volta!",
+            id: "chainreaction",
+            displayName: getTranslation('chainreaction', 'title'),
+            catchphrase: getTranslation('chainreaction', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
                 <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
@@ -264,8 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: "alphabetgame",
-            displayName: "Alphabet Game",
-            catchphrase: "Trova parole per ogni lettera dell'alfabeto in base alla categoria!",
+            displayName: getTranslation('alphabetgame', 'title'),
+            catchphrase: getTranslation('alphabetgame', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
                 <rect x="10" y="69" width="60" height="4" rx="2" fill="rgba(0,0,0,0.2)" />
@@ -324,9 +357,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
-            id: "BluffMe",
-            displayName: "BluffMe",
-            catchphrase: "Sfida i tuoi amici su quante risposte puoi dare in una categoria!",
+            id: "bluffme",
+            displayName: getTranslation('bluffme', 'title'),
+            catchphrase: getTranslation('bluffme', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
                 <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
@@ -503,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create play button as a button element
         const playButton = document.createElement('button');
         playButton.className = 'play-button';
-        playButton.textContent = 'Gioca';
+        playButton.textContent = getTranslation('play');
         
         // Add click event for navigation
         playButton.addEventListener('click', () => {
@@ -539,34 +572,22 @@ document.addEventListener('DOMContentLoaded', () => {
     comingSoonContentContainer.className = 'card-content';
     
     const comingSoonTitle = document.createElement('h3');
-    comingSoonTitle.textContent = 'Coming Soon';
+    comingSoonTitle.textContent = getTranslation('comingSoon');
     
     const comingSoonCatchphrase = document.createElement('p');
     comingSoonCatchphrase.className = 'game-catchphrase';
-    comingSoonCatchphrase.textContent = 'Nuovi giochi in arrivo...';
+    comingSoonCatchphrase.textContent = getTranslation('newGamesComingSoon');
     
     // Create icon for Coming Soon card
     const comingSoonIconContainer = document.createElement('div');
     comingSoonIconContainer.className = 'game-icon-container';
-    comingSoonIconContainer.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2" class="game-icon">
-            <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.1)" />
-            <rect x="30" y="30" width="20" height="20" rx="2" fill="none" stroke-dasharray="4 2" />
-            <path d="M35,65 L45,65 M40,65 L40,55" stroke-linecap="round" />
-            <path d="M35,15 L45,15 M40,15 L40,25" stroke-linecap="round" />
-            <path d="M15,35 L15,45 M15,40 L25,40" stroke-linecap="round" />
-            <path d="M65,35 L65,45 M65,40 L55,40" stroke-linecap="round" />
-            <path d="M40,40 L40,40" stroke-width="3" stroke-linecap="round">
-                <animate attributeName="d" values="M35,35 L45,45; M35,45 L45,35; M35,35 L45,45" dur="2s" repeatCount="indefinite" />
-            </path>
-        </svg>
-    `;
     
-    // Add elements to containers
+    // Append elements to containers
     comingSoonContentContainer.appendChild(comingSoonTitle);
     comingSoonContentContainer.appendChild(comingSoonCatchphrase);
-    
     comingSoonCard.appendChild(comingSoonContentContainer);
     comingSoonCard.appendChild(comingSoonIconContainer);
+    
+    // Append Coming Soon card to container
     gamesContainer.appendChild(comingSoonCard);
 }); 
