@@ -85,12 +85,6 @@ function applyGameTranslations() {
         homeText.innerHTML = `<span class="home-icon">⌂</span> ${translations.home}`;
     }
     
-    // Update the language toggle button
-    const languageToggle = document.getElementById('languageToggle');
-    if (languageToggle) {
-        languageToggle.innerHTML = lang.toUpperCase();
-    }
-    
     // Update all text elements - Start Screen
     document.querySelector('#startScreen h1').textContent = translations.gameTitle;
     document.querySelector('#startScreen h2').textContent = translations.howToPlay;

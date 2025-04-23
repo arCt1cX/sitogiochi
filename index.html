@@ -117,7 +117,7 @@
         }
         
         .language-toggle {
-            position: fixed;
+            position: absolute;
             top: 15px;
             right: 15px;
             background-color: rgba(71, 60, 139, 0.8);
@@ -132,6 +132,11 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 28px;
         }
         
         .language-toggle:hover {
@@ -139,10 +144,21 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+        
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body>
-    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+        <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+            <!-- The country flag SVG will be inserted here by JavaScript -->
+        </svg>
+    </button>
     
     <header>
         <div class="logo-container">

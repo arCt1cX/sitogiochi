@@ -69,13 +69,6 @@ function applyGameTranslations() {
     // Update HTML lang attribute
     document.documentElement.lang = lang;
     
-    // Update the language toggle button
-    const languageToggle = document.getElementById('languageToggle');
-    if (languageToggle) {
-        // Update language toggle text
-        languageToggle.innerHTML = lang.toUpperCase();
-    }
-    
     // Update home button text
     document.getElementById('homeText').textContent = translations.home;
     

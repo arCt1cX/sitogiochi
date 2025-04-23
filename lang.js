@@ -94,6 +94,26 @@ const translations = {
     }
 };
 
+// Flag SVGs for language toggle
+const flagSVGs = {
+    'it': `
+        <!-- Italian flag -->
+        <rect width="640" height="480" fill="#ffffff"/>
+        <rect width="213.3" height="480" fill="#009246"/>
+        <rect width="213.3" height="480" x="426.7" fill="#ce2b37"/>
+    `,
+    'en': `
+        <!-- UK flag (Union Jack) - Improved version -->
+        <rect width="640" height="480" fill="#012169"/>
+        <path d="M0,0 L640,480 M640,0 L0,480" stroke="#ffffff" stroke-width="96"/>
+        <path d="M0,0 L640,480 M640,0 L0,480" stroke="#c8102e" stroke-width="64"/>
+        <rect width="640" height="96" y="192" fill="#ffffff"/>
+        <rect width="96" height="480" x="272" fill="#ffffff"/>
+        <rect width="640" height="48" y="216" fill="#c8102e"/>
+        <rect width="48" height="480" x="296" fill="#c8102e"/>
+    `
+};
+
 // Function to get user's language preference
 function getUserLanguage() {
     // Check if a language is stored in localStorage
@@ -160,6 +180,22 @@ function isMainPage() {
     return path === '/' || path.endsWith('/index.html') || path === '/sitogiochi/' || path.endsWith('/sitogiochi/index.html');
 }
 
+// Function to set the flag icon based on current language
+function setFlagIcon() {
+    const currentFlag = document.getElementById('currentFlag');
+    if (currentFlag) {
+        const lang = getUserLanguage();
+        currentFlag.innerHTML = flagSVGs[lang];
+        
+        // Set aria-label for accessibility
+        const languageToggle = document.getElementById('languageToggle');
+        if (languageToggle) {
+            const nextLang = lang === 'it' ? 'en' : 'it';
+            languageToggle.setAttribute('aria-label', `Switch to ${nextLang === 'en' ? 'English' : 'Italian'}`);
+        }
+    }
+}
+
 // Apply translations to the current page
 function applyTranslations() {
     const lang = getUserLanguage();
@@ -180,8 +216,8 @@ function applyTranslations() {
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
         if (isMainPage()) {
-            languageToggle.style.display = 'block';
-            languageToggle.textContent = getTranslation('toggleLanguage');
+            languageToggle.style.display = 'flex';
+            setFlagIcon();
         } else {
             languageToggle.style.display = 'none';
         }
