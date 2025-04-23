@@ -43,6 +43,33 @@
             font-size: 16px;
         }
     </style>
+    <script>
+        // Update metadata based on language
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetadata();
+            
+            // Listen for storage changes to detect language changes from other tabs
+            window.addEventListener('storage', function(e) {
+                if (e.key === 'lang') {
+                    updateMetadata();
+                }
+            });
+        });
+        
+        function updateMetadata() {
+            let currentLang = localStorage.getItem('lang') || 'it';
+            
+            if (currentLang === 'en') {
+                document.title = 'BluffMe - Category and bluff game | DrewGames';
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    'Play BluffMe: a fun category game where players bet on how many responses they can give! Perfect for evenings with friends and parties.');
+            } else {
+                document.title = 'BluffMe - Gioco di categorie e bluff | DrewGames';
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    'Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.');
+            }
+        }
+    </script>
 </head>
 <body>
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>

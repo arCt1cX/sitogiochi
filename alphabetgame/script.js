@@ -73,13 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Detect language from localStorage or URL parameter
     function detectLanguage() {
-        // Check if language is stored in localStorage (check both possible keys)
-        const storedLang = localStorage.getItem('siteLanguage') || localStorage.getItem('lang');
+        // Check if language is stored in localStorage (only check the 'lang' key)
+        const storedLang = localStorage.getItem('lang');
         if (storedLang && (storedLang === 'it' || storedLang === 'en')) {
             currentLanguage = storedLang;
-            // Keep both storage keys in sync
-            localStorage.setItem('siteLanguage', storedLang);
-            localStorage.setItem('lang', storedLang);
             return;
         }
         
@@ -88,8 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const langParam = urlParams.get('lang');
         if (langParam && (langParam === 'it' || langParam === 'en')) {
             currentLanguage = langParam;
-            // Store in both storage keys
-            localStorage.setItem('siteLanguage', langParam);
             localStorage.setItem('lang', langParam);
             return;
         }
@@ -739,7 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function watchLanguageChanges() {
         // Check for language changes every second
         setInterval(() => {
-            const storedLang = localStorage.getItem('siteLanguage') || localStorage.getItem('lang');
+            const storedLang = localStorage.getItem('lang');
             if (storedLang && storedLang !== currentLanguage && (storedLang === 'it' || storedLang === 'en')) {
                 // Language has changed
                 console.log(`Language changed from ${currentLanguage} to ${storedLang}`);

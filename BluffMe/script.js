@@ -31,6 +31,71 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval = null;
     let timeRemaining = 0;
     let isTimerRunning = false;
+    let currentLanguage = 'it'; // Default language is Italian
+    
+    // Language-specific text
+    const translations = {
+        it: {
+            categoriesFile: 'categories.txt',
+            timeUp: 'Tempo Scaduto!',
+            waitingForCategory: 'Attendi...',
+            gameTitle: 'BluffMe',
+            howToPlay: 'Come Giocare',
+            configPlayers: 'Configura Giocatori',
+            playerCount: 'Numero di Giocatori:',
+            beginGame: 'Inizia Gioco',
+            category: 'Categoria:',
+            time: 'Tempo:',
+            responses: 'Risposte:',
+            start: 'Inizia',
+            nextRound: 'Prossimo Round',
+            defaultPlayerName: 'Giocatore',
+            instructions: [
+                'Una categoria e un tempo limite verranno mostrati',
+                'I giocatori scommettono verbalmente su quanti elementi possono nominare della categoria',
+                'Quando un giocatore dice "Dubito", l\'altro preme "Inizia"',
+                'Durante il tempo, preme "+1" per ogni risposta corretta',
+                'Quando il tempo scade, il conteggio si blocca',
+                'Usate i pulsanti di punteggio per tenere traccia dei vincitori',
+                'Premere "Prossimo Round" per una nuova categoria'
+            ],
+            fallbackCategories: [
+                'Animali', 'Paesi', 'Città', 'Film', 'Cibo', 
+                'Sport', 'Celebrità', 'Musica', 'Videogiochi'
+            ],
+            errorLoading: 'Errore nel caricamento delle categorie'
+        },
+        en: {
+            categoriesFile: 'categories_en.txt',
+            timeUp: 'Time\'s Up!',
+            waitingForCategory: 'Waiting...',
+            gameTitle: 'BluffMe',
+            howToPlay: 'How to Play',
+            configPlayers: 'Configure Players',
+            playerCount: 'Number of Players:',
+            beginGame: 'Start Game',
+            category: 'Category:',
+            time: 'Time:',
+            responses: 'Responses:',
+            start: 'Start',
+            nextRound: 'Next Round',
+            defaultPlayerName: 'Player',
+            instructions: [
+                'A category and time limit will be shown',
+                'Players verbally bet on how many items they can name from the category',
+                'When a player says "I doubt it", the other one presses "Start"',
+                'During the time, press "+1" for each correct answer',
+                'When time runs out, the count is locked',
+                'Use the score buttons to keep track of winners',
+                'Press "Next Round" for a new category'
+            ],
+            fallbackCategories: [
+                'Animals', 'Countries', 'Cities', 'Movies', 'Food', 
+                'Sports', 'Celebrities', 'Music', 'Video games'
+            ],
+            errorLoading: 'Error loading categories'
+        }
+    };
     
     // Possible time limits in seconds
     const timeLimits = [15, 30, 60];
@@ -38,6 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the game
     async function initGame() {
         try {
+            // Detect language first
+            detectLanguage();
+            
+            // Update UI with detected language
+            updateUILanguage();
+            
+            // Load categories
             categories = await fetchCategories();
             console.log("Loaded categories:", categories.length);
             
@@ -59,9 +131,161 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fetch existing player elements
             initializePlayerElements();
             
+            // Watch for language changes
+            watchLanguageChanges();
+            
         } catch (error) {
             console.error("Failed to initialize game:", error);
-            categoryDisplay.textContent = "Errore nel caricamento delle categorie";
+            categoryDisplay.textContent = getText('errorLoading');
+        }
+    }
+    
+    // Detect language from localStorage or URL parameter
+    function detectLanguage() {
+        // Check if language is stored in localStorage (only check the 'lang' key)
+        const storedLang = localStorage.getItem('lang');
+        if (storedLang && (storedLang === 'it' || storedLang === 'en')) {
+            currentLanguage = storedLang;
+            return;
+        }
+        
+        // Check URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam && (langParam === 'it' || langParam === 'en')) {
+            currentLanguage = langParam;
+            localStorage.setItem('lang', langParam);
+            return;
+        }
+        
+        // Default to Italian
+        currentLanguage = 'it';
+    }
+    
+    // Watch for language changes from localStorage
+    function watchLanguageChanges() {
+        // Check for language changes every second
+        setInterval(() => {
+            const storedLang = localStorage.getItem('lang');
+            if (storedLang && storedLang !== currentLanguage && (storedLang === 'it' || storedLang === 'en')) {
+                // Language has changed
+                console.log(`Language changed from ${currentLanguage} to ${storedLang}`);
+                currentLanguage = storedLang;
+                
+                // Update UI text
+                updateUILanguage();
+                
+                // Reload categories and update the display
+                fetchCategories().then(newCategories => {
+                    categories = newCategories;
+                    if (gameScreen.classList.contains('active')) {
+                        // If we're in the game screen, update the category
+                        const randomIndex = Math.floor(Math.random() * categories.length);
+                        currentCategory = categories[randomIndex];
+                        categoryDisplay.textContent = currentCategory;
+                    }
+                });
+            }
+        }, 1000);
+    }
+    
+    // Get translation based on current language
+    function getText(key, ...args) {
+        let text = translations[currentLanguage][key] || translations['it'][key];
+        
+        // Replace placeholders with args
+        if (args.length > 0) {
+            args.forEach((arg, index) => {
+                text = text.replace('%s', arg);
+            });
+        }
+        
+        return text;
+    }
+    
+    // Update UI language
+    function updateUILanguage() {
+        // Update page title and language attribute
+        document.documentElement.lang = currentLanguage;
+        
+        // Update game title
+        document.querySelector('h1').textContent = getText('gameTitle');
+        
+        // Update how to play section
+        const howToPlayHeading = document.querySelector('.game-instructions h2');
+        if (howToPlayHeading) {
+            howToPlayHeading.textContent = getText('howToPlay');
+        }
+        
+        // Update instructions
+        const instructionItems = document.querySelectorAll('.game-instructions ul li');
+        const instructions = getText('instructions');
+        instructionItems.forEach((item, index) => {
+            if (index < instructions.length) {
+                item.textContent = instructions[index];
+            }
+        });
+        
+        // Update player config section
+        const configHeading = document.querySelector('.players-config h2');
+        if (configHeading) {
+            configHeading.textContent = getText('configPlayers');
+        }
+        
+        // Update player count label
+        const playerCountLabel = document.querySelector('label[for="playerCount"]');
+        if (playerCountLabel) {
+            playerCountLabel.textContent = getText('playerCount');
+        }
+        
+        // Update player name labels
+        const playerNameLabels = document.querySelectorAll('.player-name-input label');
+        playerNameLabels.forEach((label, index) => {
+            const playerNum = index + 1;
+            label.textContent = `${getText('defaultPlayerName')} ${playerNum}:`;
+        });
+        
+        // Update begin button
+        beginButton.querySelector('span') ? 
+            beginButton.querySelector('span').textContent = getText('beginGame') :
+            beginButton.textContent = getText('beginGame');
+        
+        // Update game screen elements if visible
+        if (gameScreen.classList.contains('active')) {
+            // Update category label
+            const categoryLabel = document.querySelector('.category-label');
+            if (categoryLabel) {
+                categoryLabel.textContent = getText('category');
+            }
+            
+            // Update time label
+            const timeLabel = document.querySelector('.time-label');
+            if (timeLabel) {
+                timeLabel.textContent = getText('time');
+            }
+            
+            // Update responses label
+            const responsesLabel = document.querySelector('.count-label');
+            if (responsesLabel) {
+                responsesLabel.textContent = getText('responses');
+            }
+            
+            // Update button labels
+            const startButtonText = startButton.querySelector('span');
+            if (startButtonText) {
+                startButtonText.textContent = getText('start');
+            }
+            
+            const nextRoundButtonText = nextRoundButton.querySelector('span');
+            if (nextRoundButtonText) {
+                nextRoundButtonText.textContent = getText('nextRound');
+            }
+            
+            // Update time up message
+            const timeUpMessage = document.querySelector('.time-up-message');
+            if (timeUpMessage) {
+                timeUpMessage.textContent = getText('timeUp');
+            }
         }
     }
     
@@ -75,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Initialize with default names
                 players = [];
                 for (let i = 1; i <= 6; i++) {
-                    players.push(`Giocatore ${i}`);
+                    players.push(`${getText('defaultPlayerName')} ${i}`);
                 }
             }
         } catch (error) {
@@ -83,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Initialize with default names on error
             players = [];
             for (let i = 1; i <= 6; i++) {
-                players.push(`Giocatore ${i}`);
+                players.push(`${getText('defaultPlayerName')} ${i}`);
             }
         }
     }
@@ -139,15 +363,15 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const label = document.createElement('label');
             label.setAttribute('for', `player${i}Name`);
-            label.textContent = `Giocatore ${i}:`;
+            label.textContent = `${getText('defaultPlayerName')} ${i}:`;
             
             const input = document.createElement('input');
             input.type = 'text';
             input.id = `player${i}Name`;
-            input.placeholder = `Giocatore ${i}`;
+            input.placeholder = `${getText('defaultPlayerName')} ${i}`;
             
             // Use saved name or leave empty
-            if (players[i-1] && players[i-1] !== `Giocatore ${i}`) {
+            if (players[i-1] && players[i-1] !== `${getText('defaultPlayerName')} ${i}`) {
                 input.value = players[i-1];
             }
             
@@ -163,9 +387,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.value.trim() !== '') {
                     players[i-1] = this.value.trim();
                     savePlayerNames();
-                } else if (players[i-1] !== `Giocatore ${i}`) {
+                } else if (players[i-1] !== `${getText('defaultPlayerName')} ${i}`) {
                     // If field is left empty, revert to default name in players array
-                    players[i-1] = `Giocatore ${i}`;
+                    players[i-1] = `${getText('defaultPlayerName')} ${i}`;
                     savePlayerNames();
                 }
             });
@@ -196,17 +420,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 playerName = nameInput.value.trim();
                 players[i-1] = playerName; // Update the players array
             } else {
-                // Use the stored player name or default to "Giocatore X"
-                playerName = players[i-1] || `Giocatore ${i}`;
+                // Use the stored player name or default to "Player X"
+                playerName = players[i-1] || `${getText('defaultPlayerName')} ${i}`;
             }
             
-            // Create player score element
+            // Create the player score container
             const scoreDiv = document.createElement('div');
             scoreDiv.className = 'player-score';
             
             // Create player label
             const labelDiv = document.createElement('div');
-            labelDiv.id = `player${i}Label`;
             labelDiv.className = 'player-label';
             labelDiv.textContent = playerName;
             
@@ -216,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Create minus button
             const minusBtn = document.createElement('button');
-            minusBtn.id = `player${i}Minus`;
             minusBtn.className = 'score-button';
             minusBtn.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,15 +446,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </svg>
             `;
             
-            // Create score display
+            // Create score value
             const scoreValueDiv = document.createElement('div');
-            scoreValueDiv.id = `player${i}Score`;
             scoreValueDiv.className = 'player-score-value';
             scoreValueDiv.textContent = '0';
             
             // Create plus button
             const plusBtn = document.createElement('button');
-            plusBtn.id = `player${i}Plus`;
             plusBtn.className = 'score-button';
             plusBtn.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch categories from the categories.txt file
     async function fetchCategories() {
         try {
-            const response = await fetch('categories.txt');
+            const response = await fetch(getText('categoriesFile'));
             if (!response.ok) {
                 throw new Error('Failed to load categories file');
             }
@@ -281,10 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error loading categories:', error);
             // Fallback list of categories in case of error
-            return [
-                'Animali', 'Paesi', 'Città', 'Film', 'Cibo', 
-                'Sport', 'Celebrità', 'Musica', 'Videogiochi'
-            ];
+            return getText('fallbackCategories');
         }
     }
     
@@ -292,6 +509,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         hideAllScreens();
         gameScreen.classList.add('active');
+        
+        // Update UI with current language
+        updateUILanguage();
         
         // Create player score elements based on configuration
         createPlayerScoreElements();
@@ -386,6 +606,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show the time's up overlay with animation
     function showTimeUpOverlay() {
+        // Update time's up message with current language
+        const timeUpMessage = document.querySelector('.time-up-message');
+        if (timeUpMessage) {
+            timeUpMessage.textContent = getText('timeUp');
+        }
+        
         // Add active class to show the overlay
         timeUpOverlay.classList.add('active');
         
