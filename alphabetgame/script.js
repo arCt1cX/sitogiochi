@@ -19,6 +19,33 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerRunning = false;
     let baseTimerValue = 10; // Starting timer value
     let gameOver = false;
+    let currentLanguage = 'it'; // Default language is Italian
+    
+    // Language-specific text
+    const translations = {
+        it: {
+            categoriesFile: 'categories.txt',
+            timeUp: 'Tempo Scaduto!',
+            timerIncreased: 'Tempo Aumentato: %s!',
+            gameOverMessage: 'Hai Usato Tutte Le Lettere!',
+            restartButton: 'Rigioca',
+            undoLastLetter: 'Annulla ultima lettera',
+            errorLoadingCategories: 'Errore nel caricamento delle categorie',
+            loading: 'Caricamento...',
+            fallbackCategories: ['Animali', 'Città', 'Sport', 'Film', 'Cibo', 'Paesi', 'Professioni']
+        },
+        en: {
+            categoriesFile: 'categories_en.txt',
+            timeUp: 'Time\'s Up!',
+            timerIncreased: 'Time Increased: %s!',
+            gameOverMessage: 'You Used All Letters!',
+            restartButton: 'Play Again',
+            undoLastLetter: 'Undo last letter',
+            errorLoadingCategories: 'Error loading categories',
+            loading: 'Loading...',
+            fallbackCategories: ['Animals', 'Cities', 'Sports', 'Movies', 'Food', 'Countries', 'Jobs']
+        }
+    };
     
     // Initialize the game
     init();
@@ -29,15 +56,65 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Functions
     async function init() {
+        // Detect the language from localStorage or URL parameter
+        detectLanguage();
+        
+        // Update the loading text with the correct language
+        categoryDisplay.textContent = getText('loading');
+        
         // Load categories from the file
         await loadCategories();
+        
+        // Watch for language changes
+        watchLanguageChanges();
         
         // We'll create the alphabet buttons when the game starts, not on init
     }
     
+    // Detect language from localStorage or URL parameter
+    function detectLanguage() {
+        // Check if language is stored in localStorage (check both possible keys)
+        const storedLang = localStorage.getItem('siteLanguage') || localStorage.getItem('lang');
+        if (storedLang && (storedLang === 'it' || storedLang === 'en')) {
+            currentLanguage = storedLang;
+            // Keep both storage keys in sync
+            localStorage.setItem('siteLanguage', storedLang);
+            localStorage.setItem('lang', storedLang);
+            return;
+        }
+        
+        // Check URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam && (langParam === 'it' || langParam === 'en')) {
+            currentLanguage = langParam;
+            // Store in both storage keys
+            localStorage.setItem('siteLanguage', langParam);
+            localStorage.setItem('lang', langParam);
+            return;
+        }
+        
+        // Default to Italian
+        currentLanguage = 'it';
+    }
+    
+    // Get translation based on current language
+    function getText(key, ...args) {
+        let text = translations[currentLanguage][key] || translations['it'][key];
+        
+        // Replace placeholders with args
+        if (args.length > 0) {
+            args.forEach((arg, index) => {
+                text = text.replace('%s', arg);
+            });
+        }
+        
+        return text;
+    }
+    
     async function loadCategories() {
         try {
-            const response = await fetch('categories.txt');
+            const response = await fetch(getText('categoriesFile'));
             if (!response.ok) {
                 throw new Error('Failed to load categories');
             }
@@ -52,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (error) {
             console.error('Error loading categories:', error);
-            categoryDisplay.textContent = 'Error loading categories';
-            categories = ['Animali', 'Città', 'Sport', 'Film', 'Cibo', 'Paesi', 'Professioni'];
+            categoryDisplay.textContent = getText('errorLoadingCategories');
+            categories = getText('fallbackCategories');
         }
     }
     
@@ -140,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backButton.id = 'back-button';
             backButton.className = 'back-button disabled';
             backButton.innerHTML = '<span class="arrow-icon">&#8592;</span>';
-            backButton.title = 'Annulla ultima lettera';
+            backButton.title = getText('undoLastLetter');
             
             // Add click event
             backButton.addEventListener('click', handleBackButtonClick);
@@ -187,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display the "Timer Increased" message with animation
         const timerMessage = document.createElement('div');
         timerMessage.className = 'timer-message';
-        timerMessage.textContent = `Tempo Aumentato: ${baseTimerValue}s!`;
+        timerMessage.textContent = getText('timerIncreased', `${baseTimerValue}s`);
         timerMessage.style.position = 'fixed';
         timerMessage.style.fontSize = '2rem';
         timerMessage.style.fontWeight = 'bold';
@@ -233,12 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create game over message
         const gameOverMessage = document.createElement('div');
         gameOverMessage.className = 'game-over-message';
-        gameOverMessage.textContent = 'Hai Usato Tutte Le Lettere!';
+        gameOverMessage.textContent = getText('gameOverMessage');
         
         // Create restart button
         const restartButton = document.createElement('button');
         restartButton.className = 'primary-button restart-button';
-        restartButton.textContent = 'Rigioca';
+        restartButton.textContent = getText('restartButton');
         restartButton.addEventListener('click', () => {
             // Remove overlay
             document.body.removeChild(overlay);
@@ -260,39 +337,52 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show time's up message
     function showTimeUpMessage() {
-        // Display the "Tempo Scaduto" message with animation
+        // Only show if the game is not over
+        if (gameOver) return;
+        
+        // Create the time up message element
         const timeUpMessage = document.createElement('div');
         timeUpMessage.className = 'time-up-message';
-        timeUpMessage.textContent = 'Tempo Scaduto!';
+        timeUpMessage.textContent = getText('timeUp');
+        
+        // Style the message
         timeUpMessage.style.position = 'fixed';
-        timeUpMessage.style.fontSize = '3rem';
+        timeUpMessage.style.fontSize = '4rem';
         timeUpMessage.style.fontWeight = 'bold';
-        timeUpMessage.style.color = '#FF416C';
+        timeUpMessage.style.color = '#ff3c3c';
         timeUpMessage.style.opacity = '0';
         timeUpMessage.style.zIndex = '1000';
         timeUpMessage.style.top = '50%';
         timeUpMessage.style.left = '50%';
         timeUpMessage.style.transform = 'translate(-50%, -50%)';
         timeUpMessage.style.pointerEvents = 'none';
-        timeUpMessage.style.textShadow = '0 0 10px rgba(255, 65, 108, 0.7)';
-        timeUpMessage.style.transition = 'all 1s ease-out';
+        timeUpMessage.style.textShadow = '0 0 20px rgba(255, 60, 60, 0.7)';
+        timeUpMessage.style.transition = 'all 0.5s ease-out';
         
+        // Add to body
         document.body.appendChild(timeUpMessage);
+        
+        // Play alarm sound
+        const timeUpSound = new Audio('data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2ooVFYAIAMBARqCFQULMQIAZHBngYCdMwGBJUECEwJGhHJpBSWCNmLFAYgagysKCFALEOA2EgBiICEQFggIVAoYACOBBnNSVAByEVSUQlAOB9AYAYGEMCYmCJCkAYhAMAAACKjQkCAYQQE4I3EBgGQIBAQaIAAAAAo0JCAoQQOIBgQQAQAIIHQkoIEVACgEQBgQQAQwAZkQAIIAQQAEAgACADhIKAEADAk0AxgCAQ0IEEAAAAAAgAAADpIFAHAAAECwQEA');
+        
+        // Play sound with reduced volume
+        timeUpSound.volume = 0.2;
+        timeUpSound.play().catch(e => console.log('Audio play failed:', e));
         
         // Animate
         setTimeout(() => {
             timeUpMessage.style.opacity = '1';
-            timeUpMessage.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            timeUpMessage.style.transform = 'translate(-50%, -50%) scale(1.2)';
         }, 10);
         
         setTimeout(() => {
             timeUpMessage.style.opacity = '0';
-            timeUpMessage.style.transform = 'translate(-50%, -50%) translateY(-100px) scale(0.5)';
+            timeUpMessage.style.transform = 'translate(-50%, -50%) scale(0.5)';
         }, 1500);
         
         setTimeout(() => {
             document.body.removeChild(timeUpMessage);
-        }, 2500);
+        }, 2000);
     }
     
     // Restart timer after timeout
@@ -643,5 +733,52 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.body.removeChild(feedback);
         }, 1500);
+    }
+    
+    // Watch for language changes from localStorage
+    function watchLanguageChanges() {
+        // Check for language changes every second
+        setInterval(() => {
+            const storedLang = localStorage.getItem('siteLanguage') || localStorage.getItem('lang');
+            if (storedLang && storedLang !== currentLanguage && (storedLang === 'it' || storedLang === 'en')) {
+                // Language has changed
+                console.log(`Language changed from ${currentLanguage} to ${storedLang}`);
+                currentLanguage = storedLang;
+                
+                // Reload categories for the new language
+                loadCategories().then(() => {
+                    // If we have a current category, update it with a new one from the new language
+                    if (currentCategory) {
+                        setNewCategory();
+                    }
+                    
+                    // Update all language-specific elements
+                    updateAllLanguageElements();
+                });
+            }
+        }, 1000);
+    }
+    
+    // Update all language-specific elements
+    function updateAllLanguageElements() {
+        // Update back button tooltip
+        const backButton = document.getElementById('back-button');
+        if (backButton) {
+            backButton.title = getText('undoLastLetter');
+        }
+        
+        // Update timer message - only if game is in progress
+        if (gameOver) {
+            // If there's a game over overlay, update it
+            const gameOverMessage = document.querySelector('.game-over-message');
+            if (gameOverMessage) {
+                gameOverMessage.textContent = getText('gameOverMessage');
+            }
+            
+            const restartButton = document.querySelector('.restart-button');
+            if (restartButton) {
+                restartButton.textContent = getText('restartButton');
+            }
+        }
     }
 }); 

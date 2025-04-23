@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabet Game - Trova parole per ogni lettera dell'alfabeto | DrewGames</title>
+    <title class="lang-title">Alphabet Game - Trova parole per ogni lettera dell'alfabeto | DrewGames</title>
     <meta name="description" content="Gioca all'Alphabet Game: un divertente gioco dove devi trovare parole per ogni lettera dell'alfabeto in base alla categoria scelta. Perfetto per giocare con gli amici!">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
@@ -45,6 +45,131 @@
             font-size: 16px;
         }
     </style>
+    <script>
+        // Update UI language based on storage or URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUILanguage();
+            
+            // Listen for storage changes to detect language changes from other tabs
+            window.addEventListener('storage', function(e) {
+                if (e.key === 'lang' || e.key === 'siteLanguage') {
+                    updateUILanguage();
+                }
+            });
+        });
+        
+        function updateUILanguage() {
+            // Get stored language or default to Italian
+            let currentLang = localStorage.getItem('siteLanguage') || localStorage.getItem('lang') || 'it';
+            
+            // Check URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            if (langParam && (langParam === 'it' || langParam === 'en')) {
+                currentLang = langParam;
+                localStorage.setItem('siteLanguage', langParam);
+                localStorage.setItem('lang', langParam);
+            }
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang;
+            document.documentElement.setAttribute('data-lang', currentLang);
+            
+            // Update title and meta description
+            if (currentLang === 'en') {
+                document.title = 'Alphabet Game - Find words for each letter of the alphabet | DrewGames';
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    'Play the Alphabet Game: a fun game where you need to find words for each letter of the alphabet based on the chosen category. Perfect for playing with friends!');
+                
+                // Update visible text
+                document.querySelector('h1').textContent = 'Alphabet Game';
+                document.querySelector('.instructions h2').textContent = 'How to play:';
+                
+                // Update list items
+                const listItems = document.querySelectorAll('.instructions ol li');
+                const englishInstructions = [
+                    'A category will be shown',
+                    'Each player takes turns saying a word related to the category',
+                    'The word must start with one of the letters not yet used',
+                    'After saying the word, click on the initial letter',
+                    'The letter will be disabled and can no longer be used',
+                    'There is a 10-second timer that resets with each clicked letter',
+                    'Every 5 letters used, the timer increases by 10 seconds',
+                    'If the timer reaches zero, "Time\'s Up" appears and restarts',
+                    'Players who can\'t find words with the remaining letters lose',
+                    'The last player remaining in the game wins',
+                    'When all letters are used, the game ends'
+                ];
+                
+                listItems.forEach((item, index) => {
+                    if (englishInstructions[index]) {
+                        item.textContent = englishInstructions[index];
+                    }
+                });
+                
+                // Update buttons
+                document.getElementById('start-button').textContent = 'Start Game';
+                document.getElementById('try-again-button').textContent = 'Change Category';
+                
+                // Update category header text
+                const categoryHeader = document.querySelector('#game-screen h2');
+                if (categoryHeader) {
+                    // Preserve the category-display span inside
+                    const categorySpan = document.getElementById('category-display');
+                    const categoryText = categorySpan ? categorySpan.textContent : 'Loading...';
+                    
+                    // Update the header content
+                    categoryHeader.innerHTML = 'Category: <span id="category-display">' + categoryText + '</span>';
+                }
+            } else {
+                // Italian language
+                document.title = 'Alphabet Game - Trova parole per ogni lettera dell\'alfabeto | DrewGames';
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    'Gioca all\'Alphabet Game: un divertente gioco dove devi trovare parole per ogni lettera dell\'alfabeto in base alla categoria scelta. Perfetto per giocare con gli amici!');
+                
+                // Update visible text
+                document.querySelector('h1').textContent = 'Alphabet Game';
+                document.querySelector('.instructions h2').textContent = 'Come si gioca:';
+                
+                // Update list items
+                const listItems = document.querySelectorAll('.instructions ol li');
+                const italianInstructions = [
+                    'Verrà mostrata una categoria',
+                    'A turno, ogni giocatore deve dire una parola relativa alla categoria',
+                    'La parola deve iniziare con una delle lettere non ancora usate',
+                    'Dopo aver detto la parola, cliccate sulla lettera iniziale',
+                    'La lettera sarà disattivata e non potrà più essere usata',
+                    'C\'è un timer di 10 secondi che si resetta ad ogni lettera cliccata',
+                    'Ogni 5 lettere usate, il timer aumenta di 10 secondi',
+                    'Se il timer arriva a zero, appare "Tempo Scaduto" e riparte',
+                    'Perdono i giocatori che non trovano parole con le lettere rimaste',
+                    'Vince l\'ultimo giocatore rimasto in gioco',
+                    'Quando tutte le lettere sono usate, il gioco termina'
+                ];
+                
+                listItems.forEach((item, index) => {
+                    if (italianInstructions[index]) {
+                        item.textContent = italianInstructions[index];
+                    }
+                });
+                
+                // Update buttons
+                document.getElementById('start-button').textContent = 'Inizia Gioco';
+                document.getElementById('try-again-button').textContent = 'Cambia Categoria';
+                
+                // Update category header text
+                const categoryHeader = document.querySelector('#game-screen h2');
+                if (categoryHeader) {
+                    // Preserve the category-display span inside
+                    const categorySpan = document.getElementById('category-display');
+                    const categoryText = categorySpan ? categorySpan.textContent : 'Caricamento...';
+                    
+                    // Update the header content
+                    categoryHeader.innerHTML = 'Categoria: <span id="category-display">' + categoryText + '</span>';
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
