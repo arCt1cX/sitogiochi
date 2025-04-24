@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
+<!-- The lang attribute will be set dynamically by JavaScript -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Set language as early as possible
+        (function() {
+            function getInitialLang() {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                if (urlLang === 'en' || urlLang === 'it') {
+                    return urlLang;
+                }
+                
+                // Check localStorage
+                const storedLang = localStorage.getItem('lang');
+                if (storedLang) {
+                    return storedLang;
+                }
+                
+                // Check browser language
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+                    return 'it';
+                }
+                
+                // Default to English
+                return 'en';
+            }
+            
+            // Set the lang attribute
+            document.documentElement.lang = getInitialLang();
+        })();
+    </script>
     <title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>
     <meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
     <!-- Google tag (gtag.js) -->

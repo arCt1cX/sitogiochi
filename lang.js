@@ -116,6 +116,15 @@ const flagSVGs = {
 
 // Function to get user's language preference
 function getUserLanguage() {
+    // Check if language is specified in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang === 'en' || urlLang === 'it') {
+        // Store the URL language preference in localStorage
+        localStorage.setItem('lang', urlLang);
+        return urlLang;
+    }
+    
     // Check if a language is stored in localStorage
     const storedLang = localStorage.getItem('lang');
     if (storedLang) {
@@ -123,13 +132,15 @@ function getUserLanguage() {
     }
     
     // If no stored preference, try to detect based on browser language
-    const browserLang = navigator.language || navigator.userLanguage;
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    console.log('Detected browser language:', browserLang);
     
-    // Default to 'en' unless it's specifically Italian
-    if (browserLang.startsWith('it')) {
+    // More specific check for Italian language
+    if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
         localStorage.setItem('lang', 'it');
         return 'it';
     } else {
+        // Default to English for any other language
         localStorage.setItem('lang', 'en');
         return 'en';
     }
@@ -198,6 +209,15 @@ function setFlagIcon() {
 
 // Apply translations to the current page
 function applyTranslations() {
+    // Debug language detection
+    console.log('Language detection debug:');
+    console.log('- URL parameter:', new URLSearchParams(window.location.search).get('lang'));
+    console.log('- localStorage lang:', localStorage.getItem('lang'));
+    console.log('- navigator.language:', navigator.language);
+    console.log('- navigator.userLanguage:', navigator.userLanguage);
+    console.log('- document.documentElement.lang:', document.documentElement.lang);
+    console.log('- Selected language:', getUserLanguage());
+    
     const lang = getUserLanguage();
     document.documentElement.lang = lang;
     
