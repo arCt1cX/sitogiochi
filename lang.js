@@ -160,7 +160,11 @@ function toggleLanguage() {
     const currentLang = getUserLanguage();
     const newLang = currentLang === 'it' ? 'en' : 'it';
     setUserLanguage(newLang);
-    location.reload();
+    
+    // Update URL if needed
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.location.href = url.toString();
 }
 
 // Function to get a translation
