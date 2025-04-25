@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>BluffMe - Gioco di categorie e bluff | DrewGames</title>
-    <meta name="description" content="Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>BluffMe - Gioco di categorie e bluff | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.">');
+      } else {
+        document.write('<title>BluffMe - Category and bluff game | DrewGames</title>');
+        document.write('<meta name="description" content="Play BluffMe: a fun category game where players bet on how many responses they can give! Perfect for evenings with friends and parties.">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/BluffMe/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/BluffMe/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/BluffMe/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>

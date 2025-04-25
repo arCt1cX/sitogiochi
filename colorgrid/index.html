@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioco dei Colori - Indovina la cella colorata | DrewGames</title>
-    <meta name="description" content="Gioca al Gioco dei Colori: un divertente gioco per 3+ persone dove devi indovinare la posizione della cella colorata segreta. Perfetto per le serate con amici!">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Gioco dei Colori - Indovina la cella colorata | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca al Gioco dei Colori: un divertente gioco per 3+ persone dove devi indovinare la posizione della cella colorata segreta. Perfetto per le serate con amici!">');
+      } else {
+        document.write('<title>Color Grid Game - Guess the colored cell location | DrewGames</title>');
+        document.write('<meta name="description" content="Play the Color Grid Game: a fun game for 3+ people where you have to guess the position of the secret colored cell. Perfect for evenings with friends!">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/colorgrid/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/colorgrid/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/colorgrid/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>

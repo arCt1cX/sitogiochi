@@ -4,6 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>');
+        document.write('<meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">');
+      } else {
+        document.write('<title>DrewGames - Games to play with friends offline</title>');
+        document.write('<meta id="pageDescription" name="description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/" />
     <script>
         // Set language as early as possible
         (function() {
@@ -35,8 +53,6 @@
             document.documentElement.lang = getInitialLang();
         })();
     </script>
-    <title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>
-    <meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>

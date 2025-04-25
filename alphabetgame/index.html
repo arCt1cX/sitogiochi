@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="lang-title">Alphabet Game - Trova parole per ogni lettera dell'alfabeto | DrewGames</title>
-    <meta name="description" content="Gioca all'Alphabet Game: un divertente gioco dove devi trovare parole per ogni lettera dell'alfabeto in base alla categoria scelta. Perfetto per giocare con gli amici!">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title class="lang-title">Alphabet Game - Trova parole per ogni lettera dell\'alfabeto | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca all\'Alphabet Game: un divertente gioco dove devi trovare parole per ogni lettera dell\'alfabeto in base alla categoria scelta. Perfetto per giocare con gli amici!">');
+      } else {
+        document.write('<title class="lang-title">Alphabet Game - Find words for each letter of the alphabet | DrewGames</title>');
+        document.write('<meta name="description" content="Play the Alphabet Game: a fun game where you need to find words for each letter of the alphabet based on the chosen category. Perfect for playing with friends!">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/alphabetgame/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/alphabetgame/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/alphabetgame/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>

@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Wordrace - Sfida di parole a tempo | DrewGames</title>
-    <meta name="description" content="Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Wordrace - Sfida di parole a tempo | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!">');
+      } else {
+        document.write('<title>Wordrace - Timed word challenge | DrewGames</title>');
+        document.write('<meta name="description" content="Play Wordrace: a timed word challenge for 2-4 players. Race against time in this fun verbal challenge, perfect for evenings with friends!">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/timergame/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/timergame/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/timergame/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>

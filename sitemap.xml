@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Homepage -->
   <url>
     <loc>https://www.partygamesdrew.com/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/"/>
   </url>
   
   <!-- Games -->
@@ -14,41 +18,62 @@
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/impostor/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/impostor/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/impostor/"/>
   </url>
   <url>
     <loc>https://www.partygamesdrew.com/colorgrid/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/colorgrid/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/colorgrid/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/colorgrid/"/>
   </url>
   <url>
     <loc>https://www.partygamesdrew.com/guessthepic/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/guessthepic/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/guessthepic/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/guessthepic/"/>
   </url>
   <url>
     <loc>https://www.partygamesdrew.com/timergame/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/timergame/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/timergame/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/timergame/"/>
   </url>
   <url>
     <loc>https://www.partygamesdrew.com/alphabetgame/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/alphabetgame/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/alphabetgame/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/alphabetgame/"/>
   </url>
   <url>
-    <loc>https://www.partygamesdrew.com/chain%20reaction/</loc>
+    <loc>https://www.partygamesdrew.com/chainreaction/</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/chainreaction/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/chainreaction/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/chainreaction/"/>
   </url>
   <url>
     <loc>https://www.partygamesdrew.com/BluffMe/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/BluffMe/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/BluffMe/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/BluffMe/"/>
   </url>
 </urlset> 

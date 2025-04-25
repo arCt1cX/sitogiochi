@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioco dell'Impostore - Scopri chi mente nel gruppo | DrewGames</title>
-    <meta name="description" content="Gioca al Gioco dell'Impostore: un divertente gioco sociale dove devi scoprire chi mente nel gruppo! Un perfetto party game da fare con gli amici offline.">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Gioco dell\'Impostore - Scopri chi mente nel gruppo | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca al Gioco dell\'Impostore: un divertente gioco sociale dove devi scoprire chi mente nel gruppo! Un perfetto party game da fare con gli amici offline.">');
+      } else {
+        document.write('<title>Impostor Game - Find who is lying in the group | DrewGames</title>');
+        document.write('<meta name="description" content="Play the Impostor Game: a fun social game where you have to find out who\'s lying in the group! A perfect party game to play with friends offline.">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/impostor/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/impostor/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/impostor/" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
