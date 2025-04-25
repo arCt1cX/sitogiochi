@@ -390,6 +390,18 @@ h2 {
     box-shadow: 0 2px 3px var(--shadow-color);
 }
 
+.pause-button {
+    background-color: #2196F3;
+    border: 2px solid #1976D2;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 0 5px rgba(33, 150, 243, 0.4);
+}
+
+.pause-button:active {
+    background-color: #1976D2;
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px var(--shadow-color);
+}
+
 .correct-button {
     background: var(--correct-color);
     border: 2px solid var(--correct-dark);

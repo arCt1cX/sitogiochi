@@ -20,6 +20,8 @@ const gameTranslations = {
         'seconds': 'secondi',
         'score': 'Punteggio',
         'passesRemaining': 'Pass rimasti',
+        'pause': 'Pausa',
+        'resume': 'Continua',
         'continue': 'Continua',
         'correct': 'Corretta',
         'wrong': 'Errata',
@@ -51,6 +53,8 @@ const gameTranslations = {
         'seconds': 'seconds',
         'score': 'Score',
         'passesRemaining': 'Passes left',
+        'pause': 'Pause',
+        'resume': 'Resume',
         'continue': 'Continue',
         'correct': 'Correct',
         'wrong': 'Wrong',
@@ -102,6 +106,7 @@ function applyGameTranslations() {
     
     // Update button texts
     document.querySelector('#startButton span:not(.btn-icon)').textContent = translations.startGame;
+    document.querySelector('#pauseResumeButton span').textContent = translations.pause;
     document.querySelector('#continueButton span').textContent = translations.continue;
     document.querySelector('#correctButton span').textContent = translations.correct;
     document.querySelector('#wrongButton span').textContent = translations.wrong;

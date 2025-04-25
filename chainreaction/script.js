@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreEl = document.getElementById('score');
     const passesEl = document.getElementById('passes');
     const wordDisplay = document.getElementById('wordDisplay');
+    const pauseResumeButton = document.getElementById('pauseResumeButton');
     const correctButton = document.getElementById('correctButton');
     const wrongButton = document.getElementById('wrongButton');
     const passButton = document.getElementById('passButton');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeRemaining = 60;
     let timerInterval = null;
     let isPaused = false;
+    let isGamePaused = false; // New variable for the pause/resume button
     
     // Fetch words from the appropriate words file based on language
     async function fetchWords() {
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Button event listeners
         startButton.addEventListener('click', startGame);
+        pauseResumeButton.addEventListener('click', togglePauseResume);
         correctButton.addEventListener('click', handleCorrect);
         wrongButton.addEventListener('click', handleWrong);
         passButton.addEventListener('click', handlePass);
@@ -97,7 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
         score = 0;
         passesRemaining = 3;
         timeRemaining = 60;
-        isPaused = false;
+        isPaused = true;
+        isGamePaused = true;
         
         // Update UI
         updateUI();
@@ -108,10 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
         passButton.style.display = 'block';
         continueButton.style.display = 'none';
         
+        // Set the pause button text to Resume
+        updatePauseResumeButtonText();
+        
         // Get first word
         getNewWord();
         
-        // Start timer
+        // Start timer (will be paused initially)
         startTimer();
     }
     
@@ -178,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isPaused = true;
         
         // Hide action buttons and show continue button
+        pauseResumeButton.style.display = 'none';
         correctButton.style.display = 'none';
         wrongButton.style.display = 'none';
         passButton.style.display = 'none';
@@ -189,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isPaused = false;
         
         // Show action buttons and hide continue button
+        pauseResumeButton.style.display = 'block';
         correctButton.style.display = 'block';
         wrongButton.style.display = 'block';
         passButton.style.display = 'block';
@@ -196,6 +205,30 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Get new word
         getNewWord();
+    }
+    
+    // Toggle pause/resume button
+    function togglePauseResume() {
+        isGamePaused = !isGamePaused;
+        isPaused = isGamePaused;
+        
+        // Update button text based on the current state
+        updatePauseResumeButtonText();
+    }
+    
+    // Update pause/resume button text based on game state
+    function updatePauseResumeButtonText() {
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+        
+        pauseResumeButton.querySelector('span').textContent = isGamePaused ? 
+            translations.resume : translations.pause;
+        
+        // Update the SVG icon based on state
+        const pauseIcon = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="white"/>';
+        const playIcon = '<path d="M8 5V19L19 12L8 5Z" fill="white"/>';
+        
+        pauseResumeButton.querySelector('svg').innerHTML = isGamePaused ? playIcon : pauseIcon;
     }
     
     // Game over
@@ -208,14 +241,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Reset the game
     function resetGame() {
-        hideAllScreens();
-        gameScreen.classList.add('active');
+        // Clear the timer interval
+        if (timerInterval) {
+            clearInterval(timerInterval);
+        }
         
         // Reset game state
         score = 0;
         passesRemaining = 3;
         timeRemaining = 60;
-        isPaused = false;
+        isPaused = true;
+        isGamePaused = true;
         
         // Update UI
         updateUI();
@@ -226,13 +262,17 @@ document.addEventListener('DOMContentLoaded', () => {
         passButton.style.display = 'block';
         continueButton.style.display = 'none';
         
-        // Get first word
+        // Set the pause button text to Resume
+        updatePauseResumeButtonText();
+        
+        // Hide game over screen and show game screen
+        hideAllScreens();
+        gameScreen.classList.add('active');
+        
+        // Get a new word
         getNewWord();
         
-        // Clear any existing interval and start timer again
-        if (timerInterval) {
-            clearInterval(timerInterval);
-        }
+        // Start timer (will be paused initially)
         startTimer();
     }
     
