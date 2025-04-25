@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Continue the game
     function continueGame() {
         isPaused = false;
+        isGamePaused = false; // Reset the game pause state
         
         // Show action buttons and hide continue button
         pauseResumeButton.style.display = 'block';
@@ -202,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
         wrongButton.style.display = 'block';
         passButton.style.display = 'block';
         continueButton.style.display = 'none';
+        
+        // Update pause button text to show "Pause"
+        updatePauseResumeButtonText();
         
         // Get new word
         getNewWord();

@@ -133,38 +133,64 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
-            id: "guessthepic",
-            displayName: getTranslation('guessthepic', 'title'),
-            catchphrase: getTranslation('guessthepic', 'catchphrase'),
+            id: "chainreaction",
+            displayName: getTranslation('chainreaction', 'title'),
+            catchphrase: getTranslation('chainreaction', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
                 <!-- Shadow -->
-                <rect x="17" y="17" width="38" height="38" rx="2" fill="rgba(0,0,0,0.2)" />
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
                 
-                <!-- Photo frame -->
-                <rect x="15" y="15" width="38" height="38" rx="2" fill="rgba(255,255,255,0.15)" />
-                <rect x="17" y="17" width="34" height="34" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                <!-- Two clue givers and guesser -->
+                <!-- Left clue giver -->
+                <g>
+                    <circle cx="25" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
+                    <circle cx="22" cy="28" r="1.5" fill="white" />
+                    <circle cx="28" cy="28" r="1.5" fill="white" />
+                    <path d="M22,35 C24,37 26,37 28,35" stroke="white" stroke-width="1" fill="none" />
+                    <path d="M21,45 C21,40 20,38 25,38 C30,38 29,40 29,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </g>
                 
-                <!-- Photos stack effect -->
-                <path d="M53,19 L58,19 L58,53 L19,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="2 1" />
-                <path d="M55,17 L60,17 L60,51 L21,51" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="1 1" />
+                <!-- Right clue giver -->
+                <g>
+                    <circle cx="55" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
+                    <circle cx="52" cy="28" r="1.5" fill="white" />
+                    <circle cx="58" cy="28" r="1.5" fill="white" />
+                    <path d="M52,35 C54,37 56,37 58,35" stroke="white" stroke-width="1" fill="none" />
+                    <path d="M51,45 C51,40 50,38 55,38 C60,38 59,40 59,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                </g>
                 
-                <!-- Photo content -->
-                <path d="M20,42 L30,32 L40,42" stroke="white" stroke-linecap="round" />
-                <path d="M27,47 L37,38 L45,46" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" />
-                <circle cx="24" cy="25" r="3" fill="rgba(255,255,255,0.5)" />
-                <circle cx="24" cy="25" r="1.5" fill="rgba(255,255,255,0.8)" />
+                <!-- The word -->
+                <rect x="30" y="15" width="20" height="10" rx="2" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1" />
+                <path d="M33,20 L47,20" stroke="white" stroke-width="1" stroke-dasharray="1 1" />
                 
-                <!-- Magnifying glass with detailed handle -->
-                <circle cx="57" cy="50" r="8" fill="rgba(0,0,0,0.1)" stroke="white" stroke-width="2" />
-                <circle cx="57" cy="50" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                <line x1="63" y1="56" x2="68" y2="61" stroke="white" stroke-width="3" stroke-linecap="round" />
-                <line x1="63" y1="56" x2="68" y2="61" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" />
-                <path d="M69,62 C70,63 72,65 74,63 C76,61 74,60 73,61" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+                <!-- Guesser (blindfolded) -->
+                <g>
+                    <circle cx="40" cy="55" r="12" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5" />
+                    <path d="M34,52 L46,52" stroke="white" stroke-width="1.5" />
+                    <path d="M34,52 C34,48 46,48 46,52" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.2)" />
+                    <path d="M35,60 C37,62 43,62 45,60" stroke="white" stroke-width="1" stroke-linecap="round" />
+                </g>
                 
-                <!-- Question marks to represent mystery -->
-                <text x="33" y="32" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
-                <text x="28" y="38" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
-                <text x="39" y="28" font-size="6" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <!-- Speech bubbles connecting people -->
+                <path d="M30,25 L35,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M50,25 L45,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M37,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                <path d="M43,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
+                
+                <!-- Timer -->
+                <circle cx="65" cy="55" r="6" fill="none" stroke="white" stroke-width="1" />
+                <path d="M65,52 L65,55 L68,55" stroke="white" stroke-width="1" />
+                
+                <!-- Game controls -->
+                <path d="M15,55 L20,50 L25,55 L20,60 Z" fill="rgba(76,175,80,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M18,55 L22,55 M20,53 L20,57" stroke="white" stroke-width="0.8" />
+                
+                <path d="M15,65 L20,60 L25,65 L20,70 Z" fill="rgba(244,67,54,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M18,65 L22,65" stroke="white" stroke-width="0.8" />
+                
+                <path d="M60,65 C60,62 70,62 70,65 C70,68 60,68 60,65 Z" fill="rgba(255,152,0,0.5)" stroke="white" stroke-width="0.8" />
+                <path d="M62,65 C62,64 68,64 68,65" stroke="white" stroke-width="0.8" />
+                <path d="M62,65 C62,66 68,66 68,65" stroke="white" stroke-width="0.8" />
             </svg>`
         },
         {
@@ -232,67 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- Speech bubble -->
                 <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
                 <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
-            </svg>`
-        },
-        {
-            id: "chainreaction",
-            displayName: getTranslation('chainreaction', 'title'),
-            catchphrase: getTranslation('chainreaction', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Two clue givers and guesser -->
-                <!-- Left clue giver -->
-                <g>
-                    <circle cx="25" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
-                    <circle cx="22" cy="28" r="1.5" fill="white" />
-                    <circle cx="28" cy="28" r="1.5" fill="white" />
-                    <path d="M22,35 C24,37 26,37 28,35" stroke="white" stroke-width="1" fill="none" />
-                    <path d="M21,45 C21,40 20,38 25,38 C30,38 29,40 29,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                </g>
-                
-                <!-- Right clue giver -->
-                <g>
-                    <circle cx="55" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
-                    <circle cx="52" cy="28" r="1.5" fill="white" />
-                    <circle cx="58" cy="28" r="1.5" fill="white" />
-                    <path d="M52,35 C54,37 56,37 58,35" stroke="white" stroke-width="1" fill="none" />
-                    <path d="M51,45 C51,40 50,38 55,38 C60,38 59,40 59,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                </g>
-                
-                <!-- The word -->
-                <rect x="30" y="15" width="20" height="10" rx="2" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1" />
-                <path d="M33,20 L47,20" stroke="white" stroke-width="1" stroke-dasharray="1 1" />
-                
-                <!-- Guesser (blindfolded) -->
-                <g>
-                    <circle cx="40" cy="55" r="12" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5" />
-                    <path d="M34,52 L46,52" stroke="white" stroke-width="1.5" />
-                    <path d="M34,52 C34,48 46,48 46,52" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.2)" />
-                    <path d="M35,60 C37,62 43,62 45,60" stroke="white" stroke-width="1" stroke-linecap="round" />
-                </g>
-                
-                <!-- Speech bubbles connecting people -->
-                <path d="M30,25 L35,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M50,25 L45,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M37,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M43,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                
-                <!-- Timer -->
-                <circle cx="65" cy="55" r="6" fill="none" stroke="white" stroke-width="1" />
-                <path d="M65,52 L65,55 L68,55" stroke="white" stroke-width="1" />
-                
-                <!-- Game controls -->
-                <path d="M15,55 L20,50 L25,55 L20,60 Z" fill="rgba(76,175,80,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M18,55 L22,55 M20,53 L20,57" stroke="white" stroke-width="0.8" />
-                
-                <path d="M15,65 L20,60 L25,65 L20,70 Z" fill="rgba(244,67,54,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M18,65 L22,65" stroke="white" stroke-width="0.8" />
-                
-                <path d="M60,65 C60,62 70,62 70,65 C70,68 60,68 60,65 Z" fill="rgba(255,152,0,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M62,65 C62,64 68,64 68,65" stroke="white" stroke-width="0.8" />
-                <path d="M62,65 C62,66 68,66 68,65" stroke="white" stroke-width="0.8" />
             </svg>`
         },
         {
@@ -395,6 +360,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- Speech bubble -->
                 <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
                 <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
+            </svg>`
+        },
+        {
+            id: "guessthepic",
+            displayName: getTranslation('guessthepic', 'title'),
+            catchphrase: getTranslation('guessthepic', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <rect x="17" y="17" width="38" height="38" rx="2" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Photo frame -->
+                <rect x="15" y="15" width="38" height="38" rx="2" fill="rgba(255,255,255,0.15)" />
+                <rect x="17" y="17" width="34" height="34" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                
+                <!-- Photos stack effect -->
+                <path d="M53,19 L58,19 L58,53 L19,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="2 1" />
+                <path d="M55,17 L60,17 L60,51 L21,51" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="1 1" />
+                
+                <!-- Photo content -->
+                <path d="M20,42 L30,32 L40,42" stroke="white" stroke-linecap="round" />
+                <path d="M27,47 L37,38 L45,46" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" />
+                <circle cx="24" cy="25" r="3" fill="rgba(255,255,255,0.5)" />
+                <circle cx="24" cy="25" r="1.5" fill="rgba(255,255,255,0.8)" />
+                
+                <!-- Magnifying glass with detailed handle -->
+                <circle cx="57" cy="50" r="8" fill="rgba(0,0,0,0.1)" stroke="white" stroke-width="2" />
+                <circle cx="57" cy="50" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                <line x1="63" y1="56" x2="68" y2="61" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <line x1="63" y1="56" x2="68" y2="61" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M69,62 C70,63 72,65 74,63 C76,61 74,60 73,61" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+                
+                <!-- Question marks to represent mystery -->
+                <text x="33" y="32" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="28" y="38" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="39" y="28" font-size="6" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
             </svg>`
         }
     ];

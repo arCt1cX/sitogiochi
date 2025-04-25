@@ -26,7 +26,7 @@ const translations = {
             'catchphrase': 'Indovina la cella colorata segreta!'
         },
         'guessthepic': {
-            'title': 'Indovina Immagini',
+            'title': 'Guess Rush',
             'catchphrase': 'Indovina cosa mostrano le 5 immagini e accumula più punti!'
         },
         'timergame': {
@@ -72,7 +72,7 @@ const translations = {
             'catchphrase': 'Guess the secret colored cell!'
         },
         'guessthepic': {
-            'title': 'Guess The Pic',
+            'title': 'Guess Rush',
             'catchphrase': 'Guess what the 5 images show and score points!'
         },
         'timergame': {
