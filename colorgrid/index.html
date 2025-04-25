@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioco dei Colori - Indovina la cella colorata | DrewGames</title>
+    <script src="../redirect.js"></script>
+    <title>Color Grid - Indovina la cella colorata | DrewGames</title>
     <meta name="description" content="Gioca al Gioco dei Colori: un divertente gioco per 3+ persone dove devi indovinare la posizione della cella colorata segreta. Perfetto per le serate con amici!">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
@@ -17,6 +18,25 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="canonical" href="https://www.partygamesdrew.com/colorgrid/">
     <meta name="robots" content="index, follow">
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/colorgrid/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/colorgrid/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/colorgrid/" />
+    <script>
+        // Set title and meta description based on language
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const storedLang = localStorage.getItem('lang');
+            const currentLang = urlLang || storedLang || 'it';
+            
+            if (currentLang === 'en') {
+                document.title = "Color Grid Game - Guess the colored cell | DrewGames";
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    "Play the Color Grid Game: a fun game for 3+ people where you need to guess the position of the secret colored cell. Perfect for evenings with friends!");
+            }
+        })();
+    </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
      crossorigin="anonymous"></script>

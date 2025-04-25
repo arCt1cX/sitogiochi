@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="redirect.js"></script>
     <script>
         // Set language as early as possible
         (function() {
@@ -35,6 +36,21 @@
             document.documentElement.lang = getInitialLang();
         })();
     </script>
+    <script>
+        // Set title and meta description based on language
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const storedLang = localStorage.getItem('lang');
+            const currentLang = urlLang || storedLang || 'it';
+            
+            if (currentLang === 'en') {
+                document.title = "DrewGames - Games to play with friends offline";
+                document.querySelector('meta[id="pageDescription"]').setAttribute('content', 
+                    "DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!");
+            }
+        })();
+    </script>
     <title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>
     <meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
     <!-- Google tag (gtag.js) -->
@@ -56,6 +72,10 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.partygamesdrew.com/">
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/" />
     <style>
         .tagline {
             position: relative;

@@ -18,6 +18,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/impostor/">
     <meta name="robots" content="index, follow">
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/impostor/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/impostor/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/impostor/" />
+    <script>
+        // Set title and meta description based on language
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const storedLang = localStorage.getItem('lang');
+            const currentLang = urlLang || storedLang || 'it';
+            
+            if (currentLang === 'en') {
+                document.title = "Impostor Game - Find out who's lying in the group | DrewGames";
+                document.querySelector('meta[name="description"]').setAttribute('content', 
+                    "Play the Impostor Game: a fun social game where you have to find out who's lying in the group! A perfect party game to play with friends offline.");
+            }
+        })();
+    </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
      crossorigin="anonymous"></script>
