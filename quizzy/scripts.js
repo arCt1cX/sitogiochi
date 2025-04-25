@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        document.getElementById('current-player-name').textContent = currentPlayer.name;
+        document.getElementById('player-name-display').textContent = currentPlayer.name;
         
         // Clear selected categories list
         document.getElementById('selected-categories-list').innerHTML = '';
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Generate category selection cards
     function generateCategoryCards() {
-        const container = document.getElementById('categories-container');
+        const container = document.getElementById('category-cards');
         container.innerHTML = '';
         
         gameState.categories.forEach(category => {
@@ -343,8 +343,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         
         // Update player info
-        document.getElementById('current-player-turn').textContent = currentPlayer.name;
-        document.getElementById('current-score').textContent = currentPlayer.score;
+        document.getElementById('current-player-name').textContent = currentPlayer.name;
+        document.getElementById('current-player-score').textContent = currentPlayer.score;
         
         // Generate category buttons
         generateCategoryButtons(currentPlayer.categories);
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Generate category buttons for the current player
     function generateCategoryButtons(categories) {
-        const container = document.getElementById('player-categories');
+        const container = document.getElementById('category-buttons');
         container.innerHTML = '';
         
         categories.forEach(category => {
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle difficulty selection
     function selectDifficulty(difficulty) {
         gameState.currentDifficulty = difficulty;
-        setupGameRound();
+        showQuestion();
     }
     
     // Get a random question for the current category and difficulty
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Generate answer buttons for the question
     function generateAnswerButtons(question) {
-        const container = document.getElementById('answers-container');
+        const container = document.getElementById('answer-buttons');
         container.innerHTML = '';
         
         const letters = ['A', 'B', 'C', 'D'];
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update the timer display
     function updateTimerDisplay() {
-        document.getElementById('timer').textContent = gameState.timeLeft;
+        document.getElementById('timer-display').textContent = gameState.timeLeft;
     }
     
     // Handle a player's answer
@@ -526,22 +526,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function showResult(isCorrect, points, isTimeUp = false) {
         const resultMessage = document.getElementById('result-message');
         const pointsEarned = document.getElementById('points-earned');
+        const correctAnswerContainer = document.getElementById('correct-answer-container');
+        const correctAnswerText = document.getElementById('correct-answer');
         
         // Set result message and class
         if (isTimeUp) {
             resultMessage.textContent = getGameTranslation('timeUp');
             resultMessage.className = 'result-message incorrect';
+            correctAnswerContainer.classList.remove('hidden');
+            correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
         } else if (isCorrect) {
             resultMessage.textContent = getGameTranslation('correctAnswer');
             resultMessage.className = 'result-message correct';
+            correctAnswerContainer.classList.add('hidden');
         } else {
             resultMessage.textContent = getGameTranslation('wrongAnswer');
             resultMessage.className = 'result-message incorrect';
-            
-            // Add the correct answer
-            const correctAnswerText = document.createElement('p');
-            correctAnswerText.innerHTML = `${getGameTranslation('correctWas')} <strong>${gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex]}</strong>`;
-            resultMessage.appendChild(correctAnswerText);
+            correctAnswerContainer.classList.remove('hidden');
+            correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
         }
         
         // Set points earned
@@ -595,7 +597,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update winner info
         document.getElementById('winner-name').textContent = winner.name;
-        document.getElementById('final-score').textContent = winner.score;
+        document.getElementById('winner-score').textContent = winner.score;
         
         // Generate final scores list
         generateFinalScoresList();
