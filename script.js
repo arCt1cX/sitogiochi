@@ -363,6 +363,52 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
+            id: "quizzy",
+            displayName: getTranslation('quizzy', 'title'),
+            catchphrase: getTranslation('quizzy', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Quiz card main background -->
+                <rect x="15" y="15" width="50" height="35" rx="3" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.2" />
+                <rect x="17" y="17" width="46" height="31" rx="2" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                
+                <!-- Question area -->
+                <rect x="20" y="20" width="40" height="12" rx="2" fill="rgba(106, 90, 205, 0.2)" stroke="white" stroke-width="0.8" />
+                <text x="40" y="28" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">DOMANDA</text>
+                
+                <!-- Answer options -->
+                <rect x="20" y="36" width="18" height="8" rx="2" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="0.8" />
+                <text x="29" y="41" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">A</text>
+                
+                <rect x="42" y="36" width="18" height="8" rx="2" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="0.8" />
+                <text x="51" y="41" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">B</text>
+                
+                <!-- Timer circle -->
+                <circle cx="65" cy="25" r="8" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" />
+                <path d="M65,20 L65,25 L68,27" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <circle cx="65" cy="25" r="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                
+                <!-- Category element -->
+                <rect x="20" y="55" width="30" height="10" rx="2" fill="rgba(78, 216, 224, 0.2)" stroke="white" stroke-width="1" />
+                <text x="35" y="61" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
+                
+                <!-- Score display -->
+                <rect x="55" y="55" width="15" height="10" rx="2" fill="rgba(255, 193, 7, 0.3)" stroke="white" stroke-width="1" />
+                <text x="62.5" y="61.5" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">10</text>
+                
+                <!-- Players indicator -->
+                <circle cx="15" cy="60" r="4" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="0.8" />
+                <text x="15" y="62" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">1</text>
+                
+                <!-- Question mark decorative elements -->
+                <text x="68" cy="45" y="45" font-size="10" fill="rgba(255,255,255,0.2)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+                <text x="75" cy="55" y="55" font-size="8" fill="rgba(255,255,255,0.15)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+                <text x="60" cy="52" y="52" font-size="12" fill="rgba(255,255,255,0.1)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+            </svg>`
+        },
+        {
             id: "guessthepic",
             displayName: getTranslation('guessthepic', 'title'),
             catchphrase: getTranslation('guessthepic', 'catchphrase'),

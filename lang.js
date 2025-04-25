@@ -44,6 +44,10 @@ const translations = {
         'bluffme': {
             'title': 'BluffMe',
             'catchphrase': 'Riuscirai a bluffare i tuoi amici e vincere la partita?'
+        },
+        'quizzy': {
+            'title': 'Quizzy',
+            'catchphrase': 'Sfida i tuoi amici in un divertente gioco a quiz!'
         }
     },
     'en': {
@@ -90,6 +94,10 @@ const translations = {
         'bluffme': {
             'title': 'BluffMe',
             'catchphrase': 'Can you bluff your friends and win the game?'
+        },
+        'quizzy': {
+            'title': 'Quizzy',
+            'catchphrase': 'Challenge your friends in a fun quiz game!'
         }
     }
 };
