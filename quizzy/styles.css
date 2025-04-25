@@ -74,15 +74,15 @@ h3 {
     margin-bottom: 1rem;
 }
 
-.game-screen {
+.screen {
     display: none;
 }
 
-.game-screen.active {
+.screen.active {
     display: block;
 }
 
-.btn {
+.btn, .primary-button, .secondary-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -95,35 +95,35 @@ h3 {
     text-align: center;
 }
 
-.primary-btn {
+.primary-btn, .primary-button {
     background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     color: #333;
     box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
 }
 
-.primary-btn:hover {
+.primary-btn:hover, .primary-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
 }
 
-.primary-btn:active {
+.primary-btn:active, .primary-button:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 10px rgba(255, 154, 158, 0.4);
 }
 
-.secondary-btn {
+.secondary-btn, .secondary-button {
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-.secondary-btn:hover {
+.secondary-btn:hover, .secondary-button:hover {
     background-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-.secondary-btn:active {
+.secondary-btn:active, .secondary-button:active {
     transform: translateY(-1px);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
 }
@@ -234,132 +234,127 @@ select:focus {
 }
 
 /* Category Selection Screen */
-.categories-grid {
+.category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
 }
 
 .category-card {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
     border-radius: 8px;
-    padding: 1rem;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .category-card:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .category-card.selected {
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-    color: #333;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.5);
+    background-color: rgba(255, 154, 158, 0.5);
+    border: 2px solid #fff;
+    transform: scale(1.05);
 }
 
-.selected-categories {
-    margin-top: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+.selected-categories-container {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
     border-radius: 8px;
 }
 
-#selected-categories-list {
+.selected-list {
     list-style: none;
-    margin-top: 0.5rem;
+    margin-top: 10px;
 }
 
-#selected-categories-list li {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.4rem 0.8rem;
-    border-radius: 50px;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+.selected-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
 /* Game Round Screen */
 .player-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.player-info h2 {
-    margin: 0;
-    font-size: 1.3rem;
 }
 
 .score-display {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    color: #ff9a9e;
 }
 
-.difficulty-selection,
-.category-selection {
-    margin-bottom: 1.5rem;
+.difficulty-section {
+    margin-bottom: 20px;
 }
 
 .difficulty-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .difficulty-btn {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
     border: none;
-    border-radius: 8px;
-    padding: 0.8rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .difficulty-btn:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
 }
 
-.difficulty-name {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.points {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #ff9a9e;
 }
 
-.points-value {
-    font-size: 0.85rem;
-    opacity: 0.8;
+.category-section {
+    margin-top: 30px;
 }
 
-.player-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .player-category-btn {
     background-color: rgba(255, 255, 255, 0.15);
+    color: white;
     border: none;
-    border-radius: 8px;
-    padding: 1rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 12px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: center;
 }
 
 .player-category-btn:hover {
@@ -368,150 +363,142 @@ select:focus {
 }
 
 /* Question Screen */
-.question-header {
+.question-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.question-info span {
-    margin-right: 1rem;
+    margin-bottom: 20px;
 }
 
 .timer-container {
     font-size: 1.2rem;
     font-weight: 600;
-}
-
-#timer {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.3rem 0.7rem;
-    border-radius: 50px;
+    color: #ff9a9e;
 }
 
 .question-container {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
+    padding: 20px;
     border-radius: 8px;
-}
-
-.question-container h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 1.4rem;
 }
 
-.answers-grid {
+.question-text {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.answer-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .answer-btn {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
     border: none;
     border-radius: 8px;
-    padding: 1rem;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    padding: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
     text-align: left;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .answer-btn:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.answer-btn.correct {
-    background-color: rgba(46, 204, 113, 0.8);
-}
-
-.answer-btn.incorrect {
-    background-color: rgba(231, 76, 60, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
 }
 
 .answer-letter {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.8rem;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-right: 10px;
     font-weight: 600;
+}
+
+.answer-text {
+    flex-grow: 1;
 }
 
 /* Result Screen */
-.result-container {
-    text-align: center;
-}
-
 .result-message {
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 8px;
 }
 
 .result-message.correct {
-    background-color: rgba(46, 204, 113, 0.3);
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
 }
 
 .result-message.incorrect {
-    background-color: rgba(231, 76, 60, 0.3);
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
 }
 
-.result-points {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+.correct-answer-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.correct-answer {
+    font-weight: 600;
+    color: #2ecc71;
+}
+
+.points-earned {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 /* Game Over Screen */
-.victory-container {
+.winner-announcement {
     text-align: center;
-}
-
-.winner-info {
-    margin-bottom: 1.5rem;
-}
-
-.winner-name {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 1rem 0;
-    color: #fad0c4;
-}
-
-.all-scores-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 .final-scores {
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
     border-radius: 8px;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
-.final-scores li {
-    padding: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.scores-list {
+    list-style: none;
+}
+
+.scores-list li {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.final-scores li:last-child {
+.scores-list li:last-child {
     border-bottom: none;
 }
 
@@ -555,4 +542,19 @@ select:focus {
     .timer-container {
         margin-top: 0.8rem;
     }
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    min-height: 80vh;
+    margin-top: 2rem;
+}
+
+.screen-content {
+    padding: 1rem;
 } 

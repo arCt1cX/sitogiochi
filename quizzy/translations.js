@@ -226,84 +226,79 @@ function applyGameTranslations() {
     // Update home button text
     document.getElementById('homeText').textContent = translations.home;
     
-    // Update game title
-    document.getElementById('gameTitle').textContent = translations.gameTitle;
-    
     // Welcome Screen
-    document.getElementById('welcomeTitle').textContent = translations.welcomeTitle;
-    document.getElementById('gameRules').innerHTML = translations.gameRules;
+    document.getElementById('welcome-title').textContent = translations.welcomeTitle;
+    document.getElementById('game-rules').innerHTML = translations.gameRules;
     document.getElementById('start-setup').textContent = translations.startSetup;
     
     // Setup Screen
-    document.getElementById('setupTitle').textContent = translations.setupTitle;
-    document.getElementById('playerCountLabel').textContent = translations.playerCountLabel;
+    document.getElementById('setup-title').textContent = translations.setupTitle;
+    document.getElementById('player-count-label').textContent = translations.playerCountLabel;
     document.getElementById('continue-to-players').textContent = translations.continueBtn;
-    document.getElementById('playerNamesTitle').textContent = translations.playerNamesTitle;
-    document.getElementById('gameModeLabel').textContent = translations.gameModeLabel;
-    document.getElementById('modeIndividual').textContent = translations.modeIndividual;
-    document.getElementById('modeShared').textContent = translations.modeShared;
+    document.getElementById('player-names-title').textContent = translations.playerNamesTitle;
+    document.getElementById('game-mode-label').textContent = translations.gameModeLabel;
+    
+    // Set options
+    const individualOption = document.querySelector('#game-mode option[value="individual"]');
+    const sharedOption = document.querySelector('#game-mode option[value="shared"]');
+    if (individualOption) individualOption.textContent = translations.modeIndividual;
+    if (sharedOption) sharedOption.textContent = translations.modeShared;
+    
     document.getElementById('start-game').textContent = translations.startGame;
     
     // Mode descriptions
     updateModeDescription();
     
     // Category Selection Screen
-    document.getElementById('categoryTitle').textContent = translations.categoryTitle;
-    document.getElementById('selectCategoryText').textContent = translations.selectCategoryText;
-    document.getElementById('chooseText').textContent = translations.chooseText;
-    document.getElementById('selectedTitle').textContent = translations.selectedTitle;
+    document.getElementById('category-title').textContent = translations.categoryTitle;
+    document.getElementById('select-category-player').textContent = translations.selectCategoryText;
+    document.getElementById('choose-text').textContent = translations.chooseText;
+    document.getElementById('selected-title').textContent = translations.selectedTitle;
     document.getElementById('confirm-categories').textContent = translations.confirmCategories;
     
     // Game Round Screen
-    document.getElementById('turnText').textContent = translations.turnText;
-    document.getElementById('scoreText').textContent = translations.scoreText;
-    document.getElementById('difficultyTitle').textContent = translations.difficultyTitle;
-    document.getElementById('diffChild').textContent = translations.diffChild;
-    document.getElementById('diffEasy').textContent = translations.diffEasy;
-    document.getElementById('diffMedium').textContent = translations.diffMedium;
-    document.getElementById('diffExpert').textContent = translations.diffExpert;
-    document.getElementById('diffGraduate').textContent = translations.diffGraduate;
-    document.getElementById('pointText').textContent = translations.pointText;
-    document.getElementById('pointsText').textContent = translations.pointsText;
-    document.getElementById('pointsText2').textContent = translations.pointsText;
-    document.getElementById('pointsText3').textContent = translations.pointsText;
-    document.getElementById('pointsText4').textContent = translations.pointsText;
-    document.getElementById('categorySelectionTitle').textContent = translations.categorySelectionTitle;
+    document.getElementById('turn-text').textContent = translations.turnText;
+    document.getElementById('score-text').textContent = translations.scoreText;
+    document.getElementById('difficulty-title').textContent = translations.difficultyTitle;
+    document.getElementById('diff-child').textContent = translations.diffChild;
+    document.getElementById('diff-easy').textContent = translations.diffEasy;
+    document.getElementById('diff-medium').textContent = translations.diffMedium;
+    document.getElementById('diff-expert').textContent = translations.diffExpert;
+    document.getElementById('diff-graduate').textContent = translations.diffGraduate;
+    document.getElementById('point-text').textContent = translations.pointText;
+    document.getElementById('points-text-1').textContent = translations.pointsText;
+    document.getElementById('points-text-2').textContent = translations.pointsText;
+    document.getElementById('points-text-3').textContent = translations.pointsText;
+    document.getElementById('points-text-4').textContent = translations.pointsText;
+    document.getElementById('category-selection-title').textContent = translations.categorySelectionTitle;
     
     // Question Screen
-    document.getElementById('categoryLabel').textContent = translations.categoryLabel;
-    document.getElementById('difficultyLabel').textContent = translations.difficultyLabel;
-    document.getElementById('timerText').textContent = translations.timerText;
+    document.getElementById('category-label').textContent = translations.categoryLabel;
+    document.getElementById('difficulty-label').textContent = translations.difficultyLabel;
+    document.getElementById('timer-text').textContent = translations.timerText;
     
     // Result Screen
-    document.getElementById('resultTitle').textContent = translations.resultTitle;
-    document.getElementById('pointsEarnedText').textContent = translations.pointsEarnedText;
+    document.getElementById('result-title').textContent = translations.resultTitle;
+    document.getElementById('correct-was').textContent = translations.correctWas;
+    document.getElementById('points-earned-text').textContent = translations.pointsEarnedText;
     document.getElementById('continue-game').textContent = translations.continueGame;
     
     // Game Over Screen
-    document.getElementById('gameOverTitle').textContent = translations.gameOverTitle;
-    document.getElementById('winnerText').textContent = translations.winnerText;
-    document.getElementById('finalScoreText').textContent = translations.finalScoreText;
-    document.getElementById('allScoresTitle').textContent = translations.allScoresTitle;
+    document.getElementById('game-over-title').textContent = translations.gameOverTitle;
+    document.getElementById('winner-text').textContent = translations.winnerText;
+    document.getElementById('final-score-text').textContent = translations.finalScoreText;
+    document.getElementById('all-scores-title').textContent = translations.allScoresTitle;
     document.getElementById('play-again').textContent = translations.playAgain;
 }
 
 // Update the game mode description based on selection
 function updateModeDescription() {
     const gameMode = document.getElementById('game-mode');
-    const modeDescription = document.getElementById('modeDescription');
+    const modeDescription = document.getElementById('mode-description');
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
     
     if (gameMode && modeDescription) {
-        gameMode.addEventListener('change', function() {
-            if (this.value === 'individual') {
-                modeDescription.textContent = translations.modeIndividualDesc;
-            } else {
-                modeDescription.textContent = translations.modeSharedDesc;
-            }
-        });
-        
         // Set initial description
         if (gameMode.value === 'individual') {
             modeDescription.textContent = translations.modeIndividualDesc;
@@ -334,6 +329,48 @@ function getGameTranslation(key, subKey = null) {
     
     // If nothing found, return the key
     return subKey || key;
+}
+
+// Get the user's language preference
+function getUserLanguage() {
+    // Check URL parameter first
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    
+    if (langParam && (langParam === 'en' || langParam === 'it')) {
+        // Save preference in localStorage
+        localStorage.setItem('quizzy_language', langParam);
+        return langParam;
+    }
+    
+    // Check localStorage
+    const savedLang = localStorage.getItem('quizzy_language');
+    if (savedLang && (savedLang === 'en' || savedLang === 'it')) {
+        return savedLang;
+    }
+    
+    // Check browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang && browserLang.startsWith('it')) {
+        return 'it';
+    }
+    
+    // Default to English
+    return 'en';
+}
+
+// Toggle between languages
+function toggleLanguage() {
+    const currentLang = getUserLanguage();
+    const newLang = currentLang === 'en' ? 'it' : 'en';
+    
+    // Save new language preference
+    localStorage.setItem('quizzy_language', newLang);
+    
+    // Reload the page with the new language parameter
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.location.href = url.toString();
 }
 
 // Add the function to apply translations on page load
