@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Quizzy - Gioco Quiz a squadre | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca a Quizzy: un divertente party game a quiz da fare con gli amici. Scegli categorie, difficoltà e sfida i tuoi amici in questo gioco di cultura generale!">');
+      } else {
+        document.write('<title>Quizzy - Team Quiz Game | DrewGames</title>');
+        document.write('<meta name="description" content="Play Quizzy: a fun quiz party game to play with friends. Choose categories, difficulty levels and challenge your friends in this general knowledge game!">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/quizzy/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/quizzy/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/quizzy/" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/quizzy/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+    
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Quizzy</h1>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="game-screen active">
+            <div class="welcome-content">
+                <h2 id="welcomeTitle">Benvenuto a Quizzy!</h2>
+                <div class="game-rules" id="gameRules">
+                    <p>Quizzy è un gioco a quiz per più giocatori:</p>
+                    <ul>
+                        <li>Ogni giocatore sceglie categorie e livelli di difficoltà</li>
+                        <li>Rispondi correttamente per guadagnare punti</li>
+                        <li>Più alta è la difficoltà, più punti guadagni</li>
+                        <li>Il primo a raggiungere 25 punti vince!</li>
+                    </ul>
+                </div>
+                <button id="start-setup" class="btn primary-btn pulse-btn">Inizia a Giocare</button>
+            </div>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen">
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
+                <input type="number" id="player-count" min="2" max="8" value="4">
+            </div>
+            <button id="continue-to-players" class="btn primary-btn">Continua</button>
+            
+            <div id="player-names-container" class="hidden">
+                <h3 id="playerNamesTitle">Nomi dei Giocatori</h3>
+                <div id="player-inputs"></div>
+                <div class="form-group">
+                    <label for="game-mode" id="gameModeLabel">Modalità di Gioco:</label>
+                    <select id="game-mode">
+                        <option value="individual" id="modeIndividual">Categorie Individuali</option>
+                        <option value="shared" id="modeShared">Categorie Condivise</option>
+                    </select>
+                    <p id="modeDescription" class="mode-description">Ogni giocatore sceglie le proprie categorie</p>
+                </div>
+                <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
+            </div>
+        </div>
+
+        <!-- Category Selection Screen -->
+        <div id="category-selection-screen" class="game-screen">
+            <h2 id="categoryTitle">Selezione Categorie</h2>
+            <p><span id="selectCategoryText">Giocatore</span> <span id="current-player-name">1</span>, <span id="chooseText">scegli le tue categorie:</span></p>
+            
+            <div id="categories-container" class="categories-grid"></div>
+            
+            <div class="selected-categories">
+                <h3 id="selectedTitle">Categorie Selezionate:</h3>
+                <ul id="selected-categories-list"></ul>
+            </div>
+            
+            <button id="confirm-categories" class="btn primary-btn" disabled>Conferma Categorie</button>
+        </div>
+
+        <!-- Game Round Screen -->
+        <div id="game-round-screen" class="game-screen">
+            <div class="player-info">
+                <h2><span id="turnText">Turno di</span> <span id="current-player-turn">Player 1</span></h2>
+                <div class="score-display">
+                    <span id="scoreText">Punteggio:</span> <span id="current-score">0</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-selection">
+                <h3 id="difficultyTitle">Scegli Difficoltà:</h3>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-difficulty="bambino" data-points="1">
+                        <span class="difficulty-name" id="diffChild">Bambino</span>
+                        <span class="points-value">1 <span id="pointText">punto</span></span>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="facile" data-points="2">
+                        <span class="difficulty-name" id="diffEasy">Facile</span>
+                        <span class="points-value">2 <span id="pointsText">punti</span></span>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="medio" data-points="3">
+                        <span class="difficulty-name" id="diffMedium">Medio</span>
+                        <span class="points-value">3 <span id="pointsText2">punti</span></span>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="esperto" data-points="4">
+                        <span class="difficulty-name" id="diffExpert">Esperto</span>
+                        <span class="points-value">4 <span id="pointsText3">punti</span></span>
+                    </button>
+                    <button class="difficulty-btn" data-difficulty="laureato" data-points="5">
+                        <span class="difficulty-name" id="diffGraduate">Laureato</span>
+                        <span class="points-value">5 <span id="pointsText4">punti</span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="category-selection">
+                <h3 id="categorySelectionTitle">Scegli Categoria:</h3>
+                <div id="player-categories" class="player-categories"></div>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="game-screen">
+            <div class="question-header">
+                <div class="question-info">
+                    <span id="categoryLabel">Categoria:</span> <span id="current-category"></span>
+                    <span id="difficultyLabel">Difficoltà:</span> <span id="current-difficulty"></span>
+                </div>
+                <div class="timer-container">
+                    <span id="timerText">Tempo:</span> <span id="timer">30</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h3 id="question-text"></h3>
+                <div id="answers-container" class="answers-grid"></div>
+            </div>
+        </div>
+
+        <!-- Answer Result Screen -->
+        <div id="result-screen" class="game-screen">
+            <div class="result-container">
+                <h2 id="resultTitle">Risposta</h2>
+                <div id="result-message" class="result-message"></div>
+                <div class="result-points">
+                    <span id="pointsEarnedText">Punti Guadagnati:</span>
+                    <span id="points-earned">0</span>
+                </div>
+                <button id="continue-game" class="btn primary-btn">Continua</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="game-screen">
+            <div class="victory-container">
+                <h2 id="gameOverTitle">Gioco Terminato!</h2>
+                <div class="winner-info">
+                    <h3 id="winnerText">Il vincitore è</h3>
+                    <div id="winner-name" class="winner-name"></div>
+                    <div class="winner-score">
+                        <span id="finalScoreText">Punteggio finale:</span>
+                        <span id="final-score"></span>
+                    </div>
+                </div>
+                <div class="all-scores-container">
+                    <h3 id="allScoresTitle">Punteggi Finali</h3>
+                    <ul id="final-scores-list" class="final-scores"></ul>
+                </div>
+                <button id="play-again" class="btn primary-btn">Gioca Ancora</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 

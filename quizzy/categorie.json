@@ -1,0 +1,687 @@
+{
+  "Storia": {
+    "bambino": [
+      {
+        "question": "Chi fu il primo presidente degli Stati Uniti?",
+        "answers": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale secolo è stata scoperta l'America?",
+        "answers": ["XIII secolo", "XIV secolo", "XV secolo", "XVI secolo"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiamava il famoso imperatore romano che costruì un muro in Britannia?",
+        "answers": ["Cesare", "Nerone", "Adriano", "Augusto"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale personaggio storico è conosciuto come 'Il Piccolo Caporale'?",
+        "answers": ["Hitler", "Napoleone Bonaparte", "Stalin", "Mussolini"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale civiltà costruì le piramidi in Egitto?",
+        "answers": ["Greci", "Romani", "Egizi", "Cinesi"],
+        "correctIndex": 2
+      }
+    ],
+    "facile": [
+      {
+        "question": "In quale anno è caduto il Muro di Berlino?",
+        "answers": ["1985", "1989", "1991", "1993"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi era il re di Francia decapitato durante la Rivoluzione Francese?",
+        "answers": ["Luigi XIV", "Luigi XV", "Luigi XVI", "Luigi XVIII"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale famosa battaglia del 1815 segnò la sconfitta definitiva di Napoleone?",
+        "answers": ["Waterloo", "Austerlitz", "Lipsia", "Trafalgar"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi era il leader sovietico durante la Crisi dei missili di Cuba?",
+        "answers": ["Lenin", "Stalin", "Krusciov", "Breznev"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale anno è iniziata la Prima Guerra Mondiale?",
+        "answers": ["1912", "1914", "1916", "1918"],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "Quale trattato pose fine alla Prima Guerra Mondiale?",
+        "answers": ["Trattato di Parigi", "Trattato di Versailles", "Trattato di Vienna", "Trattato di Roma"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi fu il primo imperatore romano?",
+        "answers": ["Cesare", "Augusto", "Tiberio", "Caligola"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale famiglia governò Firenze durante il Rinascimento?",
+        "answers": ["Sforza", "Medici", "Visconti", "Borgia"],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale anno Cristoforo Colombo sbarcò in America?",
+        "answers": ["1489", "1492", "1498", "1501"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi era il presidente degli Stati Uniti durante la Guerra Civile Americana?",
+        "answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Ulysses S. Grant"],
+        "correctIndex": 2
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Quale fu la causa immediata dell'inizio della Prima Guerra Mondiale?",
+        "answers": ["L'assassinio dell'arciduca Francesco Ferdinando", "L'invasione tedesca del Belgio", "La rivoluzione russa", "Il crollo della borsa di Wall Street"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale fu l'anno dell'unificazione dell'Italia?",
+        "answers": ["1848", "1861", "1870", "1918"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi era il leader della Rivoluzione Cubana prima di Fidel Castro?",
+        "answers": ["Che Guevara", "Fulgencio Batista", "Raúl Castro", "José Martí"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale evento diede inizio alla Guerra dei Trent'anni?",
+        "answers": ["Defenestrazione di Praga", "Battaglia della Montagna Bianca", "Pace di Vestfalia", "Editto di Restituzione"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi era il viceré francese dell'Egitto che inaugurò il Canale di Suez?",
+        "answers": ["Muhammad Ali", "Ismail Pascià", "Said Pascià", "Abbas Hilmi II"],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "Quale filosofo tedesco scrisse 'Il Capitale'?",
+        "answers": ["Friedrich Nietzsche", "Immanuel Kant", "Karl Marx", "Georg Hegel"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale anno si verificò la Ribellione dei Boxer in Cina?",
+        "answers": ["1889-1890", "1898-1899", "1899-1901", "1902-1903"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi era il comandante vittorioso nella battaglia di Austerlitz?",
+        "answers": ["Wellington", "Nelson", "Napoleone", "Kutuzov"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale processo portò alla formazione dell'Impero Ottomano?",
+        "answers": ["Conquista di Costantinopoli", "Battaglia di Kossovo", "Conquista di Baghdad", "Caduta dei Mamelucchi"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Durante quale dinastia cinese è stata costruita la maggior parte della Grande Muraglia che esiste oggi?",
+        "answers": ["Han", "Tang", "Song", "Ming"],
+        "correctIndex": 3
+      }
+    ]
+  },
+  "Geografia": {
+    "bambino": [
+      {
+        "question": "Qual è la capitale dell'Italia?",
+        "answers": ["Milano", "Roma", "Napoli", "Firenze"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il fiume più lungo del mondo?",
+        "answers": ["Nilo", "Amazzoni", "Missouri", "Gange"],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale continente si trova l'Egitto?",
+        "answers": ["Europa", "Asia", "Africa", "America"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è la montagna più alta del mondo?",
+        "answers": ["Monte Bianco", "K2", "Monte Everest", "Kilimanjaro"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale paese ha la forma di uno stivale?",
+        "answers": ["Francia", "Spagna", "Italia", "Portogallo"],
+        "correctIndex": 2
+      }
+    ],
+    "facile": [
+      {
+        "question": "Qual è la capitale del Giappone?",
+        "answers": ["Pechino", "Seoul", "Tokyo", "Bangkok"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale oceano si trovano le isole Hawaii?",
+        "answers": ["Oceano Atlantico", "Oceano Indiano", "Oceano Pacifico", "Mar Mediterraneo"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale deserto copre gran parte del Nord Africa?",
+        "answers": ["Deserto del Kalahari", "Deserto del Gobi", "Deserto di Atacama", "Deserto del Sahara"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è il lago più profondo del mondo?",
+        "answers": ["Lago Vittoria", "Lago Superiore", "Lago Baikal", "Lago Tanganica"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale città italiana è famosa per i suoi canali?",
+        "answers": ["Roma", "Firenze", "Venezia", "Milano"],
+        "correctIndex": 2
+      }
+    ],
+    "medio": [
+      {
+        "question": "Quale stretto separa l'Europa dall'Africa?",
+        "answers": ["Stretto di Gibilterra", "Stretto dei Dardanelli", "Stretto di Messina", "Stretto di Malacca"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è il paese più piccolo del mondo?",
+        "answers": ["Monaco", "Nauru", "Città del Vaticano", "Liechtenstein"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale catena montuosa divide l'Europa dall'Asia?",
+        "answers": ["Alpi", "Carpazi", "Urali", "Pirenei"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è la capitale dell'Australia?",
+        "answers": ["Sydney", "Melbourne", "Canberra", "Perth"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Su quale continente si trova il lago Titicaca?",
+        "answers": ["Asia", "Africa", "Sud America", "Nord America"],
+        "correctIndex": 2
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Quale paese è diviso in 26 cantoni?",
+        "answers": ["Austria", "Germania", "Svizzera", "Belgio"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è il punto più basso della superficie terrestre?",
+        "answers": ["Mar Morto", "Fossa delle Marianne", "Death Valley", "Lago Assal"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale nazione è composta da più di 17.000 isole?",
+        "answers": ["Giappone", "Filippine", "Indonesia", "Maldive"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale città è attraversata dal Circolo Polare Artico?",
+        "answers": ["Reykjavik", "Oslo", "Helsinki", "Rovaniemi"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è la capitale della Nuova Zelanda?",
+        "answers": ["Auckland", "Wellington", "Christchurch", "Hamilton"],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "In quale paese si trova il vulcano Krakatoa?",
+        "answers": ["Filippine", "Giappone", "Indonesia", "Papua Nuova Guinea"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è il nome del deserto che copre gran parte della Namibia?",
+        "answers": ["Deserto del Namib", "Deserto del Kalahari", "Deserto di Atacama", "Deserto Arabico"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale fiume attraversa Budapest?",
+        "answers": ["Reno", "Danubio", "Vistola", "Elba"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è l'arcipelago più a nord d'Europa?",
+        "answers": ["Isole Fær Øer", "Isole Lofoten", "Svalbard", "Isole Åland"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale paese ha il maggior numero di laghi naturali?",
+        "answers": ["Russia", "Canada", "Finlandia", "Stati Uniti"],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "Cinema": {
+    "bambino": [
+      {
+        "question": "Qual è il nome del topo più famoso della Disney?",
+        "answers": ["Pippo", "Pluto", "Topolino", "Paperino"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi è la protagonista di 'Frozen - Il Regno di Ghiaccio'?",
+        "answers": ["Anna", "Elsa", "Olaf", "Kristoff"],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale film Disney c'è una principessa che perde una scarpetta di cristallo?",
+        "answers": ["Biancaneve", "La Bella Addormentata", "Cenerentola", "La Sirenetta"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale film Disney racconta la storia di un leone chiamato Simba?",
+        "answers": ["Dumbo", "Bambi", "Il Re Leone", "La carica dei 101"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale film si trova il personaggio Woody?",
+        "answers": ["Monsters Inc.", "Toy Story", "Cars", "Up"],
+        "correctIndex": 1
+      }
+    ],
+    "facile": [
+      {
+        "question": "Chi ha diretto il film 'E.T. l'extra-terrestre'?",
+        "answers": ["George Lucas", "Steven Spielberg", "James Cameron", "Tim Burton"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale attrice ha interpretato Rose in 'Titanic'?",
+        "answers": ["Julia Roberts", "Kate Winslet", "Nicole Kidman", "Sandra Bullock"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale film ha come protagonista un giovane mago con una cicatrice a forma di saetta?",
+        "answers": ["Il Signore degli Anelli", "Le Cronache di Narnia", "Harry Potter", "Percy Jackson"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale personaggio di Star Wars dice: 'Io sono tuo padre'?",
+        "answers": ["Obi-Wan Kenobi", "Yoda", "Palpatine", "Darth Vader"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Chi ha interpretato Iron Man nei film Marvel?",
+        "answers": ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"],
+        "correctIndex": 2
+      }
+    ],
+    "medio": [
+      {
+        "question": "Quale film ha vinto l'Oscar come miglior film nel 2020?",
+        "answers": ["1917", "Joker", "Parasite", "C'era una volta a... Hollywood"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha diretto 'Pulp Fiction'?",
+        "answers": ["Martin Scorsese", "Quentin Tarantino", "Francis Ford Coppola", "David Lynch"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale film racconta la storia di un uomo che invecchia al contrario?",
+        "answers": ["Forrest Gump", "Big Fish", "Il curioso caso di Benjamin Button", "The Truman Show"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale film Leonardo DiCaprio ha vinto il suo primo Oscar?",
+        "answers": ["Titanic", "The Departed", "The Revenant", "Django Unchained"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha diretto 'La vita è bella'?",
+        "answers": ["Federico Fellini", "Roberto Benigni", "Bernardo Bertolucci", "Giuseppe Tornatore"],
+        "correctIndex": 1
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Chi ha interpretato il protagonista in 'Taxi Driver'?",
+        "answers": ["Al Pacino", "Robert De Niro", "Jack Nicholson", "Dustin Hoffman"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale film giapponese ha ispirato 'Per un pugno di dollari' di Sergio Leone?",
+        "answers": ["I sette samurai", "La sfida del samurai", "Rashomon", "Kagemusha"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è stato il primo film a colori a vincere l'Oscar come miglior film?",
+        "answers": ["Via col vento", "Il mago di Oz", "Biancaneve e i sette nani", "Cantando sotto la pioggia"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha diretto 'Il settimo sigillo'?",
+        "answers": ["Federico Fellini", "Michelangelo Antonioni", "Ingmar Bergman", "Lars von Trier"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale regista ha diretto 'La corazzata Potëmkin'?",
+        "answers": ["Andrej Tarkovskij", "Sergej Ėjzenštejn", "Grigorij Aleksandrov", "Dziga Vertov"],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "Quale tecnica cinematografica è stata inventata da Lev Kuleshov?",
+        "answers": ["Lo slow motion", "Il piano sequenza", "L'effetto Kuleshov", "La soggettiva"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale film del 1941 è considerato uno dei più grandi capolavori cinematografici?",
+        "answers": ["Quarto potere", "Il grande dittatore", "La febbre dell'oro", "Casablanca"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha diretto 'Fino all'ultimo respiro', film simbolo della Nouvelle Vague?",
+        "answers": ["François Truffaut", "Jean-Luc Godard", "Claude Chabrol", "Éric Rohmer"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale movimento cinematografico tedesco è caratterizzato dall'uso espressivo di luci e ombre?",
+        "answers": ["Dadaismo", "Neue Sachlichkeit", "Espressionismo tedesco", "Bauhaus"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha scritto il saggio 'La teoria del montaggio delle attrazioni'?",
+        "answers": ["André Bazin", "Rudolf Arnheim", "Béla Balázs", "Sergej Ėjzenštejn"],
+        "correctIndex": 3
+      }
+    ]
+  },
+  "Musica": {
+    "bambino": [
+      {
+        "question": "Chi è il cantante dei Queen?",
+        "answers": ["Mick Jagger", "Freddie Mercury", "Roger Waters", "Elton John"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi strumenti è a corda?",
+        "answers": ["Flauto", "Tamburo", "Violino", "Tromba"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama la band dei fratelli Gallagher?",
+        "answers": ["Oasis", "Blur", "Coldplay", "Radiohead"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale cantante è conosciuto come 'The King of Rock and Roll'?",
+        "answers": ["Michael Jackson", "Elvis Presley", "Frank Sinatra", "Bob Dylan"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale strumento suonava principalmente Louis Armstrong?",
+        "answers": ["Sassofono", "Pianoforte", "Tromba", "Batteria"],
+        "correctIndex": 2
+      }
+    ],
+    "facile": [
+      {
+        "question": "Chi ha cantato 'Like a Rolling Stone'?",
+        "answers": ["Bob Dylan", "Bruce Springsteen", "Neil Young", "Johnny Cash"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale band ha pubblicato l'album 'The Dark Side of the Moon'?",
+        "answers": ["Led Zeppelin", "The Rolling Stones", "Pink Floyd", "The Who"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi è l'autore della 'Nona Sinfonia'?",
+        "answers": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Giuseppe Verdi"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale genere musicale è nato in Giamaica negli anni '60?",
+        "answers": ["Hip hop", "Funk", "Reggae", "Blues"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha cantato 'Bohemian Rhapsody'?",
+        "answers": ["The Beatles", "Queen", "The Rolling Stones", "Led Zeppelin"],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "Quale band britannica è conosciuta per l'album 'OK Computer'?",
+        "answers": ["Oasis", "Blur", "Radiohead", "Coldplay"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi è stato il batterista originale dei Beatles?",
+        "answers": ["Ringo Starr", "Pete Best", "Keith Moon", "John Bonham"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale artista italiano ha vinto il Festival di Sanremo 2021?",
+        "answers": ["Ermal Meta", "Maneskin", "Fedez", "Francesca Michielin"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale compositore italiano è famoso per le sue opere liriche come 'La Traviata'?",
+        "answers": ["Giacomo Puccini", "Giuseppe Verdi", "Gioachino Rossini", "Gaetano Donizetti"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale gruppo ha pubblicato l'album 'Nevermind' nel 1991?",
+        "answers": ["Pearl Jam", "Nirvana", "Soundgarden", "Alice in Chains"],
+        "correctIndex": 1
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Chi ha composto 'Le Quattro Stagioni'?",
+        "answers": ["Antonio Vivaldi", "Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale chitarrista è noto per la tecnica 'tapping' a due mani?",
+        "answers": ["Jimmy Page", "Jimi Hendrix", "Eddie Van Halen", "Eric Clapton"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale opera è considerata il primo vero musical moderno di Broadway?",
+        "answers": ["Oklahoma!", "West Side Story", "My Fair Lady", "Show Boat"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Chi ha fondato il gruppo musicale 'The Mothers of Invention'?",
+        "answers": ["Tom Waits", "Frank Zappa", "Captain Beefheart", "Lou Reed"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale cantante è conosciuto come 'The Boss'?",
+        "answers": ["Bono", "Bruce Springsteen", "Bob Dylan", "Neil Young"],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "Quale compositore ha introdotto il concetto di 'atonalità' nella musica?",
+        "answers": ["Igor Stravinsky", "Arnold Schönberg", "Béla Bartók", "Claude Debussy"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale musicista jazz è noto per l'album 'Kind of Blue'?",
+        "answers": ["Charlie Parker", "John Coltrane", "Miles Davis", "Thelonious Monk"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha composto l'opera 'Tristano e Isotta'?",
+        "answers": ["Richard Wagner", "Franz Liszt", "Johannes Brahms", "Richard Strauss"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale tecnica vocale è caratteristica del canto difonico mongolo?",
+        "answers": ["Falsetto", "Vibrato", "Khoomei", "Belting"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale compositore americano è noto per aver incorporato elementi del jazz nella musica classica?",
+        "answers": ["Aaron Copland", "George Gershwin", "Leonard Bernstein", "Charles Ives"],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "Arte": {
+    "bambino": [
+      {
+        "question": "Chi ha dipinto la Gioconda?",
+        "answers": ["Michelangelo", "Leonardo da Vinci", "Raffaello", "Botticelli"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il colore che si ottiene mescolando blu e giallo?",
+        "answers": ["Arancione", "Viola", "Verde", "Marrone"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale artista ha dipinto 'La notte stellata'?",
+        "answers": ["Claude Monet", "Pablo Picasso", "Vincent van Gogh", "Salvador Dalí"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi non è uno dei Ninja Turtles?",
+        "answers": ["Leonardo", "Donatello", "Michelangelo", "Raffaello"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale arte giapponese consiste nel piegare la carta?",
+        "answers": ["Ikebana", "Origami", "Manga", "Bonsai"],
+        "correctIndex": 1
+      }
+    ],
+    "facile": [
+      {
+        "question": "Chi ha dipinto il 'Cenacolo'?",
+        "answers": ["Michelangelo", "Leonardo da Vinci", "Raffaello", "Caravaggio"],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale museo si trova la Gioconda?",
+        "answers": ["Galleria degli Uffizi", "Museo del Prado", "Louvre", "National Gallery"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale movimento artistico è caratterizzato dal uso di forme geometriche semplici?",
+        "answers": ["Barocco", "Cubismo", "Impressionismo", "Rinascimento"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi ha scolpito la 'Pietà' conservata nella Basilica di San Pietro?",
+        "answers": ["Donatello", "Bernini", "Michelangelo", "Canova"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale artista è noto per i suoi 'Campbell's Soup Cans'?",
+        "answers": ["Roy Lichtenstein", "Andy Warhol", "Jackson Pollock", "Mark Rothko"],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "Quale artista è associato con il movimento surrealista?",
+        "answers": ["Pablo Picasso", "Salvador Dalí", "Claude Monet", "Henri Matisse"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi ha dipinto 'Il bacio'?",
+        "answers": ["Gustav Klimt", "Édouard Manet", "Egon Schiele", "Auguste Renoir"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale movimento artistico iniziò con l'opera 'Impression, soleil levant' di Claude Monet?",
+        "answers": ["Cubismo", "Dadaismo", "Impressionismo", "Espressionismo"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha dipinto la 'Cappella Sistina'?",
+        "answers": ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Donatello"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale artista è conosciuto per aver tagliato il suo orecchio?",
+        "answers": ["Vincent van Gogh", "Paul Gauguin", "Paul Cézanne", "Edvard Munch"],
+        "correctIndex": 0
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Quale architetto ha progettato la Sagrada Familia a Barcellona?",
+        "answers": ["Frank Lloyd Wright", "Le Corbusier", "Antoni Gaudí", "Mies van der Rohe"],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale città si trova il dipinto 'Guernica' di Pablo Picasso?",
+        "answers": ["Barcellona", "Madrid", "Parigi", "New York"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi ha dipinto 'La persistenza della memoria' con orologi molli?",
+        "answers": ["René Magritte", "Salvador Dalí", "Max Ernst", "Joan Miró"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale italiano è considerato uno dei pionieri del Futurismo?",
+        "answers": ["Umberto Boccioni", "Giorgio de Chirico", "Amedeo Modigliani", "Alberto Giacometti"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale movimento artistico americano è rappresentato da Jackson Pollock?",
+        "answers": ["Pop Art", "Espressionismo astratto", "Minimalismo", "Realismo"],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "Chi ha scritto il manifesto del movimento Dadaista?",
+        "answers": ["Marcel Duchamp", "Tristan Tzara", "Hugo Ball", "Hans Arp"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale artista tedesco è noto per la serie di dipinti 'Case sull'acqua'?",
+        "answers": ["Caspar David Friedrich", "Max Beckmann", "Emil Nolde", "Otto Dix"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi ha fondato la scuola Bauhaus?",
+        "answers": ["Paul Klee", "Wassily Kandinsky", "Walter Gropius", "László Moholy-Nagy"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale tecnica pittorica è stata perfezionata da Jan van Eyck?",
+        "answers": ["Tempera", "Affresco", "Pittura a olio", "Acquarello"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale movimento artistico post-impressionista è associato a Paul Cézanne?",
+        "answers": ["Puntinismo", "Fauvismo", "Simbolismo", "Post-impressionismo"],
+        "correctIndex": 3
+      }
+    ]
+  }
+}
