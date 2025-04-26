@@ -3,17 +3,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(135deg, #1a2a6c, #4b3f72, #8a508f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     min-height: 100vh;
     color: #fff;
     line-height: 1.6;
     padding: 1rem;
+    text-align: center;
 }
 
 @keyframes gradient {
@@ -40,6 +42,27 @@ body {
     margin-top: 2rem;
 }
 
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    min-height: 80vh;
+    margin-top: 2rem;
+}
+
+.screen-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Add consistent center alignment for common elements */
+p, h2, h3, div, label, .form-group, .category-instruction {
+    text-align: center;
+}
+
 #game-title {
     text-align: center;
     margin-bottom: 2rem;
@@ -50,7 +73,7 @@ h1 {
     font-weight: 700;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     margin: 0;
-    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background: linear-gradient(90deg, #8a508f, #4b3f72, #4b3f72, #8a508f);
     background-size: 300% auto;
     color: transparent;
     -webkit-background-clip: text;
@@ -96,19 +119,19 @@ h3 {
 }
 
 .primary-btn, .primary-button {
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-    color: #333;
-    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+    background: linear-gradient(45deg, #6a4c93, #8a508f);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(106, 76, 147, 0.4);
 }
 
 .primary-btn:hover, .primary-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
+    box-shadow: 0 6px 20px rgba(106, 76, 147, 0.6);
 }
 
 .primary-btn:active, .primary-button:active {
     transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(255, 154, 158, 0.4);
+    box-shadow: 0 3px 10px rgba(106, 76, 147, 0.4);
 }
 
 .secondary-btn, .secondary-button {
@@ -154,13 +177,13 @@ h3 {
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 5px rgba(255, 154, 158, 0.5);
+        box-shadow: 0 0 5px rgba(106, 76, 147, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(255, 154, 158, 0.8);
+        box-shadow: 0 0 20px rgba(106, 76, 147, 0.8);
     }
     100% {
-        box-shadow: 0 0 5px rgba(255, 154, 158, 0.5);
+        box-shadow: 0 0 5px rgba(106, 76, 147, 0.5);
     }
 }
 
@@ -176,16 +199,28 @@ h3 {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .game-rules ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
+    list-style-type: none;
+    margin: 0.5rem auto;
+    width: 80%;
+    max-width: 500px;
 }
 
 .game-rules li {
     margin-bottom: 0.5rem;
+    text-align: center;
+    position: relative;
+    padding-left: 20px;
+}
+
+.game-rules li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #8a508f;
 }
 
 /* Setup Screen */
@@ -197,6 +232,7 @@ h3 {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 input[type="number"],
@@ -231,6 +267,7 @@ select:focus {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 /* Category Selection Screen */
@@ -258,7 +295,7 @@ select:focus {
 }
 
 .category-card.selected {
-    background-color: rgba(255, 154, 158, 0.5);
+    background-color: rgba(106, 76, 147, 0.5);
     border: 2px solid #fff;
     transform: scale(1.05);
 }
@@ -268,11 +305,14 @@ select:focus {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 15px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .selected-list {
     list-style: none;
     margin-top: 10px;
+    display: inline-block;
+    text-align: left;
 }
 
 .selected-list li {
@@ -281,6 +321,7 @@ select:focus {
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: 500;
+    text-align: center;
 }
 
 /* Game Round Screen */
@@ -295,7 +336,7 @@ select:focus {
 .score-display {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #ff9a9e;
+    color: #8a508f;
 }
 
 .difficulty-section {
@@ -332,7 +373,7 @@ select:focus {
 .points {
     font-size: 0.8rem;
     margin-top: 5px;
-    color: #ff9a9e;
+    color: #8a508f;
 }
 
 .category-section {
@@ -371,12 +412,19 @@ select:focus {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.category-info, .difficulty-info, .timer-container {
+    flex: 1;
+    text-align: center;
+    margin: 5px;
 }
 
 .timer-container {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #ff9a9e;
+    color: #8a508f;
 }
 
 .question-container {
@@ -406,9 +454,10 @@ select:focus {
     border-radius: 8px;
     padding: 15px;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
@@ -427,10 +476,12 @@ select:focus {
     border-radius: 50%;
     margin-right: 10px;
     font-weight: 600;
+    text-align: center;
 }
 
 .answer-text {
     flex-grow: 1;
+    text-align: center;
 }
 
 /* Result Screen */
@@ -485,10 +536,14 @@ select:focus {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .scores-list {
     list-style: none;
+    display: inline-block;
+    width: 80%;
+    max-width: 400px;
 }
 
 .scores-list li {
@@ -542,19 +597,4 @@ select:focus {
     .timer-container {
         margin-top: 0.8rem;
     }
-}
-
-.app-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    min-height: 80vh;
-    margin-top: 2rem;
-}
-
-.screen-content {
-    padding: 1rem;
 } 

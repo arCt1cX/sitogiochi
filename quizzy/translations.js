@@ -217,12 +217,6 @@ function applyGameTranslations() {
     // Update HTML lang attribute
     document.documentElement.lang = lang;
     
-    // Update the language toggle button
-    const languageToggle = document.getElementById('languageToggle');
-    if (languageToggle) {
-        languageToggle.textContent = lang.toUpperCase();
-    }
-    
     // Update home button text
     document.getElementById('homeText').textContent = translations.home;
     
@@ -333,20 +327,25 @@ function getGameTranslation(key, subKey = null) {
 
 // Get the user's language preference
 function getUserLanguage() {
-    // Check URL parameter first
+    // First, try to get the language from the main site
+    try {
+        // If available, use the getLanguage function from the main site
+        if (typeof getLanguage === 'function') {
+            const mainSiteLang = getLanguage();
+            if (mainSiteLang === 'it' || mainSiteLang === 'en') {
+                return mainSiteLang;
+            }
+        }
+    } catch (e) {
+        console.log('Error retrieving language from main site:', e);
+    }
+    
+    // Fallback to URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     
     if (langParam && (langParam === 'en' || langParam === 'it')) {
-        // Save preference in localStorage
-        localStorage.setItem('quizzy_language', langParam);
         return langParam;
-    }
-    
-    // Check localStorage
-    const savedLang = localStorage.getItem('quizzy_language');
-    if (savedLang && (savedLang === 'en' || savedLang === 'it')) {
-        return savedLang;
     }
     
     // Check browser language
@@ -359,19 +358,5 @@ function getUserLanguage() {
     return 'en';
 }
 
-// Toggle between languages
-function toggleLanguage() {
-    const currentLang = getUserLanguage();
-    const newLang = currentLang === 'en' ? 'it' : 'en';
-    
-    // Save new language preference
-    localStorage.setItem('quizzy_language', newLang);
-    
-    // Reload the page with the new language parameter
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', newLang);
-    window.location.href = url.toString();
-}
-
-// Add the function to apply translations on page load
+// Apply translations on page load
 document.addEventListener('DOMContentLoaded', applyGameTranslations); 
