@@ -1382,59 +1382,70 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set points earned
         pointsEarned.textContent = points;
         
-        // COMPLETELY REWORKED APPROACH: Replace the continue button with a direct approach
-        const continueButtonContainer = document.querySelector('.result-actions');
-        if (continueButtonContainer) {
-            // Clear any existing content
-            continueButtonContainer.innerHTML = '';
+        // Get the continue button
+        const continueButton = document.getElementById('continue-game');
+        
+        // We'll use a unified approach that works for both normal rounds and shock rounds
+        if (continueButton) {
+            // Create a new button to replace the existing one
+            const newButton = document.createElement('button');
+            newButton.id = 'continue-game';
+            newButton.className = 'primary-button';
+            newButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
             
-            // Create a fresh button with inline onclick attribute
-            const freshButton = document.createElement('button');
-            freshButton.id = 'continue-game';
-            freshButton.className = 'primary-button';
-            freshButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+            // Replace the button
+            if (continueButton.parentNode) {
+                continueButton.parentNode.replaceChild(newButton, continueButton);
+            }
             
-            // Add direct onclick that bypasses event listeners
-            freshButton.setAttribute('onclick', `
-                console.log('Direct onclick handler activated');
+            // Add click handler that works for both normal and shock rounds
+            newButton.addEventListener('click', function() {
+                console.log("Continue button clicked - transitioning to next turn/player");
                 
-                // Clear shock styling
-                document.body.classList.remove('shock-round');
-                document.querySelectorAll('.screen').forEach(s => s.classList.remove('shock-round'));
-                
-                // Reset game state for next player
-                const wasShockRound = gameState.isShockRound;
-                gameState.isShockRound = false;
-                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-                gameState.currentCategory = null;
-                gameState.currentDifficulty = null;
-                
-                // Update round counter if needed
-                if (gameState.currentPlayerIndex === 0) {
-                    gameState.roundsCompleted++;
+                // Check for winner first
+                for (let i = 0; i < gameState.players.length; i++) {
+                    if (gameState.players[i].score >= gameState.winningScore && gameState.roundsCompleted > 0) {
+                        console.log("We have a winner!");
+                        showGameOver(i);
+                        return;
+                    }
                 }
                 
-                // Check if current player should skip
+                // Clean up any shock round styling
+                cleanupShockRound();
+                
+                // Move to next player
+                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                console.log("Moving to player index:", gameState.currentPlayerIndex);
+                
+                // Check if this player should skip their turn
                 if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                    console.log("Player should skip turn");
                     showForceSkipMessage();
                     return;
                 }
                 
-                // Check if this player should have a shock round
-                const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-                const needsShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+                // Reset for next round
+                gameState.currentCategory = null;
+                gameState.currentDifficulty = null;
                 
-                if (needsShockRound) {
+                // Check if we've completed a round
+                if (gameState.currentPlayerIndex === 0) {
+                    gameState.roundsCompleted++;
+                    console.log("Completed round:", gameState.roundsCompleted);
+                }
+                
+                // Check if next player needs a shock round
+                const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+                gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+                
+                if (gameState.isShockRound) {
                     currentPlayer.hadShockRound = true;
-                    gameState.isShockRound = true;
                     setupShockRound(currentPlayer);
                 } else {
                     setupGameRound();
                 }
-            `);
-            
-            // Add button to container
-            continueButtonContainer.appendChild(freshButton);
+            });
         }
         
         // Show result screen
