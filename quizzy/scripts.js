@@ -1471,9 +1471,16 @@ document.addEventListener('DOMContentLoaded', function() {
             correctButton.classList.add('correct-answer-btn');
         }
         
+        // If this is a shock round, set flag to skip next turn (same as wrong answer)
+        if (gameState.isShockRound) {
+            console.log("Shock round timeout - setting skip next turn flag");
+            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+            currentPlayer.skipNextTurn = true;
+        }
+        
         // Wait a moment then show the result screen
         setTimeout(() => {
-            showResult(false, 0, true);
+            showResult(false, 0, true, gameState.isShockRound);
         }, 2000);
     }
     
