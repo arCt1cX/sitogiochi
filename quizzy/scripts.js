@@ -516,9 +516,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Add warning for bambino difficulty
                 if (difficulty === 'bambino') {
+                    // Remove standard point display
+                    const pointsDisplay = button.querySelector('.difficulty-points');
+                    if (pointsDisplay) {
+                        pointsDisplay.style.display = 'none';
+                    }
+                    
                     const warningLabel = document.createElement('span');
                     warningLabel.className = 'difficulty-warning';
-                    warningLabel.textContent = '(1/-2 points & 5s time)';
+                    warningLabel.textContent = getGameTranslation('bambinoWarning') || '(1/-2 punti & 5s tempo)';
                     warningLabel.style.fontSize = '0.8em';
                     warningLabel.style.color = 'red';
                     warningLabel.style.display = 'block';
@@ -612,6 +618,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('current-difficulty').textContent = getGameTranslation(gameState.currentDifficulty);
         document.getElementById('question-text').textContent = question.question;
         
+        // Remove any existing bambino warning before generating new answer buttons
+        const existingWarning = document.getElementById('bambino-game-warning');
+        if (existingWarning) {
+            existingWarning.remove();
+        }
+        
         // Generate answer buttons
         generateAnswerButtons(question);
         
@@ -636,7 +648,7 @@ document.addEventListener('DOMContentLoaded', function() {
             warningDiv.style.color = 'red';
             warningDiv.style.fontWeight = 'bold';
             warningDiv.style.marginBottom = '10px';
-            warningDiv.textContent = '⚠️ Bambino mode: 5 seconds to answer! Wrong answer: -2 points!';
+            warningDiv.textContent = '⚠️ ' + (getGameTranslation('bambinoGameWarning') || 'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!');
             container.parentNode.insertBefore(warningDiv, container);
         }
         
@@ -675,11 +687,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let timeLimit;
         switch (gameState.currentDifficulty) {
             case 'bambino': timeLimit = 5; break;  // 5 seconds for bambino
-            case 'facile': timeLimit = 20; break;
-            case 'medio': timeLimit = 15; break;
-            case 'esperto': timeLimit = 10; break;
-            case 'laureato': timeLimit = 10; break;
-            default: timeLimit = 20;
+            default: timeLimit = 30; // 30 seconds for all other difficulties
         }
         
         let timeLeft = timeLimit;
@@ -705,13 +713,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle when time runs out
     function timeOut() {
-        document.getElementById('answer-feedback').textContent = "Tempo scaduto!";
+        // Clear any remaining timer
+        clearInterval(gameState.timer);
+        
+        document.getElementById('answer-feedback').textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
         document.getElementById('answer-feedback').style.color = "red";
+        
+        // Disable answer buttons
         disableAnswerButtons();
         
+        // Highlight correct answer
+        const correctIndex = gameState.currentQuestion.correctIndex;
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        if (answerButtons.length > correctIndex) {
+            answerButtons[correctIndex].classList.add('correct-answer-btn');
+        }
+        
         setTimeout(() => {
-            nextQuestion();
+            showResult(false, 0, true);
         }, 2000);
+    }
+    
+    // Disable all answer buttons
+    function disableAnswerButtons() {
+        const buttons = document.querySelectorAll('.answer-btn');
+        buttons.forEach(button => {
+            // Disable the button
+            button.disabled = true;
+            button.style.pointerEvents = 'none';
+            button.style.opacity = '0.7';
+            
+            // Remove the click event listeners by cloning and replacing
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+        });
     }
     
     // Handle a player's answer
@@ -727,6 +762,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const answerButtons = document.querySelectorAll('.answer-btn');
         const selectedButton = answerButtons[answerIndex];
         const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
+        
+        // Disable all buttons to prevent multiple answers
+        disableAnswerButtons();
         
         // Apply visual feedback
         if (isCorrect) {
@@ -815,6 +853,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // We have a winner
             showGameOver(winnerIndex);
             return;
+        }
+        
+        // Clean up any warning messages
+        const existingWarning = document.getElementById('bambino-game-warning');
+        if (existingWarning) {
+            existingWarning.remove();
         }
         
         // Move to next player
