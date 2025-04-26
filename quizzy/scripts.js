@@ -265,7 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle category selection on click
     function toggleCategorySelection(categoryCard) {
         const selectedCategories = document.querySelectorAll('.category-card.selected');
-        const maxCategories = gameState.gameMode === 'shared' ? 2 : 4;
+        // Limit to 2 categories in both modes now
+        const maxCategories = 2;
         
         // Remove any existing error message
         const existingError = document.getElementById('max-categories-error');
@@ -330,10 +331,60 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedCategories = Array.from(selectedCards).map(card => card.dataset.category);
         
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        currentPlayer.categories = selectedCategories;
+        
+        if (gameState.gameMode === 'individual') {
+            // In individual mode, add 2 random categories in addition to the 2 selected ones
+            const availableCategories = gameState.categories.filter(
+                category => !selectedCategories.includes(category)
+            );
+            
+            // Get 2 random categories
+            const randomCategories = getRandomSubset(availableCategories, 2);
+            
+            // Combine selected and random categories
+            currentPlayer.categories = [...selectedCategories, ...randomCategories];
+            
+            // Show a message about the random categories that were added
+            const lang = getUserLanguage();
+            const randomCategoriesText = randomCategories.map(
+                cat => getGameTranslation('categories', cat) || cat
+            ).join(', ');
+            
+            const randomCatsMsg = document.createElement('div');
+            randomCatsMsg.className = 'info-message';
+            
+            if (lang === 'it') {
+                randomCatsMsg.textContent = `Categorie aggiunte dal gioco: ${randomCategoriesText}`;
+            } else {
+                randomCatsMsg.textContent = `Categories added by the game: ${randomCategoriesText}`;
+            }
+            
+            // Insert message in a visible area
+            const container = document.querySelector('.selected-categories-container');
+            if (container) {
+                // Remove any existing message
+                const existingMsg = container.querySelector('.info-message');
+                if (existingMsg) {
+                    existingMsg.remove();
+                }
+                
+                container.appendChild(randomCatsMsg);
+                
+                // Set a timeout to remove the message when proceeding
+                setTimeout(() => {
+                    if (randomCatsMsg.parentNode) {
+                        randomCatsMsg.remove();
+                    }
+                }, 4000);
+            }
+        } else {
+            // Shared mode - just save the selected categories
+            currentPlayer.categories = selectedCategories;
+        }
         
         // Store in playerCategories for shared mode
-        gameState.playerCategories[gameState.currentPlayerIndex] = selectedCategories;
+        gameState.playerCategories[gameState.currentPlayerIndex] = 
+            gameState.gameMode === 'individual' ? currentPlayer.categories : selectedCategories;
     }
     
     // Combine categories for shared mode
