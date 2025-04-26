@@ -556,16 +556,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         
         // Update player info
-        document.getElementById('current-player-name').textContent = currentPlayer.name;
-        document.getElementById('current-player-score').textContent = currentPlayer.score;
+        const playerNameEl = document.getElementById('current-player-name');
+        const playerScoreEl = document.getElementById('current-player-score');
+        
+        if (playerNameEl) playerNameEl.textContent = currentPlayer.name;
+        if (playerScoreEl) playerScoreEl.textContent = currentPlayer.score;
         
         // Clear any previous assigned elements
         const previousAssigned = document.querySelectorAll('.assigned-element');
         previousAssigned.forEach(el => el.remove());
         
         // Make sure both sections are back to default state
-        document.querySelector('.category-section').classList.remove('hidden');
-        document.querySelector('.difficulty-section').classList.remove('hidden');
+        const categorySection = document.querySelector('.category-section');
+        const difficultySection = document.querySelector('.difficulty-section');
+        
+        if (categorySection) categorySection.classList.remove('hidden');
+        if (difficultySection) difficultySection.classList.remove('hidden');
         
         // Reset shock round styling if it exists
         document.body.classList.remove('shock-round');
@@ -576,11 +582,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add trophy icon if this player is leading
         const leadingPlayerIndex = findLeadingPlayer();
-        if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0) {
+        if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0 && playerNameEl) {
             const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
             </svg>`;
-            document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${crownIcon}`;
+            playerNameEl.innerHTML = `${currentPlayer.name} ${crownIcon}`;
         }
         
         // Check if this is a shock round
@@ -607,18 +613,22 @@ document.addEventListener('DOMContentLoaded', function() {
             gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
             
             // Hide category section, show difficulty section
-            document.querySelector('.category-section').classList.add('hidden');
-            document.querySelector('.difficulty-section').classList.remove('hidden');
+            if (categorySection) categorySection.classList.add('hidden');
+            if (difficultySection) difficultySection.classList.remove('hidden');
             
             // Show assigned category
-            const assignedCategoryEl = document.createElement('div');
-            assignedCategoryEl.className = 'assigned-element';
-            const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-            assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
-            document.querySelector('.player-info').appendChild(assignedCategoryEl);
+            const playerInfoSection = document.querySelector('.player-info');
+            if (playerInfoSection) {
+                const assignedCategoryEl = document.createElement('div');
+                assignedCategoryEl.className = 'assigned-element';
+                const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+                assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
+                playerInfoSection.appendChild(assignedCategoryEl);
+            }
             
             // Update instruction text
-            document.getElementById('difficulty-title').textContent = getGameTranslation('difficultyTitle');
+            const difficultyTitle = document.getElementById('difficulty-title');
+            if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
             
             // Show only the 2 random difficulties
             updateDifficultyButtons(gameState.availableOptions);
@@ -632,18 +642,22 @@ document.addEventListener('DOMContentLoaded', function() {
             gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
             
             // Hide difficulty section, show category section
-            document.querySelector('.difficulty-section').classList.add('hidden');
-            document.querySelector('.category-section').classList.remove('hidden');
+            if (difficultySection) difficultySection.classList.add('hidden');
+            if (categorySection) categorySection.classList.remove('hidden');
             
             // Show assigned difficulty
-            const assignedDifficultyEl = document.createElement('div');
-            assignedDifficultyEl.className = 'assigned-element';
-            const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
-            assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
-            document.querySelector('.player-info').appendChild(assignedDifficultyEl);
+            const playerInfoSection = document.querySelector('.player-info');
+            if (playerInfoSection) {
+                const assignedDifficultyEl = document.createElement('div');
+                assignedDifficultyEl.className = 'assigned-element';
+                const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
+                assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
+                playerInfoSection.appendChild(assignedDifficultyEl);
+            }
             
             // Update instruction text
-            document.getElementById('category-selection-title').textContent = getGameTranslation('categorySelectionTitle');
+            const categoryTitle = document.getElementById('category-selection-title');
+            if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
             
             // Generate category buttons - only for the 2 random categories
             generateCategoryButtons(gameState.availableOptions);
@@ -788,19 +802,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Clear game round screen content and add shock elements
         const screenContent = document.querySelector('#game-round-screen .screen-content');
+        if (!screenContent) {
+            console.error("Cannot find game round screen content");
+            return;
+        }
+        
         // Preserve player info
         const playerInfo = document.querySelector('.player-info');
         
         // Clear everything except player info
         screenContent.innerHTML = '';
-        screenContent.appendChild(playerInfo);
+        if (playerInfo) screenContent.appendChild(playerInfo);
         screenContent.appendChild(shockTitle);
         screenContent.appendChild(shockInfo);
         screenContent.appendChild(assignedContainer);
         screenContent.appendChild(continueBtn);
         
-        // Add event listener to continue button
-        continueBtn.addEventListener('click', handleShockRoundStart);
+        // Remove old event listeners by creating a new button with the same properties
+        continueBtn.addEventListener('click', function() {
+            console.log("Shock round start button clicked");
+            handleShockRoundStart();
+        });
         
         // Show game round screen
         showScreen(screens.gameRound);
@@ -833,9 +855,21 @@ document.addEventListener('DOMContentLoaded', function() {
         gameState.currentQuestion = question;
         
         // Update question display
-        document.getElementById('current-category').textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-        document.getElementById('current-difficulty').textContent = getGameTranslation(gameState.currentDifficulty);
-        document.getElementById('question-text').textContent = question.question;
+        const currentCategoryEl = document.getElementById('current-category');
+        const currentDifficultyEl = document.getElementById('current-difficulty');
+        const questionTextEl = document.getElementById('question-text');
+        
+        if (currentCategoryEl) {
+            currentCategoryEl.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+        }
+        
+        if (currentDifficultyEl) {
+            currentDifficultyEl.textContent = getGameTranslation(gameState.currentDifficulty);
+        }
+        
+        if (questionTextEl) {
+            questionTextEl.textContent = question.question;
+        }
         
         // Remove any existing bambino warning
         const existingWarning = document.getElementById('bambino-game-warning');
@@ -845,6 +879,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Generate answer buttons
         const answerButtonsContainer = document.getElementById('answer-buttons');
+        if (!answerButtonsContainer) {
+            console.error("Cannot find answer buttons container");
+            return;
+        }
+        
         answerButtonsContainer.innerHTML = '';
         
         const letters = ['A', 'B', 'C', 'D'];
@@ -863,7 +902,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
                 'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
             
-            answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
+            if (answerButtonsContainer.parentNode) {
+                answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
+            }
         }
         
         // Add shock round penalty warning
@@ -881,7 +922,9 @@ document.addEventListener('DOMContentLoaded', function() {
             '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' : 
             '⚠️ SHOCK ROUND: Wrong answer = Skip your next turn!';
         
-        answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
+        if (answerButtonsContainer.parentNode) {
+            answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
+        }
         
         question.answers.forEach((answer, index) => {
             const button = document.createElement('button');
