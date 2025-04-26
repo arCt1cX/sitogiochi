@@ -326,17 +326,10 @@ function getGameTranslation(key, subKey = null) {
 
 // Get the user's language preference
 function getUserLanguage() {
-    // First, try to get the language from the main site
-    try {
-        // If available, use the getLanguage function from the main site
-        if (typeof getLanguage === 'function') {
-            const mainSiteLang = getLanguage();
-            if (mainSiteLang === 'it' || mainSiteLang === 'en') {
-                return mainSiteLang;
-            }
-        }
-    } catch (e) {
-        console.log('Error retrieving language from main site:', e);
+    // First, check localStorage which is used by the main site
+    const storedLang = localStorage.getItem('lang');
+    if (storedLang && (storedLang === 'it' || storedLang === 'en')) {
+        return storedLang;
     }
     
     // Fallback to URL parameter
