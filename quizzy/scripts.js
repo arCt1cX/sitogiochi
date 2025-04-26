@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
             input.type = 'text';
             input.id = `player-${i+1}`;
             input.className = 'player-name-input';
-            input.value = `${getGameTranslation('playerNameLabel')} ${i+1}`;
+            input.placeholder = `${getGameTranslation('playerNameLabel')} ${i+1}`;
             
             inputGroup.appendChild(label);
             inputGroup.appendChild(input);
