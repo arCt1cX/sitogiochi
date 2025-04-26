@@ -1744,6 +1744,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const needsShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
             console.log("Next player needs shock round:", needsShockRound);
             
+            // Completely rebuild game round screen for next player
+            rebuildGameRoundScreen();
+            
             // Force the game to update all screens first to ensure clean state
             setTimeout(() => {
                 try {
@@ -1765,13 +1768,86 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Last resort recovery - go to welcome screen
                     showScreen(screens.welcome);
                 }
-            }, 100); // Short delay to allow DOM to update properly
+            }, 200); // Increased delay to ensure DOM is fully updated
         } catch (error) {
             console.error("Error in forceNextTurn:", error);
             
             // Try to recover by going to welcome screen
             showScreen(screens.welcome);
         }
+    }
+    
+    // Function to completely rebuild game round screen HTML
+    function rebuildGameRoundScreen() {
+        console.log("Completely rebuilding game round screen");
+        
+        // Get the game round screen
+        const gameRoundScreen = document.getElementById('game-round-screen');
+        if (!gameRoundScreen) {
+            console.error("Game round screen not found");
+            return;
+        }
+        
+        // Store original classes to preserve them
+        const originalClasses = gameRoundScreen.className;
+        
+        // Save the previous player info if it exists
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        
+        // Completely rebuild the screen from scratch
+        gameRoundScreen.innerHTML = `
+            <div class="screen-content">
+                <div class="player-info">
+                    <h2><span id="current-player-name">${currentPlayer ? currentPlayer.name : ''}</span> - <span id="current-player-score">${currentPlayer ? currentPlayer.score : '0'}</span> ${getGameTranslation('points')}</h2>
+                </div>
+                
+                <div class="category-section">
+                    <h3 id="category-selection-title">${getGameTranslation('categorySelectionTitle')}</h3>
+                    <div id="category-buttons" class="category-buttons-container"></div>
+                </div>
+                
+                <div class="difficulty-section">
+                    <h3 id="difficulty-title">${getGameTranslation('difficultyTitle')}</h3>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn" data-difficulty="bambino">
+                            ${getGameTranslation('bambino')}
+                            <span class="points">1 ${getGameTranslation('point')}</span>
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="facile">
+                            ${getGameTranslation('facile')}
+                            <span class="points">2 ${getGameTranslation('points')}</span>
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="medio">
+                            ${getGameTranslation('medio')}
+                            <span class="points">3 ${getGameTranslation('points')}</span>
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="esperto">
+                            ${getGameTranslation('esperto')}
+                            <span class="points">4 ${getGameTranslation('points')}</span>
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="laureato">
+                            ${getGameTranslation('laureato')}
+                            <span class="points">5 ${getGameTranslation('points')}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Restore original classes
+        gameRoundScreen.className = originalClasses;
+        
+        // Remove shock-round class specifically
+        gameRoundScreen.classList.remove('shock-round');
+        
+        // Re-add event listeners for difficulty buttons
+        const difficultyButtons = gameRoundScreen.querySelectorAll('.difficulty-btn');
+        difficultyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const difficulty = this.getAttribute('data-difficulty');
+                selectDifficulty(difficulty);
+            });
+        });
     }
     
     // Forced skip message with clean implementation
