@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const leadingPlayerIndex = findLeadingPlayer();
         if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0) {
             const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
+                <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
             </svg>`;
             document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${crownIcon}`;
         }
@@ -598,7 +598,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const isCorrect = answerIndex === gameState.currentQuestion.correctIndex;
         let pointsEarned = 0;
         
+        // Get all answer buttons
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        const selectedButton = answerButtons[answerIndex];
+        const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
+        
+        // Apply visual feedback
         if (isCorrect) {
+            // Correct answer - highlight in green
+            selectedButton.classList.add('correct-answer-btn');
+            
             // Award points based on difficulty
             switch (gameState.currentDifficulty) {
                 case 'bambino': pointsEarned = 1; break;
@@ -613,17 +622,33 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentPlayer = gameState.players[gameState.currentPlayerIndex];
             currentPlayer.score += pointsEarned;
             
-            // Show result
-            showResult(true, pointsEarned);
+            // Wait a moment before showing result screen
+            setTimeout(() => {
+                showResult(true, pointsEarned);
+            }, 1000);
         } else {
-            // Wrong answer - no points
-            showResult(false, 0);
+            // Wrong answer - highlight selected in red, correct in green
+            selectedButton.classList.add('incorrect-answer-btn');
+            correctButton.classList.add('correct-answer-btn');
+            
+            // Wait a moment before showing result screen
+            setTimeout(() => {
+                showResult(false, 0);
+            }, 1500);
         }
     }
     
     // Handle time running out
     function handleTimeUp() {
-        showResult(false, 0, true);
+        // Highlight the correct answer when time is up
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
+        correctButton.classList.add('correct-answer-btn');
+        
+        // Wait a moment before showing result screen
+        setTimeout(() => {
+            showResult(false, 0, true);
+        }, 1500);
     }
     
     // Show the result screen
@@ -705,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Trophy icon SVG
         const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
+            <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
         </svg>`;
         
         // Update winner info
@@ -730,7 +755,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Trophy icon SVG
         const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
+            <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
         </svg>`;
         
         sortedPlayers.forEach((player, index) => {

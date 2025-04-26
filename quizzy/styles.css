@@ -516,7 +516,7 @@ select:focus {
 .answer-btn {
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 20px;
     cursor: pointer;
@@ -790,8 +790,11 @@ select:focus {
 .trophy-icon {
     margin-left: 8px;
     vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: -1px;
     stroke: #ffd700;
-    filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.5));
+    filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.8));
     animation: trophy-pulse 2s infinite ease-in-out;
 }
 
@@ -855,4 +858,24 @@ select:focus {
     .assigned-element h3 {
         font-size: 1.1rem;
     }
+}
+
+.correct-answer-btn {
+    background-color: rgba(46, 204, 113, 0.8) !important;
+    border: 2px solid #2ecc71 !important;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.6) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease !important;
+}
+
+.incorrect-answer-btn {
+    background-color: rgba(231, 76, 60, 0.8) !important;
+    border: 2px solid #e74c3c !important;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.6) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease !important;
+}
+
+.answer-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 } 

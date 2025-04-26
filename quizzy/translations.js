@@ -11,9 +11,9 @@ const gameTranslations = {
         'gameRules': `
             <p>Quizzy è un gioco a quiz per più giocatori:</p>
             <div class="rules-list">
-                <p class="rule-item">Ogni giocatore sceglie categorie e livelli di difficoltà</p>
-                <p class="rule-item">Rispondi correttamente per guadagnare punti</p>
-                <p class="rule-item">Più alta è la difficoltà, più punti guadagni</p>
+                <p class="rule-item">Ogni giocatore seleziona le categorie preferite all'inizio del gioco</p>
+                <p class="rule-item">Ad ogni turno, il gioco sceglie casualmente la categoria o la difficoltà</p>
+                <p class="rule-item">Rispondi correttamente per guadagnare punti, più alta è la difficoltà, più punti guadagni</p>
                 <p class="rule-item">Il primo a raggiungere 25 punti vince!</p>
             </div>
         `,
@@ -111,9 +111,9 @@ const gameTranslations = {
         'gameRules': `
             <p>Quizzy is a quiz game for multiple players:</p>
             <div class="rules-list">
-                <p class="rule-item">Each player chooses categories and difficulty levels</p>
-                <p class="rule-item">Answer correctly to earn points</p>
-                <p class="rule-item">The higher the difficulty, the more points you earn</p>
+                <p class="rule-item">Each player selects their preferred categories at the start of the game</p>
+                <p class="rule-item">On each turn, the game randomly assigns either the category or difficulty</p>
+                <p class="rule-item">Answer correctly to earn points, higher difficulties award more points</p>
                 <p class="rule-item">First to reach 25 points wins!</p>
             </div>
         `,
