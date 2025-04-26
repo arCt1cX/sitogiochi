@@ -553,118 +553,162 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup the game round for the current player
     function setupGameRound() {
-        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        console.log("Setting up game round");
         
-        // Update player info
-        const playerNameEl = document.getElementById('current-player-name');
-        const playerScoreEl = document.getElementById('current-player-score');
-        
-        if (playerNameEl) playerNameEl.textContent = currentPlayer.name;
-        if (playerScoreEl) playerScoreEl.textContent = currentPlayer.score;
-        
-        // Clear any previous assigned elements
-        const previousAssigned = document.querySelectorAll('.assigned-element');
-        previousAssigned.forEach(el => el.remove());
-        
-        // Make sure both sections are back to default state
-        const categorySection = document.querySelector('.category-section');
-        const difficultySection = document.querySelector('.difficulty-section');
-        
-        if (categorySection) categorySection.classList.remove('hidden');
-        if (difficultySection) difficultySection.classList.remove('hidden');
-        
-        // Reset shock round styling if it exists
-        document.body.classList.remove('shock-round');
-        const gameRoundScreen = document.getElementById('game-round-screen');
-        if (gameRoundScreen) {
+        try {
+            // First ensure that the game round screen exists
+            const gameRoundScreen = document.getElementById('game-round-screen');
+            if (!gameRoundScreen) {
+                console.error("Game round screen not found");
+                return;
+            }
+            
+            // Check if screen content exists
+            const screenContent = gameRoundScreen.querySelector('.screen-content');
+            if (!screenContent) {
+                console.error("Game round screen content not found");
+                return;
+            }
+            
+            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+            
+            // Update player info
+            const playerNameEl = document.getElementById('current-player-name');
+            const playerScoreEl = document.getElementById('current-player-score');
+            
+            if (playerNameEl) playerNameEl.textContent = currentPlayer.name;
+            if (playerScoreEl) playerScoreEl.textContent = currentPlayer.score;
+            
+            // Clear any previous assigned elements
+            const previousAssigned = document.querySelectorAll('.assigned-element');
+            previousAssigned.forEach(el => {
+                if (el && el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+            });
+            
+            // Make sure both sections are back to default state
+            const categorySection = document.querySelector('.category-section');
+            const difficultySection = document.querySelector('.difficulty-section');
+            
+            // Clear shock round styling first
+            document.body.classList.remove('shock-round');
             gameRoundScreen.classList.remove('shock-round');
-        }
-        
-        // Add trophy icon if this player is leading
-        const leadingPlayerIndex = findLeadingPlayer();
-        if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0 && playerNameEl) {
-            const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
-            </svg>`;
-            playerNameEl.innerHTML = `${currentPlayer.name} ${crownIcon}`;
-        }
-        
-        // Check if this is a shock round
-        if (gameState.isShockRound) {
-            setupShockRound(currentPlayer);
-            return;
-        }
-        
-        // Regular round - continue with normal logic
-        // Determine if we should assign category or difficulty
-        // Use rounds completed and player index to alternate
-        const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
-        
-        // Store the current mode in the game state
-        gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
-        
-        if (shouldAssignCategory) {
-            // Assign a random category, let player choose from 2 random difficulties
-            const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
-            gameState.currentCategory = currentPlayer.categories[randomIndex];
             
-            // Select 2 random difficulties (bambino and facile cannot appear together)
-            const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-            gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
+            // Safely remove/add classes
+            const safeRemoveClass = (el, className) => {
+                if (el && el.classList) {
+                    el.classList.remove(className);
+                }
+            };
             
-            // Hide category section, show difficulty section
-            if (categorySection) categorySection.classList.add('hidden');
-            if (difficultySection) difficultySection.classList.remove('hidden');
+            const safeAddClass = (el, className) => {
+                if (el && el.classList) {
+                    el.classList.add(className);
+                }
+            };
             
-            // Show assigned category
-            const playerInfoSection = document.querySelector('.player-info');
-            if (playerInfoSection) {
-                const assignedCategoryEl = document.createElement('div');
-                assignedCategoryEl.className = 'assigned-element';
-                const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-                assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
-                playerInfoSection.appendChild(assignedCategoryEl);
+            // Safely use DOM operations
+            safeRemoveClass(categorySection, 'hidden');
+            safeRemoveClass(difficultySection, 'hidden');
+            
+            // Add trophy icon if this player is leading
+            const leadingPlayerIndex = findLeadingPlayer();
+            if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0 && playerNameEl) {
+                const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
+                </svg>`;
+                playerNameEl.innerHTML = `${currentPlayer.name} ${crownIcon}`;
             }
             
-            // Update instruction text
-            const difficultyTitle = document.getElementById('difficulty-title');
-            if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
-            
-            // Show only the 2 random difficulties
-            updateDifficultyButtons(gameState.availableOptions);
-        } else {
-            // Assign a random difficulty, let player choose from 2 random categories
-            const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-            const randomIndex = Math.floor(Math.random() * difficulties.length);
-            gameState.currentDifficulty = difficulties[randomIndex];
-            
-            // Select 2 random categories from player's categories
-            gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
-            
-            // Hide difficulty section, show category section
-            if (difficultySection) difficultySection.classList.add('hidden');
-            if (categorySection) categorySection.classList.remove('hidden');
-            
-            // Show assigned difficulty
-            const playerInfoSection = document.querySelector('.player-info');
-            if (playerInfoSection) {
-                const assignedDifficultyEl = document.createElement('div');
-                assignedDifficultyEl.className = 'assigned-element';
-                const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
-                assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
-                playerInfoSection.appendChild(assignedDifficultyEl);
+            // Check if this is a shock round
+            if (gameState.isShockRound) {
+                setupShockRound(currentPlayer);
+                return;
             }
             
-            // Update instruction text
-            const categoryTitle = document.getElementById('category-selection-title');
-            if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
+            // Regular round - continue with normal logic
+            // Determine if we should assign category or difficulty
+            // Use rounds completed and player index to alternate
+            const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
             
-            // Generate category buttons - only for the 2 random categories
-            generateCategoryButtons(gameState.availableOptions);
+            // Store the current mode in the game state
+            gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
+            
+            if (shouldAssignCategory) {
+                // Assign a random category, let player choose from 2 random difficulties
+                const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
+                gameState.currentCategory = currentPlayer.categories[randomIndex];
+                
+                // Select 2 random difficulties (bambino and facile cannot appear together)
+                const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+                gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
+                
+                // Hide category section, show difficulty section
+                safeAddClass(categorySection, 'hidden');
+                safeRemoveClass(difficultySection, 'hidden');
+                
+                // Show assigned category
+                const playerInfoSection = document.querySelector('.player-info');
+                if (playerInfoSection) {
+                    const assignedCategoryEl = document.createElement('div');
+                    assignedCategoryEl.className = 'assigned-element';
+                    const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+                    assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
+                    playerInfoSection.appendChild(assignedCategoryEl);
+                }
+                
+                // Update instruction text
+                const difficultyTitle = document.getElementById('difficulty-title');
+                if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
+                
+                // Show only the 2 random difficulties
+                updateDifficultyButtons(gameState.availableOptions);
+            } else {
+                // Assign a random difficulty, let player choose from 2 random categories
+                const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+                const randomIndex = Math.floor(Math.random() * difficulties.length);
+                gameState.currentDifficulty = difficulties[randomIndex];
+                
+                // Select 2 random categories from player's categories
+                gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
+                
+                // Hide difficulty section, show category section
+                safeAddClass(difficultySection, 'hidden');
+                safeRemoveClass(categorySection, 'hidden');
+                
+                // Show assigned difficulty
+                const playerInfoSection = document.querySelector('.player-info');
+                if (playerInfoSection) {
+                    const assignedDifficultyEl = document.createElement('div');
+                    assignedDifficultyEl.className = 'assigned-element';
+                    const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
+                    assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
+                    playerInfoSection.appendChild(assignedDifficultyEl);
+                }
+                
+                // Update instruction text
+                const categoryTitle = document.getElementById('category-selection-title');
+                if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
+                
+                // Generate category buttons - only for the 2 random categories
+                generateCategoryButtons(gameState.availableOptions);
+            }
+            
+            // Show game round screen
+            showScreen(screens.gameRound);
+        } catch (error) {
+            console.error("Error in setupGameRound:", error);
+            
+            // Try to recover by simply advancing to the next player
+            setTimeout(() => {
+                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                console.log("Error recovery: moving to player index:", gameState.currentPlayerIndex);
+                
+                // Simple screen transition to welcome screen for recovery
+                showScreen(screens.welcome);
+            }, 100);
         }
-        
-        // Show game round screen
-        showScreen(screens.gameRound);
     }
     
     // Setup a shock round where both category and difficulty are assigned
@@ -1388,68 +1432,165 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show the result screen
     function showResult(isCorrect, points, isTimeUp = false, isShockPenalty = false) {
-        const resultMessage = document.getElementById('result-message');
-        const pointsEarned = document.getElementById('points-earned');
-        const correctAnswerContainer = document.getElementById('correct-answer-container');
-        const correctAnswerText = document.getElementById('correct-answer');
+        console.log("Showing result screen");
         
-        // Set result message and class
-        if (isTimeUp) {
-            resultMessage.textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
-            resultMessage.className = 'result-message incorrect';
-            correctAnswerContainer.classList.remove('hidden');
-            correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
-        } else if (isCorrect) {
-            resultMessage.textContent = getGameTranslation('correctAnswer');
-            resultMessage.className = 'result-message correct';
-            correctAnswerContainer.classList.add('hidden');
-        } else {
-            resultMessage.textContent = getGameTranslation('wrongAnswer');
-            resultMessage.className = 'result-message incorrect';
-            correctAnswerContainer.classList.remove('hidden');
-            correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+        try {
+            const resultMessage = document.getElementById('result-message');
+            const pointsEarned = document.getElementById('points-earned');
+            const correctAnswerContainer = document.getElementById('correct-answer-container');
+            const correctAnswerText = document.getElementById('correct-answer');
             
-            // Add shock round penalty message if needed
-            if (isShockPenalty) {
-                const penaltyEl = document.createElement('p');
-                penaltyEl.style.color = 'red';
-                penaltyEl.style.fontWeight = 'bold';
-                penaltyEl.style.marginTop = '10px';
-                penaltyEl.textContent = getUserLanguage() === 'it' ? 
-                    '⚠️ Penalità del Turno Shock: Salterai il tuo prossimo turno!' : 
-                    '⚠️ Shock Round Penalty: You will skip your next turn!';
-                resultMessage.appendChild(penaltyEl);
+            // Set result message and class
+            if (isTimeUp) {
+                if (resultMessage) {
+                    resultMessage.textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
+                    resultMessage.className = 'result-message incorrect';
+                }
+                if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
+                if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
+                    correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                }
+            } else if (isCorrect) {
+                if (resultMessage) {
+                    resultMessage.textContent = getGameTranslation('correctAnswer');
+                    resultMessage.className = 'result-message correct';
+                }
+                if (correctAnswerContainer) correctAnswerContainer.classList.add('hidden');
+            } else {
+                if (resultMessage) {
+                    resultMessage.textContent = getGameTranslation('wrongAnswer');
+                    resultMessage.className = 'result-message incorrect';
+                }
+                if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
+                if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
+                    correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                }
+                
+                // Add shock round penalty message if needed
+                if (isShockPenalty && resultMessage) {
+                    const penaltyEl = document.createElement('p');
+                    penaltyEl.style.color = 'red';
+                    penaltyEl.style.fontWeight = 'bold';
+                    penaltyEl.style.marginTop = '10px';
+                    penaltyEl.textContent = getUserLanguage() === 'it' ? 
+                        '⚠️ Penalità del Turno Shock: Salterai il tuo prossimo turno!' : 
+                        '⚠️ Shock Round Penalty: You will skip your next turn!';
+                    resultMessage.appendChild(penaltyEl);
+                }
             }
-        }
-        
-        // Set points earned
-        pointsEarned.textContent = points;
-        
-        // IMPORTANT: Completely replace the continue button with a new one
-        const continueButton = document.getElementById('continue-game');
-        const newContinueButton = document.createElement('button');
-        newContinueButton.id = 'continue-game';
-        newContinueButton.className = continueButton.className;
-        newContinueButton.textContent = continueButton.textContent;
-        
-        // Replace the button completely
-        if (continueButton.parentNode) {
-            continueButton.parentNode.replaceChild(newContinueButton, continueButton);
-        }
-        
-        // Add fresh event listener with console logs
-        newContinueButton.addEventListener('click', function() {
-            console.log("CONTINUE button clicked - moving to next turn");
             
-            // Clear all styling and flags immediately
+            // Set points earned
+            if (pointsEarned) pointsEarned.textContent = points;
+            
+            // IMPORTANT: Completely replace the continue button with a new one
+            const continueButton = document.getElementById('continue-game');
+            
+            if (!continueButton || !continueButton.parentNode) {
+                console.error("Continue button or its parent node not found");
+                // Try to show welcome screen as fallback
+                showScreen(screens.welcome);
+                return;
+            }
+            
+            const newContinueButton = document.createElement('button');
+            newContinueButton.id = 'continue-game';
+            newContinueButton.className = continueButton.className;
+            newContinueButton.textContent = continueButton.textContent;
+            
+            // Replace the button completely
+            continueButton.parentNode.replaceChild(newContinueButton, continueButton);
+            
+            // Add a click handler variable to ensure it's only handled once
+            let handlerCalled = false;
+            
+            // Add fresh event listener with console logs
+            newContinueButton.addEventListener('click', function(event) {
+                // Prevent multiple clicks
+                if (handlerCalled) {
+                    console.log("Handler already called, ignoring additional clicks");
+                    return;
+                }
+                
+                handlerCalled = true;
+                console.log("CONTINUE button clicked - moving to next turn");
+                
+                // Immediately disable the button to prevent multiple clicks
+                newContinueButton.disabled = true;
+                newContinueButton.style.opacity = '0.5';
+                
+                // Clear all styling and flags immediately
+                document.body.classList.remove('shock-round');
+                
+                Object.values(screens).forEach(screen => {
+                    if (screen && screen.classList) {
+                        screen.classList.remove('shock-round');
+                    }
+                });
+                
+                const timerContainer = document.querySelector('.timer-container');
+                if (timerContainer && timerContainer.classList) {
+                    timerContainer.classList.remove('shock');
+                }
+                
+                // Remove any shock warnings
+                const shockWarning = document.getElementById('shock-warning');
+                if (shockWarning && shockWarning.parentNode) {
+                    shockWarning.parentNode.removeChild(shockWarning);
+                }
+                
+                console.log("About to call forceNextTurn");
+                
+                try {
+                    // Call forceNextTurn
+                    forceNextTurn();
+                } catch (error) {
+                    console.error("Error in forceNextTurn:", error);
+                    
+                    // Fallback recovery - move to welcome screen
+                    gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                    console.log("Error recovery after continue: moving to player index:", gameState.currentPlayerIndex);
+                    showScreen(screens.welcome);
+                }
+                
+                console.log("Called forceNextTurn");
+            });
+            
+            // Show result screen
+            showScreen(screens.result);
+            
+        } catch (error) {
+            console.error("Error in showResult:", error);
+            // Fallback - try to go to welcome screen
+            showScreen(screens.welcome);
+        }
+    }
+    
+    // Force next turn - completely separate from regular nextTurn to avoid any issues
+    function forceNextTurn() {
+        console.log("FORCE NEXT TURN STARTED");
+        
+        try {
+            // Check for winner first
+            for (let i = 0; i < gameState.players.length; i++) {
+                if (gameState.players[i].score >= gameState.winningScore && gameState.roundsCompleted > 0) {
+                    console.log("We have a winner!");
+                    showGameOver(i);
+                    return;
+                }
+            }
+            
+            // Thoroughly clean up shock round elements and styles
+            console.log("Cleaning up shock round elements");
             document.body.classList.remove('shock-round');
             
             Object.values(screens).forEach(screen => {
-                screen.classList.remove('shock-round');
+                if (screen && screen.classList) {
+                    screen.classList.remove('shock-round');
+                }
             });
             
             const timerContainer = document.querySelector('.timer-container');
-            if (timerContainer) {
+            if (timerContainer && timerContainer.classList) {
                 timerContainer.classList.remove('shock');
             }
             
@@ -1459,94 +1600,66 @@ document.addEventListener('DOMContentLoaded', function() {
                 shockWarning.parentNode.removeChild(shockWarning);
             }
             
-            console.log("About to call forceNextTurn");
+            // Reset shock round flag
+            const wasShockRound = gameState.isShockRound;
+            gameState.isShockRound = false;
+            console.log("Was shock round:", wasShockRound);
             
-            // Call forceNextTurn directly without setTimeout
-            forceNextTurn();
+            // Move to next player
+            gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+            console.log("Moving to player index:", gameState.currentPlayerIndex);
             
-            console.log("Called forceNextTurn");
-        });
-        
-        // Show result screen
-        showScreen(screens.result);
-    }
-    
-    // Force next turn - completely separate from regular nextTurn to avoid any issues
-    function forceNextTurn() {
-        console.log("FORCE NEXT TURN STARTED");
-        
-        // Check for winner first
-        for (let i = 0; i < gameState.players.length; i++) {
-            if (gameState.players[i].score >= gameState.winningScore && gameState.roundsCompleted > 0) {
-                console.log("We have a winner!");
-                showGameOver(i);
+            // Check if this player should skip their turn
+            if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                console.log("Player should skip turn");
+                
+                // Create skip message
+                showForceSkipMessage();
                 return;
             }
-        }
-        
-        // Thoroughly clean up shock round elements and styles
-        console.log("Cleaning up shock round elements");
-        document.body.classList.remove('shock-round');
-        
-        Object.values(screens).forEach(screen => {
-            screen.classList.remove('shock-round');
-        });
-        
-        const timerContainer = document.querySelector('.timer-container');
-        if (timerContainer) {
-            timerContainer.classList.remove('shock');
-        }
-        
-        // Remove any shock warnings
-        const shockWarning = document.getElementById('shock-warning');
-        if (shockWarning && shockWarning.parentNode) {
-            shockWarning.parentNode.removeChild(shockWarning);
-        }
-        
-        // Reset shock round flag
-        const wasShockRound = gameState.isShockRound;
-        gameState.isShockRound = false;
-        console.log("Was shock round:", wasShockRound);
-        
-        // Move to next player
-        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-        console.log("Moving to player index:", gameState.currentPlayerIndex);
-        
-        // Check if this player should skip their turn
-        if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
-            console.log("Player should skip turn");
             
-            // Create skip message
-            showForceSkipMessage();
-            return;
+            // Reset for next round
+            gameState.currentCategory = null;
+            gameState.currentDifficulty = null;
+            
+            // Check if we've completed a round
+            if (gameState.currentPlayerIndex === 0) {
+                gameState.roundsCompleted++;
+                console.log("Completed round:", gameState.roundsCompleted);
+            }
+            
+            // Check if next player needs a shock round
+            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+            gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+            console.log("Next player needs shock round:", gameState.isShockRound);
+            
+            // Force the game to update all screens first to ensure clean state
+            setTimeout(() => {
+                try {
+                    if (gameState.isShockRound) {
+                        console.log("Setting up shock round for player:", currentPlayer.name);
+                        currentPlayer.hadShockRound = true;
+                        setupShockRound(currentPlayer);
+                    } else {
+                        console.log("Setting up regular game round");
+                        // Regular round
+                        setupGameRound();
+                    }
+                    
+                    console.log("FORCE NEXT TURN COMPLETED");
+                } catch (error) {
+                    console.error("Error in delayed setup:", error);
+                    
+                    // Last resort recovery - go to welcome screen
+                    showScreen(screens.welcome);
+                }
+            }, 100); // Short delay to allow DOM to update properly
+        } catch (error) {
+            console.error("Error in forceNextTurn:", error);
+            
+            // Try to recover by going to welcome screen
+            showScreen(screens.welcome);
         }
-        
-        // Reset for next round
-        gameState.currentCategory = null;
-        gameState.currentDifficulty = null;
-        
-        // Check if we've completed a round
-        if (gameState.currentPlayerIndex === 0) {
-            gameState.roundsCompleted++;
-            console.log("Completed round:", gameState.roundsCompleted);
-        }
-        
-        // Check if next player needs a shock round
-        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
-        console.log("Next player needs shock round:", gameState.isShockRound);
-        
-        if (gameState.isShockRound) {
-            console.log("Setting up shock round for player:", currentPlayer.name);
-            currentPlayer.hadShockRound = true;
-            setupShockRound(currentPlayer);
-        } else {
-            console.log("Setting up regular game round");
-            // Regular round
-            setupGameRound();
-        }
-        
-        console.log("FORCE NEXT TURN COMPLETED");
     }
     
     // Forced skip message with clean implementation
