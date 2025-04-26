@@ -706,17 +706,18 @@ document.addEventListener('DOMContentLoaded', function() {
             default: timeLimit = 20;
         }
         
-        let timeLeft = timeLimit;
-        updateTimerDisplay(timeLeft);
+        gameState.timeLeft = timeLimit;
+        updateTimerDisplay(gameState.timeLeft);
         
         // Start the timer
         gameState.timer = setInterval(() => {
-            timeLeft--;
-            updateTimerDisplay(timeLeft);
+            gameState.timeLeft--;
+            updateTimerDisplay(gameState.timeLeft);
             
-            if (timeLeft <= 0) {
+            if (gameState.timeLeft <= 0) {
                 // Time's up
                 clearInterval(gameState.timer);
+                gameState.timer = null;
                 timeOut();
             }
         }, 1000);
@@ -729,21 +730,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle when time runs out
     function timeOut() {
-        // Stop the timer
-        clearInterval(gameState.timer);
+        // Stop the timer (additional safety)
+        if (gameState.timer) {
+            clearInterval(gameState.timer);
+            gameState.timer = null;
+        }
+        
+        console.log("Time's up triggered!");  // Debug log
         
         // Display time's up message
-        document.getElementById('answer-feedback').textContent = "Tempo scaduto!";
-        document.getElementById('answer-feedback').style.color = "red";
+        const answerFeedback = document.getElementById('answer-feedback');
+        if (answerFeedback) {
+            answerFeedback.textContent = "Tempo scaduto!";
+            answerFeedback.style.color = "red";
+            answerFeedback.style.fontWeight = "bold";
+            answerFeedback.style.fontSize = "1.2em";
+        }
         
-        // Disable all answer buttons
-        disableAnswerButtons();
+        // Forcefully disable all answer buttons
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        answerButtons.forEach(button => {
+            // Remove the click event listeners
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            
+            // Style and disable the new button
+            newButton.disabled = true;
+            newButton.classList.add('disabled-btn');
+            newButton.style.opacity = '0.7';
+            newButton.style.cursor = 'not-allowed';
+            newButton.style.pointerEvents = 'none';  // Additional safety
+        });
         
         // Show the correct answer
         const correctIndex = gameState.currentQuestion.correctIndex;
-        const answerButtons = document.querySelectorAll('.answer-btn');
         if (answerButtons[correctIndex]) {
-            answerButtons[correctIndex].classList.add('correct-answer-btn');
+            const correctButton = answerButtons[correctIndex];
+            correctButton.classList.add('correct-answer-btn');
         }
         
         // Wait a moment then show the result screen
@@ -756,20 +779,32 @@ document.addEventListener('DOMContentLoaded', function() {
     function disableAnswerButtons() {
         const answerButtons = document.querySelectorAll('.answer-btn');
         answerButtons.forEach(button => {
-            button.disabled = true;
-            button.style.opacity = '0.7';
-            button.style.cursor = 'not-allowed';
-            // Remove click event listeners by cloning and replacing
+            // Remove the click event listeners
             const newButton = button.cloneNode(true);
             button.parentNode.replaceChild(newButton, button);
+            
+            // Style and disable the new button
+            newButton.disabled = true;
+            newButton.classList.add('disabled-btn');
+            newButton.style.opacity = '0.7';
+            newButton.style.cursor = 'not-allowed';
+            newButton.style.pointerEvents = 'none';  // Additional safety
         });
     }
     
     // Handle a player's answer
     function handleAnswer(answerIndex) {
+        // Check if timer is done or buttons disabled
+        if (!gameState.timer || document.querySelector('.answer-btn.disabled-btn')) {
+            console.log("Answer blocked: timer done or buttons disabled");
+            return;
+        }
+        
         // Stop the timer
         clearInterval(gameState.timer);
+        gameState.timer = null;
         
+        // Rest of function unchanged
         const isCorrect = answerIndex === gameState.currentQuestion.correctIndex;
         let pointsEarned = 0;
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
@@ -824,6 +859,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 showResult(false, pointsEarned);
             }, 1500);
         }
+        
+        // Disable all buttons to prevent multiple answers
+        disableAnswerButtons();
     }
     
     // Show the result screen
