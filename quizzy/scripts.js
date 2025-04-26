@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         roundsCompleted: 0,
         gameOver: false,
         availableOptions: [], // New property to store limited options
-        lastRandomCategories: [] // Added for storing random categories
+        lastRandomCategories: [], // Added for storing random categories
+        isShockRound: false // Flag for shock round
     };
 
     // DOM Elements
@@ -545,6 +546,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function startGame() {
         gameState.currentPlayerIndex = 0;
         gameState.roundsCompleted = 0;
+        
+        // Initialize shock round flags for all players
+        gameState.players.forEach(player => {
+            player.hadShockRound = false;
+        });
+        
         setupGameRound();
     }
     
@@ -564,6 +571,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.category-section').classList.remove('hidden');
         document.querySelector('.difficulty-section').classList.remove('hidden');
         
+        // Reset shock round styling if it exists
+        document.body.classList.remove('shock-round');
+        const gameRoundScreen = document.getElementById('game-round-screen');
+        if (gameRoundScreen) {
+            gameRoundScreen.classList.remove('shock-round');
+        }
+        
         // Add trophy icon if this player is leading
         const leadingPlayerIndex = findLeadingPlayer();
         if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0) {
@@ -573,6 +587,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${crownIcon}`;
         }
         
+        // Check if this is a shock round
+        if (gameState.isShockRound) {
+            setupShockRound(currentPlayer);
+            return;
+        }
+        
+        // Regular round - continue with normal logic
         // Determine if we should assign category or difficulty
         // Use rounds completed and player index to alternate
         const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
@@ -631,6 +652,156 @@ document.addEventListener('DOMContentLoaded', function() {
             // Generate category buttons - only for the 2 random categories
             generateCategoryButtons(gameState.availableOptions);
         }
+        
+        // Show game round screen
+        showScreen(screens.gameRound);
+    }
+    
+    // Setup a shock round where both category and difficulty are assigned
+    function setupShockRound(player) {
+        // Apply shock round styling
+        document.body.classList.add('shock-round');
+        const gameRoundScreen = document.getElementById('game-round-screen');
+        if (gameRoundScreen) {
+            gameRoundScreen.classList.add('shock-round');
+        }
+        
+        // Create shock round style
+        if (!document.getElementById('shock-round-style')) {
+            const style = document.createElement('style');
+            style.id = 'shock-round-style';
+            style.textContent = `
+                body.shock-round {
+                    background: linear-gradient(135deg, #370000 0%, #4d0000 100%);
+                    transition: background 0.5s ease;
+                }
+                #game-round-screen.shock-round .screen-content,
+                #question-screen.shock-round .screen-content {
+                    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+                }
+                .shock-title {
+                    color: #ff5252;
+                    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+                    animation: pulse 1.5s infinite alternate;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 2.2rem;
+                }
+                @keyframes pulse {
+                    0% { opacity: 0.7; }
+                    100% { opacity: 1; }
+                }
+                .shock-info {
+                    background-color: rgba(255, 0, 0, 0.15);
+                    padding: 10px;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .shock-assigned {
+                    margin: 25px 0;
+                    padding: 15px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 10px;
+                    text-align: center;
+                }
+                .shock-assigned h3 {
+                    margin-bottom: 10px;
+                    color: #ff9292;
+                }
+                .shock-assigned p {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: white;
+                }
+                .timer-container.shock {
+                    color: #ff5252;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Add shock round title
+        const shockTitle = document.createElement('h2');
+        shockTitle.className = 'shock-title';
+        shockTitle.textContent = getUserLanguage() === 'it' ? 'TURNO SHOCK!' : 'SHOCK ROUND!';
+        
+        // Add shock round info
+        const shockInfo = document.createElement('div');
+        shockInfo.className = 'shock-info';
+        shockInfo.textContent = getUserLanguage() === 'it' ? 
+            'Hai raggiunto 10 punti! In questo turno, sia la categoria che la difficoltà sono assegnate casualmente!' : 
+            'You\'ve reached 10 points! In this round, both category and difficulty are randomly assigned!';
+        
+        // Randomly select both category and difficulty
+        const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+        // With bias towards higher difficulties
+        const weightedDifficulties = [...allDifficulties, 'esperto', 'laureato', 'laureato'];
+        const randomDifficultyIndex = Math.floor(Math.random() * weightedDifficulties.length);
+        gameState.currentDifficulty = weightedDifficulties[randomDifficultyIndex];
+        
+        const randomCategoryIndex = Math.floor(Math.random() * player.categories.length);
+        gameState.currentCategory = player.categories[randomCategoryIndex];
+        
+        // Create container for the assigned values
+        const assignedContainer = document.createElement('div');
+        assignedContainer.className = 'shock-assigned';
+        
+        // Display assigned category 
+        const categoryTitle = document.createElement('h3');
+        categoryTitle.textContent = getUserLanguage() === 'it' ? 'Categoria:' : 'Category:';
+        
+        const categoryValue = document.createElement('p');
+        categoryValue.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+        
+        // Display assigned difficulty
+        const difficultyTitle = document.createElement('h3');
+        difficultyTitle.textContent = getUserLanguage() === 'it' ? 'Difficoltà:' : 'Difficulty:';
+        
+        const difficultyValue = document.createElement('p');
+        difficultyValue.textContent = getGameTranslation(gameState.currentDifficulty) || gameState.currentDifficulty;
+        
+        // Continue button
+        const continueBtn = document.createElement('button');
+        continueBtn.className = 'primary-button';
+        continueBtn.style.marginTop = '30px';
+        continueBtn.textContent = getUserLanguage() === 'it' ? 'Inizia Turno Shock' : 'Start Shock Round';
+        
+        // Add event listener
+        continueBtn.addEventListener('click', function() {
+            showQuestion();
+            
+            // Apply shock styling to question screen too
+            const questionScreen = document.getElementById('question-screen');
+            if (questionScreen) {
+                questionScreen.classList.add('shock-round');
+            }
+            
+            // Add shock styling to timer
+            const timerContainer = document.querySelector('.timer-container');
+            if (timerContainer) {
+                timerContainer.classList.add('shock');
+            }
+        });
+        
+        // Add all elements to the container
+        assignedContainer.appendChild(categoryTitle);
+        assignedContainer.appendChild(categoryValue);
+        assignedContainer.appendChild(difficultyTitle);
+        assignedContainer.appendChild(difficultyValue);
+        
+        // Clear game round screen content and add shock elements
+        const screenContent = document.querySelector('#game-round-screen .screen-content');
+        // Preserve player info
+        const playerInfo = document.querySelector('.player-info');
+        
+        // Clear everything except player info
+        screenContent.innerHTML = '';
+        screenContent.appendChild(playerInfo);
+        screenContent.appendChild(shockTitle);
+        screenContent.appendChild(shockInfo);
+        screenContent.appendChild(assignedContainer);
+        screenContent.appendChild(continueBtn);
         
         // Show game round screen
         showScreen(screens.gameRound);
@@ -1105,6 +1276,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Move to next player
         gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+        
+        // Check if this player needs a shock round (has 10 or more points)
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+        
+        // Track that player had a shock round so it only happens once
+        if (gameState.isShockRound) {
+            currentPlayer.hadShockRound = true;
+        }
         
         // If we've gone through all players, increment rounds completed
         if (gameState.currentPlayerIndex === 0) {
