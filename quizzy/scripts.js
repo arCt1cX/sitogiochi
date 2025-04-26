@@ -89,18 +89,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Result screen
         document.getElementById('continue-game').addEventListener('click', function() {
-            // Remove shock styling before proceeding
-            document.body.classList.remove('shock-round');
+            console.log("Continue game button clicked");
             
-            // Remove shock round class from screens
-            Object.values(screens).forEach(screen => {
-                screen.classList.remove('shock-round');
-            });
+            // Get the current screen to check if we're on a shock round
+            const isShockRoundActive = document.body.classList.contains('shock-round');
+            console.log("Is shock round active:", isShockRoundActive);
             
-            // Remove shock styling from timer
-            const timerContainer = document.querySelector('.timer-container');
-            if (timerContainer) {
-                timerContainer.classList.remove('shock');
+            // If we're in a shock round, we need special cleanup
+            if (isShockRoundActive) {
+                console.log("Cleaning up shock round");
+                cleanupShockRound();
             }
             
             // Reset isShockRound flag
@@ -678,6 +676,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup a shock round where both category and difficulty are assigned
     function setupShockRound(player) {
+        console.log("Setting up shock round for", player.name);
+        
         // Apply shock round styling
         document.body.classList.add('shock-round');
         const gameRoundScreen = document.getElementById('game-round-screen');
@@ -695,7 +695,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     transition: background 0.5s ease;
                 }
                 #game-round-screen.shock-round .screen-content,
-                #question-screen.shock-round .screen-content {
+                #question-screen.shock-round .screen-content,
+                #result-screen.shock-round .screen-content {
                     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
                 }
                 .shock-title {
@@ -819,115 +820,124 @@ document.addEventListener('DOMContentLoaded', function() {
         screenContent.appendChild(assignedContainer);
         screenContent.appendChild(continueBtn);
         
-        // Add event listener to continue button - Fixing this to make sure it works
-        continueBtn.addEventListener('click', function() {
-            console.log("Shock round continue button clicked!");
-            
-            // Apply shock styling to question screen
-            const questionScreen = document.getElementById('question-screen');
-            if (questionScreen) {
-                questionScreen.classList.add('shock-round');
-            }
-            
-            // Make sure we have a valid question before proceeding
-            const question = getRandomQuestion();
-            if (!question) {
-                console.error("No question found for category:", gameState.currentCategory, "difficulty:", gameState.currentDifficulty);
-                alert('Error: No questions available for this category and difficulty.');
-                return;
-            }
-            
-            gameState.currentQuestion = question;
-            
-            // Update question display
-            document.getElementById('current-category').textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-            document.getElementById('current-difficulty').textContent = getGameTranslation(gameState.currentDifficulty);
-            document.getElementById('question-text').textContent = question.question;
-            
-            // Remove any existing bambino warning
-            const existingWarning = document.getElementById('bambino-game-warning');
-            if (existingWarning) {
-                existingWarning.remove();
-            }
-            
-            // Generate answer buttons
-            const answerButtonsContainer = document.getElementById('answer-buttons');
-            answerButtonsContainer.innerHTML = '';
-            
-            const letters = ['A', 'B', 'C', 'D'];
-            
-            // Add difficulty warning if bambino
-            if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
-                const warningDiv = document.createElement('div');
-                warningDiv.id = 'bambino-game-warning';
-                warningDiv.style.color = 'red';
-                warningDiv.style.fontWeight = 'bold';
-                warningDiv.style.marginBottom = '10px';
-                
-                // Use direct text based on language instead of translation key
-                const lang = getUserLanguage();
-                warningDiv.textContent = '⚠️ ' + (lang === 'it' ? 
-                    'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
-                    'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
-                
-                answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
-            }
-            
-            // Add shock round penalty warning
-            const shockWarningDiv = document.createElement('div');
-            shockWarningDiv.id = 'shock-warning';
-            shockWarningDiv.style.color = 'red';
-            shockWarningDiv.style.fontWeight = 'bold';
-            shockWarningDiv.style.marginBottom = '10px';
-            shockWarningDiv.style.textAlign = 'center';
-            shockWarningDiv.style.padding = '5px';
-            shockWarningDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
-            shockWarningDiv.style.borderRadius = '5px';
-            
-            shockWarningDiv.textContent = getUserLanguage() === 'it' ? 
-                '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' : 
-                '⚠️ SHOCK ROUND: Wrong answer = Skip your next turn!';
-            
-            answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
-            
-            question.answers.forEach((answer, index) => {
-                const button = document.createElement('button');
-                button.className = 'answer-btn';
-                button.dataset.index = index;
-                
-                const letter = document.createElement('span');
-                letter.className = 'answer-letter';
-                letter.textContent = letters[index];
-                
-                const text = document.createElement('span');
-                text.className = 'answer-text';
-                text.textContent = answer;
-                
-                button.appendChild(letter);
-                button.appendChild(text);
-                
-                button.addEventListener('click', function() {
-                    handleAnswer(index);
-                });
-                
-                answerButtonsContainer.appendChild(button);
-            });
-            
-            // Add shock styling to timer
-            const timerContainer = document.querySelector('.timer-container');
-            if (timerContainer) {
-                timerContainer.classList.add('shock');
-            }
-            
-            // Start the timer
-            startTimer();
-            
-            // Show question screen
-            showScreen(screens.question);
-        });
+        // Add event listener to continue button
+        continueBtn.addEventListener('click', handleShockRoundStart);
         
         // Show game round screen
         showScreen(screens.gameRound);
+    }
+    
+    // Separate handler for shock round start
+    function handleShockRoundStart() {
+        console.log("Shock round start button clicked");
+        
+        // Apply shock styling to question screen
+        const questionScreen = document.getElementById('question-screen');
+        if (questionScreen) {
+            questionScreen.classList.add('shock-round');
+        }
+        
+        // Apply shock styling to result screen
+        const resultScreen = document.getElementById('result-screen');
+        if (resultScreen) {
+            resultScreen.classList.add('shock-round');
+        }
+        
+        // Make sure we have a valid question before proceeding
+        const question = getRandomQuestion();
+        if (!question) {
+            console.error("No question found for category:", gameState.currentCategory, "difficulty:", gameState.currentDifficulty);
+            alert('Error: No questions available for this category and difficulty.');
+            return;
+        }
+        
+        gameState.currentQuestion = question;
+        
+        // Update question display
+        document.getElementById('current-category').textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+        document.getElementById('current-difficulty').textContent = getGameTranslation(gameState.currentDifficulty);
+        document.getElementById('question-text').textContent = question.question;
+        
+        // Remove any existing bambino warning
+        const existingWarning = document.getElementById('bambino-game-warning');
+        if (existingWarning) {
+            existingWarning.remove();
+        }
+        
+        // Generate answer buttons
+        const answerButtonsContainer = document.getElementById('answer-buttons');
+        answerButtonsContainer.innerHTML = '';
+        
+        const letters = ['A', 'B', 'C', 'D'];
+        
+        // Add difficulty warning if bambino
+        if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
+            const warningDiv = document.createElement('div');
+            warningDiv.id = 'bambino-game-warning';
+            warningDiv.style.color = 'red';
+            warningDiv.style.fontWeight = 'bold';
+            warningDiv.style.marginBottom = '10px';
+            
+            // Use direct text based on language instead of translation key
+            const lang = getUserLanguage();
+            warningDiv.textContent = '⚠️ ' + (lang === 'it' ? 
+                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
+                'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
+            
+            answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
+        }
+        
+        // Add shock round penalty warning
+        const shockWarningDiv = document.createElement('div');
+        shockWarningDiv.id = 'shock-warning';
+        shockWarningDiv.style.color = 'red';
+        shockWarningDiv.style.fontWeight = 'bold';
+        shockWarningDiv.style.marginBottom = '10px';
+        shockWarningDiv.style.textAlign = 'center';
+        shockWarningDiv.style.padding = '5px';
+        shockWarningDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+        shockWarningDiv.style.borderRadius = '5px';
+        
+        shockWarningDiv.textContent = getUserLanguage() === 'it' ? 
+            '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' : 
+            '⚠️ SHOCK ROUND: Wrong answer = Skip your next turn!';
+        
+        answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
+        
+        question.answers.forEach((answer, index) => {
+            const button = document.createElement('button');
+            button.className = 'answer-btn';
+            button.dataset.index = index;
+            
+            const letter = document.createElement('span');
+            letter.className = 'answer-letter';
+            letter.textContent = letters[index];
+            
+            const text = document.createElement('span');
+            text.className = 'answer-text';
+            text.textContent = answer;
+            
+            button.appendChild(letter);
+            button.appendChild(text);
+            
+            button.addEventListener('click', function() {
+                handleAnswer(index);
+            });
+            
+            answerButtonsContainer.appendChild(button);
+        });
+        
+        // Add shock styling to timer
+        const timerContainer = document.querySelector('.timer-container');
+        if (timerContainer) {
+            timerContainer.classList.add('shock');
+        }
+        
+        // Start the timer
+        startTimer();
+        
+        // Show question screen
+        showScreen(screens.question);
     }
     
     // Helper function to get a random subset of an array
@@ -1401,6 +1411,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function nextTurn() {
         console.log("nextTurn called");
         
+        // Ensure shock round is cleaned up
+        cleanupShockRound();
+        
         // Check if any player has reached the winning score
         const winnerIndex = checkForWinner();
         
@@ -1416,17 +1429,6 @@ document.addEventListener('DOMContentLoaded', function() {
             existingWarning.remove();
         }
         
-        const shockWarning = document.getElementById('shock-warning');
-        if (shockWarning) {
-            shockWarning.remove();
-        }
-        
-        // Remove shock round styling 
-        document.body.classList.remove('shock-round');
-        Object.values(screens).forEach(screen => {
-            screen.classList.remove('shock-round');
-        });
-        
         // Move to next player
         gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
         console.log("Moving to player index:", gameState.currentPlayerIndex);
@@ -1436,66 +1438,73 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Player should skip turn");
             
             // Display skipped turn message
-            const skipMessage = document.createElement('div');
-            skipMessage.style.position = 'fixed';
-            skipMessage.style.top = '50%';
-            skipMessage.style.left = '50%';
-            skipMessage.style.transform = 'translate(-50%, -50%)';
-            skipMessage.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
-            skipMessage.style.color = 'white';
-            skipMessage.style.padding = '20px 40px';
-            skipMessage.style.borderRadius = '10px';
-            skipMessage.style.textAlign = 'center';
-            skipMessage.style.zIndex = '1000';
-            skipMessage.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.5)';
-            
-            const skipTitle = document.createElement('h2');
-            skipTitle.style.color = 'red';
-            skipTitle.style.marginBottom = '10px';
-            skipTitle.textContent = getUserLanguage() === 'it' ? 
-                'Turno Saltato!' : 
-                'Turn Skipped!';
-            
-            const playerName = document.createElement('p');
-            playerName.style.fontSize = '1.2rem';
-            playerName.style.marginBottom = '15px';
-            playerName.textContent = gameState.players[gameState.currentPlayerIndex].name;
-            
-            const skipReason = document.createElement('p');
-            skipReason.textContent = getUserLanguage() === 'it' ? 
-                'Ha sbagliato nel Turno Shock e salta questo turno.' : 
-                'Failed in the Shock Round and skips this turn.';
-            
-            const continueBtn = document.createElement('button');
-            continueBtn.className = 'primary-button';
-            continueBtn.style.marginTop = '20px';
-            continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-            
-            skipMessage.appendChild(skipTitle);
-            skipMessage.appendChild(playerName);
-            skipMessage.appendChild(skipReason);
-            skipMessage.appendChild(continueBtn);
-            
-            document.body.appendChild(skipMessage);
-            
-            // Clear the skip flag so it only happens once
-            gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
-            
-            // Add event listener to continue
-            continueBtn.addEventListener('click', function() {
-                document.body.removeChild(skipMessage);
-                // Move to the next player
-                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-                console.log("After skip, moving to player:", gameState.currentPlayerIndex);
-                // Check if this player needs a shock round (has 10 or more points)
-                checkShockRoundAndSetup();
-            });
-            
+            showSkippedTurnMessage();
             return;
         }
         
         // Check if this player needs a shock round
         checkShockRoundAndSetup();
+    }
+    
+    // Show a message that the player's turn is skipped
+    function showSkippedTurnMessage() {
+        console.log("Showing skipped turn message");
+        
+        const skipMessage = document.createElement('div');
+        skipMessage.style.position = 'fixed';
+        skipMessage.style.top = '50%';
+        skipMessage.style.left = '50%';
+        skipMessage.style.transform = 'translate(-50%, -50%)';
+        skipMessage.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+        skipMessage.style.color = 'white';
+        skipMessage.style.padding = '20px 40px';
+        skipMessage.style.borderRadius = '10px';
+        skipMessage.style.textAlign = 'center';
+        skipMessage.style.zIndex = '1000';
+        skipMessage.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.5)';
+        
+        const skipTitle = document.createElement('h2');
+        skipTitle.style.color = 'red';
+        skipTitle.style.marginBottom = '10px';
+        skipTitle.textContent = getUserLanguage() === 'it' ? 
+            'Turno Saltato!' : 
+            'Turn Skipped!';
+        
+        const playerName = document.createElement('p');
+        playerName.style.fontSize = '1.2rem';
+        playerName.style.marginBottom = '15px';
+        playerName.textContent = gameState.players[gameState.currentPlayerIndex].name;
+        
+        const skipReason = document.createElement('p');
+        skipReason.textContent = getUserLanguage() === 'it' ? 
+            'Ha sbagliato nel Turno Shock e salta questo turno.' : 
+            'Failed in the Shock Round and skips this turn.';
+        
+        const continueBtn = document.createElement('button');
+        continueBtn.className = 'primary-button';
+        continueBtn.style.marginTop = '20px';
+        continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+        
+        skipMessage.appendChild(skipTitle);
+        skipMessage.appendChild(playerName);
+        skipMessage.appendChild(skipReason);
+        skipMessage.appendChild(continueBtn);
+        
+        document.body.appendChild(skipMessage);
+        
+        // Clear the skip flag so it only happens once
+        gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
+        
+        // Add event listener to continue button
+        continueBtn.addEventListener('click', function() {
+            console.log("Skip message continue button clicked");
+            document.body.removeChild(skipMessage);
+            // Move to the next player
+            gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+            console.log("After skip, moving to player:", gameState.currentPlayerIndex);
+            // Check if this player needs a shock round (has 10 or more points)
+            checkShockRoundAndSetup();
+        });
     }
     
     // Helper function to check for shock round and setup
@@ -1626,5 +1635,33 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show the specified screen
         screen.classList.add('active');
+    }
+    
+    // Cleanup shock round styling and elements
+    function cleanupShockRound() {
+        console.log("Cleaning up shock round");
+        
+        // Remove shock styling from body
+        document.body.classList.remove('shock-round');
+        
+        // Remove shock styling from all screens
+        Object.values(screens).forEach(screen => {
+            screen.classList.remove('shock-round');
+        });
+        
+        // Remove shock styling from timer
+        const timerContainer = document.querySelector('.timer-container');
+        if (timerContainer) {
+            timerContainer.classList.remove('shock');
+        }
+        
+        // Remove any shock warnings
+        const shockWarning = document.getElementById('shock-warning');
+        if (shockWarning) {
+            shockWarning.remove();
+        }
+        
+        // Reset shock round flag
+        gameState.isShockRound = false;
     }
 }); 
