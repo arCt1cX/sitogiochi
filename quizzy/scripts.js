@@ -89,6 +89,24 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Result screen
         document.getElementById('continue-game').addEventListener('click', function() {
+            // Remove shock styling before proceeding
+            document.body.classList.remove('shock-round');
+            
+            // Remove shock round class from screens
+            Object.values(screens).forEach(screen => {
+                screen.classList.remove('shock-round');
+            });
+            
+            // Remove shock styling from timer
+            const timerContainer = document.querySelector('.timer-container');
+            if (timerContainer) {
+                timerContainer.classList.remove('shock');
+            }
+            
+            // Reset isShockRound flag
+            gameState.isShockRound = false;
+            
+            // Proceed to next turn
             nextTurn();
         });
         
@@ -1381,6 +1399,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Move to the next player's turn
     function nextTurn() {
+        console.log("nextTurn called");
+        
         // Check if any player has reached the winning score
         const winnerIndex = checkForWinner();
         
@@ -1396,22 +1416,25 @@ document.addEventListener('DOMContentLoaded', function() {
             existingWarning.remove();
         }
         
+        const shockWarning = document.getElementById('shock-warning');
+        if (shockWarning) {
+            shockWarning.remove();
+        }
+        
         // Remove shock round styling 
         document.body.classList.remove('shock-round');
-        const gameRoundScreen = document.getElementById('game-round-screen');
-        if (gameRoundScreen) {
-            gameRoundScreen.classList.remove('shock-round');
-        }
-        const questionScreen = document.getElementById('question-screen');
-        if (questionScreen) {
-            questionScreen.classList.remove('shock-round');
-        }
+        Object.values(screens).forEach(screen => {
+            screen.classList.remove('shock-round');
+        });
         
         // Move to next player
         gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+        console.log("Moving to player index:", gameState.currentPlayerIndex);
         
         // Check if current player should skip their turn
         if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+            console.log("Player should skip turn");
+            
             // Display skipped turn message
             const skipMessage = document.createElement('div');
             skipMessage.style.position = 'fixed';
@@ -1463,6 +1486,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.removeChild(skipMessage);
                 // Move to the next player
                 gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                console.log("After skip, moving to player:", gameState.currentPlayerIndex);
                 // Check if this player needs a shock round (has 10 or more points)
                 checkShockRoundAndSetup();
             });
@@ -1476,8 +1500,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Helper function to check for shock round and setup
     function checkShockRoundAndSetup() {
+        console.log("checkShockRoundAndSetup called");
+        
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        console.log("Current player:", currentPlayer.name, "Score:", currentPlayer.score, "Had shock round:", currentPlayer.hadShockRound);
+        
         gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+        console.log("Is shock round:", gameState.isShockRound);
         
         // Track that player had a shock round so it only happens once
         if (gameState.isShockRound) {
