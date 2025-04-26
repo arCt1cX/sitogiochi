@@ -516,8 +516,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Add warning for bambino difficulty
                 if (difficulty === 'bambino') {
-                    // Remove standard point display
-                    const pointsDisplay = button.querySelector('.difficulty-points');
+                    // Remove standard point display for bambino
+                    const pointsDisplay = button.querySelector('.points');
                     if (pointsDisplay) {
                         pointsDisplay.style.display = 'none';
                     }
@@ -535,6 +535,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     warningLabel.style.color = 'red';
                     warningLabel.style.display = 'block';
                     button.appendChild(warningLabel);
+                } else {
+                    // Make sure other difficulties show their points
+                    const pointsDisplay = button.querySelector('.points');
+                    if (pointsDisplay) {
+                        pointsDisplay.style.display = 'block';
+                    }
                 }
             } else {
                 button.style.display = 'none';
