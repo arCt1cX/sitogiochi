@@ -369,12 +369,13 @@ select:focus {
 
 .selected-categories-container {
     margin: 30px auto;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 100%;
     max-width: 800px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .selected-list {

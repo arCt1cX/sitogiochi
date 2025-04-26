@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         gameOver: false,
         availableOptions: [], // New property to store limited options
         lastRandomCategories: [], // Added for storing random categories
-        isShockRound: false // Flag for shock round
+        isShockRound: false, // Flag for shock round
+        hardModeActive: false // Flag for hard mode
     };
 
     // DOM Elements
@@ -627,72 +628,135 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Regular round - continue with normal logic
-            // Determine if we should assign category or difficulty
-            // Use rounds completed and player index to alternate
-            const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
-            
-            // Store the current mode in the game state
-            gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
-            
-            if (shouldAssignCategory) {
-                // Assign a random category, let player choose from 2 random difficulties
-                const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
-                gameState.currentCategory = currentPlayer.categories[randomIndex];
+            // Check if player has more than 20 points - automatic difficulty mode
+            if (currentPlayer.score > 20) {
+                // Assign both category and difficulty randomly
+                const randomCategoryIndex = Math.floor(Math.random() * currentPlayer.categories.length);
+                gameState.currentCategory = currentPlayer.categories[randomCategoryIndex];
                 
-                // Select 2 random difficulties (bambino and facile cannot appear together)
-                const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-                gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
+                // Choose a random difficulty
+                const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+                const randomDifficultyIndex = Math.floor(Math.random() * difficulties.length);
+                gameState.currentDifficulty = difficulties[randomDifficultyIndex];
                 
-                // Hide category section, show difficulty section
+                // Hide both category and difficulty sections
                 safeAddClass(categorySection, 'hidden');
-                safeRemoveClass(difficultySection, 'hidden');
+                safeAddClass(difficultySection, 'hidden');
                 
-                // Show assigned category
+                // Show assigned category and difficulty
                 const playerInfoSection = document.querySelector('.player-info');
                 if (playerInfoSection) {
+                    // Create a special difficulty message element
+                    const difficultyModeEl = document.createElement('div');
+                    difficultyModeEl.className = 'assigned-element';
+                    difficultyModeEl.style.backgroundColor = 'rgba(255, 152, 0, 0.2)';
+                    difficultyModeEl.style.border = '2px solid rgba(255, 152, 0, 0.4)';
+                    
+                    const lang = getUserLanguage();
+                    const modeText = lang === 'it' ? 
+                        'Modalità Difficile Attivata (>20 punti): Categoria e difficoltà assegnate automaticamente. Tutte le risposte valgono 1 punto!' : 
+                        'Hard Mode Activated (>20 points): Category and difficulty automatically assigned. All answers worth 1 point!';
+                    
+                    difficultyModeEl.innerHTML = `<h3 style="color:#ff9800">${modeText}</h3>`;
+                    playerInfoSection.appendChild(difficultyModeEl);
+                    
+                    // Show assigned category
                     const assignedCategoryEl = document.createElement('div');
                     assignedCategoryEl.className = 'assigned-element';
                     const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
                     assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
                     playerInfoSection.appendChild(assignedCategoryEl);
-                }
-                
-                // Update instruction text
-                const difficultyTitle = document.getElementById('difficulty-title');
-                if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
-                
-                // Show only the 2 random difficulties
-                updateDifficultyButtons(gameState.availableOptions);
-            } else {
-                // Assign a random difficulty, let player choose from 2 random categories
-                const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-                const randomIndex = Math.floor(Math.random() * difficulties.length);
-                gameState.currentDifficulty = difficulties[randomIndex];
-                
-                // Select 2 random categories from player's categories
-                gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
-                
-                // Hide difficulty section, show category section
-                safeAddClass(difficultySection, 'hidden');
-                safeRemoveClass(categorySection, 'hidden');
-                
-                // Show assigned difficulty
-                const playerInfoSection = document.querySelector('.player-info');
-                if (playerInfoSection) {
+                    
+                    // Show assigned difficulty
                     const assignedDifficultyEl = document.createElement('div');
                     assignedDifficultyEl.className = 'assigned-element';
                     const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
                     assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
                     playerInfoSection.appendChild(assignedDifficultyEl);
+                    
+                    // Add a continue button
+                    const continueBtn = document.createElement('button');
+                    continueBtn.className = 'primary-btn';
+                    continueBtn.textContent = lang === 'it' ? 'Continua' : 'Continue';
+                    continueBtn.addEventListener('click', function() {
+                        showQuestion();
+                    });
+                    playerInfoSection.appendChild(continueBtn);
                 }
                 
-                // Update instruction text
-                const categoryTitle = document.getElementById('category-selection-title');
-                if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
+                // Flag to indicate hard mode is active (for points calculation)
+                gameState.hardModeActive = true;
+            } else {
+                // Regular round - continue with normal logic
+                // Reset hard mode flag
+                gameState.hardModeActive = false;
                 
-                // Generate category buttons - only for the 2 random categories
-                generateCategoryButtons(gameState.availableOptions);
+                // Determine if we should assign category or difficulty
+                // Use rounds completed and player index to alternate
+                const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
+                
+                // Store the current mode in the game state
+                gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
+                
+                if (shouldAssignCategory) {
+                    // Assign a random category, let player choose from 2 random difficulties
+                    const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
+                    gameState.currentCategory = currentPlayer.categories[randomIndex];
+                    
+                    // Select 2 random difficulties (bambino and facile cannot appear together)
+                    const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+                    gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
+                    
+                    // Hide category section, show difficulty section
+                    safeAddClass(categorySection, 'hidden');
+                    safeRemoveClass(difficultySection, 'hidden');
+                    
+                    // Show assigned category
+                    const playerInfoSection = document.querySelector('.player-info');
+                    if (playerInfoSection) {
+                        const assignedCategoryEl = document.createElement('div');
+                        assignedCategoryEl.className = 'assigned-element';
+                        const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+                        assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
+                        playerInfoSection.appendChild(assignedCategoryEl);
+                    }
+                    
+                    // Update instruction text
+                    const difficultyTitle = document.getElementById('difficulty-title');
+                    if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
+                    
+                    // Show only the 2 random difficulties
+                    updateDifficultyButtons(gameState.availableOptions);
+                } else {
+                    // Assign a random difficulty, let player choose from 2 random categories
+                    const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+                    const randomIndex = Math.floor(Math.random() * difficulties.length);
+                    gameState.currentDifficulty = difficulties[randomIndex];
+                    
+                    // Select 2 random categories from player's categories
+                    gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
+                    
+                    // Hide difficulty section, show category section
+                    safeAddClass(difficultySection, 'hidden');
+                    safeRemoveClass(categorySection, 'hidden');
+                    
+                    // Show assigned difficulty
+                    const playerInfoSection = document.querySelector('.player-info');
+                    if (playerInfoSection) {
+                        const assignedDifficultyEl = document.createElement('div');
+                        assignedDifficultyEl.className = 'assigned-element';
+                        const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
+                        assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
+                        playerInfoSection.appendChild(assignedDifficultyEl);
+                    }
+                    
+                    // Update instruction text
+                    const categoryTitle = document.getElementById('category-selection-title');
+                    if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
+                    
+                    // Generate category buttons - only for the 2 random categories
+                    generateCategoryButtons(gameState.availableOptions);
+                }
             }
             
             // Show game round screen
@@ -1530,14 +1594,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Correct answer - highlight in green
             selectedButton.classList.add('correct-answer-btn');
             
-            // Award points based on difficulty
-            switch (gameState.currentDifficulty) {
-                case 'bambino': pointsEarned = 1; break;
-                case 'facile': pointsEarned = 2; break;
-                case 'medio': pointsEarned = 3; break;
-                case 'esperto': pointsEarned = 4; break;
-                case 'laureato': pointsEarned = 5; break;
-                default: pointsEarned = 1;
+            // Check if hard mode is active
+            if (gameState.hardModeActive) {
+                // In hard mode, all questions are worth 1 point
+                pointsEarned = 1;
+            } else {
+                // Award points based on difficulty
+                switch (gameState.currentDifficulty) {
+                    case 'bambino': pointsEarned = 1; break;
+                    case 'facile': pointsEarned = 2; break;
+                    case 'medio': pointsEarned = 3; break;
+                    case 'esperto': pointsEarned = 4; break;
+                    case 'laureato': pointsEarned = 5; break;
+                    default: pointsEarned = 1;
+                }
             }
             
             // Update player's score
@@ -1641,6 +1711,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Set points earned
             if (pointsEarned) pointsEarned.textContent = points;
+            
+            // Add hard mode message if active and correct answer
+            if (gameState.hardModeActive && isCorrect && resultMessage) {
+                const hardModeEl = document.createElement('p');
+                hardModeEl.style.color = '#ff9800';
+                hardModeEl.style.fontWeight = 'bold';
+                hardModeEl.style.marginTop = '10px';
+                hardModeEl.style.fontSize = '0.9rem';
+                hardModeEl.textContent = getUserLanguage() === 'it' ? 
+                    '(Modalità Difficile: Tutte le risposte valgono solo 1 punto)' : 
+                    '(Hard Mode: All answers are worth only 1 point)';
+                resultMessage.appendChild(hardModeEl);
+            }
             
             // IMPORTANT: Completely replace the continue button with a new one
             const continueButton = document.getElementById('continue-game');
