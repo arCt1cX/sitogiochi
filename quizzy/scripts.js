@@ -1382,47 +1382,60 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set points earned
         pointsEarned.textContent = points;
         
-        // IMPORTANT: Completely replace the continue button with a new one
-        const continueButton = document.getElementById('continue-game');
-        const newContinueButton = document.createElement('button');
-        newContinueButton.id = 'continue-game';
-        newContinueButton.className = continueButton.className;
-        newContinueButton.textContent = continueButton.textContent;
-        
-        // Replace the button completely
-        if (continueButton.parentNode) {
-            continueButton.parentNode.replaceChild(newContinueButton, continueButton);
+        // COMPLETELY REWORKED APPROACH: Replace the continue button with a direct approach
+        const continueButtonContainer = document.querySelector('.result-actions');
+        if (continueButtonContainer) {
+            // Clear any existing content
+            continueButtonContainer.innerHTML = '';
+            
+            // Create a fresh button with inline onclick attribute
+            const freshButton = document.createElement('button');
+            freshButton.id = 'continue-game';
+            freshButton.className = 'primary-button';
+            freshButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+            
+            // Add direct onclick that bypasses event listeners
+            freshButton.setAttribute('onclick', `
+                console.log('Direct onclick handler activated');
+                
+                // Clear shock styling
+                document.body.classList.remove('shock-round');
+                document.querySelectorAll('.screen').forEach(s => s.classList.remove('shock-round'));
+                
+                // Reset game state for next player
+                const wasShockRound = gameState.isShockRound;
+                gameState.isShockRound = false;
+                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                gameState.currentCategory = null;
+                gameState.currentDifficulty = null;
+                
+                // Update round counter if needed
+                if (gameState.currentPlayerIndex === 0) {
+                    gameState.roundsCompleted++;
+                }
+                
+                // Check if current player should skip
+                if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                    showForceSkipMessage();
+                    return;
+                }
+                
+                // Check if this player should have a shock round
+                const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+                const needsShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+                
+                if (needsShockRound) {
+                    currentPlayer.hadShockRound = true;
+                    gameState.isShockRound = true;
+                    setupShockRound(currentPlayer);
+                } else {
+                    setupGameRound();
+                }
+            `);
+            
+            // Add button to container
+            continueButtonContainer.appendChild(freshButton);
         }
-        
-        // Add fresh event listener with console logs
-        newContinueButton.addEventListener('click', function() {
-            console.log("CONTINUE button clicked - moving to next turn");
-            
-            // Clear all styling and flags immediately
-            document.body.classList.remove('shock-round');
-            
-            Object.values(screens).forEach(screen => {
-                screen.classList.remove('shock-round');
-            });
-            
-            const timerContainer = document.querySelector('.timer-container');
-            if (timerContainer) {
-                timerContainer.classList.remove('shock');
-            }
-            
-            // Remove any shock warnings
-            const shockWarning = document.getElementById('shock-warning');
-            if (shockWarning && shockWarning.parentNode) {
-                shockWarning.parentNode.removeChild(shockWarning);
-            }
-            
-            console.log("About to call forceNextTurn");
-            
-            // Call forceNextTurn directly without setTimeout
-            forceNextTurn();
-            
-            console.log("Called forceNextTurn");
-        });
         
         // Show result screen
         showScreen(screens.result);
@@ -1443,22 +1456,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Thoroughly clean up shock round elements and styles
         console.log("Cleaning up shock round elements");
-        document.body.classList.remove('shock-round');
-        
-        Object.values(screens).forEach(screen => {
-            screen.classList.remove('shock-round');
-        });
-        
-        const timerContainer = document.querySelector('.timer-container');
-        if (timerContainer) {
-            timerContainer.classList.remove('shock');
-        }
-        
-        // Remove any shock warnings
-        const shockWarning = document.getElementById('shock-warning');
-        if (shockWarning && shockWarning.parentNode) {
-            shockWarning.parentNode.removeChild(shockWarning);
-        }
+        cleanupShockRound();
         
         // Reset shock round flag
         const wasShockRound = gameState.isShockRound;
@@ -1504,6 +1502,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         console.log("FORCE NEXT TURN COMPLETED");
+    }
+    
+    // Cleanup shock round styling and elements
+    function cleanupShockRound() {
+        console.log("Cleaning up shock round");
+        
+        // Remove shock styling from body
+        document.body.classList.remove('shock-round');
+        
+        // Remove shock styling from all screens
+        document.querySelectorAll('.screen').forEach(screen => {
+            screen.classList.remove('shock-round');
+        });
+        
+        // Remove shock styling from timer
+        const timerContainer = document.querySelector('.timer-container');
+        if (timerContainer) {
+            timerContainer.classList.remove('shock');
+        }
+        
+        // Remove any shock warnings
+        const shockWarning = document.getElementById('shock-warning');
+        if (shockWarning) {
+            shockWarning.remove();
+        }
+        
+        // Remove any shock elements
+        document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
+            el.remove();
+        });
+        
+        // Reset shock round flag
+        gameState.isShockRound = false;
     }
     
     // Forced skip message with clean implementation
@@ -1824,33 +1855,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show the specified screen
         screen.classList.add('active');
-    }
-    
-    // Cleanup shock round styling and elements
-    function cleanupShockRound() {
-        console.log("Cleaning up shock round");
-        
-        // Remove shock styling from body
-        document.body.classList.remove('shock-round');
-        
-        // Remove shock styling from all screens
-        Object.values(screens).forEach(screen => {
-            screen.classList.remove('shock-round');
-        });
-        
-        // Remove shock styling from timer
-        const timerContainer = document.querySelector('.timer-container');
-        if (timerContainer) {
-            timerContainer.classList.remove('shock');
-        }
-        
-        // Remove any shock warnings
-        const shockWarning = document.getElementById('shock-warning');
-        if (shockWarning) {
-            shockWarning.remove();
-        }
-        
-        // Reset shock round flag
-        gameState.isShockRound = false;
     }
 }); 
