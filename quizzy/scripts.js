@@ -266,6 +266,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedCategories = document.querySelectorAll('.category-card.selected');
         const maxCategories = gameState.gameMode === 'shared' ? 2 : 4;
         
+        // Remove any existing error message
+        const existingError = document.getElementById('max-categories-error');
+        if (existingError) {
+            existingError.remove();
+        }
+        
         if (categoryCard.classList.contains('selected')) {
             // Deselect
             categoryCard.classList.remove('selected');
@@ -275,8 +281,22 @@ document.addEventListener('DOMContentLoaded', function() {
             categoryCard.classList.add('selected');
             updateSelectedCategoriesList();
         } else {
-            // Max limit reached
-            alert(`${getGameTranslation('maxCategories')} ${maxCategories} ${getGameTranslation('categories')}`);
+            // Max limit reached - show custom error message
+            const errorMsg = document.createElement('div');
+            errorMsg.id = 'max-categories-error';
+            errorMsg.className = 'error-message';
+            errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${getGameTranslation('categories')}`;
+            
+            // Insert error after the category grid
+            const categoryGrid = document.getElementById('category-cards');
+            categoryGrid.parentNode.insertBefore(errorMsg, categoryGrid.nextSibling);
+            
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                if (errorMsg.parentNode) {
+                    errorMsg.remove();
+                }
+            }, 3000);
         }
         
         // Enable/disable confirm button based on selection
@@ -346,11 +366,37 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('current-player-name').textContent = currentPlayer.name;
         document.getElementById('current-player-score').textContent = currentPlayer.score;
         
+        // Add trophy icon if this player is leading
+        const leadingPlayerIndex = findLeadingPlayer();
+        if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0) {
+            const trophyIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+            </svg>`;
+            document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${trophyIcon}`;
+        }
+        
         // Generate category buttons
         generateCategoryButtons(currentPlayer.categories);
         
         // Show game round screen
         showScreen(screens.gameRound);
+    }
+    
+    // Find the player with the highest score
+    function findLeadingPlayer() {
+        if (gameState.players.length === 0) return -1;
+        
+        let maxScore = -1;
+        let leadingPlayerIndex = -1;
+        
+        gameState.players.forEach((player, index) => {
+            if (player.score > maxScore) {
+                maxScore = player.score;
+                leadingPlayerIndex = index;
+            }
+        });
+        
+        return leadingPlayerIndex;
     }
     
     // Generate category buttons for the current player
@@ -595,8 +641,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function showGameOver(winnerIndex) {
         const winner = gameState.players[winnerIndex];
         
+        // Trophy icon SVG
+        const trophyIcon = `<svg class="trophy-icon" width="24" height="24" viewBox="0 0 24 24" fill="#FFD700">
+            <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+        </svg>`;
+        
         // Update winner info
-        document.getElementById('winner-name').textContent = winner.name;
+        document.getElementById('winner-name').innerHTML = `${winner.name} ${trophyIcon}`;
         document.getElementById('winner-score').textContent = winner.score;
         
         // Generate final scores list
@@ -615,12 +666,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sort players by score (highest first)
         const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
         
-        sortedPlayers.forEach(player => {
+        // Trophy icon SVG
+        const trophyIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+            <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+        </svg>`;
+        
+        sortedPlayers.forEach((player, index) => {
             const listItem = document.createElement('li');
             
             const name = document.createElement('span');
             name.className = 'player-name';
-            name.textContent = player.name;
+            // Add trophy icon to the winner (first in sorted list)
+            if (index === 0 && player.score > 0) {
+                name.innerHTML = `${player.name} ${trophyIcon}`;
+            } else {
+                name.textContent = player.name;
+            }
             
             const score = document.createElement('span');
             score.className = 'player-score';

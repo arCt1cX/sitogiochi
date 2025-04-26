@@ -415,24 +415,24 @@ select:focus {
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 15px 25px;
+    padding: 18px 28px;
     cursor: pointer;
-    min-width: 130px;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: all 0.3s ease;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .difficulty-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .points {
-    font-size: 0.8rem;
-    margin-top: 5px;
+    font-size: 0.9rem;
+    margin-top: 8px;
     color: #8a508f;
 }
 
@@ -707,13 +707,13 @@ select:focus {
     }
     
     .difficulty-buttons {
-        gap: 8px;
+        gap: 10px;
     }
     
     .difficulty-btn {
-        min-width: 90px;
-        padding: 10px;
-        font-size: 0.9rem;
+        min-width: 120px;
+        padding: 15px 20px;
+        font-size: 1.1rem;
     }
     
     .category-buttons {
@@ -784,5 +784,51 @@ select:focus {
     .scores-list li {
         padding: 10px;
         font-size: 1.1rem;
+    }
+}
+
+.trophy-icon {
+    margin-left: 8px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.8));
+    animation: trophy-pulse 2s infinite ease-in-out;
+}
+
+@keyframes trophy-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+.error-message {
+    color: #ff3939;
+    background-color: rgba(255, 57, 57, 0.1);
+    border: 1px solid rgba(255, 57, 57, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 15px auto;
+    font-weight: 600;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 } 

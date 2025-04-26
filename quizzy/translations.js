@@ -245,7 +245,6 @@ function applyGameTranslations() {
     
     // Category Selection Screen
     document.getElementById('category-title').textContent = translations.categoryTitle;
-    document.getElementById('select-category-player').textContent = translations.selectCategoryText;
     document.getElementById('choose-text').textContent = translations.chooseText;
     document.getElementById('selected-title').textContent = translations.selectedTitle;
     document.getElementById('confirm-categories').textContent = translations.confirmCategories;
