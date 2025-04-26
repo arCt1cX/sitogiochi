@@ -1385,6 +1385,127 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set points earned
         pointsEarned.textContent = points;
         
+        // Special handling for shock rounds
+        if (gameState.isShockRound) {
+            console.log("SHOCK ROUND RESULT SCREEN");
+            
+            // Get the continue button container
+            const buttonContainer = document.getElementById('continue-game').parentNode;
+            
+            // Remove the original button
+            buttonContainer.innerHTML = '';
+            
+            // Create a completely new button
+            const newContinueButton = document.createElement('button');
+            newContinueButton.id = 'shock-continue-btn';
+            newContinueButton.className = 'primary-button';
+            newContinueButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+            newContinueButton.style.backgroundColor = '#b71c1c';
+            
+            // Add a very simple, direct event listener
+            newContinueButton.addEventListener('click', function() {
+                console.log("SHOCK ROUND CONTINUE CLICKED");
+                
+                // 1. Clear all styles and flags
+                document.body.classList.remove('shock-round');
+                Object.values(screens).forEach(s => s.classList.remove('shock-round'));
+                gameState.isShockRound = false;
+                
+                // 2. Move to next player
+                const oldIndex = gameState.currentPlayerIndex;
+                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                console.log(`Player changed from ${oldIndex} to ${gameState.currentPlayerIndex}`);
+                
+                // 3. Prepare next player's turn
+                if (gameState.currentPlayerIndex === 0) {
+                    gameState.roundsCompleted++;
+                }
+                
+                // 4. Do we need to skip?
+                if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                    gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
+                    console.log("Player must skip turn");
+                    
+                    // Create an overlay to replace the skip message
+                    const overlay = document.createElement('div');
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100%';
+                    overlay.style.height = '100%';
+                    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+                    overlay.style.display = 'flex';
+                    overlay.style.alignItems = 'center';
+                    overlay.style.justifyContent = 'center';
+                    overlay.style.zIndex = '9999';
+                    
+                    const skipBox = document.createElement('div');
+                    skipBox.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                    skipBox.style.padding = '30px';
+                    skipBox.style.borderRadius = '10px';
+                    skipBox.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.4)';
+                    skipBox.style.maxWidth = '80%';
+                    skipBox.style.textAlign = 'center';
+                    
+                    const skipTitle = document.createElement('h2');
+                    skipTitle.textContent = getUserLanguage() === 'it' ? 'Turno Saltato!' : 'Turn Skipped!';
+                    skipTitle.style.color = 'red';
+                    skipTitle.style.marginBottom = '15px';
+                    
+                    const skipText = document.createElement('p');
+                    skipText.textContent = `${gameState.players[gameState.currentPlayerIndex].name} ${getUserLanguage() === 'it' ? 'salta il turno per aver sbagliato nel Turno Shock!' : 'skips their turn for failing in the Shock Round!'}`;
+                    skipText.style.color = 'white';
+                    skipText.style.marginBottom = '20px';
+                    
+                    const skipButton = document.createElement('button');
+                    skipButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+                    skipButton.style.padding = '10px 20px';
+                    skipButton.style.backgroundColor = '#b71c1c';
+                    skipButton.style.color = 'white';
+                    skipButton.style.border = 'none';
+                    skipButton.style.borderRadius = '5px';
+                    skipButton.style.cursor = 'pointer';
+                    
+                    skipBox.appendChild(skipTitle);
+                    skipBox.appendChild(skipText);
+                    skipBox.appendChild(skipButton);
+                    overlay.appendChild(skipBox);
+                    document.body.appendChild(overlay);
+                    
+                    skipButton.addEventListener('click', function() {
+                        document.body.removeChild(overlay);
+                        // Move to next player
+                        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                        
+                        // Force reset state and setup next round
+                        gameState.currentCategory = null;
+                        gameState.currentDifficulty = null;
+                        setupGameRound();
+                    });
+                    
+                    return;
+                }
+                
+                // 5. Reset state for next round
+                gameState.currentCategory = null;
+                gameState.currentDifficulty = null;
+                
+                // 6. Force check for new shock round
+                const currentPlayer = gameState.players[gameState.currentPlayerIndex]; 
+                gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+                if (gameState.isShockRound) {
+                    currentPlayer.hadShockRound = true;
+                }
+                
+                // 7. Directly go to the game round screen and set it up
+                console.log("Setting up next round");
+                setupGameRound();
+            });
+            
+            // Add the new button to the container
+            buttonContainer.appendChild(newContinueButton);
+        }
+        
         // Show result screen
         showScreen(screens.result);
     }
