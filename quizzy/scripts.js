@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.left = '0';
         overlay.style.width = '100%';
         overlay.style.height = '100%';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+        overlay.style.backgroundColor = '#111';
         overlay.style.zIndex = '1000';
         overlay.style.display = 'flex';
         overlay.style.flexDirection = 'column';
@@ -676,13 +676,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Add a continue button
                     const continueBtn = document.createElement('button');
-                    continueBtn.className = 'primary-btn';
+                    continueBtn.className = 'primary-button';
                     continueBtn.textContent = lang === 'it' ? 'Continua' : 'Continue';
-                    continueBtn.style.fontSize = '1.2rem';
-                    continueBtn.style.padding = '15px 30px';
-                    continueBtn.style.marginTop = '25px';
-                    continueBtn.style.width = '200px';
-                    continueBtn.style.fontWeight = '600';
                     continueBtn.addEventListener('click', function() {
                         showQuestion();
                     });
