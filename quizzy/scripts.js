@@ -1287,6 +1287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle difficulty selection
     function selectDifficulty(difficulty) {
+        console.log("Selected difficulty:", difficulty);
         gameState.currentDifficulty = difficulty;
         showQuestion();
     }
@@ -1509,6 +1510,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const isCorrect = answerIndex === gameState.currentQuestion.correctIndex;
         let pointsEarned = 0;
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        console.log("Current difficulty:", gameState.currentDifficulty);
+        console.log("Player score before:", currentPlayer.score);
         
         // Get all answer buttons
         const answerButtons = document.querySelectorAll('.answer-btn');
@@ -1532,6 +1535,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update player's score
             currentPlayer.score += pointsEarned;
+            console.log("Correct answer! Points earned:", pointsEarned);
+            console.log("Player score after:", currentPlayer.score);
             
             // Wait a moment before showing result screen
             setTimeout(() => {
@@ -1549,16 +1554,24 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Apply penalty for bambino difficulty level
             if (gameState.currentDifficulty === 'bambino') {
+                console.log("BAMBINO PENALTY SHOULD APPLY!");
                 pointsEarned = -2;
                 // Ensure score doesn't go below zero
                 if (currentPlayer.score >= 2) {
                     currentPlayer.score -= 2;
+                    console.log("Deducting 2 points, new score:", currentPlayer.score);
                 } else {
                     // If player has less than 2 points, set score to 0
                     pointsEarned = -currentPlayer.score;
                     currentPlayer.score = 0;
+                    console.log("Setting score to 0");
                 }
+            } else {
+                console.log("Not bambino difficulty, no penalty applied");
             }
+            
+            console.log("Wrong answer! Points earned:", pointsEarned);
+            console.log("Player score after:", currentPlayer.score);
             
             // Wait a moment before showing result screen
             setTimeout(() => {
@@ -1719,9 +1732,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            // FORCE: Completely reset the game round screen to welcome first
-            // This ensures we wipe out any remnants of the shock round
-            showScreen(screens.welcome);
+            // CLEAN TRANSITION: Instead of showing welcome screen, just clean up elements directly
+            // This avoids the welcome screen flash
             
             // IMPORTANT: Reset the shock round flag
             gameState.isShockRound = false;
@@ -1746,6 +1758,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (shockWarning && shockWarning.parentNode) {
                 shockWarning.parentNode.removeChild(shockWarning);
             }
+            
+            // Aggressively remove shock round elements
+            document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
+                if (el && el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+            });
+            
+            // Remove shock buttons
+            document.querySelectorAll('.primary-button').forEach(el => {
+                if (el && el.textContent && (
+                    el.textContent.includes('Inizia Turno Shock') || 
+                    el.textContent.includes('Start Shock Round')
+                ) && el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+            });
             
             // Move to next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
@@ -1778,36 +1807,32 @@ document.addEventListener('DOMContentLoaded', function() {
             // Completely rebuild game round screen for next player
             rebuildGameRoundScreen();
             
-            // Force the game to update all screens first to ensure clean state
-            setTimeout(() => {
-                try {
-                    if (needsShockRound) {
-                        console.log("Setting up shock round for player:", currentPlayer.name);
-                        currentPlayer.hadShockRound = true;
-                        gameState.isShockRound = true;
-                        setupShockRound(currentPlayer);
-                    } else {
-                        console.log("Setting up regular game round");
-                        
-                        // Force show the game round screen first as a clean slate
-                        showScreen(screens.gameRound);
-                        
-                        // Then set up the round
-                        setupGameRound();
-                    }
-                    
-                    console.log("FORCE NEXT TURN COMPLETED");
-                } catch (error) {
-                    console.error("Error in delayed setup:", error);
-                    
-                    // Last resort recovery - go to welcome screen
-                    showScreen(screens.welcome);
-                }
-            }, 300); // Increased delay to ensure DOM is fully updated
+            // For smoother transition, directly move to the next player's turn
+            if (needsShockRound) {
+                console.log("Setting up shock round for player:", currentPlayer.name);
+                currentPlayer.hadShockRound = true;
+                gameState.isShockRound = true;
+                
+                // First show the game screen with minimal delay
+                showScreen(screens.gameRound);
+                
+                // Then setup the shock round
+                setTimeout(() => {
+                    setupShockRound(currentPlayer);
+                }, 50);
+            } else {
+                console.log("Setting up regular game round");
+                
+                // Show game round screen and setup in one quick step
+                showScreen(screens.gameRound);
+                setupGameRound();
+            }
+            
+            console.log("FORCE NEXT TURN COMPLETED");
         } catch (error) {
             console.error("Error in forceNextTurn:", error);
             
-            // Try to recover by going to welcome screen
+            // Try to recover by going to welcome screen as a last resort
             showScreen(screens.welcome);
         }
     }
