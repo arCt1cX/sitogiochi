@@ -400,9 +400,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
             gameState.currentCategory = currentPlayer.categories[randomIndex];
             
-            // Select 2 random difficulties
+            // Select 2 random difficulties (bambino and facile cannot appear together)
             const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-            gameState.availableOptions = getRandomSubset(allDifficulties, 2);
+            gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
             
             // Hide category section, show difficulty section
             document.querySelector('.category-section').classList.add('hidden');
@@ -457,14 +457,73 @@ document.addEventListener('DOMContentLoaded', function() {
         return shuffled.slice(0, size);
     }
     
+    // Helper function to get random difficulties with constraints
+    function getRandomDifficulties(difficulties, size) {
+        // If we want both bambino and facile to never appear together
+        const includesBambino = Math.random() < 0.5;
+        
+        if (includesBambino) {
+            // If we include bambino, we cannot include facile
+            const filteredDiffs = difficulties.filter(diff => diff !== 'facile');
+            const bambinoIndex = filteredDiffs.indexOf('bambino');
+            
+            // Generate a random index excluding bambino's index
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * filteredDiffs.length);
+            } while (randomIndex === bambinoIndex);
+            
+            return ['bambino', filteredDiffs[randomIndex]];
+        } else {
+            // If we include facile, we cannot include bambino
+            const filteredDiffs = difficulties.filter(diff => diff !== 'bambino');
+            const facileIndex = filteredDiffs.indexOf('facile');
+            
+            // We can either include facile or not
+            const includeFacile = Math.random() < 0.6; // 60% chance to include facile
+            
+            if (includeFacile) {
+                // Include facile and one other (not bambino)
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * filteredDiffs.length);
+                } while (randomIndex === facileIndex);
+                
+                return ['facile', filteredDiffs[randomIndex]];
+            } else {
+                // Just get 2 random difficulties excluding both bambino and facile
+                const otherDiffs = difficulties.filter(diff => diff !== 'bambino' && diff !== 'facile');
+                return getRandomSubset(otherDiffs, 2);
+            }
+        }
+    }
+    
     // Update difficulty buttons to show only the available options
     function updateDifficultyButtons(availableDifficulties) {
         const difficultyButtons = document.querySelectorAll('.difficulty-btn');
         
         difficultyButtons.forEach(button => {
             const difficulty = button.getAttribute('data-difficulty');
+            
+            // Remove any existing warning labels
+            const existingLabel = button.querySelector('.difficulty-warning');
+            if (existingLabel) {
+                existingLabel.remove();
+            }
+            
             if (availableDifficulties.includes(difficulty)) {
                 button.style.display = 'block';
+                
+                // Add warning for bambino difficulty
+                if (difficulty === 'bambino') {
+                    const warningLabel = document.createElement('span');
+                    warningLabel.className = 'difficulty-warning';
+                    warningLabel.textContent = '(1/-2 points & 5s time)';
+                    warningLabel.style.fontSize = '0.8em';
+                    warningLabel.style.color = 'red';
+                    warningLabel.style.display = 'block';
+                    button.appendChild(warningLabel);
+                }
             } else {
                 button.style.display = 'none';
             }
@@ -569,6 +628,17 @@ document.addEventListener('DOMContentLoaded', function() {
         container.innerHTML = '';
         
         const letters = ['A', 'B', 'C', 'D'];
+        
+        // Add difficulty warning if bambino
+        if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
+            const warningDiv = document.createElement('div');
+            warningDiv.id = 'bambino-game-warning';
+            warningDiv.style.color = 'red';
+            warningDiv.style.fontWeight = 'bold';
+            warningDiv.style.marginBottom = '10px';
+            warningDiv.textContent = '⚠️ Bambino mode: 5 seconds to answer! Wrong answer: -2 points!';
+            container.parentNode.insertBefore(warningDiv, container);
+        }
         
         question.answers.forEach((answer, index) => {
             const button = document.createElement('button');
