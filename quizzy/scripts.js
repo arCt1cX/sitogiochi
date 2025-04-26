@@ -1382,19 +1382,23 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set points earned
         pointsEarned.textContent = points;
         
-        // IMPORTANT: Hook up continue button with a NEW event listener each time
-        // This prevents issues with existing listeners not firing
+        // IMPORTANT: Completely replace the continue button with a new one
         const continueButton = document.getElementById('continue-game');
+        const newContinueButton = document.createElement('button');
+        newContinueButton.id = 'continue-game';
+        newContinueButton.className = continueButton.className;
+        newContinueButton.textContent = continueButton.textContent;
         
-        // Remove existing event listeners by cloning and replacing
-        const newContinueButton = continueButton.cloneNode(true);
-        continueButton.parentNode.replaceChild(newContinueButton, continueButton);
+        // Replace the button completely
+        if (continueButton.parentNode) {
+            continueButton.parentNode.replaceChild(newContinueButton, continueButton);
+        }
         
-        // Add fresh event listener
+        // Add fresh event listener with console logs
         newContinueButton.addEventListener('click', function() {
             console.log("CONTINUE button clicked - moving to next turn");
             
-            // Clear all styling and flags
+            // Clear all styling and flags immediately
             document.body.classList.remove('shock-round');
             
             Object.values(screens).forEach(screen => {
@@ -1406,10 +1410,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 timerContainer.classList.remove('shock');
             }
             
-            // Force next turn with slight delay
-            setTimeout(function() {
-                forceNextTurn();
-            }, 50);
+            // Remove any shock warnings
+            const shockWarning = document.getElementById('shock-warning');
+            if (shockWarning && shockWarning.parentNode) {
+                shockWarning.parentNode.removeChild(shockWarning);
+            }
+            
+            console.log("About to call forceNextTurn");
+            
+            // Call forceNextTurn directly without setTimeout
+            forceNextTurn();
+            
+            console.log("Called forceNextTurn");
         });
         
         // Show result screen
@@ -1418,7 +1430,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Force next turn - completely separate from regular nextTurn to avoid any issues
     function forceNextTurn() {
-        console.log("FORCE NEXT TURN");
+        console.log("FORCE NEXT TURN STARTED");
         
         // Check for winner first
         for (let i = 0; i < gameState.players.length; i++) {
@@ -1428,6 +1440,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
         }
+        
+        // Thoroughly clean up shock round elements and styles
+        console.log("Cleaning up shock round elements");
+        document.body.classList.remove('shock-round');
+        
+        Object.values(screens).forEach(screen => {
+            screen.classList.remove('shock-round');
+        });
+        
+        const timerContainer = document.querySelector('.timer-container');
+        if (timerContainer) {
+            timerContainer.classList.remove('shock');
+        }
+        
+        // Remove any shock warnings
+        const shockWarning = document.getElementById('shock-warning');
+        if (shockWarning && shockWarning.parentNode) {
+            shockWarning.parentNode.removeChild(shockWarning);
+        }
+        
+        // Reset shock round flag
+        const wasShockRound = gameState.isShockRound;
+        gameState.isShockRound = false;
+        console.log("Was shock round:", wasShockRound);
         
         // Move to next player
         gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
@@ -1443,26 +1479,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Reset for next round
-        gameState.isShockRound = false;
         gameState.currentCategory = null;
         gameState.currentDifficulty = null;
         
         // Check if we've completed a round
         if (gameState.currentPlayerIndex === 0) {
             gameState.roundsCompleted++;
+            console.log("Completed round:", gameState.roundsCompleted);
         }
         
         // Check if next player needs a shock round
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+        console.log("Next player needs shock round:", gameState.isShockRound);
         
         if (gameState.isShockRound) {
+            console.log("Setting up shock round for player:", currentPlayer.name);
             currentPlayer.hadShockRound = true;
             setupShockRound(currentPlayer);
         } else {
+            console.log("Setting up regular game round");
             // Regular round
             setupGameRound();
         }
+        
+        console.log("FORCE NEXT TURN COMPLETED");
     }
     
     // Forced skip message with clean implementation
