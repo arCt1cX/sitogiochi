@@ -524,7 +524,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     const warningLabel = document.createElement('span');
                     warningLabel.className = 'difficulty-warning';
-                    warningLabel.textContent = getGameTranslation('bambinoWarning') || '(1/-2 punti & 5s tempo)';
+                    
+                    // Use direct text based on language instead of translation key
+                    const lang = getUserLanguage();
+                    warningLabel.textContent = lang === 'it' ? 
+                        '(1/-2 punti & 5s tempo)' : 
+                        '(1/-2 points & 5s time)';
+                    
                     warningLabel.style.fontSize = '0.8em';
                     warningLabel.style.color = 'red';
                     warningLabel.style.display = 'block';
@@ -648,7 +654,13 @@ document.addEventListener('DOMContentLoaded', function() {
             warningDiv.style.color = 'red';
             warningDiv.style.fontWeight = 'bold';
             warningDiv.style.marginBottom = '10px';
-            warningDiv.textContent = '⚠️ ' + (getGameTranslation('bambinoGameWarning') || 'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!');
+            
+            // Use direct text based on language instead of translation key
+            const lang = getUserLanguage();
+            warningDiv.textContent = '⚠️ ' + (lang === 'it' ? 
+                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
+                'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
+            
             container.parentNode.insertBefore(warningDiv, container);
         }
         
@@ -687,7 +699,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let timeLimit;
         switch (gameState.currentDifficulty) {
             case 'bambino': timeLimit = 5; break;  // 5 seconds for bambino
-            default: timeLimit = 30; // 30 seconds for all other difficulties
+            case 'facile': timeLimit = 15; break;
+            case 'medio': timeLimit = 20; break;
+            case 'esperto': timeLimit = 30; break;
+            case 'laureato': timeLimit = 30; break;
+            default: timeLimit = 20;
         }
         
         let timeLeft = timeLimit;
@@ -713,40 +729,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle when time runs out
     function timeOut() {
-        // Clear any remaining timer
-        clearInterval(gameState.timer);
-        
-        document.getElementById('answer-feedback').textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
+        document.getElementById('answer-feedback').textContent = "Tempo scaduto!";
         document.getElementById('answer-feedback').style.color = "red";
-        
-        // Disable answer buttons
         disableAnswerButtons();
         
-        // Highlight correct answer
-        const correctIndex = gameState.currentQuestion.correctIndex;
-        const answerButtons = document.querySelectorAll('.answer-btn');
-        if (answerButtons.length > correctIndex) {
-            answerButtons[correctIndex].classList.add('correct-answer-btn');
-        }
-        
         setTimeout(() => {
-            showResult(false, 0, true);
+            nextQuestion();
         }, 2000);
-    }
-    
-    // Disable all answer buttons
-    function disableAnswerButtons() {
-        const buttons = document.querySelectorAll('.answer-btn');
-        buttons.forEach(button => {
-            // Disable the button
-            button.disabled = true;
-            button.style.pointerEvents = 'none';
-            button.style.opacity = '0.7';
-            
-            // Remove the click event listeners by cloning and replacing
-            const newButton = button.cloneNode(true);
-            button.parentNode.replaceChild(newButton, button);
-        });
     }
     
     // Handle a player's answer
@@ -762,9 +751,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const answerButtons = document.querySelectorAll('.answer-btn');
         const selectedButton = answerButtons[answerIndex];
         const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
-        
-        // Disable all buttons to prevent multiple answers
-        disableAnswerButtons();
         
         // Apply visual feedback
         if (isCorrect) {
