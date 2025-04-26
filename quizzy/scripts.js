@@ -87,26 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Result screen
-        document.getElementById('continue-game').addEventListener('click', function() {
-            console.log("Continue game button clicked");
-            
-            // Get the current screen to check if we're on a shock round
-            const isShockRoundActive = document.body.classList.contains('shock-round');
-            console.log("Is shock round active:", isShockRoundActive);
-            
-            // If we're in a shock round, we need special cleanup
-            if (isShockRoundActive) {
-                console.log("Cleaning up shock round");
-                cleanupShockRound();
-            }
-            
-            // Reset isShockRound flag
-            gameState.isShockRound = false;
-            
-            // Proceed to next turn
-            nextTurn();
-        });
+        // Result screen - COMPLETELY REPLACING THIS EVENT LISTENER
+        document.getElementById('continue-game').addEventListener('click', handleContinueFromResult);
         
         // Game Over screen
         document.getElementById('play-again').addEventListener('click', function() {
@@ -1663,5 +1645,89 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Reset shock round flag
         gameState.isShockRound = false;
+    }
+
+    // New dedicated handler for continuing from result screen
+    function handleContinueFromResult() {
+        console.log("CONTINUE FROM RESULT - Button Clicked");
+        
+        // 1. Force cleanup of any shock round styling
+        document.body.classList.remove('shock-round');
+        Object.values(screens).forEach(screen => {
+            screen.classList.remove('shock-round');
+        });
+        
+        // 2. Clear any timers
+        if (gameState.timer) {
+            clearInterval(gameState.timer);
+            gameState.timer = null;
+        }
+        
+        // 3. Clear any warnings or special elements
+        const elementsToRemove = [
+            document.getElementById('bambino-game-warning'),
+            document.getElementById('shock-warning')
+        ];
+        
+        elementsToRemove.forEach(el => {
+            if (el) el.remove();
+        });
+        
+        // 4. Reset the shock round flag
+        gameState.isShockRound = false;
+        
+        // 5. Remove any timer styling
+        const timerContainer = document.querySelector('.timer-container');
+        if (timerContainer) {
+            timerContainer.classList.remove('shock');
+        }
+        
+        // 6. FORCE go to next player - bypassing any previous logic that might be stuck
+        const originalIndex = gameState.currentPlayerIndex;
+        console.log("Moving from player index:", originalIndex);
+        
+        // Move to next player
+        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+        console.log("Moving to player index:", gameState.currentPlayerIndex);
+        
+        // Check if this player should skip their turn
+        if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+            console.log("Player should skip turn - showing message");
+            
+            // Override the class to make sure no shock styling remains
+            document.body.className = '';
+            
+            // Show skip message with a slight delay to ensure proper transition
+            setTimeout(() => {
+                showSkippedTurnMessage();
+            }, 100);
+            return;
+        }
+        
+        // 7. Continue with regular flow
+        console.log("Setting up next round");
+        
+        // Force a delay to ensure clean transition
+        setTimeout(() => {
+            // Check if this player needs a shock round
+            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+            gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+            
+            if (gameState.isShockRound) {
+                currentPlayer.hadShockRound = true;
+            }
+            
+            // If we've gone through all players, increment rounds completed
+            if (gameState.currentPlayerIndex === 0) {
+                gameState.roundsCompleted++;
+            }
+            
+            // Reset game state variables
+            gameState.currentCategory = null;
+            gameState.currentDifficulty = null;
+            
+            // Setup the next round with clean state
+            setupGameRound();
+        }, 100);
     }
 }); 
