@@ -715,6 +715,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function setupShockRound(player) {
         console.log("Setting up shock round for", player.name);
         
+        // FIXME: Clear any existing shock round elements first
+        document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
+            if (el && el.parentNode) {
+                el.parentNode.removeChild(el);
+            }
+        });
+        
+        // Remove existing shock buttons
+        document.querySelectorAll('.primary-button').forEach(el => {
+            if (el && el.textContent && (
+                el.textContent.includes('Inizia Turno Shock') || 
+                el.textContent.includes('Start Shock Round')
+            ) && el.parentNode) {
+                el.parentNode.removeChild(el);
+            }
+        });
+        
         // Apply shock round styling
         document.body.classList.add('shock-round');
         const gameRoundScreen = document.getElementById('game-round-screen');
@@ -804,19 +821,19 @@ document.addEventListener('DOMContentLoaded', function() {
             'Warning: If you answer incorrectly, you will skip your next turn!';
         shockInfo.appendChild(penaltyInfo);
         
-        // Randomly select both category and difficulty
-        const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-        // With bias towards higher difficulties
-        const weightedDifficulties = [...allDifficulties, 'esperto', 'laureato', 'laureato'];
-        const randomDifficultyIndex = Math.floor(Math.random() * weightedDifficulties.length);
-        gameState.currentDifficulty = weightedDifficulties[randomDifficultyIndex];
-        
         // Safety check to ensure player categories exist
         if (!player.categories || player.categories.length === 0) {
             console.error("Player has no categories:", player);
             // Assign default categories if needed
             player.categories = Object.keys(gameState.questions).slice(0, 3);
         }
+        
+        // Randomly select both category and difficulty
+        const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+        // With bias towards higher difficulties
+        const weightedDifficulties = [...allDifficulties, 'esperto', 'laureato', 'laureato'];
+        const randomDifficultyIndex = Math.floor(Math.random() * weightedDifficulties.length);
+        gameState.currentDifficulty = weightedDifficulties[randomDifficultyIndex];
         
         const randomCategoryIndex = Math.floor(Math.random() * player.categories.length);
         gameState.currentCategory = player.categories[randomCategoryIndex];
@@ -861,12 +878,22 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        // IMPORTANT: Clear all existing content first
+        screenContent.innerHTML = '';
+        
         // Preserve player info
         const playerInfo = document.querySelector('.player-info');
+        const newPlayerInfo = document.createElement('div');
+        newPlayerInfo.className = 'player-info';
         
-        // Clear everything except player info
-        screenContent.innerHTML = '';
-        if (playerInfo) screenContent.appendChild(playerInfo);
+        if (playerInfo) {
+            newPlayerInfo.innerHTML = playerInfo.innerHTML;
+        } else {
+            newPlayerInfo.innerHTML = `<h2><span id="current-player-name">${player.name}</span> - <span id="current-player-score">${player.score}</span> ${getGameTranslation('points')}</h2>`;
+        }
+        
+        // Add all elements to the screen content
+        screenContent.appendChild(newPlayerInfo);
         screenContent.appendChild(shockTitle);
         screenContent.appendChild(shockInfo);
         screenContent.appendChild(assignedContainer);
@@ -1692,6 +1719,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
+            // FORCE: Completely reset the game round screen to welcome first
+            // This ensures we wipe out any remnants of the shock round
+            showScreen(screens.welcome);
+            
             // IMPORTANT: Reset the shock round flag
             gameState.isShockRound = false;
             
@@ -1757,7 +1788,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         setupShockRound(currentPlayer);
                     } else {
                         console.log("Setting up regular game round");
-                        // Regular round
+                        
+                        // Force show the game round screen first as a clean slate
+                        showScreen(screens.gameRound);
+                        
+                        // Then set up the round
                         setupGameRound();
                     }
                     
@@ -1768,7 +1803,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Last resort recovery - go to welcome screen
                     showScreen(screens.welcome);
                 }
-            }, 200); // Increased delay to ensure DOM is fully updated
+            }, 300); // Increased delay to ensure DOM is fully updated
         } catch (error) {
             console.error("Error in forceNextTurn:", error);
             
@@ -1787,6 +1822,23 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("Game round screen not found");
             return;
         }
+        
+        // DRASTIC MEASURE: Force remove shock round elements by ID
+        document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
+            if (el && el.parentNode) {
+                el.parentNode.removeChild(el);
+            }
+        });
+        
+        // DRASTIC MEASURE: Force remove any continue buttons from shock rounds
+        document.querySelectorAll('.primary-button').forEach(el => {
+            if (el && el.textContent && (
+                el.textContent.includes('Inizia Turno Shock') || 
+                el.textContent.includes('Start Shock Round')
+            ) && el.parentNode) {
+                el.parentNode.removeChild(el);
+            }
+        });
         
         // Store original classes to preserve them
         const originalClasses = gameRoundScreen.className;
@@ -1834,10 +1886,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
         
-        // Restore original classes
-        gameRoundScreen.className = originalClasses;
+        // Restore original classes EXCEPT shock-round
+        gameRoundScreen.className = originalClasses.replace('shock-round', '');
         
-        // Remove shock-round class specifically
+        // Remove shock-round class specifically again to be sure
         gameRoundScreen.classList.remove('shock-round');
         
         // Re-add event listeners for difficulty buttons
