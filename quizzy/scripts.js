@@ -729,13 +729,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle when time runs out
     function timeOut() {
+        // Stop the timer
+        clearInterval(gameState.timer);
+        
+        // Display time's up message
         document.getElementById('answer-feedback').textContent = "Tempo scaduto!";
         document.getElementById('answer-feedback').style.color = "red";
+        
+        // Disable all answer buttons
         disableAnswerButtons();
         
+        // Show the correct answer
+        const correctIndex = gameState.currentQuestion.correctIndex;
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        if (answerButtons[correctIndex]) {
+            answerButtons[correctIndex].classList.add('correct-answer-btn');
+        }
+        
+        // Wait a moment then show the result screen
         setTimeout(() => {
-            nextQuestion();
+            showResult(false, 0, true);
         }, 2000);
+    }
+    
+    // Disable all answer buttons
+    function disableAnswerButtons() {
+        const answerButtons = document.querySelectorAll('.answer-btn');
+        answerButtons.forEach(button => {
+            button.disabled = true;
+            button.style.opacity = '0.7';
+            button.style.cursor = 'not-allowed';
+            // Remove click event listeners by cloning and replacing
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+        });
     }
     
     // Handle a player's answer
@@ -808,7 +835,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set result message and class
         if (isTimeUp) {
-            resultMessage.textContent = getGameTranslation('timeUp');
+            resultMessage.textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
             resultMessage.className = 'result-message incorrect';
             correctAnswerContainer.classList.remove('hidden');
             correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
