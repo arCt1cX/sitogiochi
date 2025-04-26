@@ -811,8 +811,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const randomDifficultyIndex = Math.floor(Math.random() * weightedDifficulties.length);
         gameState.currentDifficulty = weightedDifficulties[randomDifficultyIndex];
         
+        // Safety check to ensure player categories exist
+        if (!player.categories || player.categories.length === 0) {
+            console.error("Player has no categories:", player);
+            // Assign default categories if needed
+            player.categories = Object.keys(gameState.questions).slice(0, 3);
+        }
+        
         const randomCategoryIndex = Math.floor(Math.random() * player.categories.length);
         gameState.currentCategory = player.categories[randomCategoryIndex];
+        
+        console.log("Shock round assigned: Category =", gameState.currentCategory, 
+                    "Difficulty =", gameState.currentDifficulty);
         
         // Create container for the assigned values
         const assignedContainer = document.createElement('div');
@@ -862,10 +872,34 @@ document.addEventListener('DOMContentLoaded', function() {
         screenContent.appendChild(assignedContainer);
         screenContent.appendChild(continueBtn);
         
-        // Remove old event listeners by creating a new button with the same properties
+        // Add event listener with a proper error handler
         continueBtn.addEventListener('click', function() {
             console.log("Shock round start button clicked");
-            handleShockRoundStart();
+            
+            try {
+                // Validate we have both category and difficulty before proceeding
+                if (!gameState.currentCategory) {
+                    console.error("No category selected for shock round");
+                    gameState.currentCategory = Object.keys(gameState.questions)[0];
+                }
+                
+                if (!gameState.currentDifficulty) {
+                    console.error("No difficulty selected for shock round");
+                    gameState.currentDifficulty = 'medio';
+                }
+                
+                console.log("Starting shock round with Category =", gameState.currentCategory, 
+                            "Difficulty =", gameState.currentDifficulty);
+                
+                handleShockRoundStart();
+            } catch (error) {
+                console.error("Error starting shock round:", error);
+                
+                // Try to recover - move to next player
+                gameState.isShockRound = false;
+                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+                setupGameRound();
+            }
         });
         
         // Show game round screen
@@ -888,15 +922,94 @@ document.addEventListener('DOMContentLoaded', function() {
             resultScreen.classList.add('shock-round');
         }
         
+        // Check for valid category and difficulty before proceeding
+        if (!gameState.currentCategory || !gameState.currentDifficulty) {
+            console.error("Missing category or difficulty:", 
+                        "Category =", gameState.currentCategory, 
+                        "Difficulty =", gameState.currentDifficulty);
+                        
+            // Try a fallback - pick another random difficulty that exists
+            if (gameState.questions && gameState.currentCategory && gameState.questions[gameState.currentCategory]) {
+                // Find available difficulties for this category
+                const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory]);
+                if (availableDifficulties.length > 0) {
+                    gameState.currentDifficulty = availableDifficulties[0];
+                    console.log("Using fallback difficulty:", gameState.currentDifficulty);
+                }
+            }
+            
+            // If still no valid category/difficulty, try to find any valid combination
+            if (!gameState.currentCategory || !gameState.currentDifficulty) {
+                const allCategories = Object.keys(gameState.questions);
+                if (allCategories.length > 0) {
+                    gameState.currentCategory = allCategories[0];
+                    const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory]);
+                    if (availableDifficulties.length > 0) {
+                        gameState.currentDifficulty = availableDifficulties[0];
+                        console.log("Using emergency fallback:", 
+                                  "Category =", gameState.currentCategory, 
+                                  "Difficulty =", gameState.currentDifficulty);
+                    } else {
+                        // Critical error - no valid combination found
+                        alert('Error: No valid categories or difficulties available.');
+                        resetGame();
+                        showScreen(screens.welcome);
+                        return;
+                    }
+                } else {
+                    // Critical error - no valid categories
+                    alert('Error: No categories available.');
+                    resetGame();
+                    showScreen(screens.welcome);
+                    return;
+                }
+            }
+        }
+        
         // Make sure we have a valid question before proceeding
         const question = getRandomQuestion();
         if (!question) {
             console.error("No question found for category:", gameState.currentCategory, "difficulty:", gameState.currentDifficulty);
-            alert('Error: No questions available for this category and difficulty.');
-            return;
+            
+            // Try to find another difficulty that has questions for this category
+            if (gameState.questions && gameState.currentCategory && gameState.questions[gameState.currentCategory]) {
+                const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory])
+                    .filter(diff => gameState.questions[gameState.currentCategory][diff] && 
+                                    gameState.questions[gameState.currentCategory][diff].length > 0);
+                
+                if (availableDifficulties.length > 0) {
+                    gameState.currentDifficulty = availableDifficulties[0];
+                    console.log("Trying alternative difficulty:", gameState.currentDifficulty);
+                    
+                    // Try again with new difficulty
+                    const newQuestion = getRandomQuestion();
+                    if (newQuestion) {
+                        gameState.currentQuestion = newQuestion;
+                        console.log("Found question with alternative difficulty");
+                    } else {
+                        // Still no questions - display error and go back
+                        alert('Error: No questions available for this category and difficulty.');
+                        gameState.isShockRound = false; // Reset shock round flag
+                        showScreen(screens.gameRound); // Go back to game round screen
+                        return;
+                    }
+                } else {
+                    // No difficulties with questions for this category
+                    alert('Error: No questions available for this category.');
+                    gameState.isShockRound = false; // Reset shock round flag
+                    showScreen(screens.gameRound); // Go back to game round screen
+                    return;
+                }
+            } else {
+                // Invalid category or no difficulties
+                alert('Error: Invalid category or no difficulties available.');
+                gameState.isShockRound = false; // Reset shock round flag
+                showScreen(screens.gameRound); // Go back to game round screen
+                return;
+            }
+        } else {
+            gameState.currentQuestion = question;
         }
-        
-        gameState.currentQuestion = question;
         
         // Update question display
         const currentCategoryEl = document.getElementById('current-category');
@@ -912,7 +1025,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (questionTextEl) {
-            questionTextEl.textContent = question.question;
+            questionTextEl.textContent = gameState.currentQuestion.question;
         }
         
         // Remove any existing bambino warning
@@ -970,7 +1083,7 @@ document.addEventListener('DOMContentLoaded', function() {
             answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
         }
         
-        question.answers.forEach((answer, index) => {
+        gameState.currentQuestion.answers.forEach((answer, index) => {
             const button = document.createElement('button');
             button.className = 'answer-btn';
             button.dataset.index = index;
@@ -1579,6 +1692,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
+            // IMPORTANT: Reset the shock round flag
+            gameState.isShockRound = false;
+            
             // Thoroughly clean up shock round elements and styles
             console.log("Cleaning up shock round elements");
             document.body.classList.remove('shock-round');
@@ -1599,11 +1715,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (shockWarning && shockWarning.parentNode) {
                 shockWarning.parentNode.removeChild(shockWarning);
             }
-            
-            // Reset shock round flag
-            const wasShockRound = gameState.isShockRound;
-            gameState.isShockRound = false;
-            console.log("Was shock round:", wasShockRound);
             
             // Move to next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
@@ -1630,15 +1741,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Check if next player needs a shock round
             const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-            gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
-            console.log("Next player needs shock round:", gameState.isShockRound);
+            const needsShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+            console.log("Next player needs shock round:", needsShockRound);
             
             // Force the game to update all screens first to ensure clean state
             setTimeout(() => {
                 try {
-                    if (gameState.isShockRound) {
+                    if (needsShockRound) {
                         console.log("Setting up shock round for player:", currentPlayer.name);
                         currentPlayer.hadShockRound = true;
+                        gameState.isShockRound = true;
                         setupShockRound(currentPlayer);
                     } else {
                         console.log("Setting up regular game round");
