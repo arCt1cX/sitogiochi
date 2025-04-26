@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         timeLeft: 30,
         winningScore: 25,
         roundsCompleted: 0,
-        gameOver: false
+        gameOver: false,
+        availableOptions: [] // New property to store limited options
     };
 
     // DOM Elements
@@ -395,9 +396,13 @@ document.addEventListener('DOMContentLoaded', function() {
         gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
         
         if (shouldAssignCategory) {
-            // Assign a random category, let player choose difficulty
+            // Assign a random category, let player choose from 2 random difficulties
             const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
             gameState.currentCategory = currentPlayer.categories[randomIndex];
+            
+            // Select 2 random difficulties
+            const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+            gameState.availableOptions = getRandomSubset(allDifficulties, 2);
             
             // Hide category section, show difficulty section
             document.querySelector('.category-section').classList.add('hidden');
@@ -412,11 +417,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update instruction text
             document.getElementById('difficulty-title').textContent = getGameTranslation('difficultyTitle');
+            
+            // Show only the 2 random difficulties
+            updateDifficultyButtons(gameState.availableOptions);
         } else {
-            // Assign a random difficulty, let player choose category
+            // Assign a random difficulty, let player choose from 2 random categories
             const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
             const randomIndex = Math.floor(Math.random() * difficulties.length);
             gameState.currentDifficulty = difficulties[randomIndex];
+            
+            // Select 2 random categories from player's categories
+            gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
             
             // Hide difficulty section, show category section
             document.querySelector('.difficulty-section').classList.add('hidden');
@@ -432,12 +443,32 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update instruction text
             document.getElementById('category-selection-title').textContent = getGameTranslation('categorySelectionTitle');
             
-            // Generate category buttons
-            generateCategoryButtons(currentPlayer.categories);
+            // Generate category buttons - only for the 2 random categories
+            generateCategoryButtons(gameState.availableOptions);
         }
         
         // Show game round screen
         showScreen(screens.gameRound);
+    }
+    
+    // Helper function to get a random subset of an array
+    function getRandomSubset(array, size) {
+        const shuffled = [...array].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, size);
+    }
+    
+    // Update difficulty buttons to show only the available options
+    function updateDifficultyButtons(availableDifficulties) {
+        const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+        
+        difficultyButtons.forEach(button => {
+            const difficulty = button.getAttribute('data-difficulty');
+            if (availableDifficulties.includes(difficulty)) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
     }
     
     // Find the player with the highest score
@@ -563,31 +594,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Start the question timer
+    // Start the timer for a question
     function startTimer() {
-        gameState.timeLeft = 30;
-        updateTimerDisplay();
-        
         // Clear any existing timer
         if (gameState.timer) {
             clearInterval(gameState.timer);
         }
         
-        // Set a new timer
-        gameState.timer = setInterval(function() {
-            gameState.timeLeft--;
-            updateTimerDisplay();
+        // Set time based on difficulty
+        let timeLimit;
+        switch (gameState.currentDifficulty) {
+            case 'bambino': timeLimit = 5; break;  // 5 seconds for bambino
+            case 'facile': timeLimit = 20; break;
+            case 'medio': timeLimit = 15; break;
+            case 'esperto': timeLimit = 10; break;
+            case 'laureato': timeLimit = 10; break;
+            default: timeLimit = 20;
+        }
+        
+        let timeLeft = timeLimit;
+        updateTimerDisplay(timeLeft);
+        
+        // Start the timer
+        gameState.timer = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
             
-            if (gameState.timeLeft <= 0) {
+            if (timeLeft <= 0) {
+                // Time's up
                 clearInterval(gameState.timer);
-                handleTimeUp();
+                timeOut();
             }
         }, 1000);
     }
     
     // Update the timer display
-    function updateTimerDisplay() {
-        document.getElementById('timer-display').textContent = gameState.timeLeft;
+    function updateTimerDisplay(timeLeft) {
+        document.getElementById('timer-display').textContent = timeLeft;
+    }
+    
+    // Handle when time runs out
+    function timeOut() {
+        document.getElementById('answer-feedback').textContent = "Tempo scaduto!";
+        document.getElementById('answer-feedback').style.color = "red";
+        disableAnswerButtons();
+        
+        setTimeout(() => {
+            nextQuestion();
+        }, 2000);
     }
     
     // Handle a player's answer
@@ -597,6 +651,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const isCorrect = answerIndex === gameState.currentQuestion.correctIndex;
         let pointsEarned = 0;
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         
         // Get all answer buttons
         const answerButtons = document.querySelectorAll('.answer-btn');
@@ -619,7 +674,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Update player's score
-            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
             currentPlayer.score += pointsEarned;
             
             // Wait a moment before showing result screen
@@ -631,24 +685,24 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedButton.classList.add('incorrect-answer-btn');
             correctButton.classList.add('correct-answer-btn');
             
+            // Apply penalty for bambino difficulty level
+            if (gameState.currentDifficulty === 'bambino') {
+                pointsEarned = -2;
+                // Ensure score doesn't go below zero
+                if (currentPlayer.score >= 2) {
+                    currentPlayer.score -= 2;
+                } else {
+                    // If player has less than 2 points, set score to 0
+                    pointsEarned = -currentPlayer.score;
+                    currentPlayer.score = 0;
+                }
+            }
+            
             // Wait a moment before showing result screen
             setTimeout(() => {
-                showResult(false, 0);
+                showResult(false, pointsEarned);
             }, 1500);
         }
-    }
-    
-    // Handle time running out
-    function handleTimeUp() {
-        // Highlight the correct answer when time is up
-        const answerButtons = document.querySelectorAll('.answer-btn');
-        const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
-        correctButton.classList.add('correct-answer-btn');
-        
-        // Wait a moment before showing result screen
-        setTimeout(() => {
-            showResult(false, 0, true);
-        }, 1500);
     }
     
     // Show the result screen
