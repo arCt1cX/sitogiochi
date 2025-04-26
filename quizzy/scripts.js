@@ -678,6 +678,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     const continueBtn = document.createElement('button');
                     continueBtn.className = 'primary-btn';
                     continueBtn.textContent = lang === 'it' ? 'Continua' : 'Continue';
+                    continueBtn.style.fontSize = '1.2rem';
+                    continueBtn.style.padding = '15px 30px';
+                    continueBtn.style.marginTop = '25px';
+                    continueBtn.style.width = '200px';
+                    continueBtn.style.fontWeight = '600';
                     continueBtn.addEventListener('click', function() {
                         showQuestion();
                     });
@@ -1430,7 +1435,27 @@ document.addEventListener('DOMContentLoaded', function() {
             container.parentNode.insertBefore(warningDiv, container);
         }
         
-        question.answers.forEach((answer, index) => {
+        // Create an array of answer objects with their original indexes
+        const answerObjects = question.answers.map((answer, index) => {
+            return {
+                text: answer,
+                isCorrect: index === question.correctIndex
+            };
+        });
+        
+        // Shuffle the answers
+        const shuffledAnswers = shuffleArray([...answerObjects]);
+        
+        // Update the current question's correct index
+        let newCorrectIndex = -1;
+        
+        // Generate the answer buttons with the shuffled answers
+        shuffledAnswers.forEach((answer, index) => {
+            // Track the new index of the correct answer
+            if (answer.isCorrect) {
+                newCorrectIndex = index;
+            }
+            
             const button = document.createElement('button');
             button.className = 'answer-btn';
             button.dataset.index = index;
@@ -1441,7 +1466,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const text = document.createElement('span');
             text.className = 'answer-text';
-            text.textContent = answer;
+            text.textContent = answer.text;
             
             button.appendChild(letter);
             button.appendChild(text);
@@ -1452,6 +1477,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
             container.appendChild(button);
         });
+        
+        // Update the correct index in the current question
+        gameState.currentQuestion.correctIndex = newCorrectIndex;
+    }
+    
+    // Helper function to shuffle an array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
     
     // Start the timer for a question
