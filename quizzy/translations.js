@@ -10,12 +10,12 @@ const gameTranslations = {
         'welcomeTitle': 'Benvenuto a Quizzy!',
         'gameRules': `
             <p>Quizzy è un gioco a quiz per più giocatori:</p>
-            <ul>
-                <li>Ogni giocatore sceglie categorie e livelli di difficoltà</li>
-                <li>Rispondi correttamente per guadagnare punti</li>
-                <li>Più alta è la difficoltà, più punti guadagni</li>
-                <li>Il primo a raggiungere 25 punti vince!</li>
-            </ul>
+            <div class="rules-list">
+                <p class="rule-item">Ogni giocatore sceglie categorie e livelli di difficoltà</p>
+                <p class="rule-item">Rispondi correttamente per guadagnare punti</p>
+                <p class="rule-item">Più alta è la difficoltà, più punti guadagni</p>
+                <p class="rule-item">Il primo a raggiungere 25 punti vince!</p>
+            </div>
         `,
         'startSetup': 'Inizia a Giocare',
         
@@ -110,12 +110,12 @@ const gameTranslations = {
         'welcomeTitle': 'Welcome to Quizzy!',
         'gameRules': `
             <p>Quizzy is a quiz game for multiple players:</p>
-            <ul>
-                <li>Each player chooses categories and difficulty levels</li>
-                <li>Answer correctly to earn points</li>
-                <li>The higher the difficulty, the more points you earn</li>
-                <li>First to reach 25 points wins!</li>
-            </ul>
+            <div class="rules-list">
+                <p class="rule-item">Each player chooses categories and difficulty levels</p>
+                <p class="rule-item">Answer correctly to earn points</p>
+                <p class="rule-item">The higher the difficulty, the more points you earn</p>
+                <p class="rule-item">First to reach 25 points wins!</p>
+            </div>
         `,
         'startSetup': 'Start Playing',
         
