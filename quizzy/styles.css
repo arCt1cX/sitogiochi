@@ -790,14 +790,15 @@ select:focus {
 .trophy-icon {
     margin-left: 8px;
     vertical-align: middle;
-    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.8));
+    stroke: #ffd700;
+    filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.5));
     animation: trophy-pulse 2s infinite ease-in-out;
 }
 
 @keyframes trophy-pulse {
     0% {
         transform: scale(1);
-        opacity: 0.9;
+        opacity: 0.85;
     }
     50% {
         transform: scale(1.1);
@@ -805,7 +806,7 @@ select:focus {
     }
     100% {
         transform: scale(1);
-        opacity: 0.9;
+        opacity: 0.85;
     }
 }
 
@@ -830,5 +831,28 @@ select:focus {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.assigned-element {
+    background-color: rgba(138, 80, 143, 0.2);
+    border: 2px solid rgba(138, 80, 143, 0.4);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease;
+}
+
+.assigned-element h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .assigned-element h3 {
+        font-size: 1.1rem;
     }
 } 

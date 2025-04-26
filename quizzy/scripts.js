@@ -285,7 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const errorMsg = document.createElement('div');
             errorMsg.id = 'max-categories-error';
             errorMsg.className = 'error-message';
-            errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${getGameTranslation('categories')}`;
+            
+            // Use the correct word for categories based on language
+            const lang = getUserLanguage();
+            const categoriesText = lang === 'it' ? 'categorie' : 'categories';
+            errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${categoriesText}`;
             
             // Insert error after the category grid
             const categoryGrid = document.getElementById('category-cards');
@@ -366,17 +370,71 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('current-player-name').textContent = currentPlayer.name;
         document.getElementById('current-player-score').textContent = currentPlayer.score;
         
+        // Clear any previous assigned elements
+        const previousAssigned = document.querySelectorAll('.assigned-element');
+        previousAssigned.forEach(el => el.remove());
+        
+        // Make sure both sections are back to default state
+        document.querySelector('.category-section').classList.remove('hidden');
+        document.querySelector('.difficulty-section').classList.remove('hidden');
+        
         // Add trophy icon if this player is leading
         const leadingPlayerIndex = findLeadingPlayer();
         if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0) {
-            const trophyIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
-                <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+            const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
             </svg>`;
-            document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${trophyIcon}`;
+            document.getElementById('current-player-name').innerHTML = `${currentPlayer.name} ${crownIcon}`;
         }
         
-        // Generate category buttons
-        generateCategoryButtons(currentPlayer.categories);
+        // Determine if we should assign category or difficulty
+        // Use rounds completed and player index to alternate
+        const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
+        
+        // Store the current mode in the game state
+        gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
+        
+        if (shouldAssignCategory) {
+            // Assign a random category, let player choose difficulty
+            const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
+            gameState.currentCategory = currentPlayer.categories[randomIndex];
+            
+            // Hide category section, show difficulty section
+            document.querySelector('.category-section').classList.add('hidden');
+            document.querySelector('.difficulty-section').classList.remove('hidden');
+            
+            // Show assigned category
+            const assignedCategoryEl = document.createElement('div');
+            assignedCategoryEl.className = 'assigned-element';
+            const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
+            assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
+            document.querySelector('.player-info').appendChild(assignedCategoryEl);
+            
+            // Update instruction text
+            document.getElementById('difficulty-title').textContent = getGameTranslation('difficultyTitle');
+        } else {
+            // Assign a random difficulty, let player choose category
+            const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
+            const randomIndex = Math.floor(Math.random() * difficulties.length);
+            gameState.currentDifficulty = difficulties[randomIndex];
+            
+            // Hide difficulty section, show category section
+            document.querySelector('.difficulty-section').classList.add('hidden');
+            document.querySelector('.category-section').classList.remove('hidden');
+            
+            // Show assigned difficulty
+            const assignedDifficultyEl = document.createElement('div');
+            assignedDifficultyEl.className = 'assigned-element';
+            const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
+            assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
+            document.querySelector('.player-info').appendChild(assignedDifficultyEl);
+            
+            // Update instruction text
+            document.getElementById('category-selection-title').textContent = getGameTranslation('categorySelectionTitle');
+            
+            // Generate category buttons
+            generateCategoryButtons(currentPlayer.categories);
+        }
         
         // Show game round screen
         showScreen(screens.gameRound);
@@ -618,6 +676,10 @@ document.addEventListener('DOMContentLoaded', function() {
             gameState.roundsCompleted++;
         }
         
+        // Reset game state variables
+        gameState.currentCategory = null;
+        gameState.currentDifficulty = null;
+        
         // Setup the next round
         setupGameRound();
     }
@@ -642,12 +704,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const winner = gameState.players[winnerIndex];
         
         // Trophy icon SVG
-        const trophyIcon = `<svg class="trophy-icon" width="24" height="24" viewBox="0 0 24 24" fill="#FFD700">
-            <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+        const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
         </svg>`;
         
         // Update winner info
-        document.getElementById('winner-name').innerHTML = `${winner.name} ${trophyIcon}`;
+        document.getElementById('winner-name').innerHTML = `${winner.name} ${crownIcon}`;
         document.getElementById('winner-score').textContent = winner.score;
         
         // Generate final scores list
@@ -667,8 +729,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
         
         // Trophy icon SVG
-        const trophyIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
-            <path d="M5,3H19C19.55,3 20,3.45 20,4V6C20,7.1 19.1,8 18,8H17L16,22H8L7,8H6C4.9,8 4,7.1 4,6V4C4,3.45 4.45,3 5,3M8.5,5C8.22,5 8,5.22 8,5.5C8,5.78 8.22,6 8.5,6C8.78,6 9,5.78 9,5.5C9,5.22 8.78,5 8.5,5M15.5,5C15.22,5 15,5.22 15,5.5C15,5.78 15.22,6 15.5,6C15.78,6 16,5.78 16,5.5C16,5.22 15.78,5 15.5,5Z" />
+        const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5,16 L8,9 L12,12 L16,9 L19,16 L5,16 Z M12,4 L14,6 L12,8 L10,6 L12,4 Z M3,16 L3,18 L21,18 L21,16 M12,16 L12,21" />
         </svg>`;
         
         sortedPlayers.forEach((player, index) => {
@@ -678,7 +740,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name.className = 'player-name';
             // Add trophy icon to the winner (first in sorted list)
             if (index === 0 && player.score > 0) {
-                name.innerHTML = `${player.name} ${trophyIcon}`;
+                name.innerHTML = `${player.name} ${crownIcon}`;
             } else {
                 name.textContent = player.name;
             }
