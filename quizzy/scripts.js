@@ -87,9 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Result screen - COMPLETELY REPLACING THIS EVENT LISTENER
-        document.getElementById('continue-game').addEventListener('click', handleContinueFromResult);
-        
         // Game Over screen
         document.getElementById('play-again').addEventListener('click', function() {
             resetGame();
@@ -1385,129 +1382,177 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set points earned
         pointsEarned.textContent = points;
         
-        // Special handling for shock rounds
-        if (gameState.isShockRound) {
-            console.log("SHOCK ROUND RESULT SCREEN");
+        // IMPORTANT: Hook up continue button with a NEW event listener each time
+        // This prevents issues with existing listeners not firing
+        const continueButton = document.getElementById('continue-game');
+        
+        // Remove existing event listeners by cloning and replacing
+        const newContinueButton = continueButton.cloneNode(true);
+        continueButton.parentNode.replaceChild(newContinueButton, continueButton);
+        
+        // Add fresh event listener
+        newContinueButton.addEventListener('click', function() {
+            console.log("CONTINUE button clicked - moving to next turn");
             
-            // Get the continue button container
-            const buttonContainer = document.getElementById('continue-game').parentNode;
+            // Clear all styling and flags
+            document.body.classList.remove('shock-round');
             
-            // Remove the original button
-            buttonContainer.innerHTML = '';
-            
-            // Create a completely new button
-            const newContinueButton = document.createElement('button');
-            newContinueButton.id = 'shock-continue-btn';
-            newContinueButton.className = 'primary-button';
-            newContinueButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-            newContinueButton.style.backgroundColor = '#b71c1c';
-            
-            // Add a very simple, direct event listener
-            newContinueButton.addEventListener('click', function() {
-                console.log("SHOCK ROUND CONTINUE CLICKED");
-                
-                // 1. Clear all styles and flags
-                document.body.classList.remove('shock-round');
-                Object.values(screens).forEach(s => s.classList.remove('shock-round'));
-                gameState.isShockRound = false;
-                
-                // 2. Move to next player
-                const oldIndex = gameState.currentPlayerIndex;
-                gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-                console.log(`Player changed from ${oldIndex} to ${gameState.currentPlayerIndex}`);
-                
-                // 3. Prepare next player's turn
-                if (gameState.currentPlayerIndex === 0) {
-                    gameState.roundsCompleted++;
-                }
-                
-                // 4. Do we need to skip?
-                if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
-                    gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
-                    console.log("Player must skip turn");
-                    
-                    // Create an overlay to replace the skip message
-                    const overlay = document.createElement('div');
-                    overlay.style.position = 'fixed';
-                    overlay.style.top = '0';
-                    overlay.style.left = '0';
-                    overlay.style.width = '100%';
-                    overlay.style.height = '100%';
-                    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
-                    overlay.style.display = 'flex';
-                    overlay.style.alignItems = 'center';
-                    overlay.style.justifyContent = 'center';
-                    overlay.style.zIndex = '9999';
-                    
-                    const skipBox = document.createElement('div');
-                    skipBox.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-                    skipBox.style.padding = '30px';
-                    skipBox.style.borderRadius = '10px';
-                    skipBox.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.4)';
-                    skipBox.style.maxWidth = '80%';
-                    skipBox.style.textAlign = 'center';
-                    
-                    const skipTitle = document.createElement('h2');
-                    skipTitle.textContent = getUserLanguage() === 'it' ? 'Turno Saltato!' : 'Turn Skipped!';
-                    skipTitle.style.color = 'red';
-                    skipTitle.style.marginBottom = '15px';
-                    
-                    const skipText = document.createElement('p');
-                    skipText.textContent = `${gameState.players[gameState.currentPlayerIndex].name} ${getUserLanguage() === 'it' ? 'salta il turno per aver sbagliato nel Turno Shock!' : 'skips their turn for failing in the Shock Round!'}`;
-                    skipText.style.color = 'white';
-                    skipText.style.marginBottom = '20px';
-                    
-                    const skipButton = document.createElement('button');
-                    skipButton.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-                    skipButton.style.padding = '10px 20px';
-                    skipButton.style.backgroundColor = '#b71c1c';
-                    skipButton.style.color = 'white';
-                    skipButton.style.border = 'none';
-                    skipButton.style.borderRadius = '5px';
-                    skipButton.style.cursor = 'pointer';
-                    
-                    skipBox.appendChild(skipTitle);
-                    skipBox.appendChild(skipText);
-                    skipBox.appendChild(skipButton);
-                    overlay.appendChild(skipBox);
-                    document.body.appendChild(overlay);
-                    
-                    skipButton.addEventListener('click', function() {
-                        document.body.removeChild(overlay);
-                        // Move to next player
-                        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-                        
-                        // Force reset state and setup next round
-                        gameState.currentCategory = null;
-                        gameState.currentDifficulty = null;
-                        setupGameRound();
-                    });
-                    
-                    return;
-                }
-                
-                // 5. Reset state for next round
-                gameState.currentCategory = null;
-                gameState.currentDifficulty = null;
-                
-                // 6. Force check for new shock round
-                const currentPlayer = gameState.players[gameState.currentPlayerIndex]; 
-                gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
-                if (gameState.isShockRound) {
-                    currentPlayer.hadShockRound = true;
-                }
-                
-                // 7. Directly go to the game round screen and set it up
-                console.log("Setting up next round");
-                setupGameRound();
+            Object.values(screens).forEach(screen => {
+                screen.classList.remove('shock-round');
             });
             
-            // Add the new button to the container
-            buttonContainer.appendChild(newContinueButton);
-        }
+            const timerContainer = document.querySelector('.timer-container');
+            if (timerContainer) {
+                timerContainer.classList.remove('shock');
+            }
+            
+            // Force next turn with slight delay
+            setTimeout(function() {
+                forceNextTurn();
+            }, 50);
+        });
         
         // Show result screen
         showScreen(screens.result);
+    }
+    
+    // Force next turn - completely separate from regular nextTurn to avoid any issues
+    function forceNextTurn() {
+        console.log("FORCE NEXT TURN");
+        
+        // Check for winner first
+        for (let i = 0; i < gameState.players.length; i++) {
+            if (gameState.players[i].score >= gameState.winningScore && gameState.roundsCompleted > 0) {
+                console.log("We have a winner!");
+                showGameOver(i);
+                return;
+            }
+        }
+        
+        // Move to next player
+        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+        console.log("Moving to player index:", gameState.currentPlayerIndex);
+        
+        // Check if this player should skip their turn
+        if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+            console.log("Player should skip turn");
+            
+            // Create skip message
+            showForceSkipMessage();
+            return;
+        }
+        
+        // Reset for next round
+        gameState.isShockRound = false;
+        gameState.currentCategory = null;
+        gameState.currentDifficulty = null;
+        
+        // Check if we've completed a round
+        if (gameState.currentPlayerIndex === 0) {
+            gameState.roundsCompleted++;
+        }
+        
+        // Check if next player needs a shock round
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
+        
+        if (gameState.isShockRound) {
+            currentPlayer.hadShockRound = true;
+            setupShockRound(currentPlayer);
+        } else {
+            // Regular round
+            setupGameRound();
+        }
+    }
+    
+    // Forced skip message with clean implementation
+    function showForceSkipMessage() {
+        // First make sure body is clean
+        document.body.className = '';
+        
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+        overlay.style.zIndex = '9999';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        
+        // Create message container
+        const messageBox = document.createElement('div');
+        messageBox.style.backgroundColor = '#222';
+        messageBox.style.color = 'white';
+        messageBox.style.padding = '30px';
+        messageBox.style.borderRadius = '10px';
+        messageBox.style.maxWidth = '500px';
+        messageBox.style.textAlign = 'center';
+        messageBox.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.5)';
+        
+        // Title
+        const skipTitle = document.createElement('h2');
+        skipTitle.style.color = 'red';
+        skipTitle.style.marginBottom = '15px';
+        skipTitle.textContent = getUserLanguage() === 'it' ? 'Turno Saltato!' : 'Turn Skipped!';
+        
+        // Player name
+        const playerName = document.createElement('p');
+        playerName.style.fontSize = '1.2rem';
+        playerName.style.marginBottom = '15px';
+        playerName.textContent = gameState.players[gameState.currentPlayerIndex].name;
+        
+        // Reason
+        const reason = document.createElement('p');
+        reason.style.marginBottom = '25px';
+        reason.textContent = getUserLanguage() === 'it' ? 
+            'Ha sbagliato nel Turno Shock e salta questo turno.' : 
+            'Failed in the Shock Round and skips this turn.';
+        
+        // Button
+        const continueBtn = document.createElement('button');
+        continueBtn.className = 'primary-button';
+        continueBtn.style.padding = '10px 20px';
+        continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+        
+        // Add elements to container
+        messageBox.appendChild(skipTitle);
+        messageBox.appendChild(playerName);
+        messageBox.appendChild(reason);
+        messageBox.appendChild(continueBtn);
+        overlay.appendChild(messageBox);
+        
+        // Add to body
+        document.body.appendChild(overlay);
+        
+        // Clear skip flag
+        gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
+        
+        // Add event listener
+        continueBtn.addEventListener('click', function() {
+            // Remove overlay
+            document.body.removeChild(overlay);
+            
+            // Move to next player
+            gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
+            
+            // Force next turn with small delay
+            setTimeout(function() {
+                // Check for shock round
+                const player = gameState.players[gameState.currentPlayerIndex];
+                gameState.isShockRound = player.score >= 10 && !player.hadShockRound;
+                
+                if (gameState.isShockRound) {
+                    player.hadShockRound = true;
+                    setupShockRound(player);
+                } else {
+                    setupGameRound();
+                }
+            }, 50);
+        });
     }
     
     // Move to the next player's turn
@@ -1766,89 +1811,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Reset shock round flag
         gameState.isShockRound = false;
-    }
-
-    // New dedicated handler for continuing from result screen
-    function handleContinueFromResult() {
-        console.log("CONTINUE FROM RESULT - Button Clicked");
-        
-        // 1. Force cleanup of any shock round styling
-        document.body.classList.remove('shock-round');
-        Object.values(screens).forEach(screen => {
-            screen.classList.remove('shock-round');
-        });
-        
-        // 2. Clear any timers
-        if (gameState.timer) {
-            clearInterval(gameState.timer);
-            gameState.timer = null;
-        }
-        
-        // 3. Clear any warnings or special elements
-        const elementsToRemove = [
-            document.getElementById('bambino-game-warning'),
-            document.getElementById('shock-warning')
-        ];
-        
-        elementsToRemove.forEach(el => {
-            if (el) el.remove();
-        });
-        
-        // 4. Reset the shock round flag
-        gameState.isShockRound = false;
-        
-        // 5. Remove any timer styling
-        const timerContainer = document.querySelector('.timer-container');
-        if (timerContainer) {
-            timerContainer.classList.remove('shock');
-        }
-        
-        // 6. FORCE go to next player - bypassing any previous logic that might be stuck
-        const originalIndex = gameState.currentPlayerIndex;
-        console.log("Moving from player index:", originalIndex);
-        
-        // Move to next player
-        gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-        console.log("Moving to player index:", gameState.currentPlayerIndex);
-        
-        // Check if this player should skip their turn
-        if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
-            console.log("Player should skip turn - showing message");
-            
-            // Override the class to make sure no shock styling remains
-            document.body.className = '';
-            
-            // Show skip message with a slight delay to ensure proper transition
-            setTimeout(() => {
-                showSkippedTurnMessage();
-            }, 100);
-            return;
-        }
-        
-        // 7. Continue with regular flow
-        console.log("Setting up next round");
-        
-        // Force a delay to ensure clean transition
-        setTimeout(() => {
-            // Check if this player needs a shock round
-            const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-            gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
-            
-            if (gameState.isShockRound) {
-                currentPlayer.hadShockRound = true;
-            }
-            
-            // If we've gone through all players, increment rounds completed
-            if (gameState.currentPlayerIndex === 0) {
-                gameState.roundsCompleted++;
-            }
-            
-            // Reset game state variables
-            gameState.currentCategory = null;
-            gameState.currentDifficulty = null;
-            
-            // Setup the next round with clean state
-            setupGameRound();
-        }, 100);
     }
 }); 
