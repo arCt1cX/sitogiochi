@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         winningScore: 25,
         roundsCompleted: 0,
         gameOver: false,
-        availableOptions: [] // New property to store limited options
+        availableOptions: [], // New property to store limited options
+        lastRandomCategories: [] // Added for storing random categories
     };
 
     // DOM Elements
@@ -64,27 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedCategories.length > 0) {
                 savePlayerCategories();
                 
+                // The flow will continue from the showRandomCategoriesScreen callback
+                // or directly from savePlayerCategories for shared mode
+                
                 if (gameState.gameMode === 'shared') {
-                    // If all players have selected categories, combine them
-                    if (Object.keys(gameState.playerCategories).length === gameState.players.length) {
-                        combineSharedCategories();
-                        startGame();
-                    } else {
-                        // Move to next player for category selection
-                        gameState.currentPlayerIndex++;
-                        setupCategorySelection();
-                    }
-                } else {
-                    // Individual mode - move to next player for category selection
-                    gameState.currentPlayerIndex++;
-                    if (gameState.currentPlayerIndex < gameState.players.length) {
-                        setupCategorySelection();
-                    } else {
-                        // All players have selected categories, start the game
-                        gameState.currentPlayerIndex = 0;
-                        startGame();
-                    }
+                    continueAfterCategorySelection();
                 }
+                // For individual mode, the flow continues in the button callback of showRandomCategoriesScreen
             } else {
                 alert(getGameTranslation('selectAtLeastOne'));
             }
@@ -344,39 +331,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Combine selected and random categories
             currentPlayer.categories = [...selectedCategories, ...randomCategories];
             
-            // Show a message about the random categories that were added
-            const lang = getUserLanguage();
-            const randomCategoriesText = randomCategories.map(
-                cat => getGameTranslation('categories', cat) || cat
-            ).join(', ');
+            // Store the random categories in gameState for display
+            gameState.lastRandomCategories = randomCategories;
             
-            const randomCatsMsg = document.createElement('div');
-            randomCatsMsg.className = 'info-message';
-            
-            if (lang === 'it') {
-                randomCatsMsg.textContent = `Categorie aggiunte dal gioco: ${randomCategoriesText}`;
-            } else {
-                randomCatsMsg.textContent = `Categories added by the game: ${randomCategoriesText}`;
-            }
-            
-            // Insert message in a visible area
-            const container = document.querySelector('.selected-categories-container');
-            if (container) {
-                // Remove any existing message
-                const existingMsg = container.querySelector('.info-message');
-                if (existingMsg) {
-                    existingMsg.remove();
-                }
-                
-                container.appendChild(randomCatsMsg);
-                
-                // Set a timeout to remove the message when proceeding
-                setTimeout(() => {
-                    if (randomCatsMsg.parentNode) {
-                        randomCatsMsg.remove();
-                    }
-                }, 4000);
-            }
+            // Show the categories screen with both selected and random categories
+            showCategoriesScreen(selectedCategories, randomCategories);
         } else {
             // Shared mode - just save the selected categories
             currentPlayer.categories = selectedCategories;
@@ -385,6 +344,181 @@ document.addEventListener('DOMContentLoaded', function() {
         // Store in playerCategories for shared mode
         gameState.playerCategories[gameState.currentPlayerIndex] = 
             gameState.gameMode === 'individual' ? currentPlayer.categories : selectedCategories;
+    }
+    
+    // Show a screen with all categories (selected and random) before proceeding
+    function showCategoriesScreen(selectedCategories, randomCategories) {
+        // Create an overlay screen
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay-screen';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+        overlay.style.zIndex = '1000';
+        overlay.style.display = 'flex';
+        overlay.style.flexDirection = 'column';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.color = 'white';
+        overlay.style.padding = '20px';
+        overlay.style.textAlign = 'center';
+        
+        // Create container
+        const container = document.createElement('div');
+        container.style.maxWidth = '800px';
+        container.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        container.style.borderRadius = '10px';
+        container.style.padding = '30px';
+        container.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+        
+        // Title
+        const title = document.createElement('h2');
+        title.style.fontSize = '1.8rem';
+        title.style.marginBottom = '20px';
+        title.style.color = '#ffffff';
+        title.textContent = getUserLanguage() === 'it' ? 
+            'Le Tue Categorie' : 
+            'Your Categories';
+        
+        // Selected categories section
+        const selectedTitle = document.createElement('h3');
+        selectedTitle.style.fontSize = '1.3rem';
+        selectedTitle.style.marginTop = '20px';
+        selectedTitle.style.marginBottom = '15px';
+        selectedTitle.textContent = getUserLanguage() === 'it' ? 
+            'Categorie Selezionate:' : 
+            'Selected Categories:';
+        
+        // Selected categories list
+        const selectedList = document.createElement('div');
+        selectedList.style.display = 'flex';
+        selectedList.style.flexDirection = 'column';
+        selectedList.style.gap = '10px';
+        selectedList.style.marginBottom = '30px';
+        
+        selectedCategories.forEach(category => {
+            const categoryItem = document.createElement('div');
+            categoryItem.style.fontSize = '1.6rem';
+            categoryItem.style.fontWeight = 'bold';
+            categoryItem.style.padding = '10px 20px';
+            categoryItem.style.backgroundColor = 'rgba(76, 175, 80, 0.6)'; // Green for selected
+            categoryItem.style.borderRadius = '8px';
+            categoryItem.style.display = 'flex';
+            categoryItem.style.alignItems = 'center';
+            categoryItem.style.justifyContent = 'center';
+            
+            // User icon
+            const userIcon = document.createElement('span');
+            userIcon.innerHTML = '👤 ';
+            userIcon.style.marginRight = '10px';
+            categoryItem.appendChild(userIcon);
+            
+            // Category name
+            const catName = document.createElement('span');
+            catName.textContent = getGameTranslation('categories', category) || category;
+            categoryItem.appendChild(catName);
+            
+            selectedList.appendChild(categoryItem);
+        });
+        
+        // Random categories section
+        const randomTitle = document.createElement('h3');
+        randomTitle.style.fontSize = '1.3rem';
+        randomTitle.style.marginTop = '10px';
+        randomTitle.style.marginBottom = '15px';
+        randomTitle.textContent = getUserLanguage() === 'it' ? 
+            'Categorie Aggiunte dal Gioco:' : 
+            'Categories Added by the Game:';
+        
+        // Random categories list
+        const randomList = document.createElement('div');
+        randomList.style.display = 'flex';
+        randomList.style.flexDirection = 'column';
+        randomList.style.gap = '10px';
+        randomList.style.marginBottom = '40px';
+        
+        randomCategories.forEach(category => {
+            const categoryItem = document.createElement('div');
+            categoryItem.style.fontSize = '1.6rem';
+            categoryItem.style.fontWeight = 'bold';
+            categoryItem.style.padding = '10px 20px';
+            categoryItem.style.backgroundColor = 'rgba(138, 80, 143, 0.6)'; // Purple for random
+            categoryItem.style.borderRadius = '8px';
+            categoryItem.style.display = 'flex';
+            categoryItem.style.alignItems = 'center';
+            categoryItem.style.justifyContent = 'center';
+            
+            // Random icon
+            const randomIcon = document.createElement('span');
+            randomIcon.innerHTML = '🎲 ';
+            randomIcon.style.marginRight = '10px';
+            categoryItem.appendChild(randomIcon);
+            
+            // Category name
+            const catName = document.createElement('span');
+            catName.textContent = getGameTranslation('categories', category) || category;
+            categoryItem.appendChild(catName);
+            
+            randomList.appendChild(categoryItem);
+        });
+        
+        // Continue button
+        const continueBtn = document.createElement('button');
+        continueBtn.className = 'primary-button';
+        continueBtn.style.padding = '15px 30px';
+        continueBtn.style.fontSize = '1.2rem';
+        continueBtn.style.margin = '0 auto';
+        continueBtn.style.display = 'block';
+        continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
+        
+        // Add all elements to the container
+        container.appendChild(title);
+        container.appendChild(selectedTitle);
+        container.appendChild(selectedList);
+        container.appendChild(randomTitle);
+        container.appendChild(randomList);
+        container.appendChild(continueBtn);
+        overlay.appendChild(container);
+        
+        // Append to body
+        document.body.appendChild(overlay);
+        
+        // Add event listener to continue button
+        continueBtn.addEventListener('click', function() {
+            // Remove the overlay
+            document.body.removeChild(overlay);
+            
+            // Continue with the game flow
+            continueAfterCategorySelection();
+        });
+    }
+    
+    // Continue after category selection and random categories shown
+    function continueAfterCategorySelection() {
+        if (gameState.gameMode === 'shared') {
+            // If all players have selected categories, combine them
+            if (Object.keys(gameState.playerCategories).length === gameState.players.length) {
+                combineSharedCategories();
+                startGame();
+            } else {
+                // Move to next player for category selection
+                gameState.currentPlayerIndex++;
+                setupCategorySelection();
+            }
+        } else {
+            // Individual mode - move to next player for category selection
+            gameState.currentPlayerIndex++;
+            if (gameState.currentPlayerIndex < gameState.players.length) {
+                setupCategorySelection();
+            } else {
+                // All players have selected categories, start the game
+                gameState.currentPlayerIndex = 0;
+                startGame();
+            }
+        }
     }
     
     // Combine categories for shared mode
