@@ -609,6 +609,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const iconElement = iconContainer.querySelector('svg');
         iconElement.classList.add('game-icon');
         
+        // Add "Italian only" text for guessthepic game
+        if (game.id === "guessthepic") {
+            const italianOnlyText = document.createElement('div');
+            italianOnlyText.className = 'italian-only-text';
+            italianOnlyText.textContent = 'Italian only';
+            iconContainer.appendChild(italianOnlyText);
+        }
+        
         // Append content and icon containers to card
         card.appendChild(contentContainer);
         card.appendChild(iconContainer);
@@ -644,4 +652,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Append Coming Soon card to container
     gamesContainer.appendChild(comingSoonCard);
+
+    // Add CSS for Italian only text
+    const styleElement = document.querySelector('style');
+    styleElement.textContent += `
+        .italian-only-text {
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+            transition: filter 0.3s ease;
+        }
+        
+        .game-card:hover .italian-only-text {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+        }
+        
+        @media (max-width: 480px) {
+            .italian-only-text {
+                font-size: 12px;
+                margin-top: 6px;
+            }
+        }
+    `;
 }); 
