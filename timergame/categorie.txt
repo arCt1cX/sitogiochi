@@ -1,102 +1,308 @@
-Colori
-Marche di auto
-Frutti
-Verdure
+Meme
+Brainrot
 Paesi
-Capitali del mondo
-Stati degli Stati Uniti
-Animali
-Uccelli
-Razze di cani
-Insetti
-Animali marini
-Strumenti musicali
-Giochi da tavolo
-Giochi di carte
+Città
+Film
 Sport
-Lingue del mondo
-Mestieri
-Materie scolastiche
-Supereroi
-Generi cinematografici
-Serie TV
+Marche famose
 Personaggi dei cartoni animati
-Titoli di videogiochi
-Attori famosi
-Cantanti famosi
-Sportivi famosi
-Capi di abbigliamento
-Marche di lusso
-Catene di fast food
-Condimenti per la pizza
-Tipi di pasta
-Tipi di formaggio
-Dolci
-Gusti di gelato
-Bibite
+Verdure
+Frutti
+Colori
+Bevande
+Mezzi di trasporto
+Strumenti musicali
+Elementi chimici
+Abbigliamento
 Libri famosi
-Registi famosi
-Generi musicali
-Marche di smartphone
-Parti del corpo
-Pianeti
-Elementi della tavola periodica
-Figure geometriche
-Colori dell'arcobaleno
-Attrezzi da lavoro
-Elettrodomestici
-Utensili da cucina
-Stanze della casa
-Oggetti nel bagno
-Giochi per bambini
-YouTuber famosi
-Social network
-Linguaggi di programmazione
-Sistemi operativi
-App per smartphone
-tipi di emoji
-Paesi europei
-Paesi asiatici
-Valute
-Catene montuose
-Fiumi
-Laghi
-Vulcani
-Deserti
-Creature mitologiche
-Tipi di alberi
+Videogiochi
+Fiumi e laghi
+Montagne
+Monumenti famosi
+Serie TV
+Attori
+Cantanti
+Oggetti da spiaggia
+Mestieri
+Insetti
 Fiori
-Pietre preziose
-Feste
-Frutta esotica
-Animali in via di estinzione
-Film horror
-Film di fantascienza
-Film comici
-Gruppi musicali famosi
-Cantanti italiani
-Cantanti internazionali
-Cucina italiana
-Cucina messicana
-Cucina cinese
-Cucina giapponese
-Cucina spagnola
-Giocattoli da bambino
-Caffè e bevande calde
-Alcolici
-Cocktail
-Vini
-Birre
-Tipi di pane
+Supereroi
+Cattivi dei film
+Materie scolastiche
+Facoltà universitarie
+Oggetti scolastici
+Sport olimpici
+Paesi europei
+Città italiane
+Razze di cani
+Catene di Fast food
+Dolci
+Elettrodomestici
+App per smartphone
+Siti web
+Professioni
+Oggetti di scuola
+Brand di automobili
+Pianeti
+Famosi scienziati
+Personaggi storici
+Fiabe
+Feste e celebrazioni
+Programmi TV
+Giochi da tavolo
+Emozioni
+Tipi di pesci
+Attività estive
+Attività invernali
+Stati USA
+Capitali europee
+Tipi di pizza
+Artisti famosi
 Tipi di pasta
-Condimenti per insalate
-Gelati
-Programmi televisivi italiani
-Politici italiani
-Politici internazionali
-Giocatori di calcio famosi
-Franchising internazionali
-Città asiatiche
-Città con il miglior cibo
-Tecnologia futuristica
+Mostri e creature mitologiche
+Parchi nazionali
+Profumi
+Minerali
+Sportivi famosi
+Filosofi
+Fumetti
+Cibi da fast food
+Alberi
+Fumetti Marvel
+Fumetti DC
+Influencer
+Cartoni animati
+Compositori musicali
+Borse famose
+Musei
+Religioni
+YouTubers famosi
+Film d'animazione
+Opere teatrali
+Tipi di sport estremi
+Località popolari per vacanze
+Correnti artistiche
+Uccelli
+Tipi e tagli di carne
+Paesaggi naturali
+Lavori manuali
 Università famose
+Personaggi della mitologia greca
+Cibi tipici italiani
+Classici della letteratura
+Materiali da costruzione
+Strumenti da cucina
+Tipi di scarpe
+Parchi di divertimento
+Icone della moda
+Mete da viaggio
+Parti del corpo umano
+Dinosauri
+Biomi naturali
+Tipi di tessuti
+Organizzazioni internazionali
+Miti e leggende
+Opere d'arte famose
+Invenzioni importanti
+Generi musicali
+Teorie del complotto popolari
+Routine di Ashton Hall
+Influencer di TikTok
+Fetish strani
+Cose da non fare in palestra
+Cose da non fare quando si è in macchina
+Cose da non fare durante una maratona
+Cose da non fare quando sei a un matrimonio
+Cose da non dire a un primo appuntamento
+Cose da non dire a un bambino
+Cose da non dire in un funerale
+Marche di birra
+Marche di Acqua Minerale italiane
+Modi di prendere il caffè
+Canzoni di Sanremo
+Steroidi e PEDS
+Lottatori UFC
+Calciatori che hanno giocato sia all'Inter che al Milan
+Cestisti NBA
+Classi di composti organici (chimica)
+Banche italiane
+Province italiane
+Formati di pasta
+Piatti tipici della cucina romana
+Piatti tipici della cucina napoletana
+Piatti tipici della cucina sarda
+Piatti tipici della cucina siciliana
+Frutta secca
+Cose da non fare durante la sessione di laurea
+Autori della letteratura inglese
+Discoteche nella propria città
+Città degli Stati Uniti
+Stati del Nord e Sud America
+Stati africani
+Artisti reggaeton
+Marche di sigarette
+Superalcolici
+Cose da non fare in ospedale
+Formaggi italiani
+Salumi italiani
+Film fantasy
+Film di fantascienza
+Film horror
+Panini e prodotti del McDonald's
+Succhi di frutta
+Compagni di scuola in comune tra i giocatori
+Cose da non fare a un colloquio di lavoro
+Cose da portare in una gita in montagna
+Cose da non dimenticare in campeggio
+Cose da non fare nella metropolitana
+Criminali noti
+Social network
+Specialità dell'atletica leggera
+Squadre di calcio inglesi
+Squadre di calcio spagnole
+Nuotatori e tuffatori
+Serpenti
+Cose da non fare al cinema
+Etnie spesso discriminate
+Gaffe di CiccioGamer e Joker
+Videogames per la PS4
+Oceani e mari
+Cose da non fare durante l'esame di maturità
+Reati
+Tipi di cocktail/drink
+Razze di gatti
+Animali molto veloci
+Marche di telefoni cellulari
+Operatori telefonici
+Armi
+Cose da non fare in chiesa
+Chiese, basiliche e duomi noti
+Marche di cioccolato
+Marche di Panettone e Pandoro
+Marche di orologi
+Marche di auto di lusso
+Dittatori
+Squadre che hanno vinto la Champions League/Coppa dei Campioni
+Calciatori che hanno vinto un Mondiale
+Insegnanti scolastici in comune tra i giocatori
+Giornalisti famosi
+Personaggi della Zanzara
+Rapper italiani
+Personaggi trash italiani
+Presentatori tv
+Veicoli
+Game show in TV
+Droghe
+Pezzi di un'automobile
+Ristoranti della città
+Calciatori tedeschi
+Calciatori africani
+Cose da non fare ad Amsterdam
+Cose da non fare in Corea del Nord
+Poesie famose
+Marche di borse
+Female rappers
+Allenatori di calcio italiani
+Pittori
+Anime
+Scultori
+Top rimasti di TikTok
+Guerre avvenute e attuali
+Cose da non fare in vacanza in Colombia
+Luoghi del mondo non molto adatti ad una vacanza
+Antipasti tipici in Italia
+Siti e società di scommesse
+Tipi di scommesse calcistiche
+Cose da non portare in una centrale di Polizia
+Wrestler famosi
+Bodybuilder famosi
+Esercizi per le gambe in palestra
+Attrezzi da palestra
+Cose da portare in palestra
+Cose da non fare a calcetto
+Portieri di calcio
+Esercizi per la schiena in palestra
+Esercizi per petto o spalle in palestra
+Sport con la palla
+Giornali italiani
+Pugili
+Funzioni di Python
+Linguaggi di Programmazione
+Nazionali che hanno vinto Mondiale o Europeo
+Personaggi di MasterChef Italia
+Chef famosi
+Città della Spagna
+Cose da vedere a Parigi o Londra
+Personaggi di A Tutto Reality
+Personaggi di Dragon Ball
+Personaggi di Due Fantagenitori
+Pokemon
+Personaggi Looney Tunes
+Strutture e truppe di Clash of Clans
+Giochi per smartphone
+Marche di dentifricio
+Marche di chewing gum
+Stadi
+Strain di cannabis
+Punti del poker
+Giochi di carte famosi
+Giochi di società
+Tipi di imbarcazione
+Ministeri italiani
+Politici italiani
+Pornostar
+Cose da non fare in un bordello
+Re e imperatori romani
+Figure geometriche
+Marche di pasta
+Cose da non fare in una sinagoga
+Cose da non fare in una moschea
+Mestieri in cui si ha una divisa
+Animali d'acqua dolce
+Band musicali
+Cose da non portare all'aeroporto
+Cose che si trovano nello spazio
+Applicazioni per PC
+Cose da non fare al cenone di Natale
+Alimenti proteici
+Caratteri tipografici Word
+Cose da non dire al padre della tua ragazza/o
+Tipi e marche di caramelle
+Cose da non fare in biblioteca
+Parolacce italiane
+Quadri famosi
+Statue famose
+Animali da fattoria
+Cose da non fare in India
+Isole
+Nazioni asiatiche
+Cose da non fare
+Medicinali
+Attività per fare cardio
+Località marittime
+Animali marini
+Mammiferi
+Luoghi dove è meglio non trovarsi di notte
+Cose che si possono fumare
+Personaggi di Topolino
+Personaggi e alieni di Ben10
+Calciatori dell'Atalanta
+Derby calcistici
+Università italiane
+Cose da non fare a un gay pride
+Autori di versioni latino/greco
+Stili di capelli
+Tipi di gioielli
+Popoli antichi
+Tipi di scimmie
+Pezzi di un computer
+Elettrodomestici
+Attività outdoor
+Cose che metti nel beauty case
+Cose da non fare in discoteca
+Calciatori argentini
+Tennisti/e
+Piloti di F1
+Piloti di MotoGP
+Giocatori/giocatrici di pallavolo
+Ballerini/e
