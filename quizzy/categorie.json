@@ -12194,5 +12194,1519 @@
       "correctIndex": 1
     }
   ]
+},
+"Psicologia": {
+  "bambino": [
+    {
+      "question": "Qual è l'emozione che provi quando ricevi un regalo a sorpresa?",
+      "answers": ["Tristezza", "Rabbia", "Gioia", "Paura"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando ti senti spaventato, quale parte del corpo spesso batte più veloce?",
+      "answers": ["Mani", "Piedi", "Cuore", "Occhi"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa fa uno psicologo?",
+      "answers": ["Cura le macchine", "Aiuta le persone a stare meglio con i pensieri e le emozioni", "Insegna a cucinare", "Costruisce case"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale di questi è un'emozione?",
+      "answers": ["Correre", "Mangiare", "Felicità", "Scrivere"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Se ti senti triste, cosa può aiutarti a stare meglio?",
+      "answers": ["Urlare agli amici", "Parlare con qualcuno", "Rimanere da solo sempre", "Ignorare tutti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando sei molto contento, cosa tendi a fare?",
+      "answers": ["Piangere", "Saltare e sorridere", "Dormire", "Arrabbiarti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se qualcuno ti abbraccia, quale emozione potresti provare?",
+      "answers": ["Rabbia", "Paura", "Amore", "Fame"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è un modo gentile per risolvere un litigio?",
+      "answers": ["Urlare", "Parlare con calma", "Ignorare", "Picchiare"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona è molto spaventata, si dice che ha il cuore in che modo?",
+      "answers": ["Lento", "Pesante", "A mille", "Calmo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è una cosa che aiuta a rilassarsi?",
+      "answers": ["Urlare forte", "Fare respiri profondi", "Correre veloce", "Saltare sul letto"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa essere empatici?",
+      "answers": ["Mangiare velocemente", "Capire come si sentono gli altri", "Scrivere veloce", "Giocare a calcio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando ti senti arrabbiato, è meglio prima di tutto:",
+      "answers": ["Contare fino a dieci", "Gridare", "Saltare", "Correre via"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è una parola che descrive un sentimento felice?",
+      "answers": ["Rabbia", "Tristezza", "Gioia", "Paura"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si può fare quando si è nervosi per un compito in classe?",
+      "answers": ["Pensare positivo", "Scappare", "Non studiare", "Arrabbiarsi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando aiuti un amico triste, stai mostrando:",
+      "answers": ["Forza", "Empatia", "Furbizia", "Paura"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se qualcuno ride con te, probabilmente prova:",
+      "answers": ["Paura", "Tristezza", "Felicità", "Rabbia"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è un modo per calmarsi prima di dormire?",
+      "answers": ["Litigare", "Ascoltare musica rilassante", "Guardare film spaventosi", "Correre per la casa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando sei emozionato, potresti sentirti come?",
+      "answers": ["Calmo", "Pigro", "Elettrico e pieno di energia", "Sonnolento"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Se un amico ti fa un regalo, potresti dire:",
+      "answers": ["No", "Grazie", "Via", "Silenzio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è l'emozione che si prova quando si perde un gioco?",
+      "answers": ["Felicità", "Tristezza", "Amore", "Sorpresa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale parte del corpo spesso piange quando siamo molto tristi?",
+      "answers": ["Naso", "Piedi", "Occhi", "Mani"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa può farci sentire molto coraggiosi?",
+      "answers": ["Una parola gentile", "Un rimprovero", "Essere soli", "Una porta chiusa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando si aiuta un amico, come ci si può sentire?",
+      "answers": ["Tristi", "Felici", "Spaventati", "Arrabbiati"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se vedi qualcuno piangere, puoi:",
+      "answers": ["Ridere", "Ignorare", "Chiedere se ha bisogno di aiuto", "Scappare"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando ti scusi dopo aver sbagliato, mostri:",
+      "answers": ["Paura", "Coraggio", "Disinteresse", "Rabbia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è la fiducia?",
+      "answers": ["Mangiare tanto", "Giocare sempre", "Credere in qualcuno", "Litigare"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Un sorriso è spesso segno di:",
+      "answers": ["Tristezza", "Felicità", "Rabbia", "Paura"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando ti senti nervoso, cosa può aiutarti?",
+      "answers": ["Respirare lentamente", "Urlare", "Mangiare in fretta", "Saltare forte"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale di queste è un'emozione negativa?",
+      "answers": ["Felicità", "Tristezza", "Amore", "Sorpresa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando vedi un film pauroso, potresti provare:",
+      "answers": ["Rabbia", "Felicità", "Paura", "Noia"],
+      "correctIndex": 2
+    }
+  ],
+  "facile": [
+    {
+      "question": "Qual è l'emozione che spesso accompagna una sorpresa positiva?",
+      "answers": ["Rabbia", "Tristezza", "Felicità", "Paura"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando hai paura, cosa può aiutarti a calmarti?",
+      "answers": ["Urlare", "Fare respiri profondi", "Mangiare dolci", "Correre via"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa la parola 'motivazione'?",
+      "answers": ["Desiderio di raggiungere un obiettivo", "Paura di fallire", "Essere stanchi", "Sentirsi arrabbiati"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è l'autostima?",
+      "answers": ["Avere tanti amici", "Credere in se stessi", "Essere bravi a disegnare", "Essere sempre felici"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se una persona è molto empatica, cosa sa fare bene?",
+      "answers": ["Capire le emozioni degli altri", "Cucinare", "Cantare", "Correre veloce"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa può aiutare a migliorare l'autostima?",
+      "answers": ["Parlare male di sé", "Credere nelle proprie capacità", "Non provarci mai", "Confrontarsi sempre con gli altri"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale emozione si prova spesso quando si litiga con un amico?",
+      "answers": ["Gioia", "Rabbia", "Sorpresa", "Amore"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cosa può rendere una persona ansiosa?",
+      "answers": ["Una festa a sorpresa", "Un compito difficile", "Un viaggio divertente", "Un regalo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona è triste, spesso ha voglia di:",
+      "answers": ["Ballare", "Essere sola", "Urlare", "Correre"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un'abitudine?",
+      "answers": ["Un'azione fatta una volta", "Un comportamento ripetuto nel tempo", "Un'emozione passeggera", "Un pensiero casuale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi può aiutarti a capire meglio le tue emozioni?",
+      "answers": ["Un meccanico", "Uno psicologo", "Un panettiere", "Un ingegnere"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa essere resilienti?",
+      "answers": ["Arrendersi facilmente", "Superare le difficoltà", "Evitare i problemi", "Non avere emozioni"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando si parla di 'comunicazione', si parla di:",
+      "answers": ["Dormire", "Mangiare", "Scambiarsi informazioni", "Pulire la casa"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando provi gratitudine, di solito vuoi:",
+      "answers": ["Ringraziare qualcuno", "Litigare", "Urlare", "Dormire"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Se sogni qualcosa di brutto, si chiama:",
+      "answers": ["Incubo", "Sogno lucido", "Viaggio astrale", "Pensiero positivo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando si prova vergogna, si tende a:",
+      "answers": ["Arrossire", "Sorridere", "Ballare", "Cantare"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale di queste emozioni è considerata 'positiva'?",
+      "answers": ["Rabbia", "Felicità", "Paura", "Tristezza"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se una persona è molto stressata, cosa può aiutarla?",
+      "answers": ["Fermarsi e rilassarsi", "Fare ancora più cose", "Ignorare il problema", "Arrabbiarsi di più"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La paura è un'emozione che serve a:",
+      "answers": ["Proteggerci dai pericoli", "Farci correre più veloce", "Essere tristi", "Essere arrabbiati"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando una persona è sicura di sé, si dice che ha:",
+      "answers": ["Paura", "Coraggio", "Dubbi", "Ansia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa succede spesso quando una persona ride molto?",
+      "answers": ["Diventa più stressata", "Si rilassa e si sente bene", "Piange", "Si arrabbia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando si è stanchi mentalmente si può dire che si è:",
+      "answers": ["Felici", "Stressati", "Riposati", "Motivati"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La parola 'frustrazione' indica:",
+      "answers": ["Grande felicità", "Un ostacolo che crea rabbia o tristezza", "Un sogno", "Un viaggio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se ti senti timido, potresti voler:",
+      "answers": ["Stare in mezzo a tanti sconosciuti", "Rimanere un po' in disparte", "Parlare a voce alta", "Cantare in pubblico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cosa si intende per 'gestione delle emozioni'?",
+      "answers": ["Ignorare ciò che si prova", "Controllare e capire le emozioni", "Urlare sempre", "Evitare di provare emozioni"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando sorridi a qualcuno, puoi trasmettere:",
+      "answers": ["Paura", "Amicizia", "Rabbia", "Tristezza"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è uno 'psicologo'?",
+      "answers": ["Un insegnante di ginnastica", "Un esperto delle emozioni e della mente", "Un musicista", "Un allenatore"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Un esempio di emozione improvvisa è:",
+      "answers": ["Noia", "Sorpresa", "Stanchezza", "Tristezza lenta"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende per 'paura irrazionale'?",
+      "answers": ["Una paura senza motivo reale", "Una paura utile", "Una paura divertente", "Una paura che serve"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando una persona è molto contenta, può dire di essere:",
+      "answers": ["Triste", "Entusiasta", "Ansiosa", "Arrabbiata"],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "Qual è il termine psicologico che indica la capacità di riconoscere e comprendere le emozioni proprie e altrui?",
+      "answers": ["Empatia", "Aggressività", "Memoria", "Ansia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è considerato il padre della psicoanalisi?",
+      "answers": ["Jean Piaget", "Sigmund Freud", "B.F. Skinner", "Carl Rogers"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il meccanismo di difesa che consiste nel 'dimenticare' eventi dolorosi?",
+      "answers": ["Rimozione", "Proiezione", "Sublimazione", "Compensazione"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale area del cervello è maggiormente coinvolta nella gestione delle emozioni?",
+      "answers": ["Corteccia visiva", "Amigdala", "Cervelletto", "Bulbo olfattivo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando parliamo di 'autoefficacia', ci riferiamo a:",
+      "answers": ["Credere di poter superare un ostacolo", "Essere più veloci degli altri", "Non avere emozioni", "Essere indifferenti"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In psicologia, l'apprendimento attraverso premi e punizioni è chiamato:",
+      "answers": ["Condizionamento classico", "Condizionamento operante", "Apprendimento latente", "Apprendimento sociale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha formulato la teoria dei bisogni a piramide?",
+      "answers": ["Carl Jung", "Abraham Maslow", "Erik Erikson", "Lev Vygotskij"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando qualcuno attribuisce agli altri pensieri o emozioni proprie inconsce, si parla di:",
+      "answers": ["Rimozione", "Proiezione", "Negazione", "Sublimazione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa studia la psicologia cognitiva?",
+      "answers": ["I comportamenti sociali", "I processi mentali come memoria e attenzione", "I sogni", "Le emozioni primarie"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il 'condizionamento classico'?",
+      "answers": ["Imparare per osservazione", "Apprendere associando uno stimolo neutro a uno stimolo significativo", "Rispondere a premi e punizioni", "Sperimentare emozioni intense"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama la teoria che dice che l'intelligenza è composta da molteplici abilità diverse?",
+      "answers": ["Teoria dell'intelligenza emotiva", "Teoria delle intelligenze multiple", "Teoria della mente", "Teoria della personalità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha studiato il comportamento dei bambini attraverso gli stadi cognitivi?",
+      "answers": ["Freud", "Piaget", "Pavlov", "Skinner"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Un disturbo d'ansia che si manifesta con attacchi di paura improvvisa si chiama:",
+      "answers": ["Disturbo ossessivo-compulsivo", "Disturbo di panico", "Fobia sociale", "Depressione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La psicologia positiva si concentra su:",
+      "answers": ["Le malattie mentali", "Le emozioni negative", "Le qualità e i punti di forza delle persone", "I disturbi comportamentali"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cos'è un bias cognitivo?",
+      "answers": ["Una memoria perfetta", "Un errore sistematico nel ragionamento", "Un sogno lucido", "Un'abilità mnemonica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La zona del cervello fondamentale per la memoria a lungo termine è:",
+      "answers": ["Amigdala", "Corteccia motoria", "Ippocampo", "Cervelletto"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si intende per 'rinforzo positivo'?",
+      "answers": ["Punizione dopo un errore", "Premio dopo un comportamento corretto", "Ignorare un comportamento", "Fare pressione psicologica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona soffre di paura irrazionale verso uno specifico oggetto o situazione, ha una:",
+      "answers": ["Depressione", "Ansia generalizzata", "Fobia", "Amnesia"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il significato di 'intelligenza emotiva'?",
+      "answers": ["La capacità di essere sempre felici", "La capacità di riconoscere e gestire emozioni proprie e altrui", "La capacità di leggere velocemente", "La capacità di risolvere problemi matematici"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è l'effetto placebo?",
+      "answers": ["Un miglioramento senza un reale principio attivo", "Un peggioramento dopo una cura", "Una reazione allergica", "Una risposta a uno stimolo negativo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale teorico ha introdotto il concetto di inconscio collettivo?",
+      "answers": ["Freud", "Skinner", "Jung", "Bandura"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In psicologia, cosa rappresenta il 'Sé'?",
+      "answers": ["La paura dell'ignoto", "L'insieme dell'immagine di sé e dell'autoconsapevolezza", "Una pulsione primaria", "Un comportamento antisociale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il 'locus of control' interno indica che una persona crede che:",
+      "answers": ["Il destino governa la vita", "Le proprie azioni influenzano il proprio destino", "Gli altri decidono tutto", "Nulla si può controllare"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona imita il comportamento di un modello osservato, parliamo di:",
+      "answers": ["Condizionamento operante", "Apprendimento osservazionale", "Rimozione", "Frustrazione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il burn-out?",
+      "answers": ["Una malattia fisica", "Un forte esaurimento fisico ed emotivo legato al lavoro", "Un momento di felicità intensa", "Un'ansia momentanea"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il 'flow' è uno stato mentale in cui:",
+      "answers": ["Si è distratti", "Si è immersi completamente in un'attività", "Si prova noia", "Si perde la concentrazione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è la teoria dell'attaccamento di Bowlby?",
+      "answers": ["Una teoria sull'aggressività", "Una teoria sul bisogno di sicurezza nei rapporti affettivi", "Una teoria della memoria", "Una teoria sulle fobie"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona interpreta eventi neutri come negativi senza prove, sta facendo un:",
+      "answers": ["Bias di conferma", "Pensiero catastrofico", "Effetto primacy", "Condizionamento positivo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende con il termine 'assertività'?",
+      "answers": ["Ignorare le opinioni degli altri", "Saper esprimere le proprie idee rispettando gli altri", "Essere aggressivi", "Essere sempre d'accordo"],
+      "correctIndex": 1
+    }
+  ],
+  "esperto": [
+    {
+      "question": "In quale opera Freud introdusse il concetto di Es, Io e Super-Io?",
+      "answers": ["Il disagio della civiltà", "L'interpretazione dei sogni", "Psicologia delle masse e analisi dell'Io", "L'Io e l'Es"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi ha sviluppato il concetto di 'zona di sviluppo prossimale'?",
+      "answers": ["Jean Piaget", "Lev Vygotskij", "Erik Erikson", "Albert Bandura"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il termine 'cognitivismo' si riferisce principalmente allo studio di:",
+      "answers": ["Condizionamento", "Processi mentali come memoria e percezione", "Stati emotivi", "Rinforzo e punizione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha introdotto il concetto di 'archetipi' in psicologia?",
+      "answers": ["Sigmund Freud", "Carl Jung", "B.F. Skinner", "William James"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La teoria del 'Sé ideale' è associata a quale psicologo umanista?",
+      "answers": ["Abraham Maslow", "Carl Rogers", "Rollo May", "Alfred Adler"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il principale strumento utilizzato dalla psicologia comportamentista?",
+      "answers": ["Il diario", "La riflessione personale", "L'osservazione oggettiva del comportamento", "L'interpretazione dei sogni"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha formulato la teoria dell'apprendimento sociale?",
+      "answers": ["Bandura", "Freud", "Pavlov", "Erikson"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è la 'disonanza cognitiva' secondo Festinger?",
+      "answers": ["L'adattamento dei comportamenti agli stimoli", "Un conflitto tra cognizioni incompatibili", "Una paura inconscia", "Un'emozione intensa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il metodo clinico di Piaget consiste principalmente in:",
+      "answers": ["Osservazioni standardizzate", "Colloqui liberi con bambini", "Test di personalità", "Sondaggi scritti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa misura principalmente il test di Rorschach?",
+      "answers": ["Abilità verbale", "Memoria visiva", "Processi proiettivi inconsci", "Conoscenze logiche"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Il concetto di 'condizionamento classico' fu scoperto da:",
+      "answers": ["Thorndike", "Watson", "Pavlov", "Skinner"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Secondo Erikson, quale crisi caratterizza l'adolescenza?",
+      "answers": ["Autonomia vs vergogna", "Identità vs confusione di ruoli", "Intimità vs isolamento", "Competenza vs inferiorità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale struttura cerebrale è più coinvolta nella regolazione della paura?",
+      "answers": ["Talamo", "Amigdala", "Corteccia occipitale", "Cervelletto"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nella teoria dei Big Five, quale tratto si riferisce alla tendenza ad essere ordinati e disciplinati?",
+      "answers": ["Apertura", "Gradevolezza", "Coscienziosità", "Nevroticismo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Secondo la teoria di Gardner, l'intelligenza musicale è:",
+      "answers": ["Una combinazione di intelligenza linguistica e logica", "Un'intelligenza indipendente", "Un sottotipo dell'intelligenza spaziale", "Non considerata un'intelligenza vera e propria"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La teoria del condizionamento operante è associata a:",
+      "answers": ["B.F. Skinner", "Albert Bandura", "Jean Piaget", "Sigmund Freud"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il modello ABC di Ellis?",
+      "answers": ["Una teoria dello sviluppo infantile", "Una spiegazione di come emozioni e pensieri sono collegati agli eventi", "Una teoria dei sogni", "Un modello di apprendimento motorio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La teoria della mente si sviluppa tipicamente in quale fase della vita?",
+      "answers": ["Durante la prima infanzia", "Durante l'adolescenza", "Nell'età adulta", "Durante la vecchiaia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il termine 'fissazione orale' appartiene a quale modello psicologico?",
+      "answers": ["Cognitivo", "Comportamentale", "Psicoanalitico", "Umanistico"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che stadio del sonno avvengono più sogni vividi?",
+      "answers": ["Stadio 1", "Stadio 2", "REM", "Non-REM profondo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Il test TAT (Thematic Apperception Test) valuta:",
+      "answers": ["L'abilità logica", "Le emozioni primarie", "I bisogni e i desideri inconsci", "La memoria visiva"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha proposto la teoria della 'motivazione intrinseca'?",
+      "answers": ["Deci e Ryan", "Freud", "Pavlov", "Piaget"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La terapia cognitivo-comportamentale si basa su quale principio?",
+      "answers": ["Interpretazione dei sogni", "Condizionamento classico", "Relazione tra pensieri, emozioni e comportamenti", "Ipnosi regressiva"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Il concetto di 'Sé reale' e 'Sé ideale' è stato proposto da:",
+      "answers": ["Carl Rogers", "Abraham Maslow", "Erik Erikson", "Albert Bandura"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il fenomeno di 'habituation' indica:",
+      "answers": ["Una risposta aumentata ad uno stimolo ripetuto", "Una diminuzione della risposta a uno stimolo ripetuto", "Un'apprendimento osservativo", "Una perdita totale di memoria"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il termine 'nevrosi' in psicoanalisi classica si riferisce a:",
+      "answers": ["Un conflitto inconscio irrisolto", "Una malattia organica", "Una risposta logica ad eventi stressanti", "Un trauma fisico"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La teoria delle emozioni di James-Lange sostiene che:",
+      "answers": ["Proviamo emozioni dopo aver riconosciuto una reazione fisica", "Le emozioni nascono prima della risposta fisiologica", "Le emozioni sono inconsce", "Le emozioni sono esclusivamente sociali"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il concetto di 'mindfulness' è strettamente legato a quale pratica?",
+      "answers": ["Psicoanalisi", "Meditazione", "Condizionamento operante", "Ipnosi"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo il modello di Atkinson-Shiffrin, la memoria a breve termine è limitata a quanti elementi circa?",
+      "answers": ["3-4", "5-9", "10-12", "15-20"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha introdotto il concetto di 'psicologia individuale'?",
+      "answers": ["Freud", "Jung", "Adler", "Erikson"],
+      "correctIndex": 2
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Quale concetto psicologico descrive la tendenza delle persone a sovrastimare la propria influenza sugli eventi esterni?",
+      "answers": ["Illusione di controllo", "Effetto Dunning-Kruger", "Bias di conferma", "Effetto alone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nel modello transtheoretical di Prochaska e DiClemente, quale fase precede l'azione?",
+      "answers": ["Contemplazione", "Preparazione", "Mantenimento", "Precontemplazione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Melanie Klein, l'angoscia persecutoria si manifesta principalmente in quale posizione?",
+      "answers": ["Posizione depressiva", "Posizione schizo-paranoide", "Posizione edipica", "Posizione narcisistica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa misura il test WAIS?",
+      "answers": ["Abilità sociali", "Stili di attaccamento", "Intelligenza", "Funzioni esecutive"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nella teoria di Piaget, a che età emerge la conservazione della quantità?",
+      "answers": ["2-3 anni", "4-5 anni", "6-7 anni", "8-9 anni"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è la principale funzione della corteccia prefrontale dorsolaterale?",
+      "answers": ["Elaborazione sensoriale", "Controllo motorio", "Funzioni esecutive", "Elaborazione emotiva"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In psicologia dinamica, il concetto di 'controtransfert' indica:",
+      "answers": ["Le emozioni inconsce del terapeuta verso il paziente", "Le emozioni consce del paziente", "La resistenza al cambiamento", "La negazione del transfert"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo la teoria della Gestalt, il principio di 'vicinanza' riguarda:",
+      "answers": ["L'attrazione fisica", "La percezione di oggetti vicini come appartenenti allo stesso gruppo", "La memoria a breve termine", "La capacità attentiva"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nel modello Big Five, il tratto 'Nevroticismo' misura:",
+      "answers": ["L'estroversione", "La stabilità emotiva", "La coscienziosità", "L'apertura mentale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha teorizzato il 'concetto operativo' in psicologia dinamica?",
+      "answers": ["Bion", "Pichon Rivière", "Freud", "Lacan"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il concetto di 'resilienza' in psicologia indica:",
+      "answers": ["La capacità di ignorare i problemi", "La capacità di adattarsi e superare le avversità", "La tendenza all'evitamento", "La ricerca di emozioni forti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha introdotto il termine 'inconscio collettivo'?",
+      "answers": ["Freud", "Jung", "Skinner", "Erikson"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La 'teoria dell'attaccamento' di Bowlby si basa su studi condotti principalmente su:",
+      "answers": ["Adulti", "Adolescenti", "Bambini", "Anziani"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Il concetto di 'resistenza' in terapia psicodinamica si riferisce a:",
+      "answers": ["L'opposizione inconscia al cambiamento", "La forza di volontà del paziente", "La resilienza", "La negazione cosciente"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In psicologia sociale, l'effetto spettatore si verifica quando:",
+      "answers": ["Un individuo è più propenso ad agire in gruppo", "La presenza di altri inibisce l'azione individuale", "Si rafforza l'aggressività", "Si riduce l'empatia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale disturbo è caratterizzato dalla presenza di allucinazioni e deliri?",
+      "answers": ["Disturbo borderline", "Disturbo depressivo", "Disturbo psicotico", "Disturbo evitante"],
+      "correctIndex": 2
+    },
+    {
+      "question": "La 'teoria della dissonanza cognitiva' è stata proposta da:",
+      "answers": ["Bandura", "Festinger", "Erikson", "Allport"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Lacan, il passaggio dallo stadio dello specchio consente al bambino di sviluppare:",
+      "answers": ["La memoria episodica", "La percezione di sé", "La comprensione causale", "La padronanza linguistica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La 'memoria implicita' è coinvolta principalmente in:",
+      "answers": ["Ricordi autobiografici", "Competenze motorie e abilità automatiche", "Pensiero logico", "Problem solving"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale dei seguenti disturbi è un disturbo del neuro sviluppo?",
+      "answers": ["Disturbo bipolare", "Autismo", "Disturbo d'ansia", "Schizofrenia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Winnicott, l'oggetto transizionale rappresenta:",
+      "answers": ["Un simbolo del desiderio di autonomia", "Una compensazione per il trauma", "Un sostituto per l'oggetto d'amore primario", "Un oggetto di attaccamento per l'età adulta"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Il test MMPI è utilizzato principalmente per valutare:",
+      "answers": ["L'intelligenza", "Le competenze sociali", "La personalità e i disturbi psicologici", "La creatività"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha introdotto la nozione di 'sé narrativo' in psicologia?",
+      "answers": ["Dan P. McAdams", "Jerome Bruner", "Albert Ellis", "Carl Jung"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo la teoria evolutiva di Bowlby, l'attaccamento ha una funzione primaria di:",
+      "answers": ["Controllo sociale", "Sopravvivenza", "Esplorazione", "Competizione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "L'effetto Zeigarnik descrive la tendenza a ricordare meglio:",
+      "answers": ["I compiti completati", "I compiti incompleti o interrotti", "Le esperienze negative", "I successi personali"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il concetto di 'mente estesa' è stato proposto da:",
+      "answers": ["Daniel Dennett", "Andy Clark e David Chalmers", "Jean Piaget", "Noam Chomsky"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In psicometria, l'alfa di Cronbach misura:",
+      "answers": ["La validità", "La fedeltà interna di un test", "La correlazione tra variabili", "La normalità della distribuzione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha elaborato la teoria del 'Sé dialogico'?",
+      "answers": ["Jerome Bruner", "Hubert Hermans", "Lev Vygotskij", "Erik Erikson"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nella teoria psicodinamica, il termine 'acting out' si riferisce a:",
+      "answers": ["La messa in scena di conflitti inconsci attraverso comportamenti impulsivi", "L'elaborazione consapevole di un trauma", "La repressione emotiva", "La comunicazione assertiva"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale psicologo ha introdotto il concetto di 'campo di forze' nella psicologia sociale?",
+      "answers": ["Kurt Lewin", "Leon Festinger", "Albert Bandura", "John Bowlby"],
+      "correctIndex": 0
+    }
+  ]
+},
+"Filosofia": {
+  "bambino": [
+    {
+      "question": "Chi è considerato il padre della filosofia occidentale?",
+      "answers": ["Socrate", "Platone", "Aristotele", "Cartesio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale famoso filosofo greco insegnò ad Alessandro Magno?",
+      "answers": ["Socrate", "Platone", "Aristotele", "Pitagora"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale filosofo è famoso per la frase 'So di non sapere'?",
+      "answers": ["Aristotele", "Socrate", "Platone", "Seneca"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il libro più famoso di Platone?",
+      "answers": ["La Politica", "La Repubblica", "L'Etica", "Il Simposio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è la filosofia?",
+      "answers": ["Una materia scolastica", "Lo studio delle domande fondamentali sulla vita", "Un tipo di arte", "Una religione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale paese è nata la filosofia occidentale?",
+      "answers": ["Italia", "Grecia", "Francia", "Inghilterra"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha scritto 'Il Principe'?",
+      "answers": ["Platone", "Aristotele", "Machiavelli", "Socrate"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa significa 'filosofia' in greco?",
+      "answers": ["Amore della vita", "Amore della saggezza", "Amore della scienza", "Amore della bellezza"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi era Diogene?",
+      "answers": ["Un pittore", "Un filosofo che viveva in una botte", "Un re greco", "Un poeta romano"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi era il maestro di Platone?",
+      "answers": ["Aristotele", "Epicuro", "Socrate", "Pitagora"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale filosofo ha parlato molto del concetto di 'virtù'?",
+      "answers": ["Socrate", "Democrito", "Eraclito", "Anassimandro"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale concetto è al centro della filosofia di Epicuro?",
+      "answers": ["Felicità", "Conoscenza", "Virtù", "Onore"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha detto 'Penso, dunque sono'?",
+      "answers": ["Platone", "Cartesio", "Aristotele", "Socrate"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi era il filosofo della 'tabula rasa'?",
+      "answers": ["Immanuel Kant", "John Locke", "Hegel", "Socrate"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi era Confucio?",
+      "answers": ["Un generale cinese", "Un imperatore", "Un filosofo cinese", "Un poeta giapponese"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il simbolo principale del pensiero di Eraclito?",
+      "answers": ["Il fuoco", "L'acqua", "La terra", "Il vento"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Con quale filosofia è associato principalmente il concetto di 'atomo'?",
+      "answers": ["Sofisti", "Stoici", "Democritei", "Platonici"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi scrisse 'La Metafisica'?",
+      "answers": ["Aristotele", "Socrate", "Platone", "Seneca"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa cercavano i filosofi presocratici?",
+      "answers": ["La ricchezza", "La causa primaria della natura", "Il potere politico", "La fama"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è conosciuto per il paradosso della freccia in volo?",
+      "answers": ["Zenone", "Platone", "Eraclito", "Pitagora"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa studiava principalmente Pitagora?",
+      "answers": ["Politica", "Matematica e filosofia", "Musica", "Arte"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo i filosofi antichi, quale elemento era fondamentale per vivere bene?",
+      "answers": ["Ricchezza", "Saggezza", "Fama", "Potere"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama la scuola filosofica fondata da Zenone di Cizio?",
+      "answers": ["Stoicismo", "Cinismo", "Platonismo", "Sofismo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale filosofia insegna a sopportare il dolore con coraggio?",
+      "answers": ["Epicureismo", "Stoicismo", "Platonismo", "Sofismo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il principale insegnamento dei sofisti?",
+      "answers": ["La virtù si può insegnare", "La verità è assoluta", "La filosofia è inutile", "La conoscenza è innata"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi fu il discepolo più famoso di Aristotele?",
+      "answers": ["Socrate", "Alessandro Magno", "Epicuro", "Seneca"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha fondato l'Accademia ad Atene?",
+      "answers": ["Aristotele", "Platone", "Socrate", "Pitagora"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale filosofia si concentra sulla ricerca della felicità attraverso l'assenza di dolore?",
+      "answers": ["Stoicismo", "Epicureismo", "Platonismo", "Cinismo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale dialogo Platone descrive il mito della caverna?",
+      "answers": ["Il Simposio", "La Repubblica", "Il Fedone", "Il Timeo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è il filosofo cinese che insegnava la gentilezza e il rispetto verso gli altri?",
+      "answers": ["Confucio", "Laozi", "Socrate", "Sun Tzu"],
+      "correctIndex": 0
+    }
+  ],
+  "facile": [
+    {
+      "question": "Chi è l'autore del 'Mito della Caverna'?",
+      "answers": ["Aristotele", "Platone", "Socrate", "Epicuro"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa cercava principalmente Socrate nei suoi dialoghi?",
+      "answers": ["La verità", "La gloria", "La ricchezza", "La felicità"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale concetto filosofico è al centro dello stoicismo?",
+      "answers": ["Felicità senza dolore", "Controllo delle emozioni", "Libertà assoluta", "Ricerca della verità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è l'Etica?",
+      "answers": ["Lo studio delle stelle", "Lo studio dei costumi e della morale", "Lo studio delle emozioni", "Lo studio della politica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha detto: 'L'uomo è misura di tutte le cose'?",
+      "answers": ["Protagora", "Socrate", "Eraclito", "Democrito"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa significa 'esistenzialismo'?",
+      "answers": ["Una corrente artistica", "Un movimento politico", "Una filosofia che riflette sul senso dell'esistenza", "Un pensiero scientifico"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha fondato il Liceo ad Atene?",
+      "answers": ["Platone", "Socrate", "Aristotele", "Epicuro"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cos'è il dualismo cartesiano?",
+      "answers": ["La divisione tra mente e corpo", "La divisione tra bene e male", "La divisione tra spirito e anima", "La divisione tra anima e natura"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cos'è il 'logos' nella filosofia greca?",
+      "answers": ["Il discorso razionale", "La forza della natura", "La religione", "La volontà divina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è stato il fondatore del pensiero nichilista?",
+      "answers": ["Aristotele", "Nietzsche", "Platone", "Kant"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale filosofo ha scritto 'Così parlò Zarathustra'?",
+      "answers": ["Søren Kierkegaard", "Friedrich Nietzsche", "Immanuel Kant", "Jean-Paul Sartre"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Kant, che cosa guida l'agire morale?",
+      "answers": ["La volontà di Dio", "La ricerca della felicità", "L'imperativo categorico", "Il bene comune"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale filosofo riteneva che la realtà fosse composta da infiniti 'monadi'?",
+      "answers": ["Leibniz", "Kant", "Cartesio", "Hume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa rappresenta il 'velo dell'ignoranza' di John Rawls?",
+      "answers": ["Un errore di percezione", "Una condizione per giudicare giustamente", "Un limite della scienza", "Una teoria politica antica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo quale filosofo 'l'uomo è condannato ad essere libero'?",
+      "answers": ["Nietzsche", "Sartre", "Heidegger", "Camus"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha teorizzato la 'volontà di potenza'?",
+      "answers": ["Socrate", "Kant", "Nietzsche", "Aristotele"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa indica il termine 'a priori' nella filosofia di Kant?",
+      "answers": ["Qualcosa che viene dopo l'esperienza", "Qualcosa che viene prima dell'esperienza", "Qualcosa di inventato", "Qualcosa di logico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Per quale concetto è famoso Thomas Hobbes?",
+      "answers": ["Lo stato naturale è pacifico", "L'uomo è lupo per l'uomo", "La divisione dei poteri", "La democrazia diretta"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha introdotto il concetto di 'dubbio metodico'?",
+      "answers": ["Socrate", "Cartesio", "Aristotele", "Kant"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale filosofo medioevale ha tentato di conciliare fede e ragione?",
+      "answers": ["Agostino", "Tommaso d'Aquino", "Plotino", "Ockham"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è la 'catarsi' secondo Aristotele?",
+      "answers": ["Una purificazione emotiva", "Una confessione religiosa", "Una malattia dell'anima", "Un cambiamento fisico"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è il filosofo principale del 'contrattualismo' moderno?",
+      "answers": ["Kant", "Hobbes", "Locke", "Rousseau"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quale filosofo è famoso per la frase 'La vita senza ricerca non è degna di essere vissuta'?",
+      "answers": ["Socrate", "Platone", "Aristotele", "Epicuro"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale filosofo è conosciuto per il concetto di 'eterno ritorno'?",
+      "answers": ["Sartre", "Nietzsche", "Hume", "Marx"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha scritto 'Il Leviatano'?",
+      "answers": ["Hobbes", "Locke", "Kant", "Machiavelli"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cos'è l'ontologia?",
+      "answers": ["Lo studio dell'essere", "Lo studio dell'anima", "Lo studio delle emozioni", "Lo studio della società"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale corrente filosofica sostiene che tutto ciò che esiste è materiale?",
+      "answers": ["Idealismo", "Materialismo", "Esistenzialismo", "Fenomenologia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha parlato della 'morte di Dio'?",
+      "answers": ["Sartre", "Nietzsche", "Heidegger", "Freud"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende con il termine 'dialettica' in filosofia?",
+      "answers": ["Una tecnica di discussione", "Un metodo di analisi storica", "Un'opera letteraria", "Una teoria scientifica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è uno dei massimi esponenti della filosofia empirista?",
+      "answers": ["Cartesio", "Hume", "Kant", "Spinoza"],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "Cosa si intende per 'maieutica' socratica?",
+      "answers": ["L'arte della guerra", "L'arte del convincere", "L'arte di far emergere la verità", "L'arte di confondere"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa rappresenta il 'simposio' di Platone?",
+      "answers": ["Un discorso sull'amore", "Un trattato di politica", "Una teoria sulla conoscenza", "Una critica alla democrazia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il fine ultimo dell'uomo secondo Aristotele?",
+      "answers": ["Il piacere", "La conoscenza", "La ricchezza", "La felicità (eudaimonia)"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi ha introdotto il concetto di 'Idea' come realtà superiore?",
+      "answers": ["Socrate", "Aristotele", "Platone", "Epicuro"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Per Cartesio, qual è la prima certezza assoluta?",
+      "answers": ["Dio esiste", "Io esisto", "La materia esiste", "Il mondo esiste"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa critica Nietzsche con il concetto di 'morale degli schiavi'?",
+      "answers": ["La religione cristiana", "La filosofia greca", "La politica democratica", "La filosofia cartesiana"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale opera Kant discute della 'pace perpetua'?",
+      "answers": ["Critica della ragion pratica", "Critica della ragion pura", "Prolegomeni", "Per la pace perpetua"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Che cos'è il 'Cogito' cartesiano?",
+      "answers": ["Un'idea", "Un metodo", "Una certezza fondamentale", "Un sogno"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha introdotto il concetto di 'differenza ontologica'?",
+      "answers": ["Kant", "Heidegger", "Sartre", "Hume"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è autore della 'Critica del Giudizio'?",
+      "answers": ["Kant", "Hegel", "Locke", "Marx"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo Hobbes, quale è il miglior sistema politico?",
+      "answers": ["La monarchia assoluta", "La democrazia", "L'anarchia", "L'oligarchia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale filosofo medievale ha formulato l'argomento ontologico per l'esistenza di Dio?",
+      "answers": ["Tommaso d'Aquino", "Sant'Agostino", "Anselmo d'Aosta", "Boezio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale concetto è al centro della filosofia di Schopenhauer?",
+      "answers": ["Volontà", "Idea", "Anima", "Materia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi sostiene che 'tutto scorre' ('panta rei')?",
+      "answers": ["Eraclito", "Parmenide", "Platone", "Aristotele"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo Marx, quale forza muove la storia?",
+      "answers": ["La religione", "Il pensiero", "La lotta di classe", "La volontà divina"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa significa 'sapere aude'?",
+      "answers": ["Osa sapere", "Impara vivendo", "Sapere è potere", "Cerca la verità"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi sostiene che l'esistenza precede l'essenza?",
+      "answers": ["Heidegger", "Sartre", "Nietzsche", "Husserl"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha scritto 'Essere e Tempo'?",
+      "answers": ["Heidegger", "Nietzsche", "Kierkegaard", "Sartre"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa significa 'dialettica hegeliana'?",
+      "answers": ["Discussione libera", "Processo di tesi-antitesi-sintesi", "Metodo scientifico", "Conflitto di emozioni"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale filosofia sostiene che non esiste verità assoluta?",
+      "answers": ["Realismo", "Sofismo", "Stoicismo", "Platonismo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi parla dell'Übermensch (oltreuomo)?",
+      "answers": ["Sartre", "Hegel", "Nietzsche", "Heidegger"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cos'è la 'fenomenologia' secondo Husserl?",
+      "answers": ["Una teoria politica", "Lo studio delle apparenze sensibili", "Un metodo per studiare la coscienza", "Una corrente religiosa"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Secondo il mito della caverna, cosa rappresenta il sole?",
+      "answers": ["Il mondo materiale", "La conoscenza suprema", "L'ignoranza", "La natura"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha sviluppato il concetto di 'inconscio' in filosofia?",
+      "answers": ["Freud", "Nietzsche", "Hegel", "Hume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cosa rappresenta il Leviatano nel pensiero di Hobbes?",
+      "answers": ["La paura della guerra civile", "Il potere sovrano", "La forza della natura", "La distruzione dell'umanità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cosa significa 'a posteriori'?",
+      "answers": ["Prima dell'esperienza", "Dopo l'esperienza", "Indipendente dall'esperienza", "Senza esperienza"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi sostiene che le idee sono innate?",
+      "answers": ["Locke", "Hume", "Platone", "Aristotele"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa si intende per 'principio di non contraddizione'?",
+      "answers": ["Due cose possono essere vere contemporaneamente", "Una cosa non può essere e non essere allo stesso tempo", "Ogni cosa ha una causa", "Tutto è relativo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha teorizzato il 'contratto sociale' secondo cui gli uomini rinunciano a parte della loro libertà per vivere in società?",
+      "answers": ["Hobbes", "Locke", "Rousseau", "Machiavelli"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale filosofo ha elaborato la teoria del 'velo di Maya'?",
+      "answers": ["Hegel", "Nietzsche", "Schopenhauer", "Leibniz"],
+      "correctIndex": 2
+    }
+  ],
+  "esperto": [
+    {
+      "question": "Quale concetto è centrale nella filosofia politica di John Locke?",
+      "answers": ["Proprietà privata", "Sovranità popolare", "Contratto sociale rigido", "Stato assolutista"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha scritto 'La fenomenologia dello spirito'?",
+      "answers": ["Kant", "Hegel", "Nietzsche", "Sartre"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è il 'noumeno' in Kant?",
+      "answers": ["Il fenomeno osservato", "La cosa in sé, indipendente dalla percezione", "L'idea", "La realtà sensibile"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale concetto chiave troviamo in Plotino?",
+      "answers": ["Uno", "Materia", "Idea", "Essere"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cos'è il 'panlogismo' hegeliano?",
+      "answers": ["Tutto è materia", "Tutto è spirito", "Tutto è razionale", "Tutto è volontà"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Secondo Agostino, come si raggiunge la verità?",
+      "answers": ["Attraverso l'esperienza sensibile", "Attraverso la fede e l'illuminazione divina", "Attraverso la ragione pura", "Attraverso il dubbio sistematico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il concetto principale del pensiero di Kierkegaard?",
+      "answers": ["L'inconscio", "L'autenticità", "L'angoscia esistenziale", "La dialettica storica"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha elaborato il concetto di 'etica della responsabilità'?",
+      "answers": ["Kant", "Weber", "Nietzsche", "Sartre"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Machiavelli, quale è il criterio principale dell'agire politico?",
+      "answers": ["La verità", "L'utilità", "La giustizia", "La felicità dei cittadini"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è il 'Dasein' in Heidegger?",
+      "answers": ["L'essere-nel-mondo dell'uomo", "L'essenza della natura", "Il nulla", "La volontà di potenza"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa intende Marx per 'falsa coscienza'?",
+      "answers": ["La non conoscenza di sé", "La consapevolezza borghese", "La visione distorta della realtà causata dall'ideologia", "Il nichilismo culturale"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi sostiene che 'esistere è essere percepiti'?",
+      "answers": ["Locke", "Hume", "Berkeley", "Leibniz"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nel pensiero di Spinoza, Dio coincide con:",
+      "answers": ["L'uomo", "La natura", "La ragione", "L'anima"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è l'epicureismo?",
+      "answers": ["Il culto del piacere smisurato", "La ricerca di piaceri semplici e l'assenza di dolore", "Il disprezzo della vita", "Il rifiuto della ragione"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Pascal, quale atteggiamento è razionale di fronte all'esistenza di Dio?",
+      "answers": ["L'ateismo", "La fede cieca", "La scommessa", "Il dubbio radicale"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale concetto è al centro della filosofia morale di Nietzsche?",
+      "answers": ["L'etica della compassione", "La morale dei signori", "La morale democratica", "La morale kantiana"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa intende Freud con 'Super-Io' nella sua teoria psicoanalitica?",
+      "answers": ["L'istinto sessuale", "La parte inconscia della mente", "L'insieme delle norme morali interiorizzate", "Il principio di piacere"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che modo la filosofia di Leibniz affronta il problema del male?",
+      "answers": ["Negando la sua esistenza", "Con la teoria del migliore dei mondi possibili", "Affermando la malvagità dell'uomo", "Riducendo tutto a necessità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi sostiene che la libertà umana sia una condanna?",
+      "answers": ["Heidegger", "Sartre", "Kant", "Camus"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è la 'volontà di vivere' di Schopenhauer?",
+      "answers": ["L'impulso all'autoconservazione", "La razionalità dell'uomo", "Il desiderio di conoscenza", "La ricerca del bene comune"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Per quale filosofo tutto ciò che esiste è composto da 'atomi e vuoto'?",
+      "answers": ["Epicuro", "Democrito", "Aristotele", "Platone"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo il pensiero sofista, cosa determina la verità?",
+      "answers": ["La natura", "La ragione", "Il consenso umano", "La divinità"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cos'è il 'principio di immanenza' nella filosofia moderna?",
+      "answers": ["Che Dio trascende il mondo", "Che ogni realtà è interna all'esperienza", "Che la verità è fuori dalla natura", "Che l'anima sopravvive al corpo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale opera Aristotele espone la sua teoria dell'atto e della potenza?",
+      "answers": ["Etica Nicomachea", "Metafisica", "Politica", "Fisica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta il 'nulla' in Heidegger?",
+      "answers": ["La fine della vita", "L'origine dell'angoscia", "Il limite della scienza", "L'annullamento dell'essere"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha detto: 'La filosofia è nostalgia, è il desiderio di essere ovunque a casa propria'?",
+      "answers": ["Heidegger", "Hegel", "Kierkegaard", "Kant"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cos'è l'anamnesi secondo Platone?",
+      "answers": ["L'oblio delle idee", "La reminiscenza delle verità eterne", "La perdita della conoscenza", "La creazione di nuove idee"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Hume, su cosa si basa la conoscenza?",
+      "answers": ["Sulla ragione", "Sull'intuizione", "Sull'esperienza sensibile", "Sulla fede"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale ambito si inserisce principalmente la filosofia di Adorno?",
+      "answers": ["Filosofia politica", "Estetica", "Filosofia della scienza", "Teoria critica della società"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Che cos'è l'utopia secondo Thomas More?",
+      "answers": ["Un luogo reale", "Un modello ideale di società", "Un sogno irrealizzabile", "Un concetto mistico"],
+      "correctIndex": 1
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Che rapporto esiste tra Essere e Nulla in 'Essere e Tempo' di Heidegger?",
+      "answers": ["Sono opposti", "Il Nulla rivela l'Essere", "Il Nulla annulla l'Essere", "L'Essere è l'assenza del Nulla"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il concetto di 'monade' secondo Leibniz?",
+      "answers": ["Materia indivisibile", "Forza spirituale indivisibile", "Unità biologica", "Principio di materia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che ruolo svolge il 'Concetto' nella 'Scienza della Logica' di Hegel?",
+      "answers": ["È una costruzione mentale", "È la realtà stessa che si sviluppa dialetticamente", "È una rappresentazione sensibile", "È un mero strumento linguistico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Kant, cosa sono le categorie dell'intelletto?",
+      "answers": ["Concetti acquisiti dall'esperienza", "Schemi sensibili", "Forme a priori che strutturano l'esperienza", "Idee innate di Dio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nel 'Tractatus Logico-Philosophicus', cosa afferma Wittgenstein sulla struttura del linguaggio?",
+      "answers": ["È arbitraria", "È specchio della realtà", "È convenzionale", "È pura creazione umana"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi introduce la nozione di 'ontoteologia' come problema della metafisica occidentale?",
+      "answers": ["Nietzsche", "Heidegger", "Kierkegaard", "Husserl"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il concetto di 'differance' introdotto da Derrida?",
+      "answers": ["Rinuncia al significato", "Differimento e differenza nei significati", "Identità assoluta", "Immediatezza del senso"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale opera Marx analizza il concetto di alienazione del lavoro?",
+      "answers": ["Il Capitale", "Manifesto del Partito Comunista", "Manoscritti economico-filosofici", "Critica al programma di Gotha"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nel pensiero stoico, che cos'è il 'logos'?",
+      "answers": ["Il discorso razionale umano", "La ragione divina che governa il cosmo", "La verità filosofica", "La parola interiore"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Plotino, come avviene l'emissione degli esseri dall'Uno?",
+      "answers": ["Per atto di volontà", "Per emanazione necessaria", "Per creazione arbitraria", "Per volontà divina"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa intendeva Nietzsche per 'morte di Dio'?",
+      "answers": ["Il declino della religione organizzata", "La fine di ogni metafisica tradizionale", "La perdita della fede nei valori assoluti", "La distruzione della morale cristiana"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa afferma il principio di 'verità come coerenza' in filosofia analitica?",
+      "answers": ["Una proposizione è vera se corrisponde ai fatti", "Una proposizione è vera se è internamente coerente con un sistema", "La verità è relativa al soggetto", "La verità è inaccessibile"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale relazione sussiste tra 'fatto' e 'valore' secondo il positivismo?",
+      "answers": ["Sono equivalenti", "Sono distinti e non deducibili l'uno dall'altro", "I fatti derivano dai valori", "I valori sono fatti oggettivi"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è l'obiettivo della 'decostruzione' secondo Derrida?",
+      "answers": ["Svelare il fondamento ultimo della verità", "Mostrare le aporie interne ai testi", "Ricostruire il significato originario", "Rigenerare il linguaggio comune"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cosa si intende per 'etica del discorso' secondo Habermas?",
+      "answers": ["Etica basata su convenzioni sociali", "Etica fondata sul dialogo razionale e consenso", "Etica soggettiva", "Etica della virtù"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nel pensiero di Spinoza, quale emozione è fondamentale per la liberazione umana?",
+      "answers": ["Gioia", "Dolore", "Tristezza", "Rabbia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che ruolo ha l'intuizione immediata nella fenomenologia di Husserl?",
+      "answers": ["È ingannevole", "È la base della conoscenza certa", "È secondaria rispetto all'analisi logica", "È priva di valore epistemologico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha formulato il principio del 'rifiuto del fondamento ultimo' nella filosofia postmoderna?",
+      "answers": ["Derrida", "Lyotard", "Foucault", "Deleuze"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo Aristotele, che tipo di conoscenza è la 'sophia'?",
+      "answers": ["Tecnica", "Pratica", "Contemplativa", "Politica"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che senso Hume critica il concetto di causa?",
+      "answers": ["La causa è un'inferenza non giustificabile logicamente", "La causa è una realtà assoluta", "La causa è un concetto metafisico", "La causa è evidente ai sensi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo la filosofia orientale Vedanta, cos'è il 'Brahman'?",
+      "answers": ["L'Io individuale", "La divinità personale", "Il principio assoluto e universale", "La legge morale dell'universo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa intende Foucault per 'biopolitica'?",
+      "answers": ["La politica della biodiversità", "Il potere che gestisce le vite biologiche", "La filosofia della vita", "Il governo delle emozioni"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo la tradizione neoplatonica, la materia è:",
+      "answers": ["Il principio del male", "L'origine di tutte le forme", "La base della libertà", "Identica all'Uno"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi affermava che 'la libertà è riconoscere la necessità'?",
+      "answers": ["Hegel", "Marx", "Engels", "Feuerbach"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale opera Agostino elabora il concetto di 'tempo' come dimensione dell'anima?",
+      "answers": ["De Civitate Dei", "Confessioni", "De Trinitate", "Soliloquia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo il pragmatismo di Peirce, il significato di un'idea è dato da:",
+      "answers": ["La sua verità logica", "Il suo valore pratico", "La sua rappresentazione linguistica", "La sua origine metafisica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo il 'principio di carità' di Davidson, come vanno interpretati gli enunciati di un altro parlante?",
+      "answers": ["Come veri finché possibile", "Come falsi finché dimostrati", "Come metaforici", "Come sospesi nel dubbio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nel pensiero di Levinas, l'etica nasce da:",
+      "answers": ["La legge naturale", "L'incontro con il volto dell'Altro", "Il bisogno di sopravvivenza", "La ragione universale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale filosofo ha introdotto il concetto di 'desiderio mimetico'?",
+      "answers": ["Girard", "Bataille", "Lacan", "Deleuze"],
+      "correctIndex": 0
+    }
+  ]
 }
 }
