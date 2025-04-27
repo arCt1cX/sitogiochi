@@ -24,7 +24,8 @@ const gameTranslations = {
         'rememberTitle': 'Ricorda questa cella!',
         'correctGuess': 'Risposta corretta!',
         'incorrectGuess': 'Sbagliato. La risposta corretta era:',
-        'invalidGuess': 'Risposta non valida'
+        'invalidGuess': 'Risposta non valida',
+        'selectMode': 'Seleziona modalità:'
     },
     'en': {
         'gameTitle': 'Color Grid',
@@ -50,7 +51,8 @@ const gameTranslations = {
         'rememberTitle': 'Remember this cell!',
         'correctGuess': 'Correct guess!',
         'incorrectGuess': 'Incorrect. The correct answer was:',
-        'invalidGuess': 'Invalid guess'
+        'invalidGuess': 'Invalid guess',
+        'selectMode': 'Select mode:'
     }
 };
 
@@ -82,6 +84,7 @@ function applyGameTranslations() {
     document.getElementById('reveal-answer').textContent = translations.revealAnswer;
     document.getElementById('resultsTitle').textContent = translations.resultsTitle;
     document.getElementById('play-again').textContent = translations.playAgain;
+    document.getElementById('selectModeTitle').textContent = translations.selectMode;
 }
 
 // Add the function to apply translations on page load

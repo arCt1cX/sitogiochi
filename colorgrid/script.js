@@ -39,7 +39,7 @@ const colorTranslations = {
 let currentLanguage = getLanguage();
 
 // Game variables
-const GRID_SIZE = 5;
+let GRID_SIZE = 5; // Default grid size
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let targetCell = null;
 let players = [];
@@ -63,6 +63,10 @@ const resultsList = document.getElementById('results-list');
 const targetCellDisplay = document.getElementById('target-cell');
 const targetCoordsDisplay = document.getElementById('target-coords');
 
+// Game mode selection buttons
+const mode5x5Button = document.getElementById('mode-5x5');
+const mode10x10Button = document.getElementById('mode-10x10');
+
 // Get all grid label containers
 const gridLabelsRows = document.querySelectorAll('.grid-labels-row');
 const gridLabelsCols = document.querySelectorAll('.grid-labels-col');
@@ -84,12 +88,41 @@ function updatePlayerLabels() {
     });
 }
 
-// Initialize the game
-function init() {
+// Handle game mode selection
+function selectGameMode(size) {
+    // Update GRID_SIZE
+    GRID_SIZE = size;
+    
+    // Update CSS variable
     document.documentElement.style.setProperty('--grid-size', GRID_SIZE);
     
-    // Update grid labels based on GRID_SIZE
+    // Update grid labels
     updateGridLabels();
+    
+    // Update UI for selected mode
+    if (size === 5) {
+        mode5x5Button.classList.add('mode-selected');
+        mode10x10Button.classList.remove('mode-selected');
+        
+        // Remove 10x10 grid class if exists
+        document.querySelectorAll('.grid-container').forEach(container => {
+            container.classList.remove('grid-size-10');
+        });
+    } else {
+        mode10x10Button.classList.add('mode-selected');
+        mode5x5Button.classList.remove('mode-selected');
+        
+        // Add 10x10 grid class for styling
+        document.querySelectorAll('.grid-container').forEach(container => {
+            container.classList.add('grid-size-10');
+        });
+    }
+}
+
+// Initialize the game
+function init() {
+    // Set default game mode (5x5)
+    selectGameMode(5);
     
     // Check for language changes
     setInterval(() => {
@@ -100,6 +133,10 @@ function init() {
             updatePlayerLabels(); // Update player labels if they exist
         }
     }, 1000);
+    
+    // Add event listeners for mode selection
+    mode5x5Button.addEventListener('click', () => selectGameMode(5));
+    mode10x10Button.addEventListener('click', () => selectGameMode(10));
     
     resetGame();
 }
@@ -217,16 +254,19 @@ function generateColorGrid(gridElement) {
 
 // Get color for a specific cell position using natural colors
 function getColorForCell(row, col) {
-    // Calculate hue - with increased range for better differentiation
-    const hueStep = HUE_RANGE / (GRID_SIZE - 1);
+    // For 10x10 grid, adjust the hue range to ensure more distinct colors
+    const effectiveHueRange = GRID_SIZE === 10 ? 180 : HUE_RANGE;
+    
+    // Calculate hue with appropriate range for grid size
+    const hueStep = effectiveHueRange / (GRID_SIZE - 1);
     const hue = (startingHue + col * hueStep) % 360;
     
-    // Even more distinct saturation steps
-    // From 60% to 95% with larger steps
+    // Adjust saturation steps based on grid size
+    // From 60% to 95% with appropriate steps
     const saturation = 60 + (35 * row / (GRID_SIZE - 1));
     
-    // More distinct lightness steps
-    // From 85% down to 35% with bigger steps between rows
+    // Adjust lightness steps based on grid size
+    // From 85% down to 35% with appropriate steps
     const lightness = 85 - (50 * row / (GRID_SIZE - 1));
     
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
@@ -250,21 +290,21 @@ function addPlayer() {
     
     const playerLabel = document.createElement('label');
     playerLabel.textContent = `${t.player} ${playerCount}: `;
-    playerLabel.htmlFor = `player${playerCount}`;
     
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'B3';
-    input.classList.add('coord-input');
-    input.dataset.playerIndex = players.length - 1;
+    const playerInput = document.createElement('input');
+    playerInput.type = 'text';
+    playerInput.maxLength = GRID_SIZE < 10 ? 2 : 3; // Allow for coordinates like "J10"
+    playerInput.placeholder = 'A1';
+    playerInput.dataset.playerIndex = players.length - 1;
     
-    input.addEventListener('change', function() {
-        const playerIndex = parseInt(this.dataset.playerIndex);
-        players[playerIndex].guess = this.value.trim().toUpperCase();
+    playerInput.addEventListener('input', (e) => {
+        const index = parseInt(e.target.dataset.playerIndex);
+        players[index].guess = e.target.value.toUpperCase();
     });
     
     playerDiv.appendChild(playerLabel);
-    playerDiv.appendChild(input);
+    playerDiv.appendChild(playerInput);
+    
     playerInputsArea.appendChild(playerDiv);
 }
 
@@ -328,12 +368,12 @@ function resetGame() {
     gameResultSection.classList.add('hidden');
 }
 
-// Event Listeners
+// Event listeners
 startGameButton.addEventListener('click', startGame);
 gotItButton.addEventListener('click', showGamePlay);
 addPlayerButton.addEventListener('click', addPlayer);
 revealAnswerButton.addEventListener('click', revealAnswer);
 playAgainButton.addEventListener('click', resetGame);
 
-// Initialize on load
+// Initialize the game when page loads
 document.addEventListener('DOMContentLoaded', init); 
