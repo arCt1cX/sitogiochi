@@ -10712,5 +10712,1487 @@
             "correctIndex": 0
           }
     ]
-  }
+  },
+  "Economia": {
+  "bambino": [
+    {
+      "question": "Cosa si riceve in cambio di un lavoro?",
+      "answers": [
+        "Soldi",
+        "Vacanze",
+        "Giocattoli",
+        "Case"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il posto dove si tengono al sicuro i soldi?",
+      "answers": [
+        "Scuola",
+        "Ospedale",
+        "Banca",
+        "Palestra"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si usa per comprare qualcosa?",
+      "answers": [
+        "Tempo",
+        "Amicizia",
+        "Soldi",
+        "Giustizia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come si chiama il denaro che si mette da parte per il futuro?",
+      "answers": [
+        "Debito",
+        "Risparmio",
+        "Spesa",
+        "Credito"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa vuol dire 'spendere' i soldi?",
+      "answers": [
+        "Conservarli",
+        "Darli via in cambio di qualcosa",
+        "Perderli",
+        "Nasconderli"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il contrario di 'spendere'?",
+      "answers": [
+        "Risparmiare",
+        "Comprare",
+        "Vendere",
+        "Prestare"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi vende oggetti o servizi in cambio di denaro?",
+      "answers": [
+        "Cliente",
+        "Venditore",
+        "Studente",
+        "Pilota"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è uno 'stipendio'?",
+      "answers": [
+        "Un premio",
+        "Il pagamento per un lavoro",
+        "Un regalo",
+        "Una multa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il denaro che una persona deve restituire?",
+      "answers": [
+        "Risparmio",
+        "Credito",
+        "Debito",
+        "Sconto"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come si chiama quando si mette denaro in un salvadanaio?",
+      "answers": [
+        "Investire",
+        "Risparmiare",
+        "Spendere",
+        "Comprare"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se compri una merendina a 1 euro e hai 5 euro, quanti euro ti restano?",
+      "answers": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Se vendi una cosa, cosa ricevi?",
+      "answers": [
+        "Un regalo",
+        "Soldi",
+        "Un debito",
+        "Un biglietto"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa succede se spendi più soldi di quanti ne hai?",
+      "answers": [
+        "Ottieni un premio",
+        "Vai in debito",
+        "Guadagni soldi",
+        "Risparmi di più"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un negozio?",
+      "answers": [
+        "Un posto per giocare",
+        "Un posto dove si vendono cose",
+        "Un museo",
+        "Una scuola"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il denaro in Italia?",
+      "answers": [
+        "Dollaro",
+        "Euro",
+        "Yen",
+        "Sterlina"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa vuol dire 'comprare a rate'?",
+      "answers": [
+        "Pagare tutto subito",
+        "Pagare in più momenti",
+        "Ricevere soldi",
+        "Prestare soldi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi produce le monete e le banconote?",
+      "answers": [
+        "La banca",
+        "La scuola",
+        "La polizia",
+        "Il mercato"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è uno 'sconto'?",
+      "answers": [
+        "Un aumento di prezzo",
+        "Un pagamento doppio",
+        "Una diminuzione del prezzo",
+        "Un regalo"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Se risparmi oggi, cosa puoi fare domani?",
+      "answers": [
+        "Spendere di più",
+        "Lavorare di più",
+        "Comprare meno",
+        "Perdere soldi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama chi compra qualcosa?",
+      "answers": [
+        "Venditore",
+        "Cliente",
+        "Banchiere",
+        "Lavoratore"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se vuoi comprare qualcosa di molto costoso, cosa dovresti fare prima?",
+      "answers": [
+        "Risparmiare",
+        "Chiedere in prestito",
+        "Spendere tutto subito",
+        "Dimenticarlo"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Se trovi un lavoro, ogni mese ricevi...",
+      "answers": [
+        "Una multa",
+        "Un regalo",
+        "Uno stipendio",
+        "Una spesa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa fanno le persone in una banca?",
+      "answers": [
+        "Giocano a calcio",
+        "Risparmiano e prendono prestiti",
+        "Vendono gelati",
+        "Studiano matematica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando compri qualcosa online, usi...",
+      "answers": [
+        "Un telefono senza connessione",
+        "Internet",
+        "Una lavagna",
+        "Un televisore"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un 'conto in banca'?",
+      "answers": [
+        "Un biglietto del cinema",
+        "Un posto dove tenere i soldi",
+        "Un numero di telefono",
+        "Una lista della spesa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se hai pochi soldi, cosa dovresti fare?",
+      "answers": [
+        "Spendere tutto",
+        "Comprare solo il necessario",
+        "Fare una festa",
+        "Comprare una macchina"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama una persona che presta soldi ad altri?",
+      "answers": [
+        "Venditore",
+        "Debitore",
+        "Creditore",
+        "Insegnante"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cos'è un budget?",
+      "answers": [
+        "Una festa",
+        "Un piano su come spendere i soldi",
+        "Una banca",
+        "Un prestito"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se un negozio fa il 50% di sconto, il prezzo sarà...",
+      "answers": [
+        "Il doppio",
+        "La metà",
+        "Uguale",
+        "Più alto"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se compri più cose insieme risparmi perché c'è una...",
+      "answers": [
+        "Promozione",
+        "Spesa extra",
+        "Maggiorazione",
+        "Tassa"
+      ],
+      "correctIndex": 0
+    }
+  ],
+  "facile": [
+    {
+      "question": "Cos'è il mercato?",
+      "answers": [
+        "Un luogo dove si vendono e si comprano beni",
+        "Una banca",
+        "Un ufficio postale",
+        "Una scuola"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si paga allo Stato per i servizi pubblici?",
+      "answers": [
+        "Tasse",
+        "Stipendio",
+        "Sconti",
+        "Debiti"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa rappresenta il prezzo di un oggetto?",
+      "answers": [
+        "Il suo peso",
+        "Il suo valore in denaro",
+        "Il suo colore",
+        "Il suo utilizzo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa fanno le imprese?",
+      "answers": [
+        "Offrono beni e servizi",
+        "Risparmiano soldi",
+        "Creano leggi",
+        "Costruiscono strade"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi sono i consumatori?",
+      "answers": [
+        "Chi compra beni e servizi",
+        "Chi vende case",
+        "Chi fa leggi",
+        "Chi crea monete"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il denaro elettronico?",
+      "answers": [
+        "Monete di ferro",
+        "Soldi usati online o con carte",
+        "Soldi in banconote",
+        "Gettoni di plastica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa succede se la domanda di un prodotto aumenta?",
+      "answers": [
+        "Il prezzo può aumentare",
+        "Il prezzo diminuisce sempre",
+        "Il prodotto sparisce",
+        "Nessun cambiamento"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è un bisogno primario?",
+      "answers": [
+        "Un bisogno superfluo",
+        "Un bisogno necessario, come mangiare",
+        "Un gioco",
+        "Un lusso"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che tipo di bene è l'acqua potabile?",
+      "answers": [
+        "Bene di lusso",
+        "Bene primario",
+        "Bene inutile",
+        "Bene raro"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando uno Stato esporta beni, cosa fa?",
+      "answers": [
+        "Compra beni",
+        "Vende beni ad altri Paesi",
+        "Costruisce ospedali",
+        "Risparmia soldi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è l'inflazione?",
+      "answers": [
+        "Una diminuzione dei prezzi",
+        "Un aumento generale dei prezzi",
+        "Una tassa",
+        "Un fallimento"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un'imposta?",
+      "answers": [
+        "Un tipo di risparmio",
+        "Una somma che si paga allo Stato",
+        "Una vincita",
+        "Un premio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale di questi è un bene?",
+      "answers": [
+        "Una lezione",
+        "Una consulenza",
+        "Una bicicletta",
+        "Un consiglio"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale di questi è un servizio?",
+      "answers": [
+        "Un panino",
+        "Una visita medica",
+        "Una maglietta",
+        "Un computer"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama una persona che crea un'impresa?",
+      "answers": [
+        "Cliente",
+        "Imprenditore",
+        "Risparmiatore",
+        "Acquirente"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi stabilisce il prezzo di un prodotto nel libero mercato?",
+      "answers": [
+        "Il governo",
+        "La domanda e l'offerta",
+        "I giudici",
+        "I professori"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una banca presta soldi, come si chiama il costo del prestito?",
+      "answers": [
+        "Sconto",
+        "Interesse",
+        "Spesa",
+        "Credito"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa 'credito'?",
+      "answers": [
+        "Un regalo",
+        "La possibilità di avere soldi da restituire dopo",
+        "Un debito mai pagato",
+        "Un aumento di stipendio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il valore totale dei beni e servizi prodotti in un Paese in un anno?",
+      "answers": [
+        "PIL",
+        "IVA",
+        "IMU",
+        "TASI"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa vuol dire 'lavorare in proprio'?",
+      "answers": [
+        "Lavorare per un'azienda",
+        "Lavorare come dipendente statale",
+        "Avere un'attività personale",
+        "Fare volontariato"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come si chiama il luogo virtuale dove si compra e si vende online?",
+      "answers": [
+        "Banca",
+        "E-commerce",
+        "Biblioteca",
+        "Supermercato"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il salario minimo?",
+      "answers": [
+        "Il massimo guadagno possibile",
+        "La paga più bassa che si può ricevere legalmente",
+        "Un bonus speciale",
+        "Un premio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando una persona non trova lavoro, si dice che è...",
+      "answers": [
+        "Indebitata",
+        "Pensionata",
+        "Disoccupata",
+        "In ferie"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi aiuta le persone a trovare lavoro?",
+      "answers": [
+        "Agenzie per il lavoro",
+        "Agenzie di viaggi",
+        "Banche",
+        "Supermercati"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando due aziende si uniscono, si chiama...",
+      "answers": [
+        "Concorrenza",
+        "Fusione",
+        "Esportazione",
+        "Fallimento"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il guadagno ottenuto da una vendita?",
+      "answers": [
+        "Costo",
+        "Perdita",
+        "Profitto",
+        "Spesa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è una funzione principale della banca centrale di un Paese?",
+      "answers": [
+        "Produrre automobili",
+        "Stampare moneta",
+        "Costruire case",
+        "Vendere supermercati"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è una spesa fissa?",
+      "answers": [
+        "Una spesa che cambia ogni mese",
+        "Una spesa uguale ogni mese, come l'affitto",
+        "Una spesa rara",
+        "Una spesa per viaggi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se risparmi una parte del tuo stipendio ogni mese, stai creando...",
+      "answers": [
+        "Un debito",
+        "Un capitale",
+        "Un prestito",
+        "Una spesa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi decide quanto si paga di IVA su un prodotto?",
+      "answers": [
+        "Il venditore",
+        "Il governo",
+        "Il cliente",
+        "La banca"
+      ],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "Cos'è un investimento?",
+      "answers": [
+        "Spendere soldi senza aspettarsi nulla",
+        "Mettere soldi in qualcosa per ottenere un guadagno",
+        "Prestare soldi agli amici",
+        "Comprare cose inutili"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è la domanda in economia?",
+      "answers": [
+        "Il numero di prodotti disponibili",
+        "Il desiderio di acquistare un prodotto o servizio",
+        "Il prezzo di un prodotto",
+        "La quantità di soldi emessi dallo Stato"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è l'offerta in economia?",
+      "answers": [
+        "La quantità di beni e servizi disponibili",
+        "La richiesta dei consumatori",
+        "Un aumento di tasse",
+        "Un prestito bancario"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il guadagno ottenuto vendendo un prodotto a un prezzo maggiore rispetto ai costi?",
+      "answers": [
+        "Debito",
+        "Profitto",
+        "Tassa",
+        "Risparmio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa influenza l'aumento dei prezzi?",
+      "answers": [
+        "La scarsità di beni",
+        "L'eccesso di beni",
+        "La chiusura delle scuole",
+        "Il miglioramento della tecnologia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è un'azione?",
+      "answers": [
+        "Un debito dello Stato",
+        "Una parte di proprietà di un'azienda",
+        "Un premio scolastico",
+        "Un tipo di tassa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un'obbligazione?",
+      "answers": [
+        "Un titolo di debito",
+        "Una moneta straniera",
+        "Un assegno",
+        "Un premio bancario"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il tasso di interesse?",
+      "answers": [
+        "Il costo di prendere o prestare denaro",
+        "Il costo di un prodotto",
+        "Il valore di un'azione",
+        "La tassa per i commercianti"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa rappresenta il PIL?",
+      "answers": [
+        "Il totale delle importazioni",
+        "Il valore dei beni e servizi prodotti in un Paese",
+        "Il numero di disoccupati",
+        "Il prezzo medio dei prodotti"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama l'aumento generale dei prezzi nel tempo?",
+      "answers": [
+        "Deflazione",
+        "Recessione",
+        "Inflazione",
+        "Crescita reale"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cos'è la deflazione?",
+      "answers": [
+        "Aumento dei prezzi",
+        "Diminuzione generale dei prezzi",
+        "Aumento delle tasse",
+        "Diminuzione della produzione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando la produzione rallenta per un lungo periodo, si parla di...",
+      "answers": [
+        "Inflazione",
+        "Crescita",
+        "Recessione",
+        "Espansione"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cos'è un'economia di mercato?",
+      "answers": [
+        "Dove lo Stato controlla tutto",
+        "Dove domanda e offerta determinano i prezzi",
+        "Dove non esistono prezzi",
+        "Dove si scambiano solo regali"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è una multinazionale?",
+      "answers": [
+        "Un negozio di quartiere",
+        "Un'azienda che opera in molti Paesi",
+        "Un ente statale",
+        "Una banca nazionale"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi emette le politiche monetarie in Italia?",
+      "answers": [
+        "Il Governo",
+        "La Banca Centrale Europea",
+        "Il Parlamento Europeo",
+        "Il Ministero dell'Economia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa diversificare un investimento?",
+      "answers": [
+        "Comprare solo un tipo di azione",
+        "Distribuire il capitale su diversi investimenti",
+        "Comprare tutto in contanti",
+        "Investire solo in immobili"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica il termine 'liquidità'?",
+      "answers": [
+        "La capacità di un bene di essere facilmente venduto",
+        "Il livello delle tasse",
+        "Il valore delle azioni",
+        "Il prezzo dell'acqua"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è lo scopo di una pensione?",
+      "answers": [
+        "Pagare meno tasse",
+        "Accumulare denaro per il futuro dopo il lavoro",
+        "Comprare beni",
+        "Avere un secondo lavoro"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il debito pubblico?",
+      "answers": [
+        "I soldi che lo Stato deve restituire",
+        "I soldi prestati dallo Stato",
+        "Il risparmio delle famiglie",
+        "Il credito bancario personale"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama l'insieme di strumenti per gestire entrate e spese dello Stato?",
+      "answers": [
+        "Politica monetaria",
+        "Politica fiscale",
+        "Bilancio familiare",
+        "PIL"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta una valuta?",
+      "answers": [
+        "Una tassa",
+        "Una moneta ufficiale di un Paese",
+        "Una banca centrale",
+        "Un tipo di obbligazione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se il tasso di inflazione aumenta molto rapidamente, si parla di...",
+      "answers": [
+        "Deflazione",
+        "Iperinflazione",
+        "Disoccupazione",
+        "Recessione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un bene durevole?",
+      "answers": [
+        "Un bene che dura a lungo, come un'auto",
+        "Un bene che si consuma subito",
+        "Un servizio",
+        "Un prestito bancario"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il commercio internazionale?",
+      "answers": [
+        "Lo scambio di beni e servizi tra Paesi",
+        "Il commercio tra negozi della stessa città",
+        "La vendita di prodotti agricoli",
+        "Il commercio di monete"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa indica il termine 'startup'?",
+      "answers": [
+        "Una grande azienda consolidata",
+        "Una nuova impresa innovativa",
+        "Un'organizzazione statale",
+        "Un fondo pensione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il prestito per comprare una casa?",
+      "answers": [
+        "Debito",
+        "Mutuo",
+        "Credito al consumo",
+        "Obbligazione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è il capitale umano?",
+      "answers": [
+        "Il valore economico delle competenze e conoscenze delle persone",
+        "Il capitale delle banche",
+        "I fondi pensione",
+        "Le riserve auree di uno Stato"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale dei seguenti è un bene immateriale?",
+      "answers": [
+        "Una sedia",
+        "Un libro",
+        "Un brevetto",
+        "Un'automobile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi stabilisce i tassi di interesse nell'area euro?",
+      "answers": [
+        "Il Parlamento Europeo",
+        "La Banca Centrale Europea",
+        "La Commissione Europea",
+        "Il Fondo Monetario Internazionale"
+      ],
+      "correctIndex": 1
+    }
+  ],
+  "esperto": [
+    {
+      "question": "Cos'è il tasso di disoccupazione?",
+      "answers": [
+        "Il numero di pensionati",
+        "La percentuale di persone che cercano lavoro ma non lo trovano",
+        "Il numero di studenti universitari",
+        "Il tasso di inflazione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa misura l'indice dei prezzi al consumo (CPI)?",
+      "answers": [
+        "La quantità di moneta emessa",
+        "La variazione media dei prezzi di beni e servizi",
+        "Il tasso di crescita del PIL",
+        "La produzione industriale"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica lo spread tra titoli di Stato?",
+      "answers": [
+        "La differenza di rendimento tra titoli di due Paesi",
+        "Il valore delle azioni bancarie",
+        "Il tasso di disoccupazione",
+        "Il costo delle materie prime"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l'obiettivo principale della politica monetaria?",
+      "answers": [
+        "Promuovere l'esportazione",
+        "Controllare l'inflazione e la stabilità finanziaria",
+        "Aumentare il debito pubblico",
+        "Creare nuove monete"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando si parla di PIL reale, cosa si intende?",
+      "answers": [
+        "Il PIL corretto per l'inflazione",
+        "Il PIL nominale senza modifiche",
+        "La produzione agricola",
+        "Il valore delle esportazioni"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il moltiplicatore keynesiano?",
+      "answers": [
+        "La crescita della spesa pubblica",
+        "L'effetto amplificato di una variazione della spesa su PIL",
+        "Un indice dei consumi",
+        "Una tassa sul reddito"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la funzione principale della Banca Centrale?",
+      "answers": [
+        "Finanziare i privati",
+        "Gestire la politica monetaria",
+        "Stabilire i prezzi dei beni",
+        "Controllare i consumi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa succede generalmente quando la Banca Centrale abbassa i tassi di interesse?",
+      "answers": [
+        "I consumi e gli investimenti aumentano",
+        "L'inflazione diminuisce",
+        "Il valore della moneta aumenta",
+        "Il debito pubblico diminuisce"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il debito estero?",
+      "answers": [
+        "Il debito di un cittadino verso una banca",
+        "Il debito che un Paese ha con creditori stranieri",
+        "Il debito della pubblica amministrazione",
+        "Un debito tra imprese italiane"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta il saldo primario di un Paese?",
+      "answers": [
+        "Entrate meno spese escluse le spese per interessi",
+        "Il debito totale",
+        "Le esportazioni nette",
+        "Il valore delle riserve auree"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è una recessione tecnica?",
+      "answers": [
+        "Due trimestri consecutivi di crescita economica",
+        "Due trimestri consecutivi di decrescita del PIL",
+        "Una crisi bancaria",
+        "Un calo dei consumi agricoli"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è la curva di Phillips?",
+      "answers": [
+        "La relazione tra tasso di inflazione e disoccupazione",
+        "La relazione tra tasso di cambio e esportazioni",
+        "L'andamento dei prezzi del petrolio",
+        "La domanda globale di beni"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si definisce il quantitative easing?",
+      "answers": [
+        "Un aumento delle tasse",
+        "Una politica di acquisto di titoli per immettere liquidità",
+        "Un blocco degli investimenti",
+        "Un aumento dei salari"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando si parla di deflazione, cosa accade all'economia?",
+      "answers": [
+        "I prezzi aumentano",
+        "I prezzi diminuiscono",
+        "I salari aumentano",
+        "Le importazioni crescono"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un avanzo commerciale?",
+      "answers": [
+        "Le importazioni superano le esportazioni",
+        "Le esportazioni superano le importazioni",
+        "Le entrate fiscali superano le spese pubbliche",
+        "La disoccupazione diminuisce"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta l'Indice FTSE MIB?",
+      "answers": [
+        "Il prezzo del petrolio",
+        "L'indice delle principali società quotate italiane",
+        "Il valore dell'euro",
+        "Il tasso di inflazione europeo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende per default sovrano?",
+      "answers": [
+        "Il fallimento di una banca privata",
+        "L'incapacità di uno Stato di pagare i propri debiti",
+        "La svalutazione di una moneta",
+        "La riduzione delle tasse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il tasso di cambio reale?",
+      "answers": [
+        "Il rapporto nominale tra due valute",
+        "Il tasso corretto per i livelli di prezzo relativi",
+        "Il prezzo delle obbligazioni",
+        "La differenza tra domanda e offerta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa sono le riserve valutarie di uno Stato?",
+      "answers": [
+        "Le tasse accumulate",
+        "La quantità di valuta straniera posseduta",
+        "La quantità di oro venduta",
+        "La produzione di beni industriali"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa misura il debito/PIL?",
+      "answers": [
+        "Il debito pubblico in rapporto alla produzione del Paese",
+        "Il valore delle esportazioni",
+        "La ricchezza delle famiglie",
+        "La liquidità bancaria"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è la stagflazione?",
+      "answers": [
+        "Crescita alta con inflazione bassa",
+        "Recessione economica con inflazione alta",
+        "Solo inflazione",
+        "Solo disoccupazione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica un'economia di scala?",
+      "answers": [
+        "Costi medi che aumentano con la produzione",
+        "Costi medi che diminuiscono con l'aumento della produzione",
+        "Inflazione in aumento",
+        "Deflazione controllata"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende per elasticità della domanda?",
+      "answers": [
+        "Quanto la domanda cambia al variare del prezzo",
+        "La velocità di produzione",
+        "La quantità esportata",
+        "La crescita del PIL"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa rappresenta il bilancio dei pagamenti?",
+      "answers": [
+        "La contabilità delle entrate e uscite di uno Stato verso l'estero",
+        "Il bilancio delle imprese pubbliche",
+        "Il saldo fiscale di un'azienda",
+        "Il saldo della Banca Centrale"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è una politica fiscale espansiva?",
+      "answers": [
+        "Aumento della pressione fiscale",
+        "Aumento della spesa pubblica e/o riduzione delle tasse",
+        "Riduzione del debito privato",
+        "Incremento dei tassi d'interesse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama una tassa proporzionale al reddito?",
+      "answers": [
+        "IVA",
+        "Tassa progressiva",
+        "Flat tax",
+        "Tassa regressiva"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che effetto ha l'aumento dei tassi d'interesse sui prestiti bancari?",
+      "answers": [
+        "Li rende più costosi",
+        "Li rende più economici",
+        "Li elimina",
+        "Li aumenta senza costo"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è un bene inferiore?",
+      "answers": [
+        "Un bene di lusso",
+        "Un bene la cui domanda cala all'aumentare del reddito",
+        "Un bene che costa molto",
+        "Un bene esclusivo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In un sistema a cambi fissi, cosa può fare una banca centrale per difendere la propria valuta?",
+      "answers": [
+        "Comprare la propria valuta usando riserve valutarie",
+        "Stampare più moneta",
+        "Aumentare i salari pubblici",
+        "Vendere titoli di Stato all'estero"
+      ],
+      "correctIndex": 0
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Cosa descrive la curva IS in un modello IS-LM?",
+      "answers": [
+        "L'equilibrio nel mercato dei beni",
+        "L'equilibrio nel mercato monetario",
+        "L'equilibrio nel mercato del lavoro",
+        "Il bilancio dello Stato"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nel modello Solow, cosa determina il livello di reddito di lungo periodo?",
+      "answers": [
+        "La domanda aggregata",
+        "Il tasso di risparmio e la produttività",
+        "Il debito pubblico",
+        "Il consumo privato"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta il moltiplicatore fiscale in economia?",
+      "answers": [
+        "La variazione dei consumi dovuta alla variazione dei salari",
+        "L'effetto di una variazione della spesa pubblica sul PIL",
+        "Il rapporto tra risparmio e consumo",
+        "La risposta dell'inflazione a un cambiamento dei tassi d'interesse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la principale implicazione della teoria della parità dei poteri d'acquisto?",
+      "answers": [
+        "I tassi di interesse si eguagliano nel lungo periodo",
+        "I prezzi dei beni identici devono essere uguali in Paesi diversi (al netto dei cambi)",
+        "Il valore delle obbligazioni cresce costantemente",
+        "La produzione è determinata solo dal capitale"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nel modello Mundell-Fleming a cambi fissi, quale politica è più efficace?",
+      "answers": [
+        "Politica monetaria",
+        "Politica fiscale",
+        "Politica commerciale",
+        "Politica dei redditi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale teoria spiega la preferenza degli investitori per titoli liquidi?",
+      "answers": [
+        "Teoria del portafoglio",
+        "Teoria delle aspettative",
+        "Teoria della preferenza per la liquidità",
+        "Teoria quantitativa della moneta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Secondo la teoria dei giochi, cos'è un equilibrio di Nash?",
+      "answers": [
+        "La strategia che minimizza la perdita",
+        "Una situazione in cui nessun giocatore ha convenienza a cambiare strategia",
+        "La massimizzazione del profitto di gruppo",
+        "Il massimo vantaggio per il primo giocatore"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale tipo di bene è associato al concetto di esternalità positiva?",
+      "answers": [
+        "Tabacco",
+        "Educazione",
+        "Petrolio",
+        "Automobili"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa afferma la legge di Okun?",
+      "answers": [
+        "C'è una relazione inversa tra inflazione e crescita",
+        "La disoccupazione aumenta quando il PIL cala",
+        "Il deficit fiscale riduce la crescita",
+        "L'offerta crea la propria domanda"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In una curva di Lorenz perfettamente uguale, quale sarebbe il coefficiente di Gini?",
+      "answers": [
+        "1",
+        "0",
+        "0.5",
+        "2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo la teoria dei mercati efficienti, quale delle seguenti affermazioni è corretta?",
+      "answers": [
+        "È possibile prevedere i movimenti di mercato con analisi tecnica",
+        "Tutte le informazioni disponibili sono già riflesse nei prezzi",
+        "Gli insider hanno sempre vantaggio competitivo",
+        "I prezzi sono determinati dai regolatori"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è un bene pubblico puro?",
+      "answers": [
+        "Un bene senza costo di produzione",
+        "Un bene non escludibile e non rivale",
+        "Un bene offerto solo dal settore privato",
+        "Un bene prodotto in monopolio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nel modello di crescita endogena, cosa permette la crescita perpetua?",
+      "answers": [
+        "Accumulo di capitale",
+        "Innovazione tecnologica interna",
+        "Espansione delle risorse naturali",
+        "Aumento della popolazione"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il moral hazard in economia?",
+      "answers": [
+        "La diminuzione dell'efficienza dovuta a tasse elevate",
+        "Un comportamento rischioso incentivato dall'assicurazione",
+        "La difficoltà di misurare il PIL",
+        "L'assenza di fiducia nel sistema bancario"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta il concetto di crowding out?",
+      "answers": [
+        "La spesa pubblica riduce l'investimento privato",
+        "L'aumento del debito aumenta l'occupazione",
+        "Le banche centrali abbassano i tassi d'interesse",
+        "I consumatori aumentano i risparmi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secondo il modello di Heckscher-Ohlin, cosa determina i flussi commerciali?",
+      "answers": [
+        "La differenza di tecnologia",
+        "La differenza nei fattori di produzione",
+        "Il tasso di inflazione",
+        "Il livello della domanda interna"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa una curva di offerta di lavoro inclinata negativamente?",
+      "answers": [
+        "I salari più alti riducono l'offerta di lavoro",
+        "I salari più bassi aumentano l'offerta di lavoro",
+        "Non esiste offerta di lavoro a salari bassi",
+        "La produttività cala con il salario"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il 'too big to fail'?",
+      "answers": [
+        "Una società che domina il mercato",
+        "Un'impresa che lo Stato non può lasciar fallire senza danni sistemici",
+        "Un'azienda con debiti inesigibili",
+        "Un'industria monopolistica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nel modello AD-AS, uno shock positivo di offerta cosa comporta?",
+      "answers": [
+        "Aumento dei prezzi",
+        "Diminuzione dei prezzi e aumento della produzione",
+        "Aumento dei salari",
+        "Aumento del debito"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In un contesto di trappola della liquidità, quale politica è meno efficace?",
+      "answers": [
+        "Politica monetaria",
+        "Politica fiscale espansiva",
+        "Riduzione della spesa pubblica",
+        "Aumento dei tassi d'interesse"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il criterio di Pareto-efficienza implica che:",
+      "answers": [
+        "Si massimizzano le entrate fiscali",
+        "Nessuno può migliorare senza peggiorare qualcun altro",
+        "Tutti guadagnano ugualmente",
+        "Il PIL è al massimo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo la teoria della crescita esogena, quale variabile è considerata esogena?",
+      "answers": [
+        "Capitale",
+        "Tecnologia",
+        "Lavoro",
+        "Consumo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta la curva di Laffer?",
+      "answers": [
+        "La relazione tra aliquota fiscale e gettito fiscale",
+        "La relazione tra consumi e reddito",
+        "La relazione tra risparmio e investimenti",
+        "La relazione tra disoccupazione e inflazione"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In macroeconomia, cos'è la neutralità della moneta nel lungo periodo?",
+      "answers": [
+        "La moneta influenza il PIL reale",
+        "La moneta influenza solo i prezzi e non il PIL reale",
+        "La moneta non ha alcun effetto su nulla",
+        "La moneta genera crescita economica infinita"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa rappresenta l'output gap?",
+      "answers": [
+        "La differenza tra PIL potenziale e PIL effettivo",
+        "Il debito estero",
+        "La differenza tra esportazioni e importazioni",
+        "La differenza tra domanda e offerta di lavoro"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa descrive l'effetto Pigou?",
+      "answers": [
+        "La riduzione dei salari nominali riduce l'occupazione",
+        "L'aumento del valore reale della ricchezza stimola la domanda aggregata",
+        "La svalutazione interna riduce il PIL",
+        "La tassazione progressiva migliora l'equità"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che ruolo ha il tasso di sconto nel sistema bancario centrale?",
+      "answers": [
+        "Determinare i prestiti a lungo termine",
+        "Determinare il costo dei prestiti alle banche",
+        "Determinare il valore delle obbligazioni",
+        "Determinare il prezzo dell'oro"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo il principio di Ricardian equivalence, cosa accade con un aumento del deficit pubblico?",
+      "answers": [
+        "I consumatori aumentano il consumo",
+        "I consumatori aumentano il risparmio",
+        "Il tasso di disoccupazione cresce",
+        "L'inflazione scende"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è l'effetto della politica monetaria restrittiva sulla curva LM?",
+      "answers": [
+        "Si sposta a destra",
+        "Si sposta a sinistra",
+        "Rimane invariata",
+        "Diventa più piatta"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
 }
