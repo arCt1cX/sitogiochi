@@ -1,47 +1,4 @@
 /* Global Styles */
-:root {
-  /* Color system */
-  --primary: #473c8b;
-  --primary-light: #7b68ee;
-  --accent: #d2e768;
-  --background: #000;
-  --text: #fff;
-  --text-muted: #aaa;
-  --card-gradient-1: linear-gradient(45deg, #6a11cb, #2575fc);
-  --card-gradient-2: linear-gradient(45deg, #ff9966, #ff5e62);
-  --card-gradient-3: linear-gradient(45deg, #4facfe, #00f2fe);
-  --card-gradient-4: linear-gradient(45deg, #43e97b, #38f9d7);
-  --card-gradient-5: linear-gradient(45deg, #834d9b, #d04ed6);
-  --card-gradient-6: linear-gradient(45deg, #f43b47, #453a94);
-  --card-gradient-7: linear-gradient(45deg, #667eea, #764ba2);
-  --card-gradient-8: linear-gradient(45deg, #11998e, #38ef7d);
-  
-  /* Typography */
-  --heading-large: 4.5rem;
-  --heading-medium: 1.8rem;
-  --heading-small: 1.5rem;
-  --body-large: 1.1rem;
-  --body: 1rem;
-  --body-small: 0.9rem;
-  
-  /* Spacing */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  
-  /* Shadows */
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(128, 0, 255, 0.5);
-  
-  /* Animations */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -50,8 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: #000;
+    color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -61,11 +18,11 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: var(--space-lg) 0;
+    padding: 2rem 0;
 }
 
 .logo-container {
-    margin-bottom: var(--space-sm);
+    margin-bottom: 1rem;
 }
 
 .logo {
@@ -73,23 +30,18 @@ header {
     height: auto;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
-    transition: transform var(--transition-normal);
-}
-
-.logo:hover {
-    transform: scale(1.05);
 }
 
 h1 {
-    font-size: var(--heading-large);
+    font-size: 4.5rem;
     font-weight: 700;
-    color: var(--primary);
-    -webkit-text-stroke: 1px var(--accent);
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    color: #473c8b;
+    -webkit-text-stroke: 1px #d2e768;
+    background: linear-gradient(90deg, #473c8b, #7b68ee);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: var(--space-xs);
+    margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
     text-shadow: 0 0 30px rgba(71, 60, 139, 0.3);
     line-height: 1.05;
@@ -98,18 +50,18 @@ h1 {
 }
 
 h2 {
-    font-size: var(--body-large);
+    font-size: 1.2rem;
     font-weight: 500;
-    color: var(--text-muted);
-    margin-bottom: var(--space-lg);
+    color: #aaa;
+    margin-bottom: 2rem;
 }
 
 /* Games Container */
 .games-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--space-lg);
-    padding: var(--space-sm) 0;
+    gap: 2rem;
+    padding: 1rem 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -117,22 +69,23 @@ h2 {
 /* Game Card */
 .game-card {
     position: relative;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
     background-size: 200% 200%;
     animation: gradientAnimation 5s ease infinite;
     border-radius: 20px;
-    padding: var(--space-md);
-    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 220px;
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
 
 .game-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(128, 0, 255, 0.5);
 }
 
 .game-card:before {
@@ -144,7 +97,7 @@ h2 {
     bottom: 0;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     opacity: 0;
-    transition: opacity var(--transition-normal);
+    transition: opacity 0.3s ease;
     border-radius: 20px;
 }
 
@@ -153,15 +106,15 @@ h2 {
 }
 
 .game-card h3 {
-    font-size: var(--heading-small);
-    margin-bottom: var(--space-xs);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     text-transform: capitalize;
     font-weight: 600;
 }
 
 .game-catchphrase {
-    font-size: var(--body);
-    margin-bottom: var(--space-md);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 400;
     line-height: 1.4;
@@ -176,9 +129,9 @@ h2 {
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: var(--body);
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color var(--transition-normal), transform var(--transition-fast);
+    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
     display: block;
     text-align: center;
@@ -212,10 +165,10 @@ h2 {
 }
 
 .coming-soon-card h3 {
-    font-size: var(--heading-medium);
+    font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    margin-bottom: var(--space-xs);
+    margin-bottom: 0.5rem;
     position: relative;
     z-index: 3;
 }
@@ -267,10 +220,10 @@ h2 {
 /* Footer */
 footer {
     text-align: center;
-    padding: var(--space-lg) 0;
+    padding: 2rem 0;
     margin-top: auto;
     color: #555;
-    font-size: var(--body-small);
+    font-size: 0.9rem;
 }
 
 /* Animations */
@@ -300,7 +253,7 @@ footer {
         background-position: 100% 100%;
     }
     75% {
-        transform: translateY(-2px) scale(1.01);
+        transform: translateY(5px) scale(0.98);
         background-position: 50% 50%;
     }
     100% {
@@ -311,9 +264,20 @@ footer {
 
 @keyframes holographic {
     0% {
+        opacity: 0.2;
         transform: rotate(0deg);
     }
+    30% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    70% {
+        opacity: 0.5;
+    }
     100% {
+        opacity: 0.2;
         transform: rotate(360deg);
     }
 }
@@ -322,66 +286,69 @@ footer {
     0% {
         left: -150%;
     }
+    30% {
+        left: 100%;
+    }
     100% {
-        left: 150%;
+        left: 100%;
     }
 }
 
 @keyframes shine {
     0% {
-        background-position: 0% center;
+        transform: translateX(-100%) rotate(45deg);
     }
     100% {
-        background-position: 300% center;
+        transform: translateX(100%) rotate(45deg);
     }
 }
 
-/* Card gradient variations */
+/* Custom gradient classes for variety in game cards */
 .gradient-1 {
-    background: var(--card-gradient-1);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
 }
 
 .gradient-2 {
-    background: var(--card-gradient-2);
+    background: linear-gradient(45deg, #11998e, #38ef7d);
 }
 
 .gradient-3 {
-    background: var(--card-gradient-3);
+    background: linear-gradient(45deg, #FC466B, #3F5EFB);
 }
 
 .gradient-4 {
-    background: var(--card-gradient-4);
+    background: linear-gradient(45deg, #8E2DE2, #4A00E0);
 }
 
 .gradient-5 {
-    background: var(--card-gradient-5);
+    background: linear-gradient(45deg, #f12711, #f5af19);
 }
 
 .gradient-6 {
-    background: var(--card-gradient-6);
+    background: linear-gradient(45deg, #0F2027, #2C5364);
 }
 
 .gradient-7 {
-    background: var(--card-gradient-7);
+    background: linear-gradient(45deg, #8A2387, #E94057, #F27121);
 }
 
 .gradient-8 {
-    background: var(--card-gradient-8);
+    background: linear-gradient(45deg, #4b6cb7, #182848);
 }
 
-/* Media Queries */
+/* Responsive adaptations */
 @media (max-width: 768px) {
     .games-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: var(--space-md);
+        gap: 1.5rem;
     }
     
     h1 {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     
     h2 {
-        font-size: var(--body-small);
+        font-size: 1rem;
     }
 }
 
@@ -395,10 +362,10 @@ footer {
     }
     
     h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
     
     header, footer {
-        padding: var(--space-md) 0;
+        padding: 1.5rem 0;
     }
 } 
