@@ -493,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Icon container styles */
         .game-icon-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
@@ -505,6 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: 110px;
             filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
             transition: transform 0.3s ease, filter 0.3s ease;
+            margin-bottom: 8px;
         }
         
         .game-card:hover .game-icon {
@@ -551,6 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .game-icon {
                 width: 90px;
                 height: 90px;
+                margin-bottom: 6px;
             }
             
             .card-content {
@@ -613,7 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (game.id === "guessthepic") {
             const italianOnlyText = document.createElement('div');
             italianOnlyText.className = 'italian-only-text';
-            italianOnlyText.textContent = 'Italian only';
+            italianOnlyText.textContent = getTranslation('italianOnly');
             iconContainer.appendChild(italianOnlyText);
         }
         
@@ -656,24 +659,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add CSS for Italian only text
     const styleElement = document.querySelector('style');
     styleElement.textContent += `
+        .game-icon-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+        }
+        
         .italian-only-text {
-            font-size: 14px;
+            font-size: 11px;
             color: white;
             text-align: center;
-            margin-top: 8px;
             font-weight: 600;
             filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
-            transition: filter 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 3px 8px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            letter-spacing: 0.5px;
         }
         
         .game-card:hover .italian-only-text {
             filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
         }
         
         @media (max-width: 480px) {
+            .game-icon {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 6px;
+            }
+            
             .italian-only-text {
-                font-size: 12px;
-                margin-top: 6px;
+                font-size: 9px;
+                padding: 2px 6px;
             }
         }
     `;

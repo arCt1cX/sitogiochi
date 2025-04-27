@@ -15,6 +15,7 @@ const translations = {
         'tagline': 'Illumina la mente, scatena la serata',
         'subtitle': 'Giochi da fare con gli amici offline 🎉',
         'buyMeCoffee': 'Buy me a coffee',
+        'italianOnly': 'Solo Italiano',
         
         // Game titles and descriptions
         'impostor': {
@@ -65,6 +66,7 @@ const translations = {
         'tagline': 'Enlighten minds, ignite the night',
         'subtitle': 'Games to play with friends offline 🎉',
         'buyMeCoffee': 'Buy me a coffee',
+        'italianOnly': 'Italian Only',
         
         // Game titles and descriptions
         'impostor': {
