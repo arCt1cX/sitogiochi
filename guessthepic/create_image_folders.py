@@ -1,9 +1,21 @@
 import os
 import json
+import re
 
 def slugify(text):
     """Convert text to lowercase and replace spaces with underscores"""
     return text.strip().lower().replace(' ', '_')
+
+def sanitize_folder_name(name):
+    """Sanitize folder name to be valid on Windows"""
+    # Replace forward slashes with hyphens
+    name = name.replace('/', '-')
+    name = name.replace('\\', '-')
+    
+    # Remove other invalid characters
+    name = re.sub(r'[*?:"<>|]', '', name)
+    
+    return name
 
 def main():
     print("Setting up folders for manual image downloading...")
@@ -36,9 +48,13 @@ def main():
     
     # Create folder for each category
     for category in categories:
-        category_dir = os.path.join('img', category['name'])
-        os.makedirs(category_dir, exist_ok=True)
-        print(f"Created directory: {category_dir}")
+        folder_name = sanitize_folder_name(category['name'])
+        category_dir = os.path.join('img', folder_name)
+        try:
+            os.makedirs(category_dir, exist_ok=True)
+            print(f"Created directory: {category_dir}")
+        except Exception as e:
+            print(f"Error creating directory {category_dir}: {e}")
     
     # Create helper HTML file with instructions
     html_content = """<!DOCTYPE html>
@@ -82,9 +98,11 @@ def main():
         html_content += f'<div class="category">\n'
         html_content += f'    <h2>{category["name"].capitalize()}</h2>\n'
         
+        folder_name = sanitize_folder_name(category['name'])
+        
         for item in category['items']:
             filename = slugify(item) + '.jpg'
-            filepath = f"img/{category['name']}/{filename}"
+            filepath = f"img/{folder_name}/{filename}"
             
             html_content += f'    <div class="item">\n'
             html_content += f'        <strong>{item}</strong><br>\n'

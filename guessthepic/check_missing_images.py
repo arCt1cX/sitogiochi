@@ -1,9 +1,21 @@
 import os
 import json
+import re
 
 def slugify(text):
     """Convert text to lowercase and replace spaces with underscores"""
     return text.strip().lower().replace(' ', '_')
+
+def sanitize_folder_name(name):
+    """Sanitize folder name to be valid on Windows"""
+    # Replace forward slashes with hyphens
+    name = name.replace('/', '-')
+    name = name.replace('\\', '-')
+    
+    # Remove other invalid characters
+    name = re.sub(r'[*?:"<>|]', '', name)
+    
+    return name
 
 def main():
     print("Checking for missing images...")
@@ -38,7 +50,8 @@ def main():
     
     for category in categories:
         category_name = category["name"]
-        img_dir = os.path.join('img', category_name)
+        sanitized_category = sanitize_folder_name(category_name)
+        img_dir = os.path.join('img', sanitized_category)
         
         # Create the directory if it doesn't exist
         if not os.path.exists(img_dir):
@@ -72,9 +85,10 @@ def main():
         # Print each category
         for category, items in by_category.items():
             print(f"\n{category.upper()}:")
+            sanitized_category = sanitize_folder_name(category)
             for item in items:
                 filename = f"{slugify(item)}.jpg"
-                print(f"  - {item} → img/{category}/{filename}")
+                print(f"  - {item} → img/{sanitized_category}/{filename}")
                 
         print("\nRun the helper script to generate a guide for manual downloading:")
         print("python create_image_folders.py")

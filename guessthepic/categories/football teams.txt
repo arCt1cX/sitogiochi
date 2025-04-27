@@ -68,7 +68,7 @@ Wolfsburg
 Hamburger SV (Amburgo)
 Eintracht Frankfurt (Francoforte)
 SV Werder Bremen (Brema)
-FC Köln 01/07 (Colonia)
+FC Köln (Colonia)
 FC Schalke 04
 LOSC Lille
 Paris Saint-Germain FC
@@ -113,7 +113,7 @@ PAOK (Salonicco)
 Maccabi Tel Aviv
 Rosenborg
 Molde FK
-Bodø/Glimt
+Bodø Glimt
 Legia Warszawa (Varsavia)
 AC Sparta Praha (Praga)
 SK Slavia Praha (Praga)

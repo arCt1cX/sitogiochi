@@ -12,6 +12,17 @@ def slugify(text):
     """Convert text to lowercase and replace spaces with underscores"""
     return text.strip().lower().replace(' ', '_')
 
+def sanitize_folder_name(name):
+    """Sanitize folder name to be valid on Windows"""
+    # Replace forward slashes with hyphens
+    name = name.replace('/', '-')
+    name = name.replace('\\', '-')
+    
+    # Remove other invalid characters
+    name = re.sub(r'[*?:"<>|]', '', name)
+    
+    return name
+
 def get_duck_duck_go_image(query, retries=3):
     """Search for an image using DuckDuckGo"""
     encoded_query = urllib.parse.quote_plus(query)
@@ -243,7 +254,8 @@ def process_missing_images(missing_file_list=None, delay_min=1.0, delay_max=3.0,
         
         for category in categories:
             category_name = category["name"]
-            img_dir = os.path.join('img', category_name)
+            sanitized_category = sanitize_folder_name(category_name)
+            img_dir = os.path.join('img', sanitized_category)
             
             # Create the directory if it doesn't exist
             if not os.path.exists(img_dir):
@@ -273,7 +285,8 @@ def process_missing_images(missing_file_list=None, delay_min=1.0, delay_max=3.0,
         
         # Create filename and path
         filename = f"{slugify(item)}.jpg"
-        img_dir = os.path.join('img', category)
+        sanitized_category = sanitize_folder_name(category)
+        img_dir = os.path.join('img', sanitized_category)
         
         # Create dir if it doesn't exist
         if not os.path.exists(img_dir):
