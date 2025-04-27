@@ -18,6 +18,28 @@
         document.write('<meta id="pageDescription" name="description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">');
       }
     </script>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.partygamesdrew.com/">
+    <meta property="og:title" content="DrewGames - Games to play with friends offline">
+    <meta property="og:description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.partygamesdrew.com/">
+    <meta name="twitter:title" content="DrewGames - Games to play with friends offline">
+    <meta name="twitter:description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it" />
@@ -69,9 +91,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.partygamesdrew.com/">
+    
+    <!-- JSON-LD structured data for better search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DrewGames",
+      "url": "https://www.partygamesdrew.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.partygamesdrew.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": "A collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!",
+      "logo": "https://www.partygamesdrew.com/logo.jpg",
+      "image": "https://www.partygamesdrew.com/logo.jpg"
+    }
+    </script>
+    
     <style>
         .tagline {
             position: relative;
