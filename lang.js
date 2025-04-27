@@ -8,8 +8,10 @@ const translations = {
         // Common elements across all pages
         'home': 'Home',
         'play': 'Gioca',
+        'playButton': 'Gioca Ora',
         'comingSoon': 'Coming Soon',
         'newGamesComingSoon': 'Nuovi giochi in arrivo...',
+        'moreSoon': 'Nuovi giochi in arrivo presto...',
         'copyright': '© 2025 partygamesdrew.com - Tutti i diritti riservati',
         'toggleLanguage': 'IT',
         'tagline': 'Illumina la mente, scatena la serata',
@@ -59,8 +61,10 @@ const translations = {
         // Common elements across all pages
         'home': 'Home',
         'play': 'Play',
+        'playButton': 'Play Now',
         'comingSoon': 'Coming Soon',
         'newGamesComingSoon': 'New games coming soon...',
+        'moreSoon': 'More games coming soon...',
         'copyright': '© 2025 partygamesdrew.com - All rights reserved',
         'toggleLanguage': 'EN',
         'tagline': 'Enlighten minds, ignite the night',
