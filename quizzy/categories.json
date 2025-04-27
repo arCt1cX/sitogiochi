@@ -1,4 +1,4 @@
-{
+﻿{
   "History": {
     "bambino": [
       {
@@ -554,7 +554,7 @@
     "esperto": [
       {
         "question": "What was the main consequence of the Congress of Vienna in 1815?",
-        "answers": ["The proclamation of the Italian Republic", "The restoration of the Ancien Régime", "The end of the Byzantine Empire", "The division of Germany"],
+        "answers": ["The proclamation of the Italian Republic", "The restoration of the Ancien RÃ©gime", "The end of the Byzantine Empire", "The division of Germany"],
         "correctIndex": 1
       },
       {
@@ -801,7 +801,7 @@
       },
       {
         "question": "What is Marc Bloch's methodological contribution to historiography?",
-        "answers": ["He introduced Marxist theory into history", "He founded the positivist approach", "He promoted the use of interdisciplinarity and longue durée", "He created the idea of 'cyclical time'"],
+        "answers": ["He introduced Marxist theory into history", "He founded the positivist approach", "He promoted the use of interdisciplinarity and longue durÃ©e", "He created the idea of 'cyclical time'"],
         "correctIndex": 2
       },
       {
@@ -1209,7 +1209,7 @@
       },
       {
         "question": "What is the capital of Brazil?",
-        "answers": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+        "answers": ["Rio de Janeiro", "SÃ£o Paulo", "BrasÃ­lia", "Salvador"],
         "correctIndex": 2
       },
       {
@@ -1289,7 +1289,7 @@
       },
       {
         "question": "What is the capital of Mexico?",
-        "answers": ["Guadalajara", "Monterrey", "Mexico City", "Cancún"],
+        "answers": ["Guadalajara", "Monterrey", "Mexico City", "CancÃºn"],
         "correctIndex": 2
       },
       {
@@ -1417,7 +1417,7 @@
         "correctIndex": 1
       },
       {
-        "question": "Which country's mainland is divided into 23 counties including Västra Götaland and Östergötland?",
+        "question": "Which country's mainland is divided into 23 counties including VÃ¤stra GÃ¶taland and Ã–stergÃ¶tland?",
         "answers": ["Norway", "Finland", "Denmark", "Sweden"],
         "correctIndex": 3
       },
@@ -1427,7 +1427,7 @@
         "correctIndex": 0
       },
       {
-        "question": "The Darién Gap is an undeveloped swampland and forest separating which two countries?",
+        "question": "The DariÃ©n Gap is an undeveloped swampland and forest separating which two countries?",
         "answers": ["Colombia and Panama", "Mexico and Guatemala", "Brazil and Venezuela", "Honduras and Nicaragua"],
         "correctIndex": 0
       },
@@ -1845,7 +1845,7 @@
         "correctIndex": 2
       },
       {
-        "question": "Who is the director of 'La Dolce Vita' and '8½'?",
+        "question": "Who is the director of 'La Dolce Vita' and '8Â½'?",
         "answers": ["Sergio Leone", "Federico Fellini", "Roberto Rossellini", "Luchino Visconti"],
         "correctIndex": 1
       },
@@ -1915,7 +1915,7 @@
         "correctIndex": 2
       },
       {
-        "question": "Who plays Amélie in the French film 'Amélie'?",
+        "question": "Who plays AmÃ©lie in the French film 'AmÃ©lie'?",
         "answers": ["Juliette Binoche", "Audrey Tautou", "Marion Cotillard", "Isabelle Huppert"],
         "correctIndex": 1
       },
@@ -1948,7 +1948,7 @@
     "esperto": [
       {
         "question": "Who directed the movie 'The Revenant' with Leonardo DiCaprio?",
-        "answers": ["Alejandro G. Iñárritu", "Alfonso Cuarón", "David Fincher", "Ridley Scott"],
+        "answers": ["Alejandro G. IÃ±Ã¡rritu", "Alfonso CuarÃ³n", "David Fincher", "Ridley Scott"],
         "correctIndex": 0
       },
       {
@@ -1978,7 +1978,7 @@
       },
       {
         "question": "Who directed 'Pan's Labyrinth'?",
-        "answers": ["Alejandro G. Iñárritu", "Guillermo del Toro", "Tim Burton", "Peter Jackson"],
+        "answers": ["Alejandro G. IÃ±Ã¡rritu", "Guillermo del Toro", "Tim Burton", "Peter Jackson"],
         "correctIndex": 1
       },
       {
@@ -2002,8 +2002,8 @@
         "correctIndex": 2
       },
       {
-        "question": "What is the name of the son in Alfonso Cuarón's 'Roma'?",
-        "answers": ["Toño", "Paco", "Pepe", "Fermín"],
+        "question": "What is the name of the son in Alfonso CuarÃ³n's 'Roma'?",
+        "answers": ["ToÃ±o", "Paco", "Pepe", "FermÃ­n"],
         "correctIndex": 2
       },
       {
@@ -2022,7 +2022,7 @@
         "correctIndex": 2
       },
       {
-        "question": "In which French film is the life of poet Jacques Prévert portrayed?",
+        "question": "In which French film is the life of poet Jacques PrÃ©vert portrayed?",
         "answers": ["Coco Before Chanel", "La Vie en Rose", "Children of Paradise", "Gainsbourg (A Heroic Life)"],
         "correctIndex": 3
       },
@@ -2115,7 +2115,7 @@
       },
       {
         "question": "Who directed 'Persona', considered one of the masterpieces of European cinema?",
-        "answers": ["Ingmar Bergman", "Michelangelo Antonioni", "Andrei Tarkovsky", "François Truffaut"],
+        "answers": ["Ingmar Bergman", "Michelangelo Antonioni", "Andrei Tarkovsky", "FranÃ§ois Truffaut"],
         "correctIndex": 0
       },
       {
@@ -2124,18 +2124,18 @@
         "correctIndex": 1
       },
       {
-        "question": "In the film '8½', the protagonist is a director in crisis. Who plays him?",
-        "answers": ["Marcello Mastroianni", "Gian Maria Volonté", "Ugo Tognazzi", "Alberto Sordi"],
+        "question": "In the film '8Â½', the protagonist is a director in crisis. Who plays him?",
+        "answers": ["Marcello Mastroianni", "Gian Maria VolontÃ©", "Ugo Tognazzi", "Alberto Sordi"],
         "correctIndex": 0
       },
       {
         "question": "Who directed 'Stalker' and 'Solaris'?",
-        "answers": ["Andrei Tarkovsky", "Alexander Sokurov", "Nikita Mikhalkov", "Krzysztof Kieślowski"],
+        "answers": ["Andrei Tarkovsky", "Alexander Sokurov", "Nikita Mikhalkov", "Krzysztof KieÅ›lowski"],
         "correctIndex": 0
       },
       {
         "question": "Which director is known for long tracking shots and the use of natural light?",
-        "answers": ["Terrence Malick", "Alfonso Cuarón", "Béla Tarr", "Alejandro González Iñárritu"],
+        "answers": ["Terrence Malick", "Alfonso CuarÃ³n", "BÃ©la Tarr", "Alejandro GonzÃ¡lez IÃ±Ã¡rritu"],
         "correctIndex": 0
       },
       {
@@ -2155,7 +2155,7 @@
       },
       {
         "question": "Who is the author of the 'Three Colors Trilogy' (Blue, White, Red)?",
-        "answers": ["Agnieszka Holland", "Krzysztof Zanussi", "Krzysztof Kieślowski", "Roman Polański"],
+        "answers": ["Agnieszka Holland", "Krzysztof Zanussi", "Krzysztof KieÅ›lowski", "Roman PolaÅ„ski"],
         "correctIndex": 2
       },
       {
@@ -2210,7 +2210,7 @@
       },
       {
         "question": "What was the first animated feature film in cinema history?",
-        "answers": ["Snow White and the Seven Dwarfs", "El Apóstol", "Gertie the Dinosaur", "The Adventures of Prince Achmed"],
+        "answers": ["Snow White and the Seven Dwarfs", "El ApÃ³stol", "Gertie the Dinosaur", "The Adventures of Prince Achmed"],
         "correctIndex": 1
       },
       {
@@ -2224,8 +2224,8 @@
         "correctIndex": 0
       },
       {
-        "question": "Who played the director Guido in '8½'?",
-        "answers": ["Totò", "Mastroianni", "Gassman", "Manfredi"],
+        "question": "Who played the director Guido in '8Â½'?",
+        "answers": ["TotÃ²", "Mastroianni", "Gassman", "Manfredi"],
         "correctIndex": 1
       },
       {
@@ -2245,7 +2245,7 @@
       },
       {
         "question": "Which filmmaker created the Dogme 95 movement with Thomas Vinterberg?",
-        "answers": ["Lars von Trier", "Ruben Östlund", "Roy Andersson", "Joachim Trier"],
+        "answers": ["Lars von Trier", "Ruben Ã–stlund", "Roy Andersson", "Joachim Trier"],
         "correctIndex": 0
       }
     ]
@@ -2259,7 +2259,7 @@
       },
       {
         "question": "Who is the author of 'The Little Prince'?",
-        "answers": ["Antoine de Saint-Exupéry", "Lewis Carroll", "Hans Christian Andersen", "Brothers Grimm"],
+        "answers": ["Antoine de Saint-ExupÃ©ry", "Lewis Carroll", "Hans Christian Andersen", "Brothers Grimm"],
         "correctIndex": 0
       },
       {
@@ -2304,7 +2304,7 @@
       },
       {
         "question": "Who is the author of 'Pippi Longstocking'?",
-        "answers": ["Astrid Lindgren", "Roald Dahl", "Mark Twain", "Antoine de Saint-Exupéry"],
+        "answers": ["Astrid Lindgren", "Roald Dahl", "Mark Twain", "Antoine de Saint-ExupÃ©ry"],
         "correctIndex": 0
       },
       {
@@ -2456,7 +2456,7 @@
       },
       {
         "question": "Who wrote 'Pride and Prejudice'?",
-        "answers": ["Charlotte Brontë", "Emily Brontë", "Jane Austen", "Virginia Woolf"],
+        "answers": ["Charlotte BrontÃ«", "Emily BrontÃ«", "Jane Austen", "Virginia Woolf"],
         "correctIndex": 2
       },
       {
@@ -2560,8 +2560,8 @@
         "correctIndex": 2
       },
       {
-        "question": "Who wrote 'Les Misérables'?",
-        "answers": ["Alexandre Dumas", "Victor Hugo", "Gustave Flaubert", "Émile Zola"],
+        "question": "Who wrote 'Les MisÃ©rables'?",
+        "answers": ["Alexandre Dumas", "Victor Hugo", "Gustave Flaubert", "Ã‰mile Zola"],
         "correctIndex": 1
       },
       {
@@ -2603,7 +2603,7 @@
       },
       {
         "question": "Who wrote 'One Hundred Years of Solitude'?",
-        "answers": ["Jorge Luis Borges", "Gabriel García Márquez", "Julio Cortázar", "Mario Vargas Llosa"],
+        "answers": ["Jorge Luis Borges", "Gabriel GarcÃ­a MÃ¡rquez", "Julio CortÃ¡zar", "Mario Vargas Llosa"],
         "correctIndex": 1
       },
       {
@@ -2637,8 +2637,8 @@
         "correctIndex": 2
       },
       {
-        "question": "Who wrote 'Les Misérables'?",
-        "answers": ["Alexandre Dumas", "Victor Hugo", "Gustave Flaubert", "Émile Zola"],
+        "question": "Who wrote 'Les MisÃ©rables'?",
+        "answers": ["Alexandre Dumas", "Victor Hugo", "Gustave Flaubert", "Ã‰mile Zola"],
         "correctIndex": 1
       },
       {
@@ -2685,7 +2685,7 @@
       },
       {
         "question": "Which author is considered the founder of magical realism?",
-        "answers": ["Jorge Luis Borges", "Gabriel García Márquez", "Isabel Allende", "Julio Cortázar"],
+        "answers": ["Jorge Luis Borges", "Gabriel GarcÃ­a MÃ¡rquez", "Isabel Allende", "Julio CortÃ¡zar"],
         "correctIndex": 1
       },
       {
@@ -2744,8 +2744,8 @@
         "correctIndex": 0
       },
       {
-        "question": "Who wrote the cycle of novels known as 'La Comédie humaine'?",
-        "answers": ["Honoré de Balzac", "Victor Hugo", "Émile Zola", "Stendhal"],
+        "question": "Who wrote the cycle of novels known as 'La ComÃ©die humaine'?",
+        "answers": ["HonorÃ© de Balzac", "Victor Hugo", "Ã‰mile Zola", "Stendhal"],
         "correctIndex": 0
       },
       {
@@ -2754,7 +2754,7 @@
         "correctIndex": 0
       },
       {
-        "question": "In which literary movement is Stéphane Mallarmé included?",
+        "question": "In which literary movement is StÃ©phane MallarmÃ© included?",
         "answers": ["Symbolism", "Surrealism", "Realism", "Decadentism"],
         "correctIndex": 0
       },
@@ -2765,7 +2765,7 @@
       },
       {
         "question": "Which Portuguese author received the Nobel Prize in 1998?",
-        "answers": ["José Saramago", "Fernando Pessoa", "António Lobo Antunes", "Camilo Castelo Branco"],
+        "answers": ["JosÃ© Saramago", "Fernando Pessoa", "AntÃ³nio Lobo Antunes", "Camilo Castelo Branco"],
         "correctIndex": 0
       },
       {
@@ -2817,7 +2817,7 @@
       },
       {
         "question": "Who coined the term 'minor literature' when discussing Kafka?",
-        "answers": ["Adorno and Horkheimer", "Deleuze and Guattari", "Barthes and Foucault", "Benjamin and Lukács"],
+        "answers": ["Adorno and Horkheimer", "Deleuze and Guattari", "Barthes and Foucault", "Benjamin and LukÃ¡cs"],
         "correctIndex": 1
       },
       {
@@ -2852,7 +2852,7 @@
       },
       {
         "question": "Which author systematically explored the concept of intertextuality in 'Palimpsests'?",
-        "answers": ["Julia Kristeva", "Gérard Genette", "Roland Barthes", "Tzvetan Todorov"],
+        "answers": ["Julia Kristeva", "GÃ©rard Genette", "Roland Barthes", "Tzvetan Todorov"],
         "correctIndex": 1
       },
       {
@@ -2872,7 +2872,7 @@
       },
       {
         "question": "Who wrote 'The Second Sex', a foundational work of feminist theory?",
-        "answers": ["Julia Kristeva", "Simone de Beauvoir", "Hélène Cixous", "Luce Irigaray"],
+        "answers": ["Julia Kristeva", "Simone de Beauvoir", "HÃ©lÃ¨ne Cixous", "Luce Irigaray"],
         "correctIndex": 1
       },
       {
@@ -2907,12 +2907,12 @@
       },
       {
         "question": "In which language was the original 'Canticle of the Creatures' by Francis of Assisi written?",
-        "answers": ["Umbrian vernacular", "Medieval Latin", "Tuscan", "Provençal"],
+        "answers": ["Umbrian vernacular", "Medieval Latin", "Tuscan", "ProvenÃ§al"],
         "correctIndex": 0
       },
       {
         "question": "Which German scholar is the author of the 'Poetics of the Open Work'?",
-        "answers": ["Hans Robert Jauss", "Günther Grass", "Walter Benjamin", "Martin Heidegger"],
+        "answers": ["Hans Robert Jauss", "GÃ¼nther Grass", "Walter Benjamin", "Martin Heidegger"],
         "correctIndex": 0
       },
       {
@@ -2952,7 +2952,7 @@
       },
       {
         "question": "Which 20th century author wrote essays under the pseudonym 'Aristarchus'?",
-        "answers": ["Ezra Pound", "T.S. Eliot", "Paul Valéry", "Italo Calvino"],
+        "answers": ["Ezra Pound", "T.S. Eliot", "Paul ValÃ©ry", "Italo Calvino"],
         "correctIndex": 0
       },
       {
@@ -3345,7 +3345,7 @@
       },
       {
         "question": "What is the boiling temperature of water at sea level?",
-        "answers": ["90°C", "100°C", "110°C", "120°C"],
+        "answers": ["90Â°C", "100Â°C", "110Â°C", "120Â°C"],
         "correctIndex": 1
       },
       {
@@ -3442,7 +3442,7 @@
       },
       {
         "question": "What is the approximate value of the acceleration of gravity on Earth?",
-        "answers": ["5 m/s²", "9.8 m/s²", "12 m/s²", "15 m/s²"],
+        "answers": ["5 m/sÂ²", "9.8 m/sÂ²", "12 m/sÂ²", "15 m/sÂ²"],
         "correctIndex": 1
       },
       {
@@ -3561,7 +3561,7 @@
         "correctIndex": 2
       },
       {
-        "question": "What is the equation E=mc² called?",
+        "question": "What is the equation E=mcÂ² called?",
         "answers": ["Newton's equation", "Maxwell's equation", "Mass-energy equivalence", "Law of thermodynamics"],
         "correctIndex": 2
       },
@@ -3623,8 +3623,8 @@
     ],
     "laureato": [
       {
-        "question": "What is Planck's constant (h) expressed in J·s?",
-        "answers": ["6.63×10⁻³⁴", "3.00×10⁸", "9.81", "1.60×10⁻¹⁹"],
+        "question": "What is Planck's constant (h) expressed in JÂ·s?",
+        "answers": ["6.63Ã—10â»Â³â´", "3.00Ã—10â¸", "9.81", "1.60Ã—10â»Â¹â¹"],
         "correctIndex": 0
       },
       {
@@ -3642,7 +3642,7 @@
         "answers": [
           "ATP production",
           "Water splitting",
-          "Conversion of CO₂ to sugars",
+          "Conversion of COâ‚‚ to sugars",
           "Absorption of sunlight"
         ],
         "correctIndex": 2
@@ -3693,7 +3693,7 @@
         "correctIndex": 0
       },
       {
-        "question": "Schrödinger's cat paradox serves to illustrate:",
+        "question": "SchrÃ¶dinger's cat paradox serves to illustrate:",
         "answers": [
           "The wave nature of the electron",
           "Heisenberg's uncertainty principle",
@@ -3803,7 +3803,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What role does NAD⁺ have in metabolism?",
+        "question": "What role does NADâº have in metabolism?",
         "answers": [
           "It acts as an oxidizing coenzyme",
           "It directly produces ATP",
@@ -4191,7 +4191,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What does the symbol ♯ indicate in music?",
+        "question": "What does the symbol â™¯ indicate in music?",
         "answers": ["Flat", "Silence", "Sharp", "Repeat"],
         "correctIndex": 2
       },
@@ -4227,7 +4227,7 @@
       },
       {
         "question": "Which singer is famous for the album '1989'?",
-        "answers": ["Adele", "Dua Lipa", "Taylor Swift", "Beyoncé"],
+        "answers": ["Adele", "Dua Lipa", "Taylor Swift", "BeyoncÃ©"],
         "correctIndex": 2
       },
       {
@@ -4236,8 +4236,8 @@
         "correctIndex": 1
       },
       {
-        "question": "Which tenor has collaborated with Ed Sheeran and Céline Dion?",
-        "answers": ["Luciano Pavarotti", "Plácido Domingo", "Andrea Bocelli", "José Carreras"],
+        "question": "Which tenor has collaborated with Ed Sheeran and CÃ©line Dion?",
+        "answers": ["Luciano Pavarotti", "PlÃ¡cido Domingo", "Andrea Bocelli", "JosÃ© Carreras"],
         "correctIndex": 2
       },
       {
@@ -4252,7 +4252,7 @@
       },
       {
         "question": "Which singer performed 'Nothing Compares 2 U'?",
-        "answers": ["Adele", "Sinead O'Connor", "Whitney Houston", "Céline Dion"],
+        "answers": ["Adele", "Sinead O'Connor", "Whitney Houston", "CÃ©line Dion"],
         "correctIndex": 1
       },
       {
@@ -4418,7 +4418,7 @@
         "correctIndex": 1
       },
       {
-        "question": "Who wrote 'La bohème'?",
+        "question": "Who wrote 'La bohÃ¨me'?",
         "answers": ["Giuseppe Verdi", "Giacomo Puccini", "Gaetano Donizetti", "Vincenzo Bellini"],
         "correctIndex": 1
       },
@@ -4448,7 +4448,7 @@
         "correctIndex": 0
       },
       {
-        "question": "Which composer wrote 'Boléro'?",
+        "question": "Which composer wrote 'BolÃ©ro'?",
         "answers": ["Claude Debussy", "Maurice Ravel", "Igor Stravinsky", "George Gershwin"],
         "correctIndex": 1
       },
@@ -4481,7 +4481,7 @@
     "laureato": [
       {
         "question": "Who is considered the father of serial music?",
-        "answers": ["Arnold Schoenberg", "Igor Stravinsky", "Anton Webern", "Béla Bartók"],
+        "answers": ["Arnold Schoenberg", "Igor Stravinsky", "Anton Webern", "BÃ©la BartÃ³k"],
         "correctIndex": 0
       },
       {
@@ -4531,7 +4531,7 @@
       },
       {
         "question": "Which composer wrote the 'Licht' series, composed of 7 operas for each day of the week?",
-        "answers": ["Luciano Berio", "Luigi Nono", "Karlheinz Stockhausen", "György Ligeti"],
+        "answers": ["Luciano Berio", "Luigi Nono", "Karlheinz Stockhausen", "GyÃ¶rgy Ligeti"],
         "correctIndex": 2
       },
       {
@@ -4556,12 +4556,12 @@
       },
       {
         "question": "In which composition is the 'continuous loop' used for the first time in electronic music?",
-        "answers": ["Poème électronique", "Gesang der Jünglinge", "Kontakte", "Études aux chemins de fer"],
+        "answers": ["PoÃ¨me Ã©lectronique", "Gesang der JÃ¼nglinge", "Kontakte", "Ã‰tudes aux chemins de fer"],
         "correctIndex": 3
       },
       {
         "question": "What does 'K' indicate in the catalogs of Mozart's works?",
-        "answers": ["König", "Kronos", "Köchel", "Kapellmeister"],
+        "answers": ["KÃ¶nig", "Kronos", "KÃ¶chel", "Kapellmeister"],
         "correctIndex": 2
       },
       {
@@ -4576,7 +4576,7 @@
       },
       {
         "question": "Who wrote the microtonal work 'Stimmung'?",
-        "answers": ["John Cage", "György Ligeti", "Luciano Berio", "Karlheinz Stockhausen"],
+        "answers": ["John Cage", "GyÃ¶rgy Ligeti", "Luciano Berio", "Karlheinz Stockhausen"],
         "correctIndex": 3
       },
       {
@@ -4616,11 +4616,11 @@
       },
       {
         "question": "Which composer used probabilistic mathematics in music?",
-        "answers": ["Luciano Berio", "Iannis Xenakis", "Steve Reich", "Arvo Pärt"],
+        "answers": ["Luciano Berio", "Iannis Xenakis", "Steve Reich", "Arvo PÃ¤rt"],
         "correctIndex": 1
       },
       {
-        "question": "What does 'musique concrète' mean?",
+        "question": "What does 'musique concrÃ¨te' mean?",
         "answers": ["Live music", "Recorded and manipulated music", "Theatrical music", "Politically engaged music"],
         "correctIndex": 1
       },
@@ -4796,7 +4796,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What is 3 × 4?",
+        "question": "What is 3 Ã— 4?",
         "answers": ["7", "12", "10", "14"],
         "correctIndex": 1
       },
@@ -4806,7 +4806,7 @@
         "correctIndex": 2
       },
       {
-        "question": "What is the result of 36 ÷ 6?",
+        "question": "What is the result of 36 Ã· 6?",
         "answers": ["5", "6", "7", "8"],
         "correctIndex": 1
       },
@@ -4816,7 +4816,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What is 5² (5 squared)?",
+        "question": "What is 5Â² (5 squared)?",
         "answers": ["10", "15", "25", "30"],
         "correctIndex": 2
       },
@@ -4836,7 +4836,7 @@
         "correctIndex": 0
       },
       {
-        "question": "What is 11 × 2?",
+        "question": "What is 11 Ã— 2?",
         "answers": ["20", "21", "22", "24"],
         "correctIndex": 2
       },
@@ -4856,12 +4856,12 @@
         "correctIndex": 2
       },
       {
-        "question": "What is 7 × 6?",
+        "question": "What is 7 Ã— 6?",
         "answers": ["42", "36", "48", "40"],
         "correctIndex": 0
       },
       {
-        "question": "What is 49 ÷ 7?",
+        "question": "What is 49 Ã· 7?",
         "answers": ["6", "7", "8", "9"],
         "correctIndex": 1
       },
@@ -4871,7 +4871,7 @@
         "correctIndex": 2
       },
       {
-        "question": "What is 6³ (6 cubed)?",
+        "question": "What is 6Â³ (6 cubed)?",
         "answers": ["216", "36", "72", "120"],
         "correctIndex": 0
       },
@@ -4891,12 +4891,12 @@
         "correctIndex": 2
       },
       {
-        "question": "What is 100 ÷ 10?",
+        "question": "What is 100 Ã· 10?",
         "answers": ["10", "5", "15", "20"],
         "correctIndex": 0
       },
       {
-        "question": "What is the approximate value of π (pi)?",
+        "question": "What is the approximate value of Ï€ (pi)?",
         "answers": ["2.14", "3.14", "4.14", "5.14"],
         "correctIndex": 1
       },
@@ -4911,13 +4911,13 @@
         "correctIndex": 1
       },
       {
-        "question": "What is 10² (ten squared)?",
+        "question": "What is 10Â² (ten squared)?",
         "answers": ["20", "50", "100", "200"],
         "correctIndex": 2
       },
       {
         "question": "What is the formula for the area of a rectangle?",
-        "answers": ["Base + height", "Base × height", "Base ÷ height", "Side × side"],
+        "answers": ["Base + height", "Base Ã— height", "Base Ã· height", "Side Ã— side"],
         "correctIndex": 1
       },
       {
@@ -4926,7 +4926,7 @@
         "correctIndex": 2
       },
       {
-        "question": "What is 6 × 9?",
+        "question": "What is 6 Ã— 9?",
         "answers": ["54", "56", "58", "60"],
         "correctIndex": 0
       },
@@ -4938,12 +4938,12 @@
     ],
     "medio": [
       {
-        "question": "What is (3 + 5) × 2?",
+        "question": "What is (3 + 5) Ã— 2?",
         "answers": ["16", "13", "10", "8"],
         "correctIndex": 0
       },
       {
-        "question": "What is 2³ (two cubed)?",
+        "question": "What is 2Â³ (two cubed)?",
         "answers": ["6", "8", "9", "12"],
         "correctIndex": 1
       },
@@ -4968,7 +4968,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What is 7² + 3²?",
+        "question": "What is 7Â² + 3Â²?",
         "answers": ["49", "58", "59", "50"],
         "correctIndex": 2
       },
@@ -4978,13 +4978,13 @@
         "correctIndex": 0
       },
       {
-        "question": "What is 144 ÷ 12?",
+        "question": "What is 144 Ã· 12?",
         "answers": ["12", "10", "11", "13"],
         "correctIndex": 0
       },
       {
         "question": "What is the area of a triangle with base 10 cm and height 6 cm?",
-        "answers": ["30 cm²", "60 cm²", "20 cm²", "40 cm²"],
+        "answers": ["30 cmÂ²", "60 cmÂ²", "20 cmÂ²", "40 cmÂ²"],
         "correctIndex": 0
       },
       {
@@ -5003,7 +5003,7 @@
         "correctIndex": 0
       },
       {
-        "question": "What is (4 × 3) + (2 × 5)?",
+        "question": "What is (4 Ã— 3) + (2 Ã— 5)?",
         "answers": ["22", "25", "20", "24"],
         "correctIndex": 0
       },
@@ -5018,7 +5018,7 @@
         "correctIndex": 0
       },
       {
-        "question": "What is the approximate value of π (pi)?",
+        "question": "What is the approximate value of Ï€ (pi)?",
         "answers": ["3.14", "2.17", "3.00", "4.12"],
         "correctIndex": 0
       },
@@ -5038,13 +5038,13 @@
         "correctIndex": 0
       },
       {
-        "question": "If x = 3, what is 2x²?",
+        "question": "If x = 3, what is 2xÂ²?",
         "answers": ["18", "12", "9", "6"],
         "correctIndex": 0
       },
       {
         "question": "What is the sum of interior angles in a quadrilateral?",
-        "answers": ["180°", "360°", "270°", "90°"],
+        "answers": ["180Â°", "360Â°", "270Â°", "90Â°"],
         "correctIndex": 1
       },
       {
@@ -5063,7 +5063,7 @@
         "correctIndex": 0
       },
       {
-        "question": "What is (12 + 8) ÷ 5?",
+        "question": "What is (12 + 8) Ã· 5?",
         "answers": ["3", "4", "5", "6"],
         "correctIndex": 1
       },
@@ -5078,7 +5078,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What is 5² - 3²?",
+        "question": "What is 5Â² - 3Â²?",
         "answers": ["16", "18", "19", "20"],
         "correctIndex": 0
       },
@@ -5090,18 +5090,18 @@
     ],
     "esperto": [
       {
-        "question": "What is the value of lim(x→0) (sin(x)/x)?",
-        "answers": ["0", "1", "∞", "Does not exist"],
+        "question": "What is the value of lim(xâ†’0) (sin(x)/x)?",
+        "answers": ["0", "1", "âˆž", "Does not exist"],
         "correctIndex": 1
       },
       {
-        "question": "What is the derivative of f(x) = x²?",
-        "answers": ["2x", "x", "x²", "1"],
+        "question": "What is the derivative of f(x) = xÂ²?",
+        "answers": ["2x", "x", "xÂ²", "1"],
         "correctIndex": 0
       },
       {
         "question": "What is the indefinite integral of f(x) = 1/x?",
-        "answers": ["x", "ln|x| + C", "1/x²", "e^x"],
+        "answers": ["x", "ln|x| + C", "1/xÂ²", "e^x"],
         "correctIndex": 1
       },
       {
@@ -5110,23 +5110,23 @@
         "correctIndex": 1
       },
       {
-        "question": "What is the solution of the equation x² - 4x + 4 = 0?",
+        "question": "What is the solution of the equation xÂ² - 4x + 4 = 0?",
         "answers": ["0", "2", "4", "None"],
         "correctIndex": 1
       },
       {
-        "question": "What is the value of cos(π)?",
-        "answers": ["0", "1", "-1", "π"],
+        "question": "What is the value of cos(Ï€)?",
+        "answers": ["0", "1", "-1", "Ï€"],
         "correctIndex": 2
       },
       {
-        "question": "The notable product (a + b)² equals:",
-        "answers": ["a² + b²", "a² + 2ab + b²", "2a + 2b", "(a - b)²"],
+        "question": "The notable product (a + b)Â² equals:",
+        "answers": ["aÂ² + bÂ²", "aÂ² + 2ab + bÂ²", "2a + 2b", "(a - b)Â²"],
         "correctIndex": 1
       },
       {
         "question": "What is the derivative of e^x?",
-        "answers": ["e^x", "x·e^x", "ln(x)", "1/x"],
+        "answers": ["e^x", "xÂ·e^x", "ln(x)", "1/x"],
         "correctIndex": 0
       },
       {
@@ -5135,7 +5135,7 @@
         "correctIndex": 1
       },
       {
-        "question": "What is the value of log₁₀(100)?",
+        "question": "What is the value of logâ‚â‚€(100)?",
         "answers": ["1", "2", "10", "0"],
         "correctIndex": 1
       },
@@ -5146,21 +5146,21 @@
       },
       {
         "question": "The natural logarithm has which base?",
-        "answers": ["10", "e", "2", "π"],
+        "answers": ["10", "e", "2", "Ï€"],
         "correctIndex": 1
       },
       {
         "question": "What is the sum of the interior angles of a pentagon?",
-        "answers": ["360°", "540°", "720°", "900°"],
+        "answers": ["360Â°", "540Â°", "720Â°", "900Â°"],
         "correctIndex": 1
       },
       {
         "question": "Which formula represents Newton's binomial?",
-        "answers": ["(a + b)^n", "a² + b²", "(a - b)^2", "ab + ba"],
+        "answers": ["(a + b)^n", "aÂ² + bÂ²", "(a - b)^2", "ab + ba"],
         "correctIndex": 0
       },
       {
-        "question": "What is the value of cos²(x) + sin²(x)?",
+        "question": "What is the value of cosÂ²(x) + sinÂ²(x)?",
         "answers": ["1", "0", "x", "cos(x)"],
         "correctIndex": 0
       },
@@ -5176,7 +5176,7 @@
       },
       {
         "question": "The limit of 1/x as x approaches infinity is:",
-        "answers": ["0", "1", "∞", "Indeterminate"],
+        "answers": ["0", "1", "âˆž", "Indeterminate"],
         "correctIndex": 0
       },
       {
@@ -5242,8 +5242,8 @@
     ],
     "laureato": [
       {
-        "question": "The series ∑(1/n²) from n=1 to ∞ converges to:",
-        "answers": ["π²/6", "π²/4", "ln(2)", "e"],
+        "question": "The series âˆ‘(1/nÂ²) from n=1 to âˆž converges to:",
+        "answers": ["Ï€Â²/6", "Ï€Â²/4", "ln(2)", "e"],
         "correctIndex": 0
       },
       {
@@ -5258,16 +5258,16 @@
       },
       {
         "question": "Which condition guarantees the absolute convergence of a series?",
-        "answers": ["∑|aₙ| converges", "aₙ → 0", "The series is alternating", "aₙ is decreasing"],
+        "answers": ["âˆ‘|aâ‚™| converges", "aâ‚™ â†’ 0", "The series is alternating", "aâ‚™ is decreasing"],
         "correctIndex": 0
       },
       {
-        "question": "The determinant of the rotation matrix in R² is:",
-        "answers": ["1", "0", "-1", "cos(θ)"],
+        "question": "The determinant of the rotation matrix in RÂ² is:",
+        "answers": ["1", "0", "-1", "cos(Î¸)"],
         "correctIndex": 0
       },
       {
-        "question": "The function f(x) = x³ has an inflection point at:",
+        "question": "The function f(x) = xÂ³ has an inflection point at:",
         "answers": ["x = 0", "x = 1", "x = -1", "None"],
         "correctIndex": 0
       },
@@ -5278,7 +5278,7 @@
       },
       {
         "question": "The number e can be defined as:",
-        "answers": ["lim(n→∞)(1 + 1/n)^n", "lim(n→∞)(1 - 1/n)^n", "∑1/n", "ln(10)"],
+        "answers": ["lim(nâ†’âˆž)(1 + 1/n)^n", "lim(nâ†’âˆž)(1 - 1/n)^n", "âˆ‘1/n", "ln(10)"],
         "correctIndex": 0
       },
       {
@@ -5288,12 +5288,12 @@
       },
       {
         "question": "The general solution of y'' + y = 0 is:",
-        "answers": ["c₁ cos(x) + c₂ sin(x)", "e^x", "ln(x)", "x²"],
+        "answers": ["câ‚ cos(x) + câ‚‚ sin(x)", "e^x", "ln(x)", "xÂ²"],
         "correctIndex": 0
       },
       {
         "question": "An orthogonal matrix has the property that:",
-        "answers": ["AᵀA = I", "A² = 0", "A = Aᵀ", "det(A) = 0"],
+        "answers": ["Aáµ€A = I", "AÂ² = 0", "A = Aáµ€", "det(A) = 0"],
         "correctIndex": 0
       },
       {
@@ -5303,7 +5303,7 @@
       },
       {
         "question": "The function f(x) = |x| is not differentiable at:",
-        "answers": ["x = 0", "x = 1", "x = -1", "x ≠ 0"],
+        "answers": ["x = 0", "x = 1", "x = -1", "x â‰  0"],
         "correctIndex": 0
       },
       {
@@ -5322,12 +5322,12 @@
         "correctIndex": 0
       },
       {
-        "question": "The partial derivative of f(x, y) = x²y with respect to y is:",
-        "answers": ["x²", "2xy", "y", "xy"],
+        "question": "The partial derivative of f(x, y) = xÂ²y with respect to y is:",
+        "answers": ["xÂ²", "2xy", "y", "xy"],
         "correctIndex": 0
       },
       {
-        "question": "The harmonic series ∑(1/n) from n=1 to ∞:",
+        "question": "The harmonic series âˆ‘(1/n) from n=1 to âˆž:",
         "answers": ["Diverges", "Converges", "Is alternating", "Has a finite sum"],
         "correctIndex": 0
       },
@@ -5373,12 +5373,12 @@
       },
       {
         "question": "Which vector space has infinite dimension?",
-        "answers": ["The space of continuous functions", "ℝ²", "ℝ³", "The space of 2x2 matrices"],
+        "answers": ["The space of continuous functions", "â„Â²", "â„Â³", "The space of 2x2 matrices"],
         "correctIndex": 0
       },
       {
         "question": "Conditional probability is defined as:",
-        "answers": ["P(A|B) = P(A ∩ B) / P(B)", "P(A) / P(B)", "P(A) + P(B)", "P(B) - P(A)"],
+        "answers": ["P(A|B) = P(A âˆ© B) / P(B)", "P(A) / P(B)", "P(A) + P(B)", "P(B) - P(A)"],
         "correctIndex": 0
       },
       {
@@ -5721,7 +5721,7 @@
       },
       {
         "question": "Velocity is calculated by:",
-        "answers": ["Distance × time", "Distance / time", "Time / distance", "Force × mass"],
+        "answers": ["Distance Ã— time", "Distance / time", "Time / distance", "Force Ã— mass"],
         "correctIndex": 1
       },
       {
@@ -5731,7 +5731,7 @@
       },
       {
         "question": "What is Ohm's law formula?",
-        "answers": ["P = V * I", "F = m * a", "V = I * R", "E = m * c²"],
+        "answers": ["P = V * I", "F = m * a", "V = I * R", "E = m * cÂ²"],
         "correctIndex": 2
       },
       {
@@ -5853,7 +5853,7 @@
     "esperto": [
       {
         "question": "What is the correct definition of work in physics?",
-        "answers": ["F * s * cos(θ)", "F / s", "m * a * t", "s / t²"],
+        "answers": ["F * s * cos(Î¸)", "F / s", "m * a * t", "s / tÂ²"],
         "correctIndex": 0
       },
       {
@@ -5863,7 +5863,7 @@
       },
       {
         "question": "In uniformly accelerated motion, which of the following expressions is correct?",
-        "answers": ["s = v * t", "s = ½ * a * t²", "s = m * a", "s = g * t"],
+        "answers": ["s = v * t", "s = Â½ * a * tÂ²", "s = m * a", "s = g * t"],
         "correctIndex": 1
       },
       {
@@ -5873,7 +5873,7 @@
       },
       {
         "question": "What is the kinetic energy of a body?",
-        "answers": ["½ * m * v²", "m * g * h", "F * s", "v / t"],
+        "answers": ["Â½ * m * vÂ²", "m * g * h", "F * s", "v / t"],
         "correctIndex": 0
       },
       {
@@ -5888,7 +5888,7 @@
       },
       {
         "question": "In a DC circuit, the power dissipated by a resistor is:",
-        "answers": ["P = V² / R", "P = R / V", "P = I / R", "P = V + I"],
+        "answers": ["P = VÂ² / R", "P = R / V", "P = I / R", "P = V + I"],
         "correctIndex": 0
       },
       {
@@ -5903,12 +5903,12 @@
       },
       {
         "question": "What is Faraday's law of electromagnetic induction?",
-        "answers": ["ε = -dΦ/dt", "F = qE", "V = L * di/dt", "E = mc²"],
+        "answers": ["Îµ = -dÎ¦/dt", "F = qE", "V = L * di/dt", "E = mcÂ²"],
         "correctIndex": 0
       },
       {
         "question": "A simple pendulum has a period T. What is the correct formula for T?",
-        "answers": ["T = 2π√(l/g)", "T = 2π√(g/l)", "T = 2π√(m/g)", "T = √(l/m)"],
+        "answers": ["T = 2Ï€âˆš(l/g)", "T = 2Ï€âˆš(g/l)", "T = 2Ï€âˆš(m/g)", "T = âˆš(l/m)"],
         "correctIndex": 0
       },
       {
@@ -5918,7 +5918,7 @@
       },
       {
         "question": "The electric field generated by a point charge decreases with:",
-        "answers": ["1/r", "1/r²", "r²", "1/r³"],
+        "answers": ["1/r", "1/rÂ²", "rÂ²", "1/rÂ³"],
         "correctIndex": 1
       },
       {
@@ -5938,7 +5938,7 @@
       },
       {
         "question": "In uniform circular motion, the centripetal acceleration is:",
-        "answers": ["a = v / r", "a = v² / r", "a = r / v", "a = 1 / (v * r)"],
+        "answers": ["a = v / r", "a = vÂ² / r", "a = r / v", "a = 1 / (v * r)"],
         "correctIndex": 1
       },
       {
@@ -5963,7 +5963,7 @@
       },
       {
         "question": "In a wave, the velocity is given by:",
-        "answers": ["f / λ", "λ * f", "f * T", "λ / T"],
+        "answers": ["f / Î»", "Î» * f", "f * T", "Î» / T"],
         "correctIndex": 1
       },
       {
@@ -5993,7 +5993,7 @@
       },
       {
         "question": "A harmonic oscillator has a motion described by:",
-        "answers": ["y = A * sin(ωt + φ)", "y = m * a", "y = v * t", "y = e^(kt)"],
+        "answers": ["y = A * sin(Ï‰t + Ï†)", "y = m * a", "y = v * t", "y = e^(kt)"],
         "correctIndex": 0
       },
       {
@@ -6005,22 +6005,22 @@
     "laureato": [
       {
         "question": "What is the Lagrange equation for a system with generalized coordinates q?",
-        "answers": ["d/dt(∂L/∂q̇) - ∂L/∂q = 0", "F = m * a", "∇·E = ρ/ε₀", "E = mc²"],
+        "answers": ["d/dt(âˆ‚L/âˆ‚qÌ‡) - âˆ‚L/âˆ‚q = 0", "F = m * a", "âˆ‡Â·E = Ï/Îµâ‚€", "E = mcÂ²"],
         "correctIndex": 0
       },
       {
-        "question": "The wave function ψ in quantum mechanics represents:",
+        "question": "The wave function Ïˆ in quantum mechanics represents:",
         "answers": ["The electron's trajectory", "The current density", "A probability of presence", "The potential energy"],
         "correctIndex": 2
       },
       {
         "question": "What is the Lagrangian form of classical electrodynamics?",
-        "answers": ["L = -¼ F_{μν}F^{μν} + j^μ A_μ", "L = ½ m v² - V(x)", "L = qE·r", "L = ∫B·dl"],
+        "answers": ["L = -Â¼ F_{Î¼Î½}F^{Î¼Î½} + j^Î¼ A_Î¼", "L = Â½ m vÂ² - V(x)", "L = qEÂ·r", "L = âˆ«BÂ·dl"],
         "correctIndex": 0
       },
       {
         "question": "In special relativity, the Minkowski invariant is given by:",
-        "answers": ["s² = c²t² - x² - y² - z²", "E² = p²c² + m²c⁴", "s = vt + ½at²", "F = q(E + v × B)"],
+        "answers": ["sÂ² = cÂ²tÂ² - xÂ² - yÂ² - zÂ²", "EÂ² = pÂ²cÂ² + mÂ²câ´", "s = vt + Â½atÂ²", "F = q(E + v Ã— B)"],
         "correctIndex": 0
       },
       {
@@ -6030,7 +6030,7 @@
       },
       {
         "question": "The second law of thermodynamics in terms of entropy states that:",
-        "answers": ["ΔS ≥ 0 for any irreversible process", "ΔS = 0 for any transformation", "ΔS < 0 in thermal cycles", "Entropy decreases in isolated systems"],
+        "answers": ["Î”S â‰¥ 0 for any irreversible process", "Î”S = 0 for any transformation", "Î”S < 0 in thermal cycles", "Entropy decreases in isolated systems"],
         "correctIndex": 0
       },
       {
@@ -6040,12 +6040,12 @@
       },
       {
         "question": "In quantum mechanics, the commutation between position and momentum is:",
-        "answers": ["[x, p] = iħ", "[x, p] = 0", "[x, p] = ħ²", "[x, p] = -1"],
+        "answers": ["[x, p] = iÄ§", "[x, p] = 0", "[x, p] = Ä§Â²", "[x, p] = -1"],
         "correctIndex": 0
       },
       {
         "question": "The vector potential A is related to the magnetic field B through:",
-        "answers": ["B = ∇ × A", "B = ∇ · A", "B = -∂A/∂t", "B = -∇A"],
+        "answers": ["B = âˆ‡ Ã— A", "B = âˆ‡ Â· A", "B = -âˆ‚A/âˆ‚t", "B = -âˆ‡A"],
         "correctIndex": 0
       },
       {
@@ -6055,37 +6055,37 @@
       },
       {
         "question": "In electrodynamics, the impedance of vacuum is:",
-        "answers": ["√(μ₀/ε₀)", "ε₀μ₀", "μ₀/ε₀", "1/(μ₀ε₀)"],
+        "answers": ["âˆš(Î¼â‚€/Îµâ‚€)", "Îµâ‚€Î¼â‚€", "Î¼â‚€/Îµâ‚€", "1/(Î¼â‚€Îµâ‚€)"],
         "correctIndex": 0
       },
       {
         "question": "In a quantum system, the spin of an electron is:",
-        "answers": ["½ ħ", "0", "1 ħ", "2 ħ"],
+        "answers": ["Â½ Ä§", "0", "1 Ä§", "2 Ä§"],
         "correctIndex": 0
       },
       {
-        "question": "The metric tensor g_{μν} in general relativity represents:",
+        "question": "The metric tensor g_{Î¼Î½} in general relativity represents:",
         "answers": ["The curvature of spacetime", "The mass density", "The Newtonian gravitational field", "The speed of light"],
         "correctIndex": 0
       },
       {
-        "question": "The time-dependent Schrödinger equation is:",
-        "answers": ["iħ ∂ψ/∂t = Ĥψ", "E = mc²", "p = ħk", "ΔE * Δt ≥ ħ"],
+        "question": "The time-dependent SchrÃ¶dinger equation is:",
+        "answers": ["iÄ§ âˆ‚Ïˆ/âˆ‚t = Ä¤Ïˆ", "E = mcÂ²", "p = Ä§k", "Î”E * Î”t â‰¥ Ä§"],
         "correctIndex": 0
       },
       {
         "question": "The total magnetic flux through a closed surface is:",
-        "answers": ["Always zero (∇·B = 0)", "Dependent on charge", "Proportional to current", "Equal to the electric field"],
+        "answers": ["Always zero (âˆ‡Â·B = 0)", "Dependent on charge", "Proportional to current", "Equal to the electric field"],
         "correctIndex": 0
       },
       {
         "question": "The dispersion relation for electromagnetic waves in vacuum is:",
-        "answers": ["ω = c * k", "ω = k²", "ω = 1/k", "ω = c² / k"],
+        "answers": ["Ï‰ = c * k", "Ï‰ = kÂ²", "Ï‰ = 1/k", "Ï‰ = cÂ² / k"],
         "correctIndex": 0
       },
       {
         "question": "The partition function Z in the classical canon is:",
-        "answers": ["Z = ∑ e^{-βE_i}", "Z = ∫p dq", "Z = E / T", "Z = kT * ln(W)"],
+        "answers": ["Z = âˆ‘ e^{-Î²E_i}", "Z = âˆ«p dq", "Z = E / T", "Z = kT * ln(W)"],
         "correctIndex": 0
       },
       {
@@ -6095,7 +6095,7 @@
       },
       {
         "question": "Heisenberg's uncertainty principle is:",
-        "answers": ["Δx · Δp ≥ ħ / 2", "Δx · Δp = 0", "ΔE · Δt ≤ ħ / 2", "Δx · Δt ≥ ħ"],
+        "answers": ["Î”x Â· Î”p â‰¥ Ä§ / 2", "Î”x Â· Î”p = 0", "Î”E Â· Î”t â‰¤ Ä§ / 2", "Î”x Â· Î”t â‰¥ Ä§"],
         "correctIndex": 0
       },
       {
@@ -6105,7 +6105,7 @@
       },
       {
         "question": "Maxwell's equations in integral form do not include:",
-        "answers": ["The Lorentz force", "Gauss's law for electricity", "Faraday's law", "Ampère-Maxwell law"],
+        "answers": ["The Lorentz force", "Gauss's law for electricity", "Faraday's law", "AmpÃ¨re-Maxwell law"],
         "correctIndex": 0
       },
       {
@@ -6115,7 +6115,7 @@
       },
       {
         "question": "The Lagrangian of the Klein-Gordon scalar field is:",
-        "answers": ["L = ½(∂_μϕ ∂^μϕ - m²ϕ²)", "L = qϕ - A", "L = E² - B²", "L = ½mv²"],
+        "answers": ["L = Â½(âˆ‚_Î¼Ï• âˆ‚^Î¼Ï• - mÂ²Ï•Â²)", "L = qÏ• - A", "L = EÂ² - BÂ²", "L = Â½mvÂ²"],
         "correctIndex": 0
       },
       {
@@ -6125,29 +6125,2064 @@
       },
       {
         "question": "In quantum field theory, a vector boson is associated with:",
-        "answers": ["A local symmetry", "A scalar potential", "A massive fermionic particle", "A β decay"],
+        "answers": ["A local symmetry", "A scalar potential", "A massive fermionic particle", "A Î² decay"],
         "correctIndex": 0
       },
       {
         "question": "The Lorentz transformation for time is:",
-        "answers": ["t' = γ(t - vx/c²)", "t' = t + vx/c", "t' = t/γ", "t' = x/c"],
+        "answers": ["t' = Î³(t - vx/cÂ²)", "t' = t + vx/c", "t' = t/Î³", "t' = x/c"],
         "correctIndex": 0
       },
       {
         "question": "The Dirac formalism in quantum mechanics uses:",
-        "answers": ["Bra-ket notation ⟨ψ|φ⟩", "Line integrals", "Curvature tensors", "Functional derivatives"],
+        "answers": ["Bra-ket notation âŸ¨Ïˆ|Ï†âŸ©", "Line integrals", "Curvature tensors", "Functional derivatives"],
         "correctIndex": 0
       },
       {
         "question": "The group velocity of a wave is given by:",
-        "answers": ["dω/dk", "ω/k", "k/ω", "c²/k"],
+        "answers": ["dÏ‰/dk", "Ï‰/k", "k/Ï‰", "cÂ²/k"],
         "correctIndex": 0
       },
       {
         "question": "In statistical mechanics, the average energy of a quantum oscillator is:",
-        "answers": ["ħω / (e^{ħω/kT} - 1)", "½kT", "kT", "ħω"],
+        "answers": ["Ä§Ï‰ / (e^{Ä§Ï‰/kT} - 1)", "Â½kT", "kT", "Ä§Ï‰"],
+        "correctIndex": 0
+      }
+    ]
+  },
+
+  "Computer Science": {
+    "bambino": [
+      {
+        "question": "What is a computer?",
+        "answers": [
+          "A cooking machine",
+          "A pet",
+          "An electronic device that processes information",
+          "A type of fruit"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these is an example of hardware?",
+        "answers": [
+          "The mouse",
+          "Microsoft Word",
+          "Google Chrome",
+          "A website"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a keyboard used for?",
+        "answers": [
+          "To listen to music",
+          "To write text and commands",
+          "To watch movies",
+          "To print documents"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is software?",
+        "answers": [
+          "The physical parts of a computer",
+          "The programs that make the computer work",
+          "A type of food",
+          "A computer brand"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is an operating system?",
+        "answers": [
+          "Windows",
+          "Facebook",
+          "Google",
+          "YouTube"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the mouse do?",
+        "answers": [
+          "Writes text",
+          "Moves the cursor on the screen",
+          "Prints documents",
+          "Takes photos"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the Internet?",
+        "answers": [
+          "A network of computers connected to each other",
+          "A type of computer",
+          "A video game",
+          "A drawing app"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'browsing the Internet' mean?",
+        "answers": [
+          "Going boating",
+          "Visiting websites",
+          "Writing a book",
+          "Drawing on paper"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is a browser?",
+        "answers": [
+          "Google Chrome",
+          "Microsoft Word",
+          "Windows",
+          "Paint"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a printer used for?",
+        "answers": [
+          "For cooking",
+          "For printing documents on paper",
+          "For browsing the Internet",
+          "For listening to music"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a file?",
+        "answers": [
+          "A physical folder",
+          "A document saved on the computer",
+          "A type of virus",
+          "A drawing app"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the 'Delete' key on the keyboard do?",
+        "answers": [
+          "Adds text",
+          "Deletes selected text",
+          "Saves the document",
+          "Opens a new file"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a password?",
+        "answers": [
+          "A username",
+          "A secret word to access something",
+          "A type of software",
+          "A computer virus"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Why is it important not to share your password?",
+        "answers": [
+          "Because it's hard to remember",
+          "To maintain your security and privacy",
+          "Because it's too long",
+          "Because it's boring"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does 'clicking' with the mouse mean?",
+        "answers": [
+          "Pressing a key on the keyboard",
+          "Moving the mouse quickly",
+          "Pressing a button on the mouse",
+          "Turning off the computer"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a computer virus?",
+        "answers": [
+          "A harmful program for the computer",
+          "A type of game",
+          "A drawing app",
+          "A part of the computer"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How can you protect your computer from viruses?",
+        "answers": [
+          "By installing an antivirus",
+          "By turning off the monitor",
+          "By using only the mouse",
+          "By typing faster"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the computer desktop?",
+        "answers": [
+          "The back of the computer",
+          "The main screen area with icons and background",
+          "A printer",
+          "A type of software"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does 'saving' a document mean?",
+        "answers": [
+          "Printing the document",
+          "Closing the program",
+          "Storing the document in the computer",
+          "Deleting the document"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these is an input device?",
+        "answers": [
+          "Printer",
+          "Monitor",
+          "Keyboard",
+          "Speaker"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is an app?",
+        "answers": [
+          "A type of food",
+          "A program that performs a specific function",
+          "A hardware component",
+          "A password"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'Enter' key on the keyboard used for?",
+        "answers": [
+          "To delete text",
+          "To start a new line or confirm a command",
+          "To turn off the computer",
+          "To open the browser"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "facile": [
+      {
+        "question": "What does 'URL' stand for?",
+        "answers": [
+          "User Registered Link",
+          "Uniform Resource Locator",
+          "Universal Read Language",
+          "Unique Result Line"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main function of an operating system?",
+        "answers": [
+          "Managing hardware and software",
+          "Browsing the internet",
+          "Editing images",
+          "Playing video games"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these languages is used to create websites?",
+        "answers": [
+          "HTML",
+          "Photoshop",
+          "Excel",
+          "MS Word"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a PDF file?",
+        "answers": [
+          "A type of virus",
+          "A video file",
+          "A document format readable on many devices",
+          "An audio file"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What extension does a plain text file have?",
+        "answers": [
+          ".exe",
+          ".txt",
+          ".mp3",
+          ".jpg"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the cloud?",
+        "answers": [
+          "A drawing program",
+          "Online storage space",
+          "A type of computer",
+          "A search engine"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does an antivirus do?",
+        "answers": [
+          "Increases computer speed",
+          "Protects the computer from harmful software",
+          "Removes unnecessary files",
+          "Installs programs"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a Wi-Fi network?",
+        "answers": [
+          "A power cable",
+          "A type of keyboard",
+          "A wireless network for connecting to the Internet",
+          "A chat application"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is meant by 'app'?",
+        "answers": [
+          "A USB cable",
+          "A type of hardware",
+          "A program to perform a specific function",
+          "A part of the mouse"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the function of a browser?",
+        "answers": [
+          "Writing documents",
+          "Browsing the Internet",
+          "Drawing",
+          "Listening to music"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is a search engine?",
+        "answers": [
+          "Google",
+          "Firefox",
+          "YouTube",
+          "Facebook"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'right-clicking' mean?",
+        "answers": [
+          "Typing on the keyboard",
+          "Opening the context menu",
+          "Turning off the computer",
+          "Changing the background"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is an image file extension?",
+        "answers": [
+          ".docx",
+          ".jpg",
+          ".mp3",
+          ".html"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a 'bug' in computing?",
+        "answers": [
+          "A virus",
+          "An error in code or software",
+          "A useful program",
+          "A computer protection"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'Ctrl' key on the keyboard used for?",
+        "answers": [
+          "It's used to make combinations with other keys",
+          "It deletes text",
+          "It turns on the computer",
+          "It controls the volume"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the @ symbol indicate in an email address?",
+        "answers": [
+          "An error",
+          "Separation between user and domain",
+          "The file name",
+          "A folder"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a backup?",
+        "answers": [
+          "A type of virus",
+          "A safety copy of data",
+          "A graphics program",
+          "A video extension"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the purpose of a firewall?",
+        "answers": [
+          "Drawing on the screen",
+          "Controlling network access",
+          "Downloading files",
+          "Searching the Internet"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is RAM?",
+        "answers": [
+          "The main memory of the computer",
+          "A type of virus",
+          "A drawing app",
+          "A wireless network"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a programmer do?",
+        "answers": [
+          "Repairs computers",
+          "Writes code to make programs work",
+          "Sells software",
+          "Plays video games"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is a programming language?",
+        "answers": [
+          "Python",
+          "Google",
+          "Chrome",
+          "Excel"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'downloading a file' mean?",
+        "answers": [
+          "Deleting it",
+          "Sending it by email",
+          "Saving a copy on your device",
+          "Opening it in the browser"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these is a program for writing text?",
+        "answers": [
+          "Word",
+          "Paint",
+          "Excel",
+          "VLC"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the F5 key do in many browsers?",
+        "answers": [
+          "Turns off the computer",
+          "Refreshes the page",
+          "Prints the site",
+          "Opens a new window"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a folder on a computer?",
+        "answers": [
+          "A program",
+          "A video file",
+          "A space to organize files",
+          "A printer"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the difference between hardware and software?",
+        "answers": [
+          "Hardware is physical, software is virtual",
+          "They are the same thing",
+          "Software is faster",
+          "Hardware is only used online"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a search engine do?",
+        "answers": [
+          "Helps find information on the Internet",
+          "Draws images",
+          "Writes documents",
+          "Plays music"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a mobile application?",
+        "answers": [
+          "A program for smartphones or tablets",
+          "A virus for PCs",
+          "A text file",
+          "A browser"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens when you empty the computer's trash bin?",
+        "answers": [
+          "The files are permanently deleted",
+          "The files are saved in the cloud",
+          "The files are printed",
+          "The computer shuts down"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'updating' a program mean?",
+        "answers": [
+          "Deleting the program",
+          "Downloading a newer version",
+          "Changing its name",
+          "Closing the program"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "What is an IP?",
+        "answers": [
+          "A type of image file",
+          "A numerical address that identifies a device on a network",
+          "A password",
+          "A graphics program"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the function of DNS?",
+        "answers": [
+          "Translating domain names into IP addresses",
+          "Controlling Wi-Fi speed",
+          "Blocking dangerous sites",
+          "Storing temporary files"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does HTML stand for?",
+        "answers": [
+          "HyperText Markup Language",
+          "High-Tech Main Link",
+          "Hyperlink Text Mode Line",
+          "Hosting Transfer Multi-Layer"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the 'ping' command do?",
+        "answers": [
+          "Sends a request to a server to verify its reachability",
+          "Checks RAM memory",
+          "Closes all applications",
+          "Installs software"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In Python, what does the code `print(3 + 4 * 2)` print?",
+        "answers": [
+          "14",
+          "11",
+          "10",
+          "8"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the binary system?",
+        "answers": [
+          "An encryption method",
+          "A number system based on 0 and 1",
+          "A private network",
+          "A browser function"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the difference between RAM and ROM?",
+        "answers": [
+          "RAM is volatile, ROM is permanent",
+          "ROM is faster",
+          "RAM is only for graphics",
+          "ROM is erased with each restart"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is NOT a programming language?",
+        "answers": [
+          "Java",
+          "C++",
+          "HTML",
+          "Excel"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What is a primary key in a database?",
+        "answers": [
+          "A column that contains duplicate values",
+          "A unique identifier for each row",
+          "A type of password",
+          "A scripting language"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the acronym CPU stand for?",
+        "answers": [
+          "Central Programming Unit",
+          "Computer Processing Unit",
+          "Central Processing Unit",
+          "Core Processor Unit"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In which category does a router fall?",
+        "answers": [
+          "Software",
+          "Network device",
+          "Internal hardware",
+          "Antivirus program"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a variable in programming?",
+        "answers": [
+          "A file",
+          "An application",
+          "A space that contains a modifiable value",
+          "A type of password"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is an algorithm?",
+        "answers": [
+          "A programming language",
+          "A series of instructions to solve a problem",
+          "A system error",
+          "An app for editing images"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does HTTPS indicate compared to HTTP?",
+        "answers": [
+          "A faster protocol",
+          "The presence of a secure connection",
+          "A type of Italian site",
+          "A private network"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is Git?",
+        "answers": [
+          "Video editing software",
+          "A version control system",
+          "A web browser",
+          "A video conferencing app"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a compiler do?",
+        "answers": [
+          "Translates source code into machine language",
+          "Automatically writes code",
+          "Corrects spelling errors",
+          "Optimizes images"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In what format is an Excel spreadsheet commonly saved?",
+        "answers": [
+          ".xls or .xlsx",
+          ".docx",
+          ".txt",
+          ".pdf"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a type of database?",
+        "answers": [
+          "Python",
+          "MySQL",
+          "Linux",
+          "JavaScript"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does 'localhost' represent?",
+        "answers": [
+          "The local server of your own computer",
+          "A foreign domain",
+          "A Wi-Fi network",
+          "A cloud application"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the `ls` command do in a Linux terminal?",
+        "answers": [
+          "Deletes files",
+          "Displays files and folders",
+          "Changes directory",
+          "Copies files"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a function in programming?",
+        "answers": [
+          "A constant variable",
+          "An infinite loop",
+          "A block of code that can be reused",
+          "An error"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the task of a server?",
+        "answers": [
+          "Providing services or resources to other computers",
+          "Printing files",
+          "Browsing the Internet",
+          "Connecting to Wi-Fi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a boolean in programming?",
+        "answers": [
+          "A graphical function",
+          "A data type that can be true or false",
+          "An encrypted file",
+          "A network error"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is a front-end language?",
+        "answers": [
+          "CSS",
+          "SQL",
+          "Python",
+          "Java"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the .zip extension represent?",
+        "answers": [
+          "A video file",
+          "A music file",
+          "A compressed file",
+          "A system file"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these is an IDE?",
+        "answers": [
+          "Visual Studio Code",
+          "Google",
+          "Slack",
+          "Chrome"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In JavaScript, what does the `console.log()` command do?",
+        "answers": [
+          "Creates a file",
+          "Writes output to the console",
+          "Closes the browser",
+          "Sends an email"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the `.json` extension represent?",
+        "answers": [
+          "A video file",
+          "A file for configurations and structured data",
+          "An application",
+          "A music file"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a commit in Git?",
+        "answers": [
+          "A new project",
+          "A saved change in the repository",
+          "A bug",
+          "A request for help"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In a network, what does a switch do?",
+        "answers": [
+          "Connects devices and sorts data based on MAC address",
+          "Translates names into IPs",
+          "Provides access to the Internet",
+          "Blocks updates"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "esperto": [
+      {
+        "question": "In cloud computing, where does customer data reside?",
+        "answers": [
+          "On the customer's local computer",
+          "On remote provider systems",
+          "On mobile devices",
+          "On physical media like CDs or DVDs"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who is responsible for data security in cloud computing?",
+        "answers": [
+          "Only the customer",
+          "Only the provider",
+          "Shared responsibility between customer and provider",
+          "No one"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the acronym 'SQL' stand for?",
+        "answers": [
+          "Structured Query Language",
+          "Simple Query Language",
+          "Sequential Query Logic",
+          "Standard Question Language"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In a relational database, what is a 'foreign key'?",
+        "answers": [
+          "A primary key",
+          "A field that creates a link between two tables",
+          "A unique index",
+          "An aggregation function"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main function of the TCP protocol?",
+        "answers": [
+          "Transferring files",
+          "Providing an email service",
+          "Ensuring reliable delivery of data",
+          "Managing IP addresses"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the 'chmod' command do in Unix/Linux?",
+        "answers": [
+          "Changes access permissions to files or directories",
+          "Modifies a file's name",
+          "Changes a file's creation date",
+          "Displays a file's content"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In programming, what does the 'OOP' paradigm represent?",
+        "answers": [
+          "Object-Oriented Programming",
+          "Operational Output Processing",
+          "Optimal Object Protocol",
+          "Ordered Operation Procedure"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a sorting algorithm with O(n log n) complexity?",
+        "answers": [
+          "Bubble Sort",
+          "Insertion Sort",
+          "Merge Sort",
+          "Selection Sort"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the acronym 'RAID' stand for?",
+        "answers": [
+          "Random Access Integrated Drive",
+          "Redundant Array of Independent Disks",
+          "Rapid Application Interface Development",
+          "Remote Access Internet Device"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In computer security, what is meant by 'phishing'?",
+        "answers": [
+          "An attack that exploits hardware vulnerabilities",
+          "A technique to obtain sensitive information by deceiving the user",
+          "A type of malware that encrypts data",
+          "A two-factor authentication method"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the function of the DNS protocol?",
+        "answers": [
+          "Managing network security",
+          "Translating domain names into IP addresses",
+          "Monitoring network traffic",
+          "Encrypting communications"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In an operating system, what does the 'kernel' represent?",
+        "answers": [
+          "The graphical interface",
+          "The core that manages hardware and software resources",
+          "A system application",
+          "A device driver"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the acronym 'API' stand for?",
+        "answers": [
+          "Application Programming Interface",
+          "Advanced Processing Instruction",
+          "Automated Protocol Integration",
+          "Application Protocol Interface"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these languages is typically used for Android application development?",
+        "answers": [
+          "Swift",
+          "Kotlin",
+          "Ruby",
+          "C#"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In the networking field, what does the acronym 'VPN' stand for?",
+        "answers": [
+          "Virtual Private Network",
+          "Variable Protocol Node",
+          "Verified Public Network",
+          "Virtual Protocol Network"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the 'grep' command do in Unix/Linux?",
+        "answers": [
+          "Searches for a string within files",
+          "Modifies file permissions",
+          "Displays the directory structure",
+          "Compiles a program"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In programming, what does the concept of 'recursion' represent?",
+        "answers": [
+          "A function that calls itself",
+          "An infinite loop",
+          "A global variable",
+          "A complex data type"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main function of a 'firewall'?",
+        "answers": [
+          "Accelerating Internet connection",
+          "Protecting a network from unauthorized access",
+          "Monitoring system performance",
+          "Managing network printers"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the acronym 'SSD' stand for?",
+        "answers": [
+          "Solid State Drive",
+          "Secure Software Deployment",
+          "System Software Device",
+          "Standard Storage Disk"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In a database, what does a 'JOIN' do?",
+        "answers": [
+          "Deletes a table",
+          "Combines rows from two or more tables based on a related condition",
+          "Creates a new index",
+          "Updates user permissions"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "laureato": [
+      {
+        "question": "What is a deterministic finite automaton (DFA)?",
+        "answers": [
+          "A real-time operating system",
+          "An automaton with only one final state",
+          "An automaton with only one possible transition for each state/symbol pair",
+          "A recursive algorithm"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the time complexity of Dijkstra's algorithm with a priority queue implemented with a min-heap?",
+        "answers": [
+          "O(V^2)",
+          "O((V + E) log V)",
+          "O(E^2)",
+          "O(log V)"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In the context of distributed systems, what does the 'CAP theorem' represent?",
+        "answers": [
+          "A principle for optimizing cache memory",
+          "The theory that states the impossibility of simultaneously achieving consistency, availability, and partition tolerance",
+          "A client-server communication model",
+          "A data compression technique"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What happens in a 'race condition'?",
+        "answers": [
+          "Two threads wait for the same event",
+          "A process runs without priority",
+          "The result of an execution depends on the uncontrolled order of concurrent instructions",
+          "A process fails to access virtual memory"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the term 'memoization' indicate in a recursive algorithm?",
+        "answers": [
+          "A parallelization strategy",
+          "A method to avoid stack overflow",
+          "A technique to save already calculated results",
+          "A type of dynamic allocation"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these algorithms is used for topological sorting of a graph?",
+        "answers": [
+          "Dijkstra",
+          "Kruskal",
+          "Modified DFS",
+          "Bellman-Ford"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the main function of a compiler's 'lexical analyzer'?",
+        "answers": [
+          "Building the abstract syntax tree",
+          "Optimizing intermediate code",
+          "Analyzing tokens and removing spaces and comments",
+          "Generating machine code"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the role of the 'Garbage Collector' in a language like Java?",
+        "answers": [
+          "Optimizing code for the CPU",
+          "Automatically freeing unused memory",
+          "Reducing energy consumption",
+          "Dynamically compiling code"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a 'closure' in functional programming?",
+        "answers": [
+          "A function that accesses local variables even outside its context",
+          "An indefinite loop",
+          "A global variable",
+          "A function that returns only booleans"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In a Turing machine, what is the 'tape'?",
+        "answers": [
+          "The central register of the CPU",
+          "The cache memory",
+          "An infinite one-dimensional memory on which symbols are read and written",
+          "A LIFO stack"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In AI, what does the backpropagation method represent?",
+        "answers": [
+          "An algorithm for training neural networks",
+          "A clustering technique",
+          "A method for sorting graphs",
+          "A data compression strategy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main difference between processes and threads?",
+        "answers": [
+          "Threads don't have their own memory, processes do",
+          "Processes are lighter",
+          "Threads cannot be parallel",
+          "Processes share the same memory space"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is polymorphism in OOP?",
+        "answers": [
+          "The ability to create objects from a class",
+          "The deferred execution of a method",
+          "The ability to use the same method for different types",
+          "The sharing of inheritance between multiple classes"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In the context of operating systems, what is a 'syscall'?",
+        "answers": [
+          "A high-level command",
+          "A call to the kernel to access system resources",
+          "A hardware error",
+          "A system library"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The halting problem was proven by:",
+        "answers": [
+          "Alan Turing",
+          "John von Neumann",
+          "Donald Knuth",
+          "Stephen Cook"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a 'cryptographic hash function'?",
+        "answers": [
+          "A function that returns random numbers",
+          "A reversible function",
+          "A function that returns fixed-length output that is difficult to reverse",
+          "A function to compress images"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In what context is 'eventual consistency model' used?",
+        "answers": [
+          "In relational databases",
+          "In distributed cloud computing",
+          "In cache management",
+          "In peer-to-peer networks"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a 'Byzantine fault tolerant' protocol guarantee?",
+        "answers": [
+          "Availability in case of crashes",
+          "Security on unencrypted channels",
+          "Agreement between nodes even with malicious nodes",
+          "Immediate data replication"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the Cook-Levin theorem?",
+        "answers": [
+          "The theorem that proves SAT is NP-complete",
+          "An algorithm for load balancing",
+          "A method for quick sorting",
+          "A rule for database normalization"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the purpose of 'MapReduce'?",
+        "answers": [
+          "Distributing load on a GPU",
+          "Executing SQL queries in parallel",
+          "Managing large volumes of data in a distributed way with map and reduce",
+          "Performing cloud backups"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a 'monad' in Haskell?",
+        "answers": [
+          "A mutable data structure",
+          "A type of comment",
+          "A construct that encapsulates computational effects in a functional way",
+          "An importable module"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What type of language is 'lambda calculus'?",
+        "answers": [
+          "Imperative",
+          "Procedural",
+          "Logical",
+          "Functional"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What type of structure is a 'B-tree'?",
+        "answers": [
+          "A linear data structure",
+          "An ordered binary tree",
+          "A balanced multi-way tree",
+          "A directed acyclic graph"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does Shannon's theorem measure?",
+        "answers": [
+          "The probability of error in calculations",
+          "The electrical noise in circuits",
+          "The maximum amount of information that can be carried in a channel",
+          "The computational complexity of an algorithm"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is 'coalescing' in memory management?",
+        "answers": [
+          "The division of free blocks",
+          "The merging of adjacent free blocks to avoid fragmentation",
+          "A swapping method",
+          "A caching technique"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does 'NP' represent in complexity theory?",
+        "answers": [
+          "Problems solvable in polynomial time",
+          "Problems verifiable in polynomial time",
+          "Undecidable problems",
+          "Problems reducible in linear time"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the function of the ALU in a processor?",
+        "answers": [
+          "Controlling access to RAM",
+          "Managing peripherals",
+          "Performing logical and arithmetic operations",
+          "Translating machine code into natural language"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a convolutional network (CNN) do?",
+        "answers": [
+          "Analyzes audio signals",
+          "Manages distributed databases",
+          "Performs image analysis through filters",
+          "Understands natural language"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In blockchain, what is 'Proof of Work' consensus?",
+        "answers": [
+          "A compression algorithm",
+          "A mechanism where nodes solve computational problems to validate blocks",
+          "A cryptographic hash function",
+          "A scripting language for smart contracts"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "Chemistry": {
+    "bambino": [
+      {
+        "question": "What is the chemical symbol for oxygen?",
+        "answers": ["O", "H", "C", "N"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical symbol for hydrogen?",
+        "answers": ["H", "He", "O", "N"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Water is composed of hydrogen and...?",
+        "answers": ["Oxygen", "Carbon", "Nitrogen", "Iron"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a gas present in the air we breathe?",
+        "answers": ["Oxygen", "Gold", "Iron", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Ice is water in which state?",
+        "answers": ["Solid", "Liquid", "Gaseous", "Plasma"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a metal?",
+        "answers": ["Iron", "Oxygen", "Nitrogen", "Carbon"],
+        "correctIndex": 0
+      },
+      {
+        "question": "CO2 is the symbol for which gas?",
+        "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which chemical element has the symbol 'Na'?",
+        "answers": ["Sodium", "Nitrogen", "Aluminum", "Nickel"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a liquid at room temperature?",
+        "answers": ["Water", "Iron", "Gold", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens to water when it boils?",
+        "answers": ["It becomes vapor", "It becomes ice", "It disappears", "It changes color"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for carbon?",
+        "answers": ["C", "Ca", "Co", "Cr"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What gas do plants produce during photosynthesis?",
+        "answers": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for iron?",
+        "answers": ["Fe", "F", "Fr", "Fi"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do we use to extinguish fire?",
+        "answers": ["Water", "Sand", "Soil", "All of the above"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which of these is a gas?",
+        "answers": ["Helium", "Iron", "Gold", "Silver"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical symbol for gold?",
+        "answers": ["Au", "Ag", "Or", "Go"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these elements is present in water?",
+        "answers": ["Hydrogen", "Gold", "Iron", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Table salt is composed of sodium and...?",
+        "answers": ["Chlorine", "Oxygen", "Carbon", "Nitrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for silver?",
+        "answers": ["Ag", "Ar", "Au", "Al"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens to sugar when we put it in water?",
+        "answers": ["It dissolves", "It disappears", "It becomes salty", "It changes color"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What gas do we use to inflate balloons that float?",
+        "answers": ["Helium", "Oxygen", "Nitrogen", "Carbon dioxide"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical symbol for calcium?",
+        "answers": ["Ca", "C", "Cl", "Co"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for nitrogen?",
+        "answers": ["N", "A", "Az", "Z"],
+        "correctIndex": 0
+      },
+      {
+        "question": "The bubbles in soda are made of...?",
+        "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for copper?",
+        "answers": ["Cu", "Co", "Cm", "Cp"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do we use to make soap bubbles?",
+        "answers": ["Water and soap", "Water and salt", "Water and sugar", "Water and oil"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the symbol for lead?",
+        "answers": ["Pb", "Pi", "Pl", "Pd"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these metals is liquid at room temperature?",
+        "answers": ["Mercury", "Iron", "Gold", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What gas do we exhale when we breathe?",
+        "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical symbol for zinc?",
+        "answers": ["Zn", "Zi", "Z", "Zc"],
+        "correctIndex": 0
+      }
+    ],
+    "facile": [
+      {
+        "question": "How many hydrogen atoms are there in a water molecule (H₂O)?",
+        "answers": ["2", "1", "3", "0"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the pH of a neutral substance?",
+        "answers": ["7", "0", "14", "10"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a noble gas?",
+        "answers": ["Helium", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the atomic number of an element indicate?",
+        "answers": ["The number of protons", "The number of neutrons", "The number of electrons", "The atomic weight"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a halogen?",
+        "answers": ["Chlorine", "Sodium", "Calcium", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical formula for table salt?",
+        "answers": ["NaCl", "H₂O", "CO₂", "CaCO₃"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is formed when an acid reacts with a base?",
+        "answers": ["Salt and water", "Hydrogen gas", "A metal", "An alcohol"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is an alkali metal?",
+        "answers": ["Potassium", "Iron", "Copper", "Zinc"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most common state of matter in the universe?",
+        "answers": ["Plasma", "Solid", "Liquid", "Gas"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these elements is the most abundant in Earth's crust?",
+        "answers": ["Oxygen", "Iron", "Carbon", "Nitrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main component of the air we breathe?",
+        "answers": ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What process do plants use to produce sugars?",
+        "answers": ["Photosynthesis", "Respiration", "Fermentation", "Digestion"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the valence of oxygen in most compounds?",
+        "answers": ["2", "1", "3", "4"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is an example of a chemical change?",
+        "answers": ["Burning a paper", "Melting ice", "Breaking glass", "Cutting paper"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the chemical symbol for potassium?",
+        "answers": ["K", "P", "Po", "Pt"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which gas is responsible for the greenhouse effect?",
+        "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a common acid?",
+        "answers": ["Citric acid", "Sodium bicarbonate", "Ammonia", "Oil"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the negatively charged particle in an atom?",
+        "answers": ["Electron", "Proton", "Neutron", "Nucleon"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which element has the same number of protons and neutrons if its atomic number is 6 and mass number is 12?",
+        "answers": ["Carbon", "Nitrogen", "Oxygen", "Boron"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a common base?",
+        "answers": ["Sodium bicarbonate", "Vinegar", "Lemon juice", "Sulfuric acid"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main component of diamonds?",
+        "answers": ["Carbon", "Silicon", "Iron", "Calcium"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which process separates components of a mixture based on their boiling points?",
+        "answers": ["Distillation", "Filtration", "Decantation", "Chromatography"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the formula for ammonia?",
+        "answers": ["NH₃", "NO₂", "H₂SO₄", "CH₄"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is an example of a mixture?",
+        "answers": ["Air", "Pure water", "24 karat gold", "Table salt"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most conductive metal?",
+        "answers": ["Silver", "Copper", "Gold", "Aluminum"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which chemical element is present in all organic compounds?",
+        "answers": ["Carbon", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which is the heaviest particle among these?",
+        "answers": ["Neutron", "Electron", "Proton", "Positron"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is an isotope of hydrogen?",
+        "answers": ["Deuterium", "Helium", "Lithium", "Beryllium"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the common name for calcium carbonate?",
+        "answers": ["Limestone", "Table salt", "Baking soda", "Chalk"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which gas is produced during alcoholic fermentation?",
+        "answers": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correctIndex": 0
+      }
+    ],
+    "medio": [
+      {
+        "question": "What is the molecular geometry of the water molecule (H₂O)?",
+        "answers": ["Bent (104.5°)", "Linear", "Tetrahedral", "Trigonal planar"],
+        "correctIndex": 0
+      },
+      {
+        "question": "In a redox reaction, what happens to the oxidizing agent?",
+        "answers": ["It gets reduced", "It gets oxidized", "It remains unchanged", "It decomposes"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the electronic configuration of sulfur (S, Z=16)?",
+        "answers": ["1s² 2s² 2p⁶ 3s² 3p⁴", "1s² 2s² 2p⁶ 3s² 3p⁶", "1s² 2s² 2p⁶ 3s² 3d⁴", "1s² 2s² 2p⁶ 3s² 3p⁶"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the secondary quantum number (l) indicate?",
+        "answers": ["The shape of the orbital", "The energy level", "The spatial orientation", "The electron spin"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which law describes the relationship P·V = n·R·T?",
+        "answers": ["Ideal gas law", "Boyle's law", "Dalton's law", "Hess's law"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these solutions has pH < 7?",
+        "answers": ["0.1 M acetic acid", "0.1 M NaOH", "Pure water", "0.9% NaCl"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the hybridization of carbon in methane (CH₄)?",
+        "answers": ["sp³", "sp²", "sp", "sp³d"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What process occurs at the anode in an electrolytic cell?",
+        "answers": ["Oxidation", "Reduction", "Neutralization", "Precipitation"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which element easily forms compounds with oxidation states +3 and +5?",
+        "answers": ["Phosphorus (P)", "Sodium (Na)", "Magnesium (Mg)", "Fluorine (F)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which chemical law states that 'in a chemical reaction, mass is conserved'?",
+        "answers": ["Lavoisier's law", "Proust's law", "Avogadro's law", "Charles's law"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the IUPAC name for CH₃-CH₂-OH?",
+        "answers": ["Ethanol", "Methanol", "Diethyl ether", "Acetic acid"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which phenomenon explains the formation of covalent bonds?",
+        "answers": ["Orbital overlap", "Electron transfer", "Ionic attraction", "Magnetic resonance"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which instrument measures absorbance in spectrophotometry?",
+        "answers": ["Spectrophotometer", "pH meter", "Calorimeter", "Chromatograph"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of isomerism do glucose and fructose exhibit?",
+        "answers": ["Functional isomerism", "Geometric isomerism", "Optical isomerism", "Chain isomerism"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main product of complete combustion of a hydrocarbon?",
+        "answers": ["CO₂ and H₂O", "CO and H₂O", "C and H₂O", "CH₄ and O₂"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which principle explains the order of orbital filling?",
+        "answers": ["Aufbau principle", "Pauli principle", "Hund's rule", "Heisenberg principle"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of bond is present in diamond?",
+        "answers": ["Covalent network", "Ionic", "Metallic", "Hydrogen"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What process occurs when NaCl dissolves in water?",
+        "answers": ["Ionic dissociation", "Hydrolysis", "Electrolysis", "Osmosis"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which element has the highest electronegativity?",
+        "answers": ["Fluorine (F)", "Chlorine (Cl)", "Oxygen (O)", "Nitrogen (N)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the constant that expresses the degree of dissociation of an acid?",
+        "answers": ["Ka", "Kb", "Kw", "Ksp"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of reaction is: 2H₂O₂ → 2H₂O + O₂?",
+        "answers": ["Decomposition reaction", "Synthesis reaction", "Exchange reaction", "Redox reaction"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound is an example of an alkene?",
+        "answers": ["Ethylene (CH₂=CH₂)", "Ethane (CH₃-CH₃)", "Ethanol (CH₃-CH₂-OH)", "Acetylene (CH≡CH)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a calorimeter measure?",
+        "answers": ["Heat of reaction", "Ionic concentration", "Osmotic pressure", "Viscosity"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which law describes the partial pressure of gases in a mixture?",
+        "answers": ["Dalton's law", "Boyle's law", "Henry's law", "Raoult's law"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which solution has the highest boiling point?",
+        "answers": ["1M NaCl", "1M glucose", "1M CH₃COOH", "All equal"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which phenomenon explains the formation of hydrogen bonds?",
+        "answers": ["Molecular polarity", "Electronic delocalization", "Electronegativity difference", "Resonance"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which element is a transition metal?",
+        "answers": ["Iron (Fe)", "Sodium (Na)", "Calcium (Ca)", "Aluminum (Al)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the name of the functional group -COOH?",
+        "answers": ["Carboxyl", "Carbonyl", "Hydroxyl", "Amino"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which process converts nitrates to nitrogen gas?",
+        "answers": ["Denitrification", "Nitrification", "Ammonification", "Fixation"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the unit of pressure in the International System?",
+        "answers": ["Pascal (Pa)", "Atmosphere (atm)", "Bar", "mmHg"],
+        "correctIndex": 0
+      }
+    ],
+    "esperto": [
+      {
+        "question": "What is the main product of the oxidation of a secondary alcohol with K₂Cr₂O₇ in acidic conditions?",
+        "answers": ["Ketone", "Carboxylic acid", "Aldehyde", "Ether"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the order of reaction if doubling the concentration of A quadruples the rate?",
+        "answers": ["Second order with respect to A", "First order", "Zero order", "Third order"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of isomerism do cis- and trans-2-butene exhibit?",
+        "answers": ["Geometric isomerism", "Optical isomerism", "Functional isomerism", "Tautomerism"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which ligand forms the most stable complexes with metal ions?",
+        "answers": ["EDTA (chelating)", "Ammonia", "Water", "Chloride"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the pH of a 0.01 M NaOH solution at 25°C?",
+        "answers": ["12", "2", "7", "10"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which reagent converts an alkene to an alcohol following Markovnikov's rule?",
+        "answers": ["H₂O/H⁺", "BH₃/THF", "Hg(OAc)₂", "OsO₄"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the electronic configuration of Fe³⁺ ion (Z=26)?",
+        "answers": ["[Ar] 3d⁵", "[Ar] 3d⁶", "[Ar] 4s² 3d³", "[Ar] 4s¹ 3d⁴"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which law allows calculation of gas solubility in a liquid?",
+        "answers": ["Henry's law", "Raoult's law", "Dalton's law", "Beer-Lambert law"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the product of the reaction between benzene and Cl₂ with FeCl₃ as catalyst?",
+        "answers": ["Chlorobenzene", "Cyclohexane", "1,2-dichlorobenzene", "No reaction"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which instrument measures UV-Vis light absorption?",
+        "answers": ["Spectrophotometer", "pH meter", "Conductivity meter", "Polarimeter"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound is an example of a primary amine?",
+        "answers": ["CH₃-CH₂-NH₂", "(CH₃)₂NH", "(CH₃)₃N", "C₆H₅NO₂"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the unit of the rate constant (k) for a first-order reaction?",
+        "answers": ["s⁻¹", "M⁻¹s⁻¹", "M⁻²s⁻¹", "Ms⁻¹"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which element has the highest electron affinity?",
+        "answers": ["Chlorine (Cl)", "Fluorine (F)", "Oxygen (O)", "Nitrogen (N)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the IUPAC name of CH₃-CH=CH-CH₃?",
+        "answers": ["2-butene", "1-butene", "Butane", "2-butyne"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which phenomenon explains the deviation from ideal gas behavior at high pressure?",
+        "answers": ["Non-negligible molecular volume", "Intermolecular attractions", "Molecular dissociation", "Bond formation"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of polymerization occurs in polyethylene?",
+        "answers": ["Radical addition", "Condensation", "Polycondensation", "Ring-opening"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the geometry of a complex with coordination number 4 and square planar structure?",
+        "answers": ["Square planar", "Tetrahedral", "Octahedral", "Trigonal planar"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which acid is stronger among HCl, HBr, and HI?",
+        "answers": ["HI", "HBr", "HCl", "They are equivalent"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which technique separates mixtures based on different affinities for a stationary phase?",
+        "answers": ["Chromatography", "Distillation", "Extraction", "Crystallization"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the formula of sodium sulfate?",
+        "answers": ["Na₂SO₄", "NaSO₄", "Na₂S", "Na₂SO₃"],
+        "correctIndex": 0
+      }
+    ],
+    "laureato": [
+      {
+        "question": "What is the main product of the reaction between 1-methylcyclohexene and KMnO₄ under strong oxidative conditions?",
+        "answers": ["Adipic acid", "Cyclohexanone", "1,2-cyclohexanediol", "No reaction"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the reaction order of a kinetics described by the equation v = k[A][B]²?",
+        "answers": ["Third order (2+1)", "First order", "Second order", "Pseudo-first order"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound forms an octahedral complex with coordination number 6 in [Co(NH₃)₄Cl₂]⁺?",
+        "answers": ["Cobalt(III)", "Cobalt(II)", "Nickel(II)", "Copper(II)"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which mechanism predominates in the SN1 reaction between (CH₃)₃CBr and OH⁻?",
+        "answers": ["Dissociation before nucleophilic attack", "Concerted attack", "Formation of intermediate carbocation", "4-center mechanism"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which theory explains the coloration in metal complexes?",
+        "answers": ["Crystal field theory", "VSEPR theory", "Molecular orbital theory", "Bronsted-Lowry theory"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the ΔG° for a reaction with K_eq = 1 at 298 K? (R=8.314 J/mol·K)",
+        "answers": ["0 kJ/mol", "-5.7 kJ/mol", "+2.5 kJ/mol", "Impossible to determine"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which isotope is used in carbon dating?",
+        "answers": ["¹⁴C", "¹²C", "¹³C", "¹¹C"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which rule determines the electronic configuration of lanthanides?",
+        "answers": ["Hund's rule", "Aufbau principle", "Rule of maximum multiplicity", "Half-shell exception"],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which compound shows chelate effect with transition metals?",
+        "answers": ["EDTA", "Ammonia", "Water", "Chloride"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the pH of a buffer solution with [HA] = 0.1 M and [A⁻] = 0.1 M (pKa HA = 4.76)?",
+        "answers": ["4.76", "3.76", "5.76", "7.00"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which reagent converts a primary alcohol to an aldehyde without over-oxidation?",
+        "answers": ["PCC (Pyridinium chlorochromate)", "KMnO₄", "K₂Cr₂O₇", "OsO₄"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the activation energy for a reaction with k = 2.5×10⁻³ s⁻¹ at 300 K and 4.8×10⁻² s⁻¹ at 350 K? (R=8.314 J/mol·K)",
+        "answers": ["~85 kJ/mol", "~50 kJ/mol", "~120 kJ/mol", "~25 kJ/mol"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What process occurs in an H₂/O₂ fuel cell?",
+        "answers": ["Reduction of O₂ at the cathode", "Oxidation of O₂ at the anode", "Formation of ozone", "Decomposition of water"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound is aromatic according to Hückel's rule?",
+        "answers": ["Pyrrole", "Cyclopentadiene", "Cyclobutadiene", "Cyclooctatetraene"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the product of the Wolff-Kishner reduction of cyclohexanone?",
+        "answers": ["Cyclohexane", "Cyclohexenol", "Cyclohexanecarboxylic acid", "Cyclohexylamine"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which technique separates proteins based on their isoelectric point?",
+        "answers": ["2D Electrophoresis", "Ion exchange chromatography", "Ultracentrifugation", "Mass spectrometry"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which law describes the dependence of solubility on temperature?",
+        "answers": ["Van't Hoff law", "Henry's law", "Raoult's law", "Beer-Lambert law"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which catalyst is used in the hydroformylation reaction?",
+        "answers": ["Rhodium complex", "Sulfuric acid", "Raney nickel", "Alumina"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What process occurs in the cathodic zone during the electrolysis of molten NaCl?",
+        "answers": ["Reduction of Na⁺ to metallic Na", "Oxidation of Cl⁻ to Cl₂", "Formation of NaOH", "Production of HCl"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound forms a diastereoisomer with (R)-2-butanol?",
+        "answers": ["(S)-2-butanol", "(R)-2-chlorobutane", "2-butanoic acid", "None of the above"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the [base]/[acid] ratio for a phosphate buffer at pH 7.4 (pKa H₂PO₄⁻ = 7.2)?",
+        "answers": ["1.58", "0.63", "2.00", "0.50"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which reagent selectively converts an alkene to an epoxide?",
+        "answers": ["mCPBA (meta-chloroperoxybenzoic acid)", "OsO₄", "BH₃", "KMnO₄"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which spectroscopy identifies organic functional groups through molecular vibrations?",
+        "answers": ["IR (Infrared)", "NMR (Nuclear Magnetic Resonance)", "UV-Vis", "XPS"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which property determines the elution order in reverse-phase HPLC?",
+        "answers": ["Solute polarity", "Molecular weight", "Ionic charge", "Melting point"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the formation constant (Kf) for [Ag(NH₃)₂]⁺ if [Ag⁺] = 1×10⁻⁷ M in a 0.1 M NH₃ solution?",
+        "answers": ["1.6×10⁷", "1.6×10⁻⁷", "6.3×10⁸", "6.3×10⁻⁸"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which mechanism explains the reaction between Br₂ and an alkene?",
+        "answers": ["Electrophilic addition", "Nucleophilic substitution", "Elimination", "Rearrangement"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which compound shows trans effect in metal complexes?",
+        "answers": ["π-acceptor ligands", "σ-donor ligands", "Chelating ligands", "Neutral ligands"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the product of the Diels-Alder reaction between butadiene and acrylonitrile?",
+        "answers": ["3-cyanocyclohexene", "Adiponitrile", "Benzene", "Pyridine"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which technique measures the precise molecular mass of an organic compound?",
+        "answers": ["High-resolution mass spectrometry", "NMR", "IR", "UV-Vis"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the absolute configuration of natural (-)-menthol?",
+        "answers": ["(1R,2S,5R)", "(1S,2R,5S)", "(1R,3R,5S)", "(1S,3S,5R)"],
         "correctIndex": 0
       }
     ]
   }
-}
+} 
