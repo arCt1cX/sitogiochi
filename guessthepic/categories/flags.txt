@@ -1,102 +1,138 @@
-Bandiera Italia  
-Bandiera Francia  
-Bandiera Germania  
-Bandiera Spagna  
-Bandiera Regno Unito  
-Bandiera Stati Uniti  
-Bandiera Canada  
-Bandiera Brasile  
-Bandiera Argentina  
-Bandiera Messico  
-Bandiera Australia  
-Bandiera Nuova Zelanda  
-Bandiera Cina  
-Bandiera Giappone  
-Bandiera Corea del Sud  
-Bandiera India  
-Bandiera Russia  
-Bandiera Ucraina  
-Bandiera Grecia  
-Bandiera Turchia  
-Bandiera Portogallo  
-Bandiera Norvegia  
-Bandiera Svezia  
-Bandiera Finlandia  
-Bandiera Danimarca  
-Bandiera Islanda  
-Bandiera Irlanda  
-Bandiera Svizzera  
-Bandiera Austria  
-Bandiera Belgio  
-Bandiera Paesi Bassi  
-Bandiera Lussemburgo  
-Bandiera Polonia  
-Bandiera Repubblica Ceca  
-Bandiera Slovacchia  
-Bandiera Ungheria  
-Bandiera Romania  
-Bandiera Bulgaria  
-Bandiera Croazia  
-Bandiera Slovenia  
-Bandiera Serbia  
-Bandiera Bosnia ed Erzegovina  
-Bandiera Montenegro  
-Bandiera Macedonia del Nord  
-Bandiera Albania  
-Bandiera Moldavia  
-Bandiera Bielorussia  
-Bandiera Estonia  
-Bandiera Lituania  
-Bandiera Georgia  
-Bandiera Armenia  
-Bandiera Azerbaigian  
-Bandiera Arabia Saudita  
-Bandiera Emirati Arabi Uniti  
-Bandiera Israele  
-Bandiera Palestina  
-Bandiera Iran  
-Bandiera Iraq  
-Bandiera Afghanistan  
-Bandiera Pakistan  
-Bandiera Indonesia  
-Bandiera Malesia  
-Bandiera Filippine  
-Bandiera Thailandia  
-Bandiera Vietnam  
-Bandiera Cambogia  
-Bandiera Laos  
-Bandiera Myanmar  
-Bandiera Singapore  
-Bandiera Sudafrica  
-Bandiera Nigeria  
-Bandiera Marocco  
-Bandiera Algeria  
-Bandiera Tunisia  
-Bandiera Egitto  
-Bandiera Libia  
-Bandiera Kenya  
-Bandiera Etiopia  
-Bandiera Ghana  
-Bandiera Senegal  
-Bandiera Angola  
-Bandiera Repubblica Democratica del Congo  
-Bandiera Zimbabwe  
-Bandiera Tanzania  
-Bandiera Uganda  
-Bandiera Cuba  
-Bandiera Repubblica Dominicana  
-Bandiera Haiti  
-Bandiera Giamaica  
-Bandiera Colombia  
-Bandiera Venezuela  
-Bandiera Cile  
-Bandiera Perù  
-Bandiera Bolivia  
-Bandiera Ecuador  
-Bandiera Paraguay  
-Bandiera Uruguay  
-Bandiera Panama  
-Bandiera Costa Rica  
-Bandiera Islanda  
-Bandiera Qatar  
-Bandiera Kuwait
+Italia
+Francia
+Germania
+Spagna
+Regno Unito
+Stati Uniti
+Canada
+Australia
+Giappone
+Cina
+Russia
+Brasile
+Argentina
+Messico
+Sudafrica
+India
+Egitto
+Kenya
+Nigeria
+Marocco
+Portogallo
+Olanda
+Belgio
+Svizzera
+Austria
+Grecia
+Turchia
+Svezia
+Norvegia
+Finlandia
+Danimarca
+Islanda
+Polonia
+Repubblica Ceca
+Ungheria
+Romania
+Bulgaria
+Ucraina
+Croazia
+Serbia
+Slovenia
+Slovacchia
+Irlanda
+Lituania
+Estonia
+Albania
+Malta
+Cipro
+Lussemburgo
+Monaco
+Liechtenstein
+Andorra
+San Marino
+Città del Vaticano
+Israele
+Palestina
+Giordania
+Libano
+Siria
+Iraq
+Iran
+Arabia Saudita
+Qatar
+Emirati Arabi Uniti
+Kuwait
+Bahrein
+Oman
+Yemen
+Afghanistan
+Pakistan
+Bangladesh
+Nepal
+Bhutan
+Sri Lanka
+Maldive
+Corea del Nord
+Corea del Sud
+Mongolia
+Vietnam
+Laos
+Cambogia
+Tailandia
+Myanmar
+Malesia
+Singapore
+Indonesia
+Filippine
+Nuova Zelanda
+Papua Nuova Guinea
+Fiji
+Samoa
+Tunisia
+Algeria
+Libia
+Etiopia
+Somalia
+Ghana
+Senegal
+Costa d'Avorio
+Cile
+Perù
+Colombia
+Venezuela
+Ecuador
+Bielorussia
+Moldavia
+Macedonia del Nord
+Bosnia ed Erzegovina
+Montenegro
+Kosovo
+Lettonia
+Armenia
+Azerbaigian
+Georgia
+Kazakistan
+Kirghizistan
+Tagikistan
+Turkmenistan
+Uzbekistan
+Bahamas
+Barbados
+Belize
+Bolivia
+Costa Rica
+Cuba
+Repubblica Dominicana
+El Salvador
+Guatemala
+Guyana
+Haiti
+Honduras
+Giamaica
+Nicaragua
+Panama
+Paraguay
+Trinidad e Tobago
+Uruguay
+Tonga

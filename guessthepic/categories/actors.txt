@@ -1,22 +1,22 @@
-Leonardo DiCaprio  
-Tom Hanks  
-Scarlett Johansson  
-Brad Pitt  
-Robert Downey Jr  
-Meryl Streep  
-Keanu Reeves  
-Natalie Portman  
-Denzel Washington  
-Emma Stone  
-Johnny Depp  
-Anne Hathaway  
-Morgan Freeman  
-Ryan Reynolds  
-Jennifer Lawrence  
-Hugh Jackman  
-Angelina Jolie  
-Christian Bale  
-Julia Roberts  
+Leonardo DiCaprio
+Tom Hanks
+Scarlett Johansson
+Brad Pitt
+Robert Downey Jr
+Meryl Streep
+Keanu Reeves
+Natalie Portman
+Denzel Washington
+Emma Stone
+Johnny Depp
+Anne Hathaway
+Morgan Freeman
+Ryan Reynolds
+Jennifer Lawrence
+Hugh Jackman
+Angelina Jolie
+Christian Bale
+Julia Roberts
 Will Smith
 Al Pacino
 Robert De Niro
@@ -36,7 +36,7 @@ Michael B. Jordan
 Zendaya
 Cillian Murphy
 Emilia Clarke
-​Anthony Hopkins
+Anthony Hopkins
 Ryan Gosling
 Jennifer Aniston
 George Clooney
@@ -50,3 +50,28 @@ John Travolta
 Kevin Spacey
 Tobey Maguire
 Willem Dafoe
+Russel Crowe
+Sandra Bullock
+Nicole Kidman
+Heath Ledger
+Charlie Chaplin
+Cate Blanchett
+Harrison Ford
+Daniel Day-Lewis
+Robert Pattinson
+Marlon Brando
+Nicholas Cage
+Clint Eastwood
+Ingrid Bergman
+Sean Connery
+Jack Black
+Liam Neeson
+Bryan Cranston
+Jennifer Aniston
+Millie Bobby Brown
+Aaron Paul
+Vin Diesel
+Paul Walker
+Daniel Radcliffe
+Andrew Garfield
+James Franco

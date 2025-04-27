@@ -1,104 +1,102 @@
-Leone  
-Tigre  
-Elefante  
-Giraffa  
-Zebra  
-Orso  
-Lupo  
-Volpe  
-Cervo  
-Ippopotamo  
-Rinoceronte  
-Panda  
-Koala  
-Canguro  
-Pinguino  
-Foca  
-Balena  
-Delfino  
-Squalo  
-Polpo  
-Cavalluccio marino  
-Medusa  
-Granchio  
-Aragosta  
-Aquila  
-Gufo  
-Gabbiano  
-Pappagallo  
-Fenicottero  
-Cigno  
-Anatra  
-Oca  
-Gallina  
-Gallo  
-Tacchino  
-Struzzo  
-Pavone  
-Pipistrello  
-Cane  
-Gatto  
-Criceto  
-Coniglio  
-Porcellino d’India  
-Topo  
-Ratto  
-Maiale  
-Mucca  
-Cavallo  
-Asino  
-Capra  
-Pecora  
-Cammello  
-Dromedario  
-Lama  
-Formica  
-Ape  
-Vespa  
-Zanzara  
-Mosca  
-Farfalla  
-Bruco  
-Scarabeo  
-Coleottero  
-Ragno  
-Scorpione  
-Serpente  
-Coccodrillo  
-Alligatore  
-Lucertola  
-Iguana  
-Camaleonte  
-Tartaruga  
-Rospo  
-Rana  
-Pesce rosso  
-Carpa  
-Tonno  
-Salmone  
-Sardina  
-Trota  
-Riccio di mare  
-Stella marina  
-Corallo  
-Lombrico  
-Millepiedi  
-Calabrone  
-Ghepardo  
-Pantera  
-Giaguaro  
-Lince  
-Orso polare  
-Narvalo  
-Beluga  
-Yak  
-Bufalo  
-Alce  
-Renne  
-Scoiattolo  
-Talpa  
-Furetto  
-Donnola  
+Leone
+Tigre
+Elefante
+Giraffa
+Zebra
+Orso
+Lupo
+Volpe
+Cervo
+Ippopotamo
+Rinoceronte
+Panda
+Koala
+Canguro
+Pinguino
+Foca
+Balena
+Delfino
+Squalo
+Polpo
+Cavalluccio marino
+Medusa
+Granchio
+Aragosta
+Aquila
+Gufo
+Gabbiano
+Pappagallo
+Fenicottero
+Cigno
+Anatra
+Oca
+Gallina
+Gallo
+Tacchino
+Struzzo
+Pavone
+Pipistrello
+Cane
+Gatto
+Criceto
+Coniglio
+Porcellino d'India
+Ratto
+Maiale
+Mucca
+Cavallo
+Asino
+Capra
+Pecora
+Cammello
+Dromedario
+Lama
+Formica
+Vespa
+Zanzara
+Mosca
+Farfalla
+Bruco
+Scarabeo
+Coleottero
+Ragno
+Scorpione
+Serpente
+Coccodrillo
+Alligatore
+Lucertola
+Iguana
+Camaleonte
+Tartaruga
+Rospo
+Rana
+Pesce rosso
+Carpa
+Tonno
+Salmone
+Sardina
+Trota
+Riccio di mare
+Stella marina
+Corallo
+Lombrico
+Millepiedi
+Calabrone
+Ghepardo
+Pantera
+Giaguaro
+Lince
+Orso polare
+Narvalo
+Beluga
+Yak
+Bufalo
+Alce
+Renne
+Scoiattolo
+Talpa
+Furetto
+Donnola
 Mangusta
 Armadillo
 Cicala
@@ -113,3 +111,112 @@ Drago di Komodo
 Alpaca
 Axolotl
 Chimpanzé
+Puzzola
+Gorilla
+Orangotango
+Ghepardo
+Leopardo
+Coyote
+Iena
+Lontra
+Dugongo
+Lamantino
+Antilope
+Bisonte
+Ermellino
+Martora
+Faina
+Ghiro
+Suricato
+Opossum
+Aye-aye
+Geco
+Serpente a sonagli
+Anaconda
+Pitone
+Tritone
+Salamandra pezzata
+Raganella
+Pesce spada
+Pesce pagliaccio
+Pesce palla
+Storione
+Murena
+Barracuda
+Spugna marina
+Libellula
+Mantide religiosa
+Cimice
+Termite
+Pidocchio
+Picchio
+Condor delle Ande
+Tucano
+Rondine
+Albatros
+Merlo
+Tortora
+Falco pellegrino
+Piranha
+Pesce gatto
+Panda rosso
+Tapiro
+Formichiere
+Bradipo
+Fenicottero rosa
+Okapi
+Istrice
+Stambecco
+Camoscio
+Muflone
+Daino
+Vombato
+Cobra reale
+Lemure
+Pesce luna
+Squalo martello
+Pesce sega
+Gaviale
+Sciacallo
+Capodoglio
+Orca
+Cicogna
+Airone
+Poiana comune
+Leopardo delle nevi
+Leopardo nebuloso
+Caracal
+Armadillo
+Martin pescatore
+Seppia
+Sogliola
+Manta gigante
+Squalo balena
+Licaone
+Babbuino
+Facocero
+Cinghiale
+Procione
+Lepre
+Orso nero americano
+Capibara
+Riccio europeo
+Fagiano
+Pettirosso
+Biscia d'acqua (Natrice)
+Vipera comune
+Tasso comune
+Tasso del miele
+Anguilla
+Lampreda
+Tirannosauro (Tyrannosaurus rex)
+Stegosauro
+Triceratopo
+Velociraptor
+Pterodattilo
+Brachiosauro
+Ostrica
+Corvo
+Cornacchia
+Puma
+Renna

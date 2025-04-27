@@ -1,101 +1,186 @@
-Homer Simpson  
-SpongeBob  
-Topolino  
-Bugs Bunny  
-Tom e Jerry  
-Scooby-Doo  
-Bart Simpson  
-Peter Griffin  
-Rick Sanchez  
-Stewie Griffin  
-Dora l’esploratrice  
-Shrek  
-Elsa  
-Woody  
-Buzz Lightyear  
-Timmy Turner  
-Goku  
-Naruto  
-Paperino  
-Po (Kung Fu Panda)  
-Pippo  
-Minnie  
-Paperina  
-Pluto  
-Bugs Bunny      
-Shaggy  
-Marge Simpson  
-Bart Simpson  
-Lisa Simpson  
-Maggie Simpson  
-Peter Griffin  
-Stewie Griffin  
-Brian Griffin  
-Eric Cartman  
-Stan Marsh  
-Kyle Broflovski  
-Kenny McCormick  
-SpongeBob  
-Patrick Stella  
-Squiddi  
-Mr Krab  
-Sandy Cheeks  
-Vegeta  
-Gohan  
-Piccolo  
-Crilin  
-Trunks  
-Bulma  
-Freezer  
-Cell  
-Majin Bu  
-Naruto  
-Sasuke  
-Sakura  
-Kakashi  
-Itachi  
-Luffy  
-Zoro  
-Nami  
-Usopp  
-Sanji  
-Chopper   
-Ash Ketchum  
-Pikachu  
-Charizard  
-Bulbasaur  
-Squirtle  
-Meowth  
-Doraemon  
-Nobita  
-Shizuka  
-Heidi  
-Nonno di Heidi   
-Lady Oscar  
-Sailor Moon  
-Hello Kitty  
-Winnie the Pooh  
-Tigro  
-Pimpi  
-Peppa Pig  
-George Pig  
-Papà Pig  
-Mamma Pig  
-Masha  
-Orso  
-Elsa  
-Anna  
-Olaf  
-Rapunzel  
-Ralph Spaccatutto  
-Simba  
-Timone  
-Pumbaa  
-Scar  
-Dexter 
-Braccio di ferro
+Homer Simpson
+Mickey Mouse
+SpongeBob SquarePants
+Bugs Bunny
+Pikachu
+Bart Simpson
+Stewie Griffin
+Scooby-Doo
+Tom and Jerry
+Shrek
+Winnie the Pooh
+Donald Duck
+Goku
 Fred Flintstone
+Peppa Pig
+Peter Griffin
+Rick Sanchez
+Garfield
+Daffy Duck
+Patrick Star
+Topolino
+Dora l'esploratrice
+Elsa
+Woody
+Buzz Lightyear
+Timmy Turner
+Naruto
+Paperino
+Po (Kung Fu Panda)
+Pippo
+Minnie
+Paperina
+Pluto
+Shaggy
+Marge Simpson
+Lisa Simpson
+Maggie Simpson
+Brian Griffin
+Eric Cartman
+Stan Marsh
+Kyle Broflovski
+Kenny McCormick
+Patrick Stella
+Squiddi
+Mr Krab
+Sandy Cheeks
+Vegeta
+Gohan
+Piccolo
+Crilin
+Trunks
+Bulma
+Freezer
+Cell
+Majin Bu
+Sasuke
+Sakura
+Kakashi
+Itachi
+Luffy
+Zoro
+Nami
+Usopp
+Sanji
+Chopper
+Ash Ketchum
+Charizard
+Bulbasaur
+Squirtle
+Meowth
+Doraemon
+Nobita
+Shizuka
+Heidi
+Nonno di Heidi
+Lady Oscar
+Sailor Moon
+Hello Kitty
+Tigro
+Pimpi
+George Pig
+Papà Pig
+Mamma Pig
+Masha
+Orso
+Anna
+Olaf
+Rapunzel
+Ralph Spaccatutto
+Simba
+Timone
+Pumbaa
+Scar
+Dexter
+Braccio di ferro
 Kim possible
 Perry l'ornitorinco
 Jimmy Neutron
 Teen Titans
+Phineas
+Johnny Bravo
+Porky Pig
+Betty Boop
+Charlie Brown
+Spike (Tom & Jerry)
+Yosemite Sam
+Gatto Silvestro
+Titti (Looney Tunes)
+Taz (Looney Tunes)
+Speedy Gonzales
+Willy il Coyote
+Beep Beep (Looney Tunes)
+Lola Bunny
+Cosmo (Due Fantagenitori)
+Wanda (Due Fantagenitori)
+Trixie Tang (Due Fantagenitori)
+Mr. Crocker (Due Fantagenitori)
+Vicky (Due Fantagenitori)
+AJ (Due Fantagenitori)
+Chester (Due Fantagenitori)
+Jorgen Von Strangle (Due Fantagenitori)
+Francis (Due Fantagenitori)
+Juandissimo il Magnifico (Due Fantagenitori)
+Gwen (A Tutto Reality)
+Duncan (A Tutto Reality)
+Heather (A Tutto Reality)
+Courtney (A Tutto Reality)
+Leshawna (A Tutto Reality)
+Alejandro (A Tutto Reality)
+Chris McLean(A Tutto Reality)
+Harold (A Tutto Reality)
+Lindsay (A Tutto Reality)
+Gotenks
+Zarbon
+Geronimo Stilton
+Ben Tennyson
+Gwen Tennyson
+Bloom (Winx)
+Stella (Winx)
+Flora (Winx)
+Musa (Winx)
+Tecna (Winx)
+Rotolone (Ben10)
+PlusUltra (Ben10)
+2x2 (Ben10)
+Diamante (Ben10)
+Vomito (Ben10)
+Tom (Tom & Jerry)
+Tom (Tom & Jerry)
+Marvin il Martiano (Looney Tunes)
+Fred Flintstone
+Wilma Flintstone
+Barney Rubble
+Shrek
+Betty Rubble
+Popeye Braccio di Ferro
+Maggie Simpson
+Ned Flanders
+Krusty il Clown
+Moe Szyslak
+Lois Griffin
+Meg Griffin
+Stewie Griffin
+Brian Griffin
+Dexter (Il Laboratorio di Dexter)
+Bojack Horseman
+Princess Carolyn
+Todd Chavez
+Diane Nguyen
+Mr. Peanutbutter
+Zio Paperone
+Pantera Rosa
+Scooby-Doo
+Velma (Scooby-Doo)
+Freddy (Scooby-Doo)
+Dafne (Scooby-Doo)
+Shaggy(Scooby-Doo)
+Candace Flynn
+Ferb Fletcher
+Dr. Heinz Doofenshmirtz
+Butters (South Park)
+Timmy (South Park)
+Randy Marsh (South Park)
+Butters (South Park)
+Mr. Garrison (South Park)
+Trombino e Pompadour

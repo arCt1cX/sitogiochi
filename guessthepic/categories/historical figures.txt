@@ -1,90 +1,158 @@
-Leonardo da Vinci  
-Galileo Galilei  
-Isaac Newton  
-Albert Einstein  
-Marie Curie  
-Charles Darwin  
-Nikola Tesla  
-Thomas Edison  
-Alessandro Volta  
-Guglielmo Marconi  
-Sigmund Freud  
-Stephen Hawking  
-Aristotele  
-Platone  
-Socrate  
-Cristoforo Colombo  
-Amerigo Vespucci  
-Giulio Cesare  
-Augusto  
-Nerone  
-Cleopatra  
-Alessandro Magno  
-Annibale  
-Leonida  
-Carlo Magno  
-Gengis Khan  
-Attila  
-Giovanna d'Arco  
-Napoleone Bonaparte  
-Giuseppe Garibaldi  
-Camillo Benso di Cavour  
-Vittorio Emanuele II  
-Otto von Bismarck  
-Abraham Lincoln  
-George Washington  
-Theodore Roosevelt  
-Franklin D. Roosevelt  
-John F. Kennedy  
-Winston Churchill  
-Benito Mussolini  
-Adolf Hitler  
-Joseph Stalin  
-Vladimir Lenin  
-Mikhail Gorbachev  
-Karl Marx  
-Fidel Castro  
-Che Guevara  
-Gandhi  
-Nelson Mandela  
-Martin Luther King  
-Malcolm X  
-Rosa Parks  
-Madre Teresa di Calcutta  
-Papa Giovanni Paolo II  
-Papa Francesco  
-San Francesco d'Assisi  
-Giordano Bruno  
-Niccolò Machiavelli  
-Dante Alighieri  
-Petrarca  
-Giovanni Boccaccio  
-William Shakespeare  
-Johann Wolfgang von Goethe  
-Victor Hugo  
-Lev Tolstoj  
-Fëdor Dostoevskij  
-Charles Dickens  
-Jane Austen  
-Frida Kahlo  
-Vincent van Gogh  
-Pablo Picasso  
-Claude Monet  
-Raffaello Sanzio  
-Donatello  
-Caravaggio  
-Andy Warhol  
-Ludwig van Beethoven  
-Wolfgang Amadeus Mozart  
-Johann Sebastian Bach  
-Giuseppe Verdi  
-Gioachino Rossini  
-Antonio Vivaldi  
-Enrico Fermi  
-Alan Turing  
-Ramses II  
-Tutankhamon  
-Buddha  
-Gesù Cristo  
+Giulio Cesare
+Alessandro Magno
+Cleopatra
+Napoleone Bonaparte
+Leonardo da Vinci
+Michelangelo Buonarroti
+Galileo Galilei
+Isaac Newton
+Albert Einstein
+Marie Curie
+Charles Darwin
+Abraham Lincoln
+George Washington
+Winston Churchill
+Mahatma Gandhi
+Nelson Mandela
+Martin Luther King Jr.
+Giovanna D'Arco
+Confucio
+Buddha
+Socrate
+Platone
+Aristotele
+William Shakespeare
+Dante Alighieri
+Marco Polo
+Cristoforo Colombo
+Amerigo Vespucci
+Ferdinando Magellano
+James Cook
+Marco Aurelio
+Augusto
+Carlo Magno
+Federico Barbarossa
+Federico II
+Enrico VIII
+Elisabetta I
+Luigi XIV
+Caterina la Grande
+Pietro il Grande
+Giuseppe Garibaldi
+Camillo Benso di Cavour
+Otto von Bismarck
+Karl Marx
+Friedrich Nietzsche
+Sigmund Freud
+Charles Dickens
+Vincent van Gogh
+Pablo Picasso
+Ludwig van Beethoven
+Wolfgang Amadeus Mozart
+Johann Sebastian Bach
+Christopher Columbus
+Genghis Khan
+Attila
+Aristotle
+Alexander Graham Bell
+Thomas Edison
+Nikola Tesla
+Franklin D. Roosevelt
+John F. Kennedy
+Rosa Parks
+Malcolm X
+Anne Frank
+Maria Montessori
+Louis Pasteur
+René Descartes
+Voltaire
+Jean-Jacques Rousseau
+Immanuel Kant
+Fyodor Dostoevsky
+Leo Tolstoy
+Ernest Hemingway
+Neil Armstrong
+Yuri Gagarin
+Alan Turing
+Steve Jobs
+Bill Gates
+Alessandro Volta
+Guglielmo Marconi
+Stephen Hawking
+Nerone
+Annibale
+Leonida
+Vittorio Emanuele II
+Joseph Stalin
+Vladimir Lenin
+Che Guevara
+Madre Teresa di Calcutta
+Papa Francesco
+San Francesco d'Assisi
+Giordano Bruno
+Niccolò Machiavelli
+Petrarca
+Giovanni Boccaccio
+Johann Wolfgang von Goethe
+Victor Hugo
+Jane Austen
+Frida Kahlo
+Claude Monet
+Raffaello Sanzio
+Donatello
+Caravaggio
+Andy Warhol
+Giuseppe Verdi
+Gioachino Rossini
+Antonio Vivaldi
+Enrico Fermi
+Ramses II
+Tutankhamon
+Gesù Cristo
 Maometto
-Elisabetta I d'Inghilterra
+Martin Lutero
+Ivan il Terribile
+Riccardo Cuor di Leone
+Simón Bolívar
+Theodore Roosevelt
+Charles de Gaulle
+Harry Truman
+Alessandro Manzoni
+Antonio Meucci
+Enzo Ferrari
+Italo Calvino
+Gabriele D'Annunzio
+Italo Svevo
+Primo Levi
+Seneca
+John Locke
+Thomas Hobbes
+David Hume
+Baruch Spinoza
+Herman Melville
+Mary Shelley
+Francis Crick and James Watson
+Adam Smith
+Rosa Parks
+Franz Kafka
+Papa Giovanni Paolo II
+Benito Mussolini
+Adolf Hitler
+Papa Francesco I
+Papa Benedetto XVI
+Giovanni Verga
+Gabriel Garcia Marquez
+Lev Tolstoj
+Edgar Allan Poe
+Jane Austen
+Gregor Mendel
+Blaise Pascal
+Michael Faraday
+Jane Goodall
+Erwin Schrödinger
+Keplero (Johannes Kepler)
+Werner Heisenberg
+Giacomo Leopardi
+Filippo Brunelleschi
+Amedeo Avogadro
+Lorenzo de’ Medici (il Magnifico)

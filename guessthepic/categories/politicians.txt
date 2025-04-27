@@ -1,32 +1,40 @@
-Barack Obama  
-Joe Biden  
-Angela Merkel  
-Donald Trump  
-Vladimir Putin  
-Emmanuel Macron  
-Winston Churchill  
-George Washington  
-Abraham Lincoln  
-Nelson Mandela  
-Margaret Thatcher  
-Justin Trudeau  
-Xi Jinping  
-Kamala Harris  
-John F. Kennedy  
-Ronald Reagan  
-Giuseppe Conte  
-Jacinda Ardern  
-Boris Johnson  
+Joe Biden
+Donald Trump
+Emmanuel Macron
+Vladimir Putin
+Angela Merkel
+Justin Trudeau
+Barack Obama
+Boris Johnson
+Kamala Harris
+Narendra Modi
+Xi Jinping
+Olaf Scholz
+Hillary Clinton
+Sergio Mattarella
+Volodymyr Zelensky
+Giorgia Meloni
+Keir Starmer
+Ursula von der Leyen
+Nicolas Sarkozy
+Andrés Manuel López Obrador
+Winston Churchill
+George Washington
+Abraham Lincoln
+Nelson Mandela
+Margaret Thatcher
+John F. Kennedy
+Ronald Reagan
+Giuseppe Conte
 Mahatma Gandhi
+Berlusconi
 Richard Nixon
-John Fitzgerald Kennedy
-Matteo Renzi  
-Matteo Salvini 
-Giuseppe Conte  
-Emma Bonino 
-Benito Mussolini  
-Theodore Roosevelt  
-Camillo Benso Conte di Cavour  
+Matteo Renzi
+Matteo Salvini
+Emma Bonino
+Benito Mussolini
+Theodore Roosevelt
+Camillo Benso Conte di Cavour
 Papa Giovanni Paolo II
 Fidel Castro
 Silvio Berlusconi
@@ -36,4 +44,41 @@ Bill Clinton
 George Bush
 Saddam Hussein
 Adolf Hitler
-
+Aldo Moro
+Beppe Grillo
+Enrico Berlinguer
+Pietro Ingrao
+Giulio Andreotti
+Umberto Bossi
+Luigi di Maio
+Pierluigi Bersani
+Marco Pannella
+Giovanni Falcone
+Kim Jong-un
+Benjamin Netanyahu
+ J.D. Vance
+Jair Bolsonaro
+Augusto Pinochet
+Mao Zedong (Tse-tung)
+Iosif Stalin
+Lenin
+Mu'ammar Gheddafi
+Francisco Franco
+Ho Chi Minh
+Pol Pot
+Elly Schlein
+Ignazio La Russa
+Marco Rizzo
+Carlo Calenda
+Giuseppe Sala
+Roberto Gualtieri
+Rosy Bindi
+Renato Brunetta
+Claudio Lotito
+Giorgio Napolitano
+Sergio Mattarella
+Romano Prodi
+Sandro Pertini
+Giovanni Giolitti
+Bettino Craxi
+Renato Brunetta

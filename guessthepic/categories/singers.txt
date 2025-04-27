@@ -1,126 +1,103 @@
-Lady Gaga  
-Freddie Mercury  
-Taylor Swift  
-Elvis Presley  
-Beyoncé  
-Michael Jackson  
-Adele  
-Ed Sheeran  
-Madonna  
-Rihanna  
-Justin Bieber  
-Bruno Mars  
-Whitney Houston  
-The Weeknd  
-Ariana Grande  
-Kurt Cobain  
-Billie Eilish  
-Bob Dylan  
-Shakira  
+Lady Gaga
+Ed Sheeran
+Beyoncé
+The Weeknd
+Taylor Swift
+Rihanna
+Justin Bieber
+Adele
+Bruno Mars
+Billie Eilish
+Ariana Grande
+Drake
+Harry Styles
+Dua Lipa
+Post Malone
+Shakira
+Katy Perry
+Bad Bunny
+BTS
+Coldplay
+Freddie Mercury
+Elvis Presley
+Michael Jackson
+Madonna
+Whitney Houston
+Kurt Cobain
+Bob Dylan
 Frank Sinatra
-Lucio Battisti  
-Vasco Rossi  
-Ligabue  
-Tiziano Ferro  
-Laura Pausini  
-Eros Ramazzotti  
-Gianna Nannini  
-Jovanotti  
-Francesco De Gregori  
-Antonello Venditti  
-Fabrizio De André  
-Mina  
-Adriano Celentano  
-Lucio Dalla  
-Zucchero  
-Renato Zero  
-Claudio Baglioni  
-Francesco Renga  
-Elisa  
-Emma Marrone  
-Alessandra Amoroso  
-Marco Mengoni  
-Mahmood  
-Achille Lauro  
-Blanco  
-Ultimo  
-Irama  
-Annalisa  
-Levante  
-Noemi  
-Måneskin  
-Fedez  
-J-Ax  
-Fabri Fibra  
-Marracash  
-Salmo  
-Lazza  
-Tedua  
-Gemitaiz  
-Noyz Narcos  
-Rkomi  
-Sfera Ebbasta  
-Ghali  
-Madame  
-Annalisa  
-Baby K  
-Tananai  
-Pinguini Tattici Nucleari  
-Boomdabash  
-Negramaro  
-Thegiornalisti  
-Calcutta  
-Coez  
-Carl Brave  
-Franco126  
-Shiva  
-Geolier  
-Tony Effe  
-Rose Villain  
-Anna  
-Drillionaire  
-Bresh   
-Taylor Swift  
-Ariana Grande  
-Billie Eilish  
-Dua Lipa  
-The Weeknd  
-Bruno Mars  
-Beyoncé  
-Jay-Z  
-Kanye West  
-Rihanna  
-Justin Bieber  
-Lady Gaga  
-Katy Perry  
-Nicki Minaj  
-Drake  
-Eminem  
-Snoop Dogg  
-50 Cent  
-Post Malone  
-Olivia Rodrigo  
-Harry Styles  
-Sam Smith  
-Coldplay  
-Imagine Dragons  
-Linkin Park  
-Michael Jackson  
-Elvis Presley  
-Freddie Mercury  
-Whitney Houston  
-Céline Dion  
-Madonna  
-Prince  
-David Bowie  
-Frank Sinatra  
-Bob Marley  
-Elton John  
-George Michael  
-Andrea Bocelli  
-Luciano Pavarotti  
-Enrico Caruso  
-Laura Pergolizzi
+Lucio Battisti
+Vasco Rossi
+Ligabue
+Tiziano Ferro
+Laura Pausini
+Eros Ramazzotti
+Gianna Nannini
+Jovanotti
+Francesco De Gregori
+Antonello Venditti
+Fabrizio De André
+Mina
+Adriano Celentano
+Lucio Dalla
+Zucchero
+Renato Zero
+Claudio Baglioni
+Francesco Renga
+Elisa
+Emma Marrone
+Alessandra Amoroso
+Marco Mengoni
+Mahmood
+Achille Lauro
+Blanco
+Ultimo
+Irama
+Annalisa
+Levante
+Noemi
+Måneskin
+Fedez
+Fabri Fibra
+Marracash
+Salmo
+Lazza
+Tedua
+Gemitaiz
+Noyz Narcos
+Rkomi
+Sfera Ebbasta
+Ghali
+Madame
+Baby K
+Pinguini Tattici Nucleari
+Calcutta
+Coez
+Carl Brave
+Franco126
+Shiva
+Geolier
+Tony Effe
+Rose Villain
+Anna
+Jay-Z
+Kanye West
+Nicki Minaj
+Eminem
+Snoop Dogg
+50 Cent
+Olivia Rodrigo
+Sam Smith
+Imagine Dragons
+Linkin Park
+Céline Dion
+Prince
+David Bowie
+Bob Marley
+Elton John
+George Michael
+Andrea Bocelli
+Luciano Pavarotti
 Stevie Wonder
 Jimi Hendrix
 Green Day
@@ -133,4 +110,125 @@ Lil Nas X
 Travis Scott
 Tyler The Creator
 Miley Cyrus
-
+Ray Charles
+Jon Bon Jovi
+Bruce Springsteen
+Sting
+John Lennon
+Aretha Franklin
+Rod Stewart
+Pink Floyd
+Lil Wayne
+Lil Baby
+Gunna
+Juice WRLD
+A$AP Rocky
+Dr. Dre
+Ice Cube
+J. Cole
+Future
+21 Savage
+Lil Uzi Vert
+Quavo
+Offset
+Kendrick Lamar
+Chief Keef
+Tupac Shakur (2Pac)
+Halsey
+Shawn Mendes
+Jason Derulo
+Avril Lavigne
+Christina Aguilera
+Maroon 5
+Baby Gang
+Kid Yugi
+Artie5
+Don Toliver
+Tony Boy
+Izi
+Lil Peep
+Nayt
+Shiva
+Paky
+Swae Lee
+Ugo Borghetti
+Pretty Solero
+Ketama126
+The Kid LAROI
+Kodak Black
+Lana del Rey
+Led Zeppelin
+Lil Durk
+Lil Skies
+Lil Tjay
+Maluma
+Ozuna
+Neil Young
+Oasis
+Polo G
+Red Hot Chili Peppers
+Rosalia
+Trippie Redd
+Wiz Khalifa
+will.i.am
+Karol G
+Doja Cat
+Central Cee
+Carly Rae Jepsen
+Ellie Goulding
+Avicii
+Loredana Bertè
+Gianni Morandi
+Massimo Ranieri
+Adriano Celentano
+Al Bano
+Bello Figo
+Pupo
+Edoardo Bennato
+Pino Daniele
+Anna Oxa
+AC/DC
+Morgan
+Mia Martini
+Fiorella Mannoia
+ABBA
+U2
+Bee Gees
+Stromae
+Santana
+J Balvin
+Enrique Iglesias
+Camila Cabello
+Laura Pausini
+Myke Towers
+Bob Dylan
+Jimi Hendrix
+James Brown
+Prince
+The Doors
+Aerosmith
+Frank Zappa
+Macklemore
+DaBaby
+NLE Choppa
+Ice Spice
+Anuel AA
+Guè Pequeno
+Caparezza
+Madman
+Rocco Hunt
+Francesca Michelin
+Arisa
+Annalisa
+Irama
+Elodie
+Gazzelle
+Mahmood
+Lorde
+Il Tre
+Mina
+Ornella Vanoni
+Arctic Monkeys
+Eagles
+Denzel Curry
+Peter Gabriel
