@@ -3,7 +3,9 @@
 <!-- The lang attribute will be set dynamically by JavaScript -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Dynamic meta tags based on browser language -->
     <script>
       // Run this before other meta tags
@@ -120,7 +122,6 @@
             margin-bottom: 1.2rem;
             text-align: center;
             font-style: italic;
-            color: transparent;
             background: linear-gradient(90deg, 
                 #473c8b, 
                 #614dc2, 
@@ -134,11 +135,8 @@
             filter: drop-shadow(0 0 2px rgba(71, 60, 139, 0.7));
             text-shadow: 0 0 15px rgba(71, 60, 139, 0.5);
             display: inline-block;
-            width: fit-content;
-            margin: 0 auto;
-            padding: 0;
-            max-width: 100%;
-            overflow: hidden;
+            width: auto;
+            padding: 0 10px;
         }
         
         @keyframes shine {
