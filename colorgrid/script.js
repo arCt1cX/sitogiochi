@@ -364,17 +364,17 @@ function revealAnswer() {
 
 // Display the color word over the grid
 function displayColorWord() {
-    // Remove any existing displayed word
-    const existingWord = document.querySelector('.displayed-word');
-    if (existingWord) {
-        existingWord.remove();
-    }
+    // Get the container for the displayed word
+    const wordContainer = document.getElementById('displayed-word-container');
+    
+    // Clear any existing content
+    wordContainer.innerHTML = '';
     
     // Create and display the new word
     const wordDisplay = document.createElement('div');
     wordDisplay.classList.add('displayed-word');
-    wordDisplay.textContent = colorWord;
-    colorGrid.parentElement.appendChild(wordDisplay);
+    wordDisplay.textContent = `"${colorWord}"`;
+    wordContainer.appendChild(wordDisplay);
 }
 
 // Handle the "Got it" button click
