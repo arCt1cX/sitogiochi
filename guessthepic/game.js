@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Create and test a sample image path from this category
                         if (category.items && category.items.length > 0) {
                             const sampleItem = category.items[0];
-                            const samplePath = `img/${category.name}/${sampleItem.replace(/ /g, '_').toLowerCase()}.jpg`;
+                            const samplePath = `img/${category.name}/${sampleItem.replace(/ /g, '_')}.jpg`;
                             console.log(`Testing path for ${category.name}: ${samplePath}`);
                             
                             // Try to load the sample image
