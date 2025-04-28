@@ -214,6 +214,14 @@ function showTargetReveal() {
     const cellColor = getColorForCell(targetCell.row, targetCell.col);
     targetCellDisplay.style.backgroundColor = cellColor;
     
+    // Set the input placeholder based on language
+    const lang = getCurrentLanguage();
+    if (lang === 'it') {
+        colorWordInput.placeholder = "Scrivi una parola per descrivere questo colore...";
+    } else {
+        colorWordInput.placeholder = "Type a word to describe this color...";
+    }
+    
     // Hide setup screen, show target reveal
     gameSetupSection.classList.add('hidden');
     targetRevealSection.classList.remove('hidden');
@@ -382,9 +390,14 @@ function handleGotIt() {
     // Get the word from the input
     colorWord = colorWordInput.value.trim();
     
-    // If no word was entered, use a default message
+    // If no word was entered, use a default message based on language
     if (!colorWord) {
-        colorWord = getCurrentLanguage() === 'it' ? 'Colore Segreto' : 'Secret Color';
+        const lang = getCurrentLanguage();
+        if (lang === 'it') {
+            colorWord = "Colore Segreto";
+        } else {
+            colorWord = "Secret Color";
+        }
     }
     
     // Show the game play screen
