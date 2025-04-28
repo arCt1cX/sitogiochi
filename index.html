@@ -120,6 +120,7 @@
             margin-bottom: 1.2rem;
             text-align: center;
             font-style: italic;
+            color: transparent;
             background: linear-gradient(90deg, 
                 #473c8b, 
                 #614dc2, 
@@ -133,8 +134,11 @@
             filter: drop-shadow(0 0 2px rgba(71, 60, 139, 0.7));
             text-shadow: 0 0 15px rgba(71, 60, 139, 0.5);
             display: inline-block;
-            width: auto;
-            padding: 0 10px;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 100%;
+            overflow: hidden;
         }
         
         @keyframes shine {
