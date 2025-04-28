@@ -45,6 +45,7 @@ let targetCell = null;
 let players = [];
 let startingHue = 0; // Randomized for each game
 const HUE_RANGE = 120; // Further increased range for more distinct colors
+let colorWord = ''; // Store the word describing the color
 
 // DOM Elements
 const gameSetupSection = document.getElementById('game-setup');
@@ -62,6 +63,7 @@ const playerInputsArea = document.getElementById('player-inputs');
 const resultsList = document.getElementById('results-list');
 const targetCellDisplay = document.getElementById('target-cell');
 const targetCoordsDisplay = document.getElementById('target-coords');
+const colorWordInput = document.getElementById('color-word');
 
 // Game mode selection buttons
 const mode5x5Button = document.getElementById('mode-5x5');
@@ -137,6 +139,16 @@ function init() {
     // Add event listeners for mode selection
     mode5x5Button.addEventListener('click', () => selectGameMode(5));
     mode10x10Button.addEventListener('click', () => selectGameMode(10));
+    
+    // Add event listener for the color word input
+    colorWordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleGotIt();
+        }
+    });
+    
+    // Update the got-it button click handler
+    gotItButton.addEventListener('click', handleGotIt);
     
     resetGame();
 }
@@ -219,6 +231,9 @@ function showGamePlay() {
     
     // Generate the full color grid
     generateColorGrid(colorGrid);
+    
+    // Display the color word over the grid
+    displayColorWord();
     
     // Add two players by default
     addPlayer();
@@ -347,8 +362,47 @@ function revealAnswer() {
     gameResultSection.classList.remove('hidden');
 }
 
+// Display the color word over the grid
+function displayColorWord() {
+    // Remove any existing displayed word
+    const existingWord = document.querySelector('.displayed-word');
+    if (existingWord) {
+        existingWord.remove();
+    }
+    
+    // Create and display the new word
+    const wordDisplay = document.createElement('div');
+    wordDisplay.classList.add('displayed-word');
+    wordDisplay.textContent = colorWord;
+    colorGrid.parentElement.appendChild(wordDisplay);
+}
+
+// Handle the "Got it" button click
+function handleGotIt() {
+    // Get the word from the input
+    colorWord = colorWordInput.value.trim();
+    
+    // If no word was entered, use a default message
+    if (!colorWord) {
+        colorWord = getCurrentLanguage() === 'it' ? 'Colore Segreto' : 'Secret Color';
+    }
+    
+    // Show the game play screen
+    showGamePlay();
+}
+
 // Reset game to initial state
 function resetGame() {
+    // Clear the color word
+    colorWord = '';
+    colorWordInput.value = '';
+    
+    // Remove any displayed word
+    const displayedWord = document.querySelector('.displayed-word');
+    if (displayedWord) {
+        displayedWord.remove();
+    }
+    
     // Clear all sections
     targetCellDisplay.style.backgroundColor = '';
     targetCoordsDisplay.textContent = '';
@@ -370,7 +424,7 @@ function resetGame() {
 
 // Event listeners
 startGameButton.addEventListener('click', startGame);
-gotItButton.addEventListener('click', showGamePlay);
+gotItButton.addEventListener('click', handleGotIt);
 addPlayerButton.addEventListener('click', addPlayer);
 revealAnswerButton.addEventListener('click', revealAnswer);
 playAgainButton.addEventListener('click', resetGame);

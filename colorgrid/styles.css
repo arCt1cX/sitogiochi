@@ -290,4 +290,38 @@ p {
     .empty-corner {
         width: 30px;
     }
+}
+
+.word-input-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#color-word {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+#color-word:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.displayed-word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
 } 
