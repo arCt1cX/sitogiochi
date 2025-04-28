@@ -515,86 +515,49 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log("Valid categories for selection:", validCategories.map(c => `${c.name} (${c.items.length} items)`));
         
-        // Shuffle the categories to ensure random selection
-        const shuffledCategories = [...validCategories];
-        shuffleArray(shuffledCategories);
-        console.log("Shuffled categories for selection:", shuffledCategories.map(c => c.name));
-        
-        // Try to select one item from the first 5 shuffled categories
-        // This ensures we get a good mix of categories
-        const categoriesToUse = shuffledCategories.slice(0, Math.min(5, shuffledCategories.length));
-        console.log("Categories selected for this round:", categoriesToUse.map(c => c.name));
-        
-        // Select one item from each selected category
-        for (const category of categoriesToUse) {
-            const randomIndex = Math.floor(Math.random() * category.items.length);
-            const item = category.items[randomIndex];
-            
-            // Create the file path
-            const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
-            console.log(`Adding item from ${category.name}: ${item} (${imagePath})`);
-            
-            playerRound.push({
-                category: category.name,
-                item: item,
-                imagePath: imagePath
+        // Create a pool of all available items across all categories
+        const itemPool = [];
+        validCategories.forEach(category => {
+            category.items.forEach(item => {
+                const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
+                itemPool.push({
+                    category: category.name,
+                    item: item,
+                    imagePath: imagePath
+                });
             });
+        });
+        
+        // Shuffle the entire pool
+        shuffleArray(itemPool);
+        
+        // Select 5 unique items from the pool
+        const selectedItems = new Set();
+        for (let i = 0; i < itemPool.length && playerRound.length < 5; i++) {
+            const item = itemPool[i];
+            const itemKey = `${item.category}-${item.item}`;
+            
+            // Only add if we haven't seen this item before
+            if (!selectedItems.has(itemKey)) {
+                selectedItems.add(itemKey);
+                playerRound.push(item);
+                console.log(`Adding item from ${item.category}: ${item.item} (${item.imagePath})`);
+            }
         }
         
-        // If we don't have 5 items yet (because there weren't enough valid categories),
-        // add more from the available categories
+        // If we still don't have 5 items, use fallback items
         if (playerRound.length < 5) {
-            console.log(`Only have ${playerRound.length} items, need to add more...`);
-            
-            // Keep track of items we've already chosen
-            const chosenItems = playerRound.map(item => `${item.category}-${item.item}`);
-            
-            // Continue adding items until we have 5 or run out of unique items
-            let attempts = 0;
-            while (playerRound.length < 5 && attempts < 100) { // Add an attempts limit to prevent infinite loops
-                attempts++;
-                
-                // Randomly select a category
-                const categoryIndex = Math.floor(Math.random() * validCategories.length);
-                const category = validCategories[categoryIndex];
-                
-                // Randomly select an item from that category
-                const itemIndex = Math.floor(Math.random() * category.items.length);
-                const item = category.items[itemIndex];
-                
-                // Check if this item is already in our round
-                const itemKey = `${category.name}-${item}`;
-                if (!chosenItems.includes(itemKey)) {
-                    chosenItems.push(itemKey);
-                    
-                    // Create the file path
-                    const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
-                    console.log(`Adding additional item from ${category.name}: ${item} (${imagePath})`);
-                    
-                    playerRound.push({
-                        category: category.name,
-                        item: item,
-                        imagePath: imagePath
-                    });
-                }
-            }
-            
-            if (playerRound.length < 5) {
-                console.warn(`Could not find enough unique items, only have ${playerRound.length}`);
-                
-                // Fill remaining slots with fallback items if needed
-                const fallbackItems = generateFallbackItems();
-                while (playerRound.length < 5 && fallbackItems.length > 0) {
-                    playerRound.push(fallbackItems.pop());
-                }
+            console.warn(`Could not find enough unique items, only have ${playerRound.length}`);
+            const fallbackItems = generateFallbackItems();
+            while (playerRound.length < 5 && fallbackItems.length > 0) {
+                playerRound.push(fallbackItems.pop());
             }
         }
         
-        // Shuffle the round
-        const shuffledRound = [...playerRound]; // Create a copy to shuffle
-        shuffleArray(shuffledRound);
-        console.log("Final round items:", shuffledRound.map(item => `${item.category}: ${item.item}`));
-        return shuffledRound;
+        // Shuffle the final round
+        shuffleArray(playerRound);
+        console.log("Final round items:", playerRound.map(item => `${item.category}: ${item.item}`));
+        return playerRound;
     }
 
     /**
