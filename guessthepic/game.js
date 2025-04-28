@@ -531,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const item = category.items[randomIndex];
             
             // Create the file path
-            const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
+            const imagePath = `img/${category.name}/${item.replace(/ /g, '_')}.jpg`;
             console.log(`Adding item from ${category.name}: ${item} (${imagePath})`);
             
             playerRound.push({
@@ -568,7 +568,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     chosenItems.push(itemKey);
                     
                     // Create the file path
-                    const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
+                    const imagePath = `img/${category.name}/${item.replace(/ /g, '_')}.jpg`;
                     console.log(`Adding additional item from ${category.name}: ${item} (${imagePath})`);
                     
                     playerRound.push({
