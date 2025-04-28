@@ -3,7 +3,7 @@
 <!-- The lang attribute will be set dynamically by JavaScript -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Dynamic meta tags based on browser language -->
@@ -250,73 +250,40 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+            </div>
+            <h1>Drew Games</h1>
+            <div id="tagline" class="tagline">Illumina la mente, scatena la serata</div>
+            <h2 id="subtitle">Giochi da fare con gli amici offline 🎉</h2>
+        </header>
+
+        <main>
+            <div class="games-container" id="gamesContainer">
+                <!-- Game cards will be inserted here by JavaScript -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
+                <div class="support-container">
+                    <!-- Mobile-friendly BMC button implementation -->
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
         <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
             <!-- The country flag SVG will be inserted here by JavaScript -->
         </svg>
     </button>
-    
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
-        </div>
-        <h1>Drew Games</h1>
-        <div id="tagline" class="tagline">Illumina la mente, scatena la serata</div>
-        <h2 id="subtitle">Giochi da fare con gli amici offline 🎉</h2>
-    </header>
-
-    <main>
-        <div class="games-container" id="gamesContainer">
-            <!-- Game cards will be inserted here by JavaScript -->
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
-            <div class="support-container">
-                <!-- Mobile-friendly BMC button implementation -->
-                <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
-                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
-                </a>
-                <script>
-                    // Load the official BMC script
-                    (function() {
-                        const script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-                        script.setAttribute('data-name', 'bmc-button');
-                        script.setAttribute('data-slug', 'partygamesdrew');
-                        script.setAttribute('data-color', '#BD5FFF');
-                        script.setAttribute('data-emoji', '');
-                        script.setAttribute('data-font', 'Cookie');
-                        script.setAttribute('data-text', 'Buy me a coffee');
-                        script.setAttribute('data-outline-color', '#000000');
-                        script.setAttribute('data-font-color', '#ffffff');
-                        script.setAttribute('data-coffee-color', '#FFDD00');
-                        
-                        // On script load, hide our fallback if the official button rendered properly
-                        script.onload = function() {
-                            setTimeout(function() {
-                                const bmcButton = document.querySelector('.bmc-btn');
-                                if (bmcButton) {
-                                    // If the official button is present, hide our fallback
-                                    document.getElementById('bmc-link').style.display = 'none';
-                                    
-                                    // Add touchend event listener for mobile devices
-                                    bmcButton.addEventListener('touchend', function(e) {
-                                        window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
-                                    });
-                                }
-                            }, 1000); // Wait a second for the button to render
-                        };
-                        
-                        document.body.appendChild(script);
-                    })();
-                </script>
-            </div>
-        </div>
-    </footer>
 
     <script src="lang.js"></script>
     <script src="script.js"></script>

@@ -24,16 +24,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
-    /* Add padding for iOS status bar */
-    padding-top: env(safe-area-inset-top);
 }
 
-/* Add specific styles for iOS */
-@supports (padding: max(0px)) {
-    body {
-        padding-top: max(20px, env(safe-area-inset-top));
-    }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
 }
 
 /* Header */
