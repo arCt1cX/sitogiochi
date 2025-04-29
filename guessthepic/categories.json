@@ -1996,7 +1996,6 @@
       "Monster Energy",
       "Heineken",
       "Budweiser",
-      "Corona",
       "Domino's Pizza",
       "KFC",
       "Burger King",
@@ -2081,11 +2080,10 @@
       "Vodafone Italia",
       "WindTre",
       "Nutella"
-      
     ]
   },
   {
-    "name": "Nazione",
+    "name": "nazione",
     "items": [
       "Stati Uniti",
       "Canada",
