@@ -11,7 +11,12 @@ let gameState = {
     ], // Current board state
     currentPlayer: "red", // "red" or "blue"
     selectedCell: null, // Currently selected cell {row, col}
-    gameOver: false
+    gameOver: false,
+    cellOwners: [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+    ]
 };
 
 // Password for accessing the game
@@ -117,11 +122,24 @@ function resetGameState() {
     gameState.selectedCell = null;
     gameState.gameOver = false;
     
+    // Reset cellOwners
+    gameState.cellOwners = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+    ];
+    
     // Update player marker
     currentPlayerEl.textContent = "🔴";
     
     // Hide emoji selection
     emojiSelection.classList.add("hidden");
+    
+    // Clear any win-cell classes
+    const winCells = document.querySelectorAll('.win-cell');
+    winCells.forEach(cell => {
+        cell.classList.remove('win-cell');
+    });
 }
 
 // Reset the game (new board)
@@ -489,14 +507,6 @@ function makeMove(emoji) {
 function setCellState(row, col, player) {
     // We'll use a parallel array to track cell ownership
     // This works because the emoji in the board might not be directly related to the player
-    if (!gameState.cellOwners) {
-        gameState.cellOwners = [
-            ["", "", ""],
-            ["", "", ""],
-            ["", "", ""]
-        ];
-    }
-    
     gameState.cellOwners[row][col] = player;
 }
 
