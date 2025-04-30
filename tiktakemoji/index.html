@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>TikTakEmoji - Tris con Emoji | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca a TikTakEmoji: una versione divertente del tris dove inserisci emoji che collegano le righe e le colonne! Un party game perfetto da giocare con gli amici offline.">');
+      } else {
+        document.write('<title>TikTakEmoji - Tic-Tac-Toe with Emojis | DrewGames</title>');
+        document.write('<meta name="description" content="Play TikTakEmoji: a fun twist on classic tic-tac-toe where you place emojis that connect rows and columns! A perfect party game to play with friends offline.">');
+      }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/tiktakemoji/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/tiktakemoji/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/tiktakemoji/" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/tiktakemoji/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+    
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">TikTakEmoji</h1>
+        </div>
+
+        <!-- Password Protection Screen -->
+        <div id="password-screen" class="game-screen active">
+            <h2 id="passwordTitle">Game Under Testing</h2>
+            <div class="instructions-container">
+                <p id="passwordText">This game is currently under testing. Please enter the password to continue.</p>
+            </div>
+            <div class="password-container">
+                <input type="password" id="password-input" class="password-input" placeholder="Enter password">
+                <p id="password-error" class="password-error hidden">Incorrect password. Please try again.</p>
+            </div>
+            <button id="submit-password" class="btn primary-btn">Submit</button>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructions-screen" class="game-screen">
+            <h2 id="instructionsTitle">How to Play</h2>
+            <div class="instructions-container">
+                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing emojis that connect a row emoji and a column emoji.</p>
+                <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching emoji for the cell. Get three in a row to win!</p>
+            </div>
+            <button id="start-game" class="btn primary-btn">Start Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="game-screen">
+            <div class="game-info">
+                <div class="player-turn">
+                    <span id="playerTurnText">Current Turn:</span> 
+                    <span id="current-player" class="player-marker">🔴</span>
+                </div>
+                <button id="new-game" class="btn secondary-btn"><span id="newGameText">New Game</span></button>
+            </div>
+            
+            <div id="game-board" class="game-board">
+                <!-- Game board will be generated by JavaScript -->
+            </div>
+            
+            <div id="emoji-selection" class="emoji-selection hidden">
+                <h3 id="selectEmojiText">Select a matching emoji:</h3>
+                <div id="emoji-options" class="emoji-options">
+                    <!-- Emoji options will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Winner Screen -->
+        <div id="winner-screen" class="game-screen">
+            <h2 id="winnerTitle">Game Over!</h2>
+            <div class="winner-info">
+                <p><span id="winnerText">Winner:</span> <span id="winner-player" class="player-marker">🔴</span></p>
+            </div>
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Play Again</span></button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 

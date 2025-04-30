@@ -23,29 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow element -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+                <!-- Light circular glow in background -->
+                <circle cx="40" cy="40" r="30" fill="rgba(123,104,238,0.1)" />
                 
-                <!-- Group of silhouettes -->
-                <!-- Left character (suspicious) -->
-                <g class="suspicious-character">
-                    <!-- Body with connected head -->
-                    <path d="M16,65 C16,50 20,45 24,45 C28,45 32,50 32,65" stroke="white" stroke-linecap="round" />
-                    <path d="M18.5,39 C18,36 19,33 24,33 C29,33 30,36 29.5,39 C29,42 28,45 24,45 C20,45 19,42 18.5,39Z" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="24" cy="25" r="9" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
-                    
-                    <!-- Suspicious elements -->
-                    <path d="M21,24 L23,22 M25,22 L27,24" stroke="white" stroke-width="1.2" />
-                    <path d="M24,31 C22,29 26,29 24,31" stroke="white" stroke-width="1" />
-                    <path d="M22,55 L26,55" stroke="rgba(255,0,0,0.5)" stroke-width="1.2" stroke-dasharray="1 1" />
-                </g>
-                
-                <!-- Middle character -->
+                <!-- Left character -->
                 <g>
                     <!-- Body with connected head -->
-                    <path d="M33,65 C33,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
-                    <path d="M35.5,38 C35,35 36,32 40,32 C44,32 45,35 44.5,38 C44,41 43,45 40,45 C37,45 36,41 35.5,38Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="40" cy="22" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <path d="M33,65 C33,50 29,45 26,45 C23,45 19,50 19,65" stroke="white" stroke-linecap="round" />
+                    <path d="M30.5,39 C31,36 30,33 26,33 C22,33 21,36 21.5,39 C22,42 23,45 26,45 C29,45 30,42 30.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="26" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    
+                    <!-- Facial features -->
+                    <path d="M23,24 L25,24 M27,24 L29,24" stroke="white" stroke-width="1.2" />
+                    <path d="M26,30 C24,28 28,28 26,30" stroke="white" stroke-width="1" />
+                </g>
+                
+                <!-- Center character -->
+                <g>
+                    <!-- Body with connected head -->
+                    <path d="M41,65 C41,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
+                    <path d="M37.5,39 C37,36 38,33 40,33 C42,33 43,36 42.5,39 C42,42 41,45 40,45 C37,45 38,42 37.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="40" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
                     
                     <path d="M37,21 L39,21 M41,21 L43,21" stroke="white" stroke-width="1.2" />
                     <path d="M40,27 C38,25 42,25 40,27" stroke="white" stroke-width="1" />
@@ -80,6 +78,69 @@ document.addEventListener('DOMContentLoaded', () => {
                 <path d="M63,35 L55,30" stroke="white" stroke-width="1" stroke-linecap="round" />
                 <path d="M45,38 C42,42 39,39 40,36" stroke="white" stroke-width="1" />
                 <path d="M40,36 L32,28" stroke="white" stroke-width="1" stroke-linecap="round" />
+            </svg>`
+        },
+        {
+            id: "tiktakemoji",
+            displayName: getTranslation('tiktakemoji', 'title'),
+            catchphrase: getTranslation('tiktakemoji', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Light background glow -->
+                <circle cx="40" cy="40" r="30" fill="rgba(123,104,238,0.1)" />
+                
+                <!-- Game board with emoji labels -->
+                <rect x="15" y="15" width="50" height="50" rx="3" fill="none" stroke="white" stroke-width="1.5" />
+                
+                <!-- Grid lines -->
+                <line x1="32" y1="15" x2="32" y2="65" stroke="white" stroke-width="1" />
+                <line x1="48" y1="15" x2="48" y2="65" stroke="white" stroke-width="1" />
+                <line x1="15" y1="32" x2="65" y2="32" stroke="white" stroke-width="1" />
+                <line x1="15" y1="48" x2="65" y2="48" stroke="white" stroke-width="1" />
+                
+                <!-- Emoji labels for rows and columns -->
+                <circle cx="10" cy="24" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="10" y="26" font-size="4" text-anchor="middle" fill="white">🍕</text>
+                
+                <circle cx="10" cy="40" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="10" y="42" font-size="4" text-anchor="middle" fill="white">🐶</text>
+                
+                <circle cx="10" cy="56" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="10" y="58" font-size="4" text-anchor="middle" fill="white">👻</text>
+                
+                <circle cx="24" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="24" y="12" font-size="4" text-anchor="middle" fill="white">❤️</text>
+                
+                <circle cx="40" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="40" y="12" font-size="4" text-anchor="middle" fill="white">🦴</text>
+                
+                <circle cx="56" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
+                <text x="56" y="12" font-size="4" text-anchor="middle" fill="white">🎉</text>
+                
+                <!-- Player tokens and emojis -->
+                <circle cx="24" cy="24" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
+                <text x="24" y="26" font-size="6" text-anchor="middle" fill="white">😍</text>
+                
+                <circle cx="40" cy="24" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
+                <text x="40" y="26" font-size="6" text-anchor="middle" fill="white">🦮</text>
+                
+                <circle cx="56" cy="40" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
+                <text x="56" y="42" font-size="6" text-anchor="middle" fill="white">🎃</text>
+                
+                <circle cx="40" cy="56" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
+                <text x="40" y="58" font-size="6" text-anchor="middle" fill="white">😱</text>
+                
+                <!-- Diagonal win line -->
+                <line x1="18" y1="18" x2="62" y2="62" stroke="rgba(255,215,0,0.6)" stroke-width="2" stroke-dasharray="3 2" />
+                
+                <!-- Selection area at empty spot -->
+                <rect x="48" y="48" width="16" height="16" fill="rgba(255,255,255,0.1)" stroke="white" stroke-dasharray="2 1" />
+                <circle cx="56" cy="56" r="2" fill="rgba(255,255,255,0.5)" />
+                <path d="M54,54 L58,58 M58,54 L54,58" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                
+                <!-- Emoji selection popup -->
+                <rect x="50" y="70" width="20" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="0.8" />
+                <text x="55" y="74" font-size="4" fill="white">💀 👻 😱</text>
+                <path d="M56,65 L56,70" stroke="white" stroke-width="0.5" stroke-dasharray="1 1" />
             </svg>`
         },
         {

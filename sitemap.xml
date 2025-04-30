@@ -23,6 +23,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/impostor/"/>
   </url>
   <url>
+    <loc>https://www.partygamesdrew.com/tiktakemoji/</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/tiktakemoji/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/tiktakemoji/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/tiktakemoji/"/>
+  </url>
+  <url>
     <loc>https://www.partygamesdrew.com/colorgrid/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>

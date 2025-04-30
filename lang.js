@@ -49,6 +49,10 @@ const translations = {
         'quizzy': {
             'title': 'Quizzy',
             'catchphrase': 'Sfida i tuoi amici in un divertente gioco a quiz!'
+        },
+        'tiktakemoji': {
+            'title': 'TikTakEmoji',
+            'catchphrase': 'Versione del tris con connessioni di emoji!'
         }
     },
     'en': {
@@ -100,6 +104,10 @@ const translations = {
         'quizzy': {
             'title': 'Quizzy',
             'catchphrase': 'Challenge your friends in a fun quiz game!'
+        },
+        'tiktakemoji': {
+            'title': 'TikTakEmoji',
+            'catchphrase': 'Tic-Tac-Toe with emoji connections!'
         }
     }
 };
