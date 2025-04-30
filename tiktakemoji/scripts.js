@@ -150,199 +150,150 @@ function showScreen(screenName) {
 
 // Select random emojis for rows and columns
 function selectRandomEmojis() {
-    // Build a matrix of tag compatibility
-    const tagCompatibility = new Map();
+    // First, build a directed graph of emoji compatibility
+    const emojiGraph = buildEmojiGraph();
     
-    // Initialize the compatibility map with all tags
-    gameState.combinations.forEach(combo => {
-        combo.tags.forEach(tag1 => {
-            if (!tagCompatibility.has(tag1)) {
-                tagCompatibility.set(tag1, new Map());
-            }
-            
-            combo.tags.forEach(tag2 => {
-                if (tag1 !== tag2) {
-                    const connections = tagCompatibility.get(tag1);
-                    if (!connections.has(tag2)) {
-                        connections.set(tag2, new Set());
-                    }
-                    // Add all valid emojis for this pair
-                    combo.valid.forEach(validEmoji => {
-                        connections.get(tag2).add(validEmoji);
-                    });
-                }
-            });
-        });
-    });
+    // Find a valid grid
+    const validGrid = findValidEmojiGrid(emojiGraph);
     
-    // Convert to array of tags with their possible connections
-    const tagsWithConnections = [];
-    tagCompatibility.forEach((connections, tag) => {
-        let connectionCount = 0;
-        connections.forEach(validEmojis => {
-            connectionCount += validEmojis.size;
-        });
-        
-        tagsWithConnections.push({
-            tag,
-            connections,
-            connectionCount
-        });
-    });
-    
-    // Sort by number of connections (most versatile tags first)
-    tagsWithConnections.sort((a, b) => b.connectionCount - a.connectionCount);
-    
-    // Create a 3x3 grid of all possible valid emoji combinations
-    const findValidGrid = () => {
-        // Make multiple attempts to find a valid grid
-        for (let attempt = 0; attempt < 50; attempt++) {
-            // Take the top 30 most versatile tags as candidates
-            const candidateTags = tagsWithConnections.slice(0, Math.min(30, tagsWithConnections.length));
-            const shuffledCandidates = shuffleArray(candidateTags);
-            
-            // First, select row emojis (from the top candidates)
-            const rowCandidates = shuffledCandidates.slice(0, 10);
-            
-            // Try different combinations of row emojis
-            for (let r1 = 0; r1 < rowCandidates.length - 2; r1++) {
-                for (let r2 = r1 + 1; r2 < rowCandidates.length - 1; r2++) {
-                    for (let r3 = r2 + 1; r3 < rowCandidates.length; r3++) {
-                        const rowEmojis = [
-                            rowCandidates[r1].tag,
-                            rowCandidates[r2].tag,
-                            rowCandidates[r3].tag
-                        ];
-                        
-                        // Find column emojis that connect with all row emojis
-                        const possibleColEmojis = findCompatibleTags(rowEmojis, tagCompatibility);
-                        
-                        if (possibleColEmojis.length >= 3) {
-                            // We have found at least 3 column emojis that work with all row emojis
-                            const colEmojis = shuffleArray(possibleColEmojis).slice(0, 3);
-                            
-                            // Double-check that we have a valid grid
-                            if (isValidEmojiGrid(rowEmojis, colEmojis)) {
-                                // Success! We found a valid grid
-                                gameState.rowEmojis = rowEmojis;
-                                gameState.colEmojis = colEmojis;
-                                
-                                // Create the grid of valid combinations
-                                gameState.validCellCombinations = createValidCombinationsGrid(
-                                    gameState.rowEmojis, 
-                                    gameState.colEmojis
-                                );
-                                
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        return false;
-    };
-    
-    // Find compatible tags for all row emojis
-    function findCompatibleTags(rowEmojis, tagCompatibility) {
-        // Start with all tags
-        const allTags = [...tagCompatibility.keys()];
-        
-        // Filter to only tags that connect with all row emojis
-        return allTags.filter(tag => {
-            return rowEmojis.every(rowEmoji => {
-                // Check if this tag connects with the row emoji
-                const connections = tagCompatibility.get(rowEmoji);
-                return connections && 
-                       connections.has(tag) && 
-                       connections.get(tag).size > 0;
-            });
-        });
-    }
-    
-    // Try to find a valid grid
-    const validGridFound = findValidGrid();
-    
-    if (!validGridFound) {
-        console.error("Could not find a valid emoji grid after multiple attempts");
-        // Fallback to a simple selection if no valid grid is found
+    if (validGrid) {
+        gameState.rowEmojis = validGrid.rows;
+        gameState.colEmojis = validGrid.cols;
+        gameState.validCellCombinations = createValidCombinationsGrid(
+            gameState.rowEmojis, 
+            gameState.colEmojis
+        );
+    } else {
+        console.error("Could not find a valid emoji grid");
         fallbackEmojiSelection();
     }
 }
 
-// Check if a set of row and column emojis creates a valid grid
-function isValidEmojiGrid(rowEmojis, colEmojis) {
-    // For each row and column intersection, check if there is at least one valid combination
-    for (let r = 0; r < rowEmojis.length; r++) {
-        for (let c = 0; c < colEmojis.length; c++) {
-            const validOptions = findValidCombinations(rowEmojis[r], colEmojis[c]);
-            if (validOptions.length === 0) {
-                return false; // This cell has no valid options
+// Build a graph of emoji relationships
+function buildEmojiGraph() {
+    const graph = new Map();
+    
+    // First, extract all unique emojis
+    const allEmojis = new Set();
+    gameState.combinations.forEach(combo => {
+        combo.tags.forEach(tag => allEmojis.add(tag));
+    });
+    
+    // Initialize the graph with empty connections for each emoji
+    allEmojis.forEach(emoji => {
+        graph.set(emoji, { 
+            connections: new Map(),
+            connectionCount: 0 
+        });
+    });
+    
+    // Now fill in the connections (which emojis can connect with which others)
+    gameState.combinations.forEach(combo => {
+        if (combo.tags.length >= 2 && combo.valid.length >= 1) {
+            // For each pair of tags, record their connection
+            for (let i = 0; i < combo.tags.length; i++) {
+                for (let j = i + 1; j < combo.tags.length; j++) {
+                    const tag1 = combo.tags[i];
+                    const tag2 = combo.tags[j];
+                    
+                    // Add connection from tag1 to tag2
+                    if (!graph.get(tag1).connections.has(tag2)) {
+                        graph.get(tag1).connections.set(tag2, new Set());
+                    }
+                    combo.valid.forEach(validEmoji => {
+                        graph.get(tag1).connections.get(tag2).add(validEmoji);
+                    });
+                    graph.get(tag1).connectionCount += combo.valid.length;
+                    
+                    // Add connection from tag2 to tag1 (bidirectional)
+                    if (!graph.get(tag2).connections.has(tag1)) {
+                        graph.get(tag2).connections.set(tag1, new Set());
+                    }
+                    combo.valid.forEach(validEmoji => {
+                        graph.get(tag2).connections.get(tag1).add(validEmoji);
+                    });
+                    graph.get(tag2).connectionCount += combo.valid.length;
+                }
+            }
+        }
+    });
+    
+    return graph;
+}
+
+// Find a valid emoji grid where every cell has at least one valid combination
+function findValidEmojiGrid(emojiGraph) {
+    // Sort emojis by their connection count (most connected first)
+    const emojisByConnections = [...emojiGraph.entries()]
+        .sort((a, b) => b[1].connectionCount - a[1].connectionCount)
+        .map(entry => entry[0]);
+    
+    // Take the top 25 most connected emojis as candidates
+    const candidates = emojisByConnections.slice(0, Math.min(25, emojisByConnections.length));
+    
+    // Try different combinations of rows and columns
+    for (let attempt = 0; attempt < 100; attempt++) {
+        const shuffledCandidates = shuffleArray([...candidates]);
+        
+        // Try to find three row emojis with good connectivity
+        for (let rStart = 0; rStart < shuffledCandidates.length - 5; rStart += 3) {
+            const potentialRows = shuffledCandidates.slice(rStart, rStart + 3);
+            if (potentialRows.length < 3) continue; // Not enough candidates left
+            
+            // Find all emojis that connect with ALL row emojis
+            const compatibleWithAllRows = findMutuallyCompatibleEmojis(potentialRows, emojiGraph);
+            
+            if (compatibleWithAllRows.length >= 3) {
+                // We have enough column emojis that connect with all row emojis
+                const potentialCols = shuffleArray(compatibleWithAllRows).slice(0, 3);
+                
+                // Verify that every cell in the grid has a valid combination
+                if (verifyGridCompleteness(potentialRows, potentialCols, emojiGraph)) {
+                    return {
+                        rows: potentialRows,
+                        cols: potentialCols
+                    };
+                }
+            }
+        }
+    }
+    
+    return null; // No valid grid found
+}
+
+// Find emojis that are compatible with all emojis in the given set
+function findMutuallyCompatibleEmojis(emojiSet, emojiGraph) {
+    // Start with all emojis
+    const allEmojis = [...emojiGraph.keys()];
+    
+    // Filter to those that connect with all emojis in the set
+    return allEmojis.filter(emoji => {
+        // Skip emojis that are already in the set
+        if (emojiSet.includes(emoji)) return false;
+        
+        // Check that this emoji connects with every emoji in the set
+        return emojiSet.every(setEmoji => {
+            const connections = emojiGraph.get(setEmoji).connections;
+            return connections.has(emoji) && connections.get(emoji).size > 0;
+        });
+    });
+}
+
+// Verify that every cell in the grid has at least one valid combination
+function verifyGridCompleteness(rows, cols, emojiGraph) {
+    for (let r = 0; r < rows.length; r++) {
+        for (let c = 0; c < cols.length; c++) {
+            const row = rows[r];
+            const col = cols[c];
+            
+            // Check if this pair has a valid connection
+            const rowNode = emojiGraph.get(row);
+            if (!rowNode.connections.has(col) || rowNode.connections.get(col).size === 0) {
+                return false; // No valid options for this cell
             }
         }
     }
     return true;
-}
-
-// Improved fallback emoji selection if no valid grid is found
-function fallbackEmojiSelection() {
-    console.log("Using fallback emoji selection");
-    
-    // Create a matrix to track valid emoji combinations
-    const validMatrix = [];
-    const allTags = new Set();
-    
-    // Collect all tags
-    gameState.combinations.forEach(combo => {
-        combo.tags.forEach(tag => allTags.add(tag));
-    });
-    
-    const allTagsArray = [...allTags];
-    
-    // Try to systematically find a 3x3 grid with valid options
-    for (let r1 = 0; r1 < allTagsArray.length - 5; r1++) {
-        for (let r2 = r1 + 1; r2 < allTagsArray.length - 4; r2++) {
-            for (let r3 = r2 + 1; r3 < allTagsArray.length - 3; r3++) {
-                const rowTags = [allTagsArray[r1], allTagsArray[r2], allTagsArray[r3]];
-                
-                for (let c1 = 0; c1 < allTagsArray.length; c1++) {
-                    if (rowTags.includes(allTagsArray[c1])) continue;
-                    
-                    for (let c2 = c1 + 1; c2 < allTagsArray.length; c2++) {
-                        if (rowTags.includes(allTagsArray[c2])) continue;
-                        
-                        for (let c3 = c2 + 1; c3 < allTagsArray.length; c3++) {
-                            if (rowTags.includes(allTagsArray[c3])) continue;
-                            
-                            const colTags = [allTagsArray[c1], allTagsArray[c2], allTagsArray[c3]];
-                            
-                            if (isValidEmojiGrid(rowTags, colTags)) {
-                                // Found a valid grid
-                                gameState.rowEmojis = rowTags;
-                                gameState.colEmojis = colTags;
-                                gameState.validCellCombinations = createValidCombinationsGrid(rowTags, colTags);
-                                return;
-                            }
-                        }
-                    }
-                }
-                
-                // Limit checks to avoid excessive computation
-                if (r1 * r2 * r3 > 100) break;
-            }
-        }
-    }
-    
-    // If we reach here, we couldn't find a valid grid
-    // Just pick some random tags and accept some cells might be invalid
-    const randomTags = shuffleArray([...allTags]);
-    gameState.rowEmojis = randomTags.slice(0, 3);
-    gameState.colEmojis = randomTags.slice(3, 6);
-    gameState.validCellCombinations = createValidCombinationsGrid(
-        gameState.rowEmojis, 
-        gameState.colEmojis
-    );
 }
 
 // Create the grid of valid combinations
@@ -689,4 +640,160 @@ function getTranslation(key) {
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
     return translations[key] || key;
+}
+
+// Improved fallback emoji selection if no valid grid is found
+function fallbackEmojiSelection() {
+    console.log("Using fallback emoji selection");
+    
+    // More aggressive approach: pre-compute all valid pairs
+    const validPairs = [];
+    
+    gameState.combinations.forEach(combo => {
+        if (combo.tags.length >= 2 && combo.valid.length >= 1) {
+            // For each pair of tags, record that they connect
+            for (let i = 0; i < combo.tags.length; i++) {
+                for (let j = i + 1; j < combo.tags.length; j++) {
+                    validPairs.push({
+                        emoji1: combo.tags[i],
+                        emoji2: combo.tags[j],
+                        validOptions: combo.valid
+                    });
+                }
+            }
+        }
+    });
+    
+    // Sort by number of valid options (pairs with more options first)
+    validPairs.sort((a, b) => b.validOptions.length - a.validOptions.length);
+    
+    // Systematically try to build a grid by selecting from top pairs
+    for (let attempt = 0; attempt < 50; attempt++) {
+        // Shuffle the top 50 pairs
+        const shuffledPairs = shuffleArray(validPairs.slice(0, Math.min(50, validPairs.length)));
+        
+        // Extract unique emojis from these pairs
+        const uniqueEmojis = new Set();
+        shuffledPairs.forEach(pair => {
+            uniqueEmojis.add(pair.emoji1);
+            uniqueEmojis.add(pair.emoji2);
+        });
+        
+        if (uniqueEmojis.size >= 6) {
+            // Use these emojis to create a grid
+            const emojiArray = shuffleArray([...uniqueEmojis]);
+            const rows = emojiArray.slice(0, 3);
+            const cols = emojiArray.slice(3, 6);
+            
+            // Check if this creates a valid grid
+            const allValid = rows.every(row => {
+                return cols.every(col => {
+                    const validOptions = findValidCombinations(row, col);
+                    return validOptions.length > 0;
+                });
+            });
+            
+            if (allValid) {
+                gameState.rowEmojis = rows;
+                gameState.colEmojis = cols;
+                gameState.validCellCombinations = createValidCombinationsGrid(rows, cols);
+                return;
+            }
+        }
+    }
+    
+    // Last resort: create a grid with guaranteed connections
+    constructForcedValidGrid();
+}
+
+// Construct a grid by forcing valid combinations
+function constructForcedValidGrid() {
+    console.log("Constructing a forced valid grid");
+    
+    // Extract all unique tags and their valid combinations
+    const tagMap = new Map();
+    gameState.combinations.forEach(combo => {
+        combo.tags.forEach(tag => {
+            if (!tagMap.has(tag)) {
+                tagMap.set(tag, new Set());
+            }
+        });
+    });
+    
+    // Find combinations with at least 2 valid options
+    const goodCombos = gameState.combinations.filter(combo => 
+        combo.tags.length >= 2 && combo.valid.length >= 1
+    );
+    
+    if (goodCombos.length < 9) {
+        // Not enough good combinations, pick some tags anyway
+        const allTags = [...tagMap.keys()];
+        const randomTags = shuffleArray(allTags);
+        gameState.rowEmojis = randomTags.slice(0, 3);
+        gameState.colEmojis = randomTags.slice(3, 6);
+    } else {
+        // Try to build a grid manually from good combinations
+        const selectedCombos = shuffleArray(goodCombos).slice(0, 9);
+        const rows = new Set();
+        const cols = new Set();
+        
+        // Extract unique tags for rows and columns
+        selectedCombos.forEach(combo => {
+            // Add the first tag to rows if we need more
+            if (rows.size < 3 && !cols.has(combo.tags[0])) {
+                rows.add(combo.tags[0]);
+            }
+            // Add the second tag to cols if we need more
+            if (cols.size < 3 && !rows.has(combo.tags[1])) {
+                cols.add(combo.tags[1]);
+            }
+        });
+        
+        // Fill in if needed
+        const allTags = [...tagMap.keys()];
+        const extraTags = shuffleArray(allTags.filter(tag => !rows.has(tag) && !cols.has(tag)));
+        
+        while (rows.size < 3) rows.add(extraTags.pop());
+        while (cols.size < 3) cols.add(extraTags.pop());
+        
+        gameState.rowEmojis = [...rows];
+        gameState.colEmojis = [...cols];
+    }
+    
+    gameState.validCellCombinations = createValidCombinationsGrid(
+        gameState.rowEmojis, 
+        gameState.colEmojis
+    );
+    
+    // Force at least one valid option per cell
+    forceCellValidity();
+}
+
+// Force each cell to have at least one valid option
+function forceCellValidity() {
+    for (let r = 0; r < 3; r++) {
+        for (let c = 0; c < 3; c++) {
+            if (gameState.validCellCombinations[r][c].length === 0) {
+                // This cell has no valid options - force one
+                const randomEmoji = getRandomEmoji();
+                console.log(`Forcing emoji ${randomEmoji} for cell (${r},${c})`);
+                
+                // Add a new combination to the game state
+                gameState.combinations.push({
+                    tags: [gameState.rowEmojis[r], gameState.colEmojis[c]],
+                    valid: [randomEmoji]
+                });
+                
+                // Update the cell's valid combinations
+                gameState.validCellCombinations[r][c] = [randomEmoji];
+            }
+        }
+    }
+}
+
+// Get a random emoji for forced combinations
+function getRandomEmoji() {
+    const commonEmojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", 
+                         "😋", "😎", "😍", "😘", "🥰", "😗", "😙", "😚", "🙂", "🤗"];
+    return commonEmojis[Math.floor(Math.random() * commonEmojis.length)];
 } 
