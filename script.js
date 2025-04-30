@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Apply initial language based on user preference
     applyTranslations();
-    
+
     // Language toggle is now handled in applyTranslations() function in lang.js
-    
+
     // Update page content with current language
     document.getElementById('tagline').textContent = getTranslation('tagline');
     document.getElementById('subtitle').textContent = getTranslation('subtitle');
     document.getElementById('copyright').textContent = getTranslation('copyright');
-    
+
     // Update page title and description
     document.title = getTranslation('pageTitle');
     const metaDesc = document.getElementById('pageDescription');
     if (metaDesc) {
         metaDesc.setAttribute('content', getTranslation('pageDescription'));
     }
-    
+
     // Games array with additional catchphrase information and display names
     const games = [
         {
@@ -23,27 +23,33 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Light circular glow in background -->
-                <circle cx="40" cy="40" r="30" fill="rgba(123,104,238,0.1)" />
+                                <!-- Shadow element -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+
                 
-                <!-- Left character -->
-                <g>
+                <!-- Group of silhouettes -->
+                <!-- Left character (suspicious) -->
+                <g class="suspicious-character">
+
                     <!-- Body with connected head -->
-                    <path d="M33,65 C33,50 29,45 26,45 C23,45 19,50 19,65" stroke="white" stroke-linecap="round" />
-                    <path d="M30.5,39 C31,36 30,33 26,33 C22,33 21,36 21.5,39 C22,42 23,45 26,45 C29,45 30,42 30.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="26" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                                        <path d="M16,65 C16,50 20,45 24,45 C28,45 32,50 32,65" stroke="white" stroke-linecap="round" />
+                    <path d="M18.5,39 C18,36 19,33 24,33 C29,33 30,36 29.5,39 C29,42 28,45 24,45 C20,45 19,42 18.5,39Z" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="24" cy="25" r="9" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+
                     
-                    <!-- Facial features -->
-                    <path d="M23,24 L25,24 M27,24 L29,24" stroke="white" stroke-width="1.2" />
-                    <path d="M26,30 C24,28 28,28 26,30" stroke="white" stroke-width="1" />
+                                        <!-- Suspicious elements -->
+                    <path d="M21,24 L23,22 M25,22 L27,24" stroke="white" stroke-width="1.2" />
+                    <path d="M24,31 C22,29 26,29 24,31" stroke="white" stroke-width="1" />
+                    <path d="M22,55 L26,55" stroke="rgba(255,0,0,0.5)" stroke-width="1.2" stroke-dasharray="1 1" />
+
                 </g>
                 
-                <!-- Center character -->
+                                <!-- Middle character -->
                 <g>
                     <!-- Body with connected head -->
-                    <path d="M41,65 C41,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
-                    <path d="M37.5,39 C37,36 38,33 40,33 C42,33 43,36 42.5,39 C42,42 41,45 40,45 C37,45 38,42 37.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="40" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                                       <path d="M33,65 C33,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
+                    <path d="M35.5,38 C35,35 36,32 40,32 C44,32 45,35 44.5,38 C44,41 43,45 40,45 C37,45 36,41 35.5,38Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="40" cy="22" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
                     
                     <path d="M37,21 L39,21 M41,21 L43,21" stroke="white" stroke-width="1.2" />
                     <path d="M40,27 C38,25 42,25 40,27" stroke="white" stroke-width="1" />
@@ -505,30 +511,30 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         }
     ];
-    
+
     // Select the container element
     const gamesContainer = document.getElementById('gamesContainer');
-    
+
     // Function to capitalize first letter and handle formatting
     const formatGameName = (name) => {
         // Convert camelCase or snake_case to space-separated words
         const formatted = name
             .replace(/([A-Z])/g, ' $1') // Handle camelCase
             .replace(/_/g, ' '); // Handle snake_case
-        
+
         // Capitalize the first letter of each word
         return formatted
             .split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
     };
-    
+
     // Gradient classes for variety
     const gradientClasses = [
         'gradient-1', 'gradient-2', 'gradient-3', 'gradient-4',
         'gradient-5', 'gradient-6', 'gradient-7', 'gradient-8'
     ];
-    
+
     // Add CSS for icon styling
     const style = document.createElement('style');
     style.textContent = `
@@ -623,56 +629,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Create and append game cards
     games.forEach((game, index) => {
         // Create card element
         const card = document.createElement('div');
         card.className = `game-card ${gradientClasses[index % gradientClasses.length]}`;
-        
+
         // Create content container
         const contentContainer = document.createElement('div');
         contentContainer.className = 'card-content';
-        
+
         // Create game title using the display name if available, otherwise format the ID
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
-        
+
         // Create catchphrase
         const catchphrase = document.createElement('p');
         catchphrase.className = 'game-catchphrase';
         catchphrase.textContent = game.catchphrase;
-        
+
         // Create play button as a button element
         const playButton = document.createElement('button');
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
-        
+
         // Folder name mapping for case sensitivity issues
         const folderNameMap = {
             'bluffme': 'BluffMe',
             // Add any other case-sensitive folder mappings here if needed
         };
-        
+
         // Add click event for navigation
         playButton.addEventListener('click', () => {
             // Use folder name mapping if available, otherwise use game.id
             const folderName = folderNameMap[game.id] || game.id;
             window.location.href = `${folderName}/index.html`;
         });
-        
+
         // Add title, catchphrase and button to content container
         contentContainer.appendChild(title);
         contentContainer.appendChild(catchphrase);
         contentContainer.appendChild(playButton);
-        
+
         // Create icon container and add SVG
         const iconContainer = document.createElement('div');
         iconContainer.className = 'game-icon-container';
         iconContainer.innerHTML = game.iconSvg;
         const iconElement = iconContainer.querySelector('svg');
         iconElement.classList.add('game-icon');
-        
+
         // Add "Italian only" text for guessthepic game
         if (game.id === "guessthepic") {
             const italianOnlyText = document.createElement('div');
@@ -680,40 +686,40 @@ document.addEventListener('DOMContentLoaded', () => {
             italianOnlyText.textContent = getTranslation('italianOnly');
             iconContainer.appendChild(italianOnlyText);
         }
-        
+
         // Append content and icon containers to card
         card.appendChild(contentContainer);
         card.appendChild(iconContainer);
-        
+
         // Append card to container
         gamesContainer.appendChild(card);
     });
-    
+
     // Add "Coming Soon" card
     const comingSoonCard = document.createElement('div');
     comingSoonCard.className = 'game-card coming-soon-card';
-    
+
     // Create content container
     const comingSoonContentContainer = document.createElement('div');
     comingSoonContentContainer.className = 'card-content';
-    
+
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = getTranslation('comingSoon');
-    
+
     const comingSoonCatchphrase = document.createElement('p');
     comingSoonCatchphrase.className = 'game-catchphrase';
     comingSoonCatchphrase.textContent = getTranslation('newGamesComingSoon');
-    
+
     // Create icon for Coming Soon card
     const comingSoonIconContainer = document.createElement('div');
     comingSoonIconContainer.className = 'game-icon-container';
-    
+
     // Append elements to containers
     comingSoonContentContainer.appendChild(comingSoonTitle);
     comingSoonContentContainer.appendChild(comingSoonCatchphrase);
     comingSoonCard.appendChild(comingSoonContentContainer);
     comingSoonCard.appendChild(comingSoonIconContainer);
-    
+
     // Append Coming Soon card to container
     gamesContainer.appendChild(comingSoonCard);
 
