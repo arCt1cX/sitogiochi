@@ -171,7 +171,7 @@ body {
 /* Game Board */
 .game-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
     background-color: rgba(0, 0, 0, 0.2);
@@ -186,6 +186,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .player-marker {
@@ -558,6 +559,23 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     border-bottom-width: 1px;
     margin-top: calc(1.5rem + 2px);
+}
+
+/* New Game Button Styling */
+.new-game-btn {
+    width: 60%;
+    margin: 1.5rem auto;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+    background: linear-gradient(135deg, #333, #222);
+    border-bottom: 3px solid #1a1a1a;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.new-game-btn:hover {
+    opacity: 1;
+    width: 65%;
 }
 
 /* Responsive Design */
