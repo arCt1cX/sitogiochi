@@ -20,7 +20,9 @@ const gameTranslations = {
         'winnerText': 'Vincitore:',
         'playAgainText': 'Gioca Ancora',
         'drawText': 'Pareggio!',
-        'invalidMoveText': 'Mossa non valida. Seleziona un\'emoji diversa!'
+        'invalidMoveText': 'Mossa non valida. Seleziona un\'emoji diversa!',
+        'noValidEmojis': 'Nessuna emoji valida per questa combinazione!',
+        'closeText': 'Chiudi'
     },
     'en': {
         'gameTitle': 'TikTakEmoji',
@@ -42,7 +44,9 @@ const gameTranslations = {
         'winnerText': 'Winner:',
         'playAgainText': 'Play Again',
         'drawText': 'It\'s a draw!',
-        'invalidMoveText': 'Invalid move. Please select a different emoji!'
+        'invalidMoveText': 'Invalid move. Please select a different emoji!',
+        'noValidEmojis': 'No valid emojis for this combination!',
+        'closeText': 'Close'
     }
 };
 
