@@ -6,16 +6,16 @@
     --secondary-color: #ff6b6b;
     --secondary-hover: #ff4757;
     --secondary-active: #ff3a47;
-    --text-color: #333;
+    --text-color: #e1e1e1;
     --light-text: #fff;
-    --background-color: #f5f5f5;
-    --card-bg: #fff;
-    --border-color: #ddd;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --border-color: #3d3d3d;
+    --shadow-color: rgba(0, 0, 0, 0.3);
     --winner-color: #4cd137;
     --draw-color: #ffa502;
-    --emoji-bg: #f1f1f1;
-    --emoji-hover: #e1e1e1;
+    --emoji-bg: #212121;
+    --emoji-hover: #2c2c2c;
     --error-color: #ff3a47;
 }
 
@@ -24,6 +24,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    background-image: linear-gradient(to bottom, #121212, #1a1a2e);
     color: var(--text-color);
     min-height: 100vh;
     display: flex;
@@ -50,7 +51,12 @@ body {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin: 0;
-    text-shadow: 0 2px 4px var(--shadow-color);
+    text-shadow: 0 4px 8px rgba(123, 104, 238, 0.5);
+    -webkit-text-stroke: 1px var(--primary-active);
+    background: linear-gradient(90deg, var(--primary-active), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Game Screens */
@@ -58,10 +64,11 @@ body {
     background-color: var(--card-bg);
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
     display: none;
     animation: fadeIn 0.5s ease;
+    border: 1px solid var(--border-color);
 }
 
 .game-screen.active {
@@ -88,12 +95,18 @@ body {
     box-sizing: border-box;
     margin-bottom: 0.5rem;
     transition: border-color 0.3s ease;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--light-text);
 }
 
 .password-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(123, 104, 238, 0.2);
+    box-shadow: 0 0 0 2px rgba(123, 104, 238, 0.3);
+}
+
+.password-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .password-error {
@@ -110,6 +123,10 @@ body {
 .instructions-container {
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 /* Game Board */
@@ -139,6 +156,7 @@ body {
     background-color: var(--border-color);
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .header-cell {
@@ -167,6 +185,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
+    border: 1px solid var(--border-color);
 }
 
 .board-cell:hover {
@@ -202,6 +221,8 @@ body {
     border-radius: 8px;
     padding: 1rem;
     margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .emoji-selection.hidden {
@@ -233,6 +254,21 @@ body {
     text-align: center;
     font-size: 1.5rem;
     margin: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#winner-player {
+    font-size: 2rem;
+    animation: winnerPulse 1.5s infinite alternate;
+}
+
+@keyframes winnerPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
 }
 
 /* Buttons */
@@ -248,39 +284,39 @@ body {
     display: block;
     width: 100%;
     margin-top: 1rem;
-    box-shadow: 0 2px 4px var(--shadow-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .primary-btn {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-active));
     color: var(--light-text);
 }
 
 .primary-btn:hover {
-    background-color: var(--primary-hover);
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .primary-btn:active {
-    background-color: var(--primary-active);
     transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .secondary-btn {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #2c2c2c, #212121);
     color: var(--light-text);
 }
 
 .secondary-btn:hover {
-    background-color: var(--secondary-hover);
+    background: linear-gradient(135deg, #383838, #2c2c2c);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .secondary-btn:active {
-    background-color: var(--secondary-active);
     transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
