@@ -72,8 +72,21 @@ const translations = {
     }
 };
 
-// Get the current language
+// Get the current language - This checks for parent page first, then URL, then browser preference
 function getCurrentLanguage() {
+    // Try to get language from parent page if available
+    try {
+        if (window.parent && window.parent.currentLanguage) {
+            const parentLang = window.parent.currentLanguage;
+            if (parentLang === 'it' || parentLang === 'en') {
+                return parentLang;
+            }
+        }
+    } catch (e) {
+        console.log("Couldn't access parent language");
+    }
+    
+    // Try from URL
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     
@@ -91,27 +104,10 @@ function getCurrentLanguage() {
     return 'en';
 }
 
-// Toggle between languages
-function toggleLanguage() {
-    const currentLang = getCurrentLanguage();
-    const newLang = currentLang === 'en' ? 'it' : 'en';
-    
-    // Add or update the lang parameter in the URL
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', newLang);
-    window.location.href = url.toString();
-}
-
 // Apply translations to the CineTris game
 function applyGameTranslations() {
     const lang = getCurrentLanguage();
     const translationSet = translations[lang] || translations['en'];
-    
-    // Update language toggle button text
-    const languageToggle = document.getElementById('languageToggle');
-    if (languageToggle) {
-        languageToggle.textContent = lang.toUpperCase();
-    }
     
     // Update home button text
     document.getElementById('homeText').textContent = translationSet.home;

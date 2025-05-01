@@ -92,19 +92,6 @@ async function fetchFilmsAndSeries() {
 
 // Initialize the game
 document.addEventListener("DOMContentLoaded", async () => {
-    // Check if translations object exists, if not, wait a bit
-    if (typeof translations === 'undefined') {
-        console.log("Waiting for translations to load...");
-        setTimeout(async function() {
-            await initializeGame();
-        }, 500);
-    } else {
-        await initializeGame();
-    }
-});
-
-// Function to initialize the game after ensuring translations are loaded
-async function initializeGame() {
     await fetchFilmsAndSeries();
     
     // Check if there's a password saved in localStorage
@@ -113,7 +100,7 @@ async function initializeGame() {
         // If correct password is saved, skip to instructions
         showScreen("instructions");
     }
-}
+});
 
 // Start a new game
 function startGame() {
@@ -908,46 +895,10 @@ function shuffleArray(array) {
     return newArray;
 }
 
-// Get current language - duplicated from translations.js to ensure it's available
-function getCurrentLanguage() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
-    
-    if (langParam && (langParam === 'en' || langParam === 'it')) {
-        return langParam;
-    }
-    
-    // Check browser language
-    const preferredLang = navigator.language || navigator.userLanguage;
-    if (preferredLang && preferredLang.startsWith('it')) {
-        return 'it';
-    }
-    
-    // Default to English
-    return 'en';
-}
-
 // Get translation based on current language
 function getTranslation(key) {
-    // Check if translations is defined
-    if (typeof translations === 'undefined') {
-        console.warn("Translations not loaded yet");
-        return key; // Return the key itself as fallback
-    }
-    
     const currentLang = getCurrentLanguage();
-    
-    // Check if the language exists
-    if (!translations[currentLang]) {
-        console.warn(`Translation for language ${currentLang} not found`);
-        return key;
-    }
-    
-    // Check if the key exists
-    if (!translations[currentLang][key]) {
-        console.warn(`Translation key '${key}' not found for language ${currentLang}`);
-        return key;
-    }
-    
-    return translations[currentLang][key];
+    return translations[currentLang] && translations[currentLang][key] ? 
+        translations[currentLang][key] : 
+        translations['en'][key] || key;
 } 
