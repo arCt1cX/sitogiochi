@@ -387,6 +387,9 @@ function createValidCombinationsGrid() {
         gameState.validCellCombinations.push(rowCombinations);
     }
     
+    // Check for diversity within rows
+    checkAndEnsureDiversity();
+    
     // Debug - log the valid combinations count for each cell
     console.log("Valid combinations per cell:");
     for (let row = 0; row < 3; row++) {
@@ -396,6 +399,96 @@ function createValidCombinationsGrid() {
         }
         console.log(rowLog);
     }
+}
+
+// This function checks if cells in a row have exactly the same options and tries to diversify
+function checkAndEnsureDiversity() {
+    for (let row = 0; row < 3; row++) {
+        // Check if all cells in this row have identical options
+        let hasDuplicateSet = false;
+        
+        // Compare each pair of cells in the row
+        for (let col1 = 0; col1 < 2; col1++) {
+            for (let col2 = col1 + 1; col2 < 3; col2++) {
+                const set1 = gameState.validCellCombinations[row][col1];
+                const set2 = gameState.validCellCombinations[row][col2];
+                
+                if (set1.length === set2.length) {
+                    // Check if all titles are the same
+                    const titles1 = set1.map(entry => entry.title).sort().join(',');
+                    const titles2 = set2.map(entry => entry.title).sort().join(',');
+                    
+                    if (titles1 === titles2 && set1.length > 0) {
+                        hasDuplicateSet = true;
+                        console.log(`Row ${row}: Cells ${col1} and ${col2} have identical options`);
+                        
+                        // Try to find a better column value for col2
+                        tryToFindMoreDiverseOption(row, col2);
+                    }
+                }
+            }
+        }
+        
+        // If all columns in this row have identical options, try to diversify more aggressively
+        if (hasDuplicateSet) {
+            console.log(`Row ${row} has identical options across cells, attempting to diversify`);
+        }
+    }
+}
+
+// Try to find a different valid value for a cell's column to increase diversity
+function tryToFindMoreDiverseOption(row, col) {
+    const currentColCategory = gameState.colCategories[col];
+    const possibleColValues = gameState.categories[currentColCategory];
+    const rowCategory = gameState.rowCategories[row];
+    const rowValue = gameState.rowCategoryValues[row];
+    
+    // Get all other values from current column category
+    const otherPossibleValues = possibleColValues.filter(value => value !== gameState.colCategoryValues[col]);
+    
+    // Shuffle to randomize search
+    shuffleArray(otherPossibleValues);
+    
+    // Try each possible value
+    for (const newColValue of otherPossibleValues) {
+        // Check if this new value would create a valid cell
+        const validEntries = gameState.filmsAndSeries.filter(entry => 
+            entry[rowCategory] === rowValue && 
+            entry[currentColCategory] === newColValue
+        );
+        
+        // If we found valid entries and they're different from other cells
+        if (validEntries.length > 0) {
+            // Check if this option would be different from other cells in the row
+            let isDifferent = true;
+            for (let otherCol = 0; otherCol < 3; otherCol++) {
+                if (otherCol !== col) {
+                    const otherSet = gameState.validCellCombinations[row][otherCol];
+                    const otherTitles = otherSet.map(entry => entry.title).sort().join(',');
+                    const newTitles = validEntries.map(entry => entry.title).sort().join(',');
+                    
+                    if (otherTitles === newTitles) {
+                        isDifferent = false;
+                        break;
+                    }
+                }
+            }
+            
+            if (isDifferent) {
+                // Update the column value for this cell
+                gameState.colCategoryValues[col] = newColValue;
+                
+                // Update the valid combinations for this cell
+                gameState.validCellCombinations[row][col] = validEntries;
+                
+                console.log(`Diversified cell [${row},${col}] with new value: ${newColValue}`);
+                return true;
+            }
+        }
+    }
+    
+    console.log(`Could not find a more diverse option for cell [${row},${col}]`);
+    return false;
 }
 
 // Create the game board UI
@@ -459,6 +552,14 @@ function createGameBoard() {
             cell.setAttribute("data-row", row);
             cell.setAttribute("data-col", col);
             
+            // Add tooltip showing row and column categories/values for this cell
+            const rowCat = gameState.rowCategories[row];
+            const rowVal = gameState.rowCategoryValues[row];
+            const colCat = gameState.colCategories[col];
+            const colVal = gameState.colCategoryValues[col];
+            
+            cell.title = `${rowCat}: ${rowVal} + ${colCat}: ${colVal}`;
+            
             // Add click event
             cell.addEventListener("click", () => handleCellClick(row, col));
             
@@ -505,17 +606,37 @@ function showTitleOptions(row, col) {
     // Clear previous options
     emojiOptions.innerHTML = "";
     
+    // Sort entries alphabetically for easier selection
+    const sortedEntries = [...validEntries].sort((a, b) => a.title.localeCompare(b.title));
+    
     // Create option for each valid entry
-    validEntries.forEach(entry => {
+    sortedEntries.forEach(entry => {
         const option = document.createElement("div");
         option.className = "option";
         option.textContent = entry.title;
+        
+        // Add tooltip with more details about the entry
+        let tooltip = `${entry.title} (${entry.type})`;
+        tooltip += `\n${getTranslation('genre')}: ${entry.genre}`;
+        tooltip += `\n${getTranslation('language')}: ${entry.language}`;
+        tooltip += `\n${getTranslation('decade')}: ${entry.decade}`;
+        if (entry.director) tooltip += `\n${getTranslation('director')}: ${entry.director}`;
+        if (entry.theme) tooltip += `\n${getTranslation('theme')}: ${entry.theme}`;
+        
+        option.title = tooltip;
+        
         option.addEventListener("click", () => makeMove(entry.title));
         emojiOptions.appendChild(option);
     });
     
     // Update the title for selection
-    document.getElementById("selectEmojiText").textContent = "Select a matching title:";
+    const rowCategory = gameState.rowCategories[row];
+    const rowValue = gameState.rowCategoryValues[row];
+    const colCategory = gameState.colCategories[col];
+    const colValue = gameState.colCategoryValues[col];
+    
+    const selectionTitle = `${getTranslation('selectMatchingTitle')} (${rowCategory}: ${rowValue} + ${colCategory}: ${colValue})`;
+    document.getElementById("selectEmojiText").textContent = selectionTitle;
     
     // Show the selection panel
     emojiSelection.classList.remove("hidden");

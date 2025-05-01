@@ -16,6 +16,7 @@ const translations = {
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
         'selectEmojiText': 'Seleziona un titolo corrispondente:',
+        'selectMatchingTitle': 'Seleziona un titolo corrispondente',
         'winnerTitle': 'Partita Finita!',
         'winnerText': 'Vincitore:',
         'playAgainText': 'Gioca Ancora',
@@ -25,7 +26,12 @@ const translations = {
         'winner': 'Vincitore:',
         'invalidMoveText': 'Mossa non valida. Seleziona un titolo diverso!',
         'noValidTitles': 'Nessun titolo valido per questa combinazione!',
-        'closeText': 'Chiudi'
+        'closeText': 'Chiudi',
+        'genre': 'Genere',
+        'language': 'Lingua',
+        'decade': 'Decennio',
+        'director': 'Regista',
+        'theme': 'Tema'
     },
     'en': {
         'gameTitle': 'CineTris',
@@ -43,6 +49,7 @@ const translations = {
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
         'selectEmojiText': 'Select a matching title:',
+        'selectMatchingTitle': 'Select a matching title',
         'winnerTitle': 'Game Over!',
         'winnerText': 'Winner:',
         'playAgainText': 'Play Again',
@@ -52,7 +59,12 @@ const translations = {
         'winner': 'Winner:',
         'invalidMoveText': 'Invalid move. Please select a different title!',
         'noValidTitles': 'No valid titles for this combination!',
-        'closeText': 'Close'
+        'closeText': 'Close',
+        'genre': 'Genre',
+        'language': 'Language',
+        'decade': 'Decade',
+        'director': 'Director',
+        'theme': 'Theme'
     }
 };
 
