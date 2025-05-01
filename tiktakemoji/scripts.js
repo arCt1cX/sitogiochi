@@ -178,97 +178,142 @@ function selectRandomCategories() {
     // Get all category types
     const categoryTypes = Object.keys(gameState.categories);
     
-    // Randomly select 3 different category types for rows
-    const shuffledRowCategoryTypes = shuffleArray([...categoryTypes]);
-    gameState.rowCategories = shuffledRowCategoryTypes.slice(0, 3);
+    // Randomly select 3 different category types
+    const shuffledCategoryTypes = shuffleArray([...categoryTypes]);
+    const selectedCategoryTypes = shuffledCategoryTypes.slice(0, 3);
     
-    // For each row category, randomly select a value
+    // 1. First select random row category values from 3 random categories
+    gameState.rowCategories = [...selectedCategoryTypes];
     gameState.rowCategoryValues = gameState.rowCategories.map(category => {
         const values = gameState.categories[category];
         return values[Math.floor(Math.random() * values.length)];
     });
     
-    // For columns, choose a random category type (different from rows if possible)
-    let remainingCategoryTypes = categoryTypes.filter(type => !gameState.rowCategories.includes(type));
-    
-    // If no remaining category types, use one of the row categories
-    if (remainingCategoryTypes.length === 0) {
-        remainingCategoryTypes = [...categoryTypes];
-    }
-    
-    const colCategoryType = remainingCategoryTypes[Math.floor(Math.random() * remainingCategoryTypes.length)];
-    gameState.colCategories = [colCategoryType, colCategoryType, colCategoryType];
-    
-    // Now select 3 different values from this category type for columns
-    const colValues = gameState.categories[colCategoryType];
-    
-    // For each column, select a value that ensures at least one match with each row
+    // 2. Now select column categories (also 3 different categories)
+    // We'll use different categories if possible, or reuse if necessary
+    let remainingCategoryTypes = shuffleArray([...categoryTypes]);
+    gameState.colCategories = [];
     gameState.colCategoryValues = [];
     
+    // For each column position, find a valid category and value
     for (let col = 0; col < 3; col++) {
-        // Try to find a value that has at least one match with each row
-        let selectedValue = null;
-        let validValues = [];
+        let validCategoryFound = false;
         
-        // Check which values have at least one match with each row
-        for (const value of colValues) {
-            let hasMatchForAllRows = true;
+        // Try each available category
+        for (let i = 0; i < remainingCategoryTypes.length; i++) {
+            const categoryType = remainingCategoryTypes[i];
             
-            for (let row = 0; row < 3; row++) {
-                const rowCategory = gameState.rowCategories[row];
-                const rowValue = gameState.rowCategoryValues[row];
+            // Skip if this category is already used for columns
+            if (gameState.colCategories.includes(categoryType)) {
+                continue;
+            }
+            
+            const categoryValues = gameState.categories[categoryType];
+            // Shuffle the values to try them in random order
+            const shuffledValues = shuffleArray([...categoryValues]);
+            
+            // Try each value from this category
+            for (const value of shuffledValues) {
+                // Check if this value works with all rows
+                let validForAllRows = true;
                 
-                // Check if there's at least one film/series that matches both criteria
-                const matchExists = gameState.filmsAndSeries.some(entry => 
-                    entry[rowCategory] === rowValue && 
-                    entry[colCategoryType] === value
-                );
+                for (let row = 0; row < 3; row++) {
+                    const rowCategory = gameState.rowCategories[row];
+                    const rowValue = gameState.rowCategoryValues[row];
+                    
+                    // Check if there's at least one film/series matching both criteria
+                    const matchExists = gameState.filmsAndSeries.some(entry => 
+                        entry[rowCategory] === rowValue && 
+                        entry[categoryType] === value
+                    );
+                    
+                    if (!matchExists) {
+                        validForAllRows = false;
+                        break;
+                    }
+                }
                 
-                if (!matchExists) {
-                    hasMatchForAllRows = false;
+                if (validForAllRows) {
+                    // We found a valid category and value for this column
+                    gameState.colCategories[col] = categoryType;
+                    gameState.colCategoryValues[col] = value;
+                    validCategoryFound = true;
                     break;
                 }
             }
             
-            if (hasMatchForAllRows) {
-                validValues.push(value);
+            if (validCategoryFound) {
+                break;
             }
         }
         
-        // If no valid values found, just pick a random one and we'll adjust the row values later
-        if (validValues.length === 0) {
-            selectedValue = colValues[Math.floor(Math.random() * colValues.length)];
+        // If no valid category was found, try a different approach
+        if (!validCategoryFound) {
+            // Pick a random category that's not already in columns
+            let availableCategories = categoryTypes.filter(cat => !gameState.colCategories.includes(cat));
+            if (availableCategories.length === 0) {
+                // If all categories are used, just pick any category
+                availableCategories = [...categoryTypes];
+            }
             
-            // Now adjust row values to ensure at least one match
-            for (let row = 0; row < 3; row++) {
-                const rowCategory = gameState.rowCategories[row];
-                
-                // Find films/series that match the column value
-                const matchingEntries = gameState.filmsAndSeries.filter(
-                    entry => entry[colCategoryType] === selectedValue
-                );
-                
-                if (matchingEntries.length > 0) {
-                    // Get all possible values for this row category
-                    const possibleValues = new Set(
-                        matchingEntries.map(entry => entry[rowCategory])
+            const categoryType = availableCategories[Math.floor(Math.random() * availableCategories.length)];
+            gameState.colCategories[col] = categoryType;
+            
+            // Now find a value that works with at least one row
+            const categoryValues = gameState.categories[categoryType];
+            let valueFound = false;
+            
+            for (const value of shuffleArray([...categoryValues])) {
+                // Check if this value works with at least one row
+                for (let row = 0; row < 3; row++) {
+                    const rowCategory = gameState.rowCategories[row];
+                    const rowValue = gameState.rowCategoryValues[row];
+                    
+                    // Check if there's at least one film/series matching both criteria
+                    const matchExists = gameState.filmsAndSeries.some(entry => 
+                        entry[rowCategory] === rowValue && 
+                        entry[categoryType] === value
                     );
                     
-                    if (possibleValues.size > 0) {
-                        // Select a random value from the possibilities
-                        const possibleValuesArray = [...possibleValues];
-                        gameState.rowCategoryValues[row] = possibleValuesArray[
-                            Math.floor(Math.random() * possibleValuesArray.length)
-                        ];
+                    if (matchExists) {
+                        gameState.colCategoryValues[col] = value;
+                        valueFound = true;
+                        break;
+                    }
+                }
+                
+                if (valueFound) break;
+            }
+            
+            // If still no value found, pick a random one and adjust the rows
+            if (!valueFound) {
+                const randomValue = categoryValues[Math.floor(Math.random() * categoryValues.length)];
+                gameState.colCategoryValues[col] = randomValue;
+                
+                // For each row, try to find a value that works with this column
+                for (let row = 0; row < 3; row++) {
+                    const rowCategory = gameState.rowCategories[row];
+                    
+                    // Find all entries that match the column value
+                    const matchingEntries = gameState.filmsAndSeries.filter(
+                        entry => entry[categoryType] === randomValue
+                    );
+                    
+                    if (matchingEntries.length > 0) {
+                        // Get all possible values for this row category
+                        const possibleValues = [...new Set(
+                            matchingEntries.map(entry => entry[rowCategory])
+                        )];
+                        
+                        if (possibleValues.length > 0) {
+                            // Select a random value from the possibilities
+                            gameState.rowCategoryValues[row] = 
+                                possibleValues[Math.floor(Math.random() * possibleValues.length)];
+                        }
                     }
                 }
             }
-        } else {
-            // Pick a random valid value
-            selectedValue = validValues[Math.floor(Math.random() * validValues.length)];
         }
-        
-        gameState.colCategoryValues.push(selectedValue);
     }
     
     // Create the valid combinations grid
@@ -298,6 +343,16 @@ function createValidCombinationsGrid() {
         }
         
         gameState.validCellCombinations.push(rowCombinations);
+    }
+    
+    // Debug - log the valid combinations count for each cell
+    console.log("Valid combinations per cell:");
+    for (let row = 0; row < 3; row++) {
+        let rowLog = "";
+        for (let col = 0; col < 3; col++) {
+            rowLog += `[${gameState.validCellCombinations[row][col].length}] `;
+        }
+        console.log(rowLog);
     }
 }
 

@@ -269,7 +269,10 @@
             "Kiyoshi Kurosawa",
             "Jim Gillespie",
             "John Carpenter",
-            "Alfred Hitchcock"
+            "Alfred Hitchcock",
+            "Robert Stevenson",
+            "Terence Young",
+            "Mario Bava"
         ],
         "theme": [
             "Guerra",
@@ -365,7 +368,10 @@
             "Ballet",
             "Suspense",
             "Obsession",
-            "Crime"
+            "Crime",
+            "Classico",
+            "Spie",
+            "Fumetto"
         ]
     },
     "entries": [
@@ -3545,6 +3551,51 @@
             "decade": "Anni '50",
             "director": "Alfred Hitchcock",
             "theme": "Suspense"
+        },
+        {
+            "title": "Psycho",
+            "type": "Film",
+            "genre": "Horror",
+            "language": "Inglese",
+            "decade": "Anni '60",
+            "director": "Alfred Hitchcock",
+            "theme": "Psychological"
+        },
+        {
+            "title": "Gli Uccelli",
+            "type": "Film",
+            "genre": "Horror",
+            "language": "Inglese",
+            "decade": "Anni '60",
+            "director": "Alfred Hitchcock",
+            "theme": "Horror"
+        },
+        {
+            "title": "Mary Poppins",
+            "type": "Film",
+            "genre": "Fantasy",
+            "language": "Inglese",
+            "decade": "Anni '60",
+            "director": "Robert Stevenson",
+            "theme": "Magia"
+        },
+        {
+            "title": "Agente 007 - Licenza di uccidere",
+            "type": "Film",
+            "genre": "Azione",
+            "language": "Inglese",
+            "decade": "Anni '60",
+            "director": "Terence Young",
+            "theme": "Spie"
+        },
+        {
+            "title": "Diabolik",
+            "type": "Film",
+            "genre": "Azione",
+            "language": "Italiano",
+            "decade": "Anni '60",
+            "director": "Mario Bava",
+            "theme": "Fumetto"
         }
     ]
 }
