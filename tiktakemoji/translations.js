@@ -31,7 +31,9 @@ const translations = {
         'language': 'Lingua',
         'decade': 'Decennio',
         'director': 'Regista',
-        'theme': 'Tema'
+        'theme': 'Tema',
+        'wrongAnswer': 'Risposta Sbagliata!',
+        'filterPlaceholder': 'Filtra titoli...'
     },
     'en': {
         'gameTitle': 'CineTris',
@@ -64,7 +66,9 @@ const translations = {
         'language': 'Language',
         'decade': 'Decade',
         'director': 'Director',
-        'theme': 'Theme'
+        'theme': 'Theme',
+        'wrongAnswer': 'Wrong Answer!',
+        'filterPlaceholder': 'Filter titles...'
     }
 };
 

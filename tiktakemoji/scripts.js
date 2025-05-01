@@ -595,7 +595,7 @@ function handleCellClick(row, col) {
 
 // Show options for film/series titles that can be placed in the selected cell
 function showTitleOptions(row, col) {
-    // Get the valid entries for this cell
+    // Get the valid entries for this cell (now just for validation)
     const validEntries = gameState.validCellCombinations[row][col];
     
     if (validEntries.length === 0) {
@@ -603,16 +603,41 @@ function showTitleOptions(row, col) {
         return;
     }
     
+    // Store valid titles for later validation
+    const validTitles = validEntries.map(entry => entry.title);
+    
     // Clear previous options
     emojiOptions.innerHTML = "";
     
-    // Sort entries alphabetically for easier selection
-    const sortedEntries = [...validEntries].sort((a, b) => a.title.localeCompare(b.title));
+    // Create filter input
+    const filterContainer = document.createElement("div");
+    filterContainer.className = "filter-container";
     
-    // Create option for each valid entry
-    sortedEntries.forEach(entry => {
+    const filterInput = document.createElement("input");
+    filterInput.type = "text";
+    filterInput.className = "title-filter";
+    filterInput.placeholder = getTranslation('filterPlaceholder');
+    filterInput.addEventListener("input", function() {
+        filterTitles(this.value.toLowerCase(), allEntriesContainer);
+    });
+    
+    filterContainer.appendChild(filterInput);
+    emojiOptions.appendChild(filterContainer);
+    
+    // Create scrollable container for all entries
+    const allEntriesContainer = document.createElement("div");
+    allEntriesContainer.className = "all-entries-container";
+    
+    // Sort all entries alphabetically
+    const allEntries = [...gameState.filmsAndSeries].sort((a, b) => 
+        a.title.localeCompare(b.title)
+    );
+    
+    // Create option for each entry in the database
+    allEntries.forEach(entry => {
         const option = document.createElement("div");
         option.className = "option";
+        option.dataset.title = entry.title;
         option.textContent = entry.title;
         
         // Add tooltip with more details about the entry
@@ -625,9 +650,28 @@ function showTitleOptions(row, col) {
         
         option.title = tooltip;
         
-        option.addEventListener("click", () => makeMove(entry.title));
-        emojiOptions.appendChild(option);
+        option.addEventListener("click", () => {
+            // Check if this is a valid selection for the cell
+            if (validTitles.includes(entry.title)) {
+                makeMove(entry.title);
+            } else {
+                // Show wrong answer message
+                showWrongAnswerMessage();
+                // Pass turn to next player
+                gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
+                currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
+                // Hide selection after a delay
+                setTimeout(() => {
+                    emojiSelection.classList.add("hidden");
+                    gameState.selectedCell = null;
+                }, 1500);
+            }
+        });
+        
+        allEntriesContainer.appendChild(option);
     });
+    
+    emojiOptions.appendChild(allEntriesContainer);
     
     // Update the title for selection
     const rowCategory = gameState.rowCategories[row];
@@ -638,8 +682,48 @@ function showTitleOptions(row, col) {
     const selectionTitle = `${getTranslation('selectMatchingTitle')} (${rowCategory}: ${rowValue} + ${colCategory}: ${colValue})`;
     document.getElementById("selectEmojiText").textContent = selectionTitle;
     
+    // Focus the filter input
+    setTimeout(() => {
+        filterInput.focus();
+    }, 100);
+    
     // Show the selection panel
     emojiSelection.classList.remove("hidden");
+}
+
+// Filter titles based on input
+function filterTitles(query, container) {
+    const options = container.querySelectorAll('.option');
+    
+    options.forEach(option => {
+        const title = option.dataset.title.toLowerCase();
+        if (title.includes(query)) {
+            option.style.display = '';
+        } else {
+            option.style.display = 'none';
+        }
+    });
+}
+
+// Show wrong answer message
+function showWrongAnswerMessage() {
+    // Create message element if it doesn't exist
+    let wrongAnswerMsg = document.getElementById("wrong-answer-message");
+    
+    if (!wrongAnswerMsg) {
+        wrongAnswerMsg = document.createElement("div");
+        wrongAnswerMsg.id = "wrong-answer-message";
+        wrongAnswerMsg.className = "wrong-answer-message";
+        document.getElementById("emoji-selection").appendChild(wrongAnswerMsg);
+    }
+    
+    wrongAnswerMsg.textContent = getTranslation('wrongAnswer');
+    wrongAnswerMsg.classList.add("show");
+    
+    // Hide after a delay
+    setTimeout(() => {
+        wrongAnswerMsg.classList.remove("show");
+    }, 1500);
 }
 
 // Make a move with the selected film/series title
