@@ -205,27 +205,23 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: minmax(100px, auto) repeat(3, 1fr);
-    grid-auto-rows: minmax(70px, auto);
-    gap: 8px;
+    grid-template-columns: minmax(80px, 0.7fr) repeat(3, 1.5fr);
+    grid-auto-rows: minmax(90px, auto);
+    gap: 10px;
     margin-bottom: 2rem;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    border-radius: 8px;
+    background-color: rgba(20, 20, 30, 0.4);
+    padding: 18px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
-    max-width: 650px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Additional styling for tic-tac-toe appearance */
-.tic-tac-toe-grid {
-    position: relative;
-}
-
-/* Add thicker lines between cells to create the tic-tac-toe appearance */
 .tic-tac-toe-grid {
     position: relative;
 }
@@ -296,7 +292,7 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    min-height: 60px;
+    min-height: 70px;
     box-sizing: border-box;
 }
 
@@ -315,24 +311,29 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: rgba(40, 40, 40, 0.9);
     border: 2px solid var(--border-color);
-    min-height: 70px;
+    min-height: 90px;
     aspect-ratio: 1/1;
     z-index: 2;
     padding: 5px;
+    overflow: hidden;
 }
 
 .category-cell {
-    background-color: rgba(123, 104, 238, 0.2);
+    background-color: rgba(123, 104, 238, 0.15);
     color: var(--light-text);
     cursor: default;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 8px;
-    border: 1px solid rgba(123, 104, 238, 0.4);
+    border: 1px solid rgba(123, 104, 238, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .game-cell:empty::before {
@@ -372,10 +373,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     margin: auto;
+    word-break: break-word;
+    line-height: 1.2;
 }
 
 .player-marker.red {
@@ -622,26 +625,27 @@ body {
     }
     
     .game-board {
-        gap: 5px;
-        padding: 10px;
+        gap: 8px;
+        padding: 12px;
         max-width: 100%;
-        grid-template-columns: minmax(80px, auto) repeat(3, 1fr);
+        grid-template-columns: minmax(70px, 0.7fr) repeat(3, 1.2fr);
+        grid-auto-rows: minmax(70px, auto);
     }
     
     .board-cell {
-        padding: 4px;
-        min-height: 45px;
+        padding: 5px;
+        min-height: 60px;
         font-size: 0.8rem;
     }
     
     .category-cell {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         line-height: 1.1;
-        padding: 3px;
+        padding: 4px;
     }
     
     .game-cell {
-        min-height: 60px;
+        min-height: 70px;
     }
     
     .player-turn {
@@ -676,31 +680,34 @@ body {
     }
     
     .game-board {
-        gap: 3px;
-        padding: 8px;
-        grid-template-columns: minmax(60px, auto) repeat(3, 1fr);
+        gap: 5px;
+        padding: 10px;
+        grid-template-columns: minmax(60px, 0.6fr) repeat(3, 1fr);
+        grid-auto-rows: minmax(55px, auto);
     }
     
     .board-cell {
         padding: 3px;
-        min-height: 35px;
+        min-height: 40px;
         border-radius: 4px;
         font-size: 0.7rem;
     }
     
     .game-cell {
-        min-height: 45px;
+        min-height: 55px;
         padding: 2px;
     }
     
     .category-cell {
-        font-size: 0.6rem;
+        font-size: 0.65rem;
         padding: 2px;
     }
     
     .player-marker.red, .player-marker.blue {
         font-size: 0.65rem;
         padding: 3px;
+        max-width: 95%;
+        max-height: 95%;
     }
     
     .instructions-container {
@@ -711,4 +718,10 @@ body {
     .tic-tac-toe-grid::before {
         opacity: 0.2;
     }
+}
+
+/* Game screen */
+#game-screen {
+    background-color: var(--card-bg);
+    background-image: linear-gradient(to bottom, rgba(30, 30, 40, 0.8), rgba(20, 20, 30, 0.8));
 } 
