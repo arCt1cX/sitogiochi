@@ -361,37 +361,28 @@ function createGameBoard() {
     // Clear the game board
     gameBoard.innerHTML = "";
     
-    // Create the header row for column categories
-    const headerRow = document.createElement("div");
-    headerRow.className = "board-row header-row";
-    
-    // Add empty cell for top-left corner
+    // Create the corner cell (top-left empty cell)
     const cornerCell = document.createElement("div");
     cornerCell.className = "board-cell corner-cell";
-    headerRow.appendChild(cornerCell);
+    gameBoard.appendChild(cornerCell);
     
-    // Add column category cells
+    // Create column header cells
     for (let col = 0; col < 3; col++) {
         const categoryCell = document.createElement("div");
         categoryCell.className = "board-cell category-cell";
         categoryCell.textContent = `${gameState.colCategories[col]}: ${gameState.colCategoryValues[col]}`;
-        headerRow.appendChild(categoryCell);
+        gameBoard.appendChild(categoryCell);
     }
     
-    gameBoard.appendChild(headerRow);
-    
-    // Create the main board rows
+    // Create rows with row headers and game cells
     for (let row = 0; row < 3; row++) {
-        const boardRow = document.createElement("div");
-        boardRow.className = "board-row";
-        
-        // Add row category cell
+        // Row header
         const rowCategoryCell = document.createElement("div");
         rowCategoryCell.className = "board-cell category-cell";
         rowCategoryCell.textContent = `${gameState.rowCategories[row]}: ${gameState.rowCategoryValues[row]}`;
-        boardRow.appendChild(rowCategoryCell);
+        gameBoard.appendChild(rowCategoryCell);
         
-        // Add game cells
+        // Game cells for this row
         for (let col = 0; col < 3; col++) {
             const cell = document.createElement("div");
             cell.className = "board-cell game-cell";
@@ -409,10 +400,8 @@ function createGameBoard() {
                 cell.appendChild(marker);
             }
             
-            boardRow.appendChild(cell);
+            gameBoard.appendChild(cell);
         }
-        
-        gameBoard.appendChild(boardRow);
     }
     
     // Add grid lines with CSS

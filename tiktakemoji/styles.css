@@ -205,18 +205,19 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: auto repeat(3, 1fr);
-    grid-template-rows: auto repeat(3, 1fr);
-    gap: 5px;
+    grid-template-columns: minmax(100px, auto) repeat(3, 1fr);
+    grid-auto-rows: minmax(70px, auto);
+    gap: 8px;
     margin-bottom: 2rem;
     position: relative;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 15px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 /* Additional styling for tic-tac-toe appearance */
@@ -224,7 +225,12 @@ body {
     position: relative;
 }
 
-.tic-tac-toe-grid::after {
+/* Add thicker lines between cells to create the tic-tac-toe appearance */
+.tic-tac-toe-grid {
+    position: relative;
+}
+
+.tic-tac-toe-grid::before {
     content: "";
     position: absolute;
     top: 0;
@@ -234,21 +240,46 @@ body {
     pointer-events: none;
     z-index: 1;
     background: 
-        linear-gradient(to right, transparent calc(25% - 1px), var(--primary-color) calc(25%), transparent calc(25% + 1px)),
-        linear-gradient(to right, transparent calc(50% - 1px), var(--primary-color) calc(50%), transparent calc(50% + 1px)),
-        linear-gradient(to right, transparent calc(75% - 1px), var(--primary-color) calc(75%), transparent calc(75% + 1px)),
-        linear-gradient(to bottom, transparent calc(25% - 1px), var(--primary-color) calc(25%), transparent calc(25% + 1px)),
-        linear-gradient(to bottom, transparent calc(50% - 1px), var(--primary-color) calc(50%), transparent calc(50% + 1px)),
-        linear-gradient(to bottom, transparent calc(75% - 1px), var(--primary-color) calc(75%), transparent calc(75% + 1px));
-    opacity: 0.3;
+        /* Horizontal lines */
+        linear-gradient(to bottom, 
+            transparent calc(25% - 2px), 
+            var(--primary-color) calc(25% - 2px), 
+            var(--primary-color) calc(25% + 2px), 
+            transparent calc(25% + 2px)
+        ),
+        linear-gradient(to bottom, 
+            transparent calc(50% - 2px), 
+            var(--primary-color) calc(50% - 2px), 
+            var(--primary-color) calc(50% + 2px), 
+            transparent calc(50% + 2px)
+        ),
+        linear-gradient(to bottom, 
+            transparent calc(75% - 2px), 
+            var(--primary-color) calc(75% - 2px), 
+            var(--primary-color) calc(75% + 2px), 
+            transparent calc(75% + 2px)
+        ),
+        /* Vertical lines */
+        linear-gradient(to right, 
+            transparent calc(25% - 2px), 
+            var(--primary-color) calc(25% - 2px), 
+            var(--primary-color) calc(25% + 2px), 
+            transparent calc(25% + 2px)
+        ),
+        linear-gradient(to right, 
+            transparent calc(50% - 2px), 
+            var(--primary-color) calc(50% - 2px), 
+            var(--primary-color) calc(50% + 2px), 
+            transparent calc(50% + 2px)
+        ),
+        linear-gradient(to right, 
+            transparent calc(75% - 2px), 
+            var(--primary-color) calc(75% - 2px), 
+            var(--primary-color) calc(75% + 2px), 
+            transparent calc(75% + 2px)
+        );
+    opacity: 0.25;
     border-radius: 8px;
-}
-
-.board-row {
-    display: flex;
-    width: 100%;
-    gap: 5px;
-    margin-bottom: 5px;
 }
 
 .board-cell {
@@ -256,7 +287,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 8px;
-    height: 60px;
     background-color: rgba(30, 30, 30, 0.8);
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -266,28 +296,14 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    flex: 1;
+    min-height: 60px;
+    box-sizing: border-box;
 }
 
 .corner-cell {
     background-color: transparent;
     border: none;
     box-shadow: none;
-}
-
-.category-cell {
-    background-color: rgba(123, 104, 238, 0.2);
-    color: var(--light-text);
-    cursor: default;
-    font-size: 0.85rem;
-    line-height: 1.2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    min-width: 100px;
-    height: auto;
-    border: 1px solid rgba(123, 104, 238, 0.4);
 }
 
 .header-row {
@@ -300,14 +316,23 @@ body {
     background-color: rgba(40, 40, 40, 0.9);
     border: 2px solid var(--border-color);
     min-height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    width: 100%;
     aspect-ratio: 1/1;
     z-index: 2;
+    padding: 5px;
+}
+
+.category-cell {
+    background-color: rgba(123, 104, 238, 0.2);
+    color: var(--light-text);
+    cursor: default;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid rgba(123, 104, 238, 0.4);
 }
 
 .game-cell:empty::before {
@@ -597,22 +622,26 @@ body {
     }
     
     .game-board {
-        gap: 3px;
+        gap: 5px;
         padding: 10px;
         max-width: 100%;
+        grid-template-columns: minmax(80px, auto) repeat(3, 1fr);
     }
     
     .board-cell {
         padding: 4px;
-        height: 50px;
+        min-height: 45px;
         font-size: 0.8rem;
     }
     
     .category-cell {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         line-height: 1.1;
-        min-width: auto;
         padding: 3px;
+    }
+    
+    .game-cell {
+        min-height: 60px;
     }
     
     .player-turn {
@@ -646,21 +675,27 @@ body {
         border-radius: 10px;
     }
     
+    .game-board {
+        gap: 3px;
+        padding: 8px;
+        grid-template-columns: minmax(60px, auto) repeat(3, 1fr);
+    }
+    
     .board-cell {
         padding: 3px;
-        height: 40px;
+        min-height: 35px;
         border-radius: 4px;
         font-size: 0.7rem;
     }
     
     .game-cell {
-        min-height: 50px;
+        min-height: 45px;
+        padding: 2px;
     }
     
     .category-cell {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         padding: 2px;
-        min-width: 70px;
     }
     
     .player-marker.red, .player-marker.blue {
@@ -673,7 +708,7 @@ body {
         font-size: 0.9rem;
     }
     
-    .tic-tac-toe-grid::after {
+    .tic-tac-toe-grid::before {
         opacity: 0.2;
     }
 } 
