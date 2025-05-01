@@ -10,11 +10,11 @@
       const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
       
       if (isItalian) {
-        document.write('<title>TikTakEmoji - Tris con Emoji | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a TikTakEmoji: una versione divertente del tris dove inserisci emoji che collegano le righe e le colonne! Un party game perfetto da giocare con gli amici offline.">');
+        document.write('<title>CineTris - Tris con Film e Serie TV | DrewGames</title>');
+        document.write('<meta name="description" content="Gioca a CineTris: una versione divertente del tris dove inserisci film e serie TV che collegano categorie nelle righe e nelle colonne! Un party game perfetto da giocare con gli amici offline.">');
       } else {
-        document.write('<title>TikTakEmoji - Tic-Tac-Toe with Emojis | DrewGames</title>');
-        document.write('<meta name="description" content="Play TikTakEmoji: a fun twist on classic tic-tac-toe where you place emojis that connect rows and columns! A perfect party game to play with friends offline.">');
+        document.write('<title>CineTris - Tic-Tac-Toe with Movies and TV Shows | DrewGames</title>');
+        document.write('<meta name="description" content="Play CineTris: a fun twist on classic tic-tac-toe where you place movies and TV shows that connect row and column categories! A perfect party game to play with friends offline.">');
       }
     </script>
     <!-- Hreflang tags for language alternatives -->
@@ -94,7 +94,7 @@
     
     <div class="container">
         <div id="game-title">
-            <h1 id="gameTitle">TikTakEmoji</h1>
+            <h1 id="gameTitle">CineTris</h1>
         </div>
 
         <!-- Password Protection Screen -->
@@ -114,8 +114,8 @@
         <div id="instructions-screen" class="game-screen">
             <h2 id="instructionsTitle">How to Play</h2>
             <div class="instructions-container">
-                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing emojis that connect a row emoji and a column emoji.</p>
-                <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching emoji for the cell. Get three in a row to win!</p>
+                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing movies or TV shows that connect a row category and a column category.</p>
+                <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching title for the cell. Get three in a row to win!</p>
             </div>
             <button id="start-game" class="btn primary-btn">Start Game</button>
         </div>
@@ -136,9 +136,9 @@
             <button id="new-game" class="btn secondary-btn new-game-btn"><span id="newGameText">New Game</span></button>
             
             <div id="emoji-selection" class="emoji-selection hidden">
-                <h3 id="selectEmojiText">Select a matching emoji:</h3>
+                <h3 id="selectEmojiText">Select a matching title:</h3>
                 <div id="emoji-options" class="emoji-options">
-                    <!-- Emoji options will be dynamically generated -->
+                    <!-- Title options will be dynamically generated -->
                 </div>
             </div>
         </div>

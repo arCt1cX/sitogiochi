@@ -1,9 +1,12 @@
 // TikTakEmoji Game Logic
 let gameState = {
-    combinations: [], // Store all combinations from combinations.json
-    rowEmojis: [], // 3 selected row emojis
-    colEmojis: [], // 3 selected column emojis
-    validCellCombinations: [], // 3x3 grid of valid emoji combinations
+    filmsAndSeries: {}, // Store all entries from combinazioni_film_e_serie.json
+    categories: {}, // Store all categories
+    rowCategories: [], // 3 selected row categories
+    rowCategoryValues: [], // 3 selected row category values
+    colCategories: [], // 3 selected column categories
+    colCategoryValues: [], // 3 selected column category values
+    validCellCombinations: [], // 3x3 grid of valid film/series
     board: [
         ["", "", ""], 
         ["", "", ""], 
@@ -68,24 +71,28 @@ function checkPassword() {
     }
 }
 
-// Fetch combinations.json and initialize game
-async function fetchCombinations() {
+// Fetch film and series data and initialize game
+async function fetchFilmsAndSeries() {
     try {
-        const response = await fetch("combinations.json");
+        const response = await fetch("combinazioni_film_e_serie.json");
         if (!response.ok) {
-            throw new Error("Failed to fetch combinations data");
+            throw new Error("Failed to fetch film and series data");
         }
-        gameState.combinations = await response.json();
-        console.log("Loaded combinations:", gameState.combinations.length);
+        const data = await response.json();
+        gameState.filmsAndSeries = data.entries;
+        gameState.categories = data.categories;
+        console.log("Loaded films and series:", gameState.filmsAndSeries.length);
+        console.log("Loaded categories:", gameState.categories);
     } catch (error) {
-        console.error("Error loading combinations:", error);
-        gameState.combinations = []; // Set empty array in case of error
+        console.error("Error loading films and series:", error);
+        gameState.filmsAndSeries = []; // Set empty array in case of error
+        gameState.categories = {};
     }
 }
 
 // Initialize the game
 document.addEventListener("DOMContentLoaded", async () => {
-    await fetchCombinations();
+    await fetchFilmsAndSeries();
     
     // Check if there's a password saved in localStorage
     const savedPassword = localStorage.getItem("tiktakemoji_password");
@@ -97,14 +104,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Start a new game
 function startGame() {
-    // Only proceed if combinations are loaded
-    if (gameState.combinations.length === 0) {
-        console.error("Cannot start game: combinations not loaded");
+    // Only proceed if films and series are loaded
+    if (gameState.filmsAndSeries.length === 0) {
+        console.error("Cannot start game: films and series not loaded");
         return;
     }
     
     resetGameState();
-    selectRandomEmojis();
+    selectRandomCategories();
     createGameBoard();
     
     // Show game screen
@@ -132,7 +139,7 @@ function resetGameState() {
     // Update player marker
     currentPlayerEl.textContent = "🔴";
     
-    // Hide emoji selection
+    // Hide selection
     emojiSelection.classList.add("hidden");
     
     // Clear any win-cell classes
@@ -145,7 +152,7 @@ function resetGameState() {
 // Reset the game (new board)
 function resetGame() {
     resetGameState();
-    selectRandomEmojis();
+    selectRandomCategories();
     createGameBoard();
     showScreen("game");
 }
@@ -166,403 +173,323 @@ function showScreen(screenName) {
     }
 }
 
-// Select random emojis for rows and columns strictly from combinations.json
-function selectRandomEmojis() {
-    // Step 1: Extract all unique emojis from tags in combinations.json
-    const allTagEmojis = new Set();
-    gameState.combinations.forEach(combo => {
-        combo.tags.forEach(tag => allTagEmojis.add(tag));
+// Select random categories for rows and columns
+function selectRandomCategories() {
+    // Get all category types
+    const categoryTypes = Object.keys(gameState.categories);
+    
+    // Randomly select 3 different category types for rows
+    const shuffledRowCategoryTypes = shuffleArray([...categoryTypes]);
+    gameState.rowCategories = shuffledRowCategoryTypes.slice(0, 3);
+    
+    // For each row category, randomly select a value
+    gameState.rowCategoryValues = gameState.rowCategories.map(category => {
+        const values = gameState.categories[category];
+        return values[Math.floor(Math.random() * values.length)];
     });
     
-    // Convert to array and shuffle
-    const shuffledTagEmojis = shuffleArray([...allTagEmojis]);
+    // For columns, choose a random category type (different from rows if possible)
+    let remainingCategoryTypes = categoryTypes.filter(type => !gameState.rowCategories.includes(type));
     
-    // Step 2: Select first row emoji
-    let attempts = 0;
-    let validGridFound = false;
-    
-    while (!validGridFound && attempts < 30) {
-        attempts++;
-        
-        // Try a different starting emoji each attempt
-        const startIndex = attempts % shuffledTagEmojis.length;
-        const firstRowEmoji = shuffledTagEmojis[startIndex];
-        
-        // Find all emojis that can be valid column emojis with the first row emoji
-        const validColEmojis = findValidColumnEmojis(firstRowEmoji);
-        
-        if (validColEmojis.length < 3) continue;
-        
-        // Shuffle and select 3 column emojis
-        const selectedColEmojis = shuffleArray(validColEmojis).slice(0, 3);
-        
-        // Find emojis that can be valid rows 2 and 3 with all selected column emojis
-        const validRowEmojis = findValidRowEmojis(selectedColEmojis);
-        
-        if (validRowEmojis.length < 2) continue;
-        
-        // We found a valid grid
-        const selectedRowEmojis = [firstRowEmoji].concat(
-            shuffleArray(validRowEmojis).slice(0, 2)
-        );
-        
-        // Set the selected emojis
-        gameState.rowEmojis = selectedRowEmojis;
-        gameState.colEmojis = selectedColEmojis;
-        gameState.validCellCombinations = createValidCombinationsGrid(
-            gameState.rowEmojis, 
-            gameState.colEmojis
-        );
-        
-        validGridFound = true;
+    // If no remaining category types, use one of the row categories
+    if (remainingCategoryTypes.length === 0) {
+        remainingCategoryTypes = [...categoryTypes];
     }
     
-    if (!validGridFound) {
-        console.error("Could not find a valid emoji grid from combinations.json");
-        // Using a simplified fallback that still uses combinations.json data
-        simpleFallbackEmojiSelection();
-    }
-}
-
-// Find emojis that can be valid column emojis with the given row emoji
-function findValidColumnEmojis(rowEmoji) {
-    const validColEmojis = [];
+    const colCategoryType = remainingCategoryTypes[Math.floor(Math.random() * remainingCategoryTypes.length)];
+    gameState.colCategories = [colCategoryType, colCategoryType, colCategoryType];
     
-    // Find all emojis that have a combination with the row emoji
-    gameState.combinations.forEach(combo => {
-        if (combo.tags.includes(rowEmoji) && combo.valid.length > 0) {
-            // Add other tags in this combination to the valid column emojis
-            combo.tags.forEach(tag => {
-                if (tag !== rowEmoji) validColEmojis.push(tag);
-            });
-        }
-    });
+    // Now select 3 different values from this category type for columns
+    const colValues = gameState.categories[colCategoryType];
     
-    // Return unique emojis
-    return [...new Set(validColEmojis)];
-}
-
-// Find emojis that can be valid row emojis with all the given column emojis
-function findValidRowEmojis(colEmojis) {
-    const validRowEmojis = [];
-    const allTagEmojis = new Set();
+    // For each column, select a value that ensures at least one match with each row
+    gameState.colCategoryValues = [];
     
-    // Extract all tag emojis
-    gameState.combinations.forEach(combo => {
-        combo.tags.forEach(tag => allTagEmojis.add(tag));
-    });
-    
-    // For each potential row emoji
-    for (const rowEmoji of allTagEmojis) {
-        let isValidForAllCols = true;
+    for (let col = 0; col < 3; col++) {
+        // Try to find a value that has at least one match with each row
+        let selectedValue = null;
+        let validValues = [];
         
-        // Check if it has valid combinations with all column emojis
-        for (const colEmoji of colEmojis) {
-            const validOptions = findValidCombinations(rowEmoji, colEmoji);
-            if (validOptions.length === 0) {
-                isValidForAllCols = false;
-                break;
-            }
-        }
-        
-        if (isValidForAllCols) {
-            validRowEmojis.push(rowEmoji);
-        }
-    }
-    
-    return validRowEmojis;
-}
-
-// Simple fallback that still uses combinations.json data
-function simpleFallbackEmojiSelection() {
-    // Find combinations with the most valid options
-    const sortedCombos = [...gameState.combinations].sort(
-        (a, b) => b.valid.length - a.valid.length
-    );
-    
-    // Take the top 9 combinations
-    const topCombos = sortedCombos.slice(0, Math.min(9, sortedCombos.length));
-    
-    // Extract unique tags
-    const rowTags = new Set();
-    const colTags = new Set();
-    
-    for (const combo of topCombos) {
-        if (combo.tags.length >= 2) {
-            // Use the first tag for rows if we need more
-            if (rowTags.size < 3 && !colTags.has(combo.tags[0])) {
-                rowTags.add(combo.tags[0]);
-            }
-            // Use the second tag for columns if we need more
-            if (colTags.size < 3 && !rowTags.has(combo.tags[1])) {
-                colTags.add(combo.tags[1]);
-            }
-        }
-    }
-    
-    // Fill in any remaining slots from the unused tags
-    const allTags = new Set();
-    gameState.combinations.forEach(combo => {
-        combo.tags.forEach(tag => allTags.add(tag));
-    });
-    
-    const remainingTags = [...allTags].filter(
-        tag => !rowTags.has(tag) && !colTags.has(tag)
-    );
-    
-    const shuffledRemaining = shuffleArray(remainingTags);
-    
-    while (rowTags.size < 3 && shuffledRemaining.length > 0) {
-        rowTags.add(shuffledRemaining.pop());
-    }
-    
-    while (colTags.size < 3 && shuffledRemaining.length > 0) {
-        colTags.add(shuffledRemaining.pop());
-    }
-    
-    gameState.rowEmojis = [...rowTags];
-    gameState.colEmojis = [...colTags];
-    gameState.validCellCombinations = createValidCombinationsGrid(
-        gameState.rowEmojis, 
-        gameState.colEmojis
-    );
-}
-
-// Create the grid of valid combinations
-function createValidCombinationsGrid(rowEmojis, colEmojis) {
-    const grid = [];
-    
-    for (let r = 0; r < rowEmojis.length; r++) {
-        const row = [];
-        for (let c = 0; c < colEmojis.length; c++) {
-            const validOptions = findValidCombinations(rowEmojis[r], colEmojis[c]);
-            row.push(validOptions);
-        }
-        grid.push(row);
-    }
-    
-    return grid;
-}
-
-// Modified findValidCombinations to strictly use combinations.json
-function findValidCombinations(emoji1, emoji2) {
-    // Look for combinations containing both emojis in their tags
-    const matchingCombos = gameState.combinations.filter(combo => {
-        return combo.tags.includes(emoji1) && combo.tags.includes(emoji2);
-    });
-    
-    // Extract all valid options
-    const validOptions = [];
-    matchingCombos.forEach(combo => {
-        validOptions.push(...combo.valid);
-    });
-    
-    // Return unique valid options
-    return [...new Set(validOptions)];
-}
-
-// Create the game board
-function createGameBoard() {
-    gameBoard.innerHTML = "";
-    
-    // Create the corner cell (empty)
-    const cornerCell = document.createElement("div");
-    cornerCell.className = "header-cell corner-cell";
-    gameBoard.appendChild(cornerCell);
-    
-    // Create column headers
-    for (let c = 0; c < gameState.colEmojis.length; c++) {
-        const colHeader = document.createElement("div");
-        colHeader.className = "header-cell";
-        colHeader.textContent = gameState.colEmojis[c];
-        gameBoard.appendChild(colHeader);
-    }
-    
-    // Create rows with headers and cells
-    for (let r = 0; r < gameState.rowEmojis.length; r++) {
-        // Row header
-        const rowHeader = document.createElement("div");
-        rowHeader.className = "header-cell";
-        rowHeader.textContent = gameState.rowEmojis[r];
-        gameBoard.appendChild(rowHeader);
-        
-        // Create cells for this row
-        for (let c = 0; c < gameState.colEmojis.length; c++) {
-            const cell = document.createElement("div");
-            cell.className = "board-cell";
-            cell.dataset.row = r;
-            cell.dataset.col = c;
+        // Check which values have at least one match with each row
+        for (const value of colValues) {
+            let hasMatchForAllRows = true;
             
-            // Add emoji text if a move has been made
-            if (gameState.board[r][c]) {
-                cell.textContent = gameState.board[r][c];
-                // Add player marker class
-                if (gameState.board[r][c] !== "") {
-                    const cellState = getCellState(r, c);
-                    if (cellState) {
-                        cell.classList.add(`${cellState}-player`);
-                    }
+            for (let row = 0; row < 3; row++) {
+                const rowCategory = gameState.rowCategories[row];
+                const rowValue = gameState.rowCategoryValues[row];
+                
+                // Check if there's at least one film/series that matches both criteria
+                const matchExists = gameState.filmsAndSeries.some(entry => 
+                    entry[rowCategory] === rowValue && 
+                    entry[colCategoryType] === value
+                );
+                
+                if (!matchExists) {
+                    hasMatchForAllRows = false;
+                    break;
                 }
             }
             
-            // Add click event
-            cell.addEventListener("click", () => handleCellClick(r, c));
-            
-            gameBoard.appendChild(cell);
+            if (hasMatchForAllRows) {
+                validValues.push(value);
+            }
         }
+        
+        // If no valid values found, just pick a random one and we'll adjust the row values later
+        if (validValues.length === 0) {
+            selectedValue = colValues[Math.floor(Math.random() * colValues.length)];
+            
+            // Now adjust row values to ensure at least one match
+            for (let row = 0; row < 3; row++) {
+                const rowCategory = gameState.rowCategories[row];
+                
+                // Find films/series that match the column value
+                const matchingEntries = gameState.filmsAndSeries.filter(
+                    entry => entry[colCategoryType] === selectedValue
+                );
+                
+                if (matchingEntries.length > 0) {
+                    // Get all possible values for this row category
+                    const possibleValues = new Set(
+                        matchingEntries.map(entry => entry[rowCategory])
+                    );
+                    
+                    if (possibleValues.size > 0) {
+                        // Select a random value from the possibilities
+                        const possibleValuesArray = [...possibleValues];
+                        gameState.rowCategoryValues[row] = possibleValuesArray[
+                            Math.floor(Math.random() * possibleValuesArray.length)
+                        ];
+                    }
+                }
+            }
+        } else {
+            // Pick a random valid value
+            selectedValue = validValues[Math.floor(Math.random() * validValues.length)];
+        }
+        
+        gameState.colCategoryValues.push(selectedValue);
+    }
+    
+    // Create the valid combinations grid
+    createValidCombinationsGrid();
+}
+
+// Create a grid of valid film/series combinations
+function createValidCombinationsGrid() {
+    gameState.validCellCombinations = [];
+    
+    for (let row = 0; row < 3; row++) {
+        const rowCombinations = [];
+        
+        for (let col = 0; col < 3; col++) {
+            const rowCategory = gameState.rowCategories[row];
+            const rowValue = gameState.rowCategoryValues[row];
+            const colCategory = gameState.colCategories[col];
+            const colValue = gameState.colCategoryValues[col];
+            
+            // Find all films/series that match both the row and column criteria
+            const validEntries = gameState.filmsAndSeries.filter(entry => 
+                entry[rowCategory] === rowValue && 
+                entry[colCategory] === colValue
+            );
+            
+            rowCombinations.push(validEntries);
+        }
+        
+        gameState.validCellCombinations.push(rowCombinations);
     }
 }
 
-// Handle cell click
-function handleCellClick(row, col) {
-    // Ignore clicks if game is over
-    if (gameState.gameOver) return;
+// Create the game board UI
+function createGameBoard() {
+    // Clear the game board
+    gameBoard.innerHTML = "";
     
-    // Ignore clicks on cells that already have a move
-    if (gameState.board[row][col] !== "") return;
+    // Create the header row for column categories
+    const headerRow = document.createElement("div");
+    headerRow.className = "board-row header-row";
     
-    // Store the selected cell
-    gameState.selectedCell = { row, col };
+    // Add empty cell for top-left corner
+    const cornerCell = document.createElement("div");
+    cornerCell.className = "board-cell corner-cell";
+    headerRow.appendChild(cornerCell);
     
-    // Show emoji selection with valid options
-    showEmojiOptions(row, col);
+    // Add column category cells
+    for (let col = 0; col < 3; col++) {
+        const categoryCell = document.createElement("div");
+        categoryCell.className = "board-cell category-cell";
+        categoryCell.textContent = `${gameState.colCategories[col]}: ${gameState.colCategoryValues[col]}`;
+        headerRow.appendChild(categoryCell);
+    }
+    
+    gameBoard.appendChild(headerRow);
+    
+    // Create the main board rows
+    for (let row = 0; row < 3; row++) {
+        const boardRow = document.createElement("div");
+        boardRow.className = "board-row";
+        
+        // Add row category cell
+        const rowCategoryCell = document.createElement("div");
+        rowCategoryCell.className = "board-cell category-cell";
+        rowCategoryCell.textContent = `${gameState.rowCategories[row]}: ${gameState.rowCategoryValues[row]}`;
+        boardRow.appendChild(rowCategoryCell);
+        
+        // Add game cells
+        for (let col = 0; col < 3; col++) {
+            const cell = document.createElement("div");
+            cell.className = "board-cell game-cell";
+            cell.setAttribute("data-row", row);
+            cell.setAttribute("data-col", col);
+            
+            // Add click event
+            cell.addEventListener("click", () => handleCellClick(row, col));
+            
+            // If there's already a piece in this cell, show it
+            if (gameState.board[row][col]) {
+                const marker = document.createElement("div");
+                marker.className = `player-marker ${gameState.cellOwners[row][col]}`;
+                marker.textContent = gameState.board[row][col];
+                cell.appendChild(marker);
+            }
+            
+            boardRow.appendChild(cell);
+        }
+        
+        gameBoard.appendChild(boardRow);
+    }
 }
 
-// Show emoji options for the selected cell
-function showEmojiOptions(row, col) {
-    const validOptions = gameState.validCellCombinations[row][col];
-    const rowEmoji = gameState.rowEmojis[row];
-    const colEmoji = gameState.colEmojis[col];
+// Handle click on a game cell
+function handleCellClick(row, col) {
+    // Ignore clicks if game is over or cell is already filled
+    if (gameState.gameOver || gameState.board[row][col] !== "") {
+        return;
+    }
+    
+    // Set the selected cell
+    gameState.selectedCell = { row, col };
+    
+    // Show the film/series selection
+    showTitleOptions(row, col);
+}
+
+// Show options for film/series titles that can be placed in the selected cell
+function showTitleOptions(row, col) {
+    // Get the valid entries for this cell
+    const validEntries = gameState.validCellCombinations[row][col];
+    
+    if (validEntries.length === 0) {
+        console.error("No valid entries for this cell");
+        return;
+    }
     
     // Clear previous options
     emojiOptions.innerHTML = "";
     
-    // Add context about the connection
-    const contextEl = document.createElement("p");
-    contextEl.className = "connection-context";
-    contextEl.innerHTML = `${rowEmoji} + ${colEmoji}`;
-    emojiOptions.appendChild(contextEl);
-    
-    // No valid options for this cell
-    if (validOptions.length === 0) {
-        const messageEl = document.createElement("p");
-        messageEl.className = "no-options-message";
-        messageEl.textContent = getTranslation("noValidEmojis");
-        emojiOptions.appendChild(messageEl);
-        
-        // Add a close button
-        const closeButton = document.createElement("button");
-        closeButton.className = "btn secondary-btn";
-        closeButton.textContent = getTranslation("closeText");
-        closeButton.addEventListener("click", () => {
-            emojiSelection.classList.add("hidden");
-        });
-        emojiOptions.appendChild(closeButton);
-        
-        // Show the selection
-        emojiSelection.classList.remove("hidden");
-        return;
-    }
-    
-    // Create emoji options
-    const optionsContainer = document.createElement("div");
-    optionsContainer.className = "emoji-options-grid";
-    
-    validOptions.forEach(emoji => {
-        const emojiEl = document.createElement("div");
-        emojiEl.className = "emoji-option";
-        emojiEl.textContent = emoji;
-        emojiEl.title = `${rowEmoji} + ${colEmoji} → ${emoji}`;
-        emojiEl.addEventListener("click", () => makeMove(emoji));
-        optionsContainer.appendChild(emojiEl);
+    // Create option for each valid entry
+    validEntries.forEach(entry => {
+        const option = document.createElement("div");
+        option.className = "option";
+        option.textContent = entry.title;
+        option.addEventListener("click", () => makeMove(entry.title));
+        emojiOptions.appendChild(option);
     });
     
-    emojiOptions.appendChild(optionsContainer);
+    // Update the title for selection
+    document.getElementById("selectEmojiText").textContent = "Select a matching title:";
     
-    // Show the selection
+    // Show the selection panel
     emojiSelection.classList.remove("hidden");
 }
 
-// Make a move
-function makeMove(emoji) {
+// Make a move with the selected film/series title
+function makeMove(title) {
+    if (!gameState.selectedCell) {
+        return;
+    }
+    
     const { row, col } = gameState.selectedCell;
     
-    // Update the board state
-    gameState.board[row][col] = emoji;
+    // Place the title on the board
+    gameState.board[row][col] = title;
+    gameState.cellOwners[row][col] = gameState.currentPlayer;
     
-    // Set cell ownership based on current player
-    setCellState(row, col, gameState.currentPlayer);
+    // Update the UI
+    const cell = document.querySelector(`.game-cell[data-row="${row}"][data-col="${col}"]`);
     
-    // Hide emoji selection
+    // Clear any previous content
+    cell.innerHTML = "";
+    
+    // Add the marker with the title
+    const marker = document.createElement("div");
+    marker.className = `player-marker ${gameState.currentPlayer}`;
+    marker.textContent = title;
+    cell.appendChild(marker);
+    
+    // Hide the selection panel
     emojiSelection.classList.add("hidden");
+    gameState.selectedCell = null;
     
-    // Update the board UI
-    createGameBoard();
-    
-    // Check for win or draw
+    // Check for win
     if (checkWin()) {
+        gameState.gameOver = true;
         endGame(false);
         return;
     }
     
+    // Check for draw
     if (checkDraw()) {
+        gameState.gameOver = true;
         endGame(true);
         return;
     }
     
     // Switch player
     gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
-    
-    // Update current player UI
     currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
 }
 
-// Set the state of a cell (which player owns it)
+// Set the state of a cell
 function setCellState(row, col, player) {
-    // We'll use a parallel array to track cell ownership
-    // This works because the emoji in the board might not be directly related to the player
     gameState.cellOwners[row][col] = player;
 }
 
-// Get the state of a cell (which player owns it)
+// Get the state of a cell
 function getCellState(row, col) {
-    if (!gameState.cellOwners) return null;
     return gameState.cellOwners[row][col];
 }
 
-// Check if there's a winner
+// Check if a player has won
 function checkWin() {
-    if (!gameState.cellOwners) return false;
-    
-    const currentPlayer = gameState.currentPlayer;
-    
     // Check rows
-    for (let r = 0; r < 3; r++) {
+    for (let row = 0; row < 3; row++) {
         if (
-            gameState.cellOwners[r][0] === currentPlayer &&
-            gameState.cellOwners[r][1] === currentPlayer &&
-            gameState.cellOwners[r][2] === currentPlayer
+            getCellState(row, 0) !== "" &&
+            getCellState(row, 0) === getCellState(row, 1) &&
+            getCellState(row, 0) === getCellState(row, 2)
         ) {
             highlightWinningCells([
-                { row: r, col: 0 },
-                { row: r, col: 1 },
-                { row: r, col: 2 }
+                { row, col: 0 },
+                { row, col: 1 },
+                { row, col: 2 }
             ]);
             return true;
         }
     }
     
     // Check columns
-    for (let c = 0; c < 3; c++) {
+    for (let col = 0; col < 3; col++) {
         if (
-            gameState.cellOwners[0][c] === currentPlayer &&
-            gameState.cellOwners[1][c] === currentPlayer &&
-            gameState.cellOwners[2][c] === currentPlayer
+            getCellState(0, col) !== "" &&
+            getCellState(0, col) === getCellState(1, col) &&
+            getCellState(0, col) === getCellState(2, col)
         ) {
             highlightWinningCells([
-                { row: 0, col: c },
-                { row: 1, col: c },
-                { row: 2, col: c }
+                { row: 0, col },
+                { row: 1, col },
+                { row: 2, col }
             ]);
             return true;
         }
@@ -570,9 +497,9 @@ function checkWin() {
     
     // Check diagonals
     if (
-        gameState.cellOwners[0][0] === currentPlayer &&
-        gameState.cellOwners[1][1] === currentPlayer &&
-        gameState.cellOwners[2][2] === currentPlayer
+        getCellState(0, 0) !== "" &&
+        getCellState(0, 0) === getCellState(1, 1) &&
+        getCellState(0, 0) === getCellState(2, 2)
     ) {
         highlightWinningCells([
             { row: 0, col: 0 },
@@ -583,9 +510,9 @@ function checkWin() {
     }
     
     if (
-        gameState.cellOwners[0][2] === currentPlayer &&
-        gameState.cellOwners[1][1] === currentPlayer &&
-        gameState.cellOwners[2][0] === currentPlayer
+        getCellState(0, 2) !== "" &&
+        getCellState(0, 2) === getCellState(1, 1) &&
+        getCellState(0, 2) === getCellState(2, 0)
     ) {
         highlightWinningCells([
             { row: 0, col: 2 },
@@ -598,58 +525,45 @@ function checkWin() {
     return false;
 }
 
-// Highlight winning cells
+// Highlight the winning cells
 function highlightWinningCells(cells) {
-    cells.forEach(cell => {
-        const cellEl = document.querySelector(
-            `.board-cell[data-row="${cell.row}"][data-col="${cell.col}"]`
-        );
-        if (cellEl) {
-            cellEl.classList.add("win-cell");
-        }
+    cells.forEach(({ row, col }) => {
+        const cell = document.querySelector(`.game-cell[data-row="${row}"][data-col="${col}"]`);
+        cell.classList.add("win-cell");
     });
 }
 
-// Check for a draw
+// Check if the game is a draw
 function checkDraw() {
-    // Check if all cells are filled
-    for (let r = 0; r < 3; r++) {
-        for (let c = 0; c < 3; c++) {
-            if (gameState.board[r][c] === "") {
+    for (let row = 0; row < 3; row++) {
+        for (let col = 0; col < 3; col++) {
+            if (gameState.board[row][col] === "") {
                 return false;
             }
         }
     }
-    
     return true;
 }
 
 // End the game
 function endGame(isDraw) {
-    gameState.gameOver = true;
-    
     if (isDraw) {
-        // Show draw message
-        document.getElementById("winnerTitle").textContent = 
-            getTranslation("drawText");
-        document.getElementById("winnerText").style.display = "none";
-        winnerPlayer.style.display = "none";
+        document.getElementById("winnerTitle").textContent = getTranslation("draw");
+        document.getElementById("winnerText").textContent = getTranslation("noWinner");
+        winnerPlayer.textContent = "";
     } else {
-        // Show winner
-        document.getElementById("winnerTitle").textContent = 
-            getTranslation("winnerTitle");
-        document.getElementById("winnerText").style.display = "inline";
-        winnerPlayer.style.display = "inline";
+        document.getElementById("winnerTitle").textContent = getTranslation("gameOver");
+        document.getElementById("winnerText").textContent = getTranslation("winner");
         winnerPlayer.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
     }
     
-    // Show winner screen after a delay
+    // Show the winner screen after a short delay
     setTimeout(() => {
         showScreen("winner");
     }, 1000);
 }
 
-// Utility function to shuffle an array
+// Helper function to shuffle array
 function shuffleArray(array) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -659,9 +573,8 @@ function shuffleArray(array) {
     return newArray;
 }
 
-// Helper function to get translations
+// Get translation based on current language
 function getTranslation(key) {
-    const lang = getUserLanguage();
-    const translations = gameTranslations[lang] || gameTranslations['en'];
-    return translations[key] || key;
+    const currentLang = getCurrentLanguage();
+    return translations[currentLang][key] || key;
 } 
