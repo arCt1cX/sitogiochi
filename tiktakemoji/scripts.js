@@ -19,7 +19,8 @@ let gameState = {
         ["", "", ""],
         ["", "", ""],
         ["", "", ""]
-    ]
+    ],
+    preventInteraction: false // Flag to prevent interactions during animations/messages
 };
 
 // Ensure getCurrentLanguage is defined regardless of script loading order
@@ -674,11 +675,16 @@ function showTitleOptions(row, col) {
         option.title = tooltip;
         
         option.addEventListener("click", () => {
+            // Prevent interaction if the preventInteraction flag is set
+            if (gameState.preventInteraction) {
+                return;
+            }
+            
             // Check if this is a valid selection for the cell
             if (validTitles.includes(entry.title)) {
                 makeMove(entry.title);
             } else {
-                // Show wrong answer message
+                // Show wrong answer message - this will set preventInteraction
                 showWrongAnswerMessage();
                 // Pass turn to next player
                 gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
@@ -687,6 +693,8 @@ function showTitleOptions(row, col) {
                 setTimeout(() => {
                     emojiSelection.classList.add("hidden");
                     gameState.selectedCell = null;
+                    // Re-enable interactions
+                    gameState.preventInteraction = false;
                 }, 1500);
             }
         });
@@ -730,6 +738,15 @@ function filterTitles(query, container) {
 
 // Show wrong answer message
 function showWrongAnswerMessage() {
+    // Set the preventInteraction flag
+    gameState.preventInteraction = true;
+    
+    // Disable the filter input
+    const filterInput = document.querySelector('.title-filter');
+    if (filterInput) {
+        filterInput.disabled = true;
+    }
+    
     // Create message element if it doesn't exist
     let wrongAnswerMsg = document.getElementById("wrong-answer-message");
     
@@ -743,9 +760,27 @@ function showWrongAnswerMessage() {
     wrongAnswerMsg.textContent = window.getTranslation('wrongAnswer');
     wrongAnswerMsg.classList.add("show");
     
+    // Add a visual overlay to indicate interaction is disabled
+    let overlay = document.getElementById("interaction-overlay");
+    if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = "interaction-overlay";
+        overlay.className = "interaction-overlay";
+        document.getElementById("emoji-selection").appendChild(overlay);
+    }
+    overlay.style.display = "block";
+    
     // Hide after a delay
     setTimeout(() => {
         wrongAnswerMsg.classList.remove("show");
+        if (overlay) overlay.style.display = "none";
+        
+        // Re-enable the filter input
+        if (filterInput) {
+            filterInput.disabled = false;
+        }
+        
+        // Note: we don't reset preventInteraction here, it's done in the calling function
     }, 1500);
 }
 

@@ -442,6 +442,12 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.title-filter:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: rgba(20, 20, 20, 0.7);
+}
+
 /* All entries container */
 .all-entries-container {
     max-height: 300px;
@@ -517,6 +523,19 @@ body {
 .wrong-answer-message.show {
     opacity: 1;
     visibility: visible;
+    animation: shake 0.5s ease;
+}
+
+/* Interaction overlay to prevent clicks during messages */
+.interaction-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    cursor: not-allowed;
 }
 
 @keyframes shake {
