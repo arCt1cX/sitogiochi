@@ -414,6 +414,9 @@ function createGameBoard() {
         
         gameBoard.appendChild(boardRow);
     }
+    
+    // Add grid lines with CSS
+    gameBoard.classList.add("tic-tac-toe-grid");
 }
 
 // Handle click on a game cell
