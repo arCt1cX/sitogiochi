@@ -287,8 +287,19 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     word-break: normal;
     word-wrap: break-word;
-    hyphens: none;
     overflow-wrap: break-word;
+    hyphens: none;
+}
+
+.category-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--primary-color);
+}
+
+.category-value {
+    font-weight: 500;
+    font-size: 0.9em;
 }
 
 .game-cell:empty::before {
@@ -621,6 +632,15 @@ body {
     .winner-info {
         padding: 1rem;
     }
+    
+    .category-name {
+        font-size: 0.75rem;
+        margin-bottom: 3px;
+    }
+    
+    .category-value {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -673,6 +693,15 @@ body {
     .instructions-container {
         padding: 1rem;
         font-size: 0.9rem;
+    }
+    
+    .category-name {
+        font-size: 0.65rem;
+        margin-bottom: 2px;
+    }
+    
+    .category-value {
+        font-size: 0.6rem;
     }
 }
 

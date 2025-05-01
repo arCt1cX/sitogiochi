@@ -412,7 +412,21 @@ function createGameBoard() {
     for (let col = 0; col < 3; col++) {
         const categoryCell = document.createElement("div");
         categoryCell.className = "board-cell category-cell";
-        categoryCell.textContent = `${gameState.colCategories[col]}: ${gameState.colCategoryValues[col]}`;
+        
+        // Create span for category name
+        const categoryName = document.createElement("div");
+        categoryName.className = "category-name";
+        categoryName.textContent = `${gameState.colCategories[col]}:`;
+        
+        // Create span for category value on new line
+        const categoryValue = document.createElement("div");
+        categoryValue.className = "category-value";
+        categoryValue.textContent = gameState.colCategoryValues[col];
+        
+        // Add both to the cell
+        categoryCell.appendChild(categoryName);
+        categoryCell.appendChild(categoryValue);
+        
         gameBoard.appendChild(categoryCell);
     }
     
@@ -421,7 +435,21 @@ function createGameBoard() {
         // Row header
         const rowCategoryCell = document.createElement("div");
         rowCategoryCell.className = "board-cell category-cell";
-        rowCategoryCell.textContent = `${gameState.rowCategories[row]}: ${gameState.rowCategoryValues[row]}`;
+        
+        // Create span for category name
+        const categoryName = document.createElement("div");
+        categoryName.className = "category-name";
+        categoryName.textContent = `${gameState.rowCategories[row]}:`;
+        
+        // Create span for category value on new line
+        const categoryValue = document.createElement("div");
+        categoryValue.className = "category-value";
+        categoryValue.textContent = gameState.rowCategoryValues[row];
+        
+        // Add both to the cell
+        rowCategoryCell.appendChild(categoryName);
+        rowCategoryCell.appendChild(categoryValue);
+        
         gameBoard.appendChild(rowCategoryCell);
         
         // Game cells for this row
