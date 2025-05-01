@@ -22,6 +22,29 @@ let gameState = {
     ]
 };
 
+// Ensure getCurrentLanguage is defined regardless of script loading order
+if (typeof getCurrentLanguage !== 'function') {
+    // Fallback implementation of getCurrentLanguage
+    function getCurrentLanguage() {
+        // Try from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        
+        if (langParam && (langParam === 'en' || langParam === 'it')) {
+            return langParam;
+        }
+        
+        // Check browser language
+        const preferredLang = navigator.language || navigator.userLanguage;
+        if (preferredLang && preferredLang.startsWith('it')) {
+            return 'it';
+        }
+        
+        // Default to English
+        return 'en';
+    }
+}
+
 // Password for accessing the game
 const GAME_PASSWORD = "lurag";
 
@@ -616,7 +639,7 @@ function showTitleOptions(row, col) {
     const filterInput = document.createElement("input");
     filterInput.type = "text";
     filterInput.className = "title-filter";
-    filterInput.placeholder = getTranslation('filterPlaceholder');
+    filterInput.placeholder = window.getTranslation('filterPlaceholder');
     filterInput.addEventListener("input", function() {
         filterTitles(this.value.toLowerCase(), allEntriesContainer);
     });
@@ -642,11 +665,11 @@ function showTitleOptions(row, col) {
         
         // Add tooltip with more details about the entry
         let tooltip = `${entry.title} (${entry.type})`;
-        tooltip += `\n${getTranslation('genre')}: ${entry.genre}`;
-        tooltip += `\n${getTranslation('language')}: ${entry.language}`;
-        tooltip += `\n${getTranslation('decade')}: ${entry.decade}`;
-        if (entry.director) tooltip += `\n${getTranslation('director')}: ${entry.director}`;
-        if (entry.theme) tooltip += `\n${getTranslation('theme')}: ${entry.theme}`;
+        tooltip += `\n${window.getTranslation('genre')}: ${entry.genre}`;
+        tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
+        tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
+        if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
+        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${entry.theme}`;
         
         option.title = tooltip;
         
@@ -679,7 +702,7 @@ function showTitleOptions(row, col) {
     const colCategory = gameState.colCategories[col];
     const colValue = gameState.colCategoryValues[col];
     
-    const selectionTitle = `${getTranslation('selectMatchingTitle')} (${rowCategory}: ${rowValue} + ${colCategory}: ${colValue})`;
+    const selectionTitle = `${window.getTranslation('selectMatchingTitle')} (${rowCategory}: ${rowValue} + ${colCategory}: ${colValue})`;
     document.getElementById("selectEmojiText").textContent = selectionTitle;
     
     // Focus the filter input
@@ -717,7 +740,7 @@ function showWrongAnswerMessage() {
         document.getElementById("emoji-selection").appendChild(wrongAnswerMsg);
     }
     
-    wrongAnswerMsg.textContent = getTranslation('wrongAnswer');
+    wrongAnswerMsg.textContent = window.getTranslation('wrongAnswer');
     wrongAnswerMsg.classList.add("show");
     
     // Hide after a delay
@@ -870,12 +893,12 @@ function checkDraw() {
 // End the game
 function endGame(isDraw) {
     if (isDraw) {
-        document.getElementById("winnerTitle").textContent = getTranslation("draw");
-        document.getElementById("winnerText").textContent = getTranslation("noWinner");
+        document.getElementById("winnerTitle").textContent = window.getTranslation("draw");
+        document.getElementById("winnerText").textContent = window.getTranslation("noWinner");
         winnerPlayer.textContent = "";
     } else {
-        document.getElementById("winnerTitle").textContent = getTranslation("gameOver");
-        document.getElementById("winnerText").textContent = getTranslation("winner");
+        document.getElementById("winnerTitle").textContent = window.getTranslation("gameOver");
+        document.getElementById("winnerText").textContent = window.getTranslation("winner");
         winnerPlayer.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
     }
     
@@ -893,12 +916,4 @@ function shuffleArray(array) {
         [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
     return newArray;
-}
-
-// Get translation based on current language
-function getTranslation(key) {
-    const currentLang = getCurrentLanguage();
-    return translations[currentLang] && translations[currentLang][key] ? 
-        translations[currentLang][key] : 
-        translations['en'][key] || key;
 } 

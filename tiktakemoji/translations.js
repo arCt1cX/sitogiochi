@@ -1,5 +1,5 @@
 // Translations for the CineTris game
-const translations = {
+window.translations = {
     'it': {
         'gameTitle': 'CineTris',
         'pageTitleDesc': 'CineTris - Tris con Film e Serie TV | DrewGames',
@@ -73,7 +73,7 @@ const translations = {
 };
 
 // Get the current language - This checks for parent page first, then URL, then browser preference
-function getCurrentLanguage() {
+window.getCurrentLanguage = function() {
     // Try to get language from parent page if available
     try {
         if (window.parent && window.parent.currentLanguage) {
@@ -102,12 +102,20 @@ function getCurrentLanguage() {
     
     // Default to English
     return 'en';
-}
+};
+
+// Get translation for a key
+window.getTranslation = function(key) {
+    const currentLang = window.getCurrentLanguage();
+    return window.translations[currentLang] && window.translations[currentLang][key] ? 
+        window.translations[currentLang][key] : 
+        window.translations['en'][key] || key;
+};
 
 // Apply translations to the CineTris game
 function applyGameTranslations() {
-    const lang = getCurrentLanguage();
-    const translationSet = translations[lang] || translations['en'];
+    const lang = window.getCurrentLanguage();
+    const translationSet = window.translations[lang] || window.translations['en'];
     
     // Update home button text
     document.getElementById('homeText').textContent = translationSet.home;
@@ -132,6 +140,12 @@ function applyGameTranslations() {
     document.getElementById('winnerTitle').textContent = translationSet.winnerTitle;
     document.getElementById('winnerText').textContent = translationSet.winnerText;
     document.getElementById('playAgainText').textContent = translationSet.playAgainText;
+    
+    // Update placeholder for password input
+    const passwordInput = document.getElementById('password-input');
+    if (passwordInput) {
+        passwordInput.placeholder = lang === 'it' ? 'Inserisci password' : 'Enter password';
+    }
 }
 
 // Add the function to apply translations on page load

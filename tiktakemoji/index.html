@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Translations and language support loaded first -->
+    <script src="translations.js"></script>
     <!-- Dynamic meta tags based on browser language -->
     <script>
       // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      const preferredLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 
+        (navigator.language || navigator.userLanguage).startsWith('it') ? 'it' : 'en';
+      const isItalian = preferredLang === 'it';
       
       if (isItalian) {
         document.write('<title>CineTris - Tris con Film e Serie TV | DrewGames</title>');
@@ -129,8 +132,25 @@
         </div>
     </div>
 
-    <script src="../lang.js"></script>
-    <script src="translations.js"></script>
+    <!-- Support for parent page language -->
+    <script>
+        // Try to get language from parent page
+        try {
+            if (window.parent && window.parent.document) {
+                const parentLangEl = window.parent.document.querySelector('html[lang]');
+                if (parentLangEl && parentLangEl.lang) {
+                    const lang = parentLangEl.lang.substring(0, 2);
+                    if (lang === 'it' || lang === 'en') {
+                        window.parentLanguage = lang;
+                    }
+                }
+            }
+        } catch(e) {
+            console.log("Couldn't access parent page language");
+        }
+    </script>
+    
+    <!-- Main scripts -->
     <script src="scripts.js"></script>
 </body>
 </html> 
