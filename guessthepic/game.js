@@ -731,13 +731,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log(`Checking answer from ${currentPlayer.name}: "${userAnswer}" against "${correctAnswer}"`);
         
-        // Simple string normalization for comparison
-        const normalizedUserAnswer = userAnswer.replace(/[^a-z0-9]/gi, '');
-        const normalizedCorrectAnswer = correctAnswer.replace(/[^a-z0-9]/gi, '');
+        // Function to normalize accented characters
+        function normalizeString(str) {
+            return str
+                .normalize('NFD')           // Decompose accented characters
+                .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+                .replace(/[^a-z0-9]/gi, ''); // Remove non-alphanumeric chars
+        }
+        
+        // Enhanced string normalization for comparison
+        const normalizedUserAnswer = normalizeString(userAnswer);
+        const normalizedCorrectAnswer = normalizeString(correctAnswer);
         
         // Check if the answer is correct (allowing for some flexibility)
         const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer || 
-                         correctAnswer.includes(userAnswer) || 
+                         normalizeString(correctAnswer).includes(normalizeString(userAnswer)) || 
                          normalizedCorrectAnswer.includes(normalizedUserAnswer) || 
                          (normalizedUserAnswer.length > 3 && normalizedCorrectAnswer.includes(normalizedUserAnswer));
         

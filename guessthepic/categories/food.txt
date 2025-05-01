@@ -71,7 +71,7 @@ Luganega (luganiga, lucanica) 🇮🇹
 Caciocavallo 🇮🇹
 Nduja 🇮🇹
 Cipolla rossa di Tropea 🇮🇹
-Arancino/arancina 🇮🇹
+Arancino - arancina 🇮🇹
 Cannolo siciliano 🇮🇹
 Cassata 🇮🇹
 Pasta alla Norma 🇮🇹
@@ -222,7 +222,7 @@ Red velvet cake 🇺🇸
 Jerk chicken 🇯🇲
 Samosa 🇮🇳
 Sangria 🇪🇸
-Bagel 🇺🇸/🇵🇱
+Bagel 🇺🇸
 Brownie 🇺🇸
 Cupcake 🇺🇸
 Gyros 🇬🇷
@@ -241,7 +241,7 @@ Moules-frites 🇧🇪
 Gouda 🇳🇱
 Currywurst 🇩🇪
 Quiche Lorraine 🇫🇷
-Black pudding 🇬🇧/🇮🇪
+Black pudding 🇬🇧
 Biscotti al burro danesi 🇩🇰
 bistecca e uova 🇦🇺
 Street food indiano 🤮🇮🇳
