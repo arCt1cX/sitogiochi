@@ -57,11 +57,11 @@
             "Damien Chazelle",
             "Clint Eastwood",
             "Kiyoshi Kurosawa",
-            "David Cronenberg",
             "Denis Villeneuve",
             "Seth MacFarlane",
-            "Ben Stiller",
-            "Alfred Hitchcock"
+            "Alfred Hitchcock",
+            "Woody Allen",
+            "Federico Fellini"
         ],
         "theme": [
             "Guerra",
@@ -153,7 +153,6 @@
             "Sopravvivenza",
             "Disturbi mentali",
             "Morte",
-            "Psychological",
             "Ballet",
             "Suspense",
             "Obsession",
@@ -3186,7 +3185,7 @@
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Richard Kelly",
-            "theme": "Psychological"
+            "theme": "Psicologico"
         },
         {
             "title": "Billy Elliot",
@@ -3267,7 +3266,7 @@
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Kiyoshi Kurosawa",
-            "theme": "Psychological"
+            "theme": "Psicologico"
         },
         {
             "title": "I Know What You Did Last Summer",
@@ -3285,7 +3284,7 @@
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Satoshi Kon",
-            "theme": "Psychological"
+            "theme": "Psicologico"
         },
         {
             "title": "Basketball Diaries",
@@ -3348,7 +3347,7 @@
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Alfred Hitchcock",
-            "theme": "Psychological"
+            "theme": "Psicologico"
         },
         {
             "title": "Gli Uccelli",
@@ -3385,6 +3384,285 @@
             "decade": "Anni '60",
             "director": "Mario Bava",
             "theme": "Fumetto"
+        },
+        {
+            "title": "Anatomy of a Fall",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Francese",
+            "decade": "Anni 2020",
+            "director": "Justine Triet",
+            "theme": "Processo"
+        },
+        {
+            "title": "Portrait of a Lady on Fire",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Francese",
+            "decade": "Anni 2010",
+            "director": "Céline Sciamma",
+            "theme": "LGBTQ"
+        },
+        {
+            "title": "La Haine",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Francese",
+            "decade": "Anni '90",
+            "director": "Mathieu Kassovitz",
+            "theme": "Razzismo"
+        },
+        {
+            "title": "Leon the Professional",
+            "type": "Film",
+            "genre": "Azione",
+            "language": "Inglese",
+            "decade": "Anni '90",
+            "director": "Luc Besson",
+            "theme": "Vendetta"
+        },
+        {
+            "title": "The Skin I Live In",
+            "type": "Film",
+            "genre": "Thriller",
+            "language": "Spagnolo",
+            "decade": "Anni 2010",
+            "director": "Pedro Almodóvar",
+            "theme": "Identità"
+        },
+        {
+            "title": "The Wolf House",
+            "type": "Film",
+            "genre": "Animazione",
+            "language": "Cileno",
+            "decade": "Anni 2010",
+            "director": "Joaquín Cociña",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Gran Torino",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Clint Eastwood",
+            "theme": "Amicizia"
+        },
+        {
+            "title": "Amelie",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Francese",
+            "decade": "Anni 2000",
+            "director": "Jean-Pierre Jeunet",
+            "theme": "Romance"
+        },
+        {
+            "title": "Midnight in Paris",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Woody Allen",
+            "theme": "Arte"
+        },
+        {
+            "title": "8 and a Half",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Italiano",
+            "decade": "Anni '60",
+            "director": "Federico Fellini",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Io e Annie",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "Woody Allen",
+            "theme": "Romance"
+        },
+        {
+            "title": "Manhattan",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "Woody Allen",
+            "theme": "Romance"
+        },
+        {
+            "title": "The Purple Rose of Cairo",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni '80",
+            "director": "Woody Allen",
+            "theme": "Romance"
+        },
+        {
+            "title": "La Dolce Vita",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Italiano",
+            "decade": "Anni '60",
+            "director": "Federico Fellini",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "La Leggenda di Al, John e Jack",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Italiano",
+            "decade": "Anni 2000",
+            "director": "Aldo, Giovanni e Giacomo",
+            "theme": "Comico"
+        },
+        {
+            "title": "Chiedimi se sono felice",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Italiano",
+            "decade": "Anni 2000",
+            "director": "Aldo, Giovanni e Giacomo",
+            "theme": "Comico"
+        },
+        {
+            "title": "Quo Vado",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Italiano",
+            "decade": "Anni 2010",
+            "director": "Gennaro Nunziante",
+            "theme": "Comico"
+        },
+        {
+            "title": "Sole a Catinelle",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Italiano",
+            "decade": "Anni 2010",
+            "director": "Gennaro Nunziante",
+            "theme": "Comico"
+        },
+        {
+            "title": "Cado dalle Nubi",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Italiano",
+            "decade": "Anni 2000",
+            "director": "Gennaro Nunziante",
+            "theme": "Comico"
+        },
+        {
+            "title": "I Griffin",
+            "type": "Serie TV",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni '90",
+            "director": "Seth MacFarlane",
+            "theme": "Comico"
+        },
+        {
+            "title": "American Dad",
+            "type": "Serie TV",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Seth MacFarlane",
+            "theme": "Comico"
+        },
+        {
+            "title": "Chinatown",
+            "type": "Film",
+            "genre": "Thriller",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "Roman Polanski",
+            "theme": "Crime"
+        },
+        {
+            "title": "La La Land",
+            "type": "Film",
+            "genre": "Romantico",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Damien Chazelle",
+            "theme": "Musical"
+        },
+        {
+            "title": "Whiplash",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Damien Chazelle",
+            "theme": "Musica"
+        },
+        {
+            "title": "Raging Bull",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '80",
+            "director": "Martin Scorsese",
+            "theme": "Boxe"
+        },
+        {
+            "title": "Dr. Strangelove",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni '60",
+            "director": "Stanley Kubrick",
+            "theme": "Guerra"
+        },
+        {
+            "title": "Snowpiercer",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Bong Joon-ho",
+            "theme": "Post-apocalittico"
+        },
+        {
+            "title": "Eraserhead",
+            "type": "Film",
+            "genre": "Horror",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "David Lynch",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Blue Velvet",
+            "type": "Film",
+            "genre": "Thriller",
+            "language": "Inglese",
+            "decade": "Anni '80",
+            "director": "David Lynch",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Porco Rosso",
+            "type": "Film",
+            "genre": "Animazione",
+            "language": "Giapponese",
+            "decade": "Anni '90",
+            "director": "Hayao Miyazaki",
+            "theme": "Avventura"
+        },
+        {
+            "title": "I Simpson",
+            "type": "Serie TV",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni '90",
+            "director": "Matt Groening",
+            "theme": "Comico"
         }
     ]
 }
