@@ -3628,6 +3628,321 @@
             "decade": "Anni '90",
             "director": "Matt Groening",
             "theme": "Comico"
+        },
+        {
+            "title": "Everything Everywhere All at Once",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "Daniel Kwan & Daniel Scheinert",
+            "theme": "Multiverso"
+        },
+        {
+            "title": "Inside Out",
+            "type": "Film",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Pete Docter",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Mean Girls",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Mark Waters",
+            "theme": "Scuola/Università"
+        },
+        {
+            "title": "Hitch",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Andy Tennant",
+            "theme": "Amore"
+        },
+        {
+            "title": "Her",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Spike Jonze",
+            "theme": "Intelligenza Artificiale"
+        },
+        {
+            "title": "Aftersun",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "Charlotte Wells",
+            "theme": "Famiglia"
+        },
+        {
+            "title": "The Notebook",
+            "type": "Film",
+            "genre": "Romantico",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Nick Cassavetes",
+            "theme": "Amore"
+        },
+        {
+            "title": "Thor",
+            "type": "Film",
+            "genre": "Azione",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Kenneth Branagh",
+            "theme": "Supereroi"
+        },
+        {
+            "title": "Beautiful Boy",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Felix Van Groeningen",
+            "theme": "Famiglia"
+        },
+        {
+            "title": "The Whale",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "Darren Aronofsky",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Birdman",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Alejandro González Iñárritu",
+            "theme": "Arte"
+        },
+        {
+            "title": "La fabbrica di cioccolato",
+            "type": "Film",
+            "genre": "Fantasy",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Tim Burton",
+            "theme": "Favola"
+        },
+        {
+            "title": "Qualcuno volò sul nido del cuculo",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "Milos Forman",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Casablanca",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '40",
+            "director": "Michael Curtiz",
+            "theme": "Amore"
+        },
+        {
+            "title": "Suspiria",
+            "type": "Film",
+            "genre": "Horror",
+            "language": "Italiano",
+            "decade": "Anni '70",
+            "director": "Dario Argento",
+            "theme": "Soprannaturale"
+        },
+        {
+            "title": "Rocky",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '70",
+            "director": "John G. Avildsen",
+            "theme": "Boxe"
+        },
+        {
+            "title": "Vita di Pi",
+            "type": "Film",
+            "genre": "Avventura",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Ang Lee",
+            "theme": "Sopravvivenza"
+        },
+        {
+            "title": "Superhero - Il più dotato fra i supereroi",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Craig Mazin",
+            "theme": "Parody"
+        },
+        {
+            "title": "Avatar: La via dell'acqua",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "James Cameron",
+            "theme": "Avventura"
+        },
+        {
+            "title": "Top Gun: Maverick",
+            "type": "Film",
+            "genre": "Azione",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "Joseph Kosinski",
+            "theme": "Militare"
+        },
+        {
+            "title": "Cena con delitto - Knives Out",
+            "type": "Film",
+            "genre": "Thriller",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Rian Johnson",
+            "theme": "Mistero"
+        },
+        {
+            "title": "Frozen - Il regno di ghiaccio",
+            "type": "Film",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Chris Buck & Jennifer Lee",
+            "theme": "Fantasy"
+        },
+        {
+            "title": "Moonlight",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Barry Jenkins",
+            "theme": "Coming of Age"
+        },
+        {
+            "title": "Il discorso del re",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Tom Hooper",
+            "theme": "Storico"
+        },
+        {
+            "title": "Non è un paese per vecchi",
+            "type": "Film",
+            "genre": "Thriller",
+            "language": "Inglese",
+            "decade": "Anni 2000",
+            "director": "Joel & Ethan Coen",
+            "theme": "Crime"
+        },
+        {
+            "title": "Nomadland",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2020",
+            "director": "Chloé Zhao",
+            "theme": "Sopravvivenza"
+        },
+        {
+            "title": "Toy Story 4",
+            "type": "Film",
+            "genre": "Animazione",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Josh Cooley",
+            "theme": "Giocattoli"
+        },
+        {
+            "title": "A Quiet Place",
+            "type": "Film",
+            "genre": "Horror",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "John Krasinski",
+            "theme": "Sopravvivenza"
+        },
+        {
+            "title": "Quarto potere",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '40",
+            "director": "Orson Welles",
+            "theme": "Psicologico"
+        },
+        {
+            "title": "Via col vento",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni '30",
+            "director": "Victor Fleming",
+            "theme": "Storico"
+        },
+        {
+            "title": "Star Wars: Gli ultimi Jedi",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Rian Johnson",
+            "theme": "Avventura spaziale"
+        },
+        {
+            "title": "Bridesmaids",
+            "type": "Film",
+            "genre": "Commedia",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Paul Feig",
+            "theme": "Commedia romantica"
+        },
+        {
+            "title": "The Irishman",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Martin Scorsese",
+            "theme": "Mafia/Crimine"
+        },
+        {
+            "title": "1917",
+            "type": "Film",
+            "genre": "Dramma",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "Sam Mendes",
+            "theme": "Guerra"
+        },
+        {
+            "title": "Guardiani della Galassia",
+            "type": "Film",
+            "genre": "Fantascienza",
+            "language": "Inglese",
+            "decade": "Anni 2010",
+            "director": "James Gunn",
+            "theme": "Supereroi"
         }
     ]
 }
