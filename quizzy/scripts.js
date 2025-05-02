@@ -1741,7 +1741,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
                 if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
-                    correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                    // Store the original answer before shuffling
+                    const correctAnswer = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                    correctAnswerText.textContent = correctAnswer;
                 }
             } else if (isCorrect) {
                 if (resultMessage) {
@@ -1756,7 +1758,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
                 if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
-                    correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                    // Get correct answer from buttons if available
+                    const correctButton = document.querySelector('.answer-btn.correct-answer-btn');
+                    if (correctButton) {
+                        const answerText = correctButton.querySelector('.answer-text');
+                        if (answerText) {
+                            correctAnswerText.textContent = answerText.textContent;
+                        } else {
+                            // Fallback to the index if button text can't be found
+                            correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                        }
+                    } else {
+                        // Fallback to the index if button can't be found
+                        correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
+                    }
                 }
                 
                 // Add shock round penalty message if needed
