@@ -601,12 +601,54 @@ function createGameBoard() {
     
     // Add grid lines with CSS
     gameBoard.classList.add("tic-tac-toe-grid");
+    
+    // Clear the existing game buttons container if it exists
+    let buttonsContainer = document.getElementById("game-buttons-container");
+    if (buttonsContainer) {
+        buttonsContainer.innerHTML = "";
+    } else {
+        // Create a container for the buttons
+        buttonsContainer = document.createElement("div");
+        buttonsContainer.id = "game-buttons-container";
+        buttonsContainer.className = "game-buttons-container";
+        document.getElementById("game-screen").insertBefore(buttonsContainer, document.getElementById("emoji-selection"));
+    }
+    
+    // Add "Fine Partita" button
+    const endGameBtn = document.createElement("button");
+    endGameBtn.id = "end-game";
+    endGameBtn.className = "btn secondary-btn game-btn";
+    const endGameText = document.createElement("span");
+    endGameText.id = "endGameText";
+    endGameText.textContent = window.getTranslation('endGameText');
+    endGameBtn.appendChild(endGameText);
+    endGameBtn.addEventListener("click", () => endGame(true)); // End as a draw
+    
+    // Add "New Game" button
+    const newGameBtn = document.createElement("button");
+    newGameBtn.id = "new-game";
+    newGameBtn.className = "btn secondary-btn game-btn";
+    const newGameText = document.createElement("span");
+    newGameText.id = "newGameText";
+    newGameText.textContent = window.getTranslation('newGameText');
+    newGameBtn.appendChild(newGameText);
+    newGameBtn.addEventListener("click", resetGame);
+    
+    // Add buttons to container
+    buttonsContainer.appendChild(endGameBtn);
+    buttonsContainer.appendChild(newGameBtn);
 }
 
 // Handle click on a game cell
 function handleCellClick(row, col) {
-    // Ignore clicks if game is over or cell is already filled
-    if (gameState.gameOver || gameState.board[row][col] !== "") {
+    // Ignore clicks if game is over
+    if (gameState.gameOver) {
+        return;
+    }
+    
+    // If cell is already filled, show all possible titles for this cell
+    if (gameState.board[row][col] !== "") {
+        showAllPossibleTitles(row, col);
         return;
     }
     
@@ -615,6 +657,85 @@ function handleCellClick(row, col) {
     
     // Show the film/series selection
     showTitleOptions(row, col);
+}
+
+// Show all possible titles for a cell
+function showAllPossibleTitles(row, col) {
+    const validEntries = gameState.validCellCombinations[row][col];
+    
+    if (validEntries.length === 0) {
+        console.error("No valid entries for this cell");
+        return;
+    }
+    
+    // Create an info dialog
+    const infoDialog = document.createElement("div");
+    infoDialog.className = "info-dialog";
+    
+    // Create header with category information
+    const header = document.createElement("div");
+    header.className = "info-dialog-header";
+    
+    const rowCategory = gameState.rowCategories[row];
+    const rowValue = gameState.rowCategoryValues[row];
+    const colCategory = gameState.colCategories[col];
+    const colValue = gameState.colCategoryValues[col];
+    
+    header.textContent = `${rowCategory}: ${rowValue} + ${colCategory}: ${colValue}`;
+    infoDialog.appendChild(header);
+    
+    // Create title showing number of possible matches
+    const title = document.createElement("h3");
+    title.className = "info-dialog-title";
+    title.textContent = window.getTranslation('possibleMatches') + ` (${validEntries.length})`;
+    infoDialog.appendChild(title);
+    
+    // Create a list of all possible titles
+    const titlesList = document.createElement("div");
+    titlesList.className = "possible-titles-list";
+    
+    // Sort titles alphabetically
+    const sortedEntries = [...validEntries].sort((a, b) => a.title.localeCompare(b.title));
+    
+    sortedEntries.forEach(entry => {
+        const titleItem = document.createElement("div");
+        titleItem.className = "possible-title-item";
+        titleItem.textContent = entry.title;
+        
+        // Add tooltip with more details about the entry
+        let tooltip = `${entry.title} (${entry.type})`;
+        tooltip += `\n${window.getTranslation('genre')}: ${entry.genre}`;
+        tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
+        tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
+        if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
+        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${entry.theme}`;
+        
+        titleItem.title = tooltip;
+        
+        titlesList.appendChild(titleItem);
+    });
+    
+    infoDialog.appendChild(titlesList);
+    
+    // Add close button
+    const closeButton = document.createElement("button");
+    closeButton.className = "btn primary-btn close-btn";
+    closeButton.textContent = window.getTranslation('closeText');
+    closeButton.addEventListener("click", () => {
+        document.body.removeChild(infoDialog);
+    });
+    
+    infoDialog.appendChild(closeButton);
+    
+    // Add to body
+    document.body.appendChild(infoDialog);
+    
+    // Close on outside click
+    infoDialog.addEventListener("click", (e) => {
+        if (e.target === infoDialog) {
+            document.body.removeChild(infoDialog);
+        }
+    });
 }
 
 // Show options for film/series titles that can be placed in the selected cell

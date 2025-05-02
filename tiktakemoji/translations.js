@@ -15,6 +15,7 @@ window.translations = {
         'startGame': 'Inizia Gioco',
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
+        'endGameText': 'Fine Partita',
         'selectEmojiText': 'Seleziona un titolo corrispondente:',
         'selectMatchingTitle': 'Seleziona un titolo corrispondente',
         'winnerTitle': 'Partita Finita!',
@@ -33,7 +34,8 @@ window.translations = {
         'director': 'Regista',
         'theme': 'Tema',
         'wrongAnswer': 'Risposta Sbagliata!',
-        'filterPlaceholder': 'Filtra titoli...'
+        'filterPlaceholder': 'Filtra titoli...',
+        'possibleMatches': 'Titoli possibili'
     },
     'en': {
         'gameTitle': 'CineTris',
@@ -50,6 +52,7 @@ window.translations = {
         'startGame': 'Start Game',
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
+        'endGameText': 'End Game',
         'selectEmojiText': 'Select a matching title:',
         'selectMatchingTitle': 'Select a matching title',
         'winnerTitle': 'Game Over!',
@@ -68,7 +71,8 @@ window.translations = {
         'director': 'Director',
         'theme': 'Theme',
         'wrongAnswer': 'Wrong Answer!',
-        'filterPlaceholder': 'Filter titles...'
+        'filterPlaceholder': 'Filter titles...',
+        'possibleMatches': 'Possible matches'
     }
 };
 
