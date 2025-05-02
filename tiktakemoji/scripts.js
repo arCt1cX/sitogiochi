@@ -996,6 +996,12 @@ function showValidAnswers(row, col) {
         return;
     }
     
+    // Remove any existing valid answers container
+    const existingContainer = document.getElementById("valid-answers-container");
+    if (existingContainer) {
+        document.body.removeChild(existingContainer);
+    }
+    
     // Create the valid answers container
     const validAnswersContainer = document.createElement("div");
     validAnswersContainer.className = "valid-answers-container";
@@ -1046,14 +1052,15 @@ function showValidAnswers(row, col) {
     
     validAnswersContainer.appendChild(closeButton);
     
-    // Remove any existing valid answers container
-    const existingContainer = document.getElementById("valid-answers-container");
-    if (existingContainer) {
-        document.body.removeChild(existingContainer);
-    }
-    
-    // Add to the body
+    // Add to the body but keep it hidden initially
+    validAnswersContainer.style.visibility = 'hidden';
     document.body.appendChild(validAnswersContainer);
+    
+    // Force browser to calculate layout before showing the container
+    // This prevents the half-rendered initial state
+    setTimeout(() => {
+        validAnswersContainer.style.visibility = 'visible';
+    }, 10);
 }
 
 // Declare the game as a draw
