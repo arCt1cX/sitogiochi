@@ -180,6 +180,8 @@ body {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .player-turn {
@@ -913,4 +915,32 @@ body {
 .valid-answers-close:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
+}
+
+/* Game result message */
+.game-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    animation: fadeIn 0.5s ease;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.result-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+.winner-symbol {
+    font-size: 1.8rem;
+    animation: winnerPulse 1.5s infinite alternate;
+    filter: drop-shadow(0 0 10px var(--winner-color));
 } 

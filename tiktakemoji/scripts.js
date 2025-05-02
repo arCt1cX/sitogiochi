@@ -161,8 +161,15 @@ function resetGameState() {
         ["", "", ""]
     ];
     
+    // Reset preventInteraction flag
+    gameState.preventInteraction = false;
+    
     // Update player marker
     currentPlayerEl.textContent = "🔴";
+    currentPlayerEl.style.display = ""; // Show player marker again
+    
+    // Reset player turn text
+    document.getElementById("playerTurnText").textContent = window.getTranslation("playerTurnText");
     
     // Hide selection
     emojiSelection.classList.add("hidden");
@@ -172,6 +179,12 @@ function resetGameState() {
     winCells.forEach(cell => {
         cell.classList.remove('win-cell');
     });
+    
+    // Remove game result message if it exists
+    const resultElement = document.getElementById("game-result");
+    if (resultElement) {
+        resultElement.remove();
+    }
 }
 
 // Reset the game (new board)
@@ -934,20 +947,33 @@ function checkDraw() {
 
 // End the game
 function endGame(isDraw) {
-    if (isDraw) {
-        document.getElementById("winnerTitle").textContent = window.getTranslation("draw");
-        document.getElementById("winnerText").textContent = window.getTranslation("noWinner");
-        winnerPlayer.textContent = "";
-    } else {
-        document.getElementById("winnerTitle").textContent = window.getTranslation("gameOver");
-        document.getElementById("winnerText").textContent = window.getTranslation("winner");
-        winnerPlayer.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
+    // Set game over state
+    gameState.gameOver = true;
+    
+    // Create or update game result message in the game info section
+    let resultElement = document.getElementById("game-result");
+    if (!resultElement) {
+        resultElement = document.createElement("div");
+        resultElement.id = "game-result";
+        resultElement.className = "game-result";
+        document.querySelector('.game-info').appendChild(resultElement);
     }
     
-    // Show the winner screen after a short delay
-    setTimeout(() => {
-        showScreen("winner");
-    }, 1000);
+    if (isDraw) {
+        resultElement.innerHTML = `<span class="result-text">${window.getTranslation("draw")}</span>`;
+    } else {
+        resultElement.innerHTML = `<span class="result-text">${window.getTranslation("winner")}</span> 
+                                   <span class="winner-symbol">${gameState.currentPlayer === "red" ? "🔴" : "🔵"}</span>`;
+    }
+    
+    // Show result message with animation
+    resultElement.classList.add("show");
+    
+    // Update the player turn text to indicate game is over
+    document.getElementById("playerTurnText").textContent = window.getTranslation("gameOver");
+    
+    // Hide the current player marker as the game is over
+    document.getElementById("current-player").style.display = "none";
 }
 
 // Helper function to shuffle array
