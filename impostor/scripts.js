@@ -131,18 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
             const selectedPair = gameState.allPhrasePairs[randomPairIndex];
             
-            // Randomly decide whether to swap the phrases (50% chance)
-            const shouldSwapPhrases = Math.random() >= 0.5;
-            
-            if (shouldSwapPhrases) {
-                // Swap: give impostor the usual group phrase, and group the usual impostor phrase
-                gameState.groupPrompt = selectedPair.impostorPhrase;
-                gameState.impostorPrompt = selectedPair.groupPhrase;
-            } else {
-                // Standard: group gets the group phrase, impostor gets the impostor phrase
-                gameState.groupPrompt = selectedPair.groupPhrase;
-                gameState.impostorPrompt = selectedPair.impostorPhrase;
-            }
+            // Always use first phrase for group, second phrase for impostor
+            gameState.groupPrompt = selectedPair.groupPhrase;
+            gameState.impostorPrompt = selectedPair.impostorPhrase;
             
             console.log(`Game started with ${gameState.playerCount} players, ${gameState.impostorCount} impostors`);
             console.log(`Impostors are players: ${gameState.impostorIndices.map(idx => idx + 1).join(', ')}`);
@@ -156,9 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
             const selectedPair = gameState.allPhrasePairs[randomPairIndex];
             
-            // Randomly decide whether to use the left or right phrase (50% chance)
-            const shouldUseRightPhrase = Math.random() >= 0.5;
-            gameState.groupPrompt = shouldUseRightPhrase ? selectedPair.impostorPhrase : selectedPair.groupPhrase;
+            // Always use the first (left) phrase for the group
+            gameState.groupPrompt = selectedPair.groupPhrase;
             gameState.impostorPrompt = ""; // Not used in this game
             
             console.log("Special game: No impostor!");
