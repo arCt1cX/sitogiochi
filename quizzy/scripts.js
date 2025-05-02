@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         availableOptions: [], // New property to store limited options
         lastRandomCategories: [], // Added for storing random categories
         isShockRound: false, // Flag for shock round
-        hardModeActive: false // Flag for hard mode
+        hardModeActive: false, // Flag for hard mode
+        shownQuestions: {} // Track already shown questions
     };
 
     // DOM Elements
@@ -1370,7 +1371,37 @@ document.addEventListener('DOMContentLoaded', function() {
             return null;
         }
         
-        const randomIndex = Math.floor(Math.random() * questions.length);
+        // Initialize tracking for this category and difficulty if needed
+        if (!gameState.shownQuestions[category]) {
+            gameState.shownQuestions[category] = {};
+        }
+        if (!gameState.shownQuestions[category][difficulty]) {
+            gameState.shownQuestions[category][difficulty] = new Set();
+        }
+        
+        // Get set of already shown question indices
+        const shownIndices = gameState.shownQuestions[category][difficulty];
+        
+        // If we've shown all questions in this category/difficulty, reset tracking
+        if (shownIndices.size >= questions.length) {
+            shownIndices.clear();
+            console.log("All questions shown for " + category + "/" + difficulty + " - resetting tracking");
+        }
+        
+        // Find an unshown question
+        let availableIndices = [];
+        for (let i = 0; i < questions.length; i++) {
+            if (!shownIndices.has(i)) {
+                availableIndices.push(i);
+            }
+        }
+        
+        // Get a random index from available ones
+        const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+        
+        // Mark this question as shown
+        shownIndices.add(randomIndex);
+        
         return questions[randomIndex];
     }
     
@@ -2356,6 +2387,9 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(gameState.timer);
             gameState.timer = null;
         }
+        
+        // Reset shown questions tracking
+        gameState.shownQuestions = {};
     }
     
     // Helper function to show a specific screen
