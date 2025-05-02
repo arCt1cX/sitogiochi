@@ -18,6 +18,7 @@ window.translations = {
         'endGameText': 'Fine Partita',
         'selectEmojiText': 'Seleziona un titolo corrispondente:',
         'selectMatchingTitle': 'Seleziona un titolo corrispondente',
+        'validAnswersTitle': 'Risposte Valide per questa Cella:',
         'winnerTitle': 'Partita Finita!',
         'winnerText': 'Vincitore:',
         'playAgainText': 'Gioca Ancora',
@@ -34,8 +35,7 @@ window.translations = {
         'director': 'Regista',
         'theme': 'Tema',
         'wrongAnswer': 'Risposta Sbagliata!',
-        'filterPlaceholder': 'Filtra titoli...',
-        'possibleMatches': 'Titoli possibili'
+        'filterPlaceholder': 'Filtra titoli...'
     },
     'en': {
         'gameTitle': 'CineTris',
@@ -55,6 +55,7 @@ window.translations = {
         'endGameText': 'End Game',
         'selectEmojiText': 'Select a matching title:',
         'selectMatchingTitle': 'Select a matching title',
+        'validAnswersTitle': 'Valid Answers for this Cell:',
         'winnerTitle': 'Game Over!',
         'winnerText': 'Winner:',
         'playAgainText': 'Play Again',
@@ -71,8 +72,7 @@ window.translations = {
         'director': 'Director',
         'theme': 'Theme',
         'wrongAnswer': 'Wrong Answer!',
-        'filterPlaceholder': 'Filter titles...',
-        'possibleMatches': 'Possible matches'
+        'filterPlaceholder': 'Filter titles...'
     }
 };
 
