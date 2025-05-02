@@ -201,3 +201,83 @@ Quante foto hai nella galleria del telefono | Quante ne cancelleresti subito
 Quante lingue ti piacerebbe parlare | Quante lingue parli effettivamente
 Quante volte mangi fuori a settimana | Quante volte mangi a asporto
 Quanti televisori hai a casa | quanti telefoni hai avuto e cambiato
+L'età più giovane per fidanzarsi | Un numero compreso tra 18 e 35
+A che età i tuoi genitori ti hanno dato la prima paghetta | A che età i tuoi genitori ti hanno comprato per la prima volta un videogioco
+A che età dovresti smettere di andare a bere con gli amici | Un numero compreso tra 21 e 90
+Quale videogioco richiede maggiori skill | Quale videogioco vorresti fare con i tuoi figli?
+Con quale attore/attrice andresti a cena | Quale attore/attrice è sottovalutato?
+Se un personaggio di un cartone/film fosse tuo padre, chi sceglieresti? | Il miglior villain di un film/cartone
+Quanto pagheresti per comprare una casa | Scegli un valore nel range tra 300k e 2 mln
+Quale è la peggior emoticon da inviare all' FBI | Quale è la peggior emoticon da inviare al proprio partner
+Età media per iniziare a lavorare | Un numero tra 10 e 30
+Cosa diresti a un animale se potessi parlare con lui | Peggior cosa da dire al primo appuntamento
+Se dovessi scambiare la tua vita con quella di un altro qui presente, chi sceglieresti? | Chi è il più divertente tra quelli qui presenti?
+Quale personaggio di film/ cartone sarebbe il tuo miglior amico? | Quale personaggio di film/cartone animato elimineresti?
+Quale personaggio di film/cartone vorresti essere | Quale è il miglior villain di un film/cartone animato?
+La prima cosa che compreresti dopo aver vinto alla lotteria | Quale oggetto di lusso è il più sopravvalutato
+La miglior città dove andare in viaggio di nozze | La miglior città dove andare con i tuoi amici
+Miglior attività da fare con gli amici | Miglior attività da fare con la tua ragazza/ il tuo ragazzo
+Quale paese ha la miglior popolazione | Quale paese ha il miglior cibo?
+Quale evento sportivo ti piace vedere in TV | Qual è lo sport più sopravvalutato?
+L'altezza ideale per te | Quale altezza dovrebbe avere il tuo ragazzo/la tua ragazza?
+Da 1 a 10 quanto ti ritieni bello | Da 1 a 10 quanto è bella la serie tv peaky blinders? Se non l'hai vista, rispondi con un numero da 1 a 10
+L' età che vorresti avere per il resto della tua vita | Un numero tra 5 e 40
+Quale animale vorresti a fianco a te durante un apocalisse zombie | quale animale ti fa più paura
+Quanto tempo rimani a letto prima di alzarti la mattina | quanto tempo ci metti ad addormentarti la sera
+Quale celebrità porteresti con te in un isola deserta | La celebrità che ti sta più antipatica
+Miglior orario per andare ad allenarsi | Il miglior orario per uscire con gli amici
+Canzone che canteresti al karaoke | Una canzone triste
+In quale film vorresti vivere | Un film da vedere col proprio partner
+Quale parte del corpo ti piace di più | quale parte del tuo corpo cambieresti
+Cantante preferito | Cantante sopravvalutato
+Quale paese ha le donne più attraenti | In quale paese si scopa di più
+Il maggior numero di volte che ti sei masturbato in un giorno | Quante volte vai al bagno in un giorno
+Una celebrità con la quale scambieresti la tua vita | Quale celebrità non vorresti mai essere?
+Quale alcolico bevi più spesso | L'alcolico con cui ti sei ubriacato l'ultima volta
+Quanti km riusciresti a correre di fila? | Un numero tra 2 e 20 
+A che ora ti svegli di solito? | A che ora ti svegliavi per andare a scuola/università?
+La materia scolastica più difficile | La materia scolastica in cui eri più bravo
+Il cartona animato che hai guardato per più tempo | Il cartone animato più sopravvalutato
+L’animale peggiore da trovarti in camera | un animale selvatico qualunque 
+Il luogo perfetto per il primo appuntamento | Un luogo sopravvalutato per un primo appuntamento
+Un amico che non presenteresti/avresti voluto presentare mai ai tuoi genitori | Un amico perfetto da portare a una festa folle
+Uno sport che ti sarebbe piaciuto fare da piccolo | Uno sport che non hai mai guardato in tv
+La velocità perfetta da mantenere in autostrada | Un numero tra 50 e 200
+L’età in cui vorresti rimanere per sempre | A che età vorresti sposarti?
+Il popolo antico di cui ti sarebbe piaciuto far parte | Un popolo antico su cui ti hanno interrogato a scuola
+Se avessi una macchina del tempo, in quale periodo storico andresti? | Nomina un periodo storico
+La prima cosa che guardi in una donna | Tette o culo?
+L’anno di scuola migliore | L’anno di scuola in cui ti hanno riempito di compiti
+Un cantante che ha fatto una sola bella canzone | Un cantante che non tolleri
+Faresti cannibalismo per 1.000.000 €? | Rispondi Si o No
+Il tuo parente preferito | Il parente più stupido che hai
+Quale cosa faresti una sola volta nella vita? | Nomina una droga pesante qualsiasi
+Un animale che cancelleresti dalla faccia della terra | l’animale non domestico che vedi più spesso
+Quanti pasti fai al giorno? | Un numero da 1 a 10
+Il miglior libro che hai letto | Il primo libro che hai letto
+Un paese che visiteresti di inverno | Il paese più freddo del mondo
+Se potessi visitare un altro pianeta, quale sceglieresti? | Nomina un pianeta
+Una cosa che non può mancare al primo appuntamento | Una cosa che non può mancare in discoteca
+Qual è stata la tua prima crush da bambino? | Nomina un personaggio femminile dei cartoni animati/ serie tv 
+Un amico che non potrebbe mai fare il tuo lavoro | Nomina un tuo amico qualunque
+Uccideresti un tuo parente per 1.000.000.000€ | Rispondi Si o no 
+Hai mai baciato una persona del tuo stesso sesso? | Rispondi Si o no
+Qual è il dialetto più incomprensibile? | Qual è il dialetto che non sopporti proprio?
+Un videogame che è migliore se giocato in gruppo | Un videogame che hai giocato veramente tanto 
+L’applicazione del telefono che usi di più | il tuo social network preferito
+Un’attività in cui le donne sono superiori agli uomini | nomina una faccenda di casa
+Il software/applicazione che usi di più nel tuo computer | Rispondi con uno dei seguenti: Microsoft Word, Excel, Visual Studio, Discord, Powerpoint
+Qual è un luogo in cui sei stato che non è molto comunemente visitato | Il luogo peggiore in cui sei andato in vacanza
+In quante regioni d’Italia sei stato? | Un numero tra 10 e 20
+Qual è la regione d’Italia con la migliore cucina? | Qual è la regione d’Italia più bella dal punto di vista naturale?
+La città più sopravvalutata | Qual è una città in cui torneresti solo per bisogno?
+A quale percentuale di batteria del telefono inizi ad essere in ansia? | Un numero tra 1 e 70
+Un politico che tutti insultano ma per te non è così male | Un politico che ritieni pessimo
+Il luogo peggiore in cui sei andato in vacanza | La località di provenienza della tua famiglia materna
+La persona peggiore a cui bestemmiare davanti | La persona peggiore da portare in vacanza con gli amici
+Il voto più basso che hai preso a scuola | Quante volte ti masturbi al giorno?
+Quanto sei attraente da 0 a 10? | Dai un voto al film “Jurassic Park”
+Una materia bella ma in cui avevi un professore pessimo | Una materia di scuola brutta in cui avevi un professore bravissimo
+L’esame universitario a cui avresti voluto un voto più alto | L’esame universitario che ti è piaciuto di più 
+L’orario in cui solitamente fai colazione | Il migliore orario per svegliarsi in un weekend tranquillo 
+Il migliore orario per andare a dormire quando non hai piani per la sera | L’orario in cui esci normalmente la sera per incontrare i tuoi amici

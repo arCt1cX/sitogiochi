@@ -1,4 +1,4 @@
-The best Italian song of all time | An Italian song from recent years
+The best song of all time | A song from recent years
 The best sport to watch on TV | The best sport to watch live
 The dish that best represents Italy | The tastiest Italian dish
 The most beautiful city in Italy | The most beautiful Italian city you've visited
@@ -94,7 +94,7 @@ Number of sports tried in life | Number of sports practiced for 3+ years
 How many apps people have installed | How many apps people actually use every day
 How many social media accounts people have | How many social media accounts people use regularly
 A food you hated as a child | A food you've always loved since childhood
-A TV series to binge-watch | A TV series that requires reflection
+A TV series to binge watch | A TV series that requires reflection
 A famous person you admire | A famous person you're not convinced by
 A language you'd like to learn | A language that intrigues you but you'd never study
 One thing you'd bring to a desert island | The first thing you'd wish for on a desert island
@@ -198,3 +198,96 @@ How many sports you've tried in your life | How many sports you've practiced for
 How many hours you spend on the computer every day | How many hours you spend on your phone every day
 How many countries you want to visit in your life | How many countries you've already visited
 How many times a month you go to the gym | How many times a month you skip the gym 
+The youngest age to start dating | say a number between 18 and 35
+At what age did your parents give you your first allowance | at what age did your parents buy you a video game for the first time
+At what age should you stop going out drinking with friends | say a number between 21 and 90
+Which video game requires the most skill | which video game would you like to play with your kids
+Which actor or actress would you go to dinner with | which actor or actress is underrated
+If a cartoon or movie character were your father, who would you choose | the best villain in a movie or cartoon
+How much would you pay to buy a house | choose a value in the range between 300k and 2 million
+Which song would you listen to alone | which song would you listen to with your partner
+What’s the worst emoji to send to the FBI | what’s the worst emoji to send to your partner
+Average age to start working | range between 10 and 30
+What would you say to an animal if you could talk to it | worst thing to say on a first date
+If you had to switch lives with someone here, who would you choose | who is the funniest person here
+Which movie or cartoon character would be your best friend | which movie or cartoon character would you erase
+Which movie or cartoon character would you like to be | who is the best villain in movies or cartoons
+The first thing you would buy after winning the lottery | which luxury item is the most overrated
+The best city for a honeymoon | the best city to visit with your friends
+Best activity to do with friends | best activity to do with your boyfriend or girlfriend
+Which country has the best people | which country has the best food
+Which sports event do you like to watch on TV | which sport is the most overrated
+What height would you like to have | what height should your boyfriend or girlfriend have
+From one to ten, how attractive do you think you are | from one to ten, how good is the TV series Peaky Blinders
+What age would you like to be for the rest of your life | range between 5 and 40
+Which animal would you want by your side during a zombie apocalypse | which animal scares you the most
+Which animal would you like to be | which animal would you like to tame
+How long do you stay in bed before getting up in the morning | how long does it take you to fall asleep at night
+Which celebrity would you bring with you to a desert island | which celebrity do you dislike the most
+Best time to go to the gym | best time to go out with friends
+A song you'd sing at karaoke | a sad song
+Which movie would you like to live in | which movie would you watch with your partner
+Which part of your body do you like the most | which part of your body is the biggest
+Favorite singer | most overrated singer
+Which country has the most attractive women | in which country do people have the most sex
+If you win the lottery, what percentage would you give your parents | what percentage do you leave as a tip at restaurants
+The highest number of times you've masturbated in one day | how many times do you go to the bathroom in a day
+Which celebrity would you trade lives with | which celebrity would you never want to be
+Which alcoholic drink do you drink most often | which alcoholic drink got you drunk last time
+The maximum weight you can bench press | a weight between 60 and 140 kg
+How many kilometers could you run nonstop | a distance between 10 and 30 km
+What time do you usually wake up | what time did you used to wake up for school
+The most difficult school subject | the school subject you were best at
+A character who inspires you | your favorite cartoon character
+The cartoon you’ve spent the most time watching | the most overrated cartoon
+The most difficult university major | the university major you would have chosen instead of the one you actually did
+The worst animal to find in your room | any kind of snake
+Perfect place for a first date | an overrated place for a first date
+A cartoon character you would trade lives with | the best cartoon villain
+A friend you would never introduce to your parents | a friend who’s perfect to bring to a wild party
+A sport you wish you had played as a kid | a sport you’ve never watched on TV
+The perfect speed to drive on the highway | a speed between 50 and 200 km/h
+The age you would want to live at forever | at what age would you like to get married
+The ancient people you would most like to live with | an ancient people you were tested on in school
+If you had a time machine, which historical period would you go to | name a historical period
+On what basis would you choose the woman you marry | boobs or butt
+The best school year | the school year when you were given the most homework
+A singer who makes one perfect song and ten horrible ones | a singer you can’t stand
+Would you do cannibalism for one million euros | yes or no
+Your favorite relative | the dumbest relative you have
+Something you would do only once in your life | name any hard drug
+An animal you would erase from the face of the earth | the wild animal you see most often
+How many meals do you eat per day | a number from 1 to 10
+The best book you’ve ever read | the first book you ever read
+The most overrated comic book | the comic book you’ve read the most in your life
+A country you would visit in winter | the coldest country in the world
+If you could visit another planet, which one would you choose | name a planet
+Something that must be present on a first date | name a condom brand
+Who was your first childhood crush | name a female cartoon character
+Someone who could never do your job | name any of your friends
+Would you kill a relative for one billion euros | yes or no
+Have you ever kissed someone of the same sex… true or false | true or false
+Which is the most incomprehensible dialect | which Italian dialect can you not stand at all
+Which historical figure would you make head of the UN today | name a bloodthirsty dictator
+A video game that is better played in a group | a video game you’ve obsessed over
+The phone app you use the most | your favorite social network
+An activity in which women are better than men | name a household chore
+The age at which you had your first kiss | pick a number between 1 and 20
+The software or application you use the most on your computer | Word, Excel, or PowerPoint?
+A place you’ve been that isn’t commonly visited | the worst place you’ve been on vacation
+How many Italian regions have you visited | pick a number between 10 and 20
+Which Italian region has the best food | which Italian region is the most beautiful in terms of nature
+Which is the most overrated city in Italy | which is an Italian city you’d return to only out of necessity
+At what phone battery percentage do you start to feel anxious | pick a percentage between 1% and 50%
+A political party you voted for only once | the current political party you hate the most
+A politician everyone insults but you don’t think is that bad | a politician you think is terrible
+The worst place you’ve been on vacation | your maternal family’s hometown
+The worst person to swear in front of | the worst person to take on vacation with your friends
+If you had to switch lives with someone here, who would you choose | the funniest person in the room
+The lowest grade you’ve gotten at school | how many times do you masturbate per day
+How attractive are you from 0 to 10 | rate the movie “Jurassic Park”
+A beautiful school subject you had a terrible teacher in | a boring subject you had a great teacher in
+A nickname you sometimes call your girlfriend or wife | name a household appliance you can’t live without (without the article)
+The university exam you wish you had gotten a higher grade in | the university exam you enjoyed the most
+The time you usually have breakfast | the best time to wake up on a chill weekend
+The best time to go to bed when you have no plans | the time you usually go out in the evening to meet your friends
