@@ -739,27 +739,50 @@ function showTitleOptions(row, col) {
     const selectionTitle = `${window.getTranslation('selectMatchingTitle')} (${rowCategory}: ${rowValue} + ${colCategory}: ${colValue})`;
     document.getElementById("selectEmojiText").textContent = selectionTitle;
     
-    // Focus the filter input
-    setTimeout(() => {
-        filterInput.focus();
-    }, 100);
-    
     // Show the selection panel
     emojiSelection.classList.remove("hidden");
+    
+    // Focus the filter input and ensure it's visible
+    setTimeout(() => {
+        // Ensure the emoji selection is fully visible
+        emojiSelection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Focus the input after scrolling
+        setTimeout(() => {
+            filterInput.focus();
+        }, 300);
+    }, 100);
 }
 
 // Filter titles based on input
 function filterTitles(query, container) {
+    // Remember scroll position
+    const scrollTop = container.scrollTop;
+    
     const options = container.querySelectorAll('.option');
+    let visibleCount = 0;
     
     options.forEach(option => {
         const title = option.dataset.title.toLowerCase();
         if (title.includes(query)) {
             option.style.display = '';
+            visibleCount++;
         } else {
             option.style.display = 'none';
         }
     });
+    
+    // Set a minimum height for the container to prevent layout shifts
+    if (visibleCount < 3) {
+        container.style.minHeight = '100px';
+    } else {
+        container.style.minHeight = '';
+    }
+    
+    // Restore scroll position
+    setTimeout(() => {
+        container.scrollTop = scrollTop;
+    }, 10);
 }
 
 // Show wrong answer message

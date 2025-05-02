@@ -392,7 +392,6 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
     border-radius: 16px;
     padding: 1.5rem;
-    margin-top: 1.5rem;
     animation: popIn 0.3s ease;
     border: 1px solid var(--border-color);
     border-top: 4px solid var(--primary-color);
@@ -400,6 +399,8 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes popIn {
@@ -415,10 +416,16 @@ body {
     margin-top: 1rem;
 }
 
-/* Filter container */
+/* Filter container - make it sticky */
 .filter-container {
     margin-bottom: 1rem;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin-top: -0.5rem;
 }
 
 .title-filter {
@@ -450,14 +457,16 @@ body {
     background-color: rgba(20, 20, 20, 0.7);
 }
 
-/* All entries container */
+/* All entries container - fixed height */
 .all-entries-container {
     max-height: 300px;
+    height: 300px;
     overflow-y: auto;
     padding-right: 10px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
+    margin-right: -5px;
 }
 
 /* Custom scrollbar for the container */
