@@ -75,7 +75,7 @@ età media in cui si va a vivere da soli | età in cui una persona inizia a lavo
 numero di viaggi all'anno che una persona vorrebbe fare | numero di viaggi all'anno che una persona riesce davvero a fare
 numero di scarpe che una persona media possiede | numero di scarpe che usi veramente
 numero ideale di ore di sonno a notte | numero reale di ore che dormi ogni notte
-quante tazze di caffè si bevono in media al giorno | quante tazze si bevono nei periodi stressanti
+quante tazze di caffè si bevono in media al giorno | quante tazze di caffè si bevono nei periodi stressanti
 numero di serie TV iniziate e mai finite | numero di serie TV viste più di una volta
 età in cui si prende la patente | Scrivi un numero da 10 a 30
 numero medio di amici stretti | numero di amici con cui ti senti ogni settimana
