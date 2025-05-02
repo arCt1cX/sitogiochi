@@ -272,7 +272,7 @@
             "theme": "Guerra"
         },
         {
-            "title": "The Dark Knight",
+            "title": "Batman: The Dark Knight",
             "type": "Film",
             "genre": "Azione",
             "language": "Inglese",
@@ -515,7 +515,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "title": "Money Heist",
+            "title": "La casa di carta",
             "type": "Serie TV",
             "genre": "Thriller",
             "language": "Spagnolo",
@@ -542,7 +542,7 @@
             "theme": "Famiglia"
         },
         {
-            "title": "Back to the Future",
+            "title": "Ritorno al futuro",
             "type": "Film",
             "genre": "Fantascienza",
             "language": "Inglese",
@@ -596,7 +596,7 @@
             "theme": "Robot/AI"
         },
         {
-            "title": "The Great Gatsby",
+            "title": "Il Grande Gatsby",
             "type": "Film",
             "genre": "Dramma",
             "language": "Inglese",
@@ -605,7 +605,7 @@
             "theme": "Amore"
         },
         {
-            "title": "Call Me by Your Name",
+            "title": "Chiamami col tuo nome",
             "type": "Film",
             "genre": "Romantico",
             "language": "Inglese",
@@ -623,7 +623,7 @@
             "theme": "Coming of Age"
         },
         {
-            "title": "The Godfather",
+            "title": "Il Padrino",
             "type": "Film",
             "genre": "Dramma",
             "language": "Inglese",
@@ -938,7 +938,7 @@
             "theme": "Famiglia"
         },
         {
-            "title": "House M.D.",
+            "title": "Dr. House",
             "type": "Serie TV",
             "genre": "Dramma",
             "language": "Inglese",
@@ -1217,15 +1217,6 @@
             "theme": "Guerra"
         },
         {
-            "title": "Ritorno al futuro",
-            "type": "Film",
-            "genre": "Fantascienza",
-            "language": "Inglese",
-            "decade": "Anni '80",
-            "director": "Robert Zemeckis",
-            "theme": "Viaggi nel tempo"
-        },
-        {
             "title": "Il Re Leone",
             "type": "Film",
             "genre": "Animazione",
@@ -1422,15 +1413,6 @@
             "decade": "Anni 2000",
             "director": "Justin Lin",
             "theme": "Auto"
-        },
-        {
-            "title": "Blade Runner",
-            "type": "Film",
-            "genre": "Fantascienza",
-            "language": "Inglese",
-            "decade": "Anni '80",
-            "director": "Ridley Scott",
-            "theme": "Robot/AI"
         },
         {
             "title": "Shining",
@@ -1802,15 +1784,6 @@
             "theme": "Comico"
         },
         {
-            "title": "Il Grande Gatsby",
-            "type": "Film",
-            "genre": "Dramma",
-            "language": "Inglese",
-            "decade": "Anni 2010",
-            "director": "Baz Luhrmann",
-            "theme": "Amore"
-        },
-        {
             "title": "Il Dittatore",
             "type": "Film",
             "genre": "Commedia",
@@ -2054,7 +2027,7 @@
             "theme": "Monster"
         },
         {
-            "title": "The Fly",
+            "title": "The Fly (La mosca)",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2297,7 +2270,7 @@
             "theme": "Storico"
         },
         {
-            "title": "Us",
+            "title": "Us (Noi)",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2576,7 +2549,7 @@
             "theme": "Mistero"
         },
         {
-            "title": "Wolverine",
+            "title": "Wolverine: L'Immortale",
             "type": "Film",
             "genre": "Azione",
             "language": "Inglese",
@@ -2603,7 +2576,7 @@
             "theme": "Zombie"
         },
         {
-            "title": "The Purge",
+            "title": "La Notte del Giudizio",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2612,7 +2585,7 @@
             "theme": "Distopia"
         },
         {
-            "title": "The Purge: Anarchy",
+            "title": "La Notte del Giudizio: Anarchy",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2621,7 +2594,7 @@
             "theme": "Distopia"
         },
         {
-            "title": "The Purge: Election Year",
+            "title": "La Notte del Giudizio: Election Year",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2630,7 +2603,7 @@
             "theme": "Distopia"
         },
         {
-            "title": "The First Purge",
+            "title": "La Prima Notte del Giudizio",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2639,7 +2612,7 @@
             "theme": "Distopia"
         },
         {
-            "title": "The Forever Purge",
+            "title": "La Notte del Giudizio per Sempre",
             "type": "Film",
             "genre": "Horror",
             "language": "Inglese",
@@ -2873,7 +2846,7 @@
             "theme": "Paranormale"
         },
         {
-            "title": "Diary of a Wimpy Kid",
+            "title": "Diario di una Schiappa",
             "type": "Film",
             "genre": "Commedia",
             "language": "Inglese",
@@ -2918,7 +2891,7 @@
             "theme": "Supereroi"
         },
         {
-            "title": "Alvin and the Chipmunks",
+            "title": "Alvin Superstar",
             "type": "Film",
             "genre": "Commedia",
             "language": "Inglese",
@@ -3062,7 +3035,7 @@
             "theme": "Mafia/Crimine"
         },
         {
-            "title": "Bridge to Terabithia",
+            "title": "Un ponte per Terabithia",
             "type": "Film",
             "genre": "Fantasy",
             "language": "Inglese",
@@ -3071,7 +3044,7 @@
             "theme": "Fantastico"
         },
         {
-            "title": "The Devil Wears Prada",
+            "title": "Il Diavolo veste Prada",
             "type": "Film",
             "genre": "Commedia",
             "language": "Inglese",
@@ -3251,7 +3224,7 @@
             "theme": "Romance"
         },
         {
-            "title": "Meet Joe Black",
+            "title": "Vi presento Joe Black",
             "type": "Film",
             "genre": "Dramma",
             "language": "Inglese",
@@ -3296,7 +3269,7 @@
             "theme": "Adolescenza"
         },
         {
-            "title": "Reservoir Dogs",
+            "title": "Le Iene",
             "type": "Film",
             "genre": "Thriller",
             "language": "Inglese",
@@ -3332,7 +3305,7 @@
             "theme": "Alieni"
         },
         {
-            "title": "Rear Window",
+            "title": "La finestra sul cortile",
             "type": "Film",
             "genre": "Thriller",
             "language": "Inglese",
@@ -3449,15 +3422,6 @@
             "theme": "Amicizia"
         },
         {
-            "title": "Amelie",
-            "type": "Film",
-            "genre": "Commedia",
-            "language": "Francese",
-            "decade": "Anni 2000",
-            "director": "Jean-Pierre Jeunet",
-            "theme": "Romance"
-        },
-        {
             "title": "Midnight in Paris",
             "type": "Film",
             "genre": "Commedia",
@@ -3467,7 +3431,7 @@
             "theme": "Arte"
         },
         {
-            "title": "8 and a Half",
+            "title": "8 ½",
             "type": "Film",
             "genre": "Dramma",
             "language": "Italiano",
