@@ -663,20 +663,8 @@ body {
 }
 
 .new-game-btn {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.7rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    margin-bottom: 1rem;
-}
-
-.new-game-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.5rem;
+    display: none; /* Initially hidden */
 }
 
 @media (max-width: 768px) {
@@ -831,11 +819,6 @@ body {
 .action-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* New game button specific styling */
-.new-game-btn {
-    margin-bottom: 0.5rem;
 }
 
 /* Valid answers display */

@@ -139,6 +139,9 @@ function startGame() {
     selectRandomCategories();
     createGameBoard();
     
+    // Hide new game button until the game is over
+    document.getElementById("new-game").style.display = "none";
+    
     // Show game screen
     showScreen("game");
 }
@@ -173,6 +176,9 @@ function resetGameState() {
     
     // Hide selection
     emojiSelection.classList.add("hidden");
+    
+    // Hide new game button until the game is over
+    document.getElementById("new-game").style.display = "none";
     
     // Clear any win-cell classes
     const winCells = document.querySelectorAll('.win-cell');
@@ -974,6 +980,9 @@ function endGame(isDraw) {
     
     // Hide the current player marker as the game is over
     document.getElementById("current-player").style.display = "none";
+    
+    // Show the new game button now that the game is over
+    document.getElementById("new-game").style.display = "block";
 }
 
 // Helper function to shuffle array

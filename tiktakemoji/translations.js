@@ -140,6 +140,7 @@ function applyGameTranslations() {
     document.getElementById('start-game').textContent = translationSet.startGame;
     document.getElementById('playerTurnText').textContent = translationSet.playerTurnText;
     document.getElementById('newGameText').textContent = translationSet.newGameText;
+    document.getElementById('endGameText').textContent = translationSet.endGameText;
     document.getElementById('selectEmojiText').textContent = translationSet.selectEmojiText;
     document.getElementById('winnerTitle').textContent = translationSet.winnerTitle;
     document.getElementById('winnerText').textContent = translationSet.winnerText;
