@@ -2159,8 +2159,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add to body
         document.body.appendChild(overlay);
         
-        // Clear skip flag
-        gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
+        // Store the current player index to clear the flag properly
+        const currentSkippingPlayerIndex = gameState.currentPlayerIndex;
+        
+        // Clear skip flag for the current player immediately
+        gameState.players[currentSkippingPlayerIndex].skipNextTurn = false;
         
         // Add event listener
         continueBtn.addEventListener('click', function() {
@@ -2172,15 +2175,21 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Force next turn with small delay
             setTimeout(function() {
-                // Check for shock round
-                const player = gameState.players[gameState.currentPlayerIndex];
-                gameState.isShockRound = player.score >= 10 && !player.hadShockRound;
-                
-                if (gameState.isShockRound) {
-                    player.hadShockRound = true;
-                    setupShockRound(player);
+                // Check if the NEXT player should skip their turn
+                if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                    // If the next player also needs to skip, show skip message for them
+                    showForceSkipMessage();
                 } else {
-                    setupGameRound();
+                    // Check for shock round
+                    const player = gameState.players[gameState.currentPlayerIndex];
+                    gameState.isShockRound = player.score >= 10 && !player.hadShockRound;
+                    
+                    if (gameState.isShockRound) {
+                        player.hadShockRound = true;
+                        setupShockRound(player);
+                    } else {
+                        setupGameRound();
+                    }
                 }
             }, 50);
         });
@@ -2271,8 +2280,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.body.appendChild(skipMessage);
         
+        // Store the current player index to clear the flag properly
+        const currentSkippingPlayerIndex = gameState.currentPlayerIndex;
+        
         // Clear the skip flag so it only happens once
-        gameState.players[gameState.currentPlayerIndex].skipNextTurn = false;
+        gameState.players[currentSkippingPlayerIndex].skipNextTurn = false;
         
         // Add event listener to continue button
         continueBtn.addEventListener('click', function() {
@@ -2281,8 +2293,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Move to the next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
             console.log("After skip, moving to player:", gameState.currentPlayerIndex);
-            // Check if this player needs a shock round (has 10 or more points)
-            checkShockRoundAndSetup();
+            
+            // Check if the NEXT player should also skip their turn
+            if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
+                // If the next player also needs to skip, show skip message for them
+                showSkippedTurnMessage();
+            } else {
+                // Check if this player needs a shock round (has 10 or more points)
+                checkShockRoundAndSetup();
+            }
         });
     }
     
