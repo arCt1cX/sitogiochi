@@ -181,6 +181,9 @@ function resetGameState() {
     // Hide new game button until the game is over
     document.getElementById("new-game").style.display = "none";
     
+    // Show the end game button again
+    document.getElementById("end-game").style.display = "";
+    
     // Clear any win-cell classes
     const winCells = document.querySelectorAll('.win-cell');
     winCells.forEach(cell => {
@@ -1012,6 +1015,9 @@ function endGame(isDraw) {
     
     // Show the new game button now that the game is over
     document.getElementById("new-game").style.display = "block";
+    
+    // Hide the end game button as it's no longer needed
+    document.getElementById("end-game").style.display = "none";
 }
 
 // Helper function to shuffle array
