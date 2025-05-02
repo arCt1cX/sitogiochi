@@ -1739,6 +1739,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     resultMessage.textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
                     resultMessage.className = 'result-message incorrect';
                 }
+                
                 if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
                 if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
                     // Store the original answer before shuffling
