@@ -11,7 +11,7 @@ window.translations = {
         'passwordError': 'Password errata. Riprova.',
         'instructionsTitle': 'Come Giocare',
         'instructionsText': 'Gioca a una versione divertente del tris classico dove segni la griglia scegliendo film o serie TV che collegano una categoria di riga e una di colonna.',
-        'rulesText': 'I giocatori a turno posizionano Giocatore 1 o Giocatore 2 selezionando un titolo che corrisponde alla cella. Ottieni tre in fila per vincere!',
+        'rulesText': 'I giocatori a turno posizionano 🔴 o 🔵 selezionando un titolo che corrisponde alla cella. Ottieni tre in fila per vincere!',
         'startGame': 'Inizia Gioco',
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
@@ -35,9 +35,7 @@ window.translations = {
         'director': 'Regista',
         'theme': 'Tema',
         'wrongAnswer': 'Risposta Sbagliata!',
-        'filterPlaceholder': 'Filtra titoli...',
-        'player1': 'Giocatore 1',
-        'player2': 'Giocatore 2'
+        'filterPlaceholder': 'Filtra titoli...'
     },
     'en': {
         'gameTitle': 'CineTris',
@@ -50,7 +48,7 @@ window.translations = {
         'passwordError': 'Incorrect password. Please try again.',
         'instructionsTitle': 'How to Play',
         'instructionsText': 'Play a fun twist on classic tic-tac-toe where you mark the grid by choosing movies or TV shows that connect a row category and a column category.',
-        'rulesText': 'Players take turns placing either Player 1 or Player 2 by submitting a matching title for the cell. Get three in a row to win!',
+        'rulesText': 'Players take turns placing either 🔴 or 🔵 by submitting a matching title for the cell. Get three in a row to win!',
         'startGame': 'Start Game',
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
@@ -74,9 +72,7 @@ window.translations = {
         'director': 'Director',
         'theme': 'Theme',
         'wrongAnswer': 'Wrong Answer!',
-        'filterPlaceholder': 'Filter titles...',
-        'player1': 'Player 1',
-        'player2': 'Player 2'
+        'filterPlaceholder': 'Filter titles...'
     }
 };
 

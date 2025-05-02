@@ -168,7 +168,8 @@ function resetGameState() {
     gameState.preventInteraction = false;
     
     // Update player marker
-    currentPlayerEl.textContent = "🔴";
+    currentPlayerEl.textContent = "Giocatore 1";
+    currentPlayerEl.className = "player-marker red";
     currentPlayerEl.style.display = ""; // Show player marker again
     
     // Reset player turn text
@@ -714,7 +715,8 @@ function showTitleOptions(row, col) {
                 showWrongAnswerMessage();
                 // Pass turn to next player
                 gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
-                currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
+                currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
+                currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
                 // Hide selection after a delay
                 setTimeout(() => {
                     emojiSelection.classList.add("hidden");
@@ -877,7 +879,10 @@ function makeMove(title) {
     
     // Switch player
     gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
-    currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
+    
+    // Update player marker text and class
+    currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
+    currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
 }
 
 // Set the state of a cell
@@ -991,8 +996,9 @@ function endGame(isDraw) {
     if (isDraw) {
         resultElement.innerHTML = `<span class="result-text">${window.getTranslation("draw")}</span>`;
     } else {
+        const winnerText = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
         resultElement.innerHTML = `<span class="result-text">${window.getTranslation("winner")}</span> 
-                                   <span class="winner-symbol">${gameState.currentPlayer === "red" ? "🔴" : "🔵"}</span>`;
+                                   <span class="winner-symbol ${gameState.currentPlayer}">${winnerText}</span>`;
     }
     
     // Show result message with animation
