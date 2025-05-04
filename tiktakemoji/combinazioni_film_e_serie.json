@@ -2239,7 +2239,7 @@
         {
             "title": "Tenet",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Christopher Nolan",
@@ -2248,7 +2248,7 @@
         {
             "title": "Midsommar",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ari Aster",
@@ -2257,7 +2257,7 @@
         {
             "title": "Once Upon a Time in Hollywood",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Quentin Tarantino",
@@ -2266,16 +2266,16 @@
         {
             "title": "Us (Noi)",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jordan Peele",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Bandersnatch",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Charlie Brooker",
@@ -2284,7 +2284,7 @@
         {
             "title": "Bohemian Rhapsody",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bryan Singer",
@@ -2293,7 +2293,7 @@
         {
             "title": "Blade Runner 2049",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma", "Noir"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Denis Villeneuve",
@@ -2302,7 +2302,7 @@
         {
             "title": "Logan",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Fantascienza", "Supereroi"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James Mangold",
@@ -2311,7 +2311,7 @@
         {
             "title": "Life",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Daniel Espinosa",
@@ -2320,7 +2320,7 @@
         {
             "title": "Passengers",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Romantico", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Morten Tyldum",
@@ -2329,7 +2329,7 @@
         {
             "title": "Arrival",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Denis Villeneuve",
@@ -2338,7 +2338,7 @@
         {
             "title": "Now You See Me",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Louis Leterrier",
@@ -2347,7 +2347,7 @@
         {
             "title": "Suicide Squad",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Ayer",
@@ -2356,7 +2356,7 @@
         {
             "title": "Scary Movie",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Keenen Ivory Wayans",
@@ -2365,7 +2365,7 @@
         {
             "title": "Scary Movie 2",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Keenen Ivory Wayans",
@@ -2374,7 +2374,7 @@
         {
             "title": "Scary Movie 3",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Zucker",
@@ -2383,7 +2383,7 @@
         {
             "title": "Scary Movie 4",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Zucker",
@@ -2392,7 +2392,7 @@
         {
             "title": "Scary Movie 5",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Malcolm D. Lee",
@@ -2401,7 +2401,7 @@
         {
             "title": "Perfetti Sconosciuti",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma"],
             "language": "Italiano",
             "decade": "Anni 2010",
             "director": "Paolo Genovese",
@@ -2410,25 +2410,25 @@
         {
             "title": "The Revenant",
             "type": "Film",
-            "genre": "Avventura",
+            "genre": ["Avventura", "Dramma", "Storico", "Western"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Alejandro González Iñárritu",
-            "theme": "Wilderness"
+            "theme": "Sopravvivenza"
         },
         {
             "title": "The Hateful Eight",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Western"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Quentin Tarantino",
-            "theme": "Mistero"
+            "theme": ["Mistero", "Psicologico", "Sopravvivenza"]
         },
         {
             "title": "Creed",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ryan Coogler",
@@ -2437,7 +2437,7 @@
         {
             "title": "Ted",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Seth MacFarlane",
@@ -2446,16 +2446,16 @@
         {
             "title": "Jurassic World",
             "type": "Film",
-            "genre": "Avventura",
+            "genre": ["Avventura", "Fantascienza", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Colin Trevorrow",
-            "theme": "Disastro"
+            "theme": "Sopravvivenza"
         },
         {
             "title": "Southpaw",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Antoine Fuqua",
@@ -2464,7 +2464,7 @@
         {
             "title": "Demolition",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jean-Marc Vallée",
@@ -2473,16 +2473,16 @@
         {
             "title": "American Sniper",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Biografico", "Guerra"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Clint Eastwood",
-            "theme": "Militare"
+            "theme": "Guerra"
         },
         {
             "title": "Gone Girl",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Fincher",
@@ -2491,7 +2491,7 @@
         {
             "title": "John Wick",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Chad Stahelski",
@@ -2500,26 +2500,26 @@
         {
             "title": "Nightcrawler",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Dan Gilroy",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "The Imitation Game",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Storico", "Guerra"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Morten Tyldum",
-            "theme": "Guerra"
+            "theme": ["Guerra", "Tecnologia"]
         },
         {
             "title": "Lucy",
             "type": "Film",
-            "genre": "Fantascienza",
-            "language": "Inglese",
+            "genre": ["Fantascienza", "Azione", "Thriller"],
+            "language": "Inglese", 
             "decade": "Anni 2010",
             "director": "Luc Besson",
             "theme": "Futuristico"
@@ -2527,16 +2527,16 @@
         {
             "title": "Maleficent",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Robert Stromberg",
-            "theme": "Fantasia"
+            "theme": ["Magia", "Amore", "Famiglia"]
         },
         {
             "title": "Prisoners",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Denis Villeneuve",
@@ -2545,7 +2545,7 @@
         {
             "title": "Wolverine: L'Immortale",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James Mangold",
@@ -2554,7 +2554,7 @@
         {
             "title": "About Time",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Commedia", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Richard Curtis",
@@ -2563,7 +2563,7 @@
         {
             "title": "World War Z",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Horror", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Marc Forster",
@@ -2572,7 +2572,7 @@
         {
             "title": "La Notte del Giudizio",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James DeMonaco",
@@ -2581,7 +2581,7 @@
         {
             "title": "La Notte del Giudizio: Anarchy",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James DeMonaco",
@@ -2590,7 +2590,7 @@
         {
             "title": "La Notte del Giudizio: Election Year",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James DeMonaco",
@@ -2599,7 +2599,7 @@
         {
             "title": "La Prima Notte del Giudizio",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Gerard McMurray",
@@ -2608,7 +2608,7 @@
         {
             "title": "La Notte del Giudizio per Sempre",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Everardo Gout",
@@ -2617,7 +2617,7 @@
         {
             "title": "Una notte da leoni 2",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Todd Phillips",
@@ -2626,7 +2626,7 @@
         {
             "title": "Una notte da leoni 3",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Todd Phillips",
@@ -2635,7 +2635,7 @@
         {
             "title": "Twilight",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Catherine Hardwicke",
@@ -2644,7 +2644,7 @@
         {
             "title": "The Twilight Saga: New Moon",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Chris Weitz",
@@ -2653,7 +2653,7 @@
         {
             "title": "The Twilight Saga: Eclipse",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Slade",
@@ -2662,7 +2662,7 @@
         {
             "title": "The Twilight Saga: Breaking Dawn - Part 1",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bill Condon",
@@ -2671,7 +2671,7 @@
         {
             "title": "The Twilight Saga: Breaking Dawn - Part 2",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Romantico", "Dramma", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bill Condon",
@@ -2680,25 +2680,16 @@
         {
             "title": "The Perks of Being a Wallflower",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Coming of Age", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Stephen Chbosky",
             "theme": "Coming of Age"
         },
         {
-            "title": "The Dictator",
-            "type": "Film",
-            "genre": "Commedia",
-            "language": "Inglese",
-            "decade": "Anni 2010",
-            "director": "Larry Charles",
-            "theme": "Satira"
-        },
-        {
             "title": "Sinister",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Scott Derrickson",
@@ -2707,16 +2698,16 @@
         {
             "title": "Crazy, Stupid, Love",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Glenn Ficarra & John Requa",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Harry Potter e la pietra filosofale",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Chris Columbus",
@@ -2725,7 +2716,7 @@
         {
             "title": "Harry Potter e la camera dei segreti",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Chris Columbus",
@@ -2734,7 +2725,7 @@
         {
             "title": "Harry Potter e il prigioniero di Azkaban",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Alfonso Cuarón",
@@ -2743,7 +2734,7 @@
         {
             "title": "Harry Potter e il calice di fuoco",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Mike Newell",
@@ -2752,7 +2743,7 @@
         {
             "title": "Harry Potter e l'ordine della fenice",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Yates",
@@ -2761,7 +2752,7 @@
         {
             "title": "Harry Potter e il principe mezzosangue",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Yates",
@@ -2770,7 +2761,7 @@
         {
             "title": "Harry Potter e i doni della morte - Parte 1",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Yates",
@@ -2779,7 +2770,7 @@
         {
             "title": "Harry Potter e i doni della morte - Parte 2",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Azione", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Yates",
@@ -2788,7 +2779,7 @@
         {
             "title": "Kung Fu Panda",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Azione", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Mark Osborne & John Stevenson",
@@ -2797,25 +2788,25 @@
         {
             "title": "Limitless",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Neil Burger",
-            "theme": "Intelligenza Artificiale"
+            "theme": "Tecnologia"
         },
         {
             "title": "No Strings Attached",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ivan Reitman",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Love and Other Drugs",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Edward Zwick",
@@ -2824,16 +2815,16 @@
         {
             "title": "The Social Network",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Fincher",
-            "theme": "Social Media"
+            "theme": "Tecnologia"
         },
         {
             "title": "Insidious",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Soprannaturale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James Wan",
@@ -2842,7 +2833,7 @@
         {
             "title": "Diario di una Schiappa",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Famiglia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Thor Freudenthal",
@@ -2851,25 +2842,25 @@
         {
             "title": "Coraline",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantasy", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Henry Selick",
-            "theme": "Fantastico"
+            "theme": "Soprannaturale"
         },
         {
             "title": "500 Days of Summer",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Marc Webb",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Yes Man",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Peyton Reed",
@@ -2878,7 +2869,7 @@
         {
             "title": "The Incredible Hulk",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Louis Leterrier",
@@ -2887,7 +2878,7 @@
         {
             "title": "Alvin Superstar",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Famiglia", "Animazione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Tim Hill",
@@ -2896,7 +2887,7 @@
         {
             "title": "Step Up",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Anne Fletcher",
@@ -2905,7 +2896,7 @@
         {
             "title": "Step Up 2: The Streets",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Jon M. Chu",
@@ -2914,7 +2905,7 @@
         {
             "title": "Step Up 3D",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jon M. Chu",
@@ -2923,7 +2914,7 @@
         {
             "title": "Step Up Revolution",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Scott Speer",
@@ -2932,7 +2923,7 @@
         {
             "title": "Step Up: All In",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Trish Sie",
@@ -2941,7 +2932,7 @@
         {
             "title": "Paranormal Activity",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Soprannaturale"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Oren Peli",
