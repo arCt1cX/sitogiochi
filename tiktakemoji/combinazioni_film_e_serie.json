@@ -19,7 +19,10 @@
             "Filosofico",
             "Noir",
             "Western",
-            "Biografico"       
+            "Biografico",
+            "Satira",
+            "Gotico",
+            "Slasher"     
         ],
         "language": [
             "Inglese",
@@ -1435,7 +1438,7 @@
         {
             "title": "Venerdì 13",
             "type": "Film",
-            "genre": ["Horror", "Thriller"],
+            "genre": ["Horror", "Thriller", "Slasher"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Sean Cunningham",
@@ -1732,7 +1735,7 @@
         {
             "title": "Scream",
             "type": "Film",
-            "genre": ["Horror", "Mystery", "Thriller"],
+            "genre": ["Horror", "Mystery", "Thriller", "Slasher"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Wes Craven",
@@ -1768,7 +1771,7 @@
         {
             "title": "Una notte da leoni",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Todd Phillips",
@@ -1777,7 +1780,7 @@
         {
             "title": "Il Dittatore",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira", "Storico"],
             "language": "Inglese",
             "decade": "Anni '40",
             "director": "Charlie Chaplin",
@@ -1786,16 +1789,16 @@
         {
             "title": "Shutter Island",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Martin Scorsese",
-            "theme": "Thriller psicologico"
+            "theme": ["Psicologico", "Mistero"]
         },
         {
             "title": "Io sono leggenda",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Horror", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Francis Lawrence",
@@ -1804,16 +1807,16 @@
         {
             "title": "Una notte al museo",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Fantasy", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Shawn Levy",
-            "theme": "Fantasy"
+            "theme": "Magia"
         },
         {
             "title": "The Butterfly Effect",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Eric Bress & J. Mackye Gruber",
@@ -1822,7 +1825,7 @@
         {
             "title": "Prova a prendermi",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Steven Spielberg",
@@ -1831,7 +1834,7 @@
         {
             "title": "Men in Black",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Fantascienza", "Azione"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Barry Sonnenfeld",
@@ -1840,16 +1843,16 @@
         {
             "title": "Memento",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Christopher Nolan",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Requiem for a Dream",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Darren Aronofsky",
@@ -1858,7 +1861,7 @@
         {
             "title": "Trainspotting",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Danny Boyle",
@@ -1867,16 +1870,16 @@
         {
             "title": "American Psycho",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Mary Harron",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "American Beauty",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Satira", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Sam Mendes",
@@ -1885,7 +1888,7 @@
         {
             "title": "Good Will Hunting",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Gus Van Sant",
@@ -1894,16 +1897,16 @@
         {
             "title": "Seven",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Mistero"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "David Fincher",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Stand by Me",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Avventura"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Rob Reiner",
@@ -1912,25 +1915,25 @@
         {
             "title": "Handmaiden",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Romantico", "Dramma"],
             "language": "Coreano",
             "decade": "Anni 2010",
             "director": "Park Chan-wook",
-            "theme": "Erotico"
+            "theme": "Psicologico"
         },
         {
             "title": "Black Swan",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Darren Aronofsky",
-            "theme": "Danza"
+            "theme": ["Danza", "Psicologico"]
         },
         {
             "title": "Grave of the Fireflies",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Dramma"],
             "language": "Giapponese",
             "decade": "Anni '80",
             "director": "Isao Takahata",
@@ -1939,7 +1942,7 @@
         {
             "title": "Mickey 17",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Bong Joon-ho",
@@ -1948,16 +1951,16 @@
         {
             "title": "Babylon",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Damien Chazelle",
-            "theme": "Storico"
+            "theme": "Musica"
         },
         {
             "title": "Mystic River",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Clint Eastwood",
@@ -1966,7 +1969,7 @@
         {
             "title": "Paprika",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantascienza"],
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Satoshi Kon",
@@ -1975,7 +1978,7 @@
         {
             "title": "Mulholland Drive",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Lynch",
@@ -1984,16 +1987,16 @@
         {
             "title": "The House That Jack Built",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Dramma", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Lars von Trier",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Incendies",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Francese",
             "decade": "Anni 2010",
             "director": "Denis Villeneuve",
@@ -2002,7 +2005,7 @@
         {
             "title": "The Host",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Fantascienza", "Dramma"],
             "language": "Coreano",
             "decade": "Anni 2000",
             "director": "Bong Joon-ho",
@@ -2011,7 +2014,7 @@
         {
             "title": "Godzilla Minus One",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Fantascienza"],
             "language": "Giapponese",
             "decade": "Anni 2020",
             "director": "Takashi Yamazaki",
@@ -2020,7 +2023,7 @@
         {
             "title": "The Fly (La mosca)",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "David Cronenberg",
@@ -2029,7 +2032,7 @@
         {
             "title": "Before Midnight",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Richard Linklater",
@@ -2038,7 +2041,7 @@
         {
             "title": "Before Sunset",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Richard Linklater",
@@ -2047,7 +2050,7 @@
         {
             "title": "Before Sunrise",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Richard Linklater",
@@ -2056,7 +2059,7 @@
         {
             "title": "Zodiac",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Fincher",
@@ -2065,7 +2068,7 @@
         {
             "title": "Lost in Translation",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Sofia Coppola",
@@ -2074,7 +2077,7 @@
         {
             "title": "Nosferatu",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Gotico"],
             "language": "Inglese",
             "decade": "Anni '20",
             "director": "F.W. Murnau",
@@ -2083,16 +2086,16 @@
         {
             "title": "Grand Budapest Hotel",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Wes Anderson",
-            "theme": "Avventura"
+            "theme": "Mistero"
         },
         {
             "title": "Paris, Texas",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Wim Wenders",
@@ -2101,7 +2104,7 @@
         {
             "title": "City of God",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Azione"],
             "language": "Spagnolo",
             "decade": "Anni 2000",
             "director": "Fernando Meirelles",
@@ -2110,7 +2113,7 @@
         {
             "title": "There Will Be Blood",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Paul Thomas Anderson",
@@ -2119,7 +2122,7 @@
         {
             "title": "Pulse",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Fantascienza"],
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Kiyoshi Kurosawa",
@@ -2128,7 +2131,7 @@
         {
             "title": "Terrifier",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Slasher"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Damien Leone",
@@ -2137,7 +2140,7 @@
         {
             "title": "Rosemary's Baby",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Roman Polanski",
@@ -2146,7 +2149,7 @@
         {
             "title": "Smile",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Parker Finn",
@@ -2155,7 +2158,7 @@
         {
             "title": "The Substance",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Coralie Fargeat",
@@ -2164,7 +2167,7 @@
         {
             "title": "Nosferatu (2024)",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Gotico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Robert Eggers",
@@ -2173,7 +2176,7 @@
         {
             "title": "Adolescence",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bo Burnham",
@@ -2182,7 +2185,7 @@
         {
             "title": "Dune",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Denis Villeneuve",
@@ -2191,7 +2194,7 @@
         {
             "title": "M3GAN",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Gerard Johnstone",
@@ -2200,7 +2203,7 @@
         {
             "title": "The Batman",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Crime", "Thriller", "Supereroi"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Matt Reeves",
@@ -2209,7 +2212,7 @@
         {
             "title": "Don't Look Up",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Adam McKay",
@@ -2218,16 +2221,16 @@
         {
             "title": "Old",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "M. Night Shyamalan",
-            "theme": "Thriller psicologico"
+            "theme": "Mistero"
         },
         {
             "title": "Soul",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Pete Docter",
