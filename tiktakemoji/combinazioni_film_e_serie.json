@@ -151,7 +151,6 @@
             "Romance",
             "Paranormale",
             "Social Media",
-            "Scuola",
             "Fantastico",
             "Danza",
             "Diamanti",
@@ -171,7 +170,9 @@
             "Crime",
             "Classico",
             "Spie",
-            "Fumetto"
+            "Fumetto",
+            "Droghe",
+            "LGBTQ+"
         ]
     },
     "entries": [
@@ -911,7 +912,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Laurie Nunn",
-            "theme": "Coming of Age"
+            "theme": ["Coming of Age", "LGBTQ+"]
         },
         {
             "title": "BoJack Horseman",
@@ -1568,7 +1569,7 @@
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Ridley Scott",
-            "theme": "Sopravvivenza"
+            "theme": ["Sopravvivenza", "Alieni"]
         },
         {
             "title": "Django Unchained",
@@ -2837,7 +2838,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Thor Freudenthal",
-            "theme": "Scuola"
+            "theme": "Scuola/Università"
         },
         {
             "title": "Coraline",
@@ -2941,7 +2942,7 @@
         {
             "title": "High School Musical",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Kenny Ortega",
@@ -2950,7 +2951,7 @@
         {
             "title": "High School Musical 2",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Kenny Ortega",
@@ -2959,7 +2960,7 @@
         {
             "title": "High School Musical 3: Senior Year",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Kenny Ortega",
@@ -2968,7 +2969,7 @@
         {
             "title": "Transformers",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Michael Bay",
@@ -2977,7 +2978,7 @@
         {
             "title": "Superbad",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Coming of Age"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Greg Mottola",
@@ -2986,25 +2987,25 @@
         {
             "title": "Blood Diamond",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Edward Zwick",
-            "theme": "Diamanti"
+            "theme": ["Crimine", "Politica"]
         },
         {
             "title": "Borat",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Larry Charles",
-            "theme": "Satira"
+            "theme": "Comico"
         },
         {
             "title": "The Prestige",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Christopher Nolan",
@@ -3013,25 +3014,25 @@
         {
             "title": "The Departed",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Martin Scorsese",
-            "theme": "Mafia"
+            "theme": ["Mafia", "Crimine"]
         },
         {
             "title": "Un ponte per Terabithia",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Gabor Csupo",
-            "theme": "Fantastico"
+            "theme": "Amicizia"
         },
         {
             "title": "Il Diavolo veste Prada",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Frankel",
@@ -3040,7 +3041,7 @@
         {
             "title": "Mr. & Mrs. Smith",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Doug Liman",
@@ -3049,16 +3050,16 @@
         {
             "title": "A Lot Like Love",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Nigel Cole",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Madagascar",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Eric Darnell & Tom McGrath",
@@ -3067,7 +3068,7 @@
         {
             "title": "White Chicks",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Keenen Ivory Wayans",
@@ -3076,7 +3077,7 @@
         {
             "title": "Eternal Sunshine of the Spotless Mind",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Michel Gondry",
@@ -3085,7 +3086,7 @@
         {
             "title": "Catch Me If You Can",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Steven Spielberg",
@@ -3094,25 +3095,25 @@
         {
             "title": "How to Lose a Guy in 10 Days",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Donald Petrie",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "The Ring",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Gore Verbinski",
             "theme": "Soprannaturale"
         },
         {
-            "title": "The 40 Year Old Virgin",
+            "title": "40 anni vergine",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Judd Apatow",
@@ -3121,7 +3122,7 @@
         {
             "title": "Zoolander",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Ben Stiller",
@@ -3130,7 +3131,7 @@
         {
             "title": "Battle Royale",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Thriller", "Fantascienza"],
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Kinji Fukasaku",
@@ -3139,7 +3140,7 @@
         {
             "title": "Donnie Darko",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Richard Kelly",
@@ -3148,16 +3149,16 @@
         {
             "title": "Billy Elliot",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Stephen Daldry",
-            "theme": "Ballet"
+            "theme": "Danza"
         },
         {
             "title": "Final Destination",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "James Wong",
@@ -3166,7 +3167,7 @@
         {
             "title": "Girl, Interrupted",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "James Mangold",
@@ -3175,7 +3176,7 @@
         {
             "title": "American Pie",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Coming of Age"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Paul Weitz",
@@ -3184,7 +3185,7 @@
         {
             "title": "The Sixth Sense",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "M. Night Shyamalan",
@@ -3193,25 +3194,25 @@
         {
             "title": "Notting Hill",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Commedia"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Roger Michell",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "10 Things I Hate About You",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico", "Coming of Age"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Gil Junger",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Vi presento Joe Black",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Martin Brest",
@@ -3220,7 +3221,7 @@
         {
             "title": "Cure",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror"],
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Kiyoshi Kurosawa",
@@ -3229,16 +3230,16 @@
         {
             "title": "I Know What You Did Last Summer",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Jim Gillespie",
-            "theme": "Suspense"
+            "theme": "Psicologico"
         },
         {
             "title": "Perfect Blue",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Thriller"],
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Satoshi Kon",
@@ -3247,61 +3248,61 @@
         {
             "title": "Basketball Diaries",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Coming of Age"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Scott Kalvert",
-            "theme": "Adolescenza"
+            "theme": ["Adolescenza", "Droghe"]
         },
         {
             "title": "Le Iene",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Quentin Tarantino",
-            "theme": "Crime"
+            "theme": "Crimine"
         },
         {
             "title": "Misery",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Rob Reiner",
-            "theme": "Obsession"
+            "theme": "Psicologico"
         },
         {
             "title": "Die Hard",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "John McTiernan",
-            "theme": "Azione"
+            "theme": "Crimine"
         },
         {
-            "title": "The Thing",
+            "title": "The Thing (La Cosa)",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "John Carpenter",
-            "theme": "Alieni"
+            "theme": ["Alieni", "Sopravvivenza"]
         },
         {
             "title": "La finestra sul cortile",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Mistero", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '50",
             "director": "Alfred Hitchcock",
-            "theme": "Suspense"
+            "theme": "Mistero"
         },
         {
             "title": "Psycho",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Alfred Hitchcock",
@@ -3310,7 +3311,7 @@
         {
             "title": "Gli Uccelli",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Alfred Hitchcock",
@@ -3319,25 +3320,16 @@
         {
             "title": "Mary Poppins",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Musicale"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Robert Stevenson",
-            "theme": "Magia"
-        },
-        {
-            "title": "Agente 007 - Licenza di uccidere",
-            "type": "Film",
-            "genre": ["Fantascienza", "Azione", "Commedia", "Dramma"],
-            "language": "Inglese",
-            "decade": "Anni '60",
-            "director": "Terence Young",
-            "theme": "Spie"
+            "theme": ["Magia", "Famiglia"]
         },
         {
             "title": "Diabolik",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Crime", "Thriller"],
             "language": "Italiano",
             "decade": "Anni '60",
             "director": "Mario Bava",
@@ -3346,25 +3338,25 @@
         {
             "title": "Anatomy of a Fall",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Mistero", "Crime"],
             "language": "Francese",
             "decade": "Anni 2020",
             "director": "Justine Triet",
-            "theme": "Processo"
+            "theme": "Mistero"
         },
         {
             "title": "Portrait of a Lady on Fire",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Francese",
             "decade": "Anni 2010",
             "director": "Céline Sciamma",
-            "theme": "LGBTQ"
+            "theme": "LGBTQ+"
         },
         {
             "title": "La Haine",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Francese",
             "decade": "Anni '90",
             "director": "Mathieu Kassovitz",
@@ -3373,7 +3365,7 @@
         {
             "title": "Leon the Professional",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Luc Besson",
@@ -3382,16 +3374,16 @@
         {
             "title": "The Skin I Live In",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Horror"],
             "language": "Spagnolo",
             "decade": "Anni 2010",
             "director": "Pedro Almodóvar",
-            "theme": "Identità"
+            "theme": ["Body Horror", "Psicologico"]
         },
         {
             "title": "The Wolf House",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Horror", "Fantasy"],
             "language": "Cileno",
             "decade": "Anni 2010",
             "director": "Joaquín Cociña",
@@ -3400,7 +3392,7 @@
         {
             "title": "Gran Torino",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Clint Eastwood",
@@ -3409,7 +3401,7 @@
         {
             "title": "Midnight in Paris",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Woody Allen",
@@ -3418,7 +3410,7 @@
         {
             "title": "8 ½",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Fantasy"],
             "language": "Italiano",
             "decade": "Anni '60",
             "director": "Federico Fellini",
@@ -3427,34 +3419,34 @@
         {
             "title": "Io e Annie",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Woody Allen",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "Manhattan",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Woody Allen",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "The Purple Rose of Cairo",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Fantasy", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Woody Allen",
-            "theme": "Romance"
+            "theme": "Amore"
         },
         {
             "title": "La Dolce Vita",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Satira"],
             "language": "Italiano",
             "decade": "Anni '60",
             "director": "Federico Fellini",
@@ -3463,7 +3455,7 @@
         {
             "title": "La Leggenda di Al, John e Jack",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Crime"],
             "language": "Italiano",
             "decade": "Anni 2000",
             "director": "Aldo, Giovanni e Giacomo",
@@ -3472,7 +3464,7 @@
         {
             "title": "Chiedimi se sono felice",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma"],
             "language": "Italiano",
             "decade": "Anni 2000",
             "director": "Aldo, Giovanni e Giacomo",
@@ -3481,7 +3473,7 @@
         {
             "title": "Quo Vado",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira"],
             "language": "Italiano",
             "decade": "Anni 2010",
             "director": "Gennaro Nunziante",
@@ -3490,7 +3482,7 @@
         {
             "title": "Sole a Catinelle",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira"],
             "language": "Italiano",
             "decade": "Anni 2010",
             "director": "Gennaro Nunziante",
@@ -3499,7 +3491,7 @@
         {
             "title": "Cado dalle Nubi",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Italiano",
             "decade": "Anni 2000",
             "director": "Gennaro Nunziante",
@@ -3508,7 +3500,7 @@
         {
             "title": "I Griffin",
             "type": "Serie TV",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Seth MacFarlane",
@@ -3517,7 +3509,7 @@
         {
             "title": "American Dad",
             "type": "Serie TV",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Seth MacFarlane",
@@ -3526,7 +3518,7 @@
         {
             "title": "Chinatown",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Roman Polanski",
@@ -3535,7 +3527,7 @@
         {
             "title": "La La Land",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Musicale", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Damien Chazelle",
@@ -3544,7 +3536,7 @@
         {
             "title": "Whiplash",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Damien Chazelle",
@@ -3553,7 +3545,7 @@
         {
             "title": "Raging Bull",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Sport"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Martin Scorsese",
@@ -3562,7 +3554,7 @@
         {
             "title": "Dr. Strangelove",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Stanley Kubrick",
@@ -3571,7 +3563,7 @@
         {
             "title": "Snowpiercer",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bong Joon-ho",
@@ -3580,7 +3572,7 @@
         {
             "title": "Eraserhead",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Surrealismo"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "David Lynch",
@@ -3589,26 +3581,25 @@
         {
             "title": "Blue Velvet",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "David Lynch",
             "theme": "Psicologico"
         },
-        
         {
             "title": "Porco Rosso",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura", "Fantasy"],
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Hayao Miyazaki",
-            "theme": "Avventura"
+            "theme": ["Guerra", "Commedia"]
         },
         {
             "title": "I Simpson",
             "type": "Serie TV",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Matt Groening",
@@ -3617,16 +3608,16 @@
         {
             "title": "Everything Everywhere All at Once",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Commedia", "Azione", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Daniel Kwan & Daniel Scheinert",
-            "theme": "Multiverso"
+            "theme": ["Multiverso", "Viaggio nel tempo"]
         },
         {
             "title": "Inside Out",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Dramma", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Pete Docter",
@@ -3635,7 +3626,7 @@
         {
             "title": "Mean Girls",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Coming of Age"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Mark Waters",
