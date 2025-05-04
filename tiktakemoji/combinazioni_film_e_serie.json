@@ -12,7 +12,14 @@
             "Romantico",
             "Documentario",
             "Supereroi",
-            "Fantasy"
+            "Fantasy",
+            "Crime",
+            "Storico",
+            "Sociale",
+            "Filosofico",
+            "Noir",
+            "Western",
+            "Biografico"       
         ],
         "language": [
             "Inglese",
@@ -66,7 +73,9 @@
         "theme": [
             "Guerra",
             "Robot/AI",
-            "Mafia/Crimine",
+            "Magia",
+            "Mafia",
+            "Crimine",
             "Futuristico",
             "Coming of Age",
             "Soprannaturale",
@@ -166,7 +175,7 @@
         {
             "title": "Inception",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Christopher Nolan",
@@ -175,16 +184,16 @@
         {
             "title": "Pulp Fiction",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Quentin Tarantino",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Il mio vicino Totoro",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantasy"],
             "language": "Giapponese",
             "decade": "Anni '80",
             "director": "Hayao Miyazaki",
@@ -193,7 +202,7 @@
         {
             "title": "Stranger Things",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Horror", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Duffer Brothers",
@@ -202,16 +211,16 @@
         {
             "title": "Parasite",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Commedia"],
             "language": "Coreano",
             "decade": "Anni 2010",
             "director": "Bong Joon-ho",
-            "theme": "Politica"
+            "theme": "Famiglia"
         },
         {
             "title": "Oldboy",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Coreano",
             "decade": "Anni 2000",
             "director": "Park Chan-wook",
@@ -220,7 +229,7 @@
         {
             "title": "Your Name",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Romantico"],
             "language": "Giapponese",
             "decade": "Anni 2010",
             "director": "Makoto Shinkai",
@@ -229,7 +238,7 @@
         {
             "title": "Dunkirk",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Christopher Nolan",
@@ -238,7 +247,7 @@
         {
             "title": "The Fabelmans",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Steven Spielberg",
@@ -247,7 +256,7 @@
         {
             "title": "I, Daniel Blake",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Sociale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ken Loach",
@@ -256,7 +265,7 @@
         {
             "title": "Interstellar",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Christopher Nolan",
@@ -265,7 +274,7 @@
         {
             "title": "La vita è bella",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Storico"],
             "language": "Italiano",
             "decade": "Anni '90",
             "director": "Roberto Benigni",
@@ -274,16 +283,16 @@
         {
             "title": "Batman: The Dark Knight",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Thriller", "Dramma", "Supereroi", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Christopher Nolan",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "La principessa Mononoke",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura"],
             "language": "Giapponese",
             "decade": "Anni '90",
             "director": "Hayao Miyazaki",
@@ -292,16 +301,16 @@
         {
             "title": "Breaking Bad",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Vince Gilligan",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "The Crown",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Peter Morgan",
@@ -310,7 +319,7 @@
         {
             "title": "Squid Game",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Coreano",
             "decade": "Anni 2020",
             "director": "Hwang Dong-hyuk",
@@ -319,16 +328,16 @@
         {
             "title": "La casa di carta",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Spagnolo",
             "decade": "Anni 2010",
             "director": "Álex Pina",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Kill Bill",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Quentin Tarantino",
@@ -337,7 +346,7 @@
         {
             "title": "Spirited Away",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura"],
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Hayao Miyazaki",
@@ -346,7 +355,7 @@
         {
             "title": "E.T.",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Steven Spielberg",
@@ -355,7 +364,7 @@
         {
             "title": "Jurassic Park",
             "type": "Film",
-            "genre": "Avventura",
+            "genre": ["Avventura", "Fantascienza", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Steven Spielberg",
@@ -364,25 +373,25 @@
         {
             "title": "Goodfellas",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Martin Scorsese",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "The Wolf of Wall Street",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Martin Scorsese",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Gravity",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Alfonso Cuarón",
@@ -391,7 +400,7 @@
         {
             "title": "Roma",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Spagnolo",
             "decade": "Anni 2010",
             "director": "Alfonso Cuarón",
@@ -400,7 +409,7 @@
         {
             "title": "Twin Peaks",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "David Lynch",
@@ -409,7 +418,7 @@
         {
             "title": "Schindler's List",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Steven Spielberg",
@@ -418,7 +427,7 @@
         {
             "title": "The Mandalorian",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Jon Favreau",
@@ -427,7 +436,7 @@
         {
             "title": "Nuovo Cinema Paradiso",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Italiano",
             "decade": "Anni '90",
             "director": "Giuseppe Tornatore",
@@ -436,7 +445,7 @@
         {
             "title": "Emily in Paris",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Darren Star",
@@ -445,7 +454,7 @@
         {
             "title": "Amélie",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Commedia"],
             "language": "Francese",
             "decade": "Anni 2000",
             "director": "Jean-Pierre Jeunet",
@@ -454,7 +463,7 @@
         {
             "title": "Weathering With You",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Romantico", "Fantasy"],
             "language": "Giapponese",
             "decade": "Anni 2010",
             "director": "Makoto Shinkai",
@@ -463,7 +472,7 @@
         {
             "title": "Get Out",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jordan Peele",
@@ -472,7 +481,7 @@
         {
             "title": "Hereditary",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Dramma", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ari Aster",
@@ -481,7 +490,7 @@
         {
             "title": "Il divo",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico"],
             "language": "Italiano",
             "decade": "Anni 2000",
             "director": "Paolo Sorrentino",
@@ -490,16 +499,16 @@
         {
             "title": "La grande bellezza",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Italiano",
             "decade": "Anni 2010",
             "director": "Paolo Sorrentino",
-            "theme": "Politica"
+            "theme": "Drammatico"
         },
         {
             "title": "Decision to Leave",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Romantico", "Mystery"],
             "language": "Coreano",
             "decade": "Anni 2020",
             "director": "Park Chan-wook",
@@ -508,34 +517,25 @@
         {
             "title": "Train to Busan",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Azione", "Thriller"],
             "language": "Coreano",
             "decade": "Anni 2010",
             "director": "Yeon Sang-ho",
             "theme": "Sopravvivenza"
         },
         {
-            "title": "La casa di carta",
-            "type": "Serie TV",
-            "genre": "Thriller",
-            "language": "Spagnolo",
-            "decade": "Anni 2010",
-            "director": "Álex Pina",
-            "theme": "Mafia/Crimine"
-        },
-        {
             "title": "Lupin",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Avventura"],
             "language": "Francese",
             "decade": "Anni 2020",
             "director": "George Kay",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Drive My Car",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Giapponese",
             "decade": "Anni 2020",
             "director": "Ryusuke Hamaguchi",
@@ -544,7 +544,7 @@
         {
             "title": "Ritorno al futuro",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Robert Zemeckis",
@@ -553,7 +553,7 @@
         {
             "title": "The Matrix",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Filosofico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Wachowski Sisters",
@@ -562,7 +562,7 @@
         {
             "title": "2001: A Space Odyssey",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Mystery"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Stanley Kubrick",
@@ -571,7 +571,7 @@
         {
             "title": "Blade Runner",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Noir"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Ridley Scott",
@@ -580,7 +580,7 @@
         {
             "title": "Westworld",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma", "Western"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jonathan Nolan",
@@ -589,7 +589,7 @@
         {
             "title": "Ex Machina",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Alex Garland",
@@ -598,7 +598,7 @@
         {
             "title": "Il Grande Gatsby",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Baz Luhrmann",
@@ -607,7 +607,7 @@
         {
             "title": "Chiamami col tuo nome",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Luca Guadagnino",
@@ -616,7 +616,7 @@
         {
             "title": "Lady Bird",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Greta Gerwig",
@@ -625,16 +625,16 @@
         {
             "title": "Il Padrino",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Francis Ford Coppola",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "Mad Max: Fury Road",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Avventura", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "George Miller",
@@ -643,7 +643,7 @@
         {
             "title": "The Walking Dead",
             "type": "Serie TV",
-            "genre": "Horror",
+            "genre": ["Horror", "Dramma", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Frank Darabont",
@@ -652,7 +652,7 @@
         {
             "title": "Game of Thrones",
             "type": "Serie TV",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Dramma", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "David Benioff & D.B. Weiss",
@@ -661,7 +661,7 @@
         {
             "title": "Friends",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "David Crane & Marta Kauffman",
@@ -670,7 +670,7 @@
         {
             "title": "The Office",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Greg Daniels",
@@ -679,7 +679,7 @@
         {
             "title": "The Big Bang Theory",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Chuck Lorre",
@@ -688,7 +688,7 @@
         {
             "title": "House of Cards",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Politico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Beau Willimon",
@@ -697,25 +697,25 @@
         {
             "title": "Narcos",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Chris Brancato",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "The Sopranos",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "David Chase",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "How I Met Your Mother",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Carter Bays & Craig Thomas",
@@ -724,7 +724,7 @@
         {
             "title": "The Witcher",
             "type": "Serie TV",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Lauren Schmidt Hissrich",
@@ -733,7 +733,7 @@
         {
             "title": "Black Mirror",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Charlie Brooker",
@@ -742,16 +742,16 @@
         {
             "title": "Peaky Blinders",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Steven Knight",
-            "theme": "Mafia/Crimine"
+            "theme": ["Mafia", "Crimine"]
         },
         {
             "title": "Sherlock",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Mark Gatiss & Steven Moffat",
@@ -760,7 +760,7 @@
         {
             "title": "Lost",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Avventura", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "J.J. Abrams",
@@ -769,16 +769,16 @@
         {
             "title": "Dexter",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "James Manos Jr.",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Better Call Saul",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Peter Gould",
@@ -787,7 +787,7 @@
         {
             "title": "Suits",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Aaron Korsh",
@@ -796,7 +796,7 @@
         {
             "title": "Grey's Anatomy",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Shonda Rhimes",
@@ -805,7 +805,7 @@
         {
             "title": "Vikings",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Michael Hirst",
@@ -814,7 +814,7 @@
         {
             "title": "Prison Break",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Paul Scheuring",
@@ -823,7 +823,7 @@
         {
             "title": "13 Reasons Why",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Brian Yorkey",
@@ -832,7 +832,7 @@
         {
             "title": "La Regina degli Scacchi",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Scott Frank",
@@ -841,7 +841,7 @@
         {
             "title": "Euphoria",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Sam Levinson",
@@ -850,16 +850,16 @@
         {
             "title": "Ozark",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Bill Dubuque & Mark Williams",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Dark",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Baran bo Odar",
@@ -868,7 +868,7 @@
         {
             "title": "The Boys",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Commedia", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Eric Kripke",
@@ -877,7 +877,7 @@
         {
             "title": "Severance",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Dan Erickson",
@@ -886,7 +886,7 @@
         {
             "title": "True Detective",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Nic Pizzolatto",
@@ -895,16 +895,16 @@
         {
             "title": "Fargo",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Crime", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Noah Hawley",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Sex Education",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Laurie Nunn",
@@ -913,16 +913,16 @@
         {
             "title": "BoJack Horseman",
             "type": "Serie TV",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Raphael Bob-Waksberg",
-            "theme": "Dramma"
+            "theme": "Drammatico"
         },
         {
             "title": "Rick and Morty",
             "type": "Serie TV",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Dan Harmon & Justin Roiland",
@@ -931,7 +931,7 @@
         {
             "title": "Modern Family",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Christopher Lloyd & Steven Levitan",
@@ -940,7 +940,7 @@
         {
             "title": "Dr. House",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Medico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Shore",
@@ -949,7 +949,7 @@
         {
             "title": "Lucifer",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Fantasy", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Tom Kapinos",
@@ -958,7 +958,7 @@
         {
             "title": "Wednesday",
             "type": "Serie TV",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Commedia", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Alfred Gough & Miles Millar",
@@ -967,7 +967,7 @@
         {
             "title": "Bridgerton",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Chris Van Dusen",
@@ -976,7 +976,7 @@
         {
             "title": "Daredevil",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Drew Goddard",
@@ -985,7 +985,7 @@
         {
             "title": "Jessica Jones",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Melissa Rosenberg",
@@ -994,7 +994,7 @@
         {
             "title": "The Umbrella Academy",
             "type": "Serie TV",
-            "genre": "Azione",
+            "genre": ["Azione", "Commedia", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Steve Blackman",
@@ -1003,7 +1003,7 @@
         {
             "title": "Homeland",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Spionaggio"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Alex Gansa & Howard Gordon",
@@ -1012,7 +1012,7 @@
         {
             "title": "Succession",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia nera"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jesse Armstrong",
@@ -1021,7 +1021,7 @@
         {
             "title": "The Last of Us",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Horror", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Craig Mazin & Neil Druckmann",
@@ -1030,7 +1030,7 @@
         {
             "title": "The 100",
             "type": "Serie TV",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jason Rothenberg",
@@ -1039,16 +1039,16 @@
         {
             "title": "The Wire",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "David Simon",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Brooklyn Nine-Nine",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Dan Goor & Michael Schur",
@@ -1057,7 +1057,7 @@
         {
             "title": "Mindhunter",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Joe Penhall",
@@ -1066,7 +1066,7 @@
         {
             "title": "L'Alienista",
             "type": "Serie TV",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Cary Fukunaga & Daniel Minahan",
@@ -1075,16 +1075,16 @@
         {
             "title": "Sons of Anarchy",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Kurt Sutter",
-            "theme": "Mafia/Crimine"
+            "theme": ["Mafia", "Crimine"]
         },
         {
             "title": "Mad Men",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Matthew Weiner",
@@ -1093,7 +1093,7 @@
         {
             "title": "Orange is the New Black",
             "type": "Serie TV",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jenji Kohan",
@@ -1102,7 +1102,7 @@
         {
             "title": "River Monsters",
             "type": "Serie TV",
-            "genre": "Documentario",
+            "genre": ["Documentario", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Jeremy Wade",
@@ -1111,7 +1111,7 @@
         {
             "title": "Impractical Jokers",
             "type": "Serie TV",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Reality"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Brian Quinn & Joe Gatto",
@@ -1120,7 +1120,7 @@
         {
             "title": "Star Wars: Il risveglio della forza",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "J.J. Abrams",
@@ -1129,7 +1129,7 @@
         {
             "title": "Il Signore degli Anelli: La Compagnia dell'Anello",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Peter Jackson",
@@ -1138,7 +1138,7 @@
         {
             "title": "Il Gladiatore",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Ridley Scott",
@@ -1147,7 +1147,7 @@
         {
             "title": "The Shawshank Redemption",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Frank Darabont",
@@ -1156,7 +1156,7 @@
         {
             "title": "Oppenheimer",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Christopher Nolan",
@@ -1165,25 +1165,16 @@
         {
             "title": "Joker",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Todd Phillips",
-            "theme": "Thriller psicologico"
-        },
-        {
-            "title": "Matrix",
-            "type": "Film",
-            "genre": "Fantascienza",
-            "language": "Inglese",
-            "decade": "Anni '90",
-            "director": "Wachowski Sisters",
-            "theme": "Robot/AI"
+            "theme": "Psicologico"
         },
         {
             "title": "La città incantata",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantasy", "Avventura"],
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Hayao Miyazaki",
@@ -1192,7 +1183,7 @@
         {
             "title": "La bella e la bestia",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantasy", "Romantico", "Musical"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Gary Trousdale & Kirk Wise",
@@ -1201,7 +1192,7 @@
         {
             "title": "L'attimo fuggente",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Peter Weir",
@@ -1210,7 +1201,7 @@
         {
             "title": "Apocalypse Now",
             "type": "Film",
-            "genre": "Guerra",
+            "genre": ["Guerra", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Francis Ford Coppola",
@@ -1219,7 +1210,7 @@
         {
             "title": "Il Re Leone",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Dramma", "Avventura", "Musical"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Roger Allers & Rob Minkoff",
@@ -1228,7 +1219,7 @@
         {
             "title": "Alla Ricerca di Nemo",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Andrew Stanton",
@@ -1237,7 +1228,7 @@
         {
             "title": "Taxi Driver",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Martin Scorsese",
@@ -1246,7 +1237,7 @@
         {
             "title": "Mamma Ho Perso L'Aereo",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Chris Columbus",
@@ -1255,7 +1246,7 @@
         {
             "title": "Lo Squalo",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror", "Avventura"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Steven Spielberg",
@@ -1264,7 +1255,7 @@
         {
             "title": "Le Crociate - Kingdom of Heaven",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Ridley Scott",
@@ -1273,7 +1264,7 @@
         {
             "title": "Troy",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Wolfgang Petersen",
@@ -1282,7 +1273,7 @@
         {
             "title": "Il buono, il brutto, il cattivo",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Western"],
             "language": "Italiano",
             "decade": "Anni '60",
             "director": "Sergio Leone",
@@ -1291,7 +1282,7 @@
         {
             "title": "Titanic",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "James Cameron",
@@ -1300,7 +1291,7 @@
         {
             "title": "Memorie di un Assassino",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime"],
             "language": "Coreano",
             "decade": "Anni 2000",
             "director": "Bong Joon-ho",
@@ -1309,7 +1300,7 @@
         {
             "title": "Avatar",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "James Cameron",
@@ -1318,16 +1309,16 @@
         {
             "title": "Harry Potter e la pietra filosofale",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Famiglia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Chris Columbus",
-            "theme": "Fantasy"
+            "theme": "Magia"
         },
         {
             "title": "Avengers: Endgame",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Anthony & Joe Russo",
@@ -1336,7 +1327,7 @@
         {
             "title": "Black Panther",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ryan Coogler",
@@ -1345,7 +1336,7 @@
         {
             "title": "Iron Man",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Jon Favreau",
@@ -1354,7 +1345,7 @@
         {
             "title": "Spider-Man",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Sam Raimi",
@@ -1363,16 +1354,16 @@
         {
             "title": "Fight Club",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "David Fincher",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Bastardi senza Gloria",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Quentin Tarantino",
@@ -1381,16 +1372,16 @@
         {
             "title": "Il silenzio degli innocenti",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Jonathan Demme",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Tre Uomini e una Gamba",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia"],
             "language": "Italiano",
             "decade": "Anni '90",
             "director": "Aldo, Giovanni e Giacomo",
@@ -1399,7 +1390,7 @@
         {
             "title": "Star Trek",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "J.J. Abrams",
@@ -1408,7 +1399,7 @@
         {
             "title": "Fast and Furious",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Crime", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Justin Lin",
@@ -1417,16 +1408,16 @@
         {
             "title": "Shining",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Stanley Kubrick",
-            "theme": "Horror"
+            "theme": "Psicologico"
         },
         {
             "title": "It",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Mystery"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Andy Muschietti",
@@ -1435,16 +1426,16 @@
         {
             "title": "Saw",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Crime"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "James Wan",
-            "theme": "Horror"
+            "theme": "Psicologico"
         },
         {
             "title": "Venerdì 13",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Sean Cunningham",
@@ -1453,7 +1444,7 @@
         {
             "title": "Le Cronache di Narnia",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Famiglia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Andrew Adamson",
@@ -1462,7 +1453,7 @@
         {
             "title": "Hunger Games",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Gary Ross",
@@ -1471,7 +1462,7 @@
         {
             "title": "Maze Runner",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Wes Ball",
@@ -1480,16 +1471,16 @@
         {
             "title": "Arancia Meccanica",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Stanley Kubrick",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Salvate il Soldato Ryan",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Steven Spielberg",
@@ -1498,7 +1489,7 @@
         {
             "title": "Full Metal Jacket",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Stanley Kubrick",
@@ -1507,7 +1498,7 @@
         {
             "title": "A.I. Intelligenza Artificiale",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Steven Spielberg",
@@ -1516,7 +1507,7 @@
         {
             "title": "8 Mile",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Curtis Hanson",
@@ -1525,7 +1516,7 @@
         {
             "title": "Forrest Gump",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Robert Zemeckis",
@@ -1534,7 +1525,7 @@
         {
             "title": "I Sette Samurai",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Avventura"],
             "language": "Giapponese",
             "decade": "Anni '50",
             "director": "Akira Kurosawa",
@@ -1543,7 +1534,7 @@
         {
             "title": "Il Miglio Verde",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Fantasy", "Crime"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Frank Darabont",
@@ -1552,7 +1543,7 @@
         {
             "title": "Il Pianista",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Storico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Roman Polanski",
@@ -1561,7 +1552,7 @@
         {
             "title": "Quasi Amici",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Dramma", "Biografico"],
             "language": "Francese",
             "decade": "Anni 2010",
             "director": "Olivier Nakache & Éric Toledano",
@@ -1570,16 +1561,16 @@
         {
             "title": "Alien",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Ridley Scott",
-            "theme": "Horror"
+            "theme": "Sopravvivenza"
         },
         {
             "title": "Django Unchained",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Western", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Quentin Tarantino",
@@ -1588,7 +1579,7 @@
         {
             "title": "WALL-E",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Andrew Stanton",
@@ -1597,7 +1588,7 @@
         {
             "title": "Indiana Jones",
             "type": "Film",
-            "genre": "Avventura",
+            "genre": ["Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Steven Spielberg",
@@ -1606,7 +1597,7 @@
         {
             "title": "Toy Story",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura", "Commedia"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "John Lasseter",
@@ -1615,16 +1606,16 @@
         {
             "title": "Scarface",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "Brian De Palma",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "Up",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura", "Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Pete Docter",
@@ -1633,7 +1624,7 @@
         {
             "title": "The Truman Show",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Peter Weir",
@@ -1642,7 +1633,7 @@
         {
             "title": "V per Vendetta",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "James McTeigue",
@@ -1651,7 +1642,7 @@
         {
             "title": "Monsters & Co.",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Pete Docter",
@@ -1660,7 +1651,7 @@
         {
             "title": "Ratatouille",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Brad Bird",
@@ -1669,7 +1660,7 @@
         {
             "title": "Dragon Trainer",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Avventura", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Chris Sanders & Dean DeBlois",
@@ -1678,7 +1669,7 @@
         {
             "title": "Terminator",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '80",
             "director": "James Cameron",
@@ -1687,7 +1678,7 @@
         {
             "title": "Il Mago di Oz",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Avventura", "Musical"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Victor Fleming",
@@ -1696,7 +1687,7 @@
         {
             "title": "Gli Incredibili",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Azione", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Brad Bird",
@@ -1705,16 +1696,16 @@
         {
             "title": "Hachiko",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Lasse Hallström",
-            "theme": "Animali"
+            "theme": ["Animali", "Amicizia", "Famiglia"]
         },
         {
             "title": "Rush",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico", "Sport"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ron Howard",
@@ -1723,16 +1714,16 @@
         {
             "title": "L'esorcista",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "William Friedkin",
-            "theme": "Horror"
+            "theme": "Paranormale"
         },
         {
             "title": "Barbie",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Avventura", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Greta Gerwig",
@@ -1741,7 +1732,7 @@
         {
             "title": "Scream",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Mystery", "Thriller"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Wes Craven",
@@ -1750,16 +1741,16 @@
         {
             "title": "Split",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Horror", "Psicologico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "M. Night Shyamalan",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Sausage Party",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Conrad Vernon & Greg Tiernan",
@@ -1768,7 +1759,7 @@
         {
             "title": "The Martian",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ridley Scott",
@@ -1835,7 +1826,7 @@
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Steven Spielberg",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "Men in Black",
@@ -2114,7 +2105,7 @@
             "language": "Spagnolo",
             "decade": "Anni 2000",
             "director": "Fernando Meirelles",
-            "theme": "Mafia/Crimine"
+            "theme": "Crimine"
         },
         {
             "title": "There Will Be Blood",
@@ -3023,7 +3014,7 @@
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Christopher Nolan",
-            "theme": "Mistero"
+            "theme": "Magia"
         },
         {
             "title": "The Departed",
@@ -3032,7 +3023,7 @@
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Martin Scorsese",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "Un ponte per Terabithia",
@@ -3343,7 +3334,7 @@
         {
             "title": "Agente 007 - Licenza di uccidere",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Fantascienza", "Azione", "Commedia", "Dramma"],
             "language": "Inglese",
             "decade": "Anni '60",
             "director": "Terence Young",
@@ -3924,7 +3915,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Martin Scorsese",
-            "theme": "Mafia/Crimine"
+            "theme": "Mafia"
         },
         {
             "title": "1917",
@@ -3938,11 +3929,29 @@
         {
             "title": "Guardiani della Galassia",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Commedia", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James Gunn",
             "theme": "Supereroi"
+        },
+        {
+            "title": "Matrix",
+            "type": "Film",
+            "genre": ["Fantascienza", "Azione", "Filosofico"],
+            "language": "Inglese",
+            "decade": "Anni '90",
+            "director": "Wachowski Sisters",
+            "theme": "Robot/AI"
+        },
+        {
+            "title": "La città incantata",
+            "type": "Film",
+            "genre": ["Animazione", "Fantasy", "Avventura"],
+            "language": "Giapponese",
+            "decade": "Anni 2000",
+            "director": "Hayao Miyazaki",
+            "theme": "Fantasy"
         }
     ]
 }

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Privacy Policy | DrewGames - Giochi da fare con gli amici offline</title>');
+        document.write('<meta name="description" content="Informativa sulla privacy di DrewGames: Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali quando utilizzi i nostri giochi e servizi.">');
+      } else {
+        document.write('<title>Privacy Policy | DrewGames - Games to play with friends offline</title>');
+        document.write('<meta name="description" content="DrewGames Privacy Policy: Learn about how we collect, use, and protect your personal data when you use our games and services.">');
+      }
+    </script>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.partygamesdrew.com/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy | DrewGames">
+    <meta property="og:description" content="DrewGames Privacy Policy: Learn about how we collect, use, and protect your personal data when you use our games and services.">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.partygamesdrew.com/privacy-policy.html">
+    <meta name="twitter:title" content="Privacy Policy | DrewGames">
+    <meta name="twitter:description" content="DrewGames Privacy Policy: Learn about how we collect, use, and protect your personal data when you use our games and services.">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/privacy-policy.html?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/privacy-policy.html?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/privacy-policy.html" />
+    <script>
+        // Set language as early as possible
+        (function() {
+            function getInitialLang() {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                if (urlLang === 'en' || urlLang === 'it') {
+                    return urlLang;
+                }
+                
+                // Check localStorage
+                const storedLang = localStorage.getItem('lang');
+                if (storedLang) {
+                    return storedLang;
+                }
+                
+                // Check browser language
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+                    return 'it';
+                }
+                
+                // Default to English
+                return 'en';
+            }
+            
+            // Set the lang attribute
+            document.documentElement.lang = getInitialLang();
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.partygamesdrew.com/privacy-policy.html">
+    
+    <style>
+        /* Sidebar Navigation Styles */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: rgba(35, 30, 65, 0.97);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+        
+        .sidenav a:hover {
+            color: #7b68ee;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #7b68ee;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            border-left: none;
+            padding: 8px 16px;
+        }
+        
+        .sidenav .closebtn:hover {
+            background-color: transparent;
+            border-left: none;
+        }
+        
+        .sidenav-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
+        .sidenav-header {
+            color: #aaa;
+            font-size: 14px;
+            padding: 5px 25px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hamburger-menu {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(71, 60, 139, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-menu:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hamburger-menu div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay when sidebar is open */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+        
+        /* Main content shift */
+        #main {
+            transition: margin-left 0.3s;
+        }
+        
+        /* Privacy Policy Specific Styles */
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #f1f1f1;
+        }
+        
+        .privacy-section {
+            background-color: rgba(35, 30, 65, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(123, 104, 238, 0.3);
+        }
+        
+        .privacy-section h2 {
+            color: #7b68ee;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(123, 104, 238, 0.5);
+            padding-bottom: 10px;
+        }
+
+        .privacy-section h3 {
+            color: #a396f0;
+            font-size: 1.3rem;
+            margin: 20px 0 15px 0;
+        }
+        
+        .privacy-section p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .privacy-section ul, .privacy-section ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .privacy-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .privacy-section p, 
+            .privacy-section li {
+                font-size: 1rem;
+            }
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 28px;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info {
+            background-color: rgba(123, 104, 238, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #7b68ee;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="legal-header">Legal</div>
+            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
+            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
+            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+        </div>
+    </div>
+
+    <!-- Overlay for when sidebar is open -->
+    <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- The country flag SVG will be inserted here by JavaScript -->
+            </svg>
+        </button>
+        
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+            </div>
+            <h1>Drew Games</h1>
+            <div id="privacy-title" class="tagline">Privacy Policy</div>
+        </header>
+
+        <main>
+            <div class="privacy-container">
+                <div class="privacy-section">
+                    <p id="last-updated" class="last-updated">Last Updated: July 8, 2023</p>
+                    
+                    <p id="privacy-intro">Thank you for playing DrewGames! This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.partygamesdrew.com and use our games (collectively, the "Service"). Please read this Privacy Policy carefully. By using the Service, you consent to the data practices described in this policy.</p>
+                    
+                    <div class="contact-info">
+                        <p id="contact-info">If you have questions or comments about this Privacy Policy, please contact us at: <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a></p>
+                    </div>
+                    
+                    <h2 id="collection-title">1. Information We Collect</h2>
+                    
+                    <h3 id="automatically-collected-title">Automatically Collected Information</h3>
+                    <p id="automatically-collected">When you access our Service, we may automatically collect certain information about your device, including:</p>
+                    <ul>
+                        <li id="auto-collect1">Device information (such as your mobile device ID, model, and manufacturer)</li>
+                        <li id="auto-collect2">Operating system type and version</li>
+                        <li id="auto-collect3">Browser language and type</li>
+                        <li id="auto-collect4">IP address</li>
+                        <li id="auto-collect5">Access times and dates</li>
+                        <li id="auto-collect6">Referring website addresses</li>
+                        <li id="auto-collect7">Broad geographic location (e.g., country or city-level location)</li>
+                    </ul>
+                    
+                    <h3 id="local-storage-title">Local Storage Data</h3>
+                    <p id="local-storage">Our games use local storage on your device to save game preferences and language settings. This information is stored directly on your device and is not transmitted to our servers.</p>
+                    
+                    <h3 id="analytics-title">Analytics</h3>
+                    <p id="analytics">We use Google Analytics to help us understand how our users use the Service. Google Analytics uses cookies and similar technologies to collect and analyze information about the use of the Service and report on activities and trends. For more information on how Google uses this data, please visit <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+                    
+                    <h2 id="use-title">2. How We Use Your Information</h2>
+                    <p id="use-info">We use the information we collect to:</p>
+                    <ul>
+                        <li id="use1">Provide, maintain, and improve our Service</li>
+                        <li id="use2">Monitor and analyze usage and trends to improve your experience with the Service</li>
+                        <li id="use3">Send you technical notices and support messages</li>
+                        <li id="use4">Detect, investigate, and prevent fraudulent transactions and other illegal activities</li>
+                        <li id="use5">Protect the rights and property of DrewGames and others</li>
+                    </ul>
+                    
+                    <h2 id="sharing-title">3. Sharing of Your Information</h2>
+                    <p id="sharing-info">We do not sell, trade, rent, or otherwise share your personally identifiable information with third parties without your consent, except in the following circumstances:</p>
+                    <ul>
+                        <li id="sharing1"><strong>Service Providers:</strong> We may share your information with third-party vendors, service providers, and other third parties who perform services on our behalf (e.g., analytics providers).</li>
+                        <li id="sharing2"><strong>Legal Requirements:</strong> We may disclose your information where required to do so by law or subpoena or if we believe that such action is necessary to comply with the law or to protect and defend our rights.</li>
+                        <li id="sharing3"><strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or sale of all or a portion of our assets, you will be notified via email and/or a prominent notice on our website of any change in ownership or uses of your information.</li>
+                    </ul>
+                    
+                    <h2 id="cookies-title">4. Cookies and Similar Technologies</h2>
+                    <p id="cookies-info">Our Service uses cookies and similar technologies such as local storage to improve your experience, analyze our performance, and enable certain functionalities. You can disable cookies through your browser settings, but this may affect the functionality of the Service. For more information about our use of cookies, please refer to our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+                    
+                    <h2 id="advertising-title">5. Advertising</h2>
+                    <p id="advertising-info">We may use third-party advertising companies to serve ads when you visit our Service. These companies may use information about your visits to our and other websites to provide advertisements about goods and services of interest to you. We use Google AdSense to display advertisements. For more information about how Google uses data, please visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google's Privacy & Terms</a>.</p>
+                    
+                    <h2 id="security-title">6. Security of Your Information</h2>
+                    <p id="security-info">We use administrative, technical, and physical security measures to protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+                    
+                    <h2 id="children-title">7. Children's Privacy</h2>
+                    <p id="children-info">Our Service is not directed to children under 13 years of age, and we do not knowingly collect personal information from children under 13. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us at the address provided at the top of this Privacy Policy.</p>
+                    
+                    <h2 id="international-title">8. International Data Transfers</h2>
+                    <p id="international-info">Your information may be transferred to, and maintained on, computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction. If you are located outside the United States and choose to provide information to us, please note that we transfer the information to the United States and process it there.</p>
+                    
+                    <h2 id="your-rights-title">9. Your Rights</h2>
+                    <p id="your-rights-info">Depending on your location, you may have certain rights regarding your personal information. These may include:</p>
+                    <ul>
+                        <li id="rights1">The right to access the personal information we hold about you</li>
+                        <li id="rights2">The right to request correction of inaccurate personal information</li>
+                        <li id="rights3">The right to request deletion of your personal information</li>
+                        <li id="rights4">The right to object to the processing of your personal information</li>
+                        <li id="rights5">The right to data portability</li>
+                    </ul>
+                    <p id="rights-request">To exercise these rights, please contact us at the email address provided above.</p>
+                    
+                    <h2 id="changes-title">10. Changes to This Privacy Policy</h2>
+                    <p id="changes-info">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+                    
+                    <h2 id="contact-title">11. Contact Us</h2>
+                    <p id="contact-info2">If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                    <p><a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p id="copyright">&copy; 2023 partygamesdrew.com - All rights reserved</p>
+                <div class="support-container">
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="lang.js"></script>
+    
+    <!-- JavaScript for Sidebar Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myOverlay").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        // Set the flag icon based on current language
+        function setFlagIcon() {
+            const currentLang = getUserLanguage();
+            const flagSvg = flagSVGs[currentLang] || flagSVGs['en'];
+            document.getElementById('currentFlag').innerHTML = flagSvg;
+            document.getElementById('languageToggle').setAttribute('aria-label', `Switch to ${currentLang === 'en' ? 'Italian' : 'English'}`);
+        }
+        
+        // Update UI elements based on language
+        function updateUIForLanguage() {
+            const currentLang = getUserLanguage();
+            
+            // Update navigation text
+            document.getElementById('nav-home').textContent = translations[currentLang]['navHome'] || 'Home';
+            document.getElementById('nav-about').textContent = translations[currentLang]['navAbout'] || 'About Us';
+            document.getElementById('legal-header').textContent = translations[currentLang]['navLegalHeader'] || 'Legal';
+            document.getElementById('nav-privacy').textContent = translations[currentLang]['navPrivacy'] || 'Privacy Policy';
+            document.getElementById('nav-terms').textContent = translations[currentLang]['navTerms'] || 'Terms of Service';
+            document.getElementById('nav-cookies').textContent = translations[currentLang]['navCookies'] || 'Cookie Policy';
+            
+            // Update copyright text
+            document.getElementById('copyright').textContent = currentLang === 'it' ? 
+                '© 2023 partygamesdrew.com - Tutti i diritti riservati' : 
+                '© 2023 partygamesdrew.com - All rights reserved';
+            
+            // Update privacy policy content for Italian
+            if (currentLang === 'it') {
+                document.getElementById('privacy-title').textContent = 'Informativa sulla Privacy';
+                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 8 Luglio 2023';
+                document.getElementById('privacy-intro').textContent = 'Grazie per giocare con DrewGames! Questa Informativa sulla Privacy spiega come raccogliamo, utilizziamo, divulghiamo e proteggiamo le tue informazioni quando visiti il nostro sito web www.partygamesdrew.com e utilizzi i nostri giochi (collettivamente, il "Servizio"). Ti preghiamo di leggere attentamente questa Informativa sulla Privacy. Utilizzando il Servizio, acconsenti alle pratiche relative ai dati descritte in questa informativa.';
+                document.getElementById('contact-info').innerHTML = 'Se hai domande o commenti su questa Informativa sulla Privacy, contattaci a: <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a>';
+                
+                // Section 1
+                document.getElementById('collection-title').textContent = '1. Informazioni che raccogliamo';
+                document.getElementById('automatically-collected-title').textContent = 'Informazioni raccolte automaticamente';
+                document.getElementById('automatically-collected').textContent = 'Quando accedi al nostro Servizio, potremmo raccogliere automaticamente determinate informazioni sul tuo dispositivo, tra cui:';
+                document.getElementById('auto-collect1').textContent = 'Informazioni sul dispositivo (come ID del dispositivo mobile, modello e produttore)';
+                document.getElementById('auto-collect2').textContent = 'Tipo e versione del sistema operativo';
+                document.getElementById('auto-collect3').textContent = 'Lingua e tipo di browser';
+                document.getElementById('auto-collect4').textContent = 'Indirizzo IP';
+                document.getElementById('auto-collect5').textContent = 'Orari e date di accesso';
+                document.getElementById('auto-collect6').textContent = 'Indirizzi di siti web di riferimento';
+                document.getElementById('auto-collect7').textContent = 'Posizione geografica generale (es. posizione a livello di paese o città)';
+                
+                document.getElementById('local-storage-title').textContent = 'Dati di archiviazione locale';
+                document.getElementById('local-storage').textContent = 'I nostri giochi utilizzano l\'archiviazione locale sul tuo dispositivo per salvare le preferenze di gioco e le impostazioni della lingua. Queste informazioni sono memorizzate direttamente sul tuo dispositivo e non vengono trasmesse ai nostri server.';
+                
+                document.getElementById('analytics-title').textContent = 'Analisi';
+                document.getElementById('analytics').innerHTML = 'Utilizziamo Google Analytics per aiutarci a capire come i nostri utenti utilizzano il Servizio. Google Analytics utilizza cookie e tecnologie simili per raccogliere e analizzare informazioni sull\'uso del Servizio e riferire su attività e tendenze. Per ulteriori informazioni su come Google utilizza questi dati, visita <a href="https://policies.google.com/privacy" target="_blank">l\'Informativa sulla privacy di Google</a>.';
+                
+                // Section 2
+                document.getElementById('use-title').textContent = '2. Come utilizziamo le tue informazioni';
+                document.getElementById('use-info').textContent = 'Utilizziamo le informazioni che raccogliamo per:';
+                document.getElementById('use1').textContent = 'Fornire, mantenere e migliorare il nostro Servizio';
+                document.getElementById('use2').textContent = 'Monitorare e analizzare l\'utilizzo e le tendenze per migliorare la tua esperienza con il Servizio';
+                document.getElementById('use3').textContent = 'Inviarti avvisi tecnici e messaggi di supporto';
+                document.getElementById('use4').textContent = 'Rilevare, investigare e prevenire transazioni fraudolente e altre attività illegali';
+                document.getElementById('use5').textContent = 'Proteggere i diritti e la proprietà di DrewGames e di altri';
+                
+                // Section 3
+                document.getElementById('sharing-title').textContent = '3. Condivisione delle tue informazioni';
+                document.getElementById('sharing-info').textContent = 'Non vendiamo, scambiamo, affittiamo o condividiamo in altro modo le tue informazioni personali identificabili con terze parti senza il tuo consenso, tranne che nelle seguenti circostanze:';
+                document.getElementById('sharing1').innerHTML = '<strong>Fornitori di servizi:</strong> Potremmo condividere le tue informazioni con fornitori terzi, fornitori di servizi e altre terze parti che eseguono servizi per nostro conto (es. fornitori di analisi).';
+                document.getElementById('sharing2').innerHTML = '<strong>Requisiti legali:</strong> Potremmo divulgare le tue informazioni laddove richiesto per legge o citazione in giudizio, o se riteniamo che tale azione sia necessaria per rispettare la legge o proteggere e difendere i nostri diritti.';
+                document.getElementById('sharing3').innerHTML = '<strong>Trasferimenti commerciali:</strong> Se siamo coinvolti in una fusione, acquisizione o vendita di tutti o di una parte dei nostri beni, sarai avvisato via email e/o tramite un avviso ben visibile sul nostro sito web di qualsiasi cambiamento nella proprietà o negli usi delle tue informazioni.';
+                
+                // Section 4-11
+                document.getElementById('cookies-title').textContent = '4. Cookie e tecnologie simili';
+                document.getElementById('cookies-info').innerHTML = 'Il nostro Servizio utilizza cookie e tecnologie simili come l\'archiviazione locale per migliorare la tua esperienza, analizzare le nostre prestazioni e abilitare determinate funzionalità. Puoi disabilitare i cookie tramite le impostazioni del tuo browser, ma ciò potrebbe influire sulla funzionalità del Servizio. Per ulteriori informazioni sul nostro utilizzo dei cookie, consulta la nostra <a href="cookie-policy.html">Politica sui Cookie</a>.';
+                
+                document.getElementById('advertising-title').textContent = '5. Pubblicità';
+                document.getElementById('advertising-info').innerHTML = 'Potremmo utilizzare società pubblicitarie di terze parti per pubblicare annunci quando visiti il nostro Servizio. Queste società potrebbero utilizzare informazioni sulle tue visite al nostro e ad altri siti web per fornirti pubblicità su beni e servizi di tuo interesse. Utilizziamo Google AdSense per visualizzare annunci pubblicitari. Per ulteriori informazioni su come Google utilizza i dati, visita <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Norme sulla privacy e termini di Google</a>.';
+                
+                document.getElementById('security-title').textContent = '6. Sicurezza delle tue informazioni';
+                document.getElementById('security-info').textContent = 'Utilizziamo misure di sicurezza amministrative, tecniche e fisiche per proteggere le tue informazioni personali. Sebbene abbiamo preso misure ragionevoli per proteggere le informazioni personali che ci fornisci, tieni presente che nonostante i nostri sforzi, nessuna misura di sicurezza è perfetta o impenetrabile e nessun metodo di trasmissione dei dati può essere garantito contro qualsiasi intercettazione o altro tipo di uso improprio.';
+                
+                document.getElementById('children-title').textContent = '7. Privacy dei minori';
+                document.getElementById('children-info').textContent = 'Il nostro Servizio non è diretto a bambini di età inferiore ai 13 anni e non raccogliamo consapevolmente informazioni personali da bambini di età inferiore ai 13 anni. Se veniamo a conoscenza di aver raccolto o ricevuto informazioni personali da un bambino di età inferiore ai 13 anni senza verifica del consenso dei genitori, elimineremo tali informazioni. Se ritieni che potremmo avere qualsiasi informazione da o su un bambino di età inferiore ai 13 anni, contattaci all\'indirizzo fornito all\'inizio di questa Informativa sulla Privacy.';
+                
+                document.getElementById('international-title').textContent = '8. Trasferimenti internazionali di dati';
+                document.getElementById('international-info').textContent = 'Le tue informazioni potrebbero essere trasferite e mantenute su computer situati al di fuori del tuo stato, provincia, paese o altra giurisdizione governativa dove le leggi sulla protezione dei dati potrebbero essere diverse da quelle della tua giurisdizione. Se ti trovi al di fuori degli Stati Uniti e scegli di fornirci informazioni, tieni presente che trasferiamo le informazioni negli Stati Uniti e le elaboriamo lì.';
+                
+                document.getElementById('your-rights-title').textContent = '9. I tuoi diritti';
+                document.getElementById('your-rights-info').textContent = 'A seconda della tua posizione, potresti avere determinati diritti riguardo alle tue informazioni personali. Questi potrebbero includere:';
+                document.getElementById('rights1').textContent = 'Il diritto di accedere alle informazioni personali che deteniamo su di te';
+                document.getElementById('rights2').textContent = 'Il diritto di richiedere la correzione di informazioni personali inesatte';
+                document.getElementById('rights3').textContent = 'Il diritto di richiedere la cancellazione delle tue informazioni personali';
+                document.getElementById('rights4').textContent = 'Il diritto di opporti al trattamento delle tue informazioni personali';
+                document.getElementById('rights5').textContent = 'Il diritto alla portabilità dei dati';
+                document.getElementById('rights-request').textContent = 'Per esercitare questi diritti, contattaci all\'indirizzo email fornito sopra.';
+                
+                document.getElementById('changes-title').textContent = '10. Modifiche a questa Informativa sulla Privacy';
+                document.getElementById('changes-info').textContent = 'Potremmo aggiornare la nostra Informativa sulla Privacy di tanto in tanto. Ti informeremo di eventuali modifiche pubblicando la nuova Informativa sulla Privacy su questa pagina e aggiornando la data di "Ultimo aggiornamento" all\'inizio. Ti consigliamo di rivedere periodicamente questa Informativa sulla Privacy per eventuali modifiche.';
+                
+                document.getElementById('contact-title').textContent = '11. Contattaci';
+                document.getElementById('contact-info2').textContent = 'Se hai domande o dubbi su questa Informativa sulla Privacy, contattaci a:';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            setFlagIcon();
+            updateUIForLanguage();
+        });
+        
+        function toggleLanguage() {
+            const currentLang = getUserLanguage();
+            const newLang = currentLang === 'it' ? 'en' : 'it';
+            setUserLanguage(newLang);
+            
+            // Update URL if needed
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', newLang);
+            window.location.href = url.toString();
+        }
+    </script>
+</body>
+</html> 

@@ -17,6 +17,14 @@ const translations = {
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Solo Italiano',
         
+        // Navigation Items
+        'navHome': 'Home',
+        'navAbout': 'Chi Siamo',
+        'navLegalHeader': 'Legale',
+        'navPrivacy': 'Privacy Policy',
+        'navTerms': 'Termini di Servizio',
+        'navCookies': 'Cookie Policy',
+        
         // Game titles and descriptions
         'impostor': {
             'title': 'Impostor',
@@ -71,6 +79,14 @@ const translations = {
         'subtitle': 'Games to play with friends offline 🎉',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Italian Only',
+        
+        // Navigation Items
+        'navHome': 'Home',
+        'navAbout': 'About Us',
+        'navLegalHeader': 'Legal',
+        'navPrivacy': 'Privacy Policy',
+        'navTerms': 'Terms of Service',
+        'navCookies': 'Cookie Policy',
         
         // Game titles and descriptions
         'impostor': {

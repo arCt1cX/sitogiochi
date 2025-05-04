@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Chi Siamo | DrewGames - Giochi da fare con gli amici offline</title>');
+        document.write('<meta name="description" content="DrewGames: Scopri chi siamo, la nostra missione e come i nostri giochi interattivi possono migliorare i momenti con i tuoi amici. Giochi semplici, divertenti e adatti a tutte le età.">');
+      } else {
+        document.write('<title>About Us | DrewGames - Games to play with friends offline</title>');
+        document.write('<meta name="description" content="DrewGames: Discover who we are, our mission, and how our interactive games can enhance your gatherings with friends. Simple, fun games suitable for all ages.">');
+      }
+    </script>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.partygamesdrew.com/about.html">
+    <meta property="og:title" content="About Us | DrewGames - Games to play with friends offline">
+    <meta property="og:description" content="DrewGames: Discover who we are, our mission, and how our interactive games can enhance your gatherings with friends. Simple, fun games suitable for all ages.">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.partygamesdrew.com/about.html">
+    <meta name="twitter:title" content="About Us | DrewGames - Games to play with friends offline">
+    <meta name="twitter:description" content="DrewGames: Discover who we are, our mission, and how our interactive games can enhance your gatherings with friends. Simple, fun games suitable for all ages.">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/about.html?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/about.html?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/about.html" />
+    <script>
+        // Set language as early as possible
+        (function() {
+            function getInitialLang() {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                if (urlLang === 'en' || urlLang === 'it') {
+                    return urlLang;
+                }
+                
+                // Check localStorage
+                const storedLang = localStorage.getItem('lang');
+                if (storedLang) {
+                    return storedLang;
+                }
+                
+                // Check browser language
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+                    return 'it';
+                }
+                
+                // Default to English
+                return 'en';
+            }
+            
+            // Set the lang attribute
+            document.documentElement.lang = getInitialLang();
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.partygamesdrew.com/about.html">
+    
+    <style>
+        /* Sidebar Navigation Styles */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: rgba(35, 30, 65, 0.97);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+        
+        .sidenav a:hover {
+            color: #7b68ee;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #7b68ee;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            border-left: none;
+            padding: 8px 16px;
+        }
+        
+        .sidenav .closebtn:hover {
+            background-color: transparent;
+            border-left: none;
+        }
+        
+        .sidenav-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
+        .sidenav-header {
+            color: #aaa;
+            font-size: 14px;
+            padding: 5px 25px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hamburger-menu {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(71, 60, 139, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-menu:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hamburger-menu div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay when sidebar is open */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+        
+        /* Main content shift */
+        #main {
+            transition: margin-left 0.3s;
+        }
+        
+        /* About Page Specific Styles */
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #f1f1f1;
+        }
+        
+        .about-section {
+            background-color: rgba(35, 30, 65, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(123, 104, 238, 0.3);
+        }
+        
+        .about-section h2 {
+            color: #7b68ee;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(123, 104, 238, 0.5);
+            padding-bottom: 10px;
+        }
+        
+        .about-section p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .about-section ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .about-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #7b68ee;
+            font-weight: 600;
+        }
+        
+        .benefit-box {
+            background-color: rgba(123, 104, 238, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #7b68ee;
+        }
+        
+        .benefit-box h3 {
+            color: #f1f1f1;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .game-example {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .game-card {
+            background-color: rgba(50, 45, 80, 0.8);
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1 1 250px;
+            border: 1px solid rgba(123, 104, 238, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .game-card h4 {
+            color: #7b68ee;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-section p, 
+            .about-section li {
+                font-size: 1rem;
+            }
+            
+            .benefit-box h3,
+            .game-card h4 {
+                font-size: 1.1rem;
+            }
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 28px;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="legal-header">Legal</div>
+            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
+            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
+            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+        </div>
+    </div>
+
+    <!-- Overlay for when sidebar is open -->
+    <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- The country flag SVG will be inserted here by JavaScript -->
+            </svg>
+        </button>
+        
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+            </div>
+            <h1>Drew Games</h1>
+            <div id="about-title" class="tagline">About Us</div>
+        </header>
+
+        <main>
+            <div class="about-container">
+                <div class="about-section">
+                    <h2 id="our-story-title">Our Story</h2>
+                    <p id="our-story-p1">DrewGames was born from a simple observation: in a world increasingly dominated by screens and virtual connections, genuine face-to-face interaction has become a rare and precious experience. Our founder, a passionate game enthusiast, noticed how party games brought people together, created memorable moments, and fostered authentic connections.</p>
+                    <p id="our-story-p2">Inspired by traditional party games and modern social dynamics, we set out to create a collection of accessible, engaging games that require minimal equipment but deliver maximum fun. Our platform is designed to be the only screen you need for your gatherings – once loaded, our games work offline, encouraging you to engage with the people around you rather than their digital avatars.</p>
+                    <p id="our-story-p3">Since our launch, we've been continuously expanding our library of games, refining our existing offerings, and building a community of players who share our passion for bringing people together through play.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2 id="our-mission-title">Our Mission</h2>
+                    <p id="our-mission-p1">At DrewGames, we believe that playing games together is more than just entertainment – it's a powerful way to strengthen relationships, stimulate minds, and create lasting memories. Our mission is to:</p>
+                    
+                    <div class="benefit-box">
+                        <h3 id="mission-point1">Enhance Social Connections</h3>
+                        <p id="mission-desc1">Create experiences that encourage meaningful interaction, communication, and bonding between friends and family members. Our games are designed to break down barriers and bring people together.</p>
+                    </div>
+                    
+                    <div class="benefit-box">
+                        <h3 id="mission-point2">Stimulate Cognitive Function</h3>
+                        <p id="mission-desc2">Develop games that challenge players' minds, encourage creative thinking, and foster healthy competition. Unlike passive entertainment, our games actively engage players' brains.</p>
+                    </div>
+                    
+                    <div class="benefit-box">
+                        <h3 id="mission-point3">Promote Digital Balance</h3>
+                        <p id="mission-desc3">Offer an alternative to endless scrolling and isolated screen time by using technology as a facilitator for real-world interaction rather than a substitute for it.</p>
+                    </div>
+                    
+                    <div class="benefit-box">
+                        <h3 id="mission-point4">Foster Inclusivity</h3>
+                        <p id="mission-desc4">Create games that are accessible to people of different ages, backgrounds, and interests, ensuring that nobody feels left out during social gatherings.</p>
+                    </div>
+                </div>
+                
+                <div class="about-section">
+                    <h2 id="games-value-title">The Value of Our Games</h2>
+                    <p id="games-value-p1">Each game in our collection is carefully designed to deliver specific benefits while ensuring an enjoyable experience for all players:</p>
+                    
+                    <div class="game-example">
+                        <div class="game-card">
+                            <h4 id="game1-title">Impostor</h4>
+                            <p id="game1-desc">Develops observation skills and social deduction abilities as players try to identify who has a different prompt. This game enhances communication and builds trust among participants.</p>
+                        </div>
+                        
+                        <div class="game-card">
+                            <h4 id="game2-title">Color Grid</h4>
+                            <p id="game2-desc">Challenges spatial reasoning and memory as players try to guess a hidden colored cell. This game improves concentration and strategic thinking in a fun, competitive setting.</p>
+                        </div>
+                        
+                        <div class="game-card">
+                            <h4 id="game3-title">Chain Reaction</h4>
+                            <p id="game3-desc">Stimulates vocabulary and quick thinking as players create word associations. This game encourages rapid cognition and helps expand participants' linguistic connections.</p>
+                        </div>
+                    </div>
+                    
+                    <p id="games-value-p2">Beyond individual game benefits, our platform as a whole offers:</p>
+                    <ul>
+                        <li id="benefit1"><span class="highlight">Accessibility:</span> No need to purchase physical games or download large apps – our games are instantly available on any device with a web browser.</li>
+                        <li id="benefit2"><span class="highlight">Variety:</span> From word games to deduction challenges, our diverse collection ensures there's something for every group and occasion.</li>
+                        <li id="benefit3"><span class="highlight">Flexibility:</span> Most games can be adapted for different group sizes and played in various settings, from intimate gatherings to larger parties.</li>
+                        <li id="benefit4"><span class="highlight">Educational Value:</span> While primarily designed for fun, our games naturally reinforce cognitive skills, language abilities, and social competencies.</li>
+                    </ul>
+                </div>
+                
+                <div class="about-section">
+                    <h2 id="our-vision-title">Our Vision for the Future</h2>
+                    <p id="vision-p1">We're committed to continuously improving and expanding DrewGames. Our roadmap includes:</p>
+                    <ul>
+                        <li id="vision1">Developing new games based on player feedback and emerging social trends</li>
+                        <li id="vision2">Enhancing accessibility features to ensure our games can be enjoyed by everyone</li>
+                        <li id="vision3">Building community features that allow players to share experiences and contribute ideas</li>
+                        <li id="vision4">Exploring educational applications for our games to support learning in formal and informal settings</li>
+                    </ul>
+                    <p id="vision-p2">We envision a world where quality time with friends and family is prioritized, where meaningful face-to-face interaction is valued above digital distractions, and where the joy of playing together creates bonds that last a lifetime.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2 id="join-us-title">Join Us on This Journey</h2>
+                    <p id="join-us-p1">Whether you're looking to liven up a family gathering, break the ice at a social event, or simply enjoy quality time with friends, DrewGames is here to help create those moments that matter.</p>
+                    <p id="join-us-p2">We invite you to explore our games, share them with your loved ones, and experience the difference that interactive play can make in your relationships and gatherings.</p>
+                    <p id="join-us-p3">Thank you for being part of the DrewGames community. Let's play together!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p id="copyright">&copy; 2023 partygamesdrew.com - All rights reserved</p>
+                <div class="support-container">
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="lang.js"></script>
+    
+    <!-- JavaScript for Sidebar Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myOverlay").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        // Set the flag icon based on current language
+        function setFlagIcon() {
+            const currentLang = getUserLanguage();
+            const flagSvg = flagSVGs[currentLang] || flagSVGs['en'];
+            document.getElementById('currentFlag').innerHTML = flagSvg;
+            document.getElementById('languageToggle').setAttribute('aria-label', `Switch to ${currentLang === 'en' ? 'Italian' : 'English'}`);
+        }
+        
+        // Update UI elements based on language
+        function updateUIForLanguage() {
+            const currentLang = getUserLanguage();
+            
+            // Update navigation text
+            document.getElementById('nav-home').textContent = translations[currentLang]['navHome'] || 'Home';
+            document.getElementById('nav-about').textContent = translations[currentLang]['navAbout'] || 'About Us';
+            document.getElementById('legal-header').textContent = translations[currentLang]['navLegalHeader'] || 'Legal';
+            document.getElementById('nav-privacy').textContent = translations[currentLang]['navPrivacy'] || 'Privacy Policy';
+            document.getElementById('nav-terms').textContent = translations[currentLang]['navTerms'] || 'Terms of Service';
+            document.getElementById('nav-cookies').textContent = translations[currentLang]['navCookies'] || 'Cookie Policy';
+            
+            // Update about page content
+            if (currentLang === 'it') {
+                // Italian translations for the About page
+                document.getElementById('about-title').textContent = 'Chi Siamo';
+                document.getElementById('copyright').textContent = '© 2023 partygamesdrew.com - Tutti i diritti riservati';
+                
+                // Our Story section
+                document.getElementById('our-story-title').textContent = 'La Nostra Storia';
+                document.getElementById('our-story-p1').textContent = 'DrewGames è nato da una semplice osservazione: in un mondo sempre più dominato da schermi e connessioni virtuali, l\'interazione faccia a faccia autentica è diventata un\'esperienza rara e preziosa. Il nostro fondatore, un appassionato di giochi, ha notato come i party game riunissero le persone, creassero momenti memorabili e favorissero connessioni autentiche.';
+                document.getElementById('our-story-p2').textContent = 'Ispirati dai giochi da tavolo tradizionali e dalle dinamiche sociali moderne, abbiamo creato una collezione di giochi accessibili e coinvolgenti che richiedono un\'attrezzatura minima ma offrono il massimo divertimento. La nostra piattaforma è progettata per essere l\'unico schermo di cui hai bisogno per i tuoi incontri – una volta caricati, i nostri giochi funzionano offline, incoraggiandoti a interagire con le persone intorno a te piuttosto che con i loro avatar digitali.';
+                document.getElementById('our-story-p3').textContent = 'Dalla nostra nascita, abbiamo continuamente ampliato la nostra libreria di giochi, perfezionato le nostre offerte esistenti e costruito una comunità di giocatori che condividono la nostra passione per riunire le persone attraverso il gioco.';
+                
+                // Mission section
+                document.getElementById('our-mission-title').textContent = 'La Nostra Missione';
+                document.getElementById('our-mission-p1').textContent = 'In DrewGames, crediamo che giocare insieme sia più che semplice intrattenimento – è un modo potente per rafforzare le relazioni, stimolare le menti e creare ricordi duraturi. La nostra missione è:';
+                document.getElementById('mission-point1').textContent = 'Migliorare le Connessioni Sociali';
+                document.getElementById('mission-desc1').textContent = 'Creare esperienze che incoraggino interazioni significative, comunicazione e legami tra amici e familiari. I nostri giochi sono progettati per abbattere le barriere e riunire le persone.';
+                document.getElementById('mission-point2').textContent = 'Stimolare le Funzioni Cognitive';
+                document.getElementById('mission-desc2').textContent = 'Sviluppare giochi che sfidano la mente dei giocatori, incoraggiano il pensiero creativo e promuovono una sana competizione. A differenza dell\'intrattenimento passivo, i nostri giochi coinvolgono attivamente il cervello dei giocatori.';
+                document.getElementById('mission-point3').textContent = 'Promuovere l\'Equilibrio Digitale';
+                document.getElementById('mission-desc3').textContent = 'Offrire un\'alternativa allo scorrimento infinito e al tempo isolato davanti allo schermo utilizzando la tecnologia come facilitatore per l\'interazione nel mondo reale anziché come sostituto.';
+                document.getElementById('mission-point4').textContent = 'Favorire l\'Inclusività';
+                document.getElementById('mission-desc4').textContent = 'Creare giochi accessibili a persone di diverse età, background e interessi, garantendo che nessuno si senta escluso durante i ritrovi sociali.';
+                
+                // Value section
+                document.getElementById('games-value-title').textContent = 'Il Valore dei Nostri Giochi';
+                document.getElementById('games-value-p1').textContent = 'Ogni gioco nella nostra collezione è attentamente progettato per offrire benefici specifici garantendo un\'esperienza piacevole per tutti i giocatori:';
+                document.getElementById('game1-title').textContent = 'Impostor';
+                document.getElementById('game1-desc').textContent = 'Sviluppa capacità di osservazione e deduzione sociale mentre i giocatori cercano di identificare chi ha un prompt diverso. Questo gioco migliora la comunicazione e costruisce fiducia tra i partecipanti.';
+                document.getElementById('game2-title').textContent = 'Color Grid';
+                document.getElementById('game2-desc').textContent = 'Sfida il ragionamento spaziale e la memoria mentre i giocatori cercano di indovinare una cella colorata nascosta. Questo gioco migliora la concentrazione e il pensiero strategico in un contesto divertente e competitivo.';
+                document.getElementById('game3-title').textContent = 'Chain Reaction';
+                document.getElementById('game3-desc').textContent = 'Stimola il vocabolario e il pensiero rapido mentre i giocatori creano associazioni di parole. Questo gioco incoraggia la cognizione rapida e aiuta a espandere le connessioni linguistiche dei partecipanti.';
+                document.getElementById('games-value-p2').textContent = 'Oltre ai benefici dei singoli giochi, la nostra piattaforma nel suo complesso offre:';
+                document.getElementById('benefit1').innerHTML = '<span class="highlight">Accessibilità:</span> Nessun bisogno di acquistare giochi fisici o scaricare grandi app – i nostri giochi sono immediatamente disponibili su qualsiasi dispositivo con un browser web.';
+                document.getElementById('benefit2').innerHTML = '<span class="highlight">Varietà:</span> Dai giochi di parole alle sfide di deduzione, la nostra collezione diversificata garantisce che ci sia qualcosa per ogni gruppo e occasione.';
+                document.getElementById('benefit3').innerHTML = '<span class="highlight">Flessibilità:</span> La maggior parte dei giochi può essere adattata per diversi gruppi e giocata in vari ambienti, da incontri intimi a feste più grandi.';
+                document.getElementById('benefit4').innerHTML = '<span class="highlight">Valore Educativo:</span> Pur essendo progettati principalmente per il divertimento, i nostri giochi rinforzano naturalmente le abilità cognitive, linguistiche e sociali.';
+                
+                // Vision section
+                document.getElementById('our-vision-title').textContent = 'La Nostra Visione per il Futuro';
+                document.getElementById('vision-p1').textContent = 'Siamo impegnati a migliorare e espandere continuamente DrewGames. La nostra roadmap include:';
+                document.getElementById('vision1').textContent = 'Sviluppare nuovi giochi basati sul feedback dei giocatori e sui trend sociali emergenti';
+                document.getElementById('vision2').textContent = 'Migliorare le funzionalità di accessibilità per garantire che i nostri giochi possano essere apprezzati da tutti';
+                document.getElementById('vision3').textContent = 'Costruire funzionalità di community che permettano ai giocatori di condividere esperienze e contribuire con idee';
+                document.getElementById('vision4').textContent = 'Esplorare applicazioni educative per i nostri giochi per supportare l\'apprendimento in contesti formali e informali';
+                document.getElementById('vision-p2').textContent = 'Immaginiamo un mondo in cui il tempo di qualità con amici e famiglia sia prioritario, dove l\'interazione significativa faccia a faccia sia valorizzata rispetto alle distrazioni digitali, e dove la gioia di giocare insieme crei legami che durano tutta una vita.';
+                
+                // Join Us section
+                document.getElementById('join-us-title').textContent = 'Unisciti a Noi in Questo Viaggio';
+                document.getElementById('join-us-p1').textContent = 'Che tu stia cercando di animare un raduno familiare, rompere il ghiaccio a un evento sociale o semplicemente goderti del tempo di qualità con gli amici, DrewGames è qui per aiutarti a creare quei momenti che contano.';
+                document.getElementById('join-us-p2').textContent = 'Ti invitiamo a esplorare i nostri giochi, condividerli con i tuoi cari e sperimentare la differenza che il gioco interattivo può fare nelle tue relazioni e nei tuoi incontri.';
+                document.getElementById('join-us-p3').textContent = 'Grazie per far parte della comunità DrewGames. Giochiamo insieme!';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            setFlagIcon();
+            updateUIForLanguage();
+        });
+        
+        function toggleLanguage() {
+            const currentLang = getUserLanguage();
+            const newLang = currentLang === 'it' ? 'en' : 'it';
+            setUserLanguage(newLang);
+            
+            // Update URL if needed
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', newLang);
+            window.location.href = url.toString();
+        }
+    </script>
+</body>
+</html> 

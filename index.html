@@ -116,6 +116,125 @@
     </script>
     
     <style>
+        /* Sidebar Navigation Styles */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: rgba(35, 30, 65, 0.97);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+        
+        .sidenav a:hover {
+            color: #7b68ee;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #7b68ee;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            border-left: none;
+            padding: 8px 16px;
+        }
+        
+        .sidenav .closebtn:hover {
+            background-color: transparent;
+            border-left: none;
+        }
+        
+        .sidenav-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
+        .sidenav-header {
+            color: #aaa;
+            font-size: 14px;
+            padding: 5px 25px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hamburger-menu {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(71, 60, 139, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-menu:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hamburger-menu div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay when sidebar is open */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+        
+        /* Main content shift */
+        #main {
+            transition: margin-left 0.3s;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 16px;}
+        }
+        
         .tagline {
             position: relative;
             font-size: 1.5rem;
@@ -248,75 +367,140 @@
     </style>
 </head>
 <body>
-    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
-        <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-            <!-- The country flag SVG will be inserted here by JavaScript -->
-        </svg>
-    </button>
-    
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
-        </div>
-        <h1>Drew Games</h1>
-        <div id="tagline" class="tagline">Illumina la mente, scatena la serata</div>
-        <h2 id="subtitle">Giochi da fare con gli amici offline 🎉</h2>
-    </header>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-    <main>
-        <div class="games-container" id="gamesContainer">
-            <!-- Game cards will be inserted here by JavaScript -->
+    <!-- Sidebar Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="legal-header">Legal</div>
+            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
+            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
+            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <div class="footer-content">
-            <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
-            <div class="support-container">
-                <!-- Mobile-friendly BMC button implementation -->
-                <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
-                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
-                </a>
-                <script>
-                    // Load the official BMC script
-                    (function() {
-                        const script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-                        script.setAttribute('data-name', 'bmc-button');
-                        script.setAttribute('data-slug', 'partygamesdrew');
-                        script.setAttribute('data-color', '#BD5FFF');
-                        script.setAttribute('data-emoji', '');
-                        script.setAttribute('data-font', 'Cookie');
-                        script.setAttribute('data-text', 'Buy me a coffee');
-                        script.setAttribute('data-outline-color', '#000000');
-                        script.setAttribute('data-font-color', '#ffffff');
-                        script.setAttribute('data-coffee-color', '#FFDD00');
-                        
-                        // On script load, hide our fallback if the official button rendered properly
-                        script.onload = function() {
-                            setTimeout(function() {
-                                const bmcButton = document.querySelector('.bmc-btn');
-                                if (bmcButton) {
-                                    // If the official button is present, hide our fallback
-                                    document.getElementById('bmc-link').style.display = 'none';
-                                    
-                                    // Add touchend event listener for mobile devices
-                                    bmcButton.addEventListener('touchend', function(e) {
-                                        window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
-                                    });
-                                }
-                            }, 1000); // Wait a second for the button to render
-                        };
-                        
-                        document.body.appendChild(script);
-                    })();
-                </script>
+    <!-- Overlay for when sidebar is open -->
+    <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- The country flag SVG will be inserted here by JavaScript -->
+            </svg>
+        </button>
+        
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
             </div>
-        </div>
-    </footer>
+            <h1>Drew Games</h1>
+            <div id="tagline" class="tagline">Illumina la mente, scatena la serata</div>
+            <h2 id="subtitle">Giochi da fare con gli amici offline 🎉</h2>
+        </header>
+
+        <main>
+            <div class="games-container" id="gamesContainer">
+                <!-- Game cards will be inserted here by JavaScript -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
+                <div class="support-container">
+                    <!-- Mobile-friendly BMC button implementation -->
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                    <script>
+                        // Load the official BMC script
+                        (function() {
+                            const script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+                            script.setAttribute('data-name', 'bmc-button');
+                            script.setAttribute('data-slug', 'partygamesdrew');
+                            script.setAttribute('data-color', '#BD5FFF');
+                            script.setAttribute('data-emoji', '');
+                            script.setAttribute('data-font', 'Cookie');
+                            script.setAttribute('data-text', 'Buy me a coffee');
+                            script.setAttribute('data-outline-color', '#000000');
+                            script.setAttribute('data-font-color', '#ffffff');
+                            script.setAttribute('data-coffee-color', '#FFDD00');
+                            
+                            // On script load, hide our fallback if the official button rendered properly
+                            script.onload = function() {
+                                setTimeout(function() {
+                                    const bmcButton = document.querySelector('.bmc-btn');
+                                    if (bmcButton) {
+                                        // If the official button is present, hide our fallback
+                                        document.getElementById('bmc-link').style.display = 'none';
+                                        
+                                        // Add touchend event listener for mobile devices
+                                        bmcButton.addEventListener('touchend', function(e) {
+                                            window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
+                                        });
+                                    }
+                                }, 1000); // Wait a second for the button to render
+                            };
+                            
+                            document.body.appendChild(script);
+                        })();
+                    </script>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="lang.js"></script>
     <script src="script.js"></script>
+    
+    <!-- JavaScript for Sidebar Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myOverlay").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        // Update navigation text based on language
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation will be updated when translations are applied
+            if (typeof applyTranslations === 'function') {
+                const originalApply = applyTranslations;
+                applyTranslations = function() {
+                    originalApply();
+                    updateNavigationText();
+                };
+            }
+            
+            function updateNavigationText() {
+                if (typeof getTranslation === 'function') {
+                    document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
+                    document.getElementById('nav-about').textContent = getTranslation('navAbout') || 'About Us';
+                    document.getElementById('legal-header').textContent = getTranslation('navLegalHeader') || 'Legal';
+                    document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
+                    document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';
+                    document.getElementById('nav-cookies').textContent = getTranslation('navCookies') || 'Cookie Policy';
+                }
+            }
+        });
+    </script>
 </body>
 </html> 

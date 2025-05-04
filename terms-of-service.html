@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title>Termini di Servizio | DrewGames</title>');
+        document.write('<meta name="description" content="Termini e condizioni di DrewGames: Leggi i nostri termini di servizio per comprendere le regole e le linee guida per l\'utilizzo del nostro sito e dei nostri giochi.">');
+      } else {
+        document.write('<title>Terms of Service | DrewGames</title>');
+        document.write('<meta name="description" content="DrewGames Terms and Conditions: Read our terms of service to understand the rules and guidelines for using our site and games.">');
+      }
+    </script>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.partygamesdrew.com/terms-of-service.html">
+    <meta property="og:title" content="Terms of Service | DrewGames">
+    <meta property="og:description" content="DrewGames Terms and Conditions: Read our terms of service to understand the rules and guidelines for using our site and games.">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.partygamesdrew.com/terms-of-service.html">
+    <meta name="twitter:title" content="Terms of Service | DrewGames">
+    <meta name="twitter:description" content="DrewGames Terms and Conditions: Read our terms of service to understand the rules and guidelines for using our site and games.">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/terms-of-service.html?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/terms-of-service.html?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/terms-of-service.html" />
+    <script>
+        // Set language as early as possible
+        (function() {
+            function getInitialLang() {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                if (urlLang === 'en' || urlLang === 'it') {
+                    return urlLang;
+                }
+                
+                // Check localStorage
+                const storedLang = localStorage.getItem('lang');
+                if (storedLang) {
+                    return storedLang;
+                }
+                
+                // Check browser language
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+                    return 'it';
+                }
+                
+                // Default to English
+                return 'en';
+            }
+            
+            // Set the lang attribute
+            document.documentElement.lang = getInitialLang();
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.partygamesdrew.com/terms-of-service.html">
+    
+    <style>
+        /* Sidebar Navigation Styles */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: rgba(35, 30, 65, 0.97);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+        
+        .sidenav a:hover {
+            color: #7b68ee;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #7b68ee;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            border-left: none;
+            padding: 8px 16px;
+        }
+        
+        .sidenav .closebtn:hover {
+            background-color: transparent;
+            border-left: none;
+        }
+        
+        .sidenav-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
+        .sidenav-header {
+            color: #aaa;
+            font-size: 14px;
+            padding: 5px 25px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hamburger-menu {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(71, 60, 139, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-menu:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hamburger-menu div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Overlay when sidebar is open */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+        
+        /* Main content shift */
+        #main {
+            transition: margin-left 0.3s;
+        }
+        
+        /* Terms of Service Specific Styles */
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #f1f1f1;
+        }
+        
+        .terms-section {
+            background-color: rgba(35, 30, 65, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(123, 104, 238, 0.3);
+        }
+        
+        .terms-section h2 {
+            color: #7b68ee;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(123, 104, 238, 0.5);
+            padding-bottom: 10px;
+        }
+
+        .terms-section h3 {
+            color: #a396f0;
+            font-size: 1.3rem;
+            margin: 20px 0 15px 0;
+        }
+        
+        .terms-section p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .terms-section ul, .terms-section ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .terms-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .terms-section p, 
+            .terms-section li {
+                font-size: 1rem;
+            }
+        }
+        
+        .language-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 28px;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info {
+            background-color: rgba(123, 104, 238, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #7b68ee;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="legal-header">Legal</div>
+            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
+            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
+            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+        </div>
+    </div>
+
+    <!-- Overlay for when sidebar is open -->
+    <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- The country flag SVG will be inserted here by JavaScript -->
+            </svg>
+        </button>
+        
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+            </div>
+            <h1>Drew Games</h1>
+            <div id="terms-title" class="tagline">Terms of Service</div>
+        </header>
+
+        <main>
+            <div class="terms-container">
+                <div class="terms-section">
+                    <p id="last-updated" class="last-updated">Last Updated: July 8, 2023</p>
+                    
+                    <h2 id="agreement-title">1. Agreement to Terms</h2>
+                    <p id="agreement-p1">By accessing or using the DrewGames website (partygamesdrew.com) and its games (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, then you may not access the Service.</p>
+                    
+                    <h2 id="intellectual-title">2. Intellectual Property Rights</h2>
+                    <p id="intellectual-p1">Unless otherwise stated, DrewGames and/or its licensors own the intellectual property rights for all material on the Service. All intellectual property rights are reserved. You may access this material for your own personal use subjected to restrictions set in these Terms.</p>
+                    
+                    <h3 id="restrictions-title">Restrictions</h3>
+                    <p id="restrictions-p1">You are specifically restricted from:</p>
+                    <ul>
+                        <li id="restrictions-1">Publishing any material from the Service in any other media without proper attribution</li>
+                        <li id="restrictions-2">Selling, sublicensing, and/or otherwise commercializing any material from the Service</li>
+                        <li id="restrictions-3">Publicly performing and/or showing any material from the Service without proper attribution</li>
+                        <li id="restrictions-4">Using the Service in any way that is or may be damaging to the Service or DrewGames</li>
+                        <li id="restrictions-5">Using the Service in any way that impacts user access to the Service</li>
+                        <li id="restrictions-6">Using the Service contrary to applicable laws and regulations, or in any way may cause harm to the Service, or to any person or business entity</li>
+                    </ul>
+                    
+                    <h2 id="user-content-title">3. User Content</h2>
+                    <p id="user-content-p1">Our Service does not allow users to submit or post content. We may provide you with the opportunity to interact with our games and contribute to the gameplay, but you do not retain any ownership rights in such contributions.</p>
+                    
+                    <h2 id="limitation-title">4. Limitation of Liability</h2>
+                    <p id="limitation-p1">In no event shall DrewGames, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.</p>
+                    
+                    <h2 id="accuracy-title">5. Accuracy of Materials</h2>
+                    <p id="accuracy-p1">The materials appearing on DrewGames' Service could include technical, typographical, or photographic errors. DrewGames does not warrant that any of the materials on its Service are accurate, complete or current. DrewGames may make changes to the materials contained on its Service at any time without notice.</p>
+                    
+                    <h2 id="links-title">6. Links to Other Websites</h2>
+                    <p id="links-p1">Our Service may contain links to third-party websites or services that are not owned or controlled by DrewGames. DrewGames has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that DrewGames shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.</p>
+                    
+                    <h2 id="changes-to-terms-title">7. Changes to Terms</h2>
+                    <p id="changes-to-terms-p1">DrewGames reserves the right, at its sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+                    
+                    <h2 id="governing-law-title">8. Governing Law</h2>
+                    <p id="governing-law-p1">These Terms shall be governed and construed in accordance with the laws of Italy, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+                    
+                    <h2 id="contact-title">9. Contact Us</h2>
+                    <p id="contact-p1">If you have any questions about these Terms, please contact us at:</p>
+                    <p><a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p id="copyright">&copy; 2023 partygamesdrew.com - All rights reserved</p>
+                <div class="support-container">
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="lang.js"></script>
+    
+    <!-- JavaScript for Sidebar Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myOverlay").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        // Set the flag icon based on current language
+        function setFlagIcon() {
+            const currentLang = getUserLanguage();
+            const flagSvg = flagSVGs[currentLang] || flagSVGs['en'];
+            document.getElementById('currentFlag').innerHTML = flagSvg;
+            document.getElementById('languageToggle').setAttribute('aria-label', `Switch to ${currentLang === 'en' ? 'Italian' : 'English'}`);
+        }
+        
+        // Update UI elements based on language
+        function updateUIForLanguage() {
+            const currentLang = getUserLanguage();
+            
+            // Update navigation text
+            document.getElementById('nav-home').textContent = translations[currentLang]['navHome'] || 'Home';
+            document.getElementById('nav-about').textContent = translations[currentLang]['navAbout'] || 'About Us';
+            document.getElementById('legal-header').textContent = translations[currentLang]['navLegalHeader'] || 'Legal';
+            document.getElementById('nav-privacy').textContent = translations[currentLang]['navPrivacy'] || 'Privacy Policy';
+            document.getElementById('nav-terms').textContent = translations[currentLang]['navTerms'] || 'Terms of Service';
+            document.getElementById('nav-cookies').textContent = translations[currentLang]['navCookies'] || 'Cookie Policy';
+            
+            // Update copyright text
+            document.getElementById('copyright').textContent = currentLang === 'it' ? 
+                '© 2023 partygamesdrew.com - Tutti i diritti riservati' : 
+                '© 2023 partygamesdrew.com - All rights reserved';
+            
+            // Update terms of service content for Italian
+            if (currentLang === 'it') {
+                document.getElementById('terms-title').textContent = 'Termini di Servizio';
+                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 8 Luglio 2023';
+                
+                // Agreement to Terms
+                document.getElementById('agreement-title').textContent = '1. Accettazione dei Termini';
+                document.getElementById('agreement-p1').textContent = 'Accedendo o utilizzando il sito web DrewGames (partygamesdrew.com) e i suoi giochi (il "Servizio"), accetti di essere vincolato da questi Termini di Servizio ("Termini"). Se non sei d\'accordo con qualsiasi parte dei termini, non puoi accedere al Servizio.';
+                
+                // Intellectual Property Rights
+                document.getElementById('intellectual-title').textContent = '2. Diritti di Proprietà Intellettuale';
+                document.getElementById('intellectual-p1').textContent = 'Salvo diversamente indicato, DrewGames e/o i suoi licenziatari possiedono i diritti di proprietà intellettuale per tutto il materiale sul Servizio. Tutti i diritti di proprietà intellettuale sono riservati. Puoi accedere a questo materiale per il tuo uso personale soggetto alle restrizioni stabilite in questi Termini.';
+                
+                document.getElementById('restrictions-title').textContent = 'Restrizioni';
+                document.getElementById('restrictions-p1').textContent = 'Ti è specificamente vietato:';
+                document.getElementById('restrictions-1').textContent = 'Pubblicare qualsiasi materiale dal Servizio in qualsiasi altro media senza adeguata attribuzione';
+                document.getElementById('restrictions-2').textContent = 'Vendere, sublicenziare e/o commercializzare in altro modo qualsiasi materiale dal Servizio';
+                document.getElementById('restrictions-3').textContent = 'Eseguire pubblicamente e/o mostrare qualsiasi materiale dal Servizio senza adeguata attribuzione';
+                document.getElementById('restrictions-4').textContent = 'Utilizzare il Servizio in qualsiasi modo che sia o possa essere dannoso per il Servizio o DrewGames';
+                document.getElementById('restrictions-5').textContent = 'Utilizzare il Servizio in qualsiasi modo che influisca sull\'accesso degli utenti al Servizio';
+                document.getElementById('restrictions-6').textContent = 'Utilizzare il Servizio in modo contrario alle leggi e ai regolamenti applicabili, o in qualsiasi modo che possa causare danni al Servizio, o a qualsiasi persona o entità commerciale';
+                
+                // User Content
+                document.getElementById('user-content-title').textContent = '3. Contenuto dell\'Utente';
+                document.getElementById('user-content-p1').textContent = 'Il nostro Servizio non consente agli utenti di inviare o pubblicare contenuti. Potremmo fornirti l\'opportunità di interagire con i nostri giochi e contribuire al gameplay, ma non conservi alcun diritto di proprietà su tali contributi.';
+                
+                // Continue with other sections...
+                document.getElementById('limitation-title').textContent = '4. Limitazione di Responsabilità';
+                document.getElementById('limitation-p1').textContent = 'In nessun caso DrewGames, né i suoi direttori, dipendenti, partner, agenti, fornitori o affiliati, saranno responsabili per danni indiretti, incidentali, speciali, consequenziali o punitivi, inclusi senza limitazione, perdita di profitti, dati, utilizzo, avviamento o altre perdite intangibili, derivanti dal tuo accesso o utilizzo o incapacità di accedere o utilizzare il Servizio.';
+                
+                document.getElementById('accuracy-title').textContent = '5. Precisione dei Materiali';
+                document.getElementById('accuracy-p1').textContent = 'I materiali che appaiono sul Servizio di DrewGames potrebbero includere errori tecnici, tipografici o fotografici. DrewGames non garantisce che i materiali sul suo Servizio siano accurati, completi o attuali. DrewGames può apportare modifiche ai materiali contenuti nel suo Servizio in qualsiasi momento senza preavviso.';
+                
+                document.getElementById('links-title').textContent = '6. Collegamenti ad Altri Siti Web';
+                document.getElementById('links-p1').textContent = 'Il nostro Servizio può contenere collegamenti a siti web o servizi di terze parti che non sono di proprietà o controllati da DrewGames. DrewGames non ha alcun controllo e non si assume alcuna responsabilità per il contenuto, le politiche sulla privacy o le pratiche di siti web o servizi di terze parti. Riconosci e accetti inoltre che DrewGames non sarà responsabile, direttamente o indirettamente, per eventuali danni o perdite causati o presumibilmente causati da o in connessione con l\'uso o l\'affidamento a tali contenuti, beni o servizi disponibili su o attraverso tali siti web o servizi.';
+                
+                document.getElementById('changes-to-terms-title').textContent = '7. Modifiche ai Termini';
+                document.getElementById('changes-to-terms-p1').textContent = 'DrewGames si riserva il diritto, a sua esclusiva discrezione, di modificare o sostituire questi Termini in qualsiasi momento. Continuando ad accedere o utilizzare il nostro Servizio dopo che tali revisioni diventano effettive, accetti di essere vincolato dai termini rivisti. Se non sei d\'accordo con i nuovi termini, ti preghiamo di interrompere l\'utilizzo del Servizio.';
+                
+                document.getElementById('governing-law-title').textContent = '8. Legge Applicabile';
+                document.getElementById('governing-law-p1').textContent = 'Questi Termini saranno regolati e interpretati in conformità con le leggi dell\'Italia, senza riguardo alle sue disposizioni sui conflitti di legge. La nostra mancata applicazione di qualsiasi diritto o disposizione di questi Termini non sarà considerata una rinuncia a tali diritti.';
+                
+                document.getElementById('contact-title').textContent = '9. Contattaci';
+                document.getElementById('contact-p1').textContent = 'Se hai domande su questi Termini, contattaci a:';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            setFlagIcon();
+            updateUIForLanguage();
+        });
+        
+        function toggleLanguage() {
+            const currentLang = getUserLanguage();
+            const newLang = currentLang === 'it' ? 'en' : 'it';
+            setUserLanguage(newLang);
+            
+            // Update URL if needed
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', newLang);
+            window.location.href = url.toString();
+        }
+    </script>
+</body>
+</html> 
