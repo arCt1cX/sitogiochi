@@ -103,7 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Call this when language changes or when the game initializes
+    // Run immediately to set initial options
+    updatePlayerCountOptions();
+    
+    // Also call this when language changes or when the game initializes (for browsers that block initial script execution)
     document.addEventListener('DOMContentLoaded', function() {
         updatePlayerCountOptions();
         
