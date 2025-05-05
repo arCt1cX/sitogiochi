@@ -217,7 +217,7 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: minmax(100px, 0.8fr) repeat(3, 1.5fr);
+    grid-template-columns: minmax(120px, 1fr) repeat(3, 1.3fr);
     grid-auto-rows: minmax(90px, auto);
     gap: 10px;
     margin-bottom: 2rem;
@@ -287,20 +287,19 @@ body {
     background-color: rgba(123, 104, 238, 0.15);
     color: var(--light-text);
     cursor: default;
-    font-size: 0.8rem;
-    line-height: 1.2;
+    font-size: 0.9rem;
+    line-height: 1.3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8px;
+    padding: 8px 12px;
     border: 1px solid rgba(123, 104, 238, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    word-break: normal;
-    word-wrap: break-word;
+    word-break: break-word;
     overflow-wrap: break-word;
-    hyphens: none;
+    hyphens: auto;
 }
 
 .category-name {
@@ -311,7 +310,8 @@ body {
 
 .category-value {
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    max-width: 100%;
 }
 
 .game-cell:empty::before {
