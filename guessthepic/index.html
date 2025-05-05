@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Dynamic meta tags based on browser language -->
+    <!-- Dynamic meta tags based on site language toggle -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      // Get language from URL, localStorage, or browser preference
+      function getLanguage() {
+          // First check URL parameter (highest priority)
+          const urlParams = new URLSearchParams(window.location.search);
+          const urlLang = urlParams.get('lang');
+          if (urlLang === 'en' || urlLang === 'it') {
+              return urlLang === 'it';
+          }
+          
+          // Then check localStorage (second priority)
+          const storedLang = localStorage.getItem('lang');
+          if (storedLang === 'en' || storedLang === 'it') {
+              return storedLang === 'it';
+          }
+          
+          // Finally fallback to browser language
+          const browserLang = navigator.language || navigator.userLanguage || '';
+          return browserLang.toLowerCase().startsWith('it');
+      }
+      
+      // Set the language based on site's language toggle
+      const isItalian = getLanguage();
+      
+      // Set HTML lang attribute
+      document.documentElement.lang = isItalian ? 'it' : 'en';
       
       if (isItalian) {
         document.write('<title>GuessThePic - Indovina cosa mostrano le immagini | DrewGames</title>');
@@ -68,15 +90,15 @@
     
     <div class="container">
         <div id="start-screen" class="screen">
-            <h1>Indovina l'Immagine</h1>
-            <p>Prova a indovinare cosa c'è nelle immagini!</p>
+            <h1 id="game-title">Indovina l'Immagine</h1>
+            <p id="game-description">Prova a indovinare cosa c'è nelle immagini!</p>
             <button id="open-player-setup">Inizia Gioco</button>
         </div>
 
         <div id="player-setup-screen" class="screen hidden">
-            <h2>Configura Giocatori</h2>
+            <h2 id="setup-title">Configura Giocatori</h2>
             <div class="player-setup-controls">
-                <label for="player-count">Numero di Giocatori:</label>
+                <label for="player-count" id="player-count-label">Numero di Giocatori:</label>
                 <select id="player-count">
                     <option value="1">1 Giocatore</option>
                     <option value="2">2 Giocatori</option>
@@ -93,7 +115,7 @@
             
             <div id="player-names-container" class="player-names-container">
                 <div class="player-input">
-                    <label for="player1-name">Giocatore 1:</label>
+                    <label for="player1-name" id="player1-label">Giocatore 1:</label>
                     <input type="text" id="player1-name" placeholder="Giocatore 1">
                 </div>
             </div>
@@ -104,23 +126,23 @@
         </div>
 
         <div id="player-transition-screen" class="screen hidden">
-            <h2>Preparati!</h2>
+            <h2 id="transition-title">Preparati!</h2>
             <div class="next-player-info">
-                <h3>Turno di <span id="next-player-name">Giocatore 2</span></h3>
-                <p>Passa il dispositivo al prossimo giocatore</p>
+                <h3><span id="next-player-text">Turno di</span> <span id="next-player-name">Giocatore 2</span></h3>
+                <p id="pass-device-text">Passa il dispositivo al prossimo giocatore</p>
             </div>
             <button id="start-player-turn" class="full-width-button">Sono Pronto!</button>
         </div>
 
         <div id="game-screen" class="screen hidden">
             <div class="game-header">
-                <div class="score">Punteggio: <span id="score">0</span>/5</div>
-                <div class="current-player">Giocatore: <span id="current-player-name">Giocatore 1</span></div>
-                <div class="timer">Tempo: <span id="time-remaining">60</span>s</div>
+                <div class="score"><span id="score-text">Punteggio:</span> <span id="score">0</span>/5</div>
+                <div class="current-player"><span id="player-text">Giocatore:</span> <span id="current-player-name">Giocatore 1</span></div>
+                <div class="timer"><span id="time-text">Tempo:</span> <span id="time-remaining">60</span>s</div>
             </div>
 
             <div class="category-display">
-                Categoria: <span id="current-category">Sconosciuta</span>
+                <span id="category-text">Categoria:</span> <span id="current-category">Sconosciuta</span>
             </div>
 
             <div class="image-container">
@@ -129,7 +151,7 @@
 
             <div class="navigation-controls">
                 <button id="prev-image" class="nav-button">&lt; Precedente</button>
-                <div class="progress">Domanda <span id="current-question">1</span> di 5</div>
+                <div class="progress"><span id="question-text">Domanda</span> <span id="current-question">1</span> <span id="of-text">di</span> 5</div>
                 <button id="next-image" class="nav-button">Prossima &gt;</button>
             </div>
 
@@ -150,7 +172,7 @@
         </div>
 
         <div id="result-screen" class="screen hidden">
-            <h2>Round Completato!</h2>
+            <h2 id="result-title">Round Completato!</h2>
             <div id="player-scores"></div>
             <div id="result-details"></div>
             <div class="buttons-row">
@@ -159,6 +181,52 @@
             </div>
         </div>
     </div>
+
+    <script>
+    // Initialize language-specific text when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        updateUILanguage();
+        
+        // Update language when URL changes (history navigation)
+        window.addEventListener('popstate', updateUILanguage);
+        
+        function updateUILanguage() {
+            const isItalian = getLanguage();
+            
+            // Update game title and description
+            document.getElementById('game-title').textContent = isItalian ? 'Indovina l\'Immagine' : 'Guess the Picture';
+            document.getElementById('game-description').textContent = isItalian ? 'Prova a indovinare cosa c\'è nelle immagini!' : 'Try to guess what\'s in the pictures!';
+            
+            // Update buttons
+            document.getElementById('open-player-setup').textContent = isItalian ? 'Inizia Gioco' : 'Start Game';
+            document.getElementById('start-game').textContent = isItalian ? 'Inizia Partita' : 'Start Match';
+            document.getElementById('start-player-turn').textContent = isItalian ? 'Sono Pronto!' : 'I\'m Ready!';
+            document.getElementById('submit-guess').textContent = isItalian ? 'Invia' : 'Submit';
+            document.getElementById('prev-image').textContent = isItalian ? '< Precedente' : '< Previous';
+            document.getElementById('next-image').textContent = isItalian ? 'Prossima >' : 'Next >';
+            
+            // Update setup screen
+            document.getElementById('setup-title').textContent = isItalian ? 'Configura Giocatori' : 'Configure Players';
+            document.getElementById('player-count-label').textContent = isItalian ? 'Numero di Giocatori:' : 'Number of Players:';
+            
+            // Update transition screen
+            document.getElementById('transition-title').textContent = isItalian ? 'Preparati!' : 'Get Ready!';
+            document.getElementById('next-player-text').textContent = isItalian ? 'Turno di' : 'Turn of';
+            document.getElementById('pass-device-text').textContent = isItalian ? 'Passa il dispositivo al prossimo giocatore' : 'Pass the device to the next player';
+            
+            // Update game screen
+            document.getElementById('score-text').textContent = isItalian ? 'Punteggio:' : 'Score:';
+            document.getElementById('player-text').textContent = isItalian ? 'Giocatore:' : 'Player:';
+            document.getElementById('time-text').textContent = isItalian ? 'Tempo:' : 'Time:';
+            document.getElementById('category-text').textContent = isItalian ? 'Categoria:' : 'Category:';
+            document.getElementById('question-text').textContent = isItalian ? 'Domanda' : 'Question';
+            document.getElementById('of-text').textContent = isItalian ? 'di' : 'of';
+            
+            // Update input placeholder
+            document.getElementById('guess-input').placeholder = isItalian ? 'Inserisci la tua risposta...' : 'Enter your answer...';
+        }
+    });
+    </script>
 
     <script src="game.js"></script>
 </body>

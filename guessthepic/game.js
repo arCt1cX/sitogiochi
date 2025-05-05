@@ -83,6 +83,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Player count selection changes the input fields
     playerCountSelect.addEventListener('change', updatePlayerInputs);
     
+    // Update player count dropdown options with translated text
+    function updatePlayerCountOptions() {
+        const isItalian = getLanguage();
+        const playerSingular = isItalian ? 'Giocatore' : 'Player';
+        const playerPlural = isItalian ? 'Giocatori' : 'Players';
+        
+        // Clear existing options
+        playerCountSelect.innerHTML = '';
+        
+        // Add new options with translated text
+        for (let i = 1; i <= 10; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i === 1 ? 
+                `1 ${playerSingular}` : 
+                `${i} ${playerPlural}`;
+            playerCountSelect.appendChild(option);
+        }
+    }
+    
+    // Call this when language changes or when the game initializes
+    document.addEventListener('DOMContentLoaded', function() {
+        updatePlayerCountOptions();
+        
+        // Update when language changes (triggered by main site's language toggle)
+        window.addEventListener('popstate', updatePlayerCountOptions);
+    });
+    
     // Handle Enter key press
     guessInput.addEventListener('keyup', function(e) {
         if (e.key === 'Enter' && !submitButton.disabled) {
@@ -92,7 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 checkAnswer();
             } else {
                 // Show message requiring input
-                feedbackDiv.textContent = "Inserisci una risposta prima di inviare!";
+                const isItalian = getLanguage();
+                feedbackDiv.textContent = isItalian ? 
+                    "Inserisci una risposta prima di inviare!" : 
+                    "Enter an answer before submitting!";
                 feedbackDiv.className = "feedback incorrect";
                 feedbackDiv.classList.remove("hidden");
                 guessInput.focus();
@@ -102,6 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize the game
     initGame();
+
+    /**
+     * Get the current language setting from URL, localStorage, or browser preference
+     * This ensures compatibility with the main site's language toggle
+     */
+    function getLanguage() {
+        // First check URL parameter (highest priority)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        if (urlLang === 'en' || urlLang === 'it') {
+            return urlLang === 'it';
+        }
+        
+        // Then check localStorage (second priority)
+        const storedLang = localStorage.getItem('lang');
+        if (storedLang === 'en' || storedLang === 'it') {
+            return storedLang === 'it';
+        }
+        
+        // Finally fallback to browser language
+        return (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('it');
+    }
 
     /**
      * Initialize the game by loading available categories
@@ -199,18 +252,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const playerCount = parseInt(playerCountSelect.value);
         playerNamesContainer.innerHTML = '';
         
+        const isItalian = getLanguage();
+        const playerLabel = isItalian ? 'Giocatore' : 'Player';
+        
         for (let i = 1; i <= playerCount; i++) {
             const playerInput = document.createElement('div');
             playerInput.className = 'player-input';
             
             const label = document.createElement('label');
             label.setAttribute('for', `player${i}-name`);
-            label.textContent = `Player ${i}:`;
+            label.textContent = `${playerLabel} ${i}:`;
             
             const input = document.createElement('input');
             input.setAttribute('type', 'text');
             input.setAttribute('id', `player${i}-name`);
-            input.setAttribute('placeholder', `Player ${i}`);
+            input.setAttribute('placeholder', `${playerLabel} ${i}`);
             
             // Don't prefill the name, just use placeholder
             input.value = '';
@@ -713,7 +769,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Require the user to type something before submitting
         if (!userAnswer) {
             // Alert the user they need to enter a guess
-            feedbackDiv.textContent = "Inserisci una risposta prima di inviare!";
+            const isItalian = getLanguage();
+            feedbackDiv.textContent = isItalian ? 
+                "Inserisci una risposta prima di inviare!" : 
+                "Enter an answer before submitting!";
             feedbackDiv.className = "feedback incorrect";
             feedbackDiv.classList.remove("hidden");
             
@@ -760,9 +819,10 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCircleIndicators();
         
         // Show feedback
+        const isItalian = getLanguage();
         feedbackDiv.textContent = isCorrect 
-            ? `Corretto! È ${currentQuestion.item}` 
-            : `Sbagliato. Era ${currentQuestion.item}`;
+            ? (isItalian ? `Corretto! È ${currentQuestion.item}` : `Correct! It's ${currentQuestion.item}`) 
+            : (isItalian ? `Sbagliato. Era ${currentQuestion.item}` : `Wrong. It was ${currentQuestion.item}`);
         
         feedbackDiv.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
         feedbackDiv.classList.remove('hidden');
@@ -1007,8 +1067,8 @@ document.addEventListener('DOMContentLoaded', function() {
         gameScreen.classList.add('hidden');
         resultScreen.classList.remove('hidden');
         
-        // Determine language based on browser setting
-        const isItalian = (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('it');
+        // Determine language based on site's language setting
+        const isItalian = getLanguage();
         
         // Update title based on round number
         const resultTitle = document.querySelector('#result-screen h2');
@@ -1349,7 +1409,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCircleIndicators();
         
         // Show time's up message
-        feedbackDiv.textContent = "Time's up!";
+        const isItalian = getLanguage();
+        feedbackDiv.textContent = isItalian ? "Tempo scaduto!" : "Time's up!";
         feedbackDiv.className = "feedback incorrect";
         feedbackDiv.classList.remove("hidden");
         
