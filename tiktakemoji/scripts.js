@@ -235,7 +235,7 @@ function selectRandomCategories() {
     // We'll keep trying until we find a valid set of categories and values
     let validSetFound = false;
     let attempts = 0;
-    const MAX_ATTEMPTS = 200; // Increased max attempts since we're being more restrictive
+    const MAX_ATTEMPTS = 300; // Increased max attempts to give it more chances to find valid combinations
     
     while (!validSetFound && attempts < MAX_ATTEMPTS) {
         attempts++;
@@ -262,9 +262,18 @@ function selectRandomCategories() {
                 
                 for (const value of possibleValues) {
                     // Find all entries matching this row category value
-                    const matchingEntries = gameState.filmsAndSeries.filter(
-                        entry => entry[rowCategory] === value
-                    );
+                    const matchingEntries = gameState.filmsAndSeries.filter(entry => {
+                        if (!entry[rowCategory]) return false;
+                        
+                        // Check if entry matches the row category value
+                        if (Array.isArray(entry[rowCategory])) {
+                            return entry[rowCategory].some(val => 
+                                String(val).toLowerCase() === String(value).toLowerCase()
+                            );
+                        } else {
+                            return String(entry[rowCategory]).toLowerCase() === String(value).toLowerCase();
+                        }
+                    });
                     
                     // Count how many different category types have matches with this value
                     // Only count categories that are not already used as row categories
@@ -330,10 +339,31 @@ function selectRandomCategories() {
                             const rowValue = gameState.rowCategoryValues[row];
                             
                             // Check if there's at least one film/series with this combination
-                            const matchExists = gameState.filmsAndSeries.some(entry => 
-                                entry[rowCategory] === rowValue && 
-                                entry[colCategory] === colValue
-                            );
+                            const matchExists = gameState.filmsAndSeries.some(entry => {
+                                if (!entry[rowCategory] || !entry[colCategory]) return false;
+                                
+                                // Check row match
+                                let rowMatches = false;
+                                if (Array.isArray(entry[rowCategory])) {
+                                    rowMatches = entry[rowCategory].some(val => 
+                                        String(val).toLowerCase() === String(rowValue).toLowerCase()
+                                    );
+                                } else {
+                                    rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                                }
+                                
+                                // Check column match
+                                let colMatches = false;
+                                if (Array.isArray(entry[colCategory])) {
+                                    colMatches = entry[colCategory].some(val => 
+                                        String(val).toLowerCase() === String(colValue).toLowerCase()
+                                    );
+                                } else {
+                                    colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                                }
+                                
+                                return rowMatches && colMatches;
+                            });
                             
                             if (!matchExists) {
                                 worksWithAllRows = false;
@@ -425,15 +455,34 @@ function createValidCombinationsGrid() {
             
             // Find all films/series that match both the row and column criteria
             const validEntries = gameState.filmsAndSeries.filter(entry => {
+                // Handle the case where entry[category] might be undefined
+                if (!entry[rowCategory] || !entry[colCategory]) {
+                    return false;
+                }
+                
                 // Check if the entry matches the row category value
-                const rowMatches = Array.isArray(entry[rowCategory]) 
-                    ? entry[rowCategory].some(value => String(value).toLowerCase() === String(rowValue).toLowerCase())
-                    : String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                let rowMatches = false;
+                if (Array.isArray(entry[rowCategory])) {
+                    // For arrays, check if any value in the array matches
+                    rowMatches = entry[rowCategory].some(value => 
+                        String(value).toLowerCase() === String(rowValue).toLowerCase()
+                    );
+                } else {
+                    // For strings, directly compare
+                    rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                }
                 
                 // Check if the entry matches the column category value
-                const colMatches = Array.isArray(entry[colCategory])
-                    ? entry[colCategory].some(value => String(value).toLowerCase() === String(colValue).toLowerCase())
-                    : String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                let colMatches = false;
+                if (Array.isArray(entry[colCategory])) {
+                    // For arrays, check if any value in the array matches
+                    colMatches = entry[colCategory].some(value => 
+                        String(value).toLowerCase() === String(colValue).toLowerCase()
+                    );
+                } else {
+                    // For strings, directly compare
+                    colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                }
                 
                 return rowMatches && colMatches;
             });
@@ -510,15 +559,34 @@ function tryToFindMoreDiverseOption(row, col) {
     for (const newColValue of otherPossibleValues) {
         // Check if this new value would create a valid cell
         const validEntries = gameState.filmsAndSeries.filter(entry => {
+            // Handle the case where entry[category] might be undefined
+            if (!entry[rowCategory] || !entry[currentColCategory]) {
+                return false;
+            }
+            
             // Check if the entry matches the row category value
-            const rowMatches = Array.isArray(entry[rowCategory]) 
-                ? entry[rowCategory].some(value => String(value).toLowerCase() === String(rowValue).toLowerCase())
-                : String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+            let rowMatches = false;
+            if (Array.isArray(entry[rowCategory])) {
+                // For arrays, check if any value in the array matches
+                rowMatches = entry[rowCategory].some(value => 
+                    String(value).toLowerCase() === String(rowValue).toLowerCase()
+                );
+            } else {
+                // For strings, directly compare
+                rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+            }
             
             // Check if the entry matches the new column value
-            const colMatches = Array.isArray(entry[currentColCategory])
-                ? entry[currentColCategory].some(value => String(value).toLowerCase() === String(newColValue).toLowerCase())
-                : String(entry[currentColCategory]).toLowerCase() === String(newColValue).toLowerCase();
+            let colMatches = false;
+            if (Array.isArray(entry[currentColCategory])) {
+                // For arrays, check if any value in the array matches
+                colMatches = entry[currentColCategory].some(value => 
+                    String(value).toLowerCase() === String(newColValue).toLowerCase()
+                );
+            } else {
+                // For strings, directly compare
+                colMatches = String(entry[currentColCategory]).toLowerCase() === String(newColValue).toLowerCase();
+            }
             
             return rowMatches && colMatches;
         });
