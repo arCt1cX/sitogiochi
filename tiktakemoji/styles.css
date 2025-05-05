@@ -217,7 +217,7 @@ body {
 
 .game-board {
     display: grid;
-    grid-template-columns: minmax(80px, 0.7fr) repeat(3, 1.5fr);
+    grid-template-columns: minmax(100px, 0.8fr) repeat(3, 1.5fr);
     grid-auto-rows: minmax(90px, auto);
     gap: 10px;
     margin-bottom: 2rem;
