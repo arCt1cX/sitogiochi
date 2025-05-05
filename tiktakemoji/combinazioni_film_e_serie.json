@@ -1236,7 +1236,7 @@
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Martin Scorsese",
-            "theme": "Thriller psicologico"
+            "theme": "Psicologico"
         },
         {
             "title": "Mamma Ho Perso L'Aereo",
@@ -1745,7 +1745,7 @@
         {
             "title": "Split",
             "type": "Film",
-            "genre": ["Thriller", "Horror", "Psicologico"],
+            "genre": ["Thriller", "Horror"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "M. Night Shyamalan",
