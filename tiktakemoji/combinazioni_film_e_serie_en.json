@@ -1897,17 +1897,6 @@
             "tema": "Psychological"
         },
         {
-            "title": "Three Men and a Leg",
-            "tipo": "Movie",
-            "genere": [
-                "Comedy"
-            ],
-            "lingua": "Italian",
-            "decennio": "90s",
-            "regista o attore": "Aldo, Giovanni e Giacomo",
-            "tema": "Comedy"
-        },
-        {
             "title": "Star Trek",
             "tipo": "Movie",
             "genere": [
@@ -3678,18 +3667,6 @@
             "tema": "Parody"
         },
         {
-            "title": "Perfect Strangers",
-            "tipo": "Movie",
-            "genere": [
-                "Comedy",
-                "Drama"
-            ],
-            "lingua": "Italian",
-            "decennio": "2010s",
-            "regista o attore": "Paolo Genovese",
-            "tema": "Friendship"
-        },
-        {
             "title": "The Revenant",
             "tipo": "Movie",
             "genere": [
@@ -4945,40 +4922,6 @@
                 "Video Games",
                 "Futuristic",
                 "Dystopia"
-            ]
-        },
-        {
-            "title": "Johnny Stecchino",
-            "tipo": "Movie",
-            "genere": [
-                "Comedy",
-                "Crime"
-            ],
-            "lingua": "Italian",
-            "decennio": "90s",
-            "regista o attore": "Roberto Benigni",
-            "tema": [
-                "Mafia",
-                "Comedy",
-                "Crime"
-            ]
-        },
-        {
-            "title": "Non ci resta che piangere",
-            "tipo": "Movie",
-            "genere": [
-                "Comedy"
-            ],
-            "lingua": "Italian",
-            "decennio": "80s",
-            "regista o attore": [
-                "Roberto Benigni",
-                "Massimo Troisi"
-            ],
-            "tema": [
-                "Time Travel",
-                "Comedy",
-                "Historical"
             ]
         },
         {
