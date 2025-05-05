@@ -1091,6 +1091,9 @@ document.addEventListener('DOMContentLoaded', function() {
             playAgainButton.textContent = isItalian ? `Menu` : `Main Menu`;
             replaySamePlayersButton.textContent = isItalian ? `Rigioca con stessi giocatori` : `Play again with same players`;
             replaySamePlayersButton.classList.remove('hidden');
+            
+            // Check for perfect game (15/15) after the final round
+            checkForPerfectGame();
         }
         
         // Sort players by score for the current round
@@ -1220,6 +1223,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultDetailsElement.appendChild(resultItem);
             });
         }
+    }
+
+    /**
+     * Check if any player has achieved a perfect game (15/15)
+     */
+    function checkForPerfectGame() {
+        // Check each player's total score
+        for (const player of players) {
+            if (player.score === 15) {
+                // Found a player with a perfect score!
+                console.log(`Perfect game achieved by ${player.name}!`);
+                // Show perfect game celebration after a small delay
+                setTimeout(showPerfectGameAnimation, 500);
+                break; // Stop after finding the first perfect player
+            }
+        }
+    }
+    
+    /**
+     * Show the perfect game animation for a 15/15 score
+     */
+    function showPerfectGameAnimation() {
+        const perfectGameContainer = document.querySelector('.perfect-game-container');
+        const perfectGameText = document.querySelector('.perfect-game-text');
+        const perfectGameScore = document.querySelector('.perfect-game-score');
+        
+        // Reset animations by removing and re-adding classes
+        perfectGameContainer.classList.remove('perfect-game-animation');
+        perfectGameText.classList.remove('perfect-game-text-animation');
+        perfectGameScore.classList.remove('perfect-game-score-animation');
+        
+        // Force reflow to restart animations
+        void perfectGameContainer.offsetWidth;
+        void perfectGameText.offsetWidth;
+        void perfectGameScore.offsetWidth;
+        
+        // Add animation classes
+        perfectGameContainer.classList.add('perfect-game-animation');
+        perfectGameText.classList.add('perfect-game-text-animation');
+        perfectGameScore.classList.add('perfect-game-score-animation');
     }
 
     /**
