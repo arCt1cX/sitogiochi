@@ -427,13 +427,13 @@ function createValidCombinationsGrid() {
             const validEntries = gameState.filmsAndSeries.filter(entry => {
                 // Check if the entry matches the row category value
                 const rowMatches = Array.isArray(entry[rowCategory]) 
-                    ? entry[rowCategory].includes(rowValue)
-                    : entry[rowCategory] === rowValue;
+                    ? entry[rowCategory].some(value => String(value).toLowerCase() === String(rowValue).toLowerCase())
+                    : String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
                 
                 // Check if the entry matches the column category value
                 const colMatches = Array.isArray(entry[colCategory])
-                    ? entry[colCategory].includes(colValue)
-                    : entry[colCategory] === colValue;
+                    ? entry[colCategory].some(value => String(value).toLowerCase() === String(colValue).toLowerCase())
+                    : String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
                 
                 return rowMatches && colMatches;
             });
@@ -512,13 +512,13 @@ function tryToFindMoreDiverseOption(row, col) {
         const validEntries = gameState.filmsAndSeries.filter(entry => {
             // Check if the entry matches the row category value
             const rowMatches = Array.isArray(entry[rowCategory]) 
-                ? entry[rowCategory].includes(rowValue)
-                : entry[rowCategory] === rowValue;
+                ? entry[rowCategory].some(value => String(value).toLowerCase() === String(rowValue).toLowerCase())
+                : String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
             
             // Check if the entry matches the new column value
             const colMatches = Array.isArray(entry[currentColCategory])
-                ? entry[currentColCategory].includes(newColValue)
-                : entry[currentColCategory] === newColValue;
+                ? entry[currentColCategory].some(value => String(value).toLowerCase() === String(newColValue).toLowerCase())
+                : String(entry[currentColCategory]).toLowerCase() === String(newColValue).toLowerCase();
             
             return rowMatches && colMatches;
         });
@@ -678,6 +678,9 @@ function showTitleOptions(row, col) {
     // Store valid titles for later validation
     const validTitles = validEntries.map(entry => entry.title);
     
+    // DEBUG: Log valid entries for this cell
+    console.log(`Valid entries for cell [${row},${col}]:`, validEntries.map(e => e.title));
+    
     // Clear previous options
     emojiOptions.innerHTML = "";
     
@@ -732,6 +735,12 @@ function showTitleOptions(row, col) {
             if (validTitles.includes(entry.title)) {
                 makeMove(entry.title);
             } else {
+                // DEBUG: Log why this entry wasn't valid
+                console.log(`Invalid selection: ${entry.title}`);
+                console.log(`Entry details:`, entry);
+                console.log(`Row category: ${gameState.rowCategories[row]}, value: ${gameState.rowCategoryValues[row]}`);
+                console.log(`Col category: ${gameState.colCategories[col]}, value: ${gameState.colCategoryValues[col]}`);
+                
                 // Show wrong answer message - this will set preventInteraction
                 showWrongAnswerMessage();
                 // Pass turn to next player
