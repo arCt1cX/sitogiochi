@@ -463,7 +463,7 @@ function createValidCombinationsGrid() {
                 // Check if the entry matches the row category value
                 let rowMatches = false;
                 if (Array.isArray(entry[rowCategory])) {
-                    // For arrays, check if any value in the array matches
+                    // For arrays, check if the array includes the exact value (case insensitive)
                     rowMatches = entry[rowCategory].some(value => 
                         String(value).toLowerCase() === String(rowValue).toLowerCase()
                     );
@@ -475,7 +475,7 @@ function createValidCombinationsGrid() {
                 // Check if the entry matches the column category value
                 let colMatches = false;
                 if (Array.isArray(entry[colCategory])) {
-                    // For arrays, check if any value in the array matches
+                    // For arrays, check if the array includes the exact value (case insensitive)
                     colMatches = entry[colCategory].some(value => 
                         String(value).toLowerCase() === String(colValue).toLowerCase()
                     );
@@ -567,7 +567,7 @@ function tryToFindMoreDiverseOption(row, col) {
             // Check if the entry matches the row category value
             let rowMatches = false;
             if (Array.isArray(entry[rowCategory])) {
-                // For arrays, check if any value in the array matches
+                // For arrays, check if the array includes the exact value (case insensitive)
                 rowMatches = entry[rowCategory].some(value => 
                     String(value).toLowerCase() === String(rowValue).toLowerCase()
                 );
@@ -579,7 +579,7 @@ function tryToFindMoreDiverseOption(row, col) {
             // Check if the entry matches the new column value
             let colMatches = false;
             if (Array.isArray(entry[currentColCategory])) {
-                // For arrays, check if any value in the array matches
+                // For arrays, check if the array includes the exact value (case insensitive)
                 colMatches = entry[currentColCategory].some(value => 
                     String(value).toLowerCase() === String(newColValue).toLowerCase()
                 );
