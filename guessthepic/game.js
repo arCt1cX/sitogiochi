@@ -866,6 +866,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Stop the timer
             stopTimer();
             
+            // Check if player got a perfect score
+            const currentPlayerScore = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
+            if (currentPlayerScore === 5) {
+                // Show "SWEEP!" animation
+                showSweepAnimation();
+            }
+            
             // Move to the next player or end the round after a delay
             setTimeout(() => {
                 if (currentPlayerIndex < players.length - 1) {
@@ -1384,9 +1391,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     /**
-     * End the current player's turn when time runs out
+     * End the current player's turn when time runs out or all questions are answered
      */
     function endPlayerTurn() {
+        // Stop the timer
+        stopTimer();
+        
         // Mark any unanswered questions as incorrect
         questionStatuses.forEach((status, index) => {
             if (status === null || status === 'pending') {
@@ -1423,6 +1433,13 @@ document.addEventListener('DOMContentLoaded', function() {
         prevImageButton.disabled = true;
         nextImageButton.disabled = true;
         
+        // Check if player got a perfect score
+        const currentPlayerScore = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
+        if (currentPlayerScore === 5) {
+            // Show "SWEEP!" animation
+            showSweepAnimation();
+        }
+        
         // Move to the next player or end the round after a delay
         setTimeout(() => {
             if (currentPlayerIndex < players.length - 1) {
@@ -1435,6 +1452,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 showRoundResults();
             }
         }, 2000);
+    }
+    
+    /**
+     * Show a "SWEEP!" animation for perfect scores
+     */
+    function showSweepAnimation() {
+        const sweepContainer = document.querySelector('.sweep-container');
+        const sweepText = document.querySelector('.sweep-text');
+        
+        // Reset animations by removing and re-adding classes
+        sweepContainer.classList.remove('sweep-animation');
+        sweepText.classList.remove('sweep-text-animation');
+        
+        // Force reflow to restart animations
+        void sweepContainer.offsetWidth;
+        void sweepText.offsetWidth;
+        
+        // Add animation classes
+        sweepContainer.classList.add('sweep-animation');
+        sweepText.classList.add('sweep-text-animation');
     }
     
     /**
