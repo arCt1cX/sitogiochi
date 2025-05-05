@@ -1263,6 +1263,56 @@ document.addEventListener('DOMContentLoaded', function() {
         perfectGameContainer.classList.add('perfect-game-animation');
         perfectGameText.classList.add('perfect-game-text-animation');
         perfectGameScore.classList.add('perfect-game-score-animation');
+        
+        // Create confetti animation
+        createConfetti();
+    }
+    
+    /**
+     * Create confetti particles for the perfect game celebration
+     */
+    function createConfetti() {
+        // Remove any existing confetti
+        document.querySelectorAll('.confetti').forEach(el => el.remove());
+        
+        // Create 100 confetti particles
+        const colors = ['#ffdf00', '#ff9933', '#ff5050', '#ff66b3', '#cc66ff', '#9999ff', '#66ccff', '#99ff99'];
+        
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            
+            // Random position, size, color, and animation duration
+            const size = Math.floor(Math.random() * 10) + 5; // 5-15px
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const left = Math.random() * 100; // 0-100% of viewport width
+            const animationDuration = (Math.random() * 3) + 2; // 2-5s duration
+            const delay = Math.random() * 1.5; // 0-1.5s delay
+            
+            // Apply styles
+            confetti.style.width = `${size}px`;
+            confetti.style.height = `${size}px`;
+            confetti.style.backgroundColor = color;
+            confetti.style.left = `${left}%`;
+            confetti.style.top = '0';
+            confetti.style.animationDuration = `${animationDuration}s`;
+            confetti.style.animationDelay = `${delay}s`;
+            
+            // Different shapes for variety
+            if (Math.random() > 0.5) {
+                confetti.style.borderRadius = '50%'; // Circle
+            } else if (Math.random() > 0.5) {
+                confetti.style.transform = 'rotate(45deg)'; // Diamond
+            }
+            
+            // Add to document
+            document.body.appendChild(confetti);
+            
+            // Remove after animation completes
+            setTimeout(() => {
+                confetti.remove();
+            }, (animationDuration + delay + 0.5) * 1000);
+        }
     }
 
     /**
