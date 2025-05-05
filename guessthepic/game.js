@@ -856,6 +856,11 @@ document.addEventListener('DOMContentLoaded', function() {
             startTimer();
         }
         
+        // Reset submit button state
+        submitButton.disabled = false;
+        submitButton.style.opacity = "1";
+        submitButton.style.cursor = "pointer";
+        
         // Update circle indicators
         updateCircleIndicators();
         
@@ -1150,7 +1155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * Navigate to previous image
+     * Navigate to previous image that hasn't been answered yet
      */
     function navigateToPreviousImage() {
         if (currentQuestionIndex > 0) {
@@ -1163,14 +1168,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateCircleIndicators();
             }
             
-            // Go to previous image
-            currentQuestionIndex--;
-            loadQuestion(false); // Don't reset the timer
+            // Find the previous unanswered question
+            let prevIndex = findPreviousUnansweredQuestion(currentQuestionIndex);
+            
+            // If found, go to that question
+            if (prevIndex !== -1) {
+                currentQuestionIndex = prevIndex;
+                loadQuestion(false); // Don't reset the timer
+            } else {
+                // If no unanswered questions before current, go to previous question
+                currentQuestionIndex--;
+                loadQuestion(false); // Don't reset the timer
+            }
         }
     }
     
     /**
-     * Navigate to next image
+     * Navigate to next image that hasn't been answered yet
      */
     function navigateToNextImage() {
         if (currentQuestionIndex < 4) {
@@ -1183,14 +1197,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateCircleIndicators();
             }
             
-            // Go to next image
-            currentQuestionIndex++;
-            loadQuestion(false); // Don't reset the timer
+            // Find the next unanswered question
+            let nextIndex = findNextUnansweredQuestionFrom(currentQuestionIndex);
+            
+            // If found, go to that question
+            if (nextIndex !== -1) {
+                currentQuestionIndex = nextIndex;
+                loadQuestion(false); // Don't reset the timer
+            } else {
+                // If no unanswered questions after current, go to next question
+                currentQuestionIndex++;
+                loadQuestion(false); // Don't reset the timer
+            }
         }
     }
     
     /**
-     * Navigate to a specific image by index
+     * Find the previous unanswered question before the given index
+     */
+    function findPreviousUnansweredQuestion(fromIndex) {
+        // Go backward from the current index (excluding it)
+        for (let i = fromIndex - 1; i >= 0; i--) {
+            if (questionStatuses[i] === null || questionStatuses[i] === 'pending') {
+                return i;
+            }
+        }
+        
+        // No unanswered questions found before the current one
+        return -1;
+    }
+    
+    /**
+     * Find the next unanswered question after the given index
+     */
+    function findNextUnansweredQuestionFrom(fromIndex) {
+        // Go forward from the current index (excluding it)
+        for (let i = fromIndex + 1; i < questionStatuses.length; i++) {
+            if (questionStatuses[i] === null || questionStatuses[i] === 'pending') {
+                return i;
+            }
+        }
+        
+        // No unanswered questions found after the current one
+        return -1;
+    }
+    
+    /**
+     * Navigate to a specific image by index, but prefer unanswered questions if clicked on an already answered one
      */
     function navigateToImage(index) {
         if (index >= 0 && index < 5 && index !== currentQuestionIndex) {
@@ -1202,7 +1255,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 questionStatuses[currentQuestionIndex] = 'pending';
             }
             
-            // Go to selected image
+            // If clicked on an already answered question, try to find unanswered ones
+            if (questionStatuses[index] === 'correct' || questionStatuses[index] === 'incorrect') {
+                // First try to find unanswered questions after the clicked index
+                let nextUnanswered = findNextUnansweredQuestionFrom(index);
+                if (nextUnanswered !== -1) {
+                    currentQuestionIndex = nextUnanswered;
+                    loadQuestion(false); // Don't reset the timer
+                    return;
+                }
+                
+                // If not found after, look before the clicked index
+                let prevUnanswered = findPreviousUnansweredQuestion(index);
+                if (prevUnanswered !== -1) {
+                    currentQuestionIndex = prevUnanswered;
+                    loadQuestion(false); // Don't reset the timer
+                    return;
+                }
+            }
+            
+            // Either the clicked question is unanswered or all questions are answered,
+            // so go to the selected image
             currentQuestionIndex = index;
             loadQuestion(false); // Don't reset the timer
         }
