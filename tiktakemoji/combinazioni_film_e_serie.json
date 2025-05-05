@@ -190,7 +190,7 @@
     },
     "entries": [
         {
-            "titolo": "Inception",
+            "title": "Inception",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Azione"],
             "language": "Inglese",
@@ -199,7 +199,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "Pulp Fiction",
+            "title": "Pulp Fiction",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Crime"],
             "language": "Inglese",
@@ -208,7 +208,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Il mio vicino Totoro",
+            "title": "Il mio vicino Totoro",
             "type": "Film",
             "genre": ["Animazione", "Fantasy"],
             "language": "Giapponese",
@@ -217,7 +217,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Stranger Things",
+            "title": "Stranger Things",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Horror", "Dramma"],
             "language": "Inglese",
@@ -226,7 +226,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Parasite",
+            "title": "Parasite",
             "type": "Film",
             "genre": ["Dramma", "Thriller", "Commedia"],
             "language": "Coreano",
@@ -235,7 +235,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Oldboy",
+            "title": "Oldboy",
             "type": "Film",
             "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Coreano",
@@ -244,7 +244,7 @@
             "theme": "Vendetta"
         },
         {
-            "titolo": "Your Name",
+            "title": "Your Name",
             "type": "Film",
             "genre": ["Animazione", "Romantico"],
             "language": "Giapponese",
@@ -253,7 +253,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Dunkirk",
+            "title": "Dunkirk",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
@@ -262,7 +262,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "The Fabelmans",
+            "title": "The Fabelmans",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -271,7 +271,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "I, Daniel Blake",
+            "title": "I, Daniel Blake",
             "type": "Film",
             "genre": ["Dramma", "Sociale"],
             "language": "Inglese",
@@ -280,7 +280,7 @@
             "theme": "Politica"
         },
         {
-            "titolo": "Interstellar",
+            "title": "Interstellar",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -289,7 +289,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "La vita è bella",
+            "title": "La vita è bella",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Storico"],
             "language": "Italiano",
@@ -298,7 +298,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Batman: The Dark Knight",
+            "title": "Batman: The Dark Knight",
             "type": "Film",
             "genre": ["Azione", "Thriller", "Dramma", "Supereroi", "Crime"],
             "language": "Inglese",
@@ -307,7 +307,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "La principessa Mononoke",
+            "title": "La principessa Mononoke",
             "type": "Film",
             "genre": ["Animazione", "Avventura"],
             "language": "Giapponese",
@@ -316,7 +316,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Breaking Bad",
+            "title": "Breaking Bad",
             "type": "Serie TV",
             "genre": ["Dramma", "Thriller", "Crime"],
             "language": "Inglese",
@@ -325,7 +325,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "The Crown",
+            "title": "The Crown",
             "type": "Serie TV",
             "genre": ["Dramma", "Storico"],
             "language": "Inglese",
@@ -334,7 +334,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Squid Game",
+            "title": "Squid Game",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Coreano",
@@ -343,7 +343,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "La casa di carta",
+            "title": "La casa di carta",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Azione"],
             "language": "Spagnolo",
@@ -352,7 +352,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Kill Bill",
+            "title": "Kill Bill",
             "type": "Film",
             "genre": ["Azione", "Thriller"],
             "language": "Inglese",
@@ -361,7 +361,7 @@
             "theme": "Vendetta"
         },
         {
-            "titolo": "Spirited Away",
+            "title": "Spirited Away",
             "type": "Film",
             "genre": ["Animazione", "Avventura"],
             "language": "Giapponese",
@@ -370,7 +370,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "E.T.",
+            "title": "E.T.",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -379,7 +379,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Jurassic Park",
+            "title": "Jurassic Park",
             "type": "Film",
             "genre": ["Avventura", "Fantascienza", "Thriller"],
             "language": "Inglese",
@@ -388,7 +388,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Goodfellas",
+            "title": "Goodfellas",
             "type": "Film",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -397,7 +397,7 @@
             "theme": "Mafia"
         },
         {
-            "titolo": "The Wolf of Wall Street",
+            "title": "The Wolf of Wall Street",
             "type": "Film",
             "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
@@ -406,7 +406,7 @@
             "theme": ["Crimine", "Droghe"]
         },
         {
-            "titolo": "Gravity",
+            "title": "Gravity",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -415,7 +415,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Roma",
+            "title": "Roma",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Spagnolo",
@@ -424,7 +424,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Twin Peaks",
+            "title": "Twin Peaks",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
@@ -433,7 +433,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Schindler's List",
+            "title": "Schindler's List",
             "type": "Film",
             "genre": ["Dramma", "Storico"],
             "language": "Inglese",
@@ -442,7 +442,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "The Mandalorian",
+            "title": "The Mandalorian",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -451,7 +451,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Nuovo Cinema Paradiso",
+            "title": "Nuovo Cinema Paradiso",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Italiano",
@@ -460,7 +460,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Emily in Paris",
+            "title": "Emily in Paris",
             "type": "Serie TV",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -469,7 +469,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Amélie",
+            "title": "Amélie",
             "type": "Film",
             "genre": ["Romantico", "Commedia"],
             "language": "Francese",
@@ -478,7 +478,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Weathering With You",
+            "title": "Weathering With You",
             "type": "Film",
             "genre": ["Animazione", "Romantico", "Fantasy"],
             "language": "Giapponese",
@@ -487,7 +487,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Get Out",
+            "title": "Get Out",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Mystery"],
             "language": "Inglese",
@@ -496,7 +496,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Hereditary",
+            "title": "Hereditary",
             "type": "Film",
             "genre": ["Horror", "Dramma", "Mystery"],
             "language": "Inglese",
@@ -505,7 +505,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Il divo",
+            "title": "Il divo",
             "type": "Film",
             "genre": ["Dramma", "Biografico"],
             "language": "Italiano",
@@ -514,7 +514,7 @@
             "theme": "Politica"
         },
         {
-            "titolo": "La grande bellezza",
+            "title": "La grande bellezza",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Italiano",
@@ -523,7 +523,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "Decision to Leave",
+            "title": "Decision to Leave",
             "type": "Film",
             "genre": ["Thriller", "Romantico", "Mystery"],
             "language": "Coreano",
@@ -532,7 +532,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Train to Busan",
+            "title": "Train to Busan",
             "type": "Film",
             "genre": ["Horror", "Azione", "Thriller"],
             "language": "Coreano",
@@ -541,7 +541,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Lupin",
+            "title": "Lupin",
             "type": "Serie TV",
             "genre": ["Thriller", "Crime", "Avventura"],
             "language": "Francese",
@@ -550,7 +550,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Drive My Car",
+            "title": "Drive My Car",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Giapponese",
@@ -559,7 +559,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Ritorno al futuro",
+            "title": "Ritorno al futuro",
             "type": "Film",
             "genre": ["Fantascienza", "Commedia", "Avventura"],
             "language": "Inglese",
@@ -568,7 +568,7 @@
             "theme": "Viaggi nel tempo"
         },
         {
-            "titolo": "The Matrix",
+            "title": "The Matrix",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Filosofico"],
             "language": "Inglese",
@@ -577,7 +577,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "2001: A Space Odyssey",
+            "title": "2001: A Space Odyssey",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Mystery"],
             "language": "Inglese",
@@ -586,7 +586,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Blade Runner",
+            "title": "Blade Runner",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Noir"],
             "language": "Inglese",
@@ -595,7 +595,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Westworld",
+            "title": "Westworld",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Dramma", "Western"],
             "language": "Inglese",
@@ -604,7 +604,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Ex Machina",
+            "title": "Ex Machina",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -613,7 +613,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Il Grande Gatsby",
+            "title": "Il Grande Gatsby",
             "type": "Film",
             "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
@@ -622,7 +622,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Chiamami col tuo nome",
+            "title": "Chiamami col tuo nome",
             "type": "Film",
             "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
@@ -631,7 +631,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Lady Bird",
+            "title": "Lady Bird",
             "type": "Film",
             "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
@@ -640,7 +640,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Il Padrino",
+            "title": "Il Padrino",
             "type": "Film",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -649,7 +649,7 @@
             "theme": "Mafia"
         },
         {
-            "titolo": "Mad Max: Fury Road",
+            "title": "Mad Max: Fury Road",
             "type": "Film",
             "genre": ["Azione", "Avventura", "Fantascienza"],
             "language": "Inglese",
@@ -658,7 +658,7 @@
             "theme": "Post-apocalittico"
         },
         {
-            "titolo": "The Walking Dead",
+            "title": "The Walking Dead",
             "type": "Serie TV",
             "genre": ["Horror", "Dramma", "Fantascienza"],
             "language": "Inglese",
@@ -667,7 +667,7 @@
             "theme": "Post-apocalittico"
         },
         {
-            "titolo": "Game of Thrones",
+            "title": "Game of Thrones",
             "type": "Serie TV",
             "genre": ["Fantasy", "Dramma", "Avventura"],
             "language": "Inglese",
@@ -676,7 +676,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Friends",
+            "title": "Friends",
             "type": "Serie TV",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -685,7 +685,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "The Office",
+            "title": "The Office",
             "type": "Serie TV",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -694,7 +694,7 @@
             "theme": "Ufficio/Lavoro"
         },
         {
-            "titolo": "The Big Bang Theory",
+            "title": "The Big Bang Theory",
             "type": "Serie TV",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -703,7 +703,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "House of Cards",
+            "title": "House of Cards",
             "type": "Serie TV",
             "genre": ["Dramma", "Thriller", "Politico"],
             "language": "Inglese",
@@ -712,7 +712,7 @@
             "theme": "Politica"
         },
         {
-            "titolo": "Narcos",
+            "title": "Narcos",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
@@ -721,7 +721,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "The Sopranos",
+            "title": "The Sopranos",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -730,7 +730,7 @@
             "theme": "Mafia"
         },
         {
-            "titolo": "How I Met Your Mother",
+            "title": "How I Met Your Mother",
             "type": "Serie TV",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -739,7 +739,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "The Witcher",
+            "title": "The Witcher",
             "type": "Serie TV",
             "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
@@ -748,7 +748,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Black Mirror",
+            "title": "Black Mirror",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -757,7 +757,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "Peaky Blinders",
+            "title": "Peaky Blinders",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime", "Storico"],
             "language": "Inglese",
@@ -766,7 +766,7 @@
             "theme": ["Mafia", "Crimine"]
         },
         {
-            "titolo": "Sherlock",
+            "title": "Sherlock",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Mystery"],
             "language": "Inglese",
@@ -775,7 +775,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Lost",
+            "title": "Lost",
             "type": "Serie TV",
             "genre": ["Dramma", "Avventura", "Fantascienza"],
             "language": "Inglese",
@@ -784,7 +784,7 @@
             "theme": ["Mistero", "Sopravvivenza"]
         },
         {
-            "titolo": "Dexter",
+            "title": "Dexter",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
@@ -793,7 +793,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Better Call Saul",
+            "title": "Better Call Saul",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -802,7 +802,7 @@
             "theme": "Legge"
         },
         {
-            "titolo": "Suits",
+            "title": "Suits",
             "type": "Serie TV",
             "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
@@ -811,7 +811,7 @@
             "theme": "Legge"
         },
         {
-            "titolo": "Grey's Anatomy",
+            "title": "Grey's Anatomy",
             "type": "Serie TV",
             "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
@@ -820,7 +820,7 @@
             "theme": "Medicina"
         },
         {
-            "titolo": "Vikings",
+            "title": "Vikings",
             "type": "Serie TV",
             "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
@@ -829,7 +829,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Prison Break",
+            "title": "Prison Break",
             "type": "Serie TV",
             "genre": ["Azione", "Dramma", "Thriller"],
             "language": "Inglese",
@@ -838,7 +838,7 @@
             "theme": "Carcere"
         },
         {
-            "titolo": "13 Reasons Why",
+            "title": "13 Reasons Why",
             "type": "Serie TV",
             "genre": ["Dramma", "Mystery"],
             "language": "Inglese",
@@ -847,7 +847,7 @@
             "theme": "Scuola/Università"
         },
         {
-            "titolo": "La Regina degli Scacchi",
+            "title": "La Regina degli Scacchi",
             "type": "Serie TV",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -856,7 +856,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Euphoria",
+            "title": "Euphoria",
             "type": "Serie TV",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -865,7 +865,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Ozark",
+            "title": "Ozark",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
@@ -874,7 +874,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Dark",
+            "title": "Dark",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Dramma", "Mystery"],
             "language": "Inglese",
@@ -883,7 +883,7 @@
             "theme": "Viaggi nel tempo"
         },
         {
-            "titolo": "The Boys",
+            "title": "The Boys",
             "type": "Serie TV",
             "genre": ["Azione", "Commedia", "Fantascienza"],
             "language": "Inglese",
@@ -892,7 +892,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Severance",
+            "title": "Severance",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -901,7 +901,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "True Detective",
+            "title": "True Detective",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
@@ -910,7 +910,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Fargo",
+            "title": "Fargo",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Crime", "Commedia"],
             "language": "Inglese",
@@ -919,7 +919,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Sex Education",
+            "title": "Sex Education",
             "type": "Serie TV",
             "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
@@ -928,7 +928,7 @@
             "theme": ["Coming of Age", "LGBTQ+"]
         },
         {
-            "titolo": "BoJack Horseman",
+            "title": "BoJack Horseman",
             "type": "Serie TV",
             "genre": ["Animazione", "Commedia", "Dramma"],
             "language": "Inglese",
@@ -937,7 +937,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "Rick and Morty",
+            "title": "Rick and Morty",
             "type": "Serie TV",
             "genre": ["Animazione", "Commedia", "Fantascienza"],
             "language": "Inglese",
@@ -946,7 +946,7 @@
             "theme": "Fantascienza"
         },
         {
-            "titolo": "Modern Family",
+            "title": "Modern Family",
             "type": "Serie TV",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -955,7 +955,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Dr. House",
+            "title": "Dr. House",
             "type": "Serie TV",
             "genre": ["Dramma", "Medico"],
             "language": "Inglese",
@@ -964,7 +964,7 @@
             "theme": "Medicina"
         },
         {
-            "titolo": "Lucifer",
+            "title": "Lucifer",
             "type": "Serie TV",
             "genre": ["Dramma", "Fantasy", "Crime"],
             "language": "Inglese",
@@ -973,7 +973,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Wednesday",
+            "title": "Wednesday",
             "type": "Serie TV",
             "genre": ["Fantasy", "Commedia", "Horror"],
             "language": "Inglese",
@@ -982,7 +982,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Bridgerton",
+            "title": "Bridgerton",
             "type": "Serie TV",
             "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Inglese",
@@ -991,7 +991,7 @@
             "theme": "Romantico"
         },
         {
-            "titolo": "Daredevil",
+            "title": "Daredevil",
             "type": "Serie TV",
             "genre": ["Azione", "Crime", "Dramma"],
             "language": "Inglese",
@@ -1000,7 +1000,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Jessica Jones",
+            "title": "Jessica Jones",
             "type": "Serie TV",
             "genre": ["Azione", "Dramma", "Thriller"],
             "language": "Inglese",
@@ -1009,7 +1009,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "The Umbrella Academy",
+            "title": "The Umbrella Academy",
             "type": "Serie TV",
             "genre": ["Azione", "Commedia", "Fantasy"],
             "language": "Inglese",
@@ -1018,7 +1018,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Homeland",
+            "title": "Homeland",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Spionaggio"],
             "language": "Inglese",
@@ -1027,7 +1027,7 @@
             "theme": "Spionaggio"
         },
         {
-            "titolo": "Succession",
+            "title": "Succession",
             "type": "Serie TV",
             "genre": ["Dramma", "Commedia nera"],
             "language": "Inglese",
@@ -1036,7 +1036,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "The Last of Us",
+            "title": "The Last of Us",
             "type": "Serie TV",
             "genre": ["Dramma", "Horror", "Fantascienza"],
             "language": "Inglese",
@@ -1045,7 +1045,7 @@
             "theme": "Post-apocalittico"
         },
         {
-            "titolo": "The 100",
+            "title": "The 100",
             "type": "Serie TV",
             "genre": ["Fantascienza", "Dramma", "Azione"],
             "language": "Inglese",
@@ -1054,7 +1054,7 @@
             "theme": ["Post-apocalittico", "Sopravvivenza"]
         },
         {
-            "titolo": "The Wire",
+            "title": "The Wire",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -1063,7 +1063,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Brooklyn Nine-Nine",
+            "title": "Brooklyn Nine-Nine",
             "type": "Serie TV",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -1072,7 +1072,7 @@
             "theme": "Poliziesco"
         },
         {
-            "titolo": "Mindhunter",
+            "title": "Mindhunter",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
@@ -1081,7 +1081,7 @@
             "theme": "Poliziesco"
         },
         {
-            "titolo": "L'Alienista",
+            "title": "L'Alienista",
             "type": "Serie TV",
             "genre": ["Thriller", "Dramma", "Storico"],
             "language": "Inglese",
@@ -1090,7 +1090,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Sons of Anarchy",
+            "title": "Sons of Anarchy",
             "type": "Serie TV",
             "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
@@ -1099,7 +1099,7 @@
             "theme": ["Mafia", "Crimine"]
         },
         {
-            "titolo": "Mad Men",
+            "title": "Mad Men",
             "type": "Serie TV",
             "genre": ["Dramma", "Storico"],
             "language": "Inglese",
@@ -1108,7 +1108,7 @@
             "theme": "Ufficio/Lavoro"
         },
         {
-            "titolo": "Orange is the New Black",
+            "title": "Orange is the New Black",
             "type": "Serie TV",
             "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
@@ -1117,7 +1117,7 @@
             "theme": "Carcere"
         },
         {
-            "titolo": "River Monsters",
+            "title": "River Monsters",
             "type": "Serie TV",
             "genre": ["Documentario", "Avventura"],
             "language": "Inglese",
@@ -1126,7 +1126,7 @@
             "theme": "Animali"
         },
         {
-            "titolo": "Impractical Jokers",
+            "title": "Impractical Jokers",
             "type": "Serie TV",
             "genre": ["Commedia", "Reality"],
             "language": "Inglese",
@@ -1135,7 +1135,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Star Wars: Il risveglio della forza",
+            "title": "Star Wars: Il risveglio della forza",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -1144,7 +1144,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Il Signore degli Anelli: La Compagnia dell'Anello",
+            "title": "Il Signore degli Anelli: La Compagnia dell'Anello",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
@@ -1153,7 +1153,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Il Gladiatore",
+            "title": "Il Gladiatore",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
@@ -1162,7 +1162,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "The Shawshank Redemption",
+            "title": "The Shawshank Redemption",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -1171,7 +1171,7 @@
             "theme": "Carcere"
         },
         {
-            "titolo": "Oppenheimer",
+            "title": "Oppenheimer",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Storico"],
             "language": "Inglese",
@@ -1180,7 +1180,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Joker",
+            "title": "Joker",
             "type": "Film",
             "genre": ["Dramma", "Thriller", "Crime"],
             "language": "Inglese",
@@ -1189,7 +1189,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "La città incantata",
+            "title": "La città incantata",
             "type": "Film",
             "genre": ["Animazione", "Fantasy", "Avventura"],
             "language": "Giapponese",
@@ -1198,7 +1198,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "La bella e la bestia",
+            "title": "La bella e la bestia",
             "type": "Film",
             "genre": ["Animazione", "Fantasy", "Romantico", "Musical"],
             "language": "Inglese",
@@ -1207,7 +1207,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "L'attimo fuggente",
+            "title": "L'attimo fuggente",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -1216,7 +1216,7 @@
             "theme": "Scuola/Università"
         },
         {
-            "titolo": "Apocalypse Now",
+            "title": "Apocalypse Now",
             "type": "Film",
             "genre": ["Guerra", "Dramma"],
             "language": "Inglese",
@@ -1225,7 +1225,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Il Re Leone",
+            "title": "Il Re Leone",
             "type": "Film",
             "genre": ["Animazione", "Dramma", "Avventura", "Musical"],
             "language": "Inglese",
@@ -1234,7 +1234,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Alla Ricerca di Nemo",
+            "title": "Alla Ricerca di Nemo",
             "type": "Film",
             "genre": ["Animazione", "Avventura", "Commedia"],
             "language": "Inglese",
@@ -1243,7 +1243,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Taxi Driver",
+            "title": "Taxi Driver",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
@@ -1252,7 +1252,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Mamma Ho Perso L'Aereo",
+            "title": "Mamma Ho Perso L'Aereo",
             "type": "Film",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -1261,7 +1261,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "Lo Squalo",
+            "title": "Lo Squalo",
             "type": "Film",
             "genre": ["Thriller", "Horror", "Avventura"],
             "language": "Inglese",
@@ -1270,7 +1270,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Le Crociate - Kingdom of Heaven",
+            "title": "Le Crociate - Kingdom of Heaven",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
@@ -1279,7 +1279,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Troy",
+            "title": "Troy",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Storico"],
             "language": "Inglese",
@@ -1288,7 +1288,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Il buono, il brutto, il cattivo",
+            "title": "Il buono, il brutto, il cattivo",
             "type": "Film",
             "genre": ["Azione", "Western"],
             "language": "Italiano",
@@ -1297,7 +1297,7 @@
             "theme": "Avventura"
         },
         {
-            "titolo": "Titanic",
+            "title": "Titanic",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Inglese",
@@ -1306,7 +1306,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Memorie di un Assassino",
+            "title": "Memorie di un Assassino",
             "type": "Film",
             "genre": ["Thriller", "Crime"],
             "language": "Coreano",
@@ -1315,7 +1315,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Avatar",
+            "title": "Avatar",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -1324,7 +1324,7 @@
             "theme": "Avventura"
         },
         {
-            "titolo": "Harry Potter e la pietra filosofale",
+            "title": "Harry Potter e la pietra filosofale",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Famiglia"],
             "language": "Inglese",
@@ -1333,7 +1333,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Avengers: Endgame",
+            "title": "Avengers: Endgame",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -1342,7 +1342,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Black Panther",
+            "title": "Black Panther",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -1351,7 +1351,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Iron Man",
+            "title": "Iron Man",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -1360,7 +1360,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Spider-Man",
+            "title": "Spider-Man",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -1369,7 +1369,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Fight Club",
+            "title": "Fight Club",
             "type": "Film",
             "genre": ["Dramma", "Thriller"],
             "language": "Inglese",
@@ -1378,7 +1378,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Bastardi senza Gloria",
+            "title": "Bastardi senza Gloria",
             "type": "Film",
             "genre": ["Azione", "Dramma"],
             "language": "Inglese",
@@ -1387,7 +1387,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Il silenzio degli innocenti",
+            "title": "Il silenzio degli innocenti",
             "type": "Film",
             "genre": ["Thriller", "Horror", "Crime"],
             "language": "Inglese",
@@ -1396,7 +1396,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Tre Uomini e una Gamba",
+            "title": "Tre Uomini e una Gamba",
             "type": "Film",
             "genre": ["Commedia"],
             "language": "Italiano",
@@ -1405,7 +1405,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Star Trek",
+            "title": "Star Trek",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -1414,7 +1414,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Fast and Furious",
+            "title": "Fast and Furious",
             "type": "Film",
             "genre": ["Azione", "Crime", "Thriller"],
             "language": "Inglese",
@@ -1423,7 +1423,7 @@
             "theme": "Auto"
         },
         {
-            "titolo": "Shining",
+            "title": "Shining",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -1432,7 +1432,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "It",
+            "title": "It",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Mystery"],
             "language": "Inglese",
@@ -1441,7 +1441,7 @@
             "theme": "Clown"
         },
         {
-            "titolo": "Saw",
+            "title": "Saw",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Crime"],
             "language": "Inglese",
@@ -1450,7 +1450,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Venerdì 13",
+            "title": "Venerdì 13",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Slasher"],
             "language": "Inglese",
@@ -1459,7 +1459,7 @@
             "theme": "Horror"
         },
         {
-            "titolo": "Le Cronache di Narnia",
+            "title": "Le Cronache di Narnia",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Famiglia"],
             "language": "Inglese",
@@ -1468,7 +1468,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Hunger Games",
+            "title": "Hunger Games",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -1477,7 +1477,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Maze Runner",
+            "title": "Maze Runner",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
@@ -1486,7 +1486,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Arancia Meccanica",
+            "title": "Arancia Meccanica",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Fantascienza"],
             "language": "Inglese",
@@ -1495,7 +1495,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Salvate il Soldato Ryan",
+            "title": "Salvate il Soldato Ryan",
             "type": "Film",
             "genre": ["Azione", "Dramma"],
             "language": "Inglese",
@@ -1504,7 +1504,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Full Metal Jacket",
+            "title": "Full Metal Jacket",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -1513,7 +1513,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "A.I. Intelligenza Artificiale",
+            "title": "A.I. Intelligenza Artificiale",
             "type": "Film",
             "genre": ["Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -1522,7 +1522,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "8 Mile",
+            "title": "8 Mile",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -1531,7 +1531,7 @@
             "theme": "Musica"
         },
         {
-            "titolo": "Forrest Gump",
+            "title": "Forrest Gump",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Romantico"],
             "language": "Inglese",
@@ -1540,7 +1540,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "I Sette Samurai",
+            "title": "I Sette Samurai",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Avventura"],
             "language": "Giapponese",
@@ -1549,7 +1549,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Il Miglio Verde",
+            "title": "Il Miglio Verde",
             "type": "Film",
             "genre": ["Dramma", "Fantasy", "Crime"],
             "language": "Inglese",
@@ -1558,7 +1558,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Il Pianista",
+            "title": "Il Pianista",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Storico"],
             "language": "Inglese",
@@ -1567,7 +1567,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Quasi Amici",
+            "title": "Quasi Amici",
             "type": "Film",
             "genre": ["Commedia", "Dramma", "Biografico"],
             "language": "Francese",
@@ -1576,7 +1576,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Alien",
+            "title": "Alien",
             "type": "Film",
             "genre": ["Fantascienza", "Horror", "Thriller"],
             "language": "Inglese",
@@ -1585,7 +1585,7 @@
             "theme": ["Sopravvivenza", "Alieni"]
         },
         {
-            "titolo": "Django Unchained",
+            "title": "Django Unchained",
             "type": "Film",
             "genre": ["Azione", "Western", "Dramma"],
             "language": "Inglese",
@@ -1594,7 +1594,7 @@
             "theme": "Vendetta"
         },
         {
-            "titolo": "WALL-E",
+            "title": "WALL-E",
             "type": "Film",
             "genre": ["Animazione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -1603,7 +1603,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Indiana Jones",
+            "title": "Indiana Jones",
             "type": "Film",
             "genre": ["Avventura", "Azione"],
             "language": "Inglese",
@@ -1612,7 +1612,7 @@
             "theme": "Avventura"
         },
         {
-            "titolo": "Toy Story",
+            "title": "Toy Story",
             "type": "Film",
             "genre": ["Animazione", "Avventura", "Commedia"],
             "language": "Inglese",
@@ -1621,7 +1621,7 @@
             "theme": "Giocattoli"
         },
         {
-            "titolo": "Scarface",
+            "title": "Scarface",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Thriller"],
             "language": "Inglese",
@@ -1630,7 +1630,7 @@
             "theme": "Mafia"
         },
         {
-            "titolo": "Up",
+            "title": "Up",
             "type": "Film",
             "genre": ["Animazione", "Avventura", "Commedia", "Dramma"],
             "language": "Inglese",
@@ -1639,7 +1639,7 @@
             "theme": "Avventura"
         },
         {
-            "titolo": "The Truman Show",
+            "title": "The Truman Show",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Fantascienza"],
             "language": "Inglese",
@@ -1648,7 +1648,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "V per Vendetta",
+            "title": "V per Vendetta",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -1657,7 +1657,7 @@
             "theme": "Politica"
         },
         {
-            "titolo": "Monsters & Co.",
+            "title": "Monsters & Co.",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
@@ -1666,7 +1666,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Ratatouille",
+            "title": "Ratatouille",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Dramma"],
             "language": "Inglese",
@@ -1675,7 +1675,7 @@
             "theme": "Cucina"
         },
         {
-            "titolo": "Dragon Trainer",
+            "title": "Dragon Trainer",
             "type": "Film",
             "genre": ["Animazione", "Avventura", "Fantasy"],
             "language": "Inglese",
@@ -1684,7 +1684,7 @@
             "theme": "Animali"
         },
         {
-            "titolo": "Terminator",
+            "title": "Terminator",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
@@ -1693,7 +1693,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Il Mago di Oz",
+            "title": "Il Mago di Oz",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Musical"],
             "language": "Inglese",
@@ -1702,7 +1702,7 @@
             "theme": "Fantasy"
         },
         {
-            "titolo": "Gli Incredibili",
+            "title": "Gli Incredibili",
             "type": "Film",
             "genre": ["Animazione", "Azione", "Avventura"],
             "language": "Inglese",
@@ -1711,7 +1711,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Hachiko",
+            "title": "Hachiko",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -1720,7 +1720,7 @@
             "theme": ["Animali", "Amicizia", "Famiglia"]
         },
         {
-            "titolo": "Rush",
+            "title": "Rush",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Sport"],
             "language": "Inglese",
@@ -1729,7 +1729,7 @@
             "theme": "Sport"
         },
         {
-            "titolo": "L'esorcista",
+            "title": "L'esorcista",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -1738,7 +1738,7 @@
             "theme": "Paranormale"
         },
         {
-            "titolo": "Barbie",
+            "title": "Barbie",
             "type": "Film",
             "genre": ["Commedia", "Avventura", "Fantasy"],
             "language": "Inglese",
@@ -1747,7 +1747,7 @@
             "theme": "Commedia"
         },
         {
-            "titolo": "Scream",
+            "title": "Scream",
             "type": "Film",
             "genre": ["Horror", "Mystery", "Thriller", "Slasher"],
             "language": "Inglese",
@@ -1756,7 +1756,7 @@
             "theme": "Horror"
         },
         {
-            "titolo": "Split",
+            "title": "Split",
             "type": "Film",
             "genre": ["Thriller", "Horror"],
             "language": "Inglese",
@@ -1765,7 +1765,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Sausage Party",
+            "title": "Sausage Party",
             "type": "Film",
             "genre": ["Animazione", "Commedia"],
             "language": "Inglese",
@@ -1774,7 +1774,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "The Martian",
+            "title": "The Martian",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -1783,7 +1783,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Una notte da leoni",
+            "title": "Una notte da leoni",
             "type": "Film",
             "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
@@ -1792,7 +1792,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Il Dittatore",
+            "title": "Il Dittatore",
             "type": "Film",
             "genre": ["Commedia", "Satira", "Storico"],
             "language": "Inglese",
@@ -1801,7 +1801,7 @@
             "theme": "Politica"
         },
         {
-            "titolo": "Shutter Island",
+            "title": "Shutter Island",
             "type": "Film",
             "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
@@ -1810,7 +1810,7 @@
             "theme": ["Psicologico", "Mistero"]
         },
         {
-            "titolo": "Io sono leggenda",
+            "title": "Io sono leggenda",
             "type": "Film",
             "genre": ["Fantascienza", "Horror", "Azione"],
             "language": "Inglese",
@@ -1819,7 +1819,7 @@
             "theme": "Post-apocalittico"
         },
         {
-            "titolo": "Una notte al museo",
+            "title": "Una notte al museo",
             "type": "Film",
             "genre": ["Commedia", "Fantasy", "Avventura"],
             "language": "Inglese",
@@ -1828,7 +1828,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "The Butterfly Effect",
+            "title": "The Butterfly Effect",
             "type": "Film",
             "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -1837,7 +1837,7 @@
             "theme": "Viaggi nel tempo"
         },
         {
-            "titolo": "Prova a prendermi",
+            "title": "Prova a prendermi",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
@@ -1846,7 +1846,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Men in Black",
+            "title": "Men in Black",
             "type": "Film",
             "genre": ["Commedia", "Fantascienza", "Azione"],
             "language": "Inglese",
@@ -1855,7 +1855,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "Memento",
+            "title": "Memento",
             "type": "Film",
             "genre": ["Thriller", "Psicologico"],
             "language": "Inglese",
@@ -1864,7 +1864,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Requiem for a Dream",
+            "title": "Requiem for a Dream",
             "type": "Film",
             "genre": ["Dramma", "Psicologico"],
             "language": "Inglese",
@@ -1873,7 +1873,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "Trainspotting",
+            "title": "Trainspotting",
             "type": "Film",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -1882,7 +1882,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "American Psycho",
+            "title": "American Psycho",
             "type": "Film",
             "genre": ["Thriller", "Horror", "Crime"],
             "language": "Inglese",
@@ -1891,7 +1891,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "American Beauty",
+            "title": "American Beauty",
             "type": "Film",
             "genre": ["Dramma", "Satira", "Romantico"],
             "language": "Inglese",
@@ -1900,7 +1900,7 @@
             "theme": "Drammatico"
         },
         {
-            "titolo": "Good Will Hunting",
+            "title": "Good Will Hunting",
             "type": "Film",
             "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
@@ -1909,7 +1909,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Seven",
+            "title": "Seven",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Mistero"],
             "language": "Inglese",
@@ -1918,7 +1918,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Stand by Me",
+            "title": "Stand by Me",
             "type": "Film",
             "genre": ["Dramma", "Avventura"],
             "language": "Inglese",
@@ -1927,7 +1927,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Handmaiden",
+            "title": "Handmaiden",
             "type": "Film",
             "genre": ["Thriller", "Romantico", "Dramma"],
             "language": "Coreano",
@@ -1936,7 +1936,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Black Swan",
+            "title": "Black Swan",
             "type": "Film",
             "genre": ["Dramma", "Thriller", "Psicologico"],
             "language": "Inglese",
@@ -1945,7 +1945,7 @@
             "theme": ["Danza", "Psicologico"]
         },
         {
-            "titolo": "Grave of the Fireflies",
+            "title": "Grave of the Fireflies",
             "type": "Film",
             "genre": ["Animazione", "Dramma"],
             "language": "Giapponese",
@@ -1954,7 +1954,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Mickey 17",
+            "title": "Mickey 17",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Avventura"],
             "language": "Inglese",
@@ -1963,7 +1963,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "Babylon",
+            "title": "Babylon",
             "type": "Film",
             "genre": ["Dramma", "Storico", "Commedia"],
             "language": "Inglese",
@@ -1972,7 +1972,7 @@
             "theme": "Musica"
         },
         {
-            "titolo": "Mystic River",
+            "title": "Mystic River",
             "type": "Film",
             "genre": ["Thriller", "Dramma", "Crime"],
             "language": "Inglese",
@@ -1981,7 +1981,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Paprika",
+            "title": "Paprika",
             "type": "Film",
             "genre": ["Animazione", "Fantascienza"],
             "language": "Giapponese",
@@ -1990,7 +1990,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Mulholland Drive",
+            "title": "Mulholland Drive",
             "type": "Film",
             "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
@@ -1999,7 +1999,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "The House That Jack Built",
+            "title": "The House That Jack Built",
             "type": "Film",
             "genre": ["Horror", "Dramma", "Thriller"],
             "language": "Inglese",
@@ -2008,7 +2008,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Incendies",
+            "title": "Incendies",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Francese",
@@ -2017,7 +2017,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "The Host",
+            "title": "The Host",
             "type": "Film",
             "genre": ["Horror", "Fantascienza", "Dramma"],
             "language": "Coreano",
@@ -2026,7 +2026,7 @@
             "theme": "Monster"
         },
         {
-            "titolo": "Godzilla Minus One",
+            "title": "Godzilla Minus One",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Fantascienza"],
             "language": "Giapponese",
@@ -2035,7 +2035,7 @@
             "theme": "Monster"
         },
         {
-            "titolo": "The Fly (La mosca)",
+            "title": "The Fly (La mosca)",
             "type": "Film",
             "genre": ["Horror", "Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -2044,7 +2044,7 @@
             "theme": "Body Horror"
         },
         {
-            "titolo": "Before Midnight",
+            "title": "Before Midnight",
             "type": "Film",
             "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
@@ -2053,7 +2053,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Before Sunset",
+            "title": "Before Sunset",
             "type": "Film",
             "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
@@ -2062,7 +2062,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Before Sunrise",
+            "title": "Before Sunrise",
             "type": "Film",
             "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
@@ -2071,7 +2071,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Zodiac",
+            "title": "Zodiac",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Storico"],
             "language": "Inglese",
@@ -2080,7 +2080,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Lost in Translation",
+            "title": "Lost in Translation",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Commedia"],
             "language": "Inglese",
@@ -2089,7 +2089,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Nosferatu",
+            "title": "Nosferatu",
             "type": "Film",
             "genre": ["Horror", "Gotico"],
             "language": "Inglese",
@@ -2098,7 +2098,7 @@
             "theme": "Horror"
         },
         {
-            "titolo": "Grand Budapest Hotel",
+            "title": "Grand Budapest Hotel",
             "type": "Film",
             "genre": ["Commedia", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -2107,7 +2107,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Paris, Texas",
+            "title": "Paris, Texas",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -2116,7 +2116,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "City of God",
+            "title": "City of God",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Azione"],
             "language": "Spagnolo",
@@ -2125,7 +2125,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "There Will Be Blood",
+            "title": "There Will Be Blood",
             "type": "Film",
             "genre": ["Dramma", "Storico"],
             "language": "Inglese",
@@ -2134,7 +2134,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Pulse",
+            "title": "Pulse",
             "type": "Film",
             "genre": ["Horror", "Fantascienza"],
             "language": "Giapponese",
@@ -2143,7 +2143,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Terrifier",
+            "title": "Terrifier",
             "type": "Film",
             "genre": ["Horror", "Slasher"],
             "language": "Inglese",
@@ -2152,7 +2152,7 @@
             "theme": "Clown"
         },
         {
-            "titolo": "Rosemary's Baby",
+            "title": "Rosemary's Baby",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
@@ -2161,7 +2161,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Smile",
+            "title": "Smile",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
@@ -2170,7 +2170,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "The Substance",
+            "title": "The Substance",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2179,7 +2179,7 @@
             "theme": "Body Horror"
         },
         {
-            "titolo": "Nosferatu (2024)",
+            "title": "Nosferatu (2024)",
             "type": "Film",
             "genre": ["Horror", "Gotico", "Dramma"],
             "language": "Inglese",
@@ -2188,7 +2188,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "Adolescence",
+            "title": "Adolescence",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -2197,7 +2197,7 @@
             "theme": "Adolescenza"
         },
         {
-            "titolo": "Dune",
+            "title": "Dune",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -2206,7 +2206,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "M3GAN",
+            "title": "M3GAN",
             "type": "Film",
             "genre": ["Horror", "Fantascienza"],
             "language": "Inglese",
@@ -2215,7 +2215,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "The Batman",
+            "title": "The Batman",
             "type": "Film",
             "genre": ["Azione", "Crime", "Thriller", "Supereroi"],
             "language": "Inglese",
@@ -2224,7 +2224,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Don't Look Up",
+            "title": "Don't Look Up",
             "type": "Film",
             "genre": ["Commedia", "Satira", "Dramma"],
             "language": "Inglese",
@@ -2233,7 +2233,7 @@
             "theme": "Ambientalismo"
         },
         {
-            "titolo": "Old",
+            "title": "Old",
             "type": "Film",
             "genre": ["Thriller", "Horror"],
             "language": "Inglese",
@@ -2242,7 +2242,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Soul",
+            "title": "Soul",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -2251,7 +2251,7 @@
             "theme": "Filosofico"
         },
         {
-            "titolo": "Tenet",
+            "title": "Tenet",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
@@ -2260,7 +2260,7 @@
             "theme": "Viaggi nel tempo"
         },
         {
-            "titolo": "Midsommar",
+            "title": "Midsommar",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -2269,7 +2269,7 @@
             "theme": "Culto"
         },
         {
-            "titolo": "Once Upon a Time in Hollywood",
+            "title": "Once Upon a Time in Hollywood",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Storico"],
             "language": "Inglese",
@@ -2278,7 +2278,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Us (Noi)",
+            "title": "Us (Noi)",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -2287,7 +2287,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Bandersnatch",
+            "title": "Bandersnatch",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Dramma"],
             "language": "Inglese",
@@ -2296,7 +2296,7 @@
             "theme": "Videogiochi"
         },
         {
-            "titolo": "Bohemian Rhapsody",
+            "title": "Bohemian Rhapsody",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Musicale"],
             "language": "Inglese",
@@ -2305,7 +2305,7 @@
             "theme": "Musica"
         },
         {
-            "titolo": "Blade Runner 2049",
+            "title": "Blade Runner 2049",
             "type": "Film",
             "genre": ["Fantascienza", "Thriller", "Dramma", "Noir"],
             "language": "Inglese",
@@ -2314,7 +2314,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "Logan",
+            "title": "Logan",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Fantascienza", "Supereroi"],
             "language": "Inglese",
@@ -2323,7 +2323,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Life",
+            "title": "Life",
             "type": "Film",
             "genre": ["Fantascienza", "Horror", "Thriller"],
             "language": "Inglese",
@@ -2332,7 +2332,7 @@
             "theme": "Alieni"
         },
         {
-            "titolo": "Passengers",
+            "title": "Passengers",
             "type": "Film",
             "genre": ["Fantascienza", "Romantico", "Avventura"],
             "language": "Inglese",
@@ -2341,7 +2341,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Arrival",
+            "title": "Arrival",
             "type": "Film",
             "genre": ["Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -2350,7 +2350,7 @@
             "theme": "Alieni"
         },
         {
-            "titolo": "Now You See Me",
+            "title": "Now You See Me",
             "type": "Film",
             "genre": ["Thriller", "Crime"],
             "language": "Inglese",
@@ -2359,7 +2359,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Suicide Squad",
+            "title": "Suicide Squad",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
@@ -2368,7 +2368,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Scary Movie",
+            "title": "Scary Movie",
             "type": "Film",
             "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
@@ -2377,7 +2377,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Scary Movie 2",
+            "title": "Scary Movie 2",
             "type": "Film",
             "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
@@ -2386,7 +2386,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Scary Movie 3",
+            "title": "Scary Movie 3",
             "type": "Film",
             "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
@@ -2395,7 +2395,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Scary Movie 4",
+            "title": "Scary Movie 4",
             "type": "Film",
             "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
@@ -2404,7 +2404,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Scary Movie 5",
+            "title": "Scary Movie 5",
             "type": "Film",
             "genre": ["Commedia", "Parody", "Horror"],
             "language": "Inglese",
@@ -2413,7 +2413,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Perfetti Sconosciuti",
+            "title": "Perfetti Sconosciuti",
             "type": "Film",
             "genre": ["Commedia", "Dramma"],
             "language": "Italiano",
@@ -2422,7 +2422,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "The Revenant",
+            "title": "The Revenant",
             "type": "Film",
             "genre": ["Avventura", "Dramma", "Storico", "Western"],
             "language": "Inglese",
@@ -2431,7 +2431,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "The Hateful Eight",
+            "title": "The Hateful Eight",
             "type": "Film",
             "genre": ["Thriller", "Western"],
             "language": "Inglese",
@@ -2440,7 +2440,7 @@
             "theme": ["Mistero", "Psicologico", "Sopravvivenza"]
         },
         {
-            "titolo": "Creed",
+            "title": "Creed",
             "type": "Film",
             "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
@@ -2449,7 +2449,7 @@
             "theme": "Boxe"
         },
         {
-            "titolo": "Ted",
+            "title": "Ted",
             "type": "Film",
             "genre": ["Commedia", "Fantasy"],
             "language": "Inglese",
@@ -2458,7 +2458,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Jurassic World",
+            "title": "Jurassic World",
             "type": "Film",
             "genre": ["Avventura", "Fantascienza", "Azione"],
             "language": "Inglese",
@@ -2467,7 +2467,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Southpaw",
+            "title": "Southpaw",
             "type": "Film",
             "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
@@ -2476,7 +2476,7 @@
             "theme": "Boxe"
         },
         {
-            "titolo": "Demolition",
+            "title": "Demolition",
             "type": "Film",
             "genre": ["Dramma", "Commedia"],
             "language": "Inglese",
@@ -2485,7 +2485,7 @@
             "theme": "Famiglia"
         },
         {
-            "titolo": "American Sniper",
+            "title": "American Sniper",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Biografico", "Guerra"],
             "language": "Inglese",
@@ -2494,7 +2494,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Gone Girl",
+            "title": "Gone Girl",
             "type": "Film",
             "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
@@ -2503,7 +2503,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "John Wick",
+            "title": "John Wick",
             "type": "Film",
             "genre": ["Azione", "Thriller", "Crime"],
             "language": "Inglese",
@@ -2512,7 +2512,7 @@
             "theme": "Vendetta"
         },
         {
-            "titolo": "Nightcrawler",
+            "title": "Nightcrawler",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
@@ -2521,7 +2521,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "The Imitation Game",
+            "title": "The Imitation Game",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Storico", "Guerra"],
             "language": "Inglese",
@@ -2530,7 +2530,7 @@
             "theme": ["Guerra", "Tecnologia"]
         },
         {
-            "titolo": "Lucy",
+            "title": "Lucy",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese", 
@@ -2539,7 +2539,7 @@
             "theme": "Futuristico"
         },
         {
-            "titolo": "Maleficent",
+            "title": "Maleficent",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Azione"],
             "language": "Inglese",
@@ -2548,7 +2548,7 @@
             "theme": ["Magia", "Amore", "Famiglia"]
         },
         {
-            "titolo": "Prisoners",
+            "title": "Prisoners",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
@@ -2557,7 +2557,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Wolverine: L'Immortale",
+            "title": "Wolverine: L'Immortale",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
@@ -2566,7 +2566,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "About Time",
+            "title": "About Time",
             "type": "Film",
             "genre": ["Romantico", "Commedia", "Fantascienza"],
             "language": "Inglese",
@@ -2575,7 +2575,7 @@
             "theme": "Viaggi nel tempo"
         },
         {
-            "titolo": "World War Z",
+            "title": "World War Z",
             "type": "Film",
             "genre": ["Azione", "Horror", "Fantascienza"],
             "language": "Inglese",
@@ -2584,7 +2584,7 @@
             "theme": ["Zombie", "Sopravvivenza"]
         },
         {
-            "titolo": "La Notte del Giudizio",
+            "title": "La Notte del Giudizio",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2593,7 +2593,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "La Notte del Giudizio: Anarchy",
+            "title": "La Notte del Giudizio: Anarchy",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2602,7 +2602,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "La Notte del Giudizio: Election Year",
+            "title": "La Notte del Giudizio: Election Year",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2611,7 +2611,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "La Prima Notte del Giudizio",
+            "title": "La Prima Notte del Giudizio",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2620,7 +2620,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "La Notte del Giudizio per Sempre",
+            "title": "La Notte del Giudizio per Sempre",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -2629,7 +2629,7 @@
             "theme": "Distopia"
         },
         {
-            "titolo": "Una notte da leoni 2",
+            "title": "Una notte da leoni 2",
             "type": "Film",
             "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
@@ -2638,7 +2638,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Una notte da leoni 3",
+            "title": "Una notte da leoni 3",
             "type": "Film",
             "genre": ["Commedia", "Avventura"],
             "language": "Inglese",
@@ -2647,7 +2647,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Twilight",
+            "title": "Twilight",
             "type": "Film",
             "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
@@ -2656,7 +2656,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "The Twilight Saga: New Moon",
+            "title": "The Twilight Saga: New Moon",
             "type": "Film",
             "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
@@ -2665,7 +2665,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "The Twilight Saga: Eclipse",
+            "title": "The Twilight Saga: Eclipse",
             "type": "Film",
             "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
@@ -2674,7 +2674,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "The Twilight Saga: Breaking Dawn - Part 1",
+            "title": "The Twilight Saga: Breaking Dawn - Part 1",
             "type": "Film",
             "genre": ["Fantasy", "Romantico", "Dramma"],
             "language": "Inglese",
@@ -2683,7 +2683,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "The Twilight Saga: Breaking Dawn - Part 2",
+            "title": "The Twilight Saga: Breaking Dawn - Part 2",
             "type": "Film",
             "genre": ["Fantasy", "Romantico", "Dramma", "Azione"],
             "language": "Inglese",
@@ -2692,7 +2692,7 @@
             "theme": "Vampiri"
         },
         {
-            "titolo": "The Perks of Being a Wallflower",
+            "title": "The Perks of Being a Wallflower",
             "type": "Film",
             "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
@@ -2701,7 +2701,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Sinister",
+            "title": "Sinister",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -2710,7 +2710,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Crazy, Stupid, Love",
+            "title": "Crazy, Stupid, Love",
             "type": "Film",
             "genre": ["Commedia", "Romantico", "Dramma"],
             "language": "Inglese",
@@ -2719,7 +2719,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Harry Potter e la pietra filosofale",
+            "title": "Harry Potter e la pietra filosofale",
             "type": "Film",
             "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
@@ -2728,7 +2728,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e la camera dei segreti",
+            "title": "Harry Potter e la camera dei segreti",
             "type": "Film",
             "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
@@ -2737,7 +2737,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e il prigioniero di Azkaban",
+            "title": "Harry Potter e il prigioniero di Azkaban",
             "type": "Film",
             "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
@@ -2746,7 +2746,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e il calice di fuoco",
+            "title": "Harry Potter e il calice di fuoco",
             "type": "Film",
             "genre": ["Fantasy", "Avventura"],
             "language": "Inglese",
@@ -2755,7 +2755,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e l'ordine della fenice",
+            "title": "Harry Potter e l'ordine della fenice",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -2764,7 +2764,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e il principe mezzosangue",
+            "title": "Harry Potter e il principe mezzosangue",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -2773,7 +2773,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e i doni della morte - Parte 1",
+            "title": "Harry Potter e i doni della morte - Parte 1",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -2782,7 +2782,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Harry Potter e i doni della morte - Parte 2",
+            "title": "Harry Potter e i doni della morte - Parte 2",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Azione", "Dramma"],
             "language": "Inglese",
@@ -2791,7 +2791,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "Kung Fu Panda",
+            "title": "Kung Fu Panda",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Azione", "Avventura"],
             "language": "Inglese",
@@ -2800,7 +2800,7 @@
             "theme": "Arti Marziali"
         },
         {
-            "titolo": "Limitless",
+            "title": "Limitless",
             "type": "Film",
             "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -2809,7 +2809,7 @@
             "theme": "Tecnologia"
         },
         {
-            "titolo": "No Strings Attached",
+            "title": "No Strings Attached",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -2818,7 +2818,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Love and Other Drugs",
+            "title": "Love and Other Drugs",
             "type": "Film",
             "genre": ["Romantico", "Dramma", "Commedia"],
             "language": "Inglese",
@@ -2827,7 +2827,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "The Social Network",
+            "title": "The Social Network",
             "type": "Film",
             "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
@@ -2836,7 +2836,7 @@
             "theme": "Tecnologia"
         },
         {
-            "titolo": "Insidious",
+            "title": "Insidious",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Soprannaturale"],
             "language": "Inglese",
@@ -2845,7 +2845,7 @@
             "theme": "Paranormale"
         },
         {
-            "titolo": "Diario di una Schiappa",
+            "title": "Diario di una Schiappa",
             "type": "Film",
             "genre": ["Commedia", "Famiglia"],
             "language": "Inglese",
@@ -2854,7 +2854,7 @@
             "theme": "Scuola/Università"
         },
         {
-            "titolo": "Coraline",
+            "title": "Coraline",
             "type": "Film",
             "genre": ["Animazione", "Fantasy", "Horror"],
             "language": "Inglese",
@@ -2863,7 +2863,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "500 Days of Summer",
+            "title": "500 Days of Summer",
             "type": "Film",
             "genre": ["Romantico", "Commedia", "Dramma"],
             "language": "Inglese",
@@ -2872,7 +2872,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Yes Man",
+            "title": "Yes Man",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -2881,7 +2881,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "The Incredible Hulk",
+            "title": "The Incredible Hulk",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Supereroi"],
             "language": "Inglese",
@@ -2890,7 +2890,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Alvin Superstar",
+            "title": "Alvin Superstar",
             "type": "Film",
             "genre": ["Commedia", "Famiglia", "Animazione"],
             "language": "Inglese",
@@ -2899,7 +2899,7 @@
             "theme": "Musica"
         },
         {
-            "titolo": "Step Up",
+            "title": "Step Up",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
@@ -2908,7 +2908,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Step Up 2: The Streets",
+            "title": "Step Up 2: The Streets",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
@@ -2917,7 +2917,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Step Up 3D",
+            "title": "Step Up 3D",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
@@ -2926,7 +2926,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Step Up Revolution",
+            "title": "Step Up Revolution",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
@@ -2935,7 +2935,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Step Up: All In",
+            "title": "Step Up: All In",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Musicale"],
             "language": "Inglese",
@@ -2944,7 +2944,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Paranormal Activity",
+            "title": "Paranormal Activity",
             "type": "Film",
             "genre": ["Horror", "Soprannaturale"],
             "language": "Inglese",
@@ -2953,7 +2953,7 @@
             "theme": "Paranormale"
         },
         {
-            "titolo": "High School Musical",
+            "title": "High School Musical",
             "type": "Film",
             "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
@@ -2962,7 +2962,7 @@
             "theme": "Musical"
         },
         {
-            "titolo": "High School Musical 2",
+            "title": "High School Musical 2",
             "type": "Film",
             "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
@@ -2971,7 +2971,7 @@
             "theme": "Musical"
         },
         {
-            "titolo": "High School Musical 3: Senior Year",
+            "title": "High School Musical 3: Senior Year",
             "type": "Film",
             "genre": ["Commedia", "Musicale", "Romantico"],
             "language": "Inglese",
@@ -2980,7 +2980,7 @@
             "theme": "Musical"
         },
         {
-            "titolo": "Transformers",
+            "title": "Transformers",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -2989,7 +2989,7 @@
             "theme": "Robot/AI"
         },
         {
-            "titolo": "Superbad",
+            "title": "Superbad",
             "type": "Film",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -2998,7 +2998,7 @@
             "theme": ["Adolescenza", "Coming of Age"]
         },
         {
-            "titolo": "Blood Diamond",
+            "title": "Blood Diamond",
             "type": "Film",
             "genre": ["Dramma", "Thriller", "Avventura"],
             "language": "Inglese",
@@ -3007,7 +3007,7 @@
             "theme": ["Crimine", "Politica"]
         },
         {
-            "titolo": "Borat",
+            "title": "Borat",
             "type": "Film",
             "genre": ["Commedia", "Satira"],
             "language": "Inglese",
@@ -3016,7 +3016,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "The Prestige",
+            "title": "The Prestige",
             "type": "Film",
             "genre": ["Thriller", "Dramma"],
             "language": "Inglese",
@@ -3025,7 +3025,7 @@
             "theme": "Magia"
         },
         {
-            "titolo": "The Departed",
+            "title": "The Departed",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
@@ -3034,7 +3034,7 @@
             "theme": ["Mafia", "Crimine"]
         },
         {
-            "titolo": "Un ponte per Terabithia",
+            "title": "Un ponte per Terabithia",
             "type": "Film",
             "genre": ["Fantasy", "Avventura", "Dramma"],
             "language": "Inglese",
@@ -3043,7 +3043,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Il Diavolo veste Prada",
+            "title": "Il Diavolo veste Prada",
             "type": "Film",
             "genre": ["Commedia", "Dramma"],
             "language": "Inglese",
@@ -3052,7 +3052,7 @@
             "theme": "Moda"
         },
         {
-            "titolo": "Mr. & Mrs. Smith",
+            "title": "Mr. & Mrs. Smith",
             "type": "Film",
             "genre": ["Azione", "Commedia", "Romantico"],
             "language": "Inglese",
@@ -3061,7 +3061,7 @@
             "theme": "Spionaggio"
         },
         {
-            "titolo": "A Lot Like Love",
+            "title": "A Lot Like Love",
             "type": "Film",
             "genre": ["Romantico", "Commedia"],
             "language": "Inglese",
@@ -3070,7 +3070,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Madagascar",
+            "title": "Madagascar",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
@@ -3079,7 +3079,7 @@
             "theme": "Animali"
         },
         {
-            "titolo": "White Chicks",
+            "title": "White Chicks",
             "type": "Film",
             "genre": ["Commedia", "Crime"],
             "language": "Inglese",
@@ -3088,7 +3088,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Eternal Sunshine of the Spotless Mind",
+            "title": "Eternal Sunshine of the Spotless Mind",
             "type": "Film",
             "genre": ["Romantico", "Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -3097,7 +3097,7 @@
             "theme": "Memoria"
         },
         {
-            "titolo": "Catch Me If You Can",
+            "title": "Catch Me If You Can",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
@@ -3106,7 +3106,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "How to Lose a Guy in 10 Days",
+            "title": "How to Lose a Guy in 10 Days",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3115,7 +3115,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "The Ring",
+            "title": "The Ring",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -3124,7 +3124,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "40 anni vergine",
+            "title": "40 anni vergine",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3133,7 +3133,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Zoolander",
+            "title": "Zoolander",
             "type": "Film",
             "genre": ["Commedia", "Satira"],
             "language": "Inglese",
@@ -3142,7 +3142,7 @@
             "theme": "Moda"
         },
         {
-            "titolo": "Battle Royale",
+            "title": "Battle Royale",
             "type": "Film",
             "genre": ["Azione", "Thriller", "Fantascienza"],
             "language": "Giapponese",
@@ -3151,7 +3151,7 @@
             "theme": "Sopravvivenza"
         },
         {
-            "titolo": "Donnie Darko",
+            "title": "Donnie Darko",
             "type": "Film",
             "genre": ["Thriller", "Fantascienza", "Dramma"],
             "language": "Inglese",
@@ -3160,7 +3160,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Billy Elliot",
+            "title": "Billy Elliot",
             "type": "Film",
             "genre": ["Dramma", "Musicale"],
             "language": "Inglese",
@@ -3169,7 +3169,7 @@
             "theme": "Danza"
         },
         {
-            "titolo": "Final Destination",
+            "title": "Final Destination",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -3178,7 +3178,7 @@
             "theme": "Morte"
         },
         {
-            "titolo": "Girl, Interrupted",
+            "title": "Girl, Interrupted",
             "type": "Film",
             "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
@@ -3187,7 +3187,7 @@
             "theme": "Disturbi mentali"
         },
         {
-            "titolo": "American Pie",
+            "title": "American Pie",
             "type": "Film",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -3196,7 +3196,7 @@
             "theme": ["Adolescenza", "Coming of Age"]
         },
         {
-            "titolo": "The Sixth Sense",
+            "title": "The Sixth Sense",
             "type": "Film",
             "genre": ["Thriller", "Horror"],
             "language": "Inglese",
@@ -3205,7 +3205,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Notting Hill",
+            "title": "Notting Hill",
             "type": "Film",
             "genre": ["Romantico", "Commedia"],
             "language": "Inglese",
@@ -3214,7 +3214,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "10 Things I Hate About You",
+            "title": "10 Things I Hate About You",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3223,7 +3223,7 @@
             "theme": ["Amore", "Coming of Age"]
         },
         {
-            "titolo": "Vi presento Joe Black",
+            "title": "Vi presento Joe Black",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Fantasy"],
             "language": "Inglese",
@@ -3232,7 +3232,7 @@
             "theme": "Morte"
         },
         {
-            "titolo": "Cure",
+            "title": "Cure",
             "type": "Film",
             "genre": ["Thriller", "Horror"],
             "language": "Giapponese",
@@ -3241,7 +3241,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "I Know What You Did Last Summer",
+            "title": "I Know What You Did Last Summer",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -3250,7 +3250,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Perfect Blue",
+            "title": "Perfect Blue",
             "type": "Film",
             "genre": ["Animazione", "Thriller"],
             "language": "Giapponese",
@@ -3259,7 +3259,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Basketball Diaries",
+            "title": "Basketball Diaries",
             "type": "Film",
             "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
@@ -3268,7 +3268,7 @@
             "theme": ["Adolescenza", "Droghe", "Coming of Age"]
         },
         {
-            "titolo": "Le Iene",
+            "title": "Le Iene",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
@@ -3277,7 +3277,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "Misery",
+            "title": "Misery",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Psicologico"],
             "language": "Inglese",
@@ -3286,7 +3286,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Die Hard",
+            "title": "Die Hard",
             "type": "Film",
             "genre": ["Azione", "Thriller"],
             "language": "Inglese",
@@ -3295,7 +3295,7 @@
             "theme": "Crimine"
         },
         {
-            "titolo": "The Thing (La Cosa)",
+            "title": "The Thing (La Cosa)",
             "type": "Film",
             "genre": ["Horror", "Fantascienza"],
             "language": "Inglese",
@@ -3304,7 +3304,7 @@
             "theme": ["Alieni", "Sopravvivenza"]
         },
         {
-            "titolo": "La finestra sul cortile",
+            "title": "La finestra sul cortile",
             "type": "Film",
             "genre": ["Thriller", "Mistero", "Romantico"],
             "language": "Inglese",
@@ -3313,7 +3313,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Psycho",
+            "title": "Psycho",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -3322,7 +3322,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Gli Uccelli",
+            "title": "Gli Uccelli",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Inglese",
@@ -3331,7 +3331,7 @@
             "theme": "Horror"
         },
         {
-            "titolo": "Mary Poppins",
+            "title": "Mary Poppins",
             "type": "Film",
             "genre": ["Fantasy", "Musicale"],
             "language": "Inglese",
@@ -3340,7 +3340,7 @@
             "theme": ["Magia", "Famiglia"]
         },
         {
-            "titolo": "Diabolik",
+            "title": "Diabolik",
             "type": "Film",
             "genre": ["Azione", "Crime", "Thriller"],
             "language": "Italiano",
@@ -3349,7 +3349,7 @@
             "theme": "Fumetto"
         },
         {
-            "titolo": "Anatomy of a Fall",
+            "title": "Anatomy of a Fall",
             "type": "Film",
             "genre": ["Dramma", "Mistero", "Crime"],
             "language": "Francese",
@@ -3358,7 +3358,7 @@
             "theme": "Mistero"
         },
         {
-            "titolo": "Portrait of a Lady on Fire",
+            "title": "Portrait of a Lady on Fire",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Storico"],
             "language": "Francese",
@@ -3367,7 +3367,7 @@
             "theme": "LGBTQ+"
         },
         {
-            "titolo": "La Haine",
+            "title": "La Haine",
             "type": "Film",
             "genre": ["Dramma", "Crime"],
             "language": "Francese",
@@ -3376,7 +3376,7 @@
             "theme": "Razzismo"
         },
         {
-            "titolo": "Leon the Professional",
+            "title": "Leon the Professional",
             "type": "Film",
             "genre": ["Azione", "Crime", "Dramma"],
             "language": "Inglese",
@@ -3385,7 +3385,7 @@
             "theme": "Vendetta"
         },
         {
-            "titolo": "The Skin I Live In",
+            "title": "The Skin I Live In",
             "type": "Film",
             "genre": ["Thriller", "Dramma", "Horror"],
             "language": "Spagnolo",
@@ -3394,7 +3394,7 @@
             "theme": ["Body Horror", "Psicologico"]
         },
         {
-            "titolo": "The Wolf House",
+            "title": "The Wolf House",
             "type": "Film",
             "genre": ["Animazione", "Horror", "Fantasy"],
             "language": "Cileno",
@@ -3403,7 +3403,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Gran Torino",
+            "title": "Gran Torino",
             "type": "Film",
             "genre": ["Dramma", "Crime"],
             "language": "Inglese",
@@ -3412,7 +3412,7 @@
             "theme": "Amicizia"
         },
         {
-            "titolo": "Midnight in Paris",
+            "title": "Midnight in Paris",
             "type": "Film",
             "genre": ["Commedia", "Romantico", "Fantasy"],
             "language": "Inglese",
@@ -3421,7 +3421,7 @@
             "theme": "Arte"
         },
         {
-            "titolo": "8 ½",
+            "title": "8 ½",
             "type": "Film",
             "genre": ["Dramma", "Fantasy"],
             "language": "Italiano",
@@ -3430,7 +3430,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Io e Annie",
+            "title": "Io e Annie",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3439,7 +3439,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Manhattan",
+            "title": "Manhattan",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3448,7 +3448,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "The Purple Rose of Cairo",
+            "title": "The Purple Rose of Cairo",
             "type": "Film",
             "genre": ["Commedia", "Fantasy", "Romantico"],
             "language": "Inglese",
@@ -3457,7 +3457,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "La Dolce Vita",
+            "title": "La Dolce Vita",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Satira"],
             "language": "Italiano",
@@ -3466,7 +3466,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "La Leggenda di Al, John e Jack",
+            "title": "La Leggenda di Al, John e Jack",
             "type": "Film",
             "genre": ["Commedia", "Crime"],
             "language": "Italiano",
@@ -3475,7 +3475,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Chiedimi se sono felice",
+            "title": "Chiedimi se sono felice",
             "type": "Film",
             "genre": ["Commedia", "Dramma"],
             "language": "Italiano",
@@ -3484,7 +3484,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Quo Vado",
+            "title": "Quo Vado",
             "type": "Film",
             "genre": ["Commedia", "Satira"],
             "language": "Italiano",
@@ -3493,7 +3493,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Sole a Catinelle",
+            "title": "Sole a Catinelle",
             "type": "Film",
             "genre": ["Commedia", "Satira"],
             "language": "Italiano",
@@ -3502,7 +3502,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Cado dalle Nubi",
+            "title": "Cado dalle Nubi",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Italiano",
@@ -3511,7 +3511,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "I Griffin",
+            "title": "I Griffin",
             "type": "Serie TV",
             "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
@@ -3520,7 +3520,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "American Dad",
+            "title": "American Dad",
             "type": "Serie TV",
             "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
@@ -3529,7 +3529,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Chinatown",
+            "title": "Chinatown",
             "type": "Film",
             "genre": ["Thriller", "Crime"],
             "language": "Inglese",
@@ -3538,7 +3538,7 @@
             "theme": "Crime"
         },
         {
-            "titolo": "La La Land",
+            "title": "La La Land",
             "type": "Film",
             "genre": ["Romantico", "Musicale", "Dramma"],
             "language": "Inglese",
@@ -3547,7 +3547,7 @@
             "theme": "Musical"
         },
         {
-            "titolo": "Whiplash",
+            "title": "Whiplash",
             "type": "Film",
             "genre": ["Dramma", "Musicale"],
             "language": "Inglese",
@@ -3556,7 +3556,7 @@
             "theme": "Musica"
         },
         {
-            "titolo": "Toro Scatenato",
+            "title": "Toro Scatenato",
             "type": "Film",
             "genre": ["Dramma", "Biografico", "Sport"],
             "language": "Inglese",
@@ -3565,7 +3565,7 @@
             "theme": "Boxe"
         },
         {
-            "titolo": "Dr. Strangelove",
+            "title": "Dr. Strangelove",
             "type": "Film",
             "genre": ["Commedia", "Satira"],
             "language": "Inglese",
@@ -3574,7 +3574,7 @@
             "theme": "Guerra"
         },
         {
-            "titolo": "Snowpiercer",
+            "title": "Snowpiercer",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Thriller"],
             "language": "Inglese",
@@ -3583,7 +3583,7 @@
             "theme": "Post-apocalittico"
         },
         {
-            "titolo": "Eraserhead",
+            "title": "Eraserhead",
             "type": "Film",
             "genre": ["Horror", "Surrealismo"],
             "language": "Inglese",
@@ -3592,7 +3592,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Blue Velvet",
+            "title": "Blue Velvet",
             "type": "Film",
             "genre": ["Thriller", "Crime"],
             "language": "Inglese",
@@ -3601,7 +3601,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Porco Rosso",
+            "title": "Porco Rosso",
             "type": "Film",
             "genre": ["Animazione", "Avventura", "Fantasy"],
             "language": "Giapponese",
@@ -3610,7 +3610,7 @@
             "theme": ["Guerra", "Commedia"]
         },
         {
-            "titolo": "I Simpson",
+            "title": "I Simpson",
             "type": "Serie TV",
             "genre": ["Animazione", "Commedia", "Satira"],
             "language": "Inglese",
@@ -3619,7 +3619,7 @@
             "theme": "Comico"
         },
         {
-            "titolo": "Everything Everywhere All at Once",
+            "title": "Everything Everywhere All at Once",
             "type": "Film",
             "genre": ["Fantascienza", "Commedia", "Azione", "Dramma"],
             "language": "Inglese",
@@ -3628,7 +3628,7 @@
             "theme": ["Multiverso", "Viaggio nel tempo"]
         },
         {
-            "titolo": "Inside Out",
+            "title": "Inside Out",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Dramma", "Avventura"],
             "language": "Inglese",
@@ -3637,7 +3637,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Mean Girls",
+            "title": "Mean Girls",
             "type": "Film",
             "genre": ["Commedia"],
             "language": "Inglese",
@@ -3646,7 +3646,7 @@
             "theme": ["Scuola/Università", "Coming of Age"]
         },
         {
-            "titolo": "Hitch",
+            "title": "Hitch",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3655,7 +3655,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Her",
+            "title": "Her",
             "type": "Film",
             "genre": ["Fantascienza", "Dramma", "Romantico"],
             "language": "Inglese",
@@ -3664,7 +3664,7 @@
             "theme": ["Intelligenza Artificiale", "Amore"]
         },
         {
-            "titolo": "Aftersun",
+            "title": "Aftersun",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -3673,7 +3673,7 @@
             "theme": ["Famiglia", "Coming of Age"]
         },
         {
-            "titolo": "The Notebook",
+            "title": "The Notebook",
             "type": "Film",
             "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
@@ -3682,7 +3682,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "Thor",
+            "title": "Thor",
             "type": "Film",
             "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
@@ -3691,7 +3691,7 @@
             "theme": "Supereroi"
         },
         {
-            "titolo": "Beautiful Boy",
+            "title": "Beautiful Boy",
             "type": "Film",
             "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
@@ -3700,7 +3700,7 @@
             "theme": ["Famiglia", "Droghe"]
         },
         {
-            "titolo": "The Whale",
+            "title": "The Whale",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -3709,7 +3709,7 @@
             "theme": ["Psicologico", "Disturbi Mentali"]
         },
         {
-            "titolo": "Birdman",
+            "title": "Birdman",
             "type": "Film",
             "genre": ["Dramma", "Commedia", "Satira"],
             "language": "Inglese",
@@ -3718,7 +3718,7 @@
             "theme": ["Arte", "Psicologico"]
         },
         {
-            "titolo": "La fabbrica di cioccolato",
+            "title": "La fabbrica di cioccolato",
             "type": "Film",
             "genre": ["Fantasy", "Commedia", "Avventura"],
             "language": "Inglese",
@@ -3727,7 +3727,7 @@
             "theme": "Favola"
         },
         {
-            "titolo": "Qualcuno volò sul nido del cuculo",
+            "title": "Qualcuno volò sul nido del cuculo",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -3736,7 +3736,7 @@
             "theme": ["Psicologico", "Disturbi Mentali"]
         },
         {
-            "titolo": "Casablanca",
+            "title": "Casablanca",
             "type": "Film",
             "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
@@ -3745,7 +3745,7 @@
             "theme": ["Guerra", "Amore"]
         },
         {
-            "titolo": "Suspiria",
+            "title": "Suspiria",
             "type": "Film",
             "genre": ["Horror", "Thriller"],
             "language": "Italiano",
@@ -3754,7 +3754,7 @@
             "theme": "Soprannaturale"
         },
         {
-            "titolo": "Rocky",
+            "title": "Rocky",
             "type": "Film",
             "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
@@ -3763,7 +3763,7 @@
             "theme": "Boxe"
         },
         {
-            "titolo": "Vita di Pi",
+            "title": "Vita di Pi",
             "type": "Film",
             "genre": ["Avventura", "Dramma", "Fantasy"],
             "language": "Inglese",
@@ -3772,7 +3772,7 @@
             "theme": ["Sopravvivenza", "Animali"]
         },
         {
-            "titolo": "Superhero - Il più dotato fra i supereroi",
+            "title": "Superhero - Il più dotato fra i supereroi",
             "type": "Film",
             "genre": ["Commedia", "Parodia", "Azione"],
             "language": "Inglese",
@@ -3781,7 +3781,7 @@
             "theme": "Parody"
         },
         {
-            "titolo": "Avatar: La via dell'acqua",
+            "title": "Avatar: La via dell'acqua",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
@@ -3790,7 +3790,7 @@
             "theme": ["Avventura", "Ambientalismo", "Futuristico"]
         },
         {
-            "titolo": "Top Gun: Maverick",
+            "title": "Top Gun: Maverick",
             "type": "Film",
             "genre": ["Azione", "Dramma", "Avventura"],
             "language": "Inglese",
@@ -3799,7 +3799,7 @@
             "theme": ["Militare", "Guerra"]
         },
         {
-            "titolo": "Cena con delitto - Knives Out",
+            "title": "Cena con delitto - Knives Out",
             "type": "Film",
             "genre": ["Thriller", "Commedia", "Giallo"],
             "language": "Inglese",
@@ -3808,7 +3808,7 @@
             "theme": ["Mistero", "Crimine"]
         },
         {
-            "titolo": "Frozen - Il regno di ghiaccio",
+            "title": "Frozen - Il regno di ghiaccio",
             "type": "Film",
             "genre": ["Animazione", "Fantasy", "Musicale"],
             "language": "Inglese",
@@ -3817,7 +3817,7 @@
             "theme": ["Famiglia", "Musicale", "Magia"]
         },
         {
-            "titolo": "Moonlight",
+            "title": "Moonlight",
             "type": "Film",
             "genre": ["Dramma", "LGBTQ+"],
             "language": "Inglese",
@@ -3826,7 +3826,7 @@
             "theme": "Coming of Age"
         },
         {
-            "titolo": "Il discorso del re",
+            "title": "Il discorso del re",
             "type": "Film",
             "genre": ["Dramma", "Storico", "Biografico"],
             "language": "Inglese",
@@ -3835,7 +3835,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Non è un paese per vecchi",
+            "title": "Non è un paese per vecchi",
             "type": "Film",
             "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
@@ -3844,7 +3844,7 @@
             "theme": ["Crimine", "Psicologico"]
         },
         {
-            "titolo": "Nomadland",
+            "title": "Nomadland",
             "type": "Film",
             "genre": ["Dramma"],
             "language": "Inglese",
@@ -3853,7 +3853,7 @@
             "theme": ["Sopravvivenza", "Road Movie"]
         },
         {
-            "titolo": "Toy Story 4",
+            "title": "Toy Story 4",
             "type": "Film",
             "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
@@ -3862,7 +3862,7 @@
             "theme": ["Giocattoli", "Amicizia"]
         },
         {
-            "titolo": "A Quiet Place",
+            "title": "A Quiet Place",
             "type": "Film",
             "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
@@ -3871,7 +3871,7 @@
             "theme": ["Sopravvivenza", "Silenzio"]
         },
         {
-            "titolo": "Quarto potere",
+            "title": "Quarto potere",
             "type": "Film",
             "genre": ["Dramma", "Mistero", "Biografico"],
             "language": "Inglese",
@@ -3880,7 +3880,7 @@
             "theme": "Psicologico"
         },
         {
-            "titolo": "Via col vento",
+            "title": "Via col vento",
             "type": "Film",
             "genre": ["Dramma", "Romantico", "Guerra", "Storico"],
             "language": "Inglese",
@@ -3889,7 +3889,7 @@
             "theme": "Storico"
         },
         {
-            "titolo": "Star Wars: Gli ultimi Jedi",
+            "title": "Star Wars: Gli ultimi Jedi",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Avventura"],
             "language": "Inglese",
@@ -3898,7 +3898,7 @@
             "theme": "Avventura spaziale"
         },
         {
-            "titolo": "Bridesmaids",
+            "title": "Bridesmaids",
             "type": "Film",
             "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
@@ -3907,7 +3907,7 @@
             "theme": "Amore"
         },
         {
-            "titolo": "The Irishman",
+            "title": "The Irishman",
             "type": "Film",
             "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
@@ -3916,7 +3916,7 @@
             "theme": ["Mafia", "Crimine"]
         },
         {
-            "titolo": "1917",
+            "title": "1917",
             "type": "Film",
             "genre": ["Dramma", "Guerra", "Storico", "Azione"],
             "language": "Inglese",
@@ -3925,7 +3925,7 @@
             "theme": ["Guerra", "Storico"]
         },
         {
-            "titolo": "Guardiani della Galassia",
+            "title": "Guardiani della Galassia",
             "type": "Film",
             "genre": ["Fantascienza", "Avventura", "Commedia", "Azione"],
             "language": "Inglese",
@@ -3934,7 +3934,7 @@
             "theme": ["Supereroi", "Avventura spaziale"]
         },
         {
-            "titolo": "Matrix",
+            "title": "Matrix",
             "type": "Film",
             "genre": ["Fantascienza", "Azione", "Filosofico"],
             "language": "Inglese",
@@ -3943,7 +3943,7 @@
             "theme": ["Robot/AI", "Intelligenza Artificiale"]
         },
         {
-            "titolo": "La città incantata",
+            "title": "La città incantata",
             "type": "Film",
             "genre": ["Animazione", "Fantasy", "Avventura"],
             "language": "Giapponese",
