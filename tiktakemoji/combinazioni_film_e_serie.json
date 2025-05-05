@@ -496,7 +496,10 @@
             "lingua": "Inglese",
             "decennio": "Anni '90",
             "regista o attore": "Martin Scorsese",
-            "tema": "Mafia"
+            "tema": [
+                "Mafia",
+                "Crimine"
+            ]
         },
         {
             "title": "The Wolf of Wall Street",
