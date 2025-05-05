@@ -76,19 +76,14 @@ window.translations = {
     }
 };
 
-// Get the current language - This checks for parent page first, then URL, then browser preference
+// Get the current language - Uses the main site's language system
 window.getCurrentLanguage = function() {
-    // Try to get language from parent page if available
-    try {
-        if (window.parent && window.parent.currentLanguage) {
-            const parentLang = window.parent.currentLanguage;
-            if (parentLang === 'it' || parentLang === 'en') {
-                return parentLang;
-            }
-        }
-    } catch (e) {
-        console.log("Couldn't access parent language");
+    // Use the main site's getUserLanguage function if available
+    if (typeof getUserLanguage === 'function') {
+        return getUserLanguage();
     }
+    
+    // Fallback implementation if main site's function is not available
     
     // Try from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -120,6 +115,16 @@ window.getTranslation = function(key) {
 function applyGameTranslations() {
     const lang = window.getCurrentLanguage();
     const translationSet = window.translations[lang] || window.translations['en'];
+    
+    // Update page title and meta description based on language
+    document.title = translationSet.pageTitleDesc;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute('content', translationSet.metaDescription);
+    }
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
     
     // Update home button text
     document.getElementById('homeText').textContent = translationSet.home;
@@ -154,4 +159,18 @@ function applyGameTranslations() {
 }
 
 // Add the function to apply translations on page load
-document.addEventListener('DOMContentLoaded', applyGameTranslations); 
+document.addEventListener('DOMContentLoaded', applyGameTranslations);
+
+// Add a listener to reapply translations if language changes
+if (typeof window.addEventListener === 'function') {
+    // Check periodically for language changes
+    setInterval(function() {
+        const newLang = window.getCurrentLanguage();
+        const htmlLang = document.documentElement.lang;
+        
+        // If the page language doesn't match the current language, reapply translations
+        if (newLang !== htmlLang) {
+            applyGameTranslations();
+        }
+    }, 1000); // Check every second
+} 

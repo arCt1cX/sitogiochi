@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Translations and language support loaded first -->
+    <!-- Load main site language utility first -->
+    <script src="../lang.js"></script>
+    <!-- Translations and language support loaded after main language utility -->
     <script src="translations.js"></script>
     <!-- Dynamic meta tags based on browser language -->
     <script>
@@ -135,24 +137,6 @@
         </div>
     </div>
 
-    <!-- Support for parent page language -->
-    <script>
-        // Try to get language from parent page
-        try {
-            if (window.parent && window.parent.document) {
-                const parentLangEl = window.parent.document.querySelector('html[lang]');
-                if (parentLangEl && parentLangEl.lang) {
-                    const lang = parentLangEl.lang.substring(0, 2);
-                    if (lang === 'it' || lang === 'en') {
-                        window.parentLanguage = lang;
-                    }
-                }
-            }
-        } catch(e) {
-            console.log("Couldn't access parent page language");
-        }
-    </script>
-    
     <!-- Main scripts -->
     <script src="scripts.js"></script>
 </body>
