@@ -424,10 +424,19 @@ function createValidCombinationsGrid() {
             const colValue = gameState.colCategoryValues[col];
             
             // Find all films/series that match both the row and column criteria
-            const validEntries = gameState.filmsAndSeries.filter(entry => 
-                entry[rowCategory] === rowValue && 
-                entry[colCategory] === colValue
-            );
+            const validEntries = gameState.filmsAndSeries.filter(entry => {
+                // Check if the entry matches the row category value
+                const rowMatches = Array.isArray(entry[rowCategory]) 
+                    ? entry[rowCategory].includes(rowValue)
+                    : entry[rowCategory] === rowValue;
+                
+                // Check if the entry matches the column category value
+                const colMatches = Array.isArray(entry[colCategory])
+                    ? entry[colCategory].includes(colValue)
+                    : entry[colCategory] === colValue;
+                
+                return rowMatches && colMatches;
+            });
             
             rowCombinations.push(validEntries);
         }
@@ -500,10 +509,19 @@ function tryToFindMoreDiverseOption(row, col) {
     // Try each possible value
     for (const newColValue of otherPossibleValues) {
         // Check if this new value would create a valid cell
-        const validEntries = gameState.filmsAndSeries.filter(entry => 
-            entry[rowCategory] === rowValue && 
-            entry[currentColCategory] === newColValue
-        );
+        const validEntries = gameState.filmsAndSeries.filter(entry => {
+            // Check if the entry matches the row category value
+            const rowMatches = Array.isArray(entry[rowCategory]) 
+                ? entry[rowCategory].includes(rowValue)
+                : entry[rowCategory] === rowValue;
+            
+            // Check if the entry matches the new column value
+            const colMatches = Array.isArray(entry[currentColCategory])
+                ? entry[currentColCategory].includes(newColValue)
+                : entry[currentColCategory] === newColValue;
+            
+            return rowMatches && colMatches;
+        });
         
         // If we found valid entries and they're different from other cells
         if (validEntries.length > 0) {
@@ -696,11 +714,11 @@ function showTitleOptions(row, col) {
         
         // Add tooltip with more details about the entry
         let tooltip = `${entry.title} (${entry.type})`;
-        tooltip += `\n${window.getTranslation('genre')}: ${entry.genre}`;
+        tooltip += `\n${window.getTranslation('genre')}: ${Array.isArray(entry.genre) ? entry.genre.join(', ') : entry.genre}`;
         tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
         tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
         if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
-        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${entry.theme}`;
+        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${Array.isArray(entry.theme) ? entry.theme.join(', ') : entry.theme}`;
         
         option.title = tooltip;
         
@@ -1073,11 +1091,11 @@ function showValidAnswers(row, col) {
         
         // Add tooltip with details
         let tooltip = `${entry.title} (${entry.type})`;
-        tooltip += `\n${window.getTranslation('genre')}: ${entry.genre}`;
+        tooltip += `\n${window.getTranslation('genre')}: ${Array.isArray(entry.genre) ? entry.genre.join(', ') : entry.genre}`;
         tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
         tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
         if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
-        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${entry.theme}`;
+        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${Array.isArray(entry.theme) ? entry.theme.join(', ') : entry.theme}`;
         
         answerItem.title = tooltip;
         

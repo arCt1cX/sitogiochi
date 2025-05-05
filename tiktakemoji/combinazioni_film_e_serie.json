@@ -768,7 +768,7 @@
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "J.J. Abrams",
-            "theme": "Mistero"
+            "theme": ["Mistero", "Sopravvivenza"]
         },
         {
             "title": "Dexter",
@@ -1038,7 +1038,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Jason Rothenberg",
-            "theme": "Post-apocalittico"
+            "theme": ["Post-apocalittico", "Sopravvivenza"]
         },
         {
             "title": "The Wire",
@@ -2568,7 +2568,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Marc Forster",
-            "theme": "Zombie"
+            "theme": ["Zombie", "Sopravvivenza"]
         },
         {
             "title": "La Notte del Giudizio",
