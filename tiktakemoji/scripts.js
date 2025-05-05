@@ -284,7 +284,7 @@ function selectRandomCategories() {
                     const matchingEntries = gameState.filmsAndSeries.filter(entry => {
                         if (!entry[rowCategory]) return false;
                         
-                        // Check if entry matches the row category value
+                        // Check if entry matches the row category value EXACTLY
                         if (Array.isArray(entry[rowCategory])) {
                             return entry[rowCategory].some(val => 
                                 String(val).toLowerCase() === String(value).toLowerCase()
@@ -299,7 +299,7 @@ function selectRandomCategories() {
                     const categoryMatches = new Set();
                     for (const entry of matchingEntries) {
                         for (const catType of categoryTypes) {
-                            if (!gameState.rowCategories.includes(catType)) {
+                            if (!gameState.rowCategories.includes(catType) && entry[catType]) {
                                 categoryMatches.add(catType);
                             }
                         }
@@ -361,7 +361,7 @@ function selectRandomCategories() {
                             const matchExists = gameState.filmsAndSeries.some(entry => {
                                 if (!entry[rowCategory] || !entry[colCategory]) return false;
                                 
-                                // Check row match
+                                // Check row match EXACTLY
                                 let rowMatches = false;
                                 if (Array.isArray(entry[rowCategory])) {
                                     rowMatches = entry[rowCategory].some(val => 
@@ -371,7 +371,7 @@ function selectRandomCategories() {
                                     rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
                                 }
                                 
-                                // Check column match
+                                // Check column match EXACTLY
                                 let colMatches = false;
                                 if (Array.isArray(entry[colCategory])) {
                                     colMatches = entry[colCategory].some(val => 
@@ -425,6 +425,8 @@ function selectRandomCategories() {
         return;
     } else {
         console.log("Found valid category combinations after", attempts, "attempts");
+        console.log("Row categories:", gameState.rowCategories, "with values:", gameState.rowCategoryValues);
+        console.log("Col categories:", gameState.colCategories, "with values:", gameState.colCategoryValues);
     }
     
     // Create the valid combinations grid
@@ -482,24 +484,24 @@ function createValidCombinationsGrid() {
                 // Check if the entry matches the row category value
                 let rowMatches = false;
                 if (Array.isArray(entry[rowCategory])) {
-                    // For arrays, check if any value in the array matches
+                    // For arrays, check if any exact value in the array matches
                     rowMatches = entry[rowCategory].some(value => 
                         String(value).toLowerCase() === String(rowValue).toLowerCase()
                     );
                 } else {
-                    // For strings, directly compare
+                    // For strings, do exact comparison
                     rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
                 }
                 
                 // Check if the entry matches the column category value
                 let colMatches = false;
                 if (Array.isArray(entry[colCategory])) {
-                    // For arrays, check if any value in the array matches
+                    // For arrays, check if any exact value in the array matches
                     colMatches = entry[colCategory].some(value => 
                         String(value).toLowerCase() === String(colValue).toLowerCase()
                     );
                 } else {
-                    // For strings, directly compare
+                    // For strings, do exact comparison
                     colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
                 }
                 
@@ -586,24 +588,24 @@ function tryToFindMoreDiverseOption(row, col) {
             // Check if the entry matches the row category value
             let rowMatches = false;
             if (Array.isArray(entry[rowCategory])) {
-                // For arrays, check if any value in the array matches
+                // For arrays, check if any exact value in the array matches
                 rowMatches = entry[rowCategory].some(value => 
                     String(value).toLowerCase() === String(rowValue).toLowerCase()
                 );
             } else {
-                // For strings, directly compare
+                // For strings, do exact comparison
                 rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
             }
             
             // Check if the entry matches the new column value
             let colMatches = false;
             if (Array.isArray(entry[currentColCategory])) {
-                // For arrays, check if any value in the array matches
+                // For arrays, check if any exact value in the array matches
                 colMatches = entry[currentColCategory].some(value => 
                     String(value).toLowerCase() === String(newColValue).toLowerCase()
                 );
             } else {
-                // For strings, directly compare
+                // For strings, do exact comparison
                 colMatches = String(entry[currentColCategory]).toLowerCase() === String(newColValue).toLowerCase();
             }
             
@@ -617,8 +619,8 @@ function tryToFindMoreDiverseOption(row, col) {
             for (let otherCol = 0; otherCol < 3; otherCol++) {
                 if (otherCol !== col) {
                     const otherSet = gameState.validCellCombinations[row][otherCol];
-                    const otherTitles = otherSet.map(entry => entry.title).sort().join(',');
-                    const newTitles = validEntries.map(entry => entry.title).sort().join(',');
+                    const otherTitles = otherSet.map(entry => entry.title || entry.titolo).sort().join(',');
+                    const newTitles = validEntries.map(entry => entry.title || entry.titolo).sort().join(',');
                     
                     if (otherTitles === newTitles) {
                         isDifferent = false;
