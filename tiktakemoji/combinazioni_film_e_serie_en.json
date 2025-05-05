@@ -22,7 +22,7 @@
             "Biographical",
             "Satire",
             "Gothic",
-            "Slasher"     
+            "Slasher"
         ],
         "lingua": [
             "English",
@@ -191,5 +191,4862 @@
             "LGBTQ+"
         ]
     },
-    "entries": []
+    "entries": [
+        {
+            "title": "Inception",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Leonardo DiCaprio",
+                "Joseph Gordon-Levitt",
+                "Cillian Murphy"
+            ],
+            "tema": "Futuristic"
+        },
+        {
+            "title": "Pulp Fiction",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Quentin Tarantino",
+            "tema": "Crime"
+        },
+        {
+            "title": "My Neighbor Totoro",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Fantasy"
+            ],
+            "lingua": "Japanese",
+            "decennio": "80s",
+            "regista o attore": "Hayao Miyazaki",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "Stranger Things",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Horror",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Duffer Brothers",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Parasite",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Comedy"
+            ],
+            "lingua": "Korean",
+            "decennio": "2010s",
+            "regista o attore": "Bong Joon-ho",
+            "tema": "Family"
+        },
+        {
+            "title": "Oldboy",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Action"
+            ],
+            "lingua": "Korean",
+            "decennio": "2000s",
+            "regista o attore": "Park Chan-wook",
+            "tema": "Revenge"
+        },
+        {
+            "title": "Your Name",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Romance"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2010s",
+            "regista o attore": "Makoto Shinkai",
+            "tema": "Love"
+        },
+        {
+            "title": "Dunkirk",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Cillian Murphy"
+            ],
+            "tema": "War"
+        },
+        {
+            "title": "The Fabelmans",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Family"
+        },
+        {
+            "title": "I, Daniel Blake",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Social"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ken Loach",
+            "tema": "Politics"
+        },
+        {
+            "title": "Interstellar",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Matthew McConaughey",
+                "Timothée Chalamet"
+            ],
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Life is Beautiful",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy",
+                "Historical"
+            ],
+            "lingua": "Italian",
+            "decennio": "90s",
+            "regista o attore": "Roberto Benigni",
+            "tema": "War"
+        },
+        {
+            "title": "Batman: The Dark Knight",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Thriller",
+                "Drama",
+                "Superhero",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Christian Bale"
+            ],
+            "tema": "Crime"
+        },
+        {
+            "title": "Princess Mononoke",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure"
+            ],
+            "lingua": "Japanese",
+            "decennio": "90s",
+            "regista o attore": "Hayao Miyazaki",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "Breaking Bad",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Vince Gilligan",
+            "tema": "Crime"
+        },
+        {
+            "title": "The Crown",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Peter Morgan",
+            "tema": "Historical"
+        },
+        {
+            "title": "Squid Game",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Action"
+            ],
+            "lingua": "Korean",
+            "decennio": "2020s",
+            "regista o attore": "Hwang Dong-hyuk",
+            "tema": "Survival"
+        },
+        {
+            "title": "Money Heist",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Action"
+            ],
+            "lingua": "Spanish",
+            "decennio": "2010s",
+            "regista o attore": "Álex Pina",
+            "tema": "Crime"
+        },
+        {
+            "title": "Kill Bill",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Quentin Tarantino",
+            "tema": "Revenge"
+        },
+        {
+            "title": "Spirited Away",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2000s",
+            "regista o attore": "Hayao Miyazaki",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "E.T.",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Friendship"
+        },
+        {
+            "title": "Jurassic Park",
+            "tipo": "Movie",
+            "genere": [
+                "Adventure",
+                "Sci-Fi",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Survival"
+        },
+        {
+            "title": "Goodfellas",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Martin Scorsese",
+            "tema": "Mafia"
+        },
+        {
+            "title": "The Wolf of Wall Street",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Martin Scorsese",
+                "Leonardo DiCaprio",
+                "Matthew McConaughey",
+                "Margot Robbie"
+            ],
+            "tema": [
+                "Crime",
+                "Drugs"
+            ]
+        },
+        {
+            "title": "Gravity",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Alfonso Cuarón",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Roma",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Spanish",
+            "decennio": "2010s",
+            "regista o attore": "Alfonso Cuarón",
+            "tema": "Family"
+        },
+        {
+            "title": "Twin Peaks",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "David Lynch",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Schindler\u0027s List",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "War"
+        },
+        {
+            "title": "The Mandalorian",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Jon Favreau",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Cinema Paradiso",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Italian",
+            "decennio": "90s",
+            "regista o attore": "Giuseppe Tornatore",
+            "tema": "Friendship"
+        },
+        {
+            "title": "Emily in Paris",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Darren Star",
+            "tema": "Love"
+        },
+        {
+            "title": "Amélie",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Comedy"
+            ],
+            "lingua": "French",
+            "decennio": "2000s",
+            "regista o attore": "Jean-Pierre Jeunet",
+            "tema": "Love"
+        },
+        {
+            "title": "Weathering With You",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Romance",
+                "Fantasy"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2010s",
+            "regista o attore": "Makoto Shinkai",
+            "tema": "Love"
+        },
+        {
+            "title": "Get Out",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jordan Peele",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Hereditary",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Drama",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ari Aster",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Il divo",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical"
+            ],
+            "lingua": "Italian",
+            "decennio": "2000s",
+            "regista o attore": "Paolo Sorrentino",
+            "tema": "Politics"
+        },
+        {
+            "title": "The Great Beauty",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Italian",
+            "decennio": "2010s",
+            "regista o attore": "Paolo Sorrentino",
+            "tema": "Drama"
+        },
+        {
+            "title": "Decision to Leave",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Romance",
+                "Mystery"
+            ],
+            "lingua": "Korean",
+            "decennio": "2020s",
+            "regista o attore": "Park Chan-wook",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Train to Busan",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "Korean",
+            "decennio": "2010s",
+            "regista o attore": "Yeon Sang-ho",
+            "tema": "Survival"
+        },
+        {
+            "title": "Lupin",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Adventure"
+            ],
+            "lingua": "French",
+            "decennio": "2020s",
+            "regista o attore": "George Kay",
+            "tema": "Crime"
+        },
+        {
+            "title": "Drive My Car",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2020s",
+            "regista o attore": "Ryusuke Hamaguchi",
+            "tema": "Family"
+        },
+        {
+            "title": "Back to the Future",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Robert Zemeckis",
+            "tema": "Time Travel"
+        },
+        {
+            "title": "The Matrix",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Action",
+                "Philosophical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Wachowski Sisters",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "2001: A Space Odyssey",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Stanley Kubrick",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Blade Runner",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Noir"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Ridley Scott",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "Westworld",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Drama",
+                "Western"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jonathan Nolan",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "Ex Machina",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Alex Garland",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "The Great Gatsby",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Baz Luhrmann",
+                "Leonardo DiCaprio"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "Call Me By Your Name",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Luca Guadagnino",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "Lady Bird",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Greta Gerwig",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "The Godfather",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Francis Ford Coppola",
+            "tema": "Mafia"
+        },
+        {
+            "title": "Mad Max: Fury Road",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "George Miller",
+            "tema": "Post-apocalyptic"
+        },
+        {
+            "title": "The Walking Dead",
+            "tipo": "TV Series",
+            "genere": [
+                "Horror",
+                "Drama",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Frank Darabont",
+            "tema": "Post-apocalyptic"
+        },
+        {
+            "title": "Game of Thrones",
+            "tipo": "TV Series",
+            "genere": [
+                "Fantasy",
+                "Drama",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Benioff \u0026 D.B. Weiss",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "Friends",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "David Crane \u0026 Marta Kauffman",
+            "tema": "Friendship"
+        },
+        {
+            "title": "The Office",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Greg Daniels",
+            "tema": "Office/Work"
+        },
+        {
+            "title": "The Big Bang Theory",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Chuck Lorre",
+            "tema": "Friendship"
+        },
+        {
+            "title": "House of Cards",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Political"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Beau Willimon",
+            "tema": "Politics"
+        },
+        {
+            "title": "Narcos",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Chris Brancato",
+            "tema": "Crime"
+        },
+        {
+            "title": "The Sopranos",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "David Chase",
+            "tema": "Mafia"
+        },
+        {
+            "title": "How I Met Your Mother",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Carter Bays \u0026 Craig Thomas",
+            "tema": "Friendship"
+        },
+        {
+            "title": "The Witcher",
+            "tipo": "TV Series",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Lauren Schmidt Hissrich",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "Black Mirror",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Charlie Brooker",
+            "tema": "Futuristic"
+        },
+        {
+            "title": "Peaky Blinders",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Steven Knight",
+                "Cillian Murphy"
+            ],
+            "tema": [
+                "Mafia",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Sherlock",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Mark Gatiss \u0026 Steven Moffat",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Lost",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "J.J. Abrams",
+            "tema": [
+                "Mystery",
+                "Survival"
+            ]
+        },
+        {
+            "title": "Dexter",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "James Manos Jr.",
+            "tema": "Crime"
+        },
+        {
+            "title": "Better Call Saul",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Peter Gould",
+            "tema": "Law"
+        },
+        {
+            "title": "Suits",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Aaron Korsh",
+            "tema": "Law"
+        },
+        {
+            "title": "Grey\u0027s Anatomy",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Shonda Rhimes",
+            "tema": "Medicine"
+        },
+        {
+            "title": "Vikings",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Michael Hirst",
+            "tema": "Historical"
+        },
+        {
+            "title": "Prison Break",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Drama",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Paul Scheuring",
+            "tema": "Prison"
+        },
+        {
+            "title": "13 Reasons Why",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Brian Yorkey",
+            "tema": "School/University"
+        },
+        {
+            "title": "The Queen\u0027s Gambit",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Scott Frank",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "Euphoria",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Sam Levinson",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "Ozark",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Bill Dubuque \u0026 Mark Williams",
+            "tema": "Crime"
+        },
+        {
+            "title": "Dark",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Drama",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Baran bo Odar",
+            "tema": "Time Travel"
+        },
+        {
+            "title": "The Boys",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Comedy",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Eric Kripke",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Severance",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Dan Erickson",
+            "tema": "Futuristic"
+        },
+        {
+            "title": "True Detective",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Nic Pizzolatto",
+                "Matthew McConaughey"
+            ],
+            "tema": "Mystery"
+        },
+        {
+            "title": "Fargo",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Crime",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Noah Hawley",
+            "tema": "Crime"
+        },
+        {
+            "title": "Sex Education",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Laurie Nunn",
+            "tema": [
+                "Coming of Age",
+                "LGBTQ+"
+            ]
+        },
+        {
+            "title": "BoJack Horseman",
+            "tipo": "TV Series",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Raphael Bob-Waksberg",
+            "tema": "Drama"
+        },
+        {
+            "title": "Rick and Morty",
+            "tipo": "TV Series",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Dan Harmon \u0026 Justin Roiland",
+            "tema": "Sci-Fi"
+        },
+        {
+            "title": "Modern Family",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Christopher Lloyd \u0026 Steven Levitan",
+            "tema": "Family"
+        },
+        {
+            "title": "House M.D.",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Medical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Shore",
+            "tema": "Medicine"
+        },
+        {
+            "title": "Lucifer",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Fantasy",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Tom Kapinos",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Wednesday",
+            "tipo": "TV Series",
+            "genere": [
+                "Fantasy",
+                "Comedy",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Alfred Gough \u0026 Miles Millar",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Bridgerton",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Chris Van Dusen",
+            "tema": "Romance"
+        },
+        {
+            "title": "Daredevil",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Drew Goddard",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Jessica Jones",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Drama",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Melissa Rosenberg",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "The Umbrella Academy",
+            "tipo": "TV Series",
+            "genere": [
+                "Action",
+                "Comedy",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Steve Blackman",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Homeland",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Espionage"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Alex Gansa \u0026 Howard Gordon",
+            "tema": "Espionage"
+        },
+        {
+            "title": "Succession",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Dark Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jesse Armstrong",
+            "tema": "Family"
+        },
+        {
+            "title": "The Last of Us",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Horror",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Craig Mazin \u0026 Neil Druckmann",
+            "tema": "Post-apocalyptic"
+        },
+        {
+            "title": "The 100",
+            "tipo": "TV Series",
+            "genere": [
+                "Sci-Fi",
+                "Drama",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jason Rothenberg",
+            "tema": [
+                "Post-apocalyptic",
+                "Survival"
+            ]
+        },
+        {
+            "title": "The Wire",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Simon",
+            "tema": "Crime"
+        },
+        {
+            "title": "Brooklyn Nine-Nine",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Dan Goor \u0026 Michael Schur",
+            "tema": "Police"
+        },
+        {
+            "title": "Mindhunter",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Joe Penhall",
+            "tema": "Police"
+        },
+        {
+            "title": "The Alienist",
+            "tipo": "TV Series",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Cary Fukunaga \u0026 Daniel Minahan",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Sons of Anarchy",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Kurt Sutter",
+            "tema": [
+                "Mafia",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Mad Men",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Matthew Weiner",
+            "tema": "Office/Work"
+        },
+        {
+            "title": "Orange is the New Black",
+            "tipo": "TV Series",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jenji Kohan",
+            "tema": "Prison"
+        },
+        {
+            "title": "River Monsters",
+            "tipo": "TV Series",
+            "genere": [
+                "Documentary",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Jeremy Wade",
+            "tema": "Animals"
+        },
+        {
+            "title": "Impractical Jokers",
+            "tipo": "TV Series",
+            "genere": [
+                "Comedy",
+                "Reality"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Brian Quinn \u0026 Joe Gatto",
+            "tema": "Friendship"
+        },
+        {
+            "title": "Star Wars: The Force Awakens",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "J.J. Abrams",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Peter Jackson",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "Gladiator",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Ridley Scott",
+            "tema": "Historical"
+        },
+        {
+            "title": "The Shawshank Redemption",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Frank Darabont",
+            "tema": "Prison"
+        },
+        {
+            "title": "Oppenheimer",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Cillian Murphy"
+            ],
+            "tema": "Historical"
+        },
+        {
+            "title": "Joker",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Todd Phillips",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Beauty and the Beast",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Fantasy",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Gary Trousdale \u0026 Kirk Wise",
+            "tema": "Love"
+        },
+        {
+            "title": "Dead Poets Society",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Peter Weir",
+            "tema": "School/University"
+        },
+        {
+            "title": "Apocalypse Now",
+            "tipo": "Movie",
+            "genere": [
+                "War",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": "Francis Ford Coppola",
+            "tema": "War"
+        },
+        {
+            "title": "The Lion King",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Drama",
+                "Adventure",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Roger Allers \u0026 Rob Minkoff",
+            "tema": "Family"
+        },
+        {
+            "title": "Finding Nemo",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Andrew Stanton",
+            "tema": "Family"
+        },
+        {
+            "title": "Taxi Driver",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": [
+                "Martin Scorsese",
+                "Robert De Niro"
+            ],
+            "tema": "Psychological"
+        },
+        {
+            "title": "Home Alone",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Chris Columbus",
+            "tema": "Family"
+        },
+        {
+            "title": "Jaws",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Survival"
+        },
+        {
+            "title": "Kingdom of Heaven",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Ridley Scott",
+            "tema": "War"
+        },
+        {
+            "title": "Troy",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Wolfgang Petersen",
+            "tema": "War"
+        },
+        {
+            "title": "Memories of Murder",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "Korean",
+            "decennio": "2000s",
+            "regista o attore": "Bong Joon-ho",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Avatar",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "James Cameron",
+            "tema": "Adventure"
+        },
+        {
+            "title": "Harry Potter and the Sorcerer\u0027s Stone",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Family"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Chris Columbus",
+            "tema": "Magic"
+        },
+        {
+            "title": "Avengers: Endgame",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Anthony \u0026 Joe Russo",
+                "Scarlett Johansson"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Black Panther",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ryan Coogler",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Iron Man",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Jon Favreau",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Spider-Man",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Sam Raimi",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Fight Club",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "David Fincher",
+                "Brad Pitt"
+            ],
+            "tema": "Psychological"
+        },
+        {
+            "title": "Inglourious Basterds",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Quentin Tarantino",
+                "Brad Pitt"
+            ],
+            "tema": "War"
+        },
+        {
+            "title": "The Silence of the Lambs",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Jonathan Demme",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Three Men and a Leg",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "Italian",
+            "decennio": "90s",
+            "regista o attore": "Aldo, Giovanni e Giacomo",
+            "tema": "Comedy"
+        },
+        {
+            "title": "Star Trek",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "J.J. Abrams",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Fast and Furious",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Justin Lin",
+            "tema": "Cars"
+        },
+        {
+            "title": "The Shining",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Stanley Kubrick",
+            "tema": "Psychological"
+        },
+        {
+            "title": "It",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Andy Muschietti",
+            "tema": "Clowns"
+        },
+        {
+            "title": "Saw",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "James Wan",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Friday the 13th",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Slasher"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Sean Cunningham",
+            "tema": "Horror"
+        },
+        {
+            "title": "The Chronicles of Narnia",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Family"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Andrew Adamson",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "The Hunger Games",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jennifer Lawrence",
+            "tema": "Survival"
+        },
+        {
+            "title": "Maze Runner",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Wes Ball",
+            "tema": "Survival"
+        },
+        {
+            "title": "A Clockwork Orange",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": "Stanley Kubrick",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Saving Private Ryan",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "War"
+        },
+        {
+            "title": "Full Metal Jacket",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Stanley Kubrick",
+            "tema": "War"
+        },
+        {
+            "title": "A.I. Artificial Intelligence",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "8 Mile",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Curtis Hanson",
+            "tema": "Music"
+        },
+        {
+            "title": "Forrest Gump",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Robert Zemeckis",
+            "tema": "Drama"
+        },
+        {
+            "title": "Seven Samurai",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Adventure"
+            ],
+            "lingua": "Japanese",
+            "decennio": "50s",
+            "regista o attore": "Akira Kurosawa",
+            "tema": "War"
+        },
+        {
+            "title": "The Green Mile",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Fantasy",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Frank Darabont",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "The Pianist",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Roman Polanski",
+            "tema": "War"
+        },
+        {
+            "title": "The Intouchables",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Drama",
+                "Biographical"
+            ],
+            "lingua": "French",
+            "decennio": "2010s",
+            "regista o attore": "Olivier Nakache \u0026 Éric Toledano",
+            "tema": "Friendship"
+        },
+        {
+            "title": "Alien",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": "Ridley Scott",
+            "tema": [
+                "Survival",
+                "Aliens"
+            ]
+        },
+        {
+            "title": "Django Unchained",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Western",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Quentin Tarantino",
+                "Leonardo DiCaprio"
+            ],
+            "tema": "Revenge"
+        },
+        {
+            "title": "WALL-E",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Andrew Stanton",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "Indiana Jones",
+            "tipo": "Movie",
+            "genere": [
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Steven Spielberg",
+            "tema": "Adventure"
+        },
+        {
+            "title": "Toy Story",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "John Lasseter",
+            "tema": "Toys"
+        },
+        {
+            "title": "Scarface",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Brian De Palma",
+            "tema": "Mafia"
+        },
+        {
+            "title": "Up",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure",
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Pete Docter",
+            "tema": "Adventure"
+        },
+        {
+            "title": "The Truman Show",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Peter Weir",
+                "Jim Carrey"
+            ],
+            "tema": "Drama"
+        },
+        {
+            "title": "V for Vendetta",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "James McTeigue",
+            "tema": "Politics"
+        },
+        {
+            "title": "Monsters, Inc.",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Pete Docter",
+            "tema": "Friendship"
+        },
+        {
+            "title": "Ratatouille",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Brad Bird",
+            "tema": "Cooking"
+        },
+        {
+            "title": "How to Train Your Dragon",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Adventure",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Chris Sanders \u0026 Dean DeBlois",
+            "tema": "Animals"
+        },
+        {
+            "title": "Terminator",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "James Cameron",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "The Wizard of Oz",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "60s",
+            "regista o attore": "Victor Fleming",
+            "tema": "Fantasy"
+        },
+        {
+            "title": "The Incredibles",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Action",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Brad Bird",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Hachi: A Dog\u0027s Tale",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Lasse Hallström",
+            "tema": [
+                "Animals",
+                "Friendship",
+                "Family"
+            ]
+        },
+        {
+            "title": "Rush",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical",
+                "Sports"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ron Howard",
+            "tema": "Sports"
+        },
+        {
+            "title": "The Exorcist",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "70s",
+            "regista o attore": "William Friedkin",
+            "tema": "Paranormal"
+        },
+        {
+            "title": "Barbie",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Adventure",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Greta Gerwig",
+                "Margot Robbie"
+            ],
+            "tema": "Comedy"
+        },
+        {
+            "title": "Scream",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Mystery",
+                "Thriller",
+                "Slasher"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Wes Craven",
+            "tema": "Horror"
+        },
+        {
+            "title": "Split",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "M. Night Shyamalan",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Sausage Party",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Conrad Vernon \u0026 Greg Tiernan",
+            "tema": "Comedy"
+        },
+        {
+            "title": "The Martian",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ridley Scott",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "The Hangover",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Todd Phillips",
+            "tema": "Comedy"
+        },
+        {
+            "title": "The Great Dictator",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Satire",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "40s",
+            "regista o attore": "Charlie Chaplin",
+            "tema": "Politics"
+        },
+        {
+            "title": "Shutter Island",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Martin Scorsese",
+                "Leonardo DiCaprio"
+            ],
+            "tema": [
+                "Psychological",
+                "Mystery"
+            ]
+        },
+        {
+            "title": "I Am Legend",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Horror",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Francis Lawrence",
+            "tema": "Post-apocalyptic"
+        },
+        {
+            "title": "Night at the Museum",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Fantasy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Shawn Levy",
+            "tema": "Magic"
+        },
+        {
+            "title": "The Butterfly Effect",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Eric Bress \u0026 J. Mackye Gruber",
+            "tema": "Time Travel"
+        },
+        {
+            "title": "Catch Me If You Can",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Steven Spielberg",
+                "Leonardo DiCaprio"
+            ],
+            "tema": "Crime"
+        },
+        {
+            "title": "The Devil Wears Prada",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Frankel",
+            "tema": "Fashion"
+        },
+        {
+            "title": "Mr. & Mrs. Smith",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Doug Liman",
+                "Brad Pitt",
+                "Angelina Jolie"
+            ],
+            "tema": "Espionage"
+        },
+        {
+            "title": "A Lot Like Love",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Nigel Cole",
+            "tema": "Love"
+        },
+        {
+            "title": "Madagascar",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Eric Darnell \u0026 Tom McGrath",
+            "tema": "Animals"
+        },
+        {
+            "title": "White Chicks",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Keenen Ivory Wayans",
+            "tema": "Comedy"
+        },
+        {
+            "title": "Eternal Sunshine of the Spotless Mind",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Michel Gondry",
+                "Jim Carrey"
+            ],
+            "tema": "Memory"
+        },
+        {
+            "title": "How to Lose a Guy in 10 Days",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Donald Petrie",
+                "Matthew McConaughey"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "The Ring",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Gore Verbinski",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "The 40-Year-Old Virgin",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Judd Apatow",
+            "tema": "Comedy"
+        },
+        {
+            "title": "Zoolander",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Satire"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Ben Stiller",
+            "tema": "Fashion"
+        },
+        {
+            "title": "Battle Royale",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2000s",
+            "regista o attore": "Kinji Fukasaku",
+            "tema": "Survival"
+        },
+        {
+            "title": "Donnie Darko",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Richard Kelly",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Billy Elliot",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Stephen Daldry",
+            "tema": "Dance"
+        },
+        {
+            "title": "Final Destination",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "James Wong",
+            "tema": "Death"
+        },
+        {
+            "title": "Girl, Interrupted",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "James Mangold",
+                "Angelina Jolie"
+            ],
+            "tema": "Mental disorders"
+        },
+        {
+            "title": "American Pie",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Paul Weitz",
+            "tema": [
+                "Adolescence",
+                "Coming of Age"
+            ]
+        },
+        {
+            "title": "The Sixth Sense",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "M. Night Shyamalan",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Notting Hill",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Roger Michell",
+            "tema": "Love"
+        },
+        {
+            "title": "10 Things I Hate About You",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Gil Junger",
+                "Joseph Gordon-Levitt"
+            ],
+            "tema": [
+                "Love",
+                "Coming of Age"
+            ]
+        },
+        {
+            "title": "Meet Joe Black",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Martin Brest",
+                "Brad Pitt"
+            ],
+            "tema": "Death"
+        },
+        {
+            "title": "Cure",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror"
+            ],
+            "lingua": "Japanese",
+            "decennio": "90s",
+            "regista o attore": "Kiyoshi Kurosawa",
+            "tema": "Psychological"
+        },
+        {
+            "title": "I Know What You Did Last Summer",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Jim Gillespie",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Perfect Blue",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Thriller"
+            ],
+            "lingua": "Japanese",
+            "decennio": "90s",
+            "regista o attore": "Satoshi Kon",
+            "tema": "Psychological"
+        },
+        {
+            "title": "The Basketball Diaries",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Leonardo DiCaprio",
+            "tema": [
+                "Adolescence",
+                "Drugs",
+                "Coming of Age"
+            ]
+        },
+        {
+            "title": "Reservoir Dogs",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Quentin Tarantino",
+            "tema": "Crime"
+        },
+        {
+            "title": "Misery",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Rob Reiner",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Die Hard",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "John McTiernan",
+            "tema": "Terrorism"
+        },
+        {
+            "title": "Memento",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Christopher Nolan",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Requiem for a Dream",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Darren Aronofsky",
+            "tema": "Drama"
+        },
+        {
+            "title": "Trainspotting",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Danny Boyle",
+            "tema": "Drama"
+        },
+        {
+            "title": "American Psycho",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Mary Harron",
+                "Christian Bale"
+            ],
+            "tema": "Psychological"
+        },
+        {
+            "title": "American Beauty",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Satire",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Sam Mendes",
+            "tema": "Drama"
+        },
+        {
+            "title": "Good Will Hunting",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Gus Van Sant",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "Seven",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Mystery"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "David Fincher",
+                "Brad Pitt"
+            ],
+            "tema": "Psychological"
+        },
+        {
+            "title": "Stand by Me",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Rob Reiner",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "The Handmaiden",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "Korean",
+            "decennio": "2010s",
+            "regista o attore": "Park Chan-wook",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Black Swan",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Darren Aronofsky",
+            "tema": [
+                "Dance",
+                "Psychological"
+            ]
+        },
+        {
+            "title": "Grave of the Fireflies",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Drama"
+            ],
+            "lingua": "Japanese",
+            "decennio": "80s",
+            "regista o attore": "Isao Takahata",
+            "tema": "War"
+        },
+        {
+            "title": "Mickey 17",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Action",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Bong Joon-ho",
+                "Robert Pattinson"
+            ],
+            "tema": "Futuristic"
+        },
+        {
+            "title": "Babylon",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Historical",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Damien Chazelle",
+                "Brad Pitt",
+                "Margot Robbie"
+            ],
+            "tema": "Music"
+        },
+        {
+            "title": "Mystic River",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Clint Eastwood",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Paprika",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Sci-Fi"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2000s",
+            "regista o attore": "Satoshi Kon",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Mulholland Drive",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Lynch",
+            "tema": "Psychological"
+        },
+        {
+            "title": "The House That Jack Built",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Drama",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Lars von Trier",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Incendies",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "French",
+            "decennio": "2010s",
+            "regista o attore": "Denis Villeneuve",
+            "tema": "War"
+        },
+        {
+            "title": "The Host",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "Korean",
+            "decennio": "2000s",
+            "regista o attore": "Bong Joon-ho",
+            "tema": "Monsters"
+        },
+        {
+            "title": "Godzilla Minus One",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Sci-Fi"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2020s",
+            "regista o attore": "Takashi Yamazaki",
+            "tema": "Monsters"
+        },
+        {
+            "title": "The Fly",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "David Cronenberg",
+            "tema": "Body Horror"
+        },
+        {
+            "title": "Before Midnight",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Richard Linklater",
+            "tema": "Love"
+        },
+        {
+            "title": "Before Sunset",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Richard Linklater",
+            "tema": "Love"
+        },
+        {
+            "title": "Before Sunrise",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": "Richard Linklater",
+            "tema": "Love"
+        },
+        {
+            "title": "Zodiac",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Fincher",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Lost in Translation",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Sofia Coppola",
+                "Scarlett Johansson"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "Nosferatu",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Gothic"
+            ],
+            "lingua": "English",
+            "decennio": "20s",
+            "regista o attore": "F.W. Murnau",
+            "tema": "Horror"
+        },
+        {
+            "title": "The Grand Budapest Hotel",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Wes Anderson",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Paris, Texas",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Wim Wenders",
+            "tema": "Family"
+        },
+        {
+            "title": "City of God",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime",
+                "Action"
+            ],
+            "lingua": "Spanish",
+            "decennio": "2000s",
+            "regista o attore": "Fernando Meirelles",
+            "tema": "Crime"
+        },
+        {
+            "title": "There Will Be Blood",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Paul Thomas Anderson",
+            "tema": "Historical"
+        },
+        {
+            "title": "Pulse",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Sci-Fi"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2000s",
+            "regista o attore": "Kiyoshi Kurosawa",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Terrifier",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Slasher"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Damien Leone",
+            "tema": "Clowns"
+        },
+        {
+            "title": "Rosemary\u0027s Baby",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "60s",
+            "regista o attore": "Roman Polanski",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Smile",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Psychological"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Parker Finn",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "The Substance",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Coralie Fargeat",
+            "tema": "Body Horror"
+        },
+        {
+            "title": "Nosferatu (2024)",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Gothic",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Robert Eggers",
+            "tema": "Vampires"
+        },
+        {
+            "title": "Eighth Grade",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Bo Burnham",
+            "tema": "Adolescence"
+        },
+        {
+            "title": "M3GAN",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Gerard Johnstone",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "Don\u0027t Look Up",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Satire",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Leonardo DiCaprio",
+                "Jennifer Lawrence"
+            ],
+            "tema": "Environmentalism"
+        },
+        {
+            "title": "Old",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "M. Night Shyamalan",
+            "tema": "Mystery"
+        },
+        {
+            "title": "Soul",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Pete Docter",
+            "tema": "Philosophical"
+        },
+        {
+            "title": "Midsommar",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ari Aster",
+            "tema": "Cult"
+        },
+        {
+            "title": "Once Upon a Time in Hollywood",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Quentin Tarantino",
+                "Leonardo DiCaprio",
+                "Brad Pitt",
+                "Margot Robbie"
+            ],
+            "tema": "Historical"
+        },
+        {
+            "title": "Us",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jordan Peele",
+            "tema": "Psychological"
+        },
+        {
+            "title": "Bandersnatch",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Charlie Brooker",
+            "tema": "Video Games"
+        },
+        {
+            "title": "Bohemian Rhapsody",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Bryan Singer",
+            "tema": "Music"
+        },
+        {
+            "title": "Blade Runner 2049",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Thriller",
+                "Drama",
+                "Noir"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Denis Villeneuve",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "Life",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Daniel Espinosa",
+            "tema": "Aliens"
+        },
+        {
+            "title": "Passengers",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Romance",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jennifer Lawrence",
+            "tema": "Space Adventure"
+        },
+        {
+            "title": "Arrival",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Denis Villeneuve",
+            "tema": "Aliens"
+        },
+        {
+            "title": "Now You See Me",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Louis Leterrier",
+            "tema": "Magic"
+        },
+        {
+            "title": "Suicide Squad",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "David Ayer",
+                "Margot Robbie"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Scary Movie",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Parody",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Keenen Ivory Wayans",
+            "tema": "Parody"
+        },
+        {
+            "title": "Scary Movie 2",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Parody",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Keenen Ivory Wayans",
+            "tema": "Parody"
+        },
+        {
+            "title": "Scary Movie 3",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Parody",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Zucker",
+            "tema": "Parody"
+        },
+        {
+            "title": "Scary Movie 4",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Parody",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Zucker",
+            "tema": "Parody"
+        },
+        {
+            "title": "Scary Movie 5",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Parody",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Malcolm D. Lee",
+            "tema": "Parody"
+        },
+        {
+            "title": "Perfect Strangers",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "Italian",
+            "decennio": "2010s",
+            "regista o attore": "Paolo Genovese",
+            "tema": "Friendship"
+        },
+        {
+            "title": "The Revenant",
+            "tipo": "Movie",
+            "genere": [
+                "Adventure",
+                "Drama",
+                "Historical",
+                "Western"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Leonardo DiCaprio",
+            "tema": "Survival"
+        },
+        {
+            "title": "The Hateful Eight",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Western"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Quentin Tarantino",
+            "tema": [
+                "Mystery",
+                "Psychological",
+                "Survival"
+            ]
+        },
+        {
+            "title": "Creed",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Sport",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ryan Coogler",
+            "tema": "Boxing"
+        },
+        {
+            "title": "Ted",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Seth MacFarlane",
+            "tema": "Comedy"
+        },
+        {
+            "title": "Southpaw",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Sport",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Antoine Fuqua",
+            "tema": "Boxing"
+        },
+        {
+            "title": "Demolition",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jean-Marc Vallée",
+            "tema": "Family"
+        },
+        {
+            "title": "American Sniper",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Drama",
+                "Biographical",
+                "War"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Clint Eastwood",
+            "tema": "War"
+        },
+        {
+            "title": "Gone Girl",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Fincher",
+            "tema": "Mystery"
+        },
+        {
+            "title": "John Wick",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Thriller",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Chad Stahelski",
+            "tema": "Revenge"
+        },
+        {
+            "title": "Nightcrawler",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Dan Gilroy",
+            "tema": "Psychological"
+        },
+        {
+            "title": "The Imitation Game",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical",
+                "Historical",
+                "War"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Morten Tyldum",
+            "tema": [
+                "War",
+                "Technology"
+            ]
+        },
+        {
+            "title": "Lucy",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Action",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Luc Besson",
+                "Scarlett Johansson"
+            ],
+            "tema": "Futuristic"
+        },
+        {
+            "title": "Maleficent",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Robert Stromberg",
+                "Angelina Jolie"
+            ],
+            "tema": [
+                "Magic",
+                "Love",
+                "Family"
+            ]
+        },
+        {
+            "title": "Prisoners",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Denis Villeneuve",
+                "Hugh Jackman"
+            ],
+            "tema": "Mystery"
+        },
+        {
+            "title": "The Wolverine",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "James Mangold",
+                "Hugh Jackman"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "About Time",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Comedy",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Richard Curtis",
+            "tema": "Time Travel"
+        },
+        {
+            "title": "World War Z",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Horror",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Marc Forster",
+                "Brad Pitt"
+            ],
+            "tema": [
+                "Zombies",
+                "Survival"
+            ]
+        },
+        {
+            "title": "The Purge",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "James DeMonaco",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "The Purge: Anarchy",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "James DeMonaco",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "The Purge: Election Year",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "James DeMonaco",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "The First Purge",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Gerard McMurray",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "The Forever Purge",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Sci-Fi"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Everardo Gout",
+            "tema": "Dystopia"
+        },
+        {
+            "title": "The Hangover Part II",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Todd Phillips",
+            "tema": "Comedy"
+        },
+        {
+            "title": "The Hangover Part III",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Todd Phillips",
+            "tema": "Comedy"
+        },
+        {
+            "title": "Twilight",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Catherine Hardwicke",
+                "Robert Pattinson"
+            ],
+            "tema": "Vampires"
+        },
+        {
+            "title": "The Twilight Saga: New Moon",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Chris Weitz",
+                "Robert Pattinson"
+            ],
+            "tema": "Vampires"
+        },
+        {
+            "title": "The Twilight Saga: Eclipse",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "David Slade",
+                "Robert Pattinson"
+            ],
+            "tema": "Vampires"
+        },
+        {
+            "title": "The Twilight Saga: Breaking Dawn - Part 1",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Bill Condon",
+                "Robert Pattinson"
+            ],
+            "tema": "Vampires"
+        },
+        {
+            "title": "The Twilight Saga: Breaking Dawn - Part 2",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Romance",
+                "Drama",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Bill Condon",
+                "Robert Pattinson"
+            ],
+            "tema": "Vampires"
+        },
+        {
+            "title": "The Perks of Being a Wallflower",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Stephen Chbosky",
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "Sinister",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Scott Derrickson",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "Crazy, Stupid, Love",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Glenn Ficarra \u0026 John Requa",
+            "tema": "Love"
+        },
+        {
+            "title": "Harry Potter and the Chamber of Secrets",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Chris Columbus",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Prisoner of Azkaban",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Alfonso Cuarón",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Goblet of Fire",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Mike Newell",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Order of the Phoenix",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Yates",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Half-Blood Prince",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "David Yates",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Deathly Hallows - Part 1",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Yates",
+            "tema": "Magic"
+        },
+        {
+            "title": "Harry Potter and the Deathly Hallows - Part 2",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Action",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Yates",
+            "tema": "Magic"
+        },
+        {
+            "title": "Kung Fu Panda",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Comedy",
+                "Action",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Mark Osborne \u0026 John Stevenson",
+            "tema": "Martial Arts"
+        },
+        {
+            "title": "Limitless",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Sci-Fi",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Neil Burger",
+                "Robert Pattinson"
+            ],
+            "tema": "Technology"
+        },
+        {
+            "title": "No Strings Attached",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Ivan Reitman",
+            "tema": "Love"
+        },
+        {
+            "title": "Love and Other Drugs",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Edward Zwick",
+            "tema": "Love"
+        },
+        {
+            "title": "The Social Network",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Fincher",
+            "tema": "Technology"
+        },
+        {
+            "title": "Insidious",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Thriller",
+                "Supernatural"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "James Wan",
+            "tema": "Paranormal"
+        },
+        {
+            "title": "Diary of a Wimpy Kid",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Family"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Thor Freudenthal",
+            "tema": "School/University"
+        },
+        {
+            "title": "Coraline",
+            "tipo": "Movie",
+            "genere": [
+                "Animation",
+                "Fantasy",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Henry Selick",
+            "tema": "Supernatural"
+        },
+        {
+            "title": "500 Days of Summer",
+            "tipo": "Movie",
+            "genere": [
+                "Romance",
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Marc Webb",
+                "Joseph Gordon-Levitt"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "Yes Man",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Peyton Reed",
+                "Jim Carrey"
+            ],
+            "tema": "Comedy"
+        },
+        {
+            "title": "The Incredible Hulk",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Louis Leterrier",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Alvin and the Chipmunks",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Family",
+                "Animation"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Tim Hill",
+            "tema": "Music"
+        },
+        {
+            "title": "Step Up",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Anne Fletcher",
+            "tema": "Dance"
+        },
+        {
+            "title": "Step Up 2: The Streets",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Jon M. Chu",
+            "tema": "Dance"
+        },
+        {
+            "title": "Step Up 3D",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jon M. Chu",
+            "tema": "Dance"
+        },
+        {
+            "title": "Step Up Revolution",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Scott Speer",
+            "tema": "Dance"
+        },
+        {
+            "title": "Step Up: All In",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Musical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Trish Sie",
+            "tema": "Dance"
+        },
+        {
+            "title": "Paranormal Activity",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Supernatural"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Oren Peli",
+            "tema": "Paranormal"
+        },
+        {
+            "title": "High School Musical",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Musical",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Kenny Ortega",
+            "tema": "Musical"
+        },
+        {
+            "title": "High School Musical 2",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Musical",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Kenny Ortega",
+            "tema": "Musical"
+        },
+        {
+            "title": "High School Musical 3: Senior Year",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Musical",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Kenny Ortega",
+            "tema": "Musical"
+        },
+        {
+            "title": "Transformers",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Michael Bay",
+            "tema": "Robots/AI"
+        },
+        {
+            "title": "Superbad",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Greg Mottola",
+            "tema": [
+                "Adolescence",
+                "Coming of Age"
+            ]
+        },
+        {
+            "title": "Blood Diamond",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Thriller",
+                "Adventure"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Edward Zwick",
+            "tema": [
+                "Crime",
+                "Politics"
+            ]
+        },
+        {
+            "title": "Borat",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Satire"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Larry Charles",
+            "tema": "Comedy"
+        },
+        {
+            "title": "The Prestige",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Christopher Nolan",
+                "Hugh Jackman",
+                "Christian Bale"
+            ],
+            "tema": "Magic"
+        },
+        {
+            "title": "The Departed",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Martin Scorsese",
+                "Leonardo DiCaprio"
+            ],
+            "tema": [
+                "Mafia",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Bridge to Terabithia",
+            "tipo": "Movie",
+            "genere": [
+                "Fantasy",
+                "Adventure",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Gabor Csupo",
+            "tema": "Friendship"
+        },
+        {
+            "title": "X-Men",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Bryan Singer",
+                "Hugh Jackman"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "X2",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Bryan Singer",
+                "Hugh Jackman"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "X-Men: The Last Stand",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Brett Ratner",
+                "Hugh Jackman"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "X-Men Origins: Wolverine",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Gavin Hood",
+                "Hugh Jackman"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "X-Men: First Class",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Matthew Vaughn",
+                "Jennifer Lawrence"
+            ],
+            "tema": [
+                "Superheroes",
+                "Time Travel"
+            ]
+        },
+        {
+            "title": "X-Men: Days of Future Past",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Bryan Singer",
+                "Hugh Jackman",
+                "Jennifer Lawrence"
+            ],
+            "tema": [
+                "Superheroes",
+                "Time Travel"
+            ]
+        },
+        {
+            "title": "X-Men: Apocalypse",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Bryan Singer"
+            ],
+            "tema": "Superheroes"
+        },
+        {
+            "title": "X-Men: Dark Phoenix",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jennifer Lawrence",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "The New Mutants",
+            "tipo": "Movie",
+            "genere": [
+                "Horror",
+                "Sci-Fi",
+                "Action",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Josh Boone",
+            "tema": "Superheroes"
+        },
+        {
+            "title": "Deadpool",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Comedy",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Tim Miller",
+            "tema": [
+                "Superheroes",
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Deadpool 2",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Comedy",
+                "Adventure",
+                "Superhero"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "David Leitch",
+            "tema": [
+                "Superheroes",
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Van Helsing",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Adventure",
+                "Horror",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": "Hugh Jackman",
+            "tema": [
+                "Vampires",
+                "Monsters",
+                "Supernatural"
+            ]
+        },
+        {
+            "title": "The Big Short",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy",
+                "Biographical"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Adam McKay",
+                "Christian Bale",
+                "Brad Pitt",
+                "Margot Robbie"
+            ],
+            "tema": [
+                "Politics",
+                "Drama",
+                "Crime"
+            ]
+        },
+        {
+            "title": "TRON",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": "Steven Lisberger",
+            "tema": [
+                "Video Games",
+                "Technology",
+                "Futuristic"
+            ]
+        },
+        {
+            "title": "TRON: Legacy",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Joseph Kosinski",
+            "tema": [
+                "Video Games",
+                "Technology",
+                "Futuristic"
+            ]
+        },
+        {
+            "title": "Bruce Almighty",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Tom Shadyac",
+                "Jim Carrey"
+            ],
+            "tema": [
+                "Religion",
+                "Comedy",
+                "Philosophical"
+            ]
+        },
+        {
+            "title": "The Mask",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Fantasy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Chuck Russell",
+                "Jim Carrey"
+            ],
+            "tema": [
+                "Comedy",
+                "Supernatural"
+            ]
+        },
+        {
+            "title": "Dumb and Dumber",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Peter Farrelly",
+                "Jim Carrey"
+            ],
+            "tema": [
+                "Comedy",
+                "Friendship"
+            ]
+        },
+        {
+            "title": "Ready Player One",
+            "tipo": "Movie",
+            "genere": [
+                "Sci-Fi",
+                "Adventure",
+                "Action"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Steven Spielberg",
+            "tema": [
+                "Video Games",
+                "Futuristic",
+                "Dystopia"
+            ]
+        },
+        {
+            "title": "Johnny Stecchino",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Crime"
+            ],
+            "lingua": "Italian",
+            "decennio": "90s",
+            "regista o attore": "Roberto Benigni",
+            "tema": [
+                "Mafia",
+                "Comedy",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Non ci resta che piangere",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "Italian",
+            "decennio": "80s",
+            "regista o attore": [
+                "Roberto Benigni",
+                "Massimo Troisi"
+            ],
+            "tema": [
+                "Time Travel",
+                "Comedy",
+                "Historical"
+            ]
+        },
+        {
+            "title": "To Rome with Love",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Woody Allen",
+                "Roberto Benigni"
+            ],
+            "tema": [
+                "Love",
+                "Art",
+                "Comedy"
+            ]
+        },
+        {
+            "title": "The Menu",
+            "tipo": "Movie",
+            "genere": [
+                "Thriller",
+                "Horror"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": "Mark Mylod",
+            "tema": [
+                "Cooking",
+                "Satire",
+                "Psychological"
+            ]
+        },
+        {
+            "title": "Chef",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": "Jon Favreau",
+            "tema": [
+                "Cooking",
+                "Family",
+                "Social Media"
+            ]
+        },
+        {
+            "title": "Titanic",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance",
+                "Historical"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "James Cameron",
+                "Leonardo DiCaprio"
+            ],
+            "tema": "Love"
+        }
+    ]
 }

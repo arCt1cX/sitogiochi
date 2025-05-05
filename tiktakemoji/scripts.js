@@ -287,13 +287,21 @@ function selectRandomCategories() {
                         if (!entry[rowCategory]) return false;
                         
                         // Check if entry matches the row category value
+                        let matches = false;
                         if (Array.isArray(entry[rowCategory])) {
-                            return entry[rowCategory].some(val => 
+                            matches = entry[rowCategory].some(val => 
                                 String(val).toLowerCase() === String(value).toLowerCase()
-                    );
+                            );
                         } else {
-                            return String(entry[rowCategory]).toLowerCase() === String(value).toLowerCase();
+                            matches = String(entry[rowCategory]).toLowerCase() === String(value).toLowerCase();
                         }
+                        
+                        // Special handling for 'tipo' category
+                        if (rowCategory === 'tipo') {
+                            matches = String(entry.tipo).toLowerCase() === String(value).toLowerCase();
+                        }
+                        
+                        return matches;
                     });
                     
                     // Count how many different category types have matches with this value
@@ -381,6 +389,17 @@ function selectRandomCategories() {
                                     );
                                 } else {
                                     colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                                }
+                                
+                                // Special handling for 'tipo' category (Film or Serie TV)
+                                if (rowCategory === 'tipo' || colCategory === 'tipo') {
+                                    // Make sure the entry type actually matches what's expected
+                                    if (rowCategory === 'tipo') {
+                                        rowMatches = String(entry.tipo).toLowerCase() === String(rowValue).toLowerCase();
+                                    }
+                                    if (colCategory === 'tipo') {
+                                        colMatches = String(entry.tipo).toLowerCase() === String(colValue).toLowerCase();
+                                    }
                                 }
                                 
                                 return rowMatches && colMatches;
@@ -541,6 +560,17 @@ function createValidCombinationsGrid() {
                 } else {
                     // For strings, directly compare
                     colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                }
+                
+                // Special handling for 'tipo' category (Film or Serie TV) to fix filtering bug
+                if (rowCategory === 'tipo' || colCategory === 'tipo') {
+                    // Make sure the entry type actually matches what's expected
+                    if (rowCategory === 'tipo') {
+                        rowMatches = String(entry.tipo).toLowerCase() === String(rowValue).toLowerCase();
+                    }
+                    if (colCategory === 'tipo') {
+                        colMatches = String(entry.tipo).toLowerCase() === String(colValue).toLowerCase();
+                    }
                 }
                 
                 return rowMatches && colMatches;
@@ -932,6 +962,41 @@ function showTitleOptions(row, col) {
                 console.log(`Entry details:`, entry);
                 console.log(`Row category: ${gameState.rowCategories[row]}, value: ${gameState.rowCategoryValues[row]}`);
                 console.log(`Col category: ${gameState.colCategories[col]}, value: ${gameState.colCategoryValues[col]}`);
+                
+                // Debug why this entry isn't valid
+                const rowCategory = gameState.rowCategories[row];
+                const rowValue = gameState.rowCategoryValues[row];
+                const colCategory = gameState.colCategories[col];
+                const colValue = gameState.colCategoryValues[col];
+                
+                let rowMatches = false;
+                if (Array.isArray(entry[rowCategory])) {
+                    rowMatches = entry[rowCategory].some(val => 
+                        String(val).toLowerCase() === String(rowValue).toLowerCase()
+                    );
+                } else if (entry[rowCategory]) {
+                    rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                }
+                
+                let colMatches = false;
+                if (Array.isArray(entry[colCategory])) {
+                    colMatches = entry[colCategory].some(val => 
+                        String(val).toLowerCase() === String(colValue).toLowerCase()
+                    );
+                } else if (entry[colCategory]) {
+                    colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                }
+                
+                // Special handling for 'tipo' field
+                if (rowCategory === 'tipo') {
+                    rowMatches = String(entry.tipo).toLowerCase() === String(rowValue).toLowerCase();
+                }
+                if (colCategory === 'tipo') {
+                    colMatches = String(entry.tipo).toLowerCase() === String(colValue).toLowerCase();
+                }
+                
+                console.log(`Row match (${rowCategory}: ${rowValue}): ${rowMatches}`);
+                console.log(`Col match (${colCategory}: ${colValue}): ${colMatches}`);
                 
                 // Show wrong answer message - this will set preventInteraction
                 showWrongAnswerMessage();
