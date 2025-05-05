@@ -226,6 +226,25 @@ function selectRandomCategories() {
     // Get all category types
     const categoryTypes = Object.keys(gameState.categories);
     
+    // Check if the categories use Italian naming
+    const useItalianNames = gameState.categories.genere !== undefined;
+    
+    // Create mapping between English and Italian category names
+    const categoryMapping = {
+        "genre": useItalianNames ? "genere" : "genre",
+        "language": useItalianNames ? "lingua" : "language",
+        "decade": useItalianNames ? "decennio" : "decade",
+        "type": useItalianNames ? "tipo" : "type",
+        "director": useItalianNames ? "regista" : "director",
+        "theme": useItalianNames ? "tema" : "theme"
+    };
+    
+    // Get the inverse mapping from Italian to English if needed
+    const inverseCategoryMapping = {};
+    Object.keys(categoryMapping).forEach(key => {
+        inverseCategoryMapping[categoryMapping[key]] = key;
+    });
+    
     // Ensure we have at least 6 category types
     if (categoryTypes.length < 6) {
         console.error("Not enough category types to create a game with different row and column categories");
@@ -743,11 +762,14 @@ function showTitleOptions(row, col) {
         return;
     }
     
+    // Determine the title property name (could be "title" or "titolo")
+    const titleProperty = validEntries[0].titolo !== undefined ? "titolo" : "title";
+    
     // Store valid titles for later validation
-    const validTitles = validEntries.map(entry => entry.title);
+    const validTitles = validEntries.map(entry => entry[titleProperty]);
     
     // DEBUG: Log valid entries for this cell
-    console.log(`Valid entries for cell [${row},${col}]:`, validEntries.map(e => e.title));
+    console.log(`Valid entries for cell [${row},${col}]:`, validEntries.map(e => e[titleProperty]));
     
     // Clear previous options
     emojiOptions.innerHTML = "";
@@ -771,25 +793,54 @@ function showTitleOptions(row, col) {
     const allEntriesContainer = document.createElement("div");
     allEntriesContainer.className = "all-entries-container";
     
-    // Sort all entries alphabetically
-    const allEntries = [...gameState.filmsAndSeries].sort((a, b) => 
-        a.title.localeCompare(b.title)
-    );
+    // Sort all entries alphabetically, with null check
+    const allEntries = [...gameState.filmsAndSeries].sort((a, b) => {
+        const aTitle = a[titleProperty] || "";
+        const bTitle = b[titleProperty] || "";
+        return aTitle.localeCompare(bTitle);
+    });
     
     // Create option for each entry in the database
     allEntries.forEach(entry => {
+        if (!entry[titleProperty]) return; // Skip entries without a title
+        
         const option = document.createElement("div");
         option.className = "option";
-        option.dataset.title = entry.title;
-        option.textContent = entry.title;
+        option.dataset.title = entry[titleProperty];
+        option.textContent = entry[titleProperty];
+        
+        // Determine genre property name
+        const genreProperty = entry.genere !== undefined ? "genere" : "genre";
+        const languageProperty = entry.lingua !== undefined ? "lingua" : "language";
+        const decadeProperty = entry.decennio !== undefined ? "decennio" : "decade";
+        const directorProperty = entry.regista !== undefined ? "regista" : "director";
+        const themeProperty = entry.tema !== undefined ? "tema" : "theme";
+        const typeProperty = entry.tipo !== undefined ? "tipo" : "type";
         
         // Add tooltip with more details about the entry
-        let tooltip = `${entry.title} (${entry.type})`;
-        tooltip += `\n${window.getTranslation('genre')}: ${Array.isArray(entry.genre) ? entry.genre.join(', ') : entry.genre}`;
-        tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
-        tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
-        if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
-        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${Array.isArray(entry.theme) ? entry.theme.join(', ') : entry.theme}`;
+        let tooltip = `${entry[titleProperty]} (${entry[typeProperty] || entry.type})`;
+        
+        if (entry[genreProperty]) {
+            const genre = Array.isArray(entry[genreProperty]) ? entry[genreProperty].join(', ') : entry[genreProperty];
+            tooltip += `\n${window.getTranslation('genre')}: ${genre}`;
+        }
+        
+        if (entry[languageProperty]) {
+            tooltip += `\n${window.getTranslation('language')}: ${entry[languageProperty]}`;
+        }
+        
+        if (entry[decadeProperty]) {
+            tooltip += `\n${window.getTranslation('decade')}: ${entry[decadeProperty]}`;
+        }
+        
+        if (entry[directorProperty]) {
+            tooltip += `\n${window.getTranslation('director')}: ${entry[directorProperty]}`;
+        }
+        
+        if (entry[themeProperty]) {
+            const theme = Array.isArray(entry[themeProperty]) ? entry[themeProperty].join(', ') : entry[themeProperty];
+            tooltip += `\n${window.getTranslation('theme')}: ${theme}`;
+        }
         
         option.title = tooltip;
         
@@ -800,11 +851,11 @@ function showTitleOptions(row, col) {
             }
             
             // Check if this is a valid selection for the cell
-            if (validTitles.includes(entry.title)) {
-                makeMove(entry.title);
+            if (validTitles.includes(entry[titleProperty])) {
+                makeMove(entry[titleProperty]);
             } else {
                 // DEBUG: Log why this entry wasn't valid
-                console.log(`Invalid selection: ${entry.title}`);
+                console.log(`Invalid selection: ${entry[titleProperty]}`);
                 console.log(`Entry details:`, entry);
                 console.log(`Row category: ${gameState.rowCategories[row]}, value: ${gameState.rowCategoryValues[row]}`);
                 console.log(`Col category: ${gameState.colCategories[col]}, value: ${gameState.colCategoryValues[col]}`);
@@ -854,7 +905,7 @@ function showTitleOptions(row, col) {
     }, 100);
 }
 
-// Filter titles based on input
+// Update filterTitles to use the dataset title
 function filterTitles(query, container) {
     // Remember scroll position
     const scrollTop = container.scrollTop;
@@ -1135,6 +1186,16 @@ function showValidAnswers(row, col) {
         return;
     }
     
+    // Determine property names based on the first entry
+    const firstEntry = validEntries[0];
+    const titleProperty = firstEntry.titolo !== undefined ? "titolo" : "title";
+    const genreProperty = firstEntry.genere !== undefined ? "genere" : "genre";
+    const languageProperty = firstEntry.lingua !== undefined ? "lingua" : "language";
+    const decadeProperty = firstEntry.decennio !== undefined ? "decennio" : "decade";
+    const directorProperty = firstEntry.regista !== undefined ? "regista" : "director";
+    const themeProperty = firstEntry.tema !== undefined ? "tema" : "theme";
+    const typeProperty = firstEntry.tipo !== undefined ? "tipo" : "type";
+    
     // Remove any existing valid answers container
     const existingContainer = document.getElementById("valid-answers-container");
     if (existingContainer) {
@@ -1156,23 +1217,42 @@ function showValidAnswers(row, col) {
     answersList.className = "valid-answers-list";
     
     // Sort entries alphabetically
-    const sortedEntries = [...validEntries].sort((a, b) => 
-        a.title.localeCompare(b.title)
-    );
+    const sortedEntries = [...validEntries].sort((a, b) => {
+        const aTitle = a[titleProperty] || "";
+        const bTitle = b[titleProperty] || "";
+        return aTitle.localeCompare(bTitle);
+    });
     
     // Add each valid answer to the list
     sortedEntries.forEach(entry => {
         const answerItem = document.createElement("div");
         answerItem.className = "valid-answer-item";
-        answerItem.textContent = entry.title;
+        answerItem.textContent = entry[titleProperty];
         
         // Add tooltip with details
-        let tooltip = `${entry.title} (${entry.type})`;
-        tooltip += `\n${window.getTranslation('genre')}: ${Array.isArray(entry.genre) ? entry.genre.join(', ') : entry.genre}`;
-        tooltip += `\n${window.getTranslation('language')}: ${entry.language}`;
-        tooltip += `\n${window.getTranslation('decade')}: ${entry.decade}`;
-        if (entry.director) tooltip += `\n${window.getTranslation('director')}: ${entry.director}`;
-        if (entry.theme) tooltip += `\n${window.getTranslation('theme')}: ${Array.isArray(entry.theme) ? entry.theme.join(', ') : entry.theme}`;
+        let tooltip = `${entry[titleProperty]} (${entry[typeProperty] || entry.type})`;
+        
+        if (entry[genreProperty]) {
+            const genre = Array.isArray(entry[genreProperty]) ? entry[genreProperty].join(', ') : entry[genreProperty];
+            tooltip += `\n${window.getTranslation('genre')}: ${genre}`;
+        }
+        
+        if (entry[languageProperty]) {
+            tooltip += `\n${window.getTranslation('language')}: ${entry[languageProperty]}`;
+        }
+        
+        if (entry[decadeProperty]) {
+            tooltip += `\n${window.getTranslation('decade')}: ${entry[decadeProperty]}`;
+        }
+        
+        if (entry[directorProperty]) {
+            tooltip += `\n${window.getTranslation('director')}: ${entry[directorProperty]}`;
+        }
+        
+        if (entry[themeProperty]) {
+            const theme = Array.isArray(entry[themeProperty]) ? entry[themeProperty].join(', ') : entry[themeProperty];
+            tooltip += `\n${window.getTranslation('theme')}: ${theme}`;
+        }
         
         answerItem.title = tooltip;
         
