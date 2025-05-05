@@ -45,7 +45,7 @@
             "Film",
             "Serie TV"
         ],
-        "regista/attore": [
+        "regista o attore": [
             "Steven Spielberg",
             "Quentin Tarantino",
             "Christopher Nolan",
@@ -195,7 +195,7 @@
             "genere": ["Fantascienza", "Thriller", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Christopher Nolan", "Leonardo DiCaprio", "Joseph Gordon-Levitt", "Cillian Murphy"],
+            "regista o attore": ["Christopher Nolan", "Leonardo DiCaprio", "Joseph Gordon-Levitt", "Cillian Murphy"],
             "tema": "Futuristico"
         },
         {
@@ -204,7 +204,7 @@
             "genere": ["Azione", "Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Quentin Tarantino",
+            "regista o attore": "Quentin Tarantino",
             "tema": "Crimine"
         },
         {
@@ -213,7 +213,7 @@
             "genere": ["Animazione", "Fantasy"],
             "lingua": "Giapponese",
             "decennio": "Anni '80",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": "Fantasy"
         },
         {
@@ -222,7 +222,7 @@
             "genere": ["Fantascienza", "Horror", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Duffer Brothers",
+            "regista o attore": "Duffer Brothers",
             "tema": "Soprannaturale"
         },
         {
@@ -231,7 +231,7 @@
             "genere": ["Dramma", "Thriller", "Commedia"],
             "lingua": "Coreano",
             "decennio": "Anni 2010",
-            "regista/attore": "Bong Joon-ho",
+            "regista o attore": "Bong Joon-ho",
             "tema": "Famiglia"
         },
         {
@@ -240,7 +240,7 @@
             "genere": ["Thriller", "Dramma", "Azione"],
             "lingua": "Coreano",
             "decennio": "Anni 2000",
-            "regista/attore": "Park Chan-wook",
+            "regista o attore": "Park Chan-wook",
             "tema": "Vendetta"
         },
         {
@@ -249,7 +249,7 @@
             "genere": ["Animazione", "Romantico"],
             "lingua": "Giapponese",
             "decennio": "Anni 2010",
-            "regista/attore": "Makoto Shinkai",
+            "regista o attore": "Makoto Shinkai",
             "tema": "Amore"
         },
         {
@@ -258,7 +258,7 @@
             "genere": ["Azione", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Christopher Nolan", "Cillian Murphy"],
+            "regista o attore": ["Christopher Nolan", "Cillian Murphy"],
             "tema": "Guerra"
         },
         {
@@ -267,7 +267,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Famiglia"
         },
         {
@@ -276,7 +276,7 @@
             "genere": ["Dramma", "Sociale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ken Loach",
+            "regista o attore": "Ken Loach",
             "tema": "Politica"
         },
         {
@@ -285,7 +285,7 @@
             "genere": ["Fantascienza", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Christopher Nolan", "Matthew McConaughey"],
+            "regista o attore": ["Christopher Nolan", "Matthew McConaughey"],
             "tema": "Avventura spaziale"
         },
         {
@@ -294,7 +294,7 @@
             "genere": ["Dramma", "Commedia", "Storico"],
             "lingua": "Italiano",
             "decennio": "Anni '90",
-            "regista/attore": "Roberto Benigni",
+            "regista o attore": "Roberto Benigni",
             "tema": "Guerra"
         },
         {
@@ -303,7 +303,7 @@
             "genere": ["Azione", "Thriller", "Dramma", "Supereroi", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Christopher Nolan", "Christian Bale"],
+            "regista o attore": ["Christopher Nolan", "Christian Bale"],
             "tema": "Crimine"
         },
         {
@@ -312,7 +312,7 @@
             "genere": ["Animazione", "Avventura"],
             "lingua": "Giapponese",
             "decennio": "Anni '90",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": "Fantasy"
         },
         {
@@ -321,7 +321,7 @@
             "genere": ["Dramma", "Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Vince Gilligan",
+            "regista o attore": "Vince Gilligan",
             "tema": "Crimine"
         },
         {
@@ -330,7 +330,7 @@
             "genere": ["Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Peter Morgan",
+            "regista o attore": "Peter Morgan",
             "tema": "Storico"
         },
         {
@@ -339,7 +339,7 @@
             "genere": ["Thriller", "Dramma", "Azione"],
             "lingua": "Coreano",
             "decennio": "Anni 2020",
-            "regista/attore": "Hwang Dong-hyuk",
+            "regista o attore": "Hwang Dong-hyuk",
             "tema": "Sopravvivenza"
         },
         {
@@ -348,7 +348,7 @@
             "genere": ["Thriller", "Dramma", "Azione"],
             "lingua": "Spagnolo",
             "decennio": "Anni 2010",
-            "regista/attore": "Álex Pina",
+            "regista o attore": "Álex Pina",
             "tema": "Crimine"
         },
         {
@@ -357,7 +357,7 @@
             "genere": ["Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Quentin Tarantino",
+            "regista o attore": "Quentin Tarantino",
             "tema": "Vendetta"
         },
         {
@@ -366,7 +366,7 @@
             "genere": ["Animazione", "Avventura"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": "Fantasy"
         },
         {
@@ -375,7 +375,7 @@
             "genere": ["Fantascienza", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Amicizia"
         },
         {
@@ -384,7 +384,7 @@
             "genere": ["Avventura", "Fantascienza", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Sopravvivenza"
         },
         {
@@ -393,7 +393,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Martin Scorsese",
+            "regista o attore": "Martin Scorsese",
             "tema": "Mafia"
         },
         {
@@ -402,7 +402,7 @@
             "genere": ["Dramma", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Martin Scorsese", "Leonardo DiCaprio", "Matthew McConaughey", "Margot Robbie"],
+            "regista o attore": ["Martin Scorsese", "Leonardo DiCaprio", "Matthew McConaughey", "Margot Robbie"],
             "tema": ["Crimine", "Droghe"]
         },
         {
@@ -411,7 +411,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Alfonso Cuarón",
+            "regista o attore": "Alfonso Cuarón",
             "tema": "Avventura spaziale"
         },
         {
@@ -420,7 +420,7 @@
             "genere": ["Dramma"],
             "lingua": "Spagnolo",
             "decennio": "Anni 2010",
-            "regista/attore": "Alfonso Cuarón",
+            "regista o attore": "Alfonso Cuarón",
             "tema": "Famiglia"
         },
         {
@@ -429,7 +429,7 @@
             "genere": ["Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "David Lynch",
+            "regista o attore": "David Lynch",
             "tema": "Mistero"
         },
         {
@@ -438,7 +438,7 @@
             "genere": ["Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Guerra"
         },
         {
@@ -447,7 +447,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Jon Favreau",
+            "regista o attore": "Jon Favreau",
             "tema": "Avventura spaziale"
         },
         {
@@ -456,7 +456,7 @@
             "genere": ["Dramma"],
             "lingua": "Italiano",
             "decennio": "Anni '90",
-            "regista/attore": "Giuseppe Tornatore",
+            "regista o attore": "Giuseppe Tornatore",
             "tema": "Amicizia"
         },
         {
@@ -465,7 +465,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Darren Star",
+            "regista o attore": "Darren Star",
             "tema": "Amore"
         },
         {
@@ -474,7 +474,7 @@
             "genere": ["Romantico", "Commedia"],
             "lingua": "Francese",
             "decennio": "Anni 2000",
-            "regista/attore": "Jean-Pierre Jeunet",
+            "regista o attore": "Jean-Pierre Jeunet",
             "tema": "Amore"
         },
         {
@@ -483,7 +483,7 @@
             "genere": ["Animazione", "Romantico", "Fantasy"],
             "lingua": "Giapponese",
             "decennio": "Anni 2010",
-            "regista/attore": "Makoto Shinkai",
+            "regista o attore": "Makoto Shinkai",
             "tema": "Amore"
         },
         {
@@ -492,7 +492,7 @@
             "genere": ["Horror", "Thriller", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jordan Peele",
+            "regista o attore": "Jordan Peele",
             "tema": "Soprannaturale"
         },
         {
@@ -501,7 +501,7 @@
             "genere": ["Horror", "Dramma", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ari Aster",
+            "regista o attore": "Ari Aster",
             "tema": "Soprannaturale"
         },
         {
@@ -510,7 +510,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Italiano",
             "decennio": "Anni 2000",
-            "regista/attore": "Paolo Sorrentino",
+            "regista o attore": "Paolo Sorrentino",
             "tema": "Politica"
         },
         {
@@ -519,7 +519,7 @@
             "genere": ["Dramma"],
             "lingua": "Italiano",
             "decennio": "Anni 2010",
-            "regista/attore": "Paolo Sorrentino",
+            "regista o attore": "Paolo Sorrentino",
             "tema": "Drammatico"
         },
         {
@@ -528,7 +528,7 @@
             "genere": ["Thriller", "Romantico", "Mystery"],
             "lingua": "Coreano",
             "decennio": "Anni 2020",
-            "regista/attore": "Park Chan-wook",
+            "regista o attore": "Park Chan-wook",
             "tema": "Mistero"
         },
         {
@@ -537,7 +537,7 @@
             "genere": ["Horror", "Azione", "Thriller"],
             "lingua": "Coreano",
             "decennio": "Anni 2010",
-            "regista/attore": "Yeon Sang-ho",
+            "regista o attore": "Yeon Sang-ho",
             "tema": "Sopravvivenza"
         },
         {
@@ -546,7 +546,7 @@
             "genere": ["Thriller", "Crime", "Avventura"],
             "lingua": "Francese",
             "decennio": "Anni 2020",
-            "regista/attore": "George Kay",
+            "regista o attore": "George Kay",
             "tema": "Crimine"
         },
         {
@@ -555,7 +555,7 @@
             "genere": ["Dramma"],
             "lingua": "Giapponese",
             "decennio": "Anni 2020",
-            "regista/attore": "Ryusuke Hamaguchi",
+            "regista o attore": "Ryusuke Hamaguchi",
             "tema": "Famiglia"
         },
         {
@@ -564,7 +564,7 @@
             "genere": ["Fantascienza", "Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Robert Zemeckis",
+            "regista o attore": "Robert Zemeckis",
             "tema": "Viaggi nel tempo"
         },
         {
@@ -573,7 +573,7 @@
             "genere": ["Fantascienza", "Azione", "Filosofico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Wachowski Sisters",
+            "regista o attore": "Wachowski Sisters",
             "tema": "Robot/AI"
         },
         {
@@ -582,7 +582,7 @@
             "genere": ["Fantascienza", "Avventura", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Stanley Kubrick",
+            "regista o attore": "Stanley Kubrick",
             "tema": "Avventura spaziale"
         },
         {
@@ -591,7 +591,7 @@
             "genere": ["Fantascienza", "Thriller", "Noir"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Ridley Scott",
+            "regista o attore": "Ridley Scott",
             "tema": "Robot/AI"
         },
         {
@@ -600,7 +600,7 @@
             "genere": ["Fantascienza", "Dramma", "Western"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jonathan Nolan",
+            "regista o attore": "Jonathan Nolan",
             "tema": "Robot/AI"
         },
         {
@@ -609,7 +609,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Alex Garland",
+            "regista o attore": "Alex Garland",
             "tema": "Robot/AI"
         },
         {
@@ -618,7 +618,7 @@
             "genere": ["Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Baz Luhrmann", "Leonardo DiCaprio"],
+            "regista o attore": ["Baz Luhrmann", "Leonardo DiCaprio"],
             "tema": "Amore"
         },
         {
@@ -627,7 +627,7 @@
             "genere": ["Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Luca Guadagnino",
+            "regista o attore": "Luca Guadagnino",
             "tema": "Coming of Age"
         },
         {
@@ -636,7 +636,7 @@
             "genere": ["Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Greta Gerwig",
+            "regista o attore": "Greta Gerwig",
             "tema": "Coming of Age"
         },
         {
@@ -645,7 +645,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Francis Ford Coppola",
+            "regista o attore": "Francis Ford Coppola",
             "tema": "Mafia"
         },
         {
@@ -654,7 +654,7 @@
             "genere": ["Azione", "Avventura", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "George Miller",
+            "regista o attore": "George Miller",
             "tema": "Post-apocalittico"
         },
         {
@@ -663,7 +663,7 @@
             "genere": ["Horror", "Dramma", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Frank Darabont",
+            "regista o attore": "Frank Darabont",
             "tema": "Post-apocalittico"
         },
         {
@@ -672,7 +672,7 @@
             "genere": ["Fantasy", "Dramma", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "David Benioff & D.B. Weiss",
+            "regista o attore": "David Benioff & D.B. Weiss",
             "tema": "Fantasy"
         },
         {
@@ -681,7 +681,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "David Crane & Marta Kauffman",
+            "regista o attore": "David Crane & Marta Kauffman",
             "tema": "Amicizia"
         },
         {
@@ -690,7 +690,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Greg Daniels",
+            "regista o attore": "Greg Daniels",
             "tema": "Ufficio/Lavoro"
         },
         {
@@ -699,7 +699,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Chuck Lorre",
+            "regista o attore": "Chuck Lorre",
             "tema": "Amicizia"
         },
         {
@@ -708,7 +708,7 @@
             "genere": ["Dramma", "Thriller", "Politico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Beau Willimon",
+            "regista o attore": "Beau Willimon",
             "tema": "Politica"
         },
         {
@@ -717,7 +717,7 @@
             "genere": ["Dramma", "Crime", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Chris Brancato",
+            "regista o attore": "Chris Brancato",
             "tema": "Crimine"
         },
         {
@@ -726,7 +726,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "David Chase",
+            "regista o attore": "David Chase",
             "tema": "Mafia"
         },
         {
@@ -735,7 +735,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Carter Bays & Craig Thomas",
+            "regista o attore": "Carter Bays & Craig Thomas",
             "tema": "Amicizia"
         },
         {
@@ -744,7 +744,7 @@
             "genere": ["Fantasy", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Lauren Schmidt Hissrich",
+            "regista o attore": "Lauren Schmidt Hissrich",
             "tema": "Fantasy"
         },
         {
@@ -753,7 +753,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Charlie Brooker",
+            "regista o attore": "Charlie Brooker",
             "tema": "Futuristico"
         },
         {
@@ -762,7 +762,7 @@
             "genere": ["Dramma", "Crime", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Steven Knight", "Cillian Murphy"],
+            "regista o attore": ["Steven Knight", "Cillian Murphy"],
             "tema": ["Mafia", "Crimine"]
         },
         {
@@ -771,7 +771,7 @@
             "genere": ["Thriller", "Dramma", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Mark Gatiss & Steven Moffat",
+            "regista o attore": "Mark Gatiss & Steven Moffat",
             "tema": "Mistero"
         },
         {
@@ -780,7 +780,7 @@
             "genere": ["Dramma", "Avventura", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "J.J. Abrams",
+            "regista o attore": "J.J. Abrams",
             "tema": ["Mistero", "Sopravvivenza"]
         },
         {
@@ -789,7 +789,7 @@
             "genere": ["Thriller", "Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "James Manos Jr.",
+            "regista o attore": "James Manos Jr.",
             "tema": "Crimine"
         },
         {
@@ -798,7 +798,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Peter Gould",
+            "regista o attore": "Peter Gould",
             "tema": "Legge"
         },
         {
@@ -807,7 +807,7 @@
             "genere": ["Dramma", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Aaron Korsh",
+            "regista o attore": "Aaron Korsh",
             "tema": "Legge"
         },
         {
@@ -816,7 +816,7 @@
             "genere": ["Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Shonda Rhimes",
+            "regista o attore": "Shonda Rhimes",
             "tema": "Medicina"
         },
         {
@@ -825,7 +825,7 @@
             "genere": ["Azione", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Michael Hirst",
+            "regista o attore": "Michael Hirst",
             "tema": "Storico"
         },
         {
@@ -834,7 +834,7 @@
             "genere": ["Azione", "Dramma", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Paul Scheuring",
+            "regista o attore": "Paul Scheuring",
             "tema": "Carcere"
         },
         {
@@ -843,7 +843,7 @@
             "genere": ["Dramma", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Brian Yorkey",
+            "regista o attore": "Brian Yorkey",
             "tema": "Scuola/Università"
         },
         {
@@ -852,7 +852,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Scott Frank",
+            "regista o attore": "Scott Frank",
             "tema": "Coming of Age"
         },
         {
@@ -861,7 +861,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Sam Levinson",
+            "regista o attore": "Sam Levinson",
             "tema": "Coming of Age"
         },
         {
@@ -870,7 +870,7 @@
             "genere": ["Dramma", "Crime", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Bill Dubuque & Mark Williams",
+            "regista o attore": "Bill Dubuque & Mark Williams",
             "tema": "Crimine"
         },
         {
@@ -879,7 +879,7 @@
             "genere": ["Fantascienza", "Dramma", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Baran bo Odar",
+            "regista o attore": "Baran bo Odar",
             "tema": "Viaggi nel tempo"
         },
         {
@@ -888,7 +888,7 @@
             "genere": ["Azione", "Commedia", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Eric Kripke",
+            "regista o attore": "Eric Kripke",
             "tema": "Supereroi"
         },
         {
@@ -897,7 +897,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Dan Erickson",
+            "regista o attore": "Dan Erickson",
             "tema": "Futuristico"
         },
         {
@@ -906,7 +906,7 @@
             "genere": ["Thriller", "Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Nic Pizzolatto", "Matthew McConaughey"],
+            "regista o attore": ["Nic Pizzolatto", "Matthew McConaughey"],
             "tema": "Mistero"
         },
         {
@@ -915,7 +915,7 @@
             "genere": ["Thriller", "Dramma", "Crime", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Noah Hawley",
+            "regista o attore": "Noah Hawley",
             "tema": "Crimine"
         },
         {
@@ -924,7 +924,7 @@
             "genere": ["Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Laurie Nunn",
+            "regista o attore": "Laurie Nunn",
             "tema": ["Coming of Age", "LGBTQ+"]
         },
         {
@@ -933,7 +933,7 @@
             "genere": ["Animazione", "Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Raphael Bob-Waksberg",
+            "regista o attore": "Raphael Bob-Waksberg",
             "tema": "Drammatico"
         },
         {
@@ -942,7 +942,7 @@
             "genere": ["Animazione", "Commedia", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Dan Harmon & Justin Roiland",
+            "regista o attore": "Dan Harmon & Justin Roiland",
             "tema": "Fantascienza"
         },
         {
@@ -951,7 +951,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Christopher Lloyd & Steven Levitan",
+            "regista o attore": "Christopher Lloyd & Steven Levitan",
             "tema": "Famiglia"
         },
         {
@@ -960,7 +960,7 @@
             "genere": ["Dramma", "Medico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Shore",
+            "regista o attore": "David Shore",
             "tema": "Medicina"
         },
         {
@@ -969,7 +969,7 @@
             "genere": ["Dramma", "Fantasy", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Tom Kapinos",
+            "regista o attore": "Tom Kapinos",
             "tema": "Soprannaturale"
         },
         {
@@ -978,7 +978,7 @@
             "genere": ["Fantasy", "Commedia", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Alfred Gough & Miles Millar",
+            "regista o attore": "Alfred Gough & Miles Millar",
             "tema": "Soprannaturale"
         },
         {
@@ -987,7 +987,7 @@
             "genere": ["Dramma", "Romantico", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Chris Van Dusen",
+            "regista o attore": "Chris Van Dusen",
             "tema": "Romantico"
         },
         {
@@ -996,7 +996,7 @@
             "genere": ["Azione", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Drew Goddard",
+            "regista o attore": "Drew Goddard",
             "tema": "Supereroi"
         },
         {
@@ -1005,7 +1005,7 @@
             "genere": ["Azione", "Dramma", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Melissa Rosenberg",
+            "regista o attore": "Melissa Rosenberg",
             "tema": "Supereroi"
         },
         {
@@ -1014,7 +1014,7 @@
             "genere": ["Azione", "Commedia", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Steve Blackman",
+            "regista o attore": "Steve Blackman",
             "tema": "Supereroi"
         },
         {
@@ -1023,7 +1023,7 @@
             "genere": ["Thriller", "Dramma", "Spionaggio"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Alex Gansa & Howard Gordon",
+            "regista o attore": "Alex Gansa & Howard Gordon",
             "tema": "Spionaggio"
         },
         {
@@ -1032,7 +1032,7 @@
             "genere": ["Dramma", "Commedia nera"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jesse Armstrong",
+            "regista o attore": "Jesse Armstrong",
             "tema": "Famiglia"
         },
         {
@@ -1041,7 +1041,7 @@
             "genere": ["Dramma", "Horror", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Craig Mazin & Neil Druckmann",
+            "regista o attore": "Craig Mazin & Neil Druckmann",
             "tema": "Post-apocalittico"
         },
         {
@@ -1050,7 +1050,7 @@
             "genere": ["Fantascienza", "Dramma", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jason Rothenberg",
+            "regista o attore": "Jason Rothenberg",
             "tema": ["Post-apocalittico", "Sopravvivenza"]
         },
         {
@@ -1059,7 +1059,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Simon",
+            "regista o attore": "David Simon",
             "tema": "Crimine"
         },
         {
@@ -1068,7 +1068,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Dan Goor & Michael Schur",
+            "regista o attore": "Dan Goor & Michael Schur",
             "tema": "Poliziesco"
         },
         {
@@ -1077,7 +1077,7 @@
             "genere": ["Thriller", "Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Joe Penhall",
+            "regista o attore": "Joe Penhall",
             "tema": "Poliziesco"
         },
         {
@@ -1086,7 +1086,7 @@
             "genere": ["Thriller", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Cary Fukunaga & Daniel Minahan",
+            "regista o attore": "Cary Fukunaga & Daniel Minahan",
             "tema": "Mistero"
         },
         {
@@ -1095,7 +1095,7 @@
             "genere": ["Dramma", "Crime", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kurt Sutter",
+            "regista o attore": "Kurt Sutter",
             "tema": ["Mafia", "Crimine"]
         },
         {
@@ -1104,7 +1104,7 @@
             "genere": ["Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Matthew Weiner",
+            "regista o attore": "Matthew Weiner",
             "tema": "Ufficio/Lavoro"
         },
         {
@@ -1113,7 +1113,7 @@
             "genere": ["Dramma", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jenji Kohan",
+            "regista o attore": "Jenji Kohan",
             "tema": "Carcere"
         },
         {
@@ -1122,7 +1122,7 @@
             "genere": ["Documentario", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Jeremy Wade",
+            "regista o attore": "Jeremy Wade",
             "tema": "Animali"
         },
         {
@@ -1131,7 +1131,7 @@
             "genere": ["Commedia", "Reality"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Brian Quinn & Joe Gatto",
+            "regista o attore": "Brian Quinn & Joe Gatto",
             "tema": "Amicizia"
         },
         {
@@ -1140,7 +1140,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "J.J. Abrams",
+            "regista o attore": "J.J. Abrams",
             "tema": "Avventura spaziale"
         },
         {
@@ -1149,7 +1149,7 @@
             "genere": ["Fantasy", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Peter Jackson",
+            "regista o attore": "Peter Jackson",
             "tema": "Fantasy"
         },
         {
@@ -1158,7 +1158,7 @@
             "genere": ["Azione", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Ridley Scott",
+            "regista o attore": "Ridley Scott",
             "tema": "Storico"
         },
         {
@@ -1167,7 +1167,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Frank Darabont",
+            "regista o attore": "Frank Darabont",
             "tema": "Carcere"
         },
         {
@@ -1176,7 +1176,7 @@
             "genere": ["Dramma", "Biografico", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Christopher Nolan", "Cillian Murphy"],
+            "regista o attore": ["Christopher Nolan", "Cillian Murphy"],
             "tema": "Storico"
         },
         {
@@ -1185,7 +1185,7 @@
             "genere": ["Dramma", "Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Todd Phillips",
+            "regista o attore": "Todd Phillips",
             "tema": "Psicologico"
         },
         {
@@ -1194,7 +1194,7 @@
             "genere": ["Animazione", "Fantasy", "Avventura"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": "Fantasy"
         },
         {
@@ -1203,7 +1203,7 @@
             "genere": ["Animazione", "Fantasy", "Romantico", "Musical"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Gary Trousdale & Kirk Wise",
+            "regista o attore": "Gary Trousdale & Kirk Wise",
             "tema": "Amore"
         },
         {
@@ -1212,7 +1212,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Peter Weir",
+            "regista o attore": "Peter Weir",
             "tema": "Scuola/Università"
         },
         {
@@ -1221,7 +1221,7 @@
             "genere": ["Guerra", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Francis Ford Coppola",
+            "regista o attore": "Francis Ford Coppola",
             "tema": "Guerra"
         },
         {
@@ -1230,7 +1230,7 @@
             "genere": ["Animazione", "Dramma", "Avventura", "Musical"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Roger Allers & Rob Minkoff",
+            "regista o attore": "Roger Allers & Rob Minkoff",
             "tema": "Famiglia"
         },
         {
@@ -1239,7 +1239,7 @@
             "genere": ["Animazione", "Avventura", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Andrew Stanton",
+            "regista o attore": "Andrew Stanton",
             "tema": "Famiglia"
         },
         {
@@ -1248,7 +1248,7 @@
             "genere": ["Dramma", "Crime", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": ["Martin Scorsese", "Robert De Niro"],
+            "regista o attore": ["Martin Scorsese", "Robert De Niro"],
             "tema": "Psicologico"
         },
         {
@@ -1257,7 +1257,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Chris Columbus",
+            "regista o attore": "Chris Columbus",
             "tema": "Famiglia"
         },
         {
@@ -1266,7 +1266,7 @@
             "genere": ["Thriller", "Horror", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Sopravvivenza"
         },
         {
@@ -1275,7 +1275,7 @@
             "genere": ["Azione", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Ridley Scott",
+            "regista o attore": "Ridley Scott",
             "tema": "Guerra"
         },
         {
@@ -1284,7 +1284,7 @@
             "genere": ["Azione", "Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Wolfgang Petersen",
+            "regista o attore": "Wolfgang Petersen",
             "tema": "Guerra"
         },
         {
@@ -1293,7 +1293,7 @@
             "genere": ["Azione", "Western"],
             "lingua": "Italiano",
             "decennio": "Anni '60",
-            "regista/attore": "Sergio Leone",
+            "regista o attore": "Sergio Leone",
             "tema": "Avventura"
         },
         {
@@ -1302,7 +1302,7 @@
             "genere": ["Dramma", "Romantico", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Leonardo DiCaprio",
+            "regista o attore": "Leonardo DiCaprio",
             "tema": "Amore"
         },
         {
@@ -1311,7 +1311,7 @@
             "genere": ["Thriller", "Crime"],
             "lingua": "Coreano",
             "decennio": "Anni 2000",
-            "regista/attore": "Bong Joon-ho",
+            "regista o attore": "Bong Joon-ho",
             "tema": "Mistero"
         },
         {
@@ -1320,7 +1320,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "James Cameron",
+            "regista o attore": "James Cameron",
             "tema": "Avventura"
         },
         {
@@ -1329,7 +1329,7 @@
             "genere": ["Fantasy", "Avventura", "Famiglia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Chris Columbus",
+            "regista o attore": "Chris Columbus",
             "tema": "Magia"
         },
         {
@@ -1338,7 +1338,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Anthony & Joe Russo", "Scarlett Johansson"],
+            "regista o attore": ["Anthony & Joe Russo", "Scarlett Johansson"],
             "tema": "Supereroi"
         },
         {
@@ -1347,7 +1347,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ryan Coogler",
+            "regista o attore": "Ryan Coogler",
             "tema": "Supereroi"
         },
         {
@@ -1356,7 +1356,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Jon Favreau",
+            "regista o attore": "Jon Favreau",
             "tema": "Supereroi"
         },
         {
@@ -1365,7 +1365,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Sam Raimi",
+            "regista o attore": "Sam Raimi",
             "tema": "Supereroi"
         },
         {
@@ -1374,7 +1374,7 @@
             "genere": ["Dramma", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["David Fincher", "Brad Pitt"],
+            "regista o attore": ["David Fincher", "Brad Pitt"],
             "tema": "Psicologico"
         },
         {
@@ -1383,7 +1383,7 @@
             "genere": ["Azione", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Quentin Tarantino", "Brad Pitt"],
+            "regista o attore": ["Quentin Tarantino", "Brad Pitt"],
             "tema": "Guerra"
         },
         {
@@ -1392,7 +1392,7 @@
             "genere": ["Thriller", "Horror", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Jonathan Demme",
+            "regista o attore": "Jonathan Demme",
             "tema": "Psicologico"
         },
         {
@@ -1401,7 +1401,7 @@
             "genere": ["Commedia"],
             "lingua": "Italiano",
             "decennio": "Anni '90",
-            "regista/attore": "Aldo, Giovanni e Giacomo",
+            "regista o attore": "Aldo, Giovanni e Giacomo",
             "tema": "Comico"
         },
         {
@@ -1410,7 +1410,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "J.J. Abrams",
+            "regista o attore": "J.J. Abrams",
             "tema": "Avventura spaziale"
         },
         {
@@ -1419,7 +1419,7 @@
             "genere": ["Azione", "Crime", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Justin Lin",
+            "regista o attore": "Justin Lin",
             "tema": "Auto"
         },
         {
@@ -1428,7 +1428,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Stanley Kubrick",
+            "regista o attore": "Stanley Kubrick",
             "tema": "Psicologico"
         },
         {
@@ -1437,7 +1437,7 @@
             "genere": ["Horror", "Thriller", "Mystery"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Andy Muschietti",
+            "regista o attore": "Andy Muschietti",
             "tema": "Clown"
         },
         {
@@ -1446,7 +1446,7 @@
             "genere": ["Horror", "Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "James Wan",
+            "regista o attore": "James Wan",
             "tema": "Psicologico"
         },
         {
@@ -1455,7 +1455,7 @@
             "genere": ["Horror", "Thriller", "Slasher"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Sean Cunningham",
+            "regista o attore": "Sean Cunningham",
             "tema": "Horror"
         },
         {
@@ -1464,7 +1464,7 @@
             "genere": ["Fantasy", "Avventura", "Famiglia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Andrew Adamson",
+            "regista o attore": "Andrew Adamson",
             "tema": "Fantasy"
         },
         {
@@ -1473,7 +1473,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Gary Ross",
+            "regista o attore": "Gary Ross",
             "tema": "Sopravvivenza"
         },
         {
@@ -1482,7 +1482,7 @@
             "genere": ["Fantascienza", "Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Wes Ball",
+            "regista o attore": "Wes Ball",
             "tema": "Sopravvivenza"
         },
         {
@@ -1491,7 +1491,7 @@
             "genere": ["Dramma", "Crime", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Stanley Kubrick",
+            "regista o attore": "Stanley Kubrick",
             "tema": "Psicologico"
         },
         {
@@ -1500,7 +1500,7 @@
             "genere": ["Azione", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Guerra"
         },
         {
@@ -1509,7 +1509,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Stanley Kubrick",
+            "regista o attore": "Stanley Kubrick",
             "tema": "Guerra"
         },
         {
@@ -1518,7 +1518,7 @@
             "genere": ["Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Robot/AI"
         },
         {
@@ -1527,7 +1527,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Curtis Hanson",
+            "regista o attore": "Curtis Hanson",
             "tema": "Musica"
         },
         {
@@ -1536,7 +1536,7 @@
             "genere": ["Dramma", "Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Robert Zemeckis",
+            "regista o attore": "Robert Zemeckis",
             "tema": "Drammatico"
         },
         {
@@ -1545,7 +1545,7 @@
             "genere": ["Azione", "Dramma", "Avventura"],
             "lingua": "Giapponese",
             "decennio": "Anni '50",
-            "regista/attore": "Akira Kurosawa",
+            "regista o attore": "Akira Kurosawa",
             "tema": "Guerra"
         },
         {
@@ -1554,7 +1554,7 @@
             "genere": ["Dramma", "Fantasy", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Frank Darabont",
+            "regista o attore": "Frank Darabont",
             "tema": "Soprannaturale"
         },
         {
@@ -1563,7 +1563,7 @@
             "genere": ["Dramma", "Biografico", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Roman Polanski",
+            "regista o attore": "Roman Polanski",
             "tema": "Guerra"
         },
         {
@@ -1572,7 +1572,7 @@
             "genere": ["Commedia", "Dramma", "Biografico"],
             "lingua": "Francese",
             "decennio": "Anni 2010",
-            "regista/attore": "Olivier Nakache & Éric Toledano",
+            "regista o attore": "Olivier Nakache & Éric Toledano",
             "tema": "Amicizia"
         },
         {
@@ -1581,7 +1581,7 @@
             "genere": ["Fantascienza", "Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Ridley Scott",
+            "regista o attore": "Ridley Scott",
             "tema": ["Sopravvivenza", "Alieni"]
         },
         {
@@ -1590,7 +1590,7 @@
             "genere": ["Azione", "Western", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Quentin Tarantino", "Leonardo DiCaprio"],
+            "regista o attore": ["Quentin Tarantino", "Leonardo DiCaprio"],
             "tema": "Vendetta"
         },
         {
@@ -1599,7 +1599,7 @@
             "genere": ["Animazione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Andrew Stanton",
+            "regista o attore": "Andrew Stanton",
             "tema": "Robot/AI"
         },
         {
@@ -1608,7 +1608,7 @@
             "genere": ["Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Avventura"
         },
         {
@@ -1617,7 +1617,7 @@
             "genere": ["Animazione", "Avventura", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "John Lasseter",
+            "regista o attore": "John Lasseter",
             "tema": "Giocattoli"
         },
         {
@@ -1626,7 +1626,7 @@
             "genere": ["Dramma", "Crime", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Brian De Palma",
+            "regista o attore": "Brian De Palma",
             "tema": "Mafia"
         },
         {
@@ -1635,7 +1635,7 @@
             "genere": ["Animazione", "Avventura", "Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Pete Docter",
+            "regista o attore": "Pete Docter",
             "tema": "Avventura"
         },
         {
@@ -1644,7 +1644,7 @@
             "genere": ["Dramma", "Commedia", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["Peter Weir", "Jim Carrey"],
+            "regista o attore": ["Peter Weir", "Jim Carrey"],
             "tema": "Drammatico"
         },
         {
@@ -1653,7 +1653,7 @@
             "genere": ["Azione", "Dramma", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "James McTeigue",
+            "regista o attore": "James McTeigue",
             "tema": "Politica"
         },
         {
@@ -1662,7 +1662,7 @@
             "genere": ["Animazione", "Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Pete Docter",
+            "regista o attore": "Pete Docter",
             "tema": "Amicizia"
         },
         {
@@ -1671,7 +1671,7 @@
             "genere": ["Animazione", "Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Brad Bird",
+            "regista o attore": "Brad Bird",
             "tema": "Cucina"
         },
         {
@@ -1680,7 +1680,7 @@
             "genere": ["Animazione", "Avventura", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Chris Sanders & Dean DeBlois",
+            "regista o attore": "Chris Sanders & Dean DeBlois",
             "tema": "Animali"
         },
         {
@@ -1689,7 +1689,7 @@
             "genere": ["Fantascienza", "Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "James Cameron",
+            "regista o attore": "James Cameron",
             "tema": "Robot/AI"
         },
         {
@@ -1698,7 +1698,7 @@
             "genere": ["Fantasy", "Avventura", "Musical"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Victor Fleming",
+            "regista o attore": "Victor Fleming",
             "tema": "Fantasy"
         },
         {
@@ -1707,7 +1707,7 @@
             "genere": ["Animazione", "Azione", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Brad Bird",
+            "regista o attore": "Brad Bird",
             "tema": "Supereroi"
         },
         {
@@ -1716,7 +1716,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Lasse Hallström",
+            "regista o attore": "Lasse Hallström",
             "tema": ["Animali", "Amicizia", "Famiglia"]
         },
         {
@@ -1725,7 +1725,7 @@
             "genere": ["Dramma", "Biografico", "Sport"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ron Howard",
+            "regista o attore": "Ron Howard",
             "tema": "Sport"
         },
         {
@@ -1734,7 +1734,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "William Friedkin",
+            "regista o attore": "William Friedkin",
             "tema": "Paranormale"
         },
         {
@@ -1743,7 +1743,7 @@
             "genere": ["Commedia", "Avventura", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Greta Gerwig", "Margot Robbie"],
+            "regista o attore": ["Greta Gerwig", "Margot Robbie"],
             "tema": "Commedia"
         },
         {
@@ -1752,7 +1752,7 @@
             "genere": ["Horror", "Mystery", "Thriller", "Slasher"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Wes Craven",
+            "regista o attore": "Wes Craven",
             "tema": "Horror"
         },
         {
@@ -1761,7 +1761,7 @@
             "genere": ["Thriller", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "M. Night Shyamalan",
+            "regista o attore": "M. Night Shyamalan",
             "tema": "Psicologico"
         },
         {
@@ -1770,7 +1770,7 @@
             "genere": ["Animazione", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Conrad Vernon & Greg Tiernan",
+            "regista o attore": "Conrad Vernon & Greg Tiernan",
             "tema": "Comico"
         },
         {
@@ -1779,7 +1779,7 @@
             "genere": ["Fantascienza", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ridley Scott",
+            "regista o attore": "Ridley Scott",
             "tema": "Avventura spaziale"
         },
         {
@@ -1788,7 +1788,7 @@
             "genere": ["Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Todd Phillips",
+            "regista o attore": "Todd Phillips",
             "tema": "Comico"
         },
         {
@@ -1797,7 +1797,7 @@
             "genere": ["Commedia", "Satira", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni '40",
-            "regista/attore": "Charlie Chaplin",
+            "regista o attore": "Charlie Chaplin",
             "tema": "Politica"
         },
         {
@@ -1806,7 +1806,7 @@
             "genere": ["Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Martin Scorsese", "Leonardo DiCaprio"],
+            "regista o attore": ["Martin Scorsese", "Leonardo DiCaprio"],
             "tema": ["Psicologico", "Mistero"]
         },
         {
@@ -1815,7 +1815,7 @@
             "genere": ["Fantascienza", "Horror", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Francis Lawrence",
+            "regista o attore": "Francis Lawrence",
             "tema": "Post-apocalittico"
         },
         {
@@ -1824,7 +1824,7 @@
             "genere": ["Commedia", "Fantasy", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Shawn Levy",
+            "regista o attore": "Shawn Levy",
             "tema": "Magia"
         },
         {
@@ -1833,7 +1833,7 @@
             "genere": ["Thriller", "Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Eric Bress & J. Mackye Gruber",
+            "regista o attore": "Eric Bress & J. Mackye Gruber",
             "tema": "Viaggi nel tempo"
         },
         {
@@ -1842,7 +1842,7 @@
             "genere": ["Dramma", "Crime", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Steven Spielberg", "Leonardo DiCaprio"],
+            "regista o attore": ["Steven Spielberg", "Leonardo DiCaprio"],
             "tema": "Crimine"
         },
         {
@@ -1851,7 +1851,7 @@
             "genere": ["Commedia", "Fantascienza", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Barry Sonnenfeld",
+            "regista o attore": "Barry Sonnenfeld",
             "tema": "Futuristico"
         },
         {
@@ -1860,7 +1860,7 @@
             "genere": ["Thriller", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Christopher Nolan",
+            "regista o attore": "Christopher Nolan",
             "tema": "Psicologico"
         },
         {
@@ -1869,7 +1869,7 @@
             "genere": ["Dramma", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Darren Aronofsky",
+            "regista o attore": "Darren Aronofsky",
             "tema": "Drammatico"
         },
         {
@@ -1878,7 +1878,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Danny Boyle",
+            "regista o attore": "Danny Boyle",
             "tema": "Drammatico"
         },
         {
@@ -1887,7 +1887,7 @@
             "genere": ["Thriller", "Horror", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Mary Harron", "Christian Bale"],
+            "regista o attore": ["Mary Harron", "Christian Bale"],
             "tema": "Psicologico"
         },
         {
@@ -1896,7 +1896,7 @@
             "genere": ["Dramma", "Satira", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Sam Mendes",
+            "regista o attore": "Sam Mendes",
             "tema": "Drammatico"
         },
         {
@@ -1905,7 +1905,7 @@
             "genere": ["Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Gus Van Sant",
+            "regista o attore": "Gus Van Sant",
             "tema": "Coming of Age"
         },
         {
@@ -1914,7 +1914,7 @@
             "genere": ["Thriller", "Crime", "Mistero"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["David Fincher", "Brad Pitt"],
+            "regista o attore": ["David Fincher", "Brad Pitt"],
             "tema": "Psicologico"
         },
         {
@@ -1923,7 +1923,7 @@
             "genere": ["Dramma", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Rob Reiner",
+            "regista o attore": "Rob Reiner",
             "tema": "Coming of Age"
         },
         {
@@ -1932,7 +1932,7 @@
             "genere": ["Thriller", "Romantico", "Dramma"],
             "lingua": "Coreano",
             "decennio": "Anni 2010",
-            "regista/attore": "Park Chan-wook",
+            "regista o attore": "Park Chan-wook",
             "tema": "Psicologico"
         },
         {
@@ -1941,7 +1941,7 @@
             "genere": ["Dramma", "Thriller", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Darren Aronofsky",
+            "regista o attore": "Darren Aronofsky",
             "tema": ["Danza", "Psicologico"]
         },
         {
@@ -1950,7 +1950,7 @@
             "genere": ["Animazione", "Dramma"],
             "lingua": "Giapponese",
             "decennio": "Anni '80",
-            "regista/attore": "Isao Takahata",
+            "regista o attore": "Isao Takahata",
             "tema": "Guerra"
         },
         {
@@ -1959,7 +1959,7 @@
             "genere": ["Fantascienza", "Azione", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Bong Joon-ho", "Robert Pattinson"],
+            "regista o attore": ["Bong Joon-ho", "Robert Pattinson"],
             "tema": "Futuristico"
         },
         {
@@ -1968,7 +1968,7 @@
             "genere": ["Dramma", "Storico", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Damien Chazelle", "Brad Pitt", "Margot Robbie"],
+            "regista o attore": ["Damien Chazelle", "Brad Pitt", "Margot Robbie"],
             "tema": "Musica"
         },
         {
@@ -1977,7 +1977,7 @@
             "genere": ["Thriller", "Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Clint Eastwood",
+            "regista o attore": "Clint Eastwood",
             "tema": "Mistero"
         },
         {
@@ -1986,7 +1986,7 @@
             "genere": ["Animazione", "Fantascienza"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Satoshi Kon",
+            "regista o attore": "Satoshi Kon",
             "tema": "Psicologico"
         },
         {
@@ -1995,7 +1995,7 @@
             "genere": ["Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Lynch",
+            "regista o attore": "David Lynch",
             "tema": "Psicologico"
         },
         {
@@ -2004,7 +2004,7 @@
             "genere": ["Horror", "Dramma", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Lars von Trier",
+            "regista o attore": "Lars von Trier",
             "tema": "Psicologico"
         },
         {
@@ -2013,7 +2013,7 @@
             "genere": ["Dramma"],
             "lingua": "Francese",
             "decennio": "Anni 2010",
-            "regista/attore": "Denis Villeneuve",
+            "regista o attore": "Denis Villeneuve",
             "tema": "Guerra"
         },
         {
@@ -2022,7 +2022,7 @@
             "genere": ["Horror", "Fantascienza", "Dramma"],
             "lingua": "Coreano",
             "decennio": "Anni 2000",
-            "regista/attore": "Bong Joon-ho",
+            "regista o attore": "Bong Joon-ho",
             "tema": "Monster"
         },
         {
@@ -2031,7 +2031,7 @@
             "genere": ["Azione", "Dramma", "Fantascienza"],
             "lingua": "Giapponese",
             "decennio": "Anni 2020",
-            "regista/attore": "Takashi Yamazaki",
+            "regista o attore": "Takashi Yamazaki",
             "tema": "Monster"
         },
         {
@@ -2040,7 +2040,7 @@
             "genere": ["Horror", "Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "David Cronenberg",
+            "regista o attore": "David Cronenberg",
             "tema": "Body Horror"
         },
         {
@@ -2049,7 +2049,7 @@
             "genere": ["Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Richard Linklater",
+            "regista o attore": "Richard Linklater",
             "tema": "Amore"
         },
         {
@@ -2058,7 +2058,7 @@
             "genere": ["Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Richard Linklater",
+            "regista o attore": "Richard Linklater",
             "tema": "Amore"
         },
         {
@@ -2067,7 +2067,7 @@
             "genere": ["Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Richard Linklater",
+            "regista o attore": "Richard Linklater",
             "tema": "Amore"
         },
         {
@@ -2076,7 +2076,7 @@
             "genere": ["Thriller", "Crime", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Fincher",
+            "regista o attore": "David Fincher",
             "tema": "Mistero"
         },
         {
@@ -2085,7 +2085,7 @@
             "genere": ["Dramma", "Romantico", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Sofia Coppola", "Scarlett Johansson"],
+            "regista o attore": ["Sofia Coppola", "Scarlett Johansson"],
             "tema": "Amore"
         },
         {
@@ -2094,7 +2094,7 @@
             "genere": ["Horror", "Gotico"],
             "lingua": "Inglese",
             "decennio": "Anni '20",
-            "regista/attore": "F.W. Murnau",
+            "regista o attore": "F.W. Murnau",
             "tema": "Horror"
         },
         {
@@ -2103,7 +2103,7 @@
             "genere": ["Commedia", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Wes Anderson",
+            "regista o attore": "Wes Anderson",
             "tema": "Mistero"
         },
         {
@@ -2112,7 +2112,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Wim Wenders",
+            "regista o attore": "Wim Wenders",
             "tema": "Famiglia"
         },
         {
@@ -2121,7 +2121,7 @@
             "genere": ["Dramma", "Crime", "Azione"],
             "lingua": "Spagnolo",
             "decennio": "Anni 2000",
-            "regista/attore": "Fernando Meirelles",
+            "regista o attore": "Fernando Meirelles",
             "tema": "Crimine"
         },
         {
@@ -2130,7 +2130,7 @@
             "genere": ["Dramma", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Paul Thomas Anderson",
+            "regista o attore": "Paul Thomas Anderson",
             "tema": "Storico"
         },
         {
@@ -2139,7 +2139,7 @@
             "genere": ["Horror", "Fantascienza"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kiyoshi Kurosawa",
+            "regista o attore": "Kiyoshi Kurosawa",
             "tema": "Soprannaturale"
         },
         {
@@ -2148,7 +2148,7 @@
             "genere": ["Horror", "Slasher"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Damien Leone",
+            "regista o attore": "Damien Leone",
             "tema": "Clown"
         },
         {
@@ -2157,7 +2157,7 @@
             "genere": ["Horror", "Thriller", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Roman Polanski",
+            "regista o attore": "Roman Polanski",
             "tema": "Soprannaturale"
         },
         {
@@ -2166,7 +2166,7 @@
             "genere": ["Horror", "Thriller", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Parker Finn",
+            "regista o attore": "Parker Finn",
             "tema": "Soprannaturale"
         },
         {
@@ -2175,7 +2175,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Coralie Fargeat",
+            "regista o attore": "Coralie Fargeat",
             "tema": "Body Horror"
         },
         {
@@ -2184,7 +2184,7 @@
             "genere": ["Horror", "Gotico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Robert Eggers",
+            "regista o attore": "Robert Eggers",
             "tema": "Vampiri"
         },
         {
@@ -2193,7 +2193,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Bo Burnham",
+            "regista o attore": "Bo Burnham",
             "tema": "Adolescenza"
         },
         {
@@ -2202,7 +2202,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Denis Villeneuve",
+            "regista o attore": "Denis Villeneuve",
             "tema": "Avventura spaziale"
         },
         {
@@ -2211,7 +2211,7 @@
             "genere": ["Horror", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Gerard Johnstone",
+            "regista o attore": "Gerard Johnstone",
             "tema": "Robot/AI"
         },
         {
@@ -2220,7 +2220,7 @@
             "genere": ["Azione", "Crime", "Thriller", "Supereroi"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Matt Reeves", "Robert Pattinson"],
+            "regista o attore": ["Matt Reeves", "Robert Pattinson"],
             "tema": "Supereroi"
         },
         {
@@ -2229,7 +2229,7 @@
             "genere": ["Commedia", "Satira", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Leonardo DiCaprio",
+            "regista o attore": "Leonardo DiCaprio",
             "tema": "Ambientalismo"
         },
         {
@@ -2238,7 +2238,7 @@
             "genere": ["Thriller", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "M. Night Shyamalan",
+            "regista o attore": "M. Night Shyamalan",
             "tema": "Mistero"
         },
         {
@@ -2247,7 +2247,7 @@
             "genere": ["Animazione", "Commedia", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Pete Docter",
+            "regista o attore": "Pete Docter",
             "tema": "Filosofico"
         },
         {
@@ -2256,7 +2256,7 @@
             "genere": ["Fantascienza", "Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": ["Christopher Nolan", "Robert Pattinson"],
+            "regista o attore": ["Christopher Nolan", "Robert Pattinson"],
             "tema": "Viaggi nel tempo"
         },
         {
@@ -2265,7 +2265,7 @@
             "genere": ["Horror", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ari Aster",
+            "regista o attore": "Ari Aster",
             "tema": "Culto"
         },
         {
@@ -2274,7 +2274,7 @@
             "genere": ["Dramma", "Commedia", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Quentin Tarantino", "Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+            "regista o attore": ["Quentin Tarantino", "Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
             "tema": "Storico"
         },
         {
@@ -2283,7 +2283,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jordan Peele",
+            "regista o attore": "Jordan Peele",
             "tema": "Psicologico"
         },
         {
@@ -2292,7 +2292,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Charlie Brooker",
+            "regista o attore": "Charlie Brooker",
             "tema": "Videogiochi"
         },
         {
@@ -2301,7 +2301,7 @@
             "genere": ["Dramma", "Biografico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Bryan Singer",
+            "regista o attore": "Bryan Singer",
             "tema": "Musica"
         },
         {
@@ -2310,7 +2310,7 @@
             "genere": ["Fantascienza", "Thriller", "Dramma", "Noir"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Denis Villeneuve",
+            "regista o attore": "Denis Villeneuve",
             "tema": "Distopia"
         },
         {
@@ -2319,7 +2319,7 @@
             "genere": ["Azione", "Dramma", "Fantascienza", "Supereroi"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["James Mangold", "Hugh Jackman"],
+            "regista o attore": ["James Mangold", "Hugh Jackman"],
             "tema": "Supereroi"
         },
         {
@@ -2328,7 +2328,7 @@
             "genere": ["Fantascienza", "Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Daniel Espinosa",
+            "regista o attore": "Daniel Espinosa",
             "tema": "Alieni"
         },
         {
@@ -2337,7 +2337,7 @@
             "genere": ["Fantascienza", "Romantico", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Morten Tyldum",
+            "regista o attore": "Morten Tyldum",
             "tema": "Avventura spaziale"
         },
         {
@@ -2346,7 +2346,7 @@
             "genere": ["Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Denis Villeneuve",
+            "regista o attore": "Denis Villeneuve",
             "tema": "Alieni"
         },
         {
@@ -2355,7 +2355,7 @@
             "genere": ["Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Louis Leterrier",
+            "regista o attore": "Louis Leterrier",
             "tema": "Magia"
         },
         {
@@ -2364,7 +2364,7 @@
             "genere": ["Azione", "Fantascienza", "Supereroi"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["David Ayer", "Margot Robbie"],
+            "regista o attore": ["David Ayer", "Margot Robbie"],
             "tema": "Supereroi"
         },
         {
@@ -2373,7 +2373,7 @@
             "genere": ["Commedia", "Parody", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Keenen Ivory Wayans",
+            "regista o attore": "Keenen Ivory Wayans",
             "tema": "Parody"
         },
         {
@@ -2382,7 +2382,7 @@
             "genere": ["Commedia", "Parody", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Keenen Ivory Wayans",
+            "regista o attore": "Keenen Ivory Wayans",
             "tema": "Parody"
         },
         {
@@ -2391,7 +2391,7 @@
             "genere": ["Commedia", "Parody", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Zucker",
+            "regista o attore": "David Zucker",
             "tema": "Parody"
         },
         {
@@ -2400,7 +2400,7 @@
             "genere": ["Commedia", "Parody", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Zucker",
+            "regista o attore": "David Zucker",
             "tema": "Parody"
         },
         {
@@ -2409,7 +2409,7 @@
             "genere": ["Commedia", "Parody", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Malcolm D. Lee",
+            "regista o attore": "Malcolm D. Lee",
             "tema": "Parody"
         },
         {
@@ -2418,7 +2418,7 @@
             "genere": ["Commedia", "Dramma"],
             "lingua": "Italiano",
             "decennio": "Anni 2010",
-            "regista/attore": "Paolo Genovese",
+            "regista o attore": "Paolo Genovese",
             "tema": "Amicizia"
         },
         {
@@ -2427,7 +2427,7 @@
             "genere": ["Avventura", "Dramma", "Storico", "Western"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Leonardo DiCaprio",
+            "regista o attore": "Leonardo DiCaprio",
             "tema": "Sopravvivenza"
         },
         {
@@ -2436,7 +2436,7 @@
             "genere": ["Thriller", "Western"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Quentin Tarantino",
+            "regista o attore": "Quentin Tarantino",
             "tema": ["Mistero", "Psicologico", "Sopravvivenza"]
         },
         {
@@ -2445,7 +2445,7 @@
             "genere": ["Dramma", "Sport", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ryan Coogler",
+            "regista o attore": "Ryan Coogler",
             "tema": "Boxe"
         },
         {
@@ -2454,7 +2454,7 @@
             "genere": ["Commedia", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Seth MacFarlane",
+            "regista o attore": "Seth MacFarlane",
             "tema": "Comico"
         },
         {
@@ -2463,7 +2463,7 @@
             "genere": ["Avventura", "Fantascienza", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Colin Trevorrow",
+            "regista o attore": "Colin Trevorrow",
             "tema": "Sopravvivenza"
         },
         {
@@ -2472,7 +2472,7 @@
             "genere": ["Dramma", "Sport", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Antoine Fuqua",
+            "regista o attore": "Antoine Fuqua",
             "tema": "Boxe"
         },
         {
@@ -2481,7 +2481,7 @@
             "genere": ["Dramma", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jean-Marc Vallée",
+            "regista o attore": "Jean-Marc Vallée",
             "tema": "Famiglia"
         },
         {
@@ -2490,7 +2490,7 @@
             "genere": ["Azione", "Dramma", "Biografico", "Guerra"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Clint Eastwood",
+            "regista o attore": "Clint Eastwood",
             "tema": "Guerra"
         },
         {
@@ -2499,7 +2499,7 @@
             "genere": ["Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "David Fincher",
+            "regista o attore": "David Fincher",
             "tema": "Mistero"
         },
         {
@@ -2508,7 +2508,7 @@
             "genere": ["Azione", "Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Chad Stahelski",
+            "regista o attore": "Chad Stahelski",
             "tema": "Vendetta"
         },
         {
@@ -2517,7 +2517,7 @@
             "genere": ["Thriller", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Dan Gilroy",
+            "regista o attore": "Dan Gilroy",
             "tema": "Psicologico"
         },
         {
@@ -2526,7 +2526,7 @@
             "genere": ["Dramma", "Biografico", "Storico", "Guerra"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Morten Tyldum",
+            "regista o attore": "Morten Tyldum",
             "tema": ["Guerra", "Tecnologia"]
         },
         {
@@ -2535,7 +2535,7 @@
             "genere": ["Fantascienza", "Azione", "Thriller"],
             "lingua": "Inglese", 
             "decennio": "Anni 2010",
-            "regista/attore": ["Luc Besson", "Scarlett Johansson"],
+            "regista o attore": ["Luc Besson", "Scarlett Johansson"],
             "tema": "Futuristico"
         },
         {
@@ -2544,7 +2544,7 @@
             "genere": ["Fantasy", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Robert Stromberg", "Angelina Jolie"],
+            "regista o attore": ["Robert Stromberg", "Angelina Jolie"],
             "tema": ["Magia", "Amore", "Famiglia"]
         },
         {
@@ -2553,7 +2553,7 @@
             "genere": ["Thriller", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Denis Villeneuve", "Hugh Jackman"],
+            "regista o attore": ["Denis Villeneuve", "Hugh Jackman"],
             "tema": "Mistero"
         },
         {
@@ -2562,7 +2562,7 @@
             "genere": ["Azione", "Fantascienza", "Supereroi"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["James Mangold", "Hugh Jackman"],
+            "regista o attore": ["James Mangold", "Hugh Jackman"],
             "tema": "Supereroi"
         },
         {
@@ -2571,7 +2571,7 @@
             "genere": ["Romantico", "Commedia", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Richard Curtis",
+            "regista o attore": "Richard Curtis",
             "tema": "Viaggi nel tempo"
         },
         {
@@ -2580,7 +2580,7 @@
             "genere": ["Azione", "Horror", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Marc Forster", "Brad Pitt"],
+            "regista o attore": ["Marc Forster", "Brad Pitt"],
             "tema": ["Zombie", "Sopravvivenza"]
         },
         {
@@ -2589,7 +2589,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "James DeMonaco",
+            "regista o attore": "James DeMonaco",
             "tema": "Distopia"
         },
         {
@@ -2598,7 +2598,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "James DeMonaco",
+            "regista o attore": "James DeMonaco",
             "tema": "Distopia"
         },
         {
@@ -2607,7 +2607,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "James DeMonaco",
+            "regista o attore": "James DeMonaco",
             "tema": "Distopia"
         },
         {
@@ -2616,7 +2616,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Gerard McMurray",
+            "regista o attore": "Gerard McMurray",
             "tema": "Distopia"
         },
         {
@@ -2625,7 +2625,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Everardo Gout",
+            "regista o attore": "Everardo Gout",
             "tema": "Distopia"
         },
         {
@@ -2634,7 +2634,7 @@
             "genere": ["Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Todd Phillips",
+            "regista o attore": "Todd Phillips",
             "tema": "Comico"
         },
         {
@@ -2643,7 +2643,7 @@
             "genere": ["Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Todd Phillips",
+            "regista o attore": "Todd Phillips",
             "tema": "Comico"
         },
         {
@@ -2652,7 +2652,7 @@
             "genere": ["Fantasy", "Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Catherine Hardwicke", "Robert Pattinson"],
+            "regista o attore": ["Catherine Hardwicke", "Robert Pattinson"],
             "tema": "Vampiri"
         },
         {
@@ -2661,7 +2661,7 @@
             "genere": ["Fantasy", "Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Chris Weitz", "Robert Pattinson"],
+            "regista o attore": ["Chris Weitz", "Robert Pattinson"],
             "tema": "Vampiri"
         },
         {
@@ -2670,7 +2670,7 @@
             "genere": ["Fantasy", "Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["David Slade", "Robert Pattinson"],
+            "regista o attore": ["David Slade", "Robert Pattinson"],
             "tema": "Vampiri"
         },
         {
@@ -2679,7 +2679,7 @@
             "genere": ["Fantasy", "Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Bill Condon", "Robert Pattinson"],
+            "regista o attore": ["Bill Condon", "Robert Pattinson"],
             "tema": "Vampiri"
         },
         {
@@ -2688,7 +2688,7 @@
             "genere": ["Fantasy", "Romantico", "Dramma", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Bill Condon", "Robert Pattinson"],
+            "regista o attore": ["Bill Condon", "Robert Pattinson"],
             "tema": "Vampiri"
         },
         {
@@ -2697,7 +2697,7 @@
             "genere": ["Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Stephen Chbosky",
+            "regista o attore": "Stephen Chbosky",
             "tema": "Coming of Age"
         },
         {
@@ -2706,7 +2706,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Scott Derrickson",
+            "regista o attore": "Scott Derrickson",
             "tema": "Soprannaturale"
         },
         {
@@ -2715,7 +2715,7 @@
             "genere": ["Commedia", "Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Glenn Ficarra & John Requa",
+            "regista o attore": "Glenn Ficarra & John Requa",
             "tema": "Amore"
         },
         {
@@ -2724,7 +2724,7 @@
             "genere": ["Fantasy", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Chris Columbus",
+            "regista o attore": "Chris Columbus",
             "tema": "Magia"
         },
         {
@@ -2733,7 +2733,7 @@
             "genere": ["Fantasy", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Chris Columbus",
+            "regista o attore": "Chris Columbus",
             "tema": "Magia"
         },
         {
@@ -2742,7 +2742,7 @@
             "genere": ["Fantasy", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Alfonso Cuarón",
+            "regista o attore": "Alfonso Cuarón",
             "tema": "Magia"
         },
         {
@@ -2751,7 +2751,7 @@
             "genere": ["Fantasy", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Mike Newell",
+            "regista o attore": "Mike Newell",
             "tema": "Magia"
         },
         {
@@ -2760,7 +2760,7 @@
             "genere": ["Fantasy", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Yates",
+            "regista o attore": "David Yates",
             "tema": "Magia"
         },
         {
@@ -2769,7 +2769,7 @@
             "genere": ["Fantasy", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Yates",
+            "regista o attore": "David Yates",
             "tema": "Magia"
         },
         {
@@ -2778,7 +2778,7 @@
             "genere": ["Fantasy", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "David Yates",
+            "regista o attore": "David Yates",
             "tema": "Magia"
         },
         {
@@ -2787,7 +2787,7 @@
             "genere": ["Fantasy", "Avventura", "Azione", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "David Yates",
+            "regista o attore": "David Yates",
             "tema": "Magia"
         },
         {
@@ -2796,7 +2796,7 @@
             "genere": ["Animazione", "Commedia", "Azione", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Mark Osborne & John Stevenson",
+            "regista o attore": "Mark Osborne & John Stevenson",
             "tema": "Arti Marziali"
         },
         {
@@ -2805,7 +2805,7 @@
             "genere": ["Thriller", "Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Neil Burger", "Robert Pattinson"],
+            "regista o attore": ["Neil Burger", "Robert Pattinson"],
             "tema": "Tecnologia"
         },
         {
@@ -2814,7 +2814,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ivan Reitman",
+            "regista o attore": "Ivan Reitman",
             "tema": "Amore"
         },
         {
@@ -2823,7 +2823,7 @@
             "genere": ["Romantico", "Dramma", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Edward Zwick",
+            "regista o attore": "Edward Zwick",
             "tema": "Amore"
         },
         {
@@ -2832,7 +2832,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "David Fincher",
+            "regista o attore": "David Fincher",
             "tema": "Tecnologia"
         },
         {
@@ -2841,7 +2841,7 @@
             "genere": ["Horror", "Thriller", "Soprannaturale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "James Wan",
+            "regista o attore": "James Wan",
             "tema": "Paranormale"
         },
         {
@@ -2850,7 +2850,7 @@
             "genere": ["Commedia", "Famiglia"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Thor Freudenthal",
+            "regista o attore": "Thor Freudenthal",
             "tema": "Scuola/Università"
         },
         {
@@ -2859,7 +2859,7 @@
             "genere": ["Animazione", "Fantasy", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Henry Selick",
+            "regista o attore": "Henry Selick",
             "tema": "Soprannaturale"
         },
         {
@@ -2868,7 +2868,7 @@
             "genere": ["Romantico", "Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Marc Webb", "Joseph Gordon-Levitt"],
+            "regista o attore": ["Marc Webb", "Joseph Gordon-Levitt"],
             "tema": "Amore"
         },
         {
@@ -2877,7 +2877,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Peyton Reed", "Jim Carrey"],
+            "regista o attore": ["Peyton Reed", "Jim Carrey"],
             "tema": "Comico"
         },
         {
@@ -2886,7 +2886,7 @@
             "genere": ["Azione", "Fantascienza", "Supereroi"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Louis Leterrier",
+            "regista o attore": "Louis Leterrier",
             "tema": "Supereroi"
         },
         {
@@ -2895,7 +2895,7 @@
             "genere": ["Commedia", "Famiglia", "Animazione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Tim Hill",
+            "regista o attore": "Tim Hill",
             "tema": "Musica"
         },
         {
@@ -2904,7 +2904,7 @@
             "genere": ["Dramma", "Romantico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Anne Fletcher",
+            "regista o attore": "Anne Fletcher",
             "tema": "Danza"
         },
         {
@@ -2913,7 +2913,7 @@
             "genere": ["Dramma", "Romantico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Jon M. Chu",
+            "regista o attore": "Jon M. Chu",
             "tema": "Danza"
         },
         {
@@ -2922,7 +2922,7 @@
             "genere": ["Dramma", "Romantico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Jon M. Chu",
+            "regista o attore": "Jon M. Chu",
             "tema": "Danza"
         },
         {
@@ -2931,7 +2931,7 @@
             "genere": ["Dramma", "Romantico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Scott Speer",
+            "regista o attore": "Scott Speer",
             "tema": "Danza"
         },
         {
@@ -2940,7 +2940,7 @@
             "genere": ["Dramma", "Romantico", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Trish Sie",
+            "regista o attore": "Trish Sie",
             "tema": "Danza"
         },
         {
@@ -2949,7 +2949,7 @@
             "genere": ["Horror", "Soprannaturale"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Oren Peli",
+            "regista o attore": "Oren Peli",
             "tema": "Paranormale"
         },
         {
@@ -2958,7 +2958,7 @@
             "genere": ["Commedia", "Musicale", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kenny Ortega",
+            "regista o attore": "Kenny Ortega",
             "tema": "Musical"
         },
         {
@@ -2967,7 +2967,7 @@
             "genere": ["Commedia", "Musicale", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kenny Ortega",
+            "regista o attore": "Kenny Ortega",
             "tema": "Musical"
         },
         {
@@ -2976,7 +2976,7 @@
             "genere": ["Commedia", "Musicale", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kenny Ortega",
+            "regista o attore": "Kenny Ortega",
             "tema": "Musical"
         },
         {
@@ -2985,7 +2985,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Michael Bay",
+            "regista o attore": "Michael Bay",
             "tema": "Robot/AI"
         },
         {
@@ -2994,7 +2994,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Greg Mottola",
+            "regista o attore": "Greg Mottola",
             "tema": ["Adolescenza", "Coming of Age"]
         },
         {
@@ -3003,7 +3003,7 @@
             "genere": ["Dramma", "Thriller", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Edward Zwick",
+            "regista o attore": "Edward Zwick",
             "tema": ["Crimine", "Politica"]
         },
         {
@@ -3012,7 +3012,7 @@
             "genere": ["Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Larry Charles",
+            "regista o attore": "Larry Charles",
             "tema": "Comico"
         },
         {
@@ -3021,7 +3021,7 @@
             "genere": ["Thriller", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Christopher Nolan", "Hugh Jackman", "Christian Bale"],
+            "regista o attore": ["Christopher Nolan", "Hugh Jackman", "Christian Bale"],
             "tema": "Magia"
         },
         {
@@ -3030,7 +3030,7 @@
             "genere": ["Thriller", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Martin Scorsese", "Leonardo DiCaprio"],
+            "regista o attore": ["Martin Scorsese", "Leonardo DiCaprio"],
             "tema": ["Mafia", "Crimine"]
         },
         {
@@ -3039,7 +3039,7 @@
             "genere": ["Fantasy", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Gabor Csupo",
+            "regista o attore": "Gabor Csupo",
             "tema": "Amicizia"
         },
         {
@@ -3048,7 +3048,7 @@
             "genere": ["Commedia", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "David Frankel",
+            "regista o attore": "David Frankel",
             "tema": "Moda"
         },
         {
@@ -3057,7 +3057,7 @@
             "genere": ["Azione", "Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Doug Liman", "Brad Pitt", "Angelina Jolie"],
+            "regista o attore": ["Doug Liman", "Brad Pitt", "Angelina Jolie"],
             "tema": "Spionaggio"
         },
         {
@@ -3066,7 +3066,7 @@
             "genere": ["Romantico", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Nigel Cole",
+            "regista o attore": "Nigel Cole",
             "tema": "Amore"
         },
         {
@@ -3075,7 +3075,7 @@
             "genere": ["Animazione", "Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Eric Darnell & Tom McGrath",
+            "regista o attore": "Eric Darnell & Tom McGrath",
             "tema": "Animali"
         },
         {
@@ -3084,7 +3084,7 @@
             "genere": ["Commedia", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Keenen Ivory Wayans",
+            "regista o attore": "Keenen Ivory Wayans",
             "tema": "Comico"
         },
         {
@@ -3093,7 +3093,7 @@
             "genere": ["Romantico", "Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Michel Gondry", "Jim Carrey"],
+            "regista o attore": ["Michel Gondry", "Jim Carrey"],
             "tema": "Memoria"
         },
         {
@@ -3102,7 +3102,7 @@
             "genere": ["Dramma", "Crime", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Steven Spielberg",
+            "regista o attore": "Steven Spielberg",
             "tema": "Crimine"
         },
         {
@@ -3111,7 +3111,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": ["Donald Petrie", "Matthew McConaughey"],
+            "regista o attore": ["Donald Petrie", "Matthew McConaughey"],
             "tema": "Amore"
         },
         {
@@ -3120,7 +3120,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Gore Verbinski",
+            "regista o attore": "Gore Verbinski",
             "tema": "Soprannaturale"
         },
         {
@@ -3129,7 +3129,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Judd Apatow",
+            "regista o attore": "Judd Apatow",
             "tema": "Comico"
         },
         {
@@ -3138,7 +3138,7 @@
             "genere": ["Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Ben Stiller",
+            "regista o attore": "Ben Stiller",
             "tema": "Moda"
         },
         {
@@ -3147,7 +3147,7 @@
             "genere": ["Azione", "Thriller", "Fantascienza"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Kinji Fukasaku",
+            "regista o attore": "Kinji Fukasaku",
             "tema": "Sopravvivenza"
         },
         {
@@ -3156,7 +3156,7 @@
             "genere": ["Thriller", "Fantascienza", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Richard Kelly",
+            "regista o attore": "Richard Kelly",
             "tema": "Psicologico"
         },
         {
@@ -3165,7 +3165,7 @@
             "genere": ["Dramma", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Stephen Daldry",
+            "regista o attore": "Stephen Daldry",
             "tema": "Danza"
         },
         {
@@ -3174,7 +3174,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "James Wong",
+            "regista o attore": "James Wong",
             "tema": "Morte"
         },
         {
@@ -3183,7 +3183,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["James Mangold", "Angelina Jolie"],
+            "regista o attore": ["James Mangold", "Angelina Jolie"],
             "tema": "Disturbi mentali"
         },
         {
@@ -3192,7 +3192,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Paul Weitz",
+            "regista o attore": "Paul Weitz",
             "tema": ["Adolescenza", "Coming of Age"]
         },
         {
@@ -3201,7 +3201,7 @@
             "genere": ["Thriller", "Horror"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "M. Night Shyamalan",
+            "regista o attore": "M. Night Shyamalan",
             "tema": "Soprannaturale"
         },
         {
@@ -3210,7 +3210,7 @@
             "genere": ["Romantico", "Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Roger Michell",
+            "regista o attore": "Roger Michell",
             "tema": "Amore"
         },
         {
@@ -3219,7 +3219,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["Gil Junger", "Joseph Gordon-Levitt"],
+            "regista o attore": ["Gil Junger", "Joseph Gordon-Levitt"],
             "tema": ["Amore", "Coming of Age"]
         },
         {
@@ -3228,7 +3228,7 @@
             "genere": ["Dramma", "Romantico", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": ["Martin Brest", "Brad Pitt"],
+            "regista o attore": ["Martin Brest", "Brad Pitt"],
             "tema": "Morte"
         },
         {
@@ -3237,7 +3237,7 @@
             "genere": ["Thriller", "Horror"],
             "lingua": "Giapponese",
             "decennio": "Anni '90",
-            "regista/attore": "Kiyoshi Kurosawa",
+            "regista o attore": "Kiyoshi Kurosawa",
             "tema": "Psicologico"
         },
         {
@@ -3246,7 +3246,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Jim Gillespie",
+            "regista o attore": "Jim Gillespie",
             "tema": "Psicologico"
         },
         {
@@ -3255,7 +3255,7 @@
             "genere": ["Animazione", "Thriller"],
             "lingua": "Giapponese",
             "decennio": "Anni '90",
-            "regista/attore": "Satoshi Kon",
+            "regista o attore": "Satoshi Kon",
             "tema": "Psicologico"
         },
         {
@@ -3264,7 +3264,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Leonardo DiCaprio",
+            "regista o attore": "Leonardo DiCaprio",
             "tema": ["Adolescenza", "Droghe", "Coming of Age"]
         },
         {
@@ -3273,7 +3273,7 @@
             "genere": ["Thriller", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Quentin Tarantino",
+            "regista o attore": "Quentin Tarantino",
             "tema": "Crimine"
         },
         {
@@ -3282,7 +3282,7 @@
             "genere": ["Horror", "Thriller", "Psicologico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Rob Reiner",
+            "regista o attore": "Rob Reiner",
             "tema": "Psicologico"
         },
         {
@@ -3291,7 +3291,7 @@
             "genere": ["Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "John McTiernan",
+            "regista o attore": "John McTiernan",
             "tema": "Crimine"
         },
         {
@@ -3300,7 +3300,7 @@
             "genere": ["Horror", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "John Carpenter",
+            "regista o attore": "John Carpenter",
             "tema": ["Alieni", "Sopravvivenza"]
         },
         {
@@ -3309,7 +3309,7 @@
             "genere": ["Thriller", "Mistero", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '50",
-            "regista/attore": "Alfred Hitchcock",
+            "regista o attore": "Alfred Hitchcock",
             "tema": "Mistero"
         },
         {
@@ -3318,7 +3318,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Alfred Hitchcock",
+            "regista o attore": "Alfred Hitchcock",
             "tema": "Psicologico"
         },
         {
@@ -3327,7 +3327,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Alfred Hitchcock",
+            "regista o attore": "Alfred Hitchcock",
             "tema": "Horror"
         },
         {
@@ -3336,7 +3336,7 @@
             "genere": ["Fantasy", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Robert Stevenson",
+            "regista o attore": "Robert Stevenson",
             "tema": ["Magia", "Famiglia"]
         },
         {
@@ -3345,7 +3345,7 @@
             "genere": ["Azione", "Crime", "Thriller"],
             "lingua": "Italiano",
             "decennio": "Anni '60",
-            "regista/attore": "Mario Bava",
+            "regista o attore": "Mario Bava",
             "tema": "Fumetto"
         },
         {
@@ -3354,7 +3354,7 @@
             "genere": ["Dramma", "Mistero", "Crime"],
             "lingua": "Francese",
             "decennio": "Anni 2020",
-            "regista/attore": "Justine Triet",
+            "regista o attore": "Justine Triet",
             "tema": "Mistero"
         },
         {
@@ -3363,7 +3363,7 @@
             "genere": ["Dramma", "Romantico", "Storico"],
             "lingua": "Francese",
             "decennio": "Anni 2010",
-            "regista/attore": "Céline Sciamma",
+            "regista o attore": "Céline Sciamma",
             "tema": "LGBTQ+"
         },
         {
@@ -3372,7 +3372,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Francese",
             "decennio": "Anni '90",
-            "regista/attore": "Mathieu Kassovitz",
+            "regista o attore": "Mathieu Kassovitz",
             "tema": "Razzismo"
         },
         {
@@ -3381,7 +3381,7 @@
             "genere": ["Azione", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Luc Besson",
+            "regista o attore": "Luc Besson",
             "tema": "Vendetta"
         },
         {
@@ -3390,7 +3390,7 @@
             "genere": ["Thriller", "Dramma", "Horror"],
             "lingua": "Spagnolo",
             "decennio": "Anni 2010",
-            "regista/attore": "Pedro Almodóvar",
+            "regista o attore": "Pedro Almodóvar",
             "tema": ["Body Horror", "Psicologico"]
         },
         {
@@ -3399,7 +3399,7 @@
             "genere": ["Animazione", "Horror", "Fantasy"],
             "lingua": "Cileno",
             "decennio": "Anni 2010",
-            "regista/attore": "Joaquín Cociña",
+            "regista o attore": "Joaquín Cociña",
             "tema": "Psicologico"
         },
         {
@@ -3408,7 +3408,7 @@
             "genere": ["Dramma", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Clint Eastwood",
+            "regista o attore": "Clint Eastwood",
             "tema": "Amicizia"
         },
         {
@@ -3417,7 +3417,7 @@
             "genere": ["Commedia", "Romantico", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Woody Allen",
+            "regista o attore": "Woody Allen",
             "tema": "Arte"
         },
         {
@@ -3426,7 +3426,7 @@
             "genere": ["Dramma", "Fantasy"],
             "lingua": "Italiano",
             "decennio": "Anni '60",
-            "regista/attore": "Federico Fellini",
+            "regista o attore": "Federico Fellini",
             "tema": "Psicologico"
         },
         {
@@ -3435,7 +3435,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Woody Allen",
+            "regista o attore": "Woody Allen",
             "tema": "Amore"
         },
         {
@@ -3444,7 +3444,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Woody Allen",
+            "regista o attore": "Woody Allen",
             "tema": "Amore"
         },
         {
@@ -3453,7 +3453,7 @@
             "genere": ["Commedia", "Fantasy", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "Woody Allen",
+            "regista o attore": "Woody Allen",
             "tema": "Amore"
         },
         {
@@ -3462,7 +3462,7 @@
             "genere": ["Dramma", "Commedia", "Satira"],
             "lingua": "Italiano",
             "decennio": "Anni '60",
-            "regista/attore": "Federico Fellini",
+            "regista o attore": "Federico Fellini",
             "tema": "Psicologico"
         },
         {
@@ -3471,7 +3471,7 @@
             "genere": ["Commedia", "Crime"],
             "lingua": "Italiano",
             "decennio": "Anni 2000",
-            "regista/attore": "Aldo, Giovanni e Giacomo",
+            "regista o attore": "Aldo, Giovanni e Giacomo",
             "tema": "Comico"
         },
         {
@@ -3480,7 +3480,7 @@
             "genere": ["Commedia", "Dramma"],
             "lingua": "Italiano",
             "decennio": "Anni 2000",
-            "regista/attore": "Aldo, Giovanni e Giacomo",
+            "regista o attore": "Aldo, Giovanni e Giacomo",
             "tema": "Comico"
         },
         {
@@ -3489,7 +3489,7 @@
             "genere": ["Commedia", "Satira"],
             "lingua": "Italiano",
             "decennio": "Anni 2010",
-            "regista/attore": "Gennaro Nunziante",
+            "regista o attore": "Gennaro Nunziante",
             "tema": "Comico"
         },
         {
@@ -3498,7 +3498,7 @@
             "genere": ["Commedia", "Satira"],
             "lingua": "Italiano",
             "decennio": "Anni 2010",
-            "regista/attore": "Gennaro Nunziante",
+            "regista o attore": "Gennaro Nunziante",
             "tema": "Comico"
         },
         {
@@ -3507,7 +3507,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Italiano",
             "decennio": "Anni 2000",
-            "regista/attore": "Gennaro Nunziante",
+            "regista o attore": "Gennaro Nunziante",
             "tema": "Comico"
         },
         {
@@ -3516,7 +3516,7 @@
             "genere": ["Animazione", "Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Seth MacFarlane",
+            "regista o attore": "Seth MacFarlane",
             "tema": "Comico"
         },
         {
@@ -3525,7 +3525,7 @@
             "genere": ["Animazione", "Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Seth MacFarlane",
+            "regista o attore": "Seth MacFarlane",
             "tema": "Comico"
         },
         {
@@ -3534,7 +3534,7 @@
             "genere": ["Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Roman Polanski",
+            "regista o attore": "Roman Polanski",
             "tema": "Crime"
         },
         {
@@ -3543,7 +3543,7 @@
             "genere": ["Romantico", "Musicale", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Damien Chazelle",
+            "regista o attore": "Damien Chazelle",
             "tema": "Musical"
         },
         {
@@ -3552,7 +3552,7 @@
             "genere": ["Dramma", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Damien Chazelle",
+            "regista o attore": "Damien Chazelle",
             "tema": "Musica"
         },
         {
@@ -3561,7 +3561,7 @@
             "genere": ["Dramma", "Biografico", "Sport"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": ["Martin Scorsese", "Robert De Niro"],
+            "regista o attore": ["Martin Scorsese", "Robert De Niro"],
             "tema": "Boxe"
         },
         {
@@ -3570,7 +3570,7 @@
             "genere": ["Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni '60",
-            "regista/attore": "Stanley Kubrick",
+            "regista o attore": "Stanley Kubrick",
             "tema": "Guerra"
         },
         {
@@ -3579,7 +3579,7 @@
             "genere": ["Fantascienza", "Azione", "Thriller"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Bong Joon-ho",
+            "regista o attore": "Bong Joon-ho",
             "tema": "Post-apocalittico"
         },
         {
@@ -3588,7 +3588,7 @@
             "genere": ["Horror", "Surrealismo"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "David Lynch",
+            "regista o attore": "David Lynch",
             "tema": "Psicologico"
         },
         {
@@ -3597,7 +3597,7 @@
             "genere": ["Thriller", "Crime"],
             "lingua": "Inglese",
             "decennio": "Anni '80",
-            "regista/attore": "David Lynch",
+            "regista o attore": "David Lynch",
             "tema": "Psicologico"
         },
         {
@@ -3606,7 +3606,7 @@
             "genere": ["Animazione", "Avventura", "Fantasy"],
             "lingua": "Giapponese",
             "decennio": "Anni '90",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": ["Guerra", "Commedia"]
         },
         {
@@ -3615,7 +3615,7 @@
             "genere": ["Animazione", "Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Matt Groening",
+            "regista o attore": "Matt Groening",
             "tema": "Comico"
         },
         {
@@ -3624,7 +3624,7 @@
             "genere": ["Fantascienza", "Commedia", "Azione", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Daniel Kwan & Daniel Scheinert",
+            "regista o attore": "Daniel Kwan & Daniel Scheinert",
             "tema": ["Multiverso", "Viaggio nel tempo"]
         },
         {
@@ -3633,7 +3633,7 @@
             "genere": ["Animazione", "Commedia", "Dramma", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Pete Docter",
+            "regista o attore": "Pete Docter",
             "tema": "Psicologico"
         },
         {
@@ -3642,7 +3642,7 @@
             "genere": ["Commedia"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Mark Waters",
+            "regista o attore": "Mark Waters",
             "tema": ["Scuola/Università", "Coming of Age"]
         },
         {
@@ -3651,7 +3651,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Andy Tennant",
+            "regista o attore": "Andy Tennant",
             "tema": "Amore"
         },
         {
@@ -3660,7 +3660,7 @@
             "genere": ["Fantascienza", "Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Scarlett Johansson",
+            "regista o attore": "Scarlett Johansson",
             "tema": ["Intelligenza Artificiale", "Amore"]
         },
         {
@@ -3669,7 +3669,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Charlotte Wells",
+            "regista o attore": "Charlotte Wells",
             "tema": ["Famiglia", "Coming of Age"]
         },
         {
@@ -3678,7 +3678,7 @@
             "genere": ["Romantico", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Nick Cassavetes",
+            "regista o attore": "Nick Cassavetes",
             "tema": "Amore"
         },
         {
@@ -3687,7 +3687,7 @@
             "genere": ["Azione", "Fantascienza", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Kenneth Branagh",
+            "regista o attore": "Kenneth Branagh",
             "tema": "Supereroi"
         },
         {
@@ -3696,7 +3696,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Felix Van Groeningen",
+            "regista o attore": "Felix Van Groeningen",
             "tema": ["Famiglia", "Droghe"]
         },
         {
@@ -3705,7 +3705,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Darren Aronofsky",
+            "regista o attore": "Darren Aronofsky",
             "tema": ["Psicologico", "Disturbi Mentali"]
         },
         {
@@ -3714,7 +3714,7 @@
             "genere": ["Dramma", "Commedia", "Satira"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Alejandro González Iñárritu",
+            "regista o attore": "Alejandro González Iñárritu",
             "tema": ["Arte", "Psicologico"]
         },
         {
@@ -3723,7 +3723,7 @@
             "genere": ["Fantasy", "Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Tim Burton",
+            "regista o attore": "Tim Burton",
             "tema": "Favola"
         },
         {
@@ -3732,7 +3732,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "Milos Forman",
+            "regista o attore": "Milos Forman",
             "tema": ["Psicologico", "Disturbi Mentali"]
         },
         {
@@ -3741,7 +3741,7 @@
             "genere": ["Dramma", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni '40",
-            "regista/attore": "Michael Curtiz",
+            "regista o attore": "Michael Curtiz",
             "tema": ["Guerra", "Amore"]
         },
         {
@@ -3750,7 +3750,7 @@
             "genere": ["Horror", "Thriller"],
             "lingua": "Italiano",
             "decennio": "Anni '70",
-            "regista/attore": "Dario Argento",
+            "regista o attore": "Dario Argento",
             "tema": "Soprannaturale"
         },
         {
@@ -3759,7 +3759,7 @@
             "genere": ["Dramma", "Sport", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni '70",
-            "regista/attore": "John G. Avildsen",
+            "regista o attore": "John G. Avildsen",
             "tema": "Boxe"
         },
         {
@@ -3768,7 +3768,7 @@
             "genere": ["Avventura", "Dramma", "Fantasy"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Ang Lee",
+            "regista o attore": "Ang Lee",
             "tema": ["Sopravvivenza", "Animali"]
         },
         {
@@ -3777,7 +3777,7 @@
             "genere": ["Commedia", "Parodia", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Craig Mazin",
+            "regista o attore": "Craig Mazin",
             "tema": "Parody"
         },
         {
@@ -3786,7 +3786,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "James Cameron",
+            "regista o attore": "James Cameron",
             "tema": ["Avventura", "Ambientalismo", "Futuristico"]
         },
         {
@@ -3795,7 +3795,7 @@
             "genere": ["Azione", "Dramma", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Joseph Kosinski",
+            "regista o attore": "Joseph Kosinski",
             "tema": ["Militare", "Guerra"]
         },
         {
@@ -3804,7 +3804,7 @@
             "genere": ["Thriller", "Commedia", "Giallo"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Rian Johnson",
+            "regista o attore": "Rian Johnson",
             "tema": ["Mistero", "Crimine"]
         },
         {
@@ -3813,7 +3813,7 @@
             "genere": ["Animazione", "Fantasy", "Musicale"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Chris Buck & Jennifer Lee",
+            "regista o attore": "Chris Buck & Jennifer Lee",
             "tema": ["Famiglia", "Musicale", "Magia"]
         },
         {
@@ -3822,7 +3822,7 @@
             "genere": ["Dramma", "LGBTQ+"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Barry Jenkins",
+            "regista o attore": "Barry Jenkins",
             "tema": "Coming of Age"
         },
         {
@@ -3831,7 +3831,7 @@
             "genere": ["Dramma", "Storico", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Tom Hooper",
+            "regista o attore": "Tom Hooper",
             "tema": "Storico"
         },
         {
@@ -3840,7 +3840,7 @@
             "genere": ["Thriller", "Crime", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2000",
-            "regista/attore": "Joel & Ethan Coen",
+            "regista o attore": "Joel & Ethan Coen",
             "tema": ["Crimine", "Psicologico"]
         },
         {
@@ -3849,7 +3849,7 @@
             "genere": ["Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista/attore": "Chloé Zhao",
+            "regista o attore": "Chloé Zhao",
             "tema": ["Sopravvivenza", "Road Movie"]
         },
         {
@@ -3858,7 +3858,7 @@
             "genere": ["Animazione", "Commedia", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Josh Cooley",
+            "regista o attore": "Josh Cooley",
             "tema": ["Giocattoli", "Amicizia"]
         },
         {
@@ -3867,7 +3867,7 @@
             "genere": ["Horror", "Thriller", "Fantascienza"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "John Krasinski",
+            "regista o attore": "John Krasinski",
             "tema": ["Sopravvivenza", "Silenzio"]
         },
         {
@@ -3876,7 +3876,7 @@
             "genere": ["Dramma", "Mistero", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni '40",
-            "regista/attore": "Orson Welles",
+            "regista o attore": "Orson Welles",
             "tema": "Psicologico"
         },
         {
@@ -3885,7 +3885,7 @@
             "genere": ["Dramma", "Romantico", "Guerra", "Storico"],
             "lingua": "Inglese",
             "decennio": "Anni '30",
-            "regista/attore": "Victor Fleming",
+            "regista o attore": "Victor Fleming",
             "tema": "Storico"
         },
         {
@@ -3894,7 +3894,7 @@
             "genere": ["Fantascienza", "Azione", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Rian Johnson",
+            "regista o attore": "Rian Johnson",
             "tema": "Avventura spaziale"
         },
         {
@@ -3903,7 +3903,7 @@
             "genere": ["Commedia", "Romantico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Paul Feig",
+            "regista o attore": "Paul Feig",
             "tema": "Amore"
         },
         {
@@ -3912,7 +3912,7 @@
             "genere": ["Dramma", "Crime", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": ["Martin Scorsese", "Robert De Niro"],
+            "regista o attore": ["Martin Scorsese", "Robert De Niro"],
             "tema": ["Mafia", "Crimine"]
         },
         {
@@ -3921,7 +3921,7 @@
             "genere": ["Dramma", "Guerra", "Storico", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "Sam Mendes",
+            "regista o attore": "Sam Mendes",
             "tema": ["Guerra", "Storico"]
         },
         {
@@ -3930,7 +3930,7 @@
             "genere": ["Fantascienza", "Avventura", "Commedia", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista/attore": "James Gunn",
+            "regista o attore": "James Gunn",
             "tema": ["Supereroi", "Avventura spaziale"]
         },
         {
@@ -3939,7 +3939,7 @@
             "genere": ["Fantascienza", "Azione", "Filosofico"],
             "lingua": "Inglese",
             "decennio": "Anni '90",
-            "regista/attore": "Wachowski Sisters",
+            "regista o attore": "Wachowski Sisters",
             "tema": ["Robot/AI", "Intelligenza Artificiale"]
         },
         {
@@ -3948,7 +3948,7 @@
             "genere": ["Animazione", "Fantasy", "Avventura"],
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
-            "regista/attore": "Hayao Miyazaki",
+            "regista o attore": "Hayao Miyazaki",
             "tema": ["Fantasy", "Famiglia", "Amicizia"]
         }
     ]
