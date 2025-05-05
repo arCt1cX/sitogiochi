@@ -99,13 +99,30 @@ function checkPassword() {
 // Fetch film and series data and initialize game
 async function fetchFilmsAndSeries() {
     try {
-        const response = await fetch("combinazioni_film_e_serie.json");
+        // Get current language and use the appropriate file
+        const lang = window.getCurrentLanguage();
+        const jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
+        
+        const response = await fetch(jsonFile);
         if (!response.ok) {
-            throw new Error("Failed to fetch film and series data");
+            // If English file fails to load, try to fall back to Italian
+            if (lang === 'en') {
+                console.warn("English data file not found, falling back to Italian");
+                const fallbackResponse = await fetch("combinazioni_film_e_serie.json");
+                if (!fallbackResponse.ok) {
+                    throw new Error("Failed to fetch film and series data");
+                }
+                const fallbackData = await fallbackResponse.json();
+                gameState.filmsAndSeries = fallbackData.entries;
+                gameState.categories = fallbackData.categories;
+            } else {
+                throw new Error("Failed to fetch film and series data");
+            }
+        } else {
+            const data = await response.json();
+            gameState.filmsAndSeries = data.entries;
+            gameState.categories = data.categories;
         }
-        const data = await response.json();
-        gameState.filmsAndSeries = data.entries;
-        gameState.categories = data.categories;
         console.log("Loaded films and series:", gameState.filmsAndSeries.length);
         console.log("Loaded categories:", gameState.categories);
     } catch (error) {
@@ -167,8 +184,12 @@ function resetGameState() {
     // Reset preventInteraction flag
     gameState.preventInteraction = false;
     
+    // Get current language and player text
+    const lang = window.getCurrentLanguage();
+    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
+    
     // Update player marker
-    currentPlayerEl.textContent = "Giocatore 1";
+    currentPlayerEl.textContent = player1Text;
     currentPlayerEl.className = "player-marker red";
     currentPlayerEl.style.display = ""; // Show player marker again
     
@@ -269,7 +290,7 @@ function selectRandomCategories() {
                         if (Array.isArray(entry[rowCategory])) {
                             return entry[rowCategory].some(val => 
                                 String(val).toLowerCase() === String(value).toLowerCase()
-                            );
+                    );
                         } else {
                             return String(entry[rowCategory]).toLowerCase() === String(value).toLowerCase();
                         }
@@ -1036,17 +1057,29 @@ function showWrongAnswerMessage() {
     }, 1500);
 }
 
-// Make a move with the selected film/series title
+// Make a move on the board
 function makeMove(title) {
-    if (!gameState.selectedCell) {
+    // If game is over or interaction is prevented, don't allow moves
+    if (gameState.gameOver || gameState.preventInteraction) {
         return;
     }
     
+    // Set the player's mark in the cell
     const { row, col } = gameState.selectedCell;
     
-    // Place the title on the board
+    // Check if the selected title is a valid choice
+    const validEntries = gameState.validCellCombinations[row][col];
+    const validTitles = validEntries.map(entry => entry.title);
+    
+    if (!validTitles.includes(title)) {
+        // This is not a valid title, show an error and don't change the turn
+        showWrongAnswerMessage();
+        return;
+    }
+    
+    // Update the game state
     gameState.board[row][col] = title;
-    gameState.cellOwners[row][col] = gameState.currentPlayer;
+    setCellState(row, col, gameState.currentPlayer);
     
     // Update the UI
     const cell = document.querySelector(`.game-cell[data-row="${row}"][data-col="${col}"]`);
@@ -1081,8 +1114,12 @@ function makeMove(title) {
     // Switch player
     gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
     
-    // Update player marker text and class
-    currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
+    // Update player marker text and class based on current language
+    const lang = window.getCurrentLanguage();
+    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
+    const player2Text = lang === 'en' ? "Player 2" : "Giocatore 2";
+    
+    currentPlayerEl.textContent = gameState.currentPlayer === "red" ? player1Text : player2Text;
     currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
 }
 
@@ -1185,6 +1222,11 @@ function endGame(isDraw) {
     // Set game over state
     gameState.gameOver = true;
     
+    // Get current language and player text
+    const lang = window.getCurrentLanguage();
+    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
+    const player2Text = lang === 'en' ? "Player 2" : "Giocatore 2";
+    
     // Create or update game result message in the game info section
     let resultElement = document.getElementById("game-result");
     if (!resultElement) {
@@ -1197,7 +1239,7 @@ function endGame(isDraw) {
     if (isDraw) {
         resultElement.innerHTML = `<span class="result-text">${window.getTranslation("draw")}</span>`;
     } else {
-        const winnerText = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
+        const winnerText = gameState.currentPlayer === "red" ? player1Text : player2Text;
         resultElement.innerHTML = `<span class="result-text">${window.getTranslation("winner")}</span> 
                                    <span class="winner-symbol ${gameState.currentPlayer}">${winnerText}</span>`;
     }
@@ -1307,9 +1349,20 @@ function showValidAnswers(row, col) {
 
 // Declare the game as a draw
 function declareGameDraw() {
+    // Skip if game is already over
+    if (gameState.gameOver) {
+        return;
+    }
+    
+    // Get current language and player text
+    const lang = window.getCurrentLanguage();
+    
+    // Confirm with user
+    if (!confirm(lang === 'en' ? "End the game as a draw?" : "Terminare la partita con un pareggio?")) {
+        return;
+    }
+    
     // Set game over state
     gameState.gameOver = true;
-    
-    // Call endGame with isDraw = true
     endGame(true);
 } 
