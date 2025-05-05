@@ -148,14 +148,23 @@ function startNewGame() {
     gameState.preventInteraction = true;
     gameState.isGenerating = true;
     
+    // Only update score if the element exists
     updateScoreDisplay();
     
-    // Hide game over container if visible
-    document.getElementById('gameOverContainer').style.display = 'none';
+    // Hide game over container if it exists
+    const gameOverContainer = document.getElementById('gameOverContainer');
+    if (gameOverContainer) {
+        gameOverContainer.style.display = 'none';
+    }
     
-    // Show loading indicator
+    // Show loading indicator if it exists
     const loadingIndicator = document.getElementById('loadingIndicator');
-    loadingIndicator.style.display = 'flex';
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'flex';
+    }
+    
+    // Show game screen
+    showScreen("game");
     
     // Select random categories for rows and columns with a slight delay to allow UI to update
     setTimeout(() => {
@@ -164,8 +173,10 @@ function startNewGame() {
             const success = selectRandomCategories();
             
             setTimeout(() => {
-                // Hide loading indicator
-                loadingIndicator.style.display = 'none';
+                // Hide loading indicator if it exists
+                if (loadingIndicator) {
+                    loadingIndicator.style.display = 'none';
+                }
                 
                 if (success) {
                     // Create the game board
@@ -180,7 +191,10 @@ function startNewGame() {
             }, 500);
         } catch (error) {
             console.error("Error starting new game:", error);
-            loadingIndicator.style.display = 'none';
+            // Hide loading indicator if it exists
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
             alert("An error occurred while generating the game board. Please try again.");
             gameState.isGenerating = false;
             gameState.preventInteraction = false;
@@ -1525,6 +1539,7 @@ function declareGameDraw() {
 
 // Update score display
 function updateScoreDisplay() {
+    // Only try to update if the score element exists
     const scoreElement = document.getElementById('score');
     if (scoreElement) {
         scoreElement.textContent = gameState.score;
