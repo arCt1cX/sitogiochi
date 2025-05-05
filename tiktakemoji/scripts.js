@@ -20,7 +20,9 @@ let gameState = {
         ["", "", ""],
         ["", "", ""]
     ],
-    preventInteraction: false // Flag to prevent interactions during animations/messages
+    preventInteraction: false, // Flag to prevent interactions during animations/messages
+    isGenerating: true, // Added to track game generation state
+    score: 0
 };
 
 // Ensure getCurrentLanguage is defined regardless of script loading order
@@ -67,7 +69,7 @@ const passwordError = document.getElementById("password-error");
 
 // Event Listeners
 document.getElementById("submit-password").addEventListener("click", checkPassword);
-document.getElementById("start-game").addEventListener("click", startGame);
+document.getElementById("start-game").addEventListener("click", startNewGame);
 document.getElementById("new-game").addEventListener("click", resetGame);
 document.getElementById("play-again").addEventListener("click", resetGame);
 document.getElementById("end-game").addEventListener("click", declareGameDraw);
@@ -128,22 +130,62 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Start a new game
-function startGame() {
-    // Only proceed if films and series are loaded
-    if (gameState.filmsAndSeries.length === 0) {
-        console.error("Cannot start game: films and series not loaded");
-        return;
-    }
+function startNewGame() {
+    console.log("Starting new game...");
     
-    resetGameState();
-    selectRandomCategories();
-    createGameBoard();
+    // Reset the game state
+    gameState.board = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+    ];
+    gameState.score = 0;
+    gameState.rowCategories = [];
+    gameState.rowCategoryValues = [];
+    gameState.colCategories = [];
+    gameState.colCategoryValues = [];
+    gameState.validCellCombinations = [];
+    gameState.preventInteraction = true;
+    gameState.isGenerating = true;
     
-    // Hide new game button until the game is over
-    document.getElementById("new-game").style.display = "none";
+    updateScoreDisplay();
     
-    // Show game screen
-    showScreen("game");
+    // Hide game over container if visible
+    document.getElementById('gameOverContainer').style.display = 'none';
+    
+    // Show loading indicator
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'flex';
+    
+    // Select random categories for rows and columns with a slight delay to allow UI to update
+    setTimeout(() => {
+        try {
+            console.log("Selecting random categories...");
+            const success = selectRandomCategories();
+            
+            setTimeout(() => {
+                // Hide loading indicator
+                loadingIndicator.style.display = 'none';
+                
+                if (success) {
+                    // Create the game board
+                    createGameBoard();
+                    gameState.preventInteraction = false;
+                    console.log("Game started successfully!");
+                } else {
+                    console.error("Failed to create valid game board");
+                    gameState.isGenerating = false;
+                    gameState.preventInteraction = false;
+                }
+            }, 500);
+        } catch (error) {
+            console.error("Error starting new game:", error);
+            loadingIndicator.style.display = 'none';
+            alert("An error occurred while generating the game board. Please try again.");
+            gameState.isGenerating = false;
+            gameState.preventInteraction = false;
+        }
+    }, 100);
 }
 
 // Reset the game state
@@ -199,10 +241,8 @@ function resetGameState() {
 
 // Reset the game (new board)
 function resetGame() {
-    resetGameState();
-    selectRandomCategories();
-    createGameBoard();
-    showScreen("game");
+    // Use our improved startNewGame function instead
+    startNewGame();
 }
 
 // Show a specific screen
@@ -226,8 +266,19 @@ function selectRandomCategories() {
     // Get all category types
     const categoryTypes = Object.keys(gameState.categories);
     
-    // Check if the categories use Italian naming
+    // Check if categories use Italian naming
     const useItalianNames = gameState.categories.genere !== undefined;
+    
+    // Fix 'regista/attore' field
+    let directorField = "director";
+    if (useItalianNames) {
+        // Check which director field name is used
+        if (gameState.categories["regista/attore"]) {
+            directorField = "regista/attore";
+        } else if (gameState.categories.regista) {
+            directorField = "regista";
+        }
+    }
     
     // Create mapping between English and Italian category names
     const categoryMapping = {
@@ -235,9 +286,12 @@ function selectRandomCategories() {
         "language": useItalianNames ? "lingua" : "language",
         "decade": useItalianNames ? "decennio" : "decade",
         "type": useItalianNames ? "tipo" : "type",
-        "director": useItalianNames ? "regista" : "director",
+        "director": directorField,
         "theme": useItalianNames ? "tema" : "theme"
     };
+    
+    // Debug category mapping
+    console.log("Category mapping:", categoryMapping);
     
     // Get the inverse mapping from Italian to English if needed
     const inverseCategoryMapping = {};
@@ -280,6 +334,9 @@ function selectRandomCategories() {
                 const validValues = [];
                 
                 for (const value of possibleValues) {
+                    // Convert the value to lowercase for case-insensitive comparison
+                    const valueLower = String(value).toLowerCase();
+                    
                     // Find all entries matching this row category value
                     const matchingEntries = gameState.filmsAndSeries.filter(entry => {
                         if (!entry[rowCategory]) return false;
@@ -287,10 +344,10 @@ function selectRandomCategories() {
                         // Check if entry matches the row category value EXACTLY
                         if (Array.isArray(entry[rowCategory])) {
                             return entry[rowCategory].some(val => 
-                                String(val).toLowerCase() === String(value).toLowerCase()
+                                String(val).toLowerCase() === valueLower
                             );
                         } else {
-                            return String(entry[rowCategory]).toLowerCase() === String(value).toLowerCase();
+                            return String(entry[rowCategory]).toLowerCase() === valueLower;
                         }
                     });
                     
@@ -350,12 +407,16 @@ function selectRandomCategories() {
                     const colValues = gameState.categories[colCategory];
                     
                     for (const colValue of colValues) {
+                        // Convert the value to lowercase for case-insensitive comparison
+                        const colValueLower = String(colValue).toLowerCase();
+                        
                         let worksWithAllRows = true;
                         
                         // Check against each row
                         for (let row = 0; row < 3; row++) {
                             const rowCategory = gameState.rowCategories[row];
                             const rowValue = gameState.rowCategoryValues[row];
+                            const rowValueLower = String(rowValue).toLowerCase();
                             
                             // Check if there's at least one film/series with this combination
                             const matchExists = gameState.filmsAndSeries.some(entry => {
@@ -365,20 +426,20 @@ function selectRandomCategories() {
                                 let rowMatches = false;
                                 if (Array.isArray(entry[rowCategory])) {
                                     rowMatches = entry[rowCategory].some(val => 
-                                        String(val).toLowerCase() === String(rowValue).toLowerCase()
+                                        String(val).toLowerCase() === rowValueLower
                                     );
                                 } else {
-                                    rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                                    rowMatches = String(entry[rowCategory]).toLowerCase() === rowValueLower;
                                 }
                                 
                                 // Check column match EXACTLY
                                 let colMatches = false;
                                 if (Array.isArray(entry[colCategory])) {
                                     colMatches = entry[colCategory].some(val => 
-                                        String(val).toLowerCase() === String(colValue).toLowerCase()
+                                        String(val).toLowerCase() === colValueLower
                                     );
                                 } else {
-                                    colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                                    colMatches = String(entry[colCategory]).toLowerCase() === colValueLower;
                                 }
                                 
                                 return rowMatches && colMatches;
@@ -410,6 +471,72 @@ function selectRandomCategories() {
                 }
             }
             
+            // FINAL VALIDATION: Ensure every cell has valid entries
+            let allCellsValid = true;
+            const cellCounts = [];
+            
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    const rowCategory = gameState.rowCategories[row];
+                    const rowValue = gameState.rowCategoryValues[row];
+                    const colCategory = gameState.colCategories[col];
+                    const colValue = gameState.colCategoryValues[col];
+                    
+                    // Convert to lowercase for case-insensitive comparison
+                    const rowValueLower = String(rowValue).toLowerCase();
+                    const colValueLower = String(colValue).toLowerCase();
+                    
+                    // Check how many movies match this cell
+                    const matchingEntries = gameState.filmsAndSeries.filter(entry => {
+                        if (!entry[rowCategory] || !entry[colCategory]) return false;
+                        
+                        // Check row match exactly
+                        let rowMatches = false;
+                        if (Array.isArray(entry[rowCategory])) {
+                            rowMatches = entry[rowCategory].some(val => 
+                                String(val).toLowerCase() === rowValueLower
+                            );
+                        } else {
+                            rowMatches = String(entry[rowCategory]).toLowerCase() === rowValueLower;
+                        }
+                        
+                        // Check column match exactly
+                        let colMatches = false;
+                        if (Array.isArray(entry[colCategory])) {
+                            colMatches = entry[colCategory].some(val => 
+                                String(val).toLowerCase() === colValueLower
+                            );
+                        } else {
+                            colMatches = String(entry[colCategory]).toLowerCase() === colValueLower;
+                        }
+                        
+                        return rowMatches && colMatches;
+                    });
+                    
+                    cellCounts.push({
+                        row, 
+                        col, 
+                        count: matchingEntries.length, 
+                        rowCategory, 
+                        rowValue, 
+                        colCategory, 
+                        colValue
+                    });
+                    
+                    if (matchingEntries.length === 0) {
+                        allCellsValid = false;
+                        console.log(`No entries for cell [${row},${col}]: ${rowCategory}=${rowValue} + ${colCategory}=${colValue}`);
+                    }
+                }
+            }
+            
+            if (!allCellsValid) {
+                throw new Error("Some cells have no valid entries");
+            }
+            
+            // Show cell counts
+            console.log("Preliminary validation of cells:", cellCounts);
+            
             // If we got here, we have a valid set
             validSetFound = true;
             
@@ -422,7 +549,8 @@ function selectRandomCategories() {
     if (!validSetFound) {
         console.error("Failed to find valid category combinations after", MAX_ATTEMPTS, "attempts");
         alert("Unable to generate a valid game board. Please try again.");
-        return;
+        gameState.isGenerating = false;
+        return false;
     } else {
         console.log("Found valid category combinations after", attempts, "attempts");
         console.log("Row categories:", gameState.rowCategories, "with values:", gameState.rowCategoryValues);
@@ -433,37 +561,97 @@ function selectRandomCategories() {
     createValidCombinationsGrid();
     
     // Validate all cells have valid combinations
-    validateAllCellsHaveCombinations();
+    return validateAllCellsHaveCombinations();
 }
 
-// Validate that all cells have valid combinations
+// Function to validate all cells have valid combinations
 function validateAllCellsHaveCombinations() {
-    // Check every cell in the grid
-    let allValid = true;
+    let allCellsValid = true;
     
     for (let row = 0; row < 3; row++) {
         for (let col = 0; col < 3; col++) {
             const validEntries = gameState.validCellCombinations[row][col];
             
-            if (validEntries.length === 0) {
-                console.error(`No valid entries for cell [${row},${col}] with categories:`, {
-                    row: `${gameState.rowCategories[row]}: ${gameState.rowCategoryValues[row]}`,
-                    col: `${gameState.colCategories[col]}: ${gameState.colCategoryValues[col]}`
+            if (!validEntries || validEntries.length === 0) {
+                console.error(`Cell [${row},${col}] has no valid combinations!`);
+                console.error(`Row category: ${gameState.rowCategories[row]}, value: ${gameState.rowCategoryValues[row]}`);
+                console.error(`Col category: ${gameState.colCategories[col]}, value: ${gameState.colCategoryValues[col]}`);
+                allCellsValid = false;
+                
+                // Let's double-check with a direct filter
+                const rowCategory = gameState.rowCategories[row];
+                const rowValue = gameState.rowCategoryValues[row];
+                const colCategory = gameState.colCategories[col];
+                const colValue = gameState.colCategoryValues[col];
+                const rowValueLower = String(rowValue).toLowerCase();
+                const colValueLower = String(colValue).toLowerCase();
+                
+                const directMatches = gameState.filmsAndSeries.filter(entry => {
+                    // Handle the case where entry[category] might be undefined
+                    if (!entry[rowCategory] || !entry[colCategory]) {
+                        return false;
+                    }
+                    
+                    // Check if the entry matches the row category value
+                    let rowMatches = false;
+                    if (Array.isArray(entry[rowCategory])) {
+                        // For arrays, check if any exact value in the array matches
+                        rowMatches = entry[rowCategory].some(value => 
+                            String(value).toLowerCase() === rowValueLower
+                        );
+                    } else {
+                        // For strings, do exact comparison
+                        rowMatches = String(entry[rowCategory]).toLowerCase() === rowValueLower;
+                    }
+                    
+                    // Check if the entry matches the column category value
+                    let colMatches = false;
+                    if (Array.isArray(entry[colCategory])) {
+                        // For arrays, check if any exact value in the array matches
+                        colMatches = entry[colCategory].some(value => 
+                            String(value).toLowerCase() === colValueLower
+                        );
+                    } else {
+                        // For strings, do exact comparison
+                        colMatches = String(entry[colCategory]).toLowerCase() === colValueLower;
+                    }
+                    
+                    return rowMatches && colMatches;
                 });
-                allValid = false;
+                
+                console.log(`Double-check found ${directMatches.length} matches for cell [${row},${col}]:`);
+                if (directMatches.length > 0) {
+                    const titleProperty = directMatches[0].titolo !== undefined ? "titolo" : "title";
+                    console.log(directMatches.map(e => e[titleProperty]));
+                }
             }
         }
     }
     
-    if (!allValid) {
-        console.error("Game board contains empty cells. Try generating a new board.");
-        alert("Some cells have no valid combinations. Please start a new game.");
+    if (!allCellsValid) {
+        console.error("Game board validation failed - some cells have no valid combinations!");
+        alert("Unable to generate a valid game board. Please try again.");
+        gameState.isGenerating = false;
+        return false;
+    } else {
+        console.log("All cells have valid combinations. Game board generation successful!");
+        gameState.isGenerating = false;
+        return true;
     }
 }
 
 // Create a grid of valid film/series combinations
 function createValidCombinationsGrid() {
     gameState.validCellCombinations = [];
+    
+    // Add debugging for categories and values
+    console.log("Creating grid with these categories:");
+    for (let row = 0; row < 3; row++) {
+        console.log(`Row ${row}: ${gameState.rowCategories[row]} = ${gameState.rowCategoryValues[row]}`);
+    }
+    for (let col = 0; col < 3; col++) {
+        console.log(`Col ${col}: ${gameState.colCategories[col]} = ${gameState.colCategoryValues[col]}`);
+    }
     
     for (let row = 0; row < 3; row++) {
         const rowCombinations = [];
@@ -474,6 +662,8 @@ function createValidCombinationsGrid() {
             const colCategory = gameState.colCategories[col];
             const colValue = gameState.colCategoryValues[col];
             
+            console.log(`Checking cell [${row},${col}]: ${rowCategory}=${rowValue} + ${colCategory}=${colValue}`);
+            
             // Find all films/series that match both the row and column criteria
             const validEntries = gameState.filmsAndSeries.filter(entry => {
                 // Handle the case where entry[category] might be undefined
@@ -483,30 +673,61 @@ function createValidCombinationsGrid() {
                 
                 // Check if the entry matches the row category value
                 let rowMatches = false;
+                const rowValueLower = String(rowValue).toLowerCase();
+                
                 if (Array.isArray(entry[rowCategory])) {
                     // For arrays, check if any exact value in the array matches
                     rowMatches = entry[rowCategory].some(value => 
-                        String(value).toLowerCase() === String(rowValue).toLowerCase()
+                        String(value).toLowerCase() === rowValueLower
                     );
                 } else {
                     // For strings, do exact comparison
-                    rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                    rowMatches = String(entry[rowCategory]).toLowerCase() === rowValueLower;
                 }
                 
                 // Check if the entry matches the column category value
                 let colMatches = false;
+                const colValueLower = String(colValue).toLowerCase();
+                
                 if (Array.isArray(entry[colCategory])) {
                     // For arrays, check if any exact value in the array matches
                     colMatches = entry[colCategory].some(value => 
-                        String(value).toLowerCase() === String(colValue).toLowerCase()
+                        String(value).toLowerCase() === colValueLower
                     );
                 } else {
                     // For strings, do exact comparison
-                    colMatches = String(entry[colCategory]).toLowerCase() === String(colValue).toLowerCase();
+                    colMatches = String(entry[colCategory]).toLowerCase() === colValueLower;
+                }
+                
+                // Debug any unexpected matches
+                const titleProperty = entry.titolo !== undefined ? "titolo" : "title";
+                if ((rowMatches && colMatches) && 
+                    (entry[titleProperty] === "Maleficent" || 
+                     entry[titleProperty] === "Memorie di un Assassino")) {
+                    console.log(`Debugging match for ${entry[titleProperty]}:`, {
+                        rowCategory, 
+                        rowValue, 
+                        entryRowValue: entry[rowCategory],
+                        rowMatches,
+                        colCategory,
+                        colValue,
+                        entryColValue: entry[colCategory],
+                        colMatches
+                    });
                 }
                 
                 return rowMatches && colMatches;
             });
+            
+            // Additional debugging for specific cells
+            if (validEntries.length > 0) {
+                const titleProperty = validEntries[0].titolo !== undefined ? "titolo" : "title";
+                console.log(`Cell [${row},${col}] has ${validEntries.length} matches:`, 
+                    validEntries.map(e => e[titleProperty]).slice(0, 5) // Show first 5 matches
+                );
+            } else {
+                console.log(`Cell [${row},${col}] has NO matches!`);
+            }
             
             rowCombinations.push(validEntries);
         }
@@ -569,6 +790,7 @@ function tryToFindMoreDiverseOption(row, col) {
     const possibleColValues = gameState.categories[currentColCategory];
     const rowCategory = gameState.rowCategories[row];
     const rowValue = gameState.rowCategoryValues[row];
+    const rowValueLower = String(rowValue).toLowerCase();
     
     // Get all other values from current column category
     const otherPossibleValues = possibleColValues.filter(value => value !== gameState.colCategoryValues[col]);
@@ -578,6 +800,8 @@ function tryToFindMoreDiverseOption(row, col) {
     
     // Try each possible value
     for (const newColValue of otherPossibleValues) {
+        const colValueLower = String(newColValue).toLowerCase();
+        
         // Check if this new value would create a valid cell
         const validEntries = gameState.filmsAndSeries.filter(entry => {
             // Handle the case where entry[category] might be undefined
@@ -590,11 +814,11 @@ function tryToFindMoreDiverseOption(row, col) {
             if (Array.isArray(entry[rowCategory])) {
                 // For arrays, check if any exact value in the array matches
                 rowMatches = entry[rowCategory].some(value => 
-                    String(value).toLowerCase() === String(rowValue).toLowerCase()
+                    String(value).toLowerCase() === rowValueLower
                 );
             } else {
                 // For strings, do exact comparison
-                rowMatches = String(entry[rowCategory]).toLowerCase() === String(rowValue).toLowerCase();
+                rowMatches = String(entry[rowCategory]).toLowerCase() === rowValueLower;
             }
             
             // Check if the entry matches the new column value
@@ -602,11 +826,11 @@ function tryToFindMoreDiverseOption(row, col) {
             if (Array.isArray(entry[currentColCategory])) {
                 // For arrays, check if any exact value in the array matches
                 colMatches = entry[currentColCategory].some(value => 
-                    String(value).toLowerCase() === String(newColValue).toLowerCase()
+                    String(value).toLowerCase() === colValueLower
                 );
             } else {
                 // For strings, do exact comparison
-                colMatches = String(entry[currentColCategory]).toLowerCase() === String(newColValue).toLowerCase();
+                colMatches = String(entry[currentColCategory]).toLowerCase() === colValueLower;
             }
             
             return rowMatches && colMatches;
@@ -619,12 +843,18 @@ function tryToFindMoreDiverseOption(row, col) {
             for (let otherCol = 0; otherCol < 3; otherCol++) {
                 if (otherCol !== col) {
                     const otherSet = gameState.validCellCombinations[row][otherCol];
-                    const otherTitles = otherSet.map(entry => entry.title || entry.titolo).sort().join(',');
-                    const newTitles = validEntries.map(entry => entry.title || entry.titolo).sort().join(',');
+                    // Handle case when there might be different property names
+                    const titleProperty = validEntries[0].titolo !== undefined ? "titolo" : "title";
                     
-                    if (otherTitles === newTitles) {
-                        isDifferent = false;
-                        break;
+                    // Check if other cell has entries
+                    if (otherSet && otherSet.length > 0) {
+                        const otherTitles = otherSet.map(entry => entry[titleProperty]).sort().join(',');
+                        const newTitles = validEntries.map(entry => entry[titleProperty]).sort().join(',');
+                        
+                        if (otherTitles === newTitles) {
+                            isDifferent = false;
+                            break;
+                        }
                     }
                 }
             }
@@ -1291,4 +1521,12 @@ function declareGameDraw() {
     
     // Call endGame with isDraw = true
     endGame(true);
+}
+
+// Update score display
+function updateScoreDisplay() {
+    const scoreElement = document.getElementById('score');
+    if (scoreElement) {
+        scoreElement.textContent = gameState.score;
+    }
 } 
