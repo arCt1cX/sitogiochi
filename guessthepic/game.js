@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const openPlayerSetupButton = document.getElementById('open-player-setup');
     const startButton = document.getElementById('start-game');
     const playAgainButton = document.getElementById('play-again');
+    const replaySamePlayersButton = document.getElementById('replay-same-players');
     const submitButton = document.getElementById('submit-guess');
     const prevImageButton = document.getElementById('prev-image');
     const nextImageButton = document.getElementById('next-image');
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             openPlayerSetup();
         }
     });
+    replaySamePlayersButton.addEventListener('click', replaySamePlayers);
     submitButton.addEventListener('click', checkAnswer);
     prevImageButton.addEventListener('click', navigateToPreviousImage);
     nextImageButton.addEventListener('click', navigateToNextImage);
@@ -1005,14 +1007,20 @@ document.addEventListener('DOMContentLoaded', function() {
         gameScreen.classList.add('hidden');
         resultScreen.classList.remove('hidden');
         
+        // Determine language based on browser setting
+        const isItalian = (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('it');
+        
         // Update title based on round number
         const resultTitle = document.querySelector('#result-screen h2');
         if (currentRoundNumber < totalRounds) {
-            resultTitle.textContent = `Round ${currentRoundNumber} Completato!`;
-            playAgainButton.textContent = `Inizia Round ${currentRoundNumber + 1}`;
+            resultTitle.textContent = isItalian ? `Round ${currentRoundNumber} Completato!` : `Round ${currentRoundNumber} Completed!`;
+            playAgainButton.textContent = isItalian ? `Prossimo Round` : `Next Round`;
+            replaySamePlayersButton.classList.add('hidden');
         } else {
-            resultTitle.textContent = `Gioco Terminato - Risultati Finali!`;
-            playAgainButton.textContent = `Gioca Ancora`;
+            resultTitle.textContent = isItalian ? `Gioco Terminato - Risultati Finali!` : `Game Over - Final Results!`;
+            playAgainButton.textContent = isItalian ? `Menu` : `Main Menu`;
+            replaySamePlayersButton.textContent = isItalian ? `Rigioca con stessi giocatori` : `Play again with same players`;
+            replaySamePlayersButton.classList.remove('hidden');
         }
         
         // Sort players by score for the current round
@@ -1382,5 +1390,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 circle.classList.add(questionStatuses[index]);
             }
         });
+    }
+
+    /**
+     * Replay the game with the same players
+     */
+    function replaySamePlayers() {
+        console.log("Replaying game with the same players");
+        
+        // Reset game state while keeping the same players
+        currentQuestionIndex = 0;
+        currentPlayerIndex = 0;
+        roundResults = [];
+        playerRounds = []; // Reset player rounds
+        currentRoundNumber = 1;
+        
+        // Reset each player's score
+        players.forEach(player => {
+            player.score = 0;
+            player.roundScores = [0, 0, 0]; // Reset scores for each round
+        });
+        
+        // Hide result screen and show game screen
+        resultScreen.classList.add('hidden');
+        gameScreen.classList.remove('hidden');
+        
+        // Generate all player rounds for the new game
+        generatePlayerRounds();
+        
+        // Start first round
+        startRound();
     }
 }); 

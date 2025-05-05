@@ -160,6 +160,7 @@ button:active {
     justify-content: space-between;
     width: 100%;
     max-width: 400px;
+    gap: 10px;
 }
 
 .full-width-button {
@@ -478,10 +479,15 @@ button:active {
     .buttons-row {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
     
-    #back-to-menu, #start-game {
+    #back-to-menu, #start-game, #play-again, #replay-same-players {
         width: 100%;
+    }
+    
+    #replay-same-players {
+        margin-bottom: 0;
     }
 }
 
@@ -537,4 +543,14 @@ button:active {
     text-transform: capitalize;
     font-weight: 700;
     color: var(--primary-purple);
+}
+
+/* Style for the replay button */
+#replay-same-players {
+    background-color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+#replay-same-players:hover {
+    background-color: #27ae60;
 } 
