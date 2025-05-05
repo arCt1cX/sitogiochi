@@ -390,7 +390,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Martin Scorsese",
-            "theme": "Crimine"
+            "theme": ["Crimine", "Droghe"]
         },
         {
             "title": "Gravity",
@@ -2681,7 +2681,7 @@
         {
             "title": "The Perks of Being a Wallflower",
             "type": "Film",
-            "genre": ["Dramma", "Coming of Age", "Romantico"],
+            "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Stephen Chbosky",
@@ -2978,11 +2978,11 @@
         {
             "title": "Superbad",
             "type": "Film",
-            "genre": ["Commedia", "Coming of Age"],
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Greg Mottola",
-            "theme": "Adolescenza"
+            "theme": ["Adolescenza", "Coming of Age"]
         },
         {
             "title": "Blood Diamond",
@@ -3176,11 +3176,11 @@
         {
             "title": "American Pie",
             "type": "Film",
-            "genre": ["Commedia", "Coming of Age"],
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Paul Weitz",
-            "theme": "Adolescenza"
+            "theme": ["Adolescenza", "Coming of Age"]
         },
         {
             "title": "The Sixth Sense",
@@ -3203,11 +3203,11 @@
         {
             "title": "10 Things I Hate About You",
             "type": "Film",
-            "genre": ["Commedia", "Romantico", "Coming of Age"],
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Gil Junger",
-            "theme": "Amore"
+            "theme": ["Amore", "Coming of Age"]
         },
         {
             "title": "Vi presento Joe Black",
@@ -3248,11 +3248,11 @@
         {
             "title": "Basketball Diaries",
             "type": "Film",
-            "genre": ["Dramma", "Biografico", "Coming of Age"],
+            "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Scott Kalvert",
-            "theme": ["Adolescenza", "Droghe"]
+            "theme": ["Adolescenza", "Droghe", "Coming of Age"]
         },
         {
             "title": "Le Iene",
@@ -3626,16 +3626,16 @@
         {
             "title": "Mean Girls",
             "type": "Film",
-            "genre": ["Commedia", "Coming of Age"],
+            "genre": ["Commedia"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Mark Waters",
-            "theme": "Scuola/Università"
+            "theme": ["Scuola/Università", "Coming of Age"]
         },
         {
             "title": "Hitch",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Andy Tennant",
@@ -3644,25 +3644,25 @@
         {
             "title": "Her",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Spike Jonze",
-            "theme": "Intelligenza Artificiale"
+            "theme": ["Intelligenza Artificiale", "Amore"]
         },
         {
             "title": "Aftersun",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Charlotte Wells",
-            "theme": "Famiglia"
+            "theme": ["Famiglia", "Coming of Age"]
         },
         {
             "title": "The Notebook",
             "type": "Film",
-            "genre": "Romantico",
+            "genre": ["Romantico", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Nick Cassavetes",
@@ -3671,7 +3671,7 @@
         {
             "title": "Thor",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Fantascienza", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Kenneth Branagh",
@@ -3680,34 +3680,34 @@
         {
             "title": "Beautiful Boy",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Felix Van Groeningen",
-            "theme": "Famiglia"
+            "theme": ["Famiglia", "Droghe"]
         },
         {
             "title": "The Whale",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Darren Aronofsky",
-            "theme": "Psicologico"
+            "theme": ["Psicologico", "Disturbi Mentali"]
         },
         {
             "title": "Birdman",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Commedia", "Satira"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Alejandro González Iñárritu",
-            "theme": "Arte"
+            "theme": ["Arte", "Psicologico"]
         },
         {
             "title": "La fabbrica di cioccolato",
             "type": "Film",
-            "genre": "Fantasy",
+            "genre": ["Fantasy", "Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Tim Burton",
@@ -3716,25 +3716,25 @@
         {
             "title": "Qualcuno volò sul nido del cuculo",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "Milos Forman",
-            "theme": "Psicologico"
+            "theme": ["Psicologico", "Disturbi Mentali"]
         },
         {
             "title": "Casablanca",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico"],
             "language": "Inglese",
             "decade": "Anni '40",
             "director": "Michael Curtiz",
-            "theme": "Amore"
+            "theme": ["Guerra", "Amore"]
         },
         {
             "title": "Suspiria",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller"],
             "language": "Italiano",
             "decade": "Anni '70",
             "director": "Dario Argento",
@@ -3743,7 +3743,7 @@
         {
             "title": "Rocky",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Sport", "Azione"],
             "language": "Inglese",
             "decade": "Anni '70",
             "director": "John G. Avildsen",
@@ -3752,16 +3752,16 @@
         {
             "title": "Vita di Pi",
             "type": "Film",
-            "genre": "Avventura",
+            "genre": ["Avventura", "Dramma", "Fantasy"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Ang Lee",
-            "theme": "Sopravvivenza"
+            "theme": ["Sopravvivenza", "Animali"]
         },
         {
             "title": "Superhero - Il più dotato fra i supereroi",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Parodia", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Craig Mazin",
@@ -3770,43 +3770,43 @@
         {
             "title": "Avatar: La via dell'acqua",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Avventura", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "James Cameron",
-            "theme": "Avventura"
+            "theme": ["Avventura", "Ambientalismo", "Futuristico"]
         },
         {
             "title": "Top Gun: Maverick",
             "type": "Film",
-            "genre": "Azione",
+            "genre": ["Azione", "Dramma", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Joseph Kosinski",
-            "theme": "Militare"
+            "theme": ["Militare", "Guerra"]
         },
         {
             "title": "Cena con delitto - Knives Out",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Commedia", "Giallo"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Rian Johnson",
-            "theme": "Mistero"
+            "theme": ["Mistero", "Crimine"]
         },
         {
             "title": "Frozen - Il regno di ghiaccio",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Fantasy", "Musicale"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Chris Buck & Jennifer Lee",
-            "theme": "Fantasy"
+            "theme": ["Famiglia", "Musicale", "Magia"]
         },
         {
             "title": "Moonlight",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "LGBTQ+"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Barry Jenkins",
@@ -3815,7 +3815,7 @@
         {
             "title": "Il discorso del re",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Storico", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Tom Hooper",
@@ -3824,43 +3824,43 @@
         {
             "title": "Non è un paese per vecchi",
             "type": "Film",
-            "genre": "Thriller",
+            "genre": ["Thriller", "Crime", "Dramma"],
             "language": "Inglese",
             "decade": "Anni 2000",
             "director": "Joel & Ethan Coen",
-            "theme": "Crime"
+            "theme": ["Crimine", "Psicologico"]
         },
         {
             "title": "Nomadland",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma"],
             "language": "Inglese",
             "decade": "Anni 2020",
             "director": "Chloé Zhao",
-            "theme": "Sopravvivenza"
+            "theme": ["Sopravvivenza", "Road Movie"]
         },
         {
             "title": "Toy Story 4",
             "type": "Film",
-            "genre": "Animazione",
+            "genre": ["Animazione", "Commedia", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Josh Cooley",
-            "theme": "Giocattoli"
+            "theme": ["Giocattoli", "Amicizia"]
         },
         {
             "title": "A Quiet Place",
             "type": "Film",
-            "genre": "Horror",
+            "genre": ["Horror", "Thriller", "Fantascienza"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "John Krasinski",
-            "theme": "Sopravvivenza"
+            "theme": ["Sopravvivenza", "Silenzio"]
         },
         {
             "title": "Quarto potere",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Mistero", "Biografico"],
             "language": "Inglese",
             "decade": "Anni '40",
             "director": "Orson Welles",
@@ -3869,7 +3869,7 @@
         {
             "title": "Via col vento",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Romantico", "Guerra", "Storico"],
             "language": "Inglese",
             "decade": "Anni '30",
             "director": "Victor Fleming",
@@ -3878,7 +3878,7 @@
         {
             "title": "Star Wars: Gli ultimi Jedi",
             "type": "Film",
-            "genre": "Fantascienza",
+            "genre": ["Fantascienza", "Azione", "Avventura"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Rian Johnson",
@@ -3887,29 +3887,29 @@
         {
             "title": "Bridesmaids",
             "type": "Film",
-            "genre": "Commedia",
+            "genre": ["Commedia", "Romantico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Paul Feig",
-            "theme": "Commedia romantica"
+            "theme": "Amore"
         },
         {
             "title": "The Irishman",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Crime", "Biografico"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Martin Scorsese",
-            "theme": "Mafia"
+            "theme": ["Mafia", "Crimine"]
         },
         {
             "title": "1917",
             "type": "Film",
-            "genre": "Dramma",
+            "genre": ["Dramma", "Guerra", "Storico", "Azione"],
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "Sam Mendes",
-            "theme": "Guerra"
+            "theme": ["Guerra", "Storico"]
         },
         {
             "title": "Guardiani della Galassia",
@@ -3918,7 +3918,7 @@
             "language": "Inglese",
             "decade": "Anni 2010",
             "director": "James Gunn",
-            "theme": "Supereroi"
+            "theme": ["Supereroi", "Avventura spaziale"]
         },
         {
             "title": "Matrix",
@@ -3927,7 +3927,7 @@
             "language": "Inglese",
             "decade": "Anni '90",
             "director": "Wachowski Sisters",
-            "theme": "Robot/AI"
+            "theme": ["Robot/AI", "Intelligenza Artificiale"]
         },
         {
             "title": "La città incantata",
@@ -3936,7 +3936,7 @@
             "language": "Giapponese",
             "decade": "Anni 2000",
             "director": "Hayao Miyazaki",
-            "theme": "Fantasy"
+            "theme": ["Fantasy", "Famiglia", "Amicizia"]
         }
     ]
 }
