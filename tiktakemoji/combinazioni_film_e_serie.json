@@ -84,7 +84,10 @@
             "Robert Pattinson",
             "Matthew McConaughey",
             "Margot Robbie",
-            "Robert De Niro"
+            "Robert De Niro",
+            "Keanu Reeves",
+            "Jennifer Lawrence",
+            "Timothée Chalamet"
         ],
         "tema": [
             "Guerra",
@@ -285,7 +288,7 @@
             "genere": ["Fantascienza", "Avventura", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista o attore": ["Christopher Nolan", "Matthew McConaughey"],
+            "regista o attore": ["Christopher Nolan", "Matthew McConaughey", "Timothée Chalamet"],
             "tema": "Avventura spaziale"
         },
         {
@@ -1195,7 +1198,7 @@
             "lingua": "Giapponese",
             "decennio": "Anni 2000",
             "regista o attore": "Hayao Miyazaki",
-            "tema": "Fantasy"
+            "tema": ["Fantasy", "Famiglia", "Amicizia"]
         },
         {
             "title": "La bella e la bestia",
@@ -1473,7 +1476,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista o attore": "Gary Ross",
+            "regista o attore": "Jennifer Lawrence",
             "tema": "Sopravvivenza"
         },
         {
@@ -2202,7 +2205,7 @@
             "genere": ["Fantascienza", "Avventura", "Azione"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista o attore": "Denis Villeneuve",
+            "regista o attore": ["Denis Villeneuve", "Timothée Chalamet"],
             "tema": "Avventura spaziale"
         },
         {
@@ -2229,7 +2232,7 @@
             "genere": ["Commedia", "Satira", "Dramma"],
             "lingua": "Inglese",
             "decennio": "Anni 2020",
-            "regista o attore": "Leonardo DiCaprio",
+            "regista o attore": ["Leonardo DiCaprio", "Jennifer Lawrence"],
             "tema": "Ambientalismo"
         },
         {
@@ -2337,7 +2340,7 @@
             "genere": ["Fantascienza", "Romantico", "Avventura"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista o attore": "Morten Tyldum",
+            "regista o attore": "Jennifer Lawrence",
             "tema": "Avventura spaziale"
         },
         {
@@ -3696,7 +3699,7 @@
             "genere": ["Dramma", "Biografico"],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista o attore": "Felix Van Groeningen",
+            "regista o attore": ["Felix Van Groeningen", "Timothée Chalamet"],
             "tema": ["Famiglia", "Droghe"]
         },
         {
@@ -3950,6 +3953,303 @@
             "decennio": "Anni 2000",
             "regista o attore": "Hayao Miyazaki",
             "tema": ["Fantasy", "Famiglia", "Amicizia"]
+        },
+        {
+            "title": "Tomb Raider",
+            "tipo": "Film",
+            "genere": ["Azione", "Avventura"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": "Angelina Jolie",
+            "tema": ["Avventura", "Mistero"]
+        },
+        {
+            "title": "Il collezionista di ossa",
+            "tipo": "Film",
+            "genere": ["Thriller", "Crime"],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": ["Phillip Noyce", "Angelina Jolie"],
+            "tema": ["Mistero", "Crimine"]
+        },
+        {
+            "title": "Casinò",
+            "tipo": "Film",
+            "genere": ["Dramma", "Crime"],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": ["Martin Scorsese", "Robert De Niro"],
+            "tema": ["Mafia", "Crimine"]
+        },
+        {
+            "title": "Quei bravi ragazzi",
+            "tipo": "Film",
+            "genere": ["Dramma", "Crime", "Biografico"],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": ["Martin Scorsese", "Robert De Niro"],
+            "tema": ["Mafia", "Crimine"]
+        },
+        {
+            "title": "Il colore dei soldi",
+            "tipo": "Film",
+            "genere": ["Dramma", "Sport"],
+            "lingua": "Inglese",
+            "decennio": "Anni '80",
+            "regista o attore": ["Martin Scorsese", "Tom Cruise"],
+            "tema": ["Sport", "Drammatico"]
+        },
+        {
+            "title": "Tutti gli uomini del presidente",
+            "tipo": "Film",
+            "genere": ["Dramma", "Storico", "Thriller"],
+            "lingua": "Inglese",
+            "decennio": "Anni '70",
+            "regista o attore": "Alan J. Pakula",
+            "tema": ["Politica", "Storico"]
+        },
+        {
+            "title": "47 Ronin",
+            "tipo": "Film",
+            "genere": ["Azione", "Avventura", "Fantasy"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Keanu Reeves",
+            "tema": ["Vendetta", "Storico"]
+        },
+        {
+            "title": "Don Jon",
+            "tipo": "Film",
+            "genere": ["Commedia", "Dramma", "Romantico"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Joseph Gordon-Levitt", "Scarlett Johansson"],
+            "tema": ["Amore", "Dipendenza"]
+        },
+        {
+            "title": "Storia di un matrimonio",
+            "tipo": "Film",
+            "genere": ["Dramma", "Romantico"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Scarlett Johansson",
+            "tema": ["Famiglia", "Amore"]
+        },
+        {
+            "title": "X-Men",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": ["Bryan Singer", "Hugh Jackman"],
+            "tema": "Supereroi"
+        },
+        {
+            "title": "X-Men 2",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": ["Bryan Singer", "Hugh Jackman"],
+            "tema": "Supereroi"
+        },
+        {
+            "title": "X-Men: Conflitto finale",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": ["Brett Ratner", "Hugh Jackman"],
+            "tema": "Supereroi"
+        },
+        {
+            "title": "X-Men le origini: Wolverine",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": ["Gavin Hood", "Hugh Jackman"],
+            "tema": "Supereroi"
+        },
+        {
+            "title": "X-Men: L'inizio",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Matthew Vaughn", "Jennifer Lawrence"],
+            "tema": ["Supereroi", "Viaggio nel tempo"]
+        },
+        {
+            "title": "X-Men: Giorni di un futuro passato",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Bryan Singer", "Hugh Jackman", "Jennifer Lawrence"],
+            "tema": ["Supereroi", "Viaggi nel tempo"]
+        },
+        {
+            "title": "X-Men: Apocalisse",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Bryan Singer"],
+            "tema": "Supereroi"
+        },
+        {
+            "title": "X-Men: Dark Phoenix",
+            "tipo": "Film",
+            "genere": ["Azione", "Fantascienza", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Jennifer Lawrence",
+            "tema": "Supereroi"
+        },
+        {
+            "title": "The New Mutants",
+            "tipo": "Film",
+            "genere": ["Horror", "Fantascienza", "Azione", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2020",
+            "regista o attore": "Josh Boone",
+            "tema": "Supereroi"
+        },
+        {
+            "title": "Deadpool",
+            "tipo": "Film",
+            "genere": ["Azione", "Commedia", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Tim Miller",
+            "tema": ["Supereroi", "Comico"]
+        },
+        {
+            "title": "Deadpool 2",
+            "tipo": "Film",
+            "genere": ["Azione", "Commedia", "Avventura", "Supereroi"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "David Leitch",
+            "tema": ["Supereroi", "Comico"]
+        },
+        {
+            "title": "Van Helsing",
+            "tipo": "Film",
+            "genere": ["Azione", "Avventura", "Horror", "Fantasy"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": "Hugh Jackman",
+            "tema": ["Vampiri", "Mostri", "Soprannaturale"]
+        },
+        {
+            "title": "La grande scommessa",
+            "tipo": "Film",
+            "genere": ["Dramma", "Commedia", "Biografico"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Adam McKay", "Christian Bale", "Brad Pitt", "Margot Robbie"],
+            "tema": ["Politica", "Drammatico", "Crimine"]
+        },
+        {
+            "title": "TRON",
+            "tipo": "Film",
+            "genere": ["Fantascienza", "Avventura", "Azione"],
+            "lingua": "Inglese",
+            "decennio": "Anni '80",
+            "regista o attore": "Steven Lisberger",
+            "tema": ["Videogiochi", "Tecnologia", "Futuristico"]
+        },
+        {
+            "title": "TRON: Legacy",
+            "tipo": "Film",
+            "genere": ["Fantascienza", "Avventura", "Azione"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Joseph Kosinski",
+            "tema": ["Videogiochi", "Tecnologia", "Futuristico"]
+        },
+        {
+            "title": "Una settimana da Dio",
+            "tipo": "Film",
+            "genere": ["Commedia", "Fantasy"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": ["Tom Shadyac", "Jim Carrey"],
+            "tema": ["Religione", "Comico", "Filosofico"]
+        },
+        {
+            "title": "The Mask",
+            "tipo": "Film",
+            "genere": ["Commedia", "Fantasy"],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": ["Chuck Russell", "Jim Carrey"],
+            "tema": ["Comico", "Soprannaturale"]
+        },
+        {
+            "title": "Scemo e più scemo",
+            "tipo": "Film",
+            "genere": ["Commedia"],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": ["Peter Farrelly", "Jim Carrey"],
+            "tema": ["Comico", "Amicizia"]
+        },
+        {
+            "title": "Ready Player One",
+            "tipo": "Film",
+            "genere": ["Fantascienza", "Avventura", "Azione"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Steven Spielberg",
+            "tema": ["Videogiochi", "Futuristico", "Distopia"]
+        },
+        {
+            "title": "Johnny Stecchino",
+            "tipo": "Film",
+            "genere": ["Commedia", "Crime"],
+            "lingua": "Italiano",
+            "decennio": "Anni '90",
+            "regista o attore": "Roberto Benigni",
+            "tema": ["Mafia", "Comico", "Crimine"]
+        },
+        {
+            "title": "Non ci resta che piangere",
+            "tipo": "Film",
+            "genere": ["Commedia"],
+            "lingua": "Italiano",
+            "decennio": "Anni '80",
+            "regista o attore": ["Roberto Benigni", "Massimo Troisi"],
+            "tema": ["Viaggi nel tempo", "Comico", "Storico"]
+        },
+        {
+            "title": "To Rome with Love",
+            "tipo": "Film",
+            "genere": ["Commedia", "Romantico"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": ["Woody Allen", "Roberto Benigni"],
+            "tema": ["Amore", "Arte", "Comico"]
+        },
+        {
+            "title": "The Menu",
+            "tipo": "Film",
+            "genere": ["Thriller", "Horror"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2020",
+            "regista o attore": "Mark Mylod",
+            "tema": ["Cucina", "Satira", "Psicologico"]
+        },
+        {
+            "title": "Chef",
+            "tipo": "Film",
+            "genere": ["Commedia", "Dramma"],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": "Jon Favreau",
+            "tema": ["Cucina", "Famiglia", "Social Media"]
         }
     ]
 }
