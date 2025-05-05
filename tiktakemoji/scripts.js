@@ -391,6 +391,43 @@ function selectRandomCategories() {
                 }
             }
             
+            // Create the valid combinations grid
+            createValidCombinationsGrid();
+            
+            // Validate all cells have valid combinations
+            const allCellsHaveCombinations = validateAllCellsHaveCombinations(false); // Pass false to not show alert
+            
+            if (!allCellsHaveCombinations) {
+                throw new Error("Some cells have no valid combinations");
+            }
+            
+            // Check if the grid has too many low-diversity rows
+            let lowDiversityRows = 0;
+            for (let row = 0; row < 3; row++) {
+                // Check how many unique answers exist across this row
+                const uniqueAnswersInRow = new Set();
+                for (let col = 0; col < 3; col++) {
+                    const titles = gameState.validCellCombinations[row][col].map(entry => entry.title);
+                    titles.forEach(title => uniqueAnswersInRow.add(title));
+                }
+                
+                // Find how many answers are common to all cells in the row
+                const commonAnswers = findCommonAnswers(row);
+                
+                // If most answers are common (>75% overlap) and we have 3 or fewer unique answers
+                // consider this a low-diversity row
+                if (uniqueAnswersInRow.size <= 3 && 
+                    commonAnswers.length > 0 && 
+                    commonAnswers.length >= uniqueAnswersInRow.size * 0.75) {
+                    lowDiversityRows++;
+                }
+            }
+            
+            // If more than 1 row has low diversity, try again
+            if (lowDiversityRows > 1) {
+                throw new Error(`Too many low-diversity rows: ${lowDiversityRows}`);
+            }
+            
             // If we got here, we have a valid set
             validSetFound = true;
             
@@ -408,15 +445,14 @@ function selectRandomCategories() {
         console.log("Found valid category combinations after", attempts, "attempts");
     }
     
-    // Create the valid combinations grid
-    createValidCombinationsGrid();
+    // Already created the valid combinations grid in the validation step
     
-    // Validate all cells have valid combinations
-    validateAllCellsHaveCombinations();
+    // Validate all cells have valid combinations - this time with alert
+    validateAllCellsHaveCombinations(true);
 }
 
 // Validate that all cells have valid combinations
-function validateAllCellsHaveCombinations() {
+function validateAllCellsHaveCombinations(showAlert = true) {
     // Check every cell in the grid
     let allValid = true;
     
@@ -434,10 +470,12 @@ function validateAllCellsHaveCombinations() {
         }
     }
     
-    if (!allValid) {
+    if (!allValid && showAlert) {
         console.error("Game board contains empty cells. Try generating a new board.");
         alert("Some cells have no valid combinations. Please start a new game.");
     }
+    
+    return allValid;
 }
 
 // Create a grid of valid film/series combinations
@@ -510,10 +548,44 @@ function createValidCombinationsGrid() {
 // This function checks if cells in a row have exactly the same options and tries to diversify
 function checkAndEnsureDiversity() {
     for (let row = 0; row < 3; row++) {
-        // Check if all cells in this row have identical options
-        let hasDuplicateSet = false;
+        // First check if this row has very few options overall
+        const totalUniqueAnswers = new Set();
+        for (let col = 0; col < 3; col++) {
+            const titles = gameState.validCellCombinations[row][col].map(entry => entry.title);
+            titles.forEach(title => totalUniqueAnswers.add(title));
+        }
         
-        // Compare each pair of cells in the row
+        // If there are 3 or fewer unique answers across the entire row, and each cell has similar options,
+        // we need more aggressive diversification
+        if (totalUniqueAnswers.size <= 3) {
+            // Calculate overlap between cells
+            let highOverlap = true;
+            const commonAnswers = findCommonAnswers(row);
+            
+            // If most answers are common across all cells (>75% overlap), this row needs more diversity
+            if (commonAnswers.length > 0 && commonAnswers.length >= totalUniqueAnswers.size * 0.75) {
+                console.log(`Row ${row} has high overlap with only ${totalUniqueAnswers.size} unique answers total`);
+                
+                // Try to diversify at least 2 of the 3 cells
+                let diversificationSuccess = false;
+                for (let col = 0; col < 3; col++) {
+                    if (tryToFindMoreDiverseOption(row, col, true)) { // Pass true for aggressive mode
+                        diversificationSuccess = true;
+                        break;
+                    }
+                }
+                
+                if (!diversificationSuccess) {
+                    console.log(`Could not diversify row ${row} with few unique answers`);
+                }
+                
+                // After aggressive diversification, recalculate common answers
+                const newCommonAnswers = findCommonAnswers(row);
+                console.log(`Row ${row} now has ${newCommonAnswers.length} common answers (down from ${commonAnswers.length})`);
+            }
+        }
+        
+        // Check if all cells in this row have identical options (this is the original check)
         for (let col1 = 0; col1 < 2; col1++) {
             for (let col2 = col1 + 1; col2 < 3; col2++) {
                 const set1 = gameState.validCellCombinations[row][col1];
@@ -525,7 +597,6 @@ function checkAndEnsureDiversity() {
                     const titles2 = set2.map(entry => entry.title).sort().join(',');
                     
                     if (titles1 === titles2 && set1.length > 0) {
-                        hasDuplicateSet = true;
                         console.log(`Row ${row}: Cells ${col1} and ${col2} have identical options`);
                         
                         // Try to find a better column value for col2
@@ -534,16 +605,27 @@ function checkAndEnsureDiversity() {
                 }
             }
         }
-        
-        // If all columns in this row have identical options, try to diversify more aggressively
-        if (hasDuplicateSet) {
-            console.log(`Row ${row} has identical options across cells, attempting to diversify`);
-        }
     }
 }
 
+// Helper function to find answers common to all cells in a row
+function findCommonAnswers(row) {
+    if (row < 0 || row >= 3) return [];
+    
+    // Get all titles from first cell
+    const firstCellTitles = new Set(gameState.validCellCombinations[row][0].map(entry => entry.title));
+    
+    // Find intersection with other cells
+    const commonTitles = Array.from(firstCellTitles).filter(title => {
+        return gameState.validCellCombinations[row][1].some(entry => entry.title === title) &&
+               gameState.validCellCombinations[row][2].some(entry => entry.title === title);
+    });
+    
+    return commonTitles;
+}
+
 // Try to find a different valid value for a cell's column to increase diversity
-function tryToFindMoreDiverseOption(row, col) {
+function tryToFindMoreDiverseOption(row, col, aggressiveMode = false) {
     const currentColCategory = gameState.colCategories[col];
     const possibleColValues = gameState.categories[currentColCategory];
     const rowCategory = gameState.rowCategories[row];
@@ -591,8 +673,29 @@ function tryToFindMoreDiverseOption(row, col) {
             return rowMatches && colMatches;
         });
         
-        // If we found valid entries and they're different from other cells
+        // If we found valid entries...
         if (validEntries.length > 0) {
+            // In aggressive mode, prioritize solutions that have fewer overlaps with other cells
+            if (aggressiveMode) {
+                // Get titles from other cells in the row
+                const otherCellTitles = new Set();
+                for (let otherCol = 0; otherCol < 3; otherCol++) {
+                    if (otherCol !== col) {
+                        const titles = gameState.validCellCombinations[row][otherCol].map(e => e.title);
+                        titles.forEach(t => otherCellTitles.add(t));
+                    }
+                }
+                
+                // Calculate how many new entries don't appear in other cells
+                const newTitles = validEntries.map(e => e.title);
+                const uniqueNewTitles = newTitles.filter(title => !otherCellTitles.has(title));
+                
+                // If we don't have at least one unique title and we're in aggressive mode, skip unless it's our only option
+                if (uniqueNewTitles.length === 0 && validEntries.length <= 2) {
+                    continue; // Skip this option and try another
+                }
+            }
+            
             // Check if this option would be different from other cells in the row
             let isDifferent = true;
             for (let otherCol = 0; otherCol < 3; otherCol++) {
@@ -608,20 +711,20 @@ function tryToFindMoreDiverseOption(row, col) {
                 }
             }
             
-            if (isDifferent) {
+            if (isDifferent || aggressiveMode) {
                 // Update the column value for this cell
                 gameState.colCategoryValues[col] = newColValue;
                 
                 // Update the valid combinations for this cell
                 gameState.validCellCombinations[row][col] = validEntries;
                 
-                console.log(`Diversified cell [${row},${col}] with new value: ${newColValue}`);
+                console.log(`Diversified cell [${row},${col}] with new value: ${newColValue} (aggressive: ${aggressiveMode})`);
                 return true;
             }
         }
     }
     
-    console.log(`Could not find a more diverse option for cell [${row},${col}]`);
+    console.log(`Could not find a more diverse option for cell [${row},${col}] (aggressive: ${aggressiveMode})`);
     return false;
 }
 
