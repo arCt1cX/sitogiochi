@@ -1419,14 +1419,6 @@ function declareGameDraw() {
         return;
     }
     
-    // Get current language and player text
-    const lang = window.getCurrentLanguage();
-    
-    // Confirm with user
-    if (!confirm(lang === 'en' ? "End the game as a draw?" : "Terminare la partita con un pareggio?")) {
-        return;
-    }
-    
     // Set game over state
     gameState.gameOver = true;
     endGame(true);
