@@ -2302,6 +2302,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Check if this player needs a shock round (has 10 or more points)
                 checkShockRoundAndSetup();
+
+                // Ensure the game round is properly set up for the next player
+                if (!gameState.isShockRound) {
+                    console.log("Setting up game round after skipped turns");
+                    setupGameRound();
+                }
             }
         });
     }
@@ -2329,9 +2335,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset game state variables
         gameState.currentCategory = null;
         gameState.currentDifficulty = null;
+        gameState.currentQuestion = null; // Also reset current question to prevent stale state
         
-        // Setup the next round
-        setupGameRound();
+        // Only set up game round if it's a shock round
+        // For non-shock rounds, setupGameRound will be called from the caller function
+        if (gameState.isShockRound) {
+            setupGameRound();
+        }
     }
     
     // Check if any player has reached the winning score
