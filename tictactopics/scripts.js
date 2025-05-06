@@ -108,40 +108,40 @@ async function fetchTopicData(topicId) {
         let jsonFile;
         if (topicId === 'movies-tv') {
             jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+            // For backward compatibility
+            if (!(await fileExists(jsonFile))) {
+                jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
+            }
         } else if (topicId === 'songs') {
-            jsonFile = lang === 'en' ? "songs_en.json" : "songs.json";
+            jsonFile = lang === 'en' ? "combinazioni_canzoni_en.json" : "combinazioni_canzoni.json";
         } else if (topicId === 'video-games') {
             jsonFile = lang === 'en' ? "video_games_en.json" : "video_games.json";
         } else {
             // Default to movies-tv
             jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+            // For backward compatibility
+            if (!(await fileExists(jsonFile))) {
+                jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
+            }
         }
         
-        // For backward compatibility, check for the old filename too
+        // Try to fetch the specified JSON file
         let response = await fetch(jsonFile);
+        
         if (!response.ok) {
-            // Try the old filename pattern
-            const oldJsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
-            response = await fetch(oldJsonFile);
-            
-            if (!response.ok) {
-                // If English file fails to load, try to fall back to Italian
-                if (lang === 'en') {
-                    console.warn(`${jsonFile} not found, falling back to Italian`);
-                    const fallbackResponse = await fetch("combinazioni_film_e_serie.json");
-                    if (!fallbackResponse.ok) {
-                        throw new Error(`Failed to fetch data for topic: ${topicId}`);
-                    }
-                    const fallbackData = await fallbackResponse.json();
-                    gameState.filmsAndSeries = fallbackData.entries;
-                    gameState.categories = fallbackData.categories;
-                } else {
+            // If English file fails to load, try to fall back to Italian
+            if (lang === 'en' && jsonFile.includes('_en')) {
+                console.warn(`${jsonFile} not found, falling back to Italian`);
+                const italianVersion = jsonFile.replace('_en.json', '.json');
+                const fallbackResponse = await fetch(italianVersion);
+                if (!fallbackResponse.ok) {
                     throw new Error(`Failed to fetch data for topic: ${topicId}`);
                 }
+                const fallbackData = await fallbackResponse.json();
+                gameState.filmsAndSeries = fallbackData.entries;
+                gameState.categories = fallbackData.categories;
             } else {
-                const data = await response.json();
-                gameState.filmsAndSeries = data.entries;
-                gameState.categories = data.categories;
+                throw new Error(`Failed to fetch data for topic: ${topicId}`);
             }
         } else {
             const data = await response.json();
@@ -155,6 +155,16 @@ async function fetchTopicData(topicId) {
         console.error(`Error loading data for ${topicId}:`, error);
         gameState.filmsAndSeries = []; // Set empty array in case of error
         gameState.categories = {};
+    }
+}
+
+// Helper function to check if a file exists
+async function fileExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch {
+        return false;
     }
 }
 

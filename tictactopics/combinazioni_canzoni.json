@@ -1,0 +1,616 @@
+{
+  "categories": {
+    "lingua": [
+      "Inglese",
+      "Italiano",
+      "Spagnolo",
+      "Francese",
+      "Portoghese",
+      "Coreano",
+      "Giapponese"
+    ],
+    "autore": [
+      "Coldplay",
+      "Ed Sheeran",
+      "Taylor Swift",
+      "Vasco Rossi",
+      "Lady Gaga",
+      "Ligabue",
+      "Måneskin",
+      "The Weeknd",
+      "Adele",
+      "Jovanotti",
+      "Laura Pausini",
+      "Marracash",
+      "Fedez",
+      "Eminem",
+      "Drake",
+      "Dua Lipa",
+      "Blanco",
+      "Mahmood",
+      "BTS",
+      "Billie Eilish"
+    ],
+    "genere": [
+      "Pop",
+      "Rock",
+      "Hip Hop",
+      "R&B",
+      "Elettronica",
+      "Indie",
+      "Metal",
+      "Rap",
+      "Dance",
+      "Soul",
+      "Jazz",
+      "Classica",
+      "Trap",
+      "Reggaeton",
+      "Folk",
+      "Country",
+      "K-pop",
+      "Blues",
+      "Alternative",
+      "Punk"
+    ],
+    "tema": [
+      "Amore",
+      "Rottura",
+      "Festa",
+      "Politica",
+      "Libertà",
+      "Nostalgia",
+      "Amicizia",
+      "Ribellione",
+      "Solitudine",
+      "Potere",
+      "Crescita",
+      "Resilienza",
+      "Società",
+      "Divertimento",
+      "Speranza",
+      "Dolore",
+      "Viaggio",
+      "Famiglia",
+      "Identità",
+      "Estate"
+    ],
+    "anni": [
+      "1960s",
+      "1970s",
+      "1980s",
+      "1990s",
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "feat": [
+      "Solo",
+      "Daddy Yankee",
+      "Justin Bieber",
+      "Blanco",
+      "Bradley Cooper",
+      "Sfera Ebbasta",
+      "Tiziano Ferro",
+      "J Balvin",
+      "Cardi B",
+      "Post Malone",
+      "Ariana Grande",
+      "Rihanna",
+      "Travis Scott",
+      "Nicki Minaj",
+      "JAY-Z",
+      "Elisa",
+      "Fabri Fibra",
+      "Calcutta",
+      "Dua Lipa",
+      "DRAM"
+    ]
+  },
+  "entries": [
+    {
+      "title": "Shape of You",
+      "autore": "Ed Sheeran",
+      "lingua": "Inglese",
+      "genere": ["Pop", "R&B"],
+      "tema": ["Amore", "Attrazione"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Albachiara",
+      "autore": "Vasco Rossi",
+      "lingua": "Italiano",
+      "genere": "Rock",
+      "tema": ["Giovinezza", "Osservazione"],
+      "anni": "1970s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Blinding Lights",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Elettronica"],
+      "tema": ["Amore", "Nostalgia"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Zitti e Buoni",
+      "autore": "Måneskin",
+      "lingua": "Italiano",
+      "genere": ["Rock", "Alternative"],
+      "tema": ["Ribellione", "Libertà"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Despacito",
+      "autore": "Luis Fonsi",
+      "lingua": "Spagnolo",
+      "genere": ["Reggaeton", "Pop"],
+      "tema": ["Amore", "Festa"],
+      "anni": "2010s",
+      "feat": "Daddy Yankee"
+    },
+    {
+      "title": "Hello",
+      "autore": "Adele",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Soul"],
+      "tema": ["Rottura", "Nostalgia"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Brividi",
+      "autore": "Mahmood",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Indie"],
+      "tema": ["Amore", "Vulnerabilità"],
+      "anni": "2020s",
+      "feat": "Blanco"
+    },
+    {
+      "title": "Bad Guy",
+      "autore": "Billie Eilish",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Alternative"],
+      "tema": ["Identità", "Potere"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Lose Yourself",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Rap", "Hip Hop"],
+      "tema": ["Determinazione", "Resilienza"],
+      "anni": "2000s",
+      "feat": "Solo"
+    },
+    {
+      "title": "A Te",
+      "autore": "Jovanotti",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Amore", "Dedica"],
+      "anni": "2000s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Dynamite",
+      "autore": "BTS",
+      "lingua": "Inglese",
+      "genere": ["K-pop", "Dance"],
+      "tema": ["Divertimento", "Positività"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Don't Start Now",
+      "autore": "Dua Lipa",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Dance"],
+      "tema": ["Empowerment", "Rottura"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Viva La Vida",
+      "autore": "Coldplay",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Alternative"],
+      "tema": ["Potere", "Cambiamento"],
+      "anni": "2000s",
+      "feat": "Solo"
+    },
+    {
+      "title": "MONTERO (Call Me By Your Name)",
+      "autore": "Lil Nas X",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Hip Hop"],
+      "tema": ["Identità", "Libertà"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Soldi",
+      "autore": "Mahmood",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Trap"],
+      "tema": ["Relazioni", "Famiglia"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Shallow",
+      "autore": "Lady Gaga",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Country"],
+      "tema": ["Amore", "Crescita"],
+      "anni": "2010s",
+      "feat": "Bradley Cooper"
+    },
+    {
+      "title": "PERSONE",
+      "autore": "Marracash",
+      "lingua": "Italiano",
+      "genere": "Rap",
+      "tema": ["Società", "Introspezione"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "autore": "Queen",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Progressive"],
+      "tema": ["Introspezione", "Conflitto"],
+      "anni": "1970s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Certe Notti",
+      "autore": "Ligabue",
+      "lingua": "Italiano",
+      "genere": "Rock",
+      "tema": ["Giovinezza", "Vita"],
+      "anni": "1990s",
+      "feat": "Solo"
+    },
+    {
+      "title": "La Solitudine",
+      "autore": "Laura Pausini",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Rottura", "Solitudine"],
+      "anni": "1990s",
+      "feat": "Solo"
+    },
+    {
+      "title": "rockstar",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fama", "Eccesso"],
+      "anni": "2010s",
+      "feat": "21 Savage"
+    },
+    {
+      "title": "I'm the One",
+      "autore": "DJ Khaled",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Successo", "Festa"],
+      "anni": "2010s",
+      "feat": "Justin Bieber"
+    },
+    {
+      "title": "FEFE",
+      "autore": "6ix9ine",
+      "lingua": "Inglese",
+      "genere": "Trap",
+      "tema": ["Amore", "Potere"],
+      "anni": "2010s",
+      "feat": "Nicki Minaj"
+    },
+    {
+      "title": "Tusa",
+      "autore": "Karol G",
+      "lingua": "Spagnolo",
+      "genere": ["Reggaeton", "Pop"],
+      "tema": ["Rottura", "Festa"],
+      "anni": "2010s",
+      "feat": "Nicki Minaj"
+    },
+    {
+      "title": "Brillo",
+      "autore": "Marco Mengoni",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Relazioni", "Notte"],
+      "anni": "2010s",
+      "feat": "Elisa"
+    },
+    {
+      "title": "CALIPSO",
+      "autore": "Charlie Charles",
+      "lingua": "Italiano",
+      "genere": "Trap",
+      "tema": ["Estate", "Festa"],
+      "anni": "2010s",
+      "feat": "Sfera Ebbasta"
+    },
+    {
+      "title": "Señorita",
+      "autore": "Shawn Mendes",
+      "lingua": "Inglese",
+      "genere": "Pop",
+      "tema": ["Amore", "Attrazione"],
+      "anni": "2010s",
+      "feat": "Camila Cabello"
+    },
+    {
+      "title": "Stay",
+      "autore": "The Kid LAROI",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Hip Hop"],
+      "tema": ["Relazioni", "Vulnerabilità"],
+      "anni": "2020s",
+      "feat": "Justin Bieber"
+    },
+    {
+      "title": "Italodisco",
+      "autore": "The Kolors",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Dance"],
+      "tema": ["Estate", "Festa"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Taki Taki",
+      "autore": "DJ Snake",
+      "lingua": ["Inglese", "Spagnolo"],
+      "genere": ["Reggaeton", "Dance"],
+      "tema": ["Festa", "Sensualità"],
+      "anni": "2010s",
+      "feat": "Selena Gomez"
+    },
+    {
+      "title": "Tango",
+      "autore": "Tananai",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Amore", "Nostalgia"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Beggin",
+      "autore": "Måneskin",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Amore", "Desiderio"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Billie Jean",
+      "autore": "Michael Jackson",
+      "lingua": "Inglese",
+      "genere": ["Pop", "R&B"],
+      "tema": ["Relazioni", "Paternità"],
+      "anni": "1980s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Flowers",
+      "autore": "Miley Cyrus",
+      "lingua": "Inglese",
+      "genere": "Pop",
+      "tema": ["Rottura", "Empowerment"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "BZRP Music Sessions #53",
+      "autore": "Bizarrap",
+      "lingua": "Spagnolo",
+      "genere": ["Dance", "Pop"],
+      "tema": ["Rottura", "Vendetta"],
+      "anni": "2020s",
+      "feat": "Shakira"
+    },
+    {
+      "title": "Me Contro Te Il Film Theme Song",
+      "autore": "Me Contro Te",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Amicizia", "Avventura"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Imagine",
+      "autore": "John Lennon",
+      "lingua": "Inglese",
+      "genere": "Rock",
+      "tema": ["Pace", "Utopia"],
+      "anni": "1970s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Ci Pensiamo Domani",
+      "autore": "Angelina Mango",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Speranza", "Positività"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "WAP",
+      "autore": "Cardi B",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Sessualità", "Empowerment"],
+      "anni": "2020s",
+      "feat": "Megan Thee Stallion"
+    },
+    {
+      "title": "Sapore",
+      "autore": "Fedez",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Rap"],
+      "tema": ["Amore", "Relazioni"],
+      "anni": "2020s",
+      "feat": "Tedua"
+    },
+    {
+      "title": "Bellissima",
+      "autore": "Annalisa",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Rottura", "Resilienza"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Industry Baby",
+      "autore": "Lil Nas X",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Successo", "Libertà"],
+      "anni": "2020s",
+      "feat": "Jack Harlow"
+    },
+    {
+      "title": "Por Fin",
+      "autore": "Pablo Alborán",
+      "lingua": "Spagnolo",
+      "genere": "Pop",
+      "tema": ["Amore", "Realizzazione"],
+      "anni": "2020s",
+      "feat": "Aitana"
+    },
+    {
+      "title": "Sweet Dreams (Are Made of This)",
+      "autore": "Eurythmics",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Rock"],
+      "tema": ["Desiderio", "Ambizione"],
+      "anni": "1980s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Mon Amour",
+      "autore": "Annalisa",
+      "lingua": ["Italiano", "Francese"],
+      "genere": "Pop",
+      "tema": ["Amore", "Gelosia"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Cenere",
+      "autore": "Lazza",
+      "lingua": "Italiano",
+      "genere": ["Rap", "Pop"],
+      "tema": ["Relazioni", "Introspezione"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Pieno di Stronzi",
+      "autore": "Annalisa",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Società", "Critica"],
+      "anni": "2010s",
+      "feat": "Calcutta"
+    },
+    {
+      "title": "Boss Bitch",
+      "autore": "Doja Cat",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Hip Hop"],
+      "tema": ["Empowerment", "Indipendenza"],
+      "anni": "2020s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Thinking Out Loud",
+      "autore": "Ed Sheeran",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Soul"],
+      "tema": ["Amore", "Fedeltà"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Gangnam Style",
+      "autore": "PSY",
+      "lingua": "Coreano",
+      "genere": ["K-pop", "Dance"],
+      "tema": ["Festa", "Umorismo"],
+      "anni": "2010s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Bohemian Rhapsody (Live Aid)",
+      "autore": "Queen",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Progressive"],
+      "tema": ["Introspezione", "Performance"],
+      "anni": "1980s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Bella Ciao",
+      "autore": "Artista Tradizionale",
+      "lingua": "Italiano",
+      "genere": ["Folk", "Tradizionale"],
+      "tema": ["Politica", "Libertà"],
+      "anni": "1960s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Stan",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Rap", "Hip Hop"],
+      "tema": ["Ossessione", "Fandom"],
+      "anni": "2000s",
+      "feat": "Dido"
+    },
+    {
+      "title": "Mamma Mia",
+      "autore": "ABBA",
+      "lingua": "Inglese",
+      "genere": "Pop",
+      "tema": ["Rottura", "Nostalgia"],
+      "anni": "1970s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Sarà Perché Ti Amo",
+      "autore": "Ricchi e Poveri",
+      "lingua": "Italiano",
+      "genere": "Pop",
+      "tema": ["Amore", "Gioia"],
+      "anni": "1980s",
+      "feat": "Solo"
+    },
+    {
+      "title": "Macarena",
+      "autore": "Los Del Río",
+      "lingua": "Spagnolo",
+      "genere": ["Pop", "Dance"],
+      "tema": ["Festa", "Ballo"],
+      "anni": "1990s",
+      "feat": "Solo"
+    }
+  ]
+}
