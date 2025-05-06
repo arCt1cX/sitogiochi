@@ -70,8 +70,9 @@ const passwordError = document.getElementById("password-error");
 // Event Listeners
 document.getElementById("submit-password").addEventListener("click", checkPassword);
 document.getElementById("go-to-topics").addEventListener("click", showTopicSelection);
-document.getElementById("new-game").addEventListener("click", resetGame);
+document.getElementById("new-game").addEventListener("click", startNewGameSameTopic);
 document.getElementById("end-game").addEventListener("click", declareGameDraw);
+document.getElementById("change-topic").addEventListener("click", resetGame);
 
 // Add event listener for Enter key on password input
 passwordInput.addEventListener("keyup", function(event) {
@@ -260,9 +261,10 @@ function resetGameState() {
     // Hide selection
     emojiSelection.classList.add("hidden");
     
-    // Show the end game button and hide new game button
+    // Show the end game button and hide new game and change topic buttons
     document.getElementById("end-game").style.display = "";
     document.getElementById("new-game").style.display = "none";
+    document.getElementById("change-topic").style.display = "none";
     
     // Clear any win-cell classes
     const winCells = document.querySelectorAll('.win-cell');
@@ -279,16 +281,9 @@ function resetGameState() {
 
 // Reset the game and go back to topic selection
 function resetGame() {
-    // If we're currently in the winner screen, go back to topic selection
-    if (gameState.gameOver) {
-        gameState.gameOver = false;
-        showTopicSelection();
-    } else {
-        // If we're in the game screen, just confirm the user wants to end the current game
-        if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
-            showTopicSelection();
-        }
-    }
+    // Reset game state and go back to topic selection
+    gameState.gameOver = false;
+    showTopicSelection();
 }
 
 // Show a specific screen
@@ -1364,9 +1359,10 @@ function endGame(isDraw) {
         currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
     }
     
-    // Show the New Game button and hide End Game button
+    // Show the New Game and Change Topic buttons, hide End Game button
     document.getElementById("new-game").style.display = "block";
     document.getElementById("end-game").style.display = "none";
+    document.getElementById("change-topic").style.display = "block";
 }
 
 // Declare the game as a draw
@@ -1376,19 +1372,17 @@ function declareGameDraw() {
         return;
     }
     
-    // Confirm the user wants to end the game
-    if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
-        // Set game over state and declare draw
-        gameState.gameOver = true;
-        
-        // Update player turn display to show draw
-        currentPlayerEl.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
-        currentPlayerEl.className = "player-marker draw";
-        
-        // Show the New Game button and hide End Game button
-        document.getElementById("new-game").style.display = "block";
-        document.getElementById("end-game").style.display = "none";
-    }
+    // Set game over state and declare draw without confirmation
+    gameState.gameOver = true;
+    
+    // Update player turn display to show draw
+    currentPlayerEl.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
+    currentPlayerEl.className = "player-marker draw";
+    
+    // Show the New Game and Change Topic buttons, hide End Game button
+    document.getElementById("new-game").style.display = "block";
+    document.getElementById("end-game").style.display = "none";
+    document.getElementById("change-topic").style.display = "block";
 }
 
 // Helper function to shuffle array
@@ -1476,4 +1470,13 @@ function showValidAnswers(row, col) {
     setTimeout(() => {
         validAnswersContainer.style.visibility = 'visible';
     }, 10);
+}
+
+// Function to start a new game with the same topic
+async function startNewGameSameTopic() {
+    // Keep the current topic and start a new game
+    resetGameState();
+    selectRandomCategories();
+    createGameBoard();
+    showScreen("game");
 } 

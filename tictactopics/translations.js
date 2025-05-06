@@ -23,6 +23,7 @@ window.translations = {
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
         'endGameText': 'Fine Partita',
+        'changeTopicText': 'Cambia Argomento',
         'selectEmojiText': 'Seleziona un titolo corrispondente:',
         'selectMatchingTitle': 'Seleziona un titolo corrispondente',
         'validAnswersTitle': 'Risposte Valide per questa Cella:',
@@ -68,6 +69,7 @@ window.translations = {
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
         'endGameText': 'End Game',
+        'changeTopicText': 'Change Topic',
         'selectEmojiText': 'Select a matching title:',
         'selectMatchingTitle': 'Select a matching title',
         'validAnswersTitle': 'Valid Answers for this Cell:',
@@ -173,6 +175,7 @@ function applyGameTranslations() {
     document.getElementById('playerTurnText').textContent = translationSet.playerTurnText;
     document.getElementById('newGameText').textContent = translationSet.newGameText;
     document.getElementById('endGameText').textContent = translationSet.endGameText;
+    document.getElementById('changeTopicText').textContent = translationSet.changeTopicText;
     document.getElementById('selectEmojiText').textContent = translationSet.selectEmojiText;
     document.getElementById('winnerTitle').textContent = translationSet.winnerTitle;
     document.getElementById('winnerText').textContent = translationSet.winnerText;

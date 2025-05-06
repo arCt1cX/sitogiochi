@@ -1032,4 +1032,26 @@ body {
     .topics-container {
         grid-template-columns: 1fr;
     }
+}
+
+.tertiary-btn {
+    background: linear-gradient(45deg, #555, #777);
+    border-bottom: 3px solid #444;
+}
+
+.tertiary-btn:hover {
+    background: linear-gradient(45deg, #666, #888);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tertiary-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #777, #666);
+}
+
+.change-topic-btn {
+    display: none;
+    margin-top: 0.5rem;
 } 
