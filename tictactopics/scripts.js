@@ -107,14 +107,14 @@ async function fetchTopicData(topicId) {
         // Choose the appropriate JSON file based on the topic
         let jsonFile;
         if (topicId === 'movies-tv') {
-            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+            jsonFile = lang === 'en' ? "movies_tv_en.json" : "combinazioni_film_e_serie.json";
         } else if (topicId === 'songs') {
-            jsonFile = lang === 'en' ? "songs_en.json" : "songs.json";
+            jsonFile = lang === 'en' ? "songs_en.json" : "combinazioni_canzoni.json";
         } else if (topicId === 'video-games') {
-            jsonFile = lang === 'en' ? "video_games_en.json" : "video_games.json";
+            jsonFile = lang === 'en' ? "video_games_en.json" : "combinazioni_videogiochi.json";
         } else {
             // Default to movies-tv
-            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+            jsonFile = lang === 'en' ? "movies_tv_en.json" : "combinazioni_film_e_serie.json";
         }
         
         // For backward compatibility, check for the old filename too
