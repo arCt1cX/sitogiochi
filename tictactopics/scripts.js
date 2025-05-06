@@ -107,46 +107,62 @@ async function fetchTopicData(topicId) {
         // Choose the appropriate JSON file based on the topic
         let jsonFile;
         if (topicId === 'movies-tv') {
-            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
-            // For backward compatibility
-            if (!(await fileExists(jsonFile))) {
-                jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
-            }
+            jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
         } else if (topicId === 'songs') {
-            jsonFile = lang === 'en' ? "combinazioni_canzoni_en.json" : "combinazioni_canzoni.json";
+            jsonFile = "combinazioni_canzoni.json";
         } else if (topicId === 'video-games') {
             jsonFile = lang === 'en' ? "video_games_en.json" : "video_games.json";
         } else {
             // Default to movies-tv
-            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
-            // For backward compatibility
-            if (!(await fileExists(jsonFile))) {
-                jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
-            }
+            jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
         }
         
+        console.log(`Trying to load file: ${jsonFile} for topic: ${topicId}`);
+        
         // Try to fetch the specified JSON file
-        let response = await fetch(jsonFile);
+        let response;
+        try {
+            response = await fetch(jsonFile);
+            console.log(`Fetch response status: ${response.status} for ${jsonFile}`);
+        } catch (fetchError) {
+            console.error(`Fetch error for ${jsonFile}:`, fetchError);
+            throw new Error(`Failed to fetch file: ${jsonFile}`);
+        }
         
         if (!response.ok) {
             // If English file fails to load, try to fall back to Italian
             if (lang === 'en' && jsonFile.includes('_en')) {
-                console.warn(`${jsonFile} not found, falling back to Italian`);
+                console.warn(`${jsonFile} not found, falling back to Italian version`);
                 const italianVersion = jsonFile.replace('_en.json', '.json');
-                const fallbackResponse = await fetch(italianVersion);
-                if (!fallbackResponse.ok) {
-                    throw new Error(`Failed to fetch data for topic: ${topicId}`);
+                try {
+                    const fallbackResponse = await fetch(italianVersion);
+                    console.log(`Fallback response status: ${fallbackResponse.status} for ${italianVersion}`);
+                    
+                    if (!fallbackResponse.ok) {
+                        throw new Error(`Failed to fetch fallback data for topic: ${topicId}`);
+                    }
+                    
+                    const fallbackData = await fallbackResponse.json();
+                    gameState.filmsAndSeries = fallbackData.entries;
+                    gameState.categories = fallbackData.categories;
+                    console.log(`Successfully loaded fallback data for ${topicId}`);
+                } catch (fallbackError) {
+                    console.error(`Fallback fetch error:`, fallbackError);
+                    throw new Error(`Failed to fetch fallback file: ${italianVersion}`);
                 }
-                const fallbackData = await fallbackResponse.json();
-                gameState.filmsAndSeries = fallbackData.entries;
-                gameState.categories = fallbackData.categories;
             } else {
-                throw new Error(`Failed to fetch data for topic: ${topicId}`);
+                throw new Error(`Failed to fetch data for topic: ${topicId}, status: ${response.status}`);
             }
         } else {
-            const data = await response.json();
-            gameState.filmsAndSeries = data.entries;
-            gameState.categories = data.categories;
+            try {
+                const data = await response.json();
+                gameState.filmsAndSeries = data.entries;
+                gameState.categories = data.categories;
+                console.log(`Successfully loaded data for ${topicId}`);
+            } catch (jsonError) {
+                console.error(`JSON parse error for ${jsonFile}:`, jsonError);
+                throw new Error(`Failed to parse JSON from ${jsonFile}`);
+            }
         }
         
         console.log(`Loaded data for ${topicId}:`, gameState.filmsAndSeries.length);
@@ -170,14 +186,30 @@ async function fileExists(url) {
 
 // Initialize the game
 document.addEventListener("DOMContentLoaded", async () => {
-    await fetchTopicData('movies-tv');
-    
     // Check if there's a password saved in localStorage
     const savedPassword = localStorage.getItem("tictactopics_password");
     if (savedPassword === GAME_PASSWORD) {
         // If correct password is saved, skip to instructions
         showScreen("instructions");
     }
+    
+    // Add event delegation for topic cards
+    document.querySelector(".topics-container").addEventListener("click", function(e) {
+        const topicCard = e.target.closest(".topic-card:not(.coming-soon)");
+        if (topicCard) {
+            // Set selected topic in gameState
+            gameState.selectedTopic = topicCard.dataset.topic;
+            
+            // Visual indication of selection
+            document.querySelectorAll(".topic-card").forEach(c => c.classList.remove("selected"));
+            topicCard.classList.add("selected");
+            
+            // Start game with selected topic after a short delay
+            setTimeout(() => {
+                startGame();
+            }, 500);
+        }
+    });
 });
 
 // Show topic selection screen
@@ -190,26 +222,8 @@ function showTopicSelection() {
     document.getElementById("moviesTVDesc").textContent = window.getTranslation("moviesTVDesc");
     document.getElementById("videoGamesTitle").textContent = window.getTranslation("videoGamesTitle");
     document.getElementById("songsTitle").textContent = window.getTranslation("songsTitle");
-    document.getElementById("comingSoonText").textContent = window.getTranslation("comingSoonText");
+    document.getElementById("songsDesc").textContent = window.getTranslation("songsDesc");
     document.getElementById("comingSoonText2").textContent = window.getTranslation("comingSoonText");
-    
-    // Add click event to topic cards
-    const topicCards = document.querySelectorAll(".topic-card:not(.coming-soon)");
-    topicCards.forEach(card => {
-        card.addEventListener("click", function() {
-            // Set selected topic in gameState
-            gameState.selectedTopic = this.dataset.topic;
-            
-            // Visual indication of selection
-            document.querySelectorAll(".topic-card").forEach(c => c.classList.remove("selected"));
-            this.classList.add("selected");
-            
-            // Start game with selected topic after a short delay
-            setTimeout(() => {
-                startGame();
-            }, 500);
-        });
-    });
 }
 
 // Start a new game
