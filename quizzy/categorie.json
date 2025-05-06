@@ -15512,5 +15512,772 @@
       "correctIndex": 0
     }
   ]
+},
+"Sport": {
+  "bambino": [
+    {
+      "question": "In quale sport si usa un pallone da calcio?",
+      "answers": ["Tennis", "Calcio", "Pallavolo", "Basket"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quanti giocatori ha una squadra di calcio in campo?",
+      "answers": ["11", "7", "5", "9"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale sport si gioca con una racchetta e una pallina gialla?",
+      "answers": ["Pallavolo", "Baseball", "Tennis", "Basket"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che sport pratica uno sciatore?",
+      "answers": ["Sci", "Nuoto", "Atletica", "Pattinaggio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In che sport si segna tirando la palla nel canestro?",
+      "answers": ["Calcio", "Basket", "Pallanuoto", "Rugby"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è lo sport più famoso in Italia?",
+      "answers": ["Tennis", "Basket", "Calcio", "Golf"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale sport si gioca in piscina con una palla?",
+      "answers": ["Pallanuoto", "Tuffi", "Nuoto", "Canoa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi corre in una gara di Formula 1?",
+      "answers": ["Ciclisti", "Atleti", "Piloti", "Nuotatori"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Con che cosa si colpisce la palla nel baseball?",
+      "answers": ["Con la mano", "Con un piede", "Con una mazza", "Con una racchetta"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che colore ha la maglia del leader del Giro d’Italia?",
+      "answers": ["Rossa", "Verde", "Gialla", "Rosa"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Cosa si usa per nuotare più velocemente?",
+      "answers": ["Occhiali", "Piedi", "Mani", "Pinne"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi ha vinto più Coppe del Mondo di calcio?",
+      "answers": ["Germania", "Italia", "Argentina", "Brasile"],
+      "correctIndex": 3
+    },
+    {
+      "question": "In quale sport si salta più in alto con l’asta?",
+      "answers": ["Lancio del disco", "Salto con l’asta", "Corsa veloce", "Pugilato"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa fa un pugile sul ring?",
+      "answers": ["Gioca a carte", "Corre", "Nuota", "Combatte"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quale sport si pratica sulla neve con due sci?",
+      "answers": ["Snowboard", "Hockey", "Sci", "Slittino"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi usa la mazza da golf?",
+      "answers": ["Il golfista", "Il calciatore", "Il tennista", "Il ciclista"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In che sport si fanno capriole e salti?",
+      "answers": ["Ginnastica artistica", "Calcio", "Bocce", "Pallanuoto"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale sport si gioca con una rete nel mezzo e si colpisce la palla con le mani?",
+      "answers": ["Calcio", "Tennis", "Basket", "Pallavolo"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi guida una moto da corsa?",
+      "answers": ["Pilota", "Arbitro", "Atleta", "Allenatore"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale sport si fa una 'schiacciata'?",
+      "answers": ["Calcio", "Basket", "Tennis", "Pallanuoto"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che sport si fa con una bicicletta?",
+      "answers": ["Pattinaggio", "Ciclismo", "Sci", "Rugby"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il campo del calcio?",
+      "answers": ["Piscina", "Campo da tennis", "Pista", "Stadio"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi dà il via a una corsa?",
+      "answers": ["L'arbitro", "Il giudice", "Lo starter", "Il tifoso"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si usa per colpire la palla nel ping pong?",
+      "answers": ["Mazze", "Piedi", "Racchette piccole", "Bastoni"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è il portiere?",
+      "answers": ["Chi corre più veloce", "Chi segna i gol", "Chi para i tiri", "Chi fischia la fine"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quante ruote ha una bicicletta?",
+      "answers": ["Una", "Due", "Tre", "Quattro"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si vince alle Olimpiadi?",
+      "answers": ["Un pallone", "Una medaglia", "Una coppa", "Un biglietto"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa fa l'arbitro in una partita?",
+      "answers": ["Tira i rigori", "Tifa", "Gioca", "Controlla le regole"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Dove si gioca una partita di tennis?",
+      "answers": ["Sul campo da tennis", "In piscina", "Sulla neve", "Sul ring"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale sport si usano i guantoni?",
+      "answers": ["Calcio", "Boxe", "Pallavolo", "Basket"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In che sport si usa la tavola da surf?",
+      "answers": ["Canoa", "Nuoto", "Surf", "Pesca"],
+      "correctIndex": 2
+    }
+  ],
+  "facile": [
+    {
+      "question": "Chi è Lionel Messi?",
+      "answers": ["Un tennista", "Un calciatore", "Un nuotatore", "Un pilota"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale sport si corre nei 100 metri piani?",
+      "answers": ["Atletica leggera", "Calcio", "Basket", "Nuoto"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti punti vale un canestro da fuori area nel basket?",
+      "answers": ["1", "2", "3", "4"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che sport è famoso Novak Djokovic?",
+      "answers": ["Golf", "Tennis", "Boxe", "Ciclismo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il massimo campionato di calcio italiano?",
+      "answers": ["Serie A", "Champions", "Premier League", "Coppa Italia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale squadra ha lo stadio Camp Nou?",
+      "answers": ["Juventus", "Inter", "Barcellona", "Milan"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si vince nel torneo di Wimbledon?",
+      "answers": ["Una medaglia", "Una cintura", "Una coppa", "Una racchetta d’oro"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi indossa la maglia gialla al Tour de France?",
+      "answers": ["Il campione del mondo", "Il vincitore della tappa", "Il primo in classifica", "Il miglior giovane"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è lo sport praticato da Michael Jordan?",
+      "answers": ["Calcio", "Hockey", "Basket", "Tennis"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che sport si usa una tavola per scivolare sulla neve?",
+      "answers": ["Sci", "Skateboard", "Snowboard", "Pattinaggio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quanti set si giocano in una partita di tennis maschile nei tornei del Grande Slam?",
+      "answers": ["3", "5", "2", "4"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che ruolo ha Gianluigi Buffon?",
+      "answers": ["Attaccante", "Difensore", "Centrocampista", "Portiere"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quanti cerchi ha il simbolo delle Olimpiadi?",
+      "answers": ["4", "5", "6", "7"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che sport si pratica con la sciabola o il fioretto?",
+      "answers": ["Scherma", "Atletica", "Equitazione", "Arti marziali"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha vinto i Mondiali di calcio nel 2006?",
+      "answers": ["Francia", "Germania", "Italia", "Brasile"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che sport si tira con l’arco?",
+      "answers": ["Tiro al piattello", "Tiro con l’arco", "Golf", "Atletica"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale sport si gioca su ghiaccio con il disco?",
+      "answers": ["Pattinaggio", "Curling", "Hockey su ghiaccio", "Sci alpino"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto più medaglie olimpiche nella storia?",
+      "answers": ["Usain Bolt", "Michael Jordan", "Simone Biles", "Michael Phelps"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Qual è lo sport nazionale del Giappone?",
+      "answers": ["Karate", "Sumo", "Judo", "Kendo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama lo sport dove si fanno tuffi artistici?",
+      "answers": ["Nuoto sincronizzato", "Tuffi", "Pallanuoto", "Apnea"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale di questi sport è individuale?",
+      "answers": ["Rugby", "Pallavolo", "Nuoto", "Baseball"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è Francesco Totti?",
+      "answers": ["Un tennista", "Un calciatore", "Un ciclista", "Un nuotatore"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In che sport si fanno 'ace' e 'break'?",
+      "answers": ["Basket", "Tennis", "Rugby", "Pallanuoto"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante squadre partecipano a una partita di rugby?",
+      "answers": ["2", "3", "4", "6"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si svolgono i giochi olimpici estivi del 2024?",
+      "answers": ["Roma", "Tokyo", "Parigi", "Londra"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è Valentino Rossi?",
+      "answers": ["Un calciatore", "Un motociclista", "Un tennista", "Un pugile"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa 'fuorigioco' nel calcio?",
+      "answers": [
+        "Quando un giocatore esce dal campo",
+        "Quando un gol non è valido",
+        "Quando un giocatore è davanti alla difesa avversaria al momento del passaggio",
+        "Quando si prende un cartellino rosso"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come si chiama la corsa ciclistica più famosa in Italia?",
+      "answers": ["Giro d’Italia", "Tour de France", "Milano-Sanremo", "Parigi-Roubaix"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti punti vale una meta nel rugby?",
+      "answers": ["3", "4", "5", "6"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che sport è il baseball?",
+      "answers": ["Un gioco da tavolo", "Uno sport di squadra con palla e mazza", "Un gioco in acqua", "Uno sport di combattimento"],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "In quale anno l’Italia ha vinto il suo primo Mondiale di calcio?",
+      "answers": ["1930", "1934", "1954", "1962"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante volte Roger Federer ha vinto Wimbledon?",
+      "answers": ["6", "7", "8", "9"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il numero massimo di set in una partita di tennis maschile del Grande Slam?",
+      "answers": ["3", "4", "5", "6"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale nazione ha ospitato le Olimpiadi del 2008?",
+      "answers": ["Grecia", "Australia", "Cina", "Inghilterra"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale sport è diventata famosa Serena Williams?",
+      "answers": ["Golf", "Tennis", "Atletica", "Basket"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante persone ci sono in una squadra di pallavolo in campo?",
+      "answers": ["5", "6", "7", "8"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha vinto il Pallone d’Oro nel 2021?",
+      "answers": ["Messi", "Lewandowski", "Benzema", "Mbappé"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il record mondiale nei 100 metri maschili?",
+      "answers": ["9.58", "9.62", "9.68", "9.72"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama la nazionale di rugby della Nuova Zelanda?",
+      "answers": ["Wallabies", "All Blacks", "Springboks", "Dragons"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale squadra ha vinto più Champions League?",
+      "answers": ["Milan", "Liverpool", "Real Madrid", "Bayern Monaco"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa rappresentano i 5 cerchi olimpici?",
+      "answers": ["I continenti", "Le edizioni", "I valori dello sport", "I Paesi fondatori"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha vinto il Mondiale di Formula 1 nel 2021?",
+      "answers": ["Lewis Hamilton", "Sebastian Vettel", "Max Verstappen", "Charles Leclerc"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quante giornate ci sono in Serie A?",
+      "answers": ["34", "36", "38", "40"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale sport si disputano le 24 Ore di Le Mans?",
+      "answers": ["MotoGP", "Formula 1", "Endurance automobilistica", "Ciclismo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quante medaglie d’oro ha vinto Usain Bolt alle Olimpiadi?",
+      "answers": ["6", "8", "9", "7"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale sport ha una posizione chiamata 'libero'?",
+      "answers": ["Pallavolo", "Calcio", "Basket", "Rugby"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In che città si trova il Maracanã?",
+      "answers": ["Buenos Aires", "San Paolo", "Rio de Janeiro", "Brasilia"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto più medaglie olimpiche tra le donne?",
+      "answers": ["Katie Ledecky", "Larisa Latynina", "Simone Biles", "Allyson Felix"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la distanza di una maratona?",
+      "answers": ["40 km", "41.5 km", "42.195 km", "43 km"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è la nazionale con più titoli europei nel basket?",
+      "answers": ["Francia", "Spagna", "Italia", "Grecia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale di questi sport prevede il 'golden set'?",
+      "answers": ["Pallavolo", "Tennis", "Badminton", "Ping pong"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è l’unico calciatore ad aver vinto 5 Mondiali?",
+      "answers": ["Pelé", "Maradona", "Zidane", "Cafu"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa misura il punteggio nel salto con gli sci?",
+      "answers": ["Velocità", "Altezza", "Distanza e stile", "Numero di salti"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica il cartellino rosso nel calcio?",
+      "answers": ["Un gol annullato", "Un fallo leggero", "Un'espulsione", "Un rigore"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto la NBA nel 2023?",
+      "answers": ["Lakers", "Celtics", "Bucks", "Nuggets"],
+      "correctIndex": 3
+    },
+    {
+      "question": "In quale sport esistono 'kata' e 'kumite'?",
+      "answers": ["Judo", "Karate", "Taekwondo", "Boxe"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale paese ha inventato il baseball?",
+      "answers": ["Giappone", "Cuba", "USA", "Inghilterra"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è l’atleta paralimpico italiano più medagliato?",
+      "answers": ["Alex Zanardi", "Bebe Vio", "Martina Caironi", "Francesco Bocciardo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la lunghezza standard di una piscina olimpica?",
+      "answers": ["25 metri", "33 metri", "50 metri", "100 metri"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale sport si assegnano i premi MVP?",
+      "answers": ["Pallavolo", "Tennis", "Basket", "Atletica"],
+      "correctIndex": 2
+    }
+  ],
+  "esperto": [
+    {
+      "question": "Chi è il più giovane vincitore del titolo mondiale di Formula 1?",
+      "answers": ["Sebastian Vettel", "Lewis Hamilton", "Fernando Alonso", "Max Verstappen"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è l’unico atleta a essere stato campione olimpico e campione mondiale in 3 discipline diverse?",
+      "answers": ["Michael Phelps", "Usain Bolt", "Paavo Nurmi", "Carl Lewis"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale sportivo detiene il record del maggior numero di medaglie olimpiche in singolo?",
+      "answers": ["Larisa Latynina", "Michael Phelps", "Paavo Nurmi", "Carl Lewis"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante edizioni dei Campionati Mondiali di Calcio sono state disputate prima del 2022?",
+      "answers": ["18", "19", "20", "21"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi è il calciatore con il maggior numero di gol segnati nelle competizioni UEFA?",
+      "answers": ["Cristiano Ronaldo", "Lionel Messi", "Raúl", "Zlatan Ibrahimović"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la squadra di calcio che ha vinto più Coppe dei Campioni/Champions League?",
+      "answers": ["Milan", "Bayern Monaco", "Liverpool", "Real Madrid"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Qual è il record mondiale di punti segnati in una singola partita di NBA?",
+      "answers": ["81", "73", "100", "92"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è l’atleta con il maggior numero di vittorie in tornei del Grande Slam nel tennis?",
+      "answers": ["Roger Federer", "Rafael Nadal", "Novak Djokovic", "Pete Sampras"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In che anno fu istituito il campionato mondiale di calcio femminile?",
+      "answers": ["1991", "1995", "2000", "2003"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti punti vale una meta nel rugby a 15?",
+      "answers": ["3", "4", "5", "6"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto il campionato mondiale di Formula 1 nel 2008?",
+      "answers": ["Kimi Räikkönen", "Lewis Hamilton", "Felipe Massa", "Sebastian Vettel"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha vinto la Champions League come allenatore e calciatore?",
+      "answers": ["Zidane", "Beckenbauer", "Rijkaard", "Ancelotti"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In che anno fu introdotto il sistema di punteggio 'no ad ace' nel tennis?",
+      "answers": ["2004", "2008", "2010", "2013"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante volte la nazionale di calcio brasiliana ha vinto la Coppa del Mondo?",
+      "answers": ["4", "5", "6", "7"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è l'atleta con il maggior numero di medaglie d'oro nel nuoto alle Olimpiadi?",
+      "answers": ["Michael Phelps", "Mark Spitz", "Kristin Otto", "Ian Thorpe"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale anno è stato istituito il sistema del 'Golden Boot' nella Premier League?",
+      "answers": ["1994", "1995", "1996", "1997"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi detiene il record per il maggior numero di gol segnati in una singola edizione della Coppa del Mondo?",
+      "answers": ["Miroslav Klose", "Ronaldo", "Just Fontaine", "Puskás"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è l'unico allenatore a vincere la Champions League con tre squadre diverse?",
+      "answers": ["Carlo Ancelotti", "José Mourinho", "Ottmar Hitzfeld", "Luis Enrique"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quante edizioni della Coppa del Mondo di Rugby sono state giocate fino al 2023?",
+      "answers": ["5", "6", "7", "8"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Chi ha vinto il primo Mondiale di Formula 1 della sua carriera nel 1994?",
+      "answers": ["Michael Schumacher", "Ayrton Senna", "Nelson Piquet", "Alain Prost"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quante medaglie olimpiche ha vinto Simone Biles?",
+      "answers": ["7", "10", "12", "14"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale squadra ha vinto la Coppa del Mondo di Calcio nel 1998?",
+      "answers": ["Argentina", "Germania", "Francia", "Brasile"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto il torneo di Wimbledon maschile nel 2008, in una finale epica contro Nadal?",
+      "answers": ["Federer", "Nadal", "Murray", "Djokovic"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha vinto il Ballon d'Or nel 2021?",
+      "answers": ["Lionel Messi", "Robert Lewandowski", "Cristiano Ronaldo", "Karim Benzema"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il record mondiale dei 100 metri piani maschili?",
+      "answers": ["9.58", "9.62", "9.69", "9.72"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quante vittorie ha ottenuto Ayrton Senna in Formula 1 durante la sua carriera?",
+      "answers": ["40", "41", "42", "43"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è stato il primo atleta a vincere 8 medaglie d'oro in un'unica edizione dei Giochi Olimpici?",
+      "answers": ["Michael Phelps", "Carl Lewis", "Mark Spitz", "Paavo Nurmi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha stabilito il record di vittorie nei tornei del Grande Slam per il tennis femminile?",
+      "answers": ["Serena Williams", "Venus Williams", "Steffi Graf", "Martina Navratilova"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto più medaglie olimpiche di sempre nel nuoto?",
+      "answers": ["Michael Phelps", "Ryan Lochte", "Caeleb Dressel", "Mark Spitz"],
+      "correctIndex": 0
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Chi ha segnato il golden goal che ha eliminato l’Italia dagli Europei del 2000?",
+      "answers": ["Trezeguet", "Henry", "Zidane", "Deschamps"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti Grand Slam ha vinto Rafael Nadal al Roland Garros (fino al 2024)?",
+      "answers": ["10", "12", "14", "15"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è stato il primo atleta a correre i 100 metri sotto i 10 secondi?",
+      "answers": ["Carl Lewis", "Leroy Burrell", "Jim Hines", "Ben Johnson"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale anno l’Italia ha vinto l’Europeo di calcio dopo 53 anni?",
+      "answers": ["2016", "2021", "2008", "2012"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante tappe ha il Giro d’Italia (formato classico)?",
+      "answers": ["18", "20", "21", "22"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi ha vinto la medaglia d’oro nei 200 metri maschili alle Olimpiadi di Tokyo 2020?",
+      "answers": ["Noah Lyles", "Andre De Grasse", "Usain Bolt", "Erriyon Knighton"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale fu la prima città italiana a ospitare le Olimpiadi?",
+      "answers": ["Roma", "Torino", "Milano", "Napoli"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti punti vale un try nel rugby a 15?",
+      "answers": ["3", "4", "5", "6"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi è stato l’unico pilota italiano a vincere un Mondiale di Formula 1?",
+      "answers": ["Alberto Ascari", "Riccardo Patrese", "Gilles Villeneuve", "Nino Farina"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quale è il record del mondo nei 400 metri piani maschili?",
+      "answers": ["43.03", "43.18", "43.29", "43.45"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale squadra di NBA ha vinto più titoli nella storia (fino al 2024)?",
+      "answers": ["Lakers", "Celtics", "Bulls", "Warriors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è il capocannoniere di tutti i tempi dei Mondiali di calcio?",
+      "answers": ["Miroslav Klose", "Ronaldo", "Pelé", "Gerd Müller"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In che anno fu introdotto il VAR nei Mondiali di calcio?",
+      "answers": ["2014", "2018", "2022", "2006"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi è l’unico pugile ad aver vinto una medaglia d’oro olimpica e un titolo mondiale in tre categorie diverse?",
+      "answers": ["Floyd Mayweather", "Muhammad Ali", "Roy Jones Jr.", "Sugar Ray Leonard"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In che disciplina sportiva si è distinto Gregorio Paltrinieri?",
+      "answers": ["Ciclismo", "Canottaggio", "Nuoto", "Pallanuoto"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale squadra ha vinto il Super Bowl nel 2023?",
+      "answers": ["Eagles", "Chiefs", "Rams", "49ers"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi detiene il record del mondo di salto con l’asta maschile (fino al 2024)?",
+      "answers": ["Renaud Lavillenie", "Thiago Braz", "Armand Duplantis", "Sergey Bubka"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quanti minuti dura una partita regolamentare di hockey su ghiaccio?",
+      "answers": ["60", "70", "45", "90"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi ha vinto la classifica marcatori della Serie A 2022/23?",
+      "answers": ["Vlahovic", "Immobile", "Lautaro", "Osimhen"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Qual è il numero massimo di falli personali prima dell'espulsione nel basket FIBA?",
+      "answers": ["4", "5", "6", "7"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi fu il primo calciatore a vincere tre Palloni d'Oro?",
+      "answers": ["Cruijff", "Platini", "Van Basten", "Di Stefano"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica la regola del 10-secondi nel basket?",
+      "answers": ["Tempo per superare la metà campo", "Tempo per tirare", "Tempo per rientrare in difesa", "Tempo per battere la rimessa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chi è l’attuale campione del mondo MotoGP (fino al 2024)?",
+      "answers": ["Marc Márquez", "Pecco Bagnaia", "Fabio Quartararo", "Joan Mir"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In che sport si compete nel torneo 'Six Nations'?",
+      "answers": ["Calcio", "Cricket", "Rugby", "Pallamano"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quale atleta italiana ha vinto l’oro nel salto in alto a Tokyo 2020?",
+      "answers": ["Sara Simeoni", "Elena Vallortigara", "Antonietta Di Martino", "Gianmarco Tamberi (condiviso con Barshim)"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quale tennista ha vinto il primo torneo ATP per l’Italia nel 21° secolo?",
+      "answers": ["Fognini", "Sinner", "Seppi", "Volandri"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quale sport si gioca il torneo 'The Masters'?",
+      "answers": ["Tennis", "Golf", "Polo", "Snooker"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quante squadre partecipano ai Mondiali FIFA dal 2026?",
+      "answers": ["32", "40", "48", "36"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cos’è una 'zamboni'?",
+      "answers": ["Un attrezzo per sci", "Un tipo di bastone da hockey", "La macchina che pulisce il ghiaccio", "Una scarpa da pattinaggio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quante volte Michael Schumacher ha vinto il Mondiale di Formula 1?",
+      "answers": ["5", "6", "7", "8"],
+      "correctIndex": 2
+    }
+  ]
 }
 }
