@@ -71,7 +71,6 @@ const passwordError = document.getElementById("password-error");
 document.getElementById("submit-password").addEventListener("click", checkPassword);
 document.getElementById("go-to-topics").addEventListener("click", showTopicSelection);
 document.getElementById("new-game").addEventListener("click", resetGame);
-document.getElementById("play-again").addEventListener("click", resetGame);
 document.getElementById("end-game").addEventListener("click", declareGameDraw);
 
 // Add event listener for Enter key on password input
@@ -261,11 +260,9 @@ function resetGameState() {
     // Hide selection
     emojiSelection.classList.add("hidden");
     
-    // Hide new game button until the game is over
-    document.getElementById("new-game").style.display = "none";
-    
-    // Show the end game button again
+    // Show the end game button and hide new game button
     document.getElementById("end-game").style.display = "";
+    document.getElementById("new-game").style.display = "none";
     
     // Clear any win-cell classes
     const winCells = document.querySelectorAll('.win-cell');
@@ -937,14 +934,14 @@ function createGameBoard() {
 
 // Handle click on a game cell
 function handleCellClick(row, col) {
-    // If cell is already filled, do nothing
-    if (gameState.board[row][col] !== "") {
+    // If game is over, show valid answers regardless of cell state
+    if (gameState.gameOver) {
+        showValidAnswers(row, col);
         return;
     }
     
-    // If game is over, show valid answers instead of selection
-    if (gameState.gameOver) {
-        showValidAnswers(row, col);
+    // If cell is already filled, do nothing
+    if (gameState.board[row][col] !== "") {
         return;
     }
     
@@ -1232,14 +1229,12 @@ function makeMove(title) {
     
     // Check for win
     if (checkWin()) {
-        gameState.gameOver = true;
         endGame(false);
         return;
     }
     
     // Check for draw
     if (checkDraw()) {
-        gameState.gameOver = true;
         endGame(true);
         return;
     }
@@ -1354,19 +1349,46 @@ function checkDraw() {
 function endGame(isDraw) {
     gameState.gameOver = true;
     
-    // Update winner display
+    // Get current language
+    const lang = window.getCurrentLanguage();
+    
+    // Update player turn display instead of a separate winner screen
     if (isDraw) {
-        winnerPlayer.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
-        winnerPlayer.className = "player-marker draw";
+        currentPlayerEl.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
+        currentPlayerEl.className = "player-marker draw";
     } else {
-        winnerPlayer.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
-        winnerPlayer.className = `player-marker ${gameState.currentPlayer}`;
+        // Show the winning player in the current player element
+        const player1Text = lang === 'en' ? "Player 1 Wins!" : "Giocatore 1 Vince!";
+        const player2Text = lang === 'en' ? "Player 2 Wins!" : "Giocatore 2 Vince!";
+        currentPlayerEl.textContent = gameState.currentPlayer === "red" ? player1Text : player2Text;
+        currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
     }
     
-    // Show the winner screen
-    setTimeout(() => {
-        showScreen("winner");
-    }, 1500);
+    // Show the New Game button and hide End Game button
+    document.getElementById("new-game").style.display = "block";
+    document.getElementById("end-game").style.display = "none";
+}
+
+// Declare the game as a draw
+function declareGameDraw() {
+    // Skip if game is already over
+    if (gameState.gameOver) {
+        return;
+    }
+    
+    // Confirm the user wants to end the game
+    if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
+        // Set game over state and declare draw
+        gameState.gameOver = true;
+        
+        // Update player turn display to show draw
+        currentPlayerEl.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
+        currentPlayerEl.className = "player-marker draw";
+        
+        // Show the New Game button and hide End Game button
+        document.getElementById("new-game").style.display = "block";
+        document.getElementById("end-game").style.display = "none";
+    }
 }
 
 // Helper function to shuffle array
@@ -1454,19 +1476,4 @@ function showValidAnswers(row, col) {
     setTimeout(() => {
         validAnswersContainer.style.visibility = 'visible';
     }, 10);
-}
-
-// Declare the game as a draw
-function declareGameDraw() {
-    // Skip if game is already over
-    if (gameState.gameOver) {
-        return;
-    }
-    
-    // Confirm the user wants to end the game
-    if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
-        // Set game over state and end as a draw
-        gameState.gameOver = true;
-        endGame(true);
-    }
 } 
