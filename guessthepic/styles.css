@@ -253,18 +253,23 @@ button:active {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
 }
 
 .nav-button {
     padding: 8px 15px;
     font-size: 0.9rem;
-    background-color: var(--primary-purple);
+    background-color: #5f6769;
     border-radius: 8px;
+    color: white;
+    border: none;
 }
 
 .nav-button:hover {
-    background-color: var(--primary-purple-dark);
+    background-color: #4a5052;
 }
 
 .nav-button:disabled {
@@ -336,6 +341,7 @@ button:active {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 #guess-input {
@@ -356,6 +362,17 @@ button:active {
 
 #submit-guess {
     border-radius: 0 10px 10px 0;
+    background-color: var(--primary-purple);
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(142, 68, 173, 0.4);
+}
+
+#submit-guess:hover {
+    background-color: var(--primary-purple-dark);
 }
 
 .feedback {
