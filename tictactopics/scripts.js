@@ -20,6 +20,7 @@ let gameState = {
         ["", "", ""],
         ["", "", ""]
     ],
+    selectedTopic: null, // Currently selected topic
     preventInteraction: false // Flag to prevent interactions during animations/messages
 };
 
@@ -53,6 +54,7 @@ const GAME_PASSWORD = "lurag";
 const gameScreens = {
     password: document.getElementById("password-screen"),
     instructions: document.getElementById("instructions-screen"),
+    topicSelection: document.getElementById("topic-selection-screen"),
     game: document.getElementById("game-screen"),
     winner: document.getElementById("winner-screen")
 };
@@ -67,7 +69,7 @@ const passwordError = document.getElementById("password-error");
 
 // Event Listeners
 document.getElementById("submit-password").addEventListener("click", checkPassword);
-document.getElementById("start-game").addEventListener("click", startGame);
+document.getElementById("go-to-topics").addEventListener("click", showTopicSelection);
 document.getElementById("new-game").addEventListener("click", resetGame);
 document.getElementById("play-again").addEventListener("click", resetGame);
 document.getElementById("end-game").addEventListener("click", declareGameDraw);
@@ -144,6 +146,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+// Show topic selection screen
+function showTopicSelection() {
+    showScreen("topicSelection");
+    
+    // Update translations for topic selection
+    document.getElementById("topicSelectionTitle").textContent = window.getTranslation("topicSelectionTitle");
+    document.getElementById("moviesTVTitle").textContent = window.getTranslation("moviesTVTitle");
+    document.getElementById("moviesTVDesc").textContent = window.getTranslation("moviesTVDesc");
+    document.getElementById("videoGamesTitle").textContent = window.getTranslation("videoGamesTitle");
+    document.getElementById("booksTitle").textContent = window.getTranslation("booksTitle");
+    document.getElementById("comingSoonText").textContent = window.getTranslation("comingSoonText");
+    document.getElementById("comingSoonText2").textContent = window.getTranslation("comingSoonText");
+    
+    // Add click event to topic cards
+    const topicCards = document.querySelectorAll(".topic-card:not(.coming-soon)");
+    topicCards.forEach(card => {
+        card.addEventListener("click", function() {
+            // Set selected topic in gameState
+            gameState.selectedTopic = this.dataset.topic;
+            
+            // Visual indication of selection
+            document.querySelectorAll(".topic-card").forEach(c => c.classList.remove("selected"));
+            this.classList.add("selected");
+            
+            // Start game with selected topic after a short delay
+            setTimeout(() => {
+                startGame();
+            }, 500);
+        });
+    });
+}
+
 // Start a new game
 function startGame() {
     // Only proceed if films and series are loaded
@@ -151,6 +185,9 @@ function startGame() {
         console.error("Cannot start game: films and series not loaded");
         return;
     }
+    
+    // Currently we only have movies & TV shows data
+    // In the future, we could load different data based on selected topic
     
     resetGameState();
     selectRandomCategories();
@@ -218,12 +255,18 @@ function resetGameState() {
     }
 }
 
-// Reset the game (new board)
+// Reset the game and go back to topic selection
 function resetGame() {
-    resetGameState();
-    selectRandomCategories();
-    createGameBoard();
-    showScreen("game");
+    // If we're currently in the winner screen, go back to topic selection
+    if (gameState.gameOver) {
+        gameState.gameOver = false;
+        showTopicSelection();
+    } else {
+        // If we're in the game screen, just confirm the user wants to end the current game
+        if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
+            showTopicSelection();
+        }
+    }
 }
 
 // Show a specific screen
@@ -1282,47 +1325,23 @@ function checkDraw() {
     return true;
 }
 
-// End the game
+// End the game and show winner
 function endGame(isDraw) {
-    // Set game over state
     gameState.gameOver = true;
     
-    // Get current language and player text
-    const lang = window.getCurrentLanguage();
-    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
-    const player2Text = lang === 'en' ? "Player 2" : "Giocatore 2";
-    
-    // Create or update game result message in the game info section
-    let resultElement = document.getElementById("game-result");
-    if (!resultElement) {
-        resultElement = document.createElement("div");
-        resultElement.id = "game-result";
-        resultElement.className = "game-result";
-        document.querySelector('.game-info').appendChild(resultElement);
-    }
-    
+    // Update winner display
     if (isDraw) {
-        resultElement.innerHTML = `<span class="result-text">${window.getTranslation("draw")}</span>`;
+        winnerPlayer.textContent = window.getTranslation ? window.getTranslation("draw") : "It's a draw!";
+        winnerPlayer.className = "player-marker draw";
     } else {
-        const winnerText = gameState.currentPlayer === "red" ? player1Text : player2Text;
-        resultElement.innerHTML = `<span class="result-text">${window.getTranslation("winner")}</span> 
-                                   <span class="winner-symbol ${gameState.currentPlayer}">${winnerText}</span>`;
+        winnerPlayer.textContent = gameState.currentPlayer === "red" ? "🔴" : "🔵";
+        winnerPlayer.className = `player-marker ${gameState.currentPlayer}`;
     }
     
-    // Show result message with animation
-    resultElement.classList.add("show");
-    
-    // Update the player turn text to indicate game is over
-    document.getElementById("playerTurnText").textContent = window.getTranslation("gameOver");
-    
-    // Hide the current player marker as the game is over
-    document.getElementById("current-player").style.display = "none";
-    
-    // Show the new game button now that the game is over
-    document.getElementById("new-game").style.display = "block";
-    
-    // Hide the end game button as it's no longer needed
-    document.getElementById("end-game").style.display = "none";
+    // Show the winner screen
+    setTimeout(() => {
+        showScreen("winner");
+    }, 1500);
 }
 
 // Helper function to shuffle array
@@ -1419,7 +1438,10 @@ function declareGameDraw() {
         return;
     }
     
-    // Set game over state
-    gameState.gameOver = true;
-    endGame(true);
+    // Confirm the user wants to end the game
+    if (confirm(window.getTranslation ? window.getTranslation("confirmEndGame") : "Are you sure you want to end the current game?")) {
+        // Set game over state and end as a draw
+        gameState.gameOver = true;
+        endGame(true);
+    }
 } 

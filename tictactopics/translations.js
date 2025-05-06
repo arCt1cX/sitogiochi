@@ -1,4 +1,4 @@
-// Translations for the CineTris game
+// Translations for the TicTacTopics game
 window.translations = {
     'it': {
         'gameTitle': 'TicTacTopics',
@@ -13,6 +13,13 @@ window.translations = {
         'instructionsText': 'Gioca a una versione divertente del tris classico dove segni la griglia scegliendo argomenti che collegano una categoria di riga e una di colonna.',
         'rulesText': 'I giocatori a turno posizionano 🔴 o 🔵 selezionando un titolo che corrisponde alla cella. Ottieni tre in fila per vincere!',
         'startGame': 'Inizia Gioco',
+        'goToTopics': 'Continua',
+        'topicSelectionTitle': 'Seleziona un Argomento',
+        'moviesTVTitle': 'Film e Serie TV',
+        'moviesTVDesc': 'Gioca con titoli di film e serie TV',
+        'videoGamesTitle': 'Videogiochi',
+        'booksTitle': 'Libri',
+        'comingSoonText': 'Prossimamente',
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
         'endGameText': 'Fine Partita',
@@ -35,7 +42,8 @@ window.translations = {
         'director': 'Regista',
         'theme': 'Tema',
         'wrongAnswer': 'Risposta Sbagliata!',
-        'filterPlaceholder': 'Filtra titoli...'
+        'filterPlaceholder': 'Filtra titoli...',
+        'confirmEndGame': 'Sei sicuro di voler terminare la partita corrente?'
     },
     'en': {
         'gameTitle': 'TicTacTopics',
@@ -50,6 +58,13 @@ window.translations = {
         'instructionsText': 'Play a fun twist on classic tic-tac-toe where you mark the grid by choosing topics that connect a row category and a column category.',
         'rulesText': 'Players take turns placing either 🔴 or 🔵 by submitting a matching title for the cell. Get three in a row to win!',
         'startGame': 'Start Game',
+        'goToTopics': 'Continue',
+        'topicSelectionTitle': 'Select a Topic',
+        'moviesTVTitle': 'Movies & TV Shows',
+        'moviesTVDesc': 'Play with movie and TV show titles',
+        'videoGamesTitle': 'Video Games',
+        'booksTitle': 'Books',
+        'comingSoonText': 'Coming Soon',
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
         'endGameText': 'End Game',
@@ -72,7 +87,8 @@ window.translations = {
         'director': 'Director',
         'theme': 'Theme',
         'wrongAnswer': 'Wrong Answer!',
-        'filterPlaceholder': 'Filter titles...'
+        'filterPlaceholder': 'Filter titles...',
+        'confirmEndGame': 'Are you sure you want to end the current game?'
     }
 };
 
@@ -111,7 +127,7 @@ window.getTranslation = function(key) {
         window.translations['en'][key] || key;
 };
 
-// Apply translations to the CineTris game
+// Apply translations to the TicTacTopics game
 function applyGameTranslations() {
     const lang = window.getCurrentLanguage();
     const translationSet = window.translations[lang] || window.translations['en'];
@@ -142,7 +158,18 @@ function applyGameTranslations() {
     document.getElementById('instructionsTitle').textContent = translationSet.instructionsTitle;
     document.getElementById('instructionsText').textContent = translationSet.instructionsText;
     document.getElementById('rulesText').textContent = translationSet.rulesText;
-    document.getElementById('start-game').textContent = translationSet.startGame;
+    document.getElementById('go-to-topics').textContent = translationSet.goToTopics;
+    
+    // Topic selection screen translations
+    document.getElementById('topicSelectionTitle').textContent = translationSet.topicSelectionTitle;
+    document.getElementById('moviesTVTitle').textContent = translationSet.moviesTVTitle;
+    document.getElementById('moviesTVDesc').textContent = translationSet.moviesTVDesc;
+    document.getElementById('videoGamesTitle').textContent = translationSet.videoGamesTitle;
+    document.getElementById('booksTitle').textContent = translationSet.booksTitle;
+    document.getElementById('comingSoonText').textContent = translationSet.comingSoonText;
+    document.getElementById('comingSoonText2').textContent = translationSet.comingSoonText;
+    
+    // Game screen translations
     document.getElementById('playerTurnText').textContent = translationSet.playerTurnText;
     document.getElementById('newGameText').textContent = translationSet.newGameText;
     document.getElementById('endGameText').textContent = translationSet.endGameText;

@@ -95,10 +95,33 @@
         <div id="instructions-screen" class="game-screen">
             <h2 id="instructionsTitle">How to Play</h2>
             <div class="instructions-container">
-                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing movies or TV shows that connect a row category and a column category.</p>
+                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing topics that connect a row category and a column category.</p>
                 <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching title for the cell. Get three in a row to win!</p>
             </div>
-            <button id="start-game" class="btn primary-btn">Start Game</button>
+            <button id="go-to-topics" class="btn primary-btn">Start Game</button>
+        </div>
+
+        <!-- Topic Selection Screen -->
+        <div id="topic-selection-screen" class="game-screen">
+            <h2 id="topicSelectionTitle">Select a Topic</h2>
+            <div class="topics-container">
+                <div class="topic-card" data-topic="movies-tv">
+                    <div class="topic-icon">🎬</div>
+                    <h3 id="moviesTVTitle">Movies & TV Shows</h3>
+                    <p id="moviesTVDesc">Play with movie and TV show titles</p>
+                </div>
+                <!-- Additional topic cards will be added here in the future -->
+                <div class="topic-card coming-soon">
+                    <div class="topic-icon">🎮</div>
+                    <h3 id="videoGamesTitle">Video Games</h3>
+                    <p id="comingSoonText">Coming Soon</p>
+                </div>
+                <div class="topic-card coming-soon">
+                    <div class="topic-icon">📚</div>
+                    <h3 id="booksTitle">Books</h3>
+                    <p id="comingSoonText2">Coming Soon</p>
+                </div>
+            </div>
         </div>
 
         <!-- Game Screen -->
