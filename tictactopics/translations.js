@@ -18,7 +18,7 @@ window.translations = {
         'moviesTVTitle': 'Film e Serie TV',
         'moviesTVDesc': 'Gioca con titoli di film e serie TV',
         'videoGamesTitle': 'Videogiochi',
-        'booksTitle': 'Libri',
+        'songsTitle': 'Canzoni',
         'comingSoonText': 'Prossimamente',
         'playerTurnText': 'Turno Attuale:',
         'newGameText': 'Nuova Partita',
@@ -63,7 +63,7 @@ window.translations = {
         'moviesTVTitle': 'Movies & TV Shows',
         'moviesTVDesc': 'Play with movie and TV show titles',
         'videoGamesTitle': 'Video Games',
-        'booksTitle': 'Books',
+        'songsTitle': 'Songs',
         'comingSoonText': 'Coming Soon',
         'playerTurnText': 'Current Turn:',
         'newGameText': 'New Game',
@@ -165,7 +165,7 @@ function applyGameTranslations() {
     document.getElementById('moviesTVTitle').textContent = translationSet.moviesTVTitle;
     document.getElementById('moviesTVDesc').textContent = translationSet.moviesTVDesc;
     document.getElementById('videoGamesTitle').textContent = translationSet.videoGamesTitle;
-    document.getElementById('booksTitle').textContent = translationSet.booksTitle;
+    document.getElementById('songsTitle').textContent = translationSet.songsTitle;
     document.getElementById('comingSoonText').textContent = translationSet.comingSoonText;
     document.getElementById('comingSoonText2').textContent = translationSet.comingSoonText;
     

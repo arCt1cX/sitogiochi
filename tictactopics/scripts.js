@@ -98,37 +98,61 @@ function checkPassword() {
     }
 }
 
-// Fetch film and series data and initialize game
-async function fetchFilmsAndSeries() {
+// Fetch data for the selected topic
+async function fetchTopicData(topicId) {
     try {
         // Get current language and use the appropriate file
         const lang = window.getCurrentLanguage();
-        const jsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
         
-        const response = await fetch(jsonFile);
+        // Choose the appropriate JSON file based on the topic
+        let jsonFile;
+        if (topicId === 'movies-tv') {
+            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+        } else if (topicId === 'songs') {
+            jsonFile = lang === 'en' ? "songs_en.json" : "songs.json";
+        } else if (topicId === 'video-games') {
+            jsonFile = lang === 'en' ? "video_games_en.json" : "video_games.json";
+        } else {
+            // Default to movies-tv
+            jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
+        }
+        
+        // For backward compatibility, check for the old filename too
+        let response = await fetch(jsonFile);
         if (!response.ok) {
-            // If English file fails to load, try to fall back to Italian
-            if (lang === 'en') {
-                console.warn("English data file not found, falling back to Italian");
-                const fallbackResponse = await fetch("combinazioni_film_e_serie.json");
-                if (!fallbackResponse.ok) {
-                    throw new Error("Failed to fetch film and series data");
+            // Try the old filename pattern
+            const oldJsonFile = lang === 'en' ? "combinazioni_film_e_serie_en.json" : "combinazioni_film_e_serie.json";
+            response = await fetch(oldJsonFile);
+            
+            if (!response.ok) {
+                // If English file fails to load, try to fall back to Italian
+                if (lang === 'en') {
+                    console.warn(`${jsonFile} not found, falling back to Italian`);
+                    const fallbackResponse = await fetch("combinazioni_film_e_serie.json");
+                    if (!fallbackResponse.ok) {
+                        throw new Error(`Failed to fetch data for topic: ${topicId}`);
+                    }
+                    const fallbackData = await fallbackResponse.json();
+                    gameState.filmsAndSeries = fallbackData.entries;
+                    gameState.categories = fallbackData.categories;
+                } else {
+                    throw new Error(`Failed to fetch data for topic: ${topicId}`);
                 }
-                const fallbackData = await fallbackResponse.json();
-                gameState.filmsAndSeries = fallbackData.entries;
-                gameState.categories = fallbackData.categories;
             } else {
-                throw new Error("Failed to fetch film and series data");
+                const data = await response.json();
+                gameState.filmsAndSeries = data.entries;
+                gameState.categories = data.categories;
             }
         } else {
             const data = await response.json();
             gameState.filmsAndSeries = data.entries;
             gameState.categories = data.categories;
         }
-        console.log("Loaded films and series:", gameState.filmsAndSeries.length);
+        
+        console.log(`Loaded data for ${topicId}:`, gameState.filmsAndSeries.length);
         console.log("Loaded categories:", gameState.categories);
     } catch (error) {
-        console.error("Error loading films and series:", error);
+        console.error(`Error loading data for ${topicId}:`, error);
         gameState.filmsAndSeries = []; // Set empty array in case of error
         gameState.categories = {};
     }
@@ -136,7 +160,7 @@ async function fetchFilmsAndSeries() {
 
 // Initialize the game
 document.addEventListener("DOMContentLoaded", async () => {
-    await fetchFilmsAndSeries();
+    await fetchTopicData('movies-tv');
     
     // Check if there's a password saved in localStorage
     const savedPassword = localStorage.getItem("tictactopics_password");
@@ -155,7 +179,7 @@ function showTopicSelection() {
     document.getElementById("moviesTVTitle").textContent = window.getTranslation("moviesTVTitle");
     document.getElementById("moviesTVDesc").textContent = window.getTranslation("moviesTVDesc");
     document.getElementById("videoGamesTitle").textContent = window.getTranslation("videoGamesTitle");
-    document.getElementById("booksTitle").textContent = window.getTranslation("booksTitle");
+    document.getElementById("songsTitle").textContent = window.getTranslation("songsTitle");
     document.getElementById("comingSoonText").textContent = window.getTranslation("comingSoonText");
     document.getElementById("comingSoonText2").textContent = window.getTranslation("comingSoonText");
     
@@ -179,15 +203,16 @@ function showTopicSelection() {
 }
 
 // Start a new game
-function startGame() {
-    // Only proceed if films and series are loaded
+async function startGame() {
+    // Load data for the selected topic
+    await fetchTopicData(gameState.selectedTopic);
+    
+    // Only proceed if data is loaded
     if (gameState.filmsAndSeries.length === 0) {
-        console.error("Cannot start game: films and series not loaded");
+        console.error(`Cannot start game: data for ${gameState.selectedTopic} not loaded`);
+        alert("Could not load data for the selected topic. Please try again.");
         return;
     }
-    
-    // Currently we only have movies & TV shows data
-    // In the future, we could load different data based on selected topic
     
     resetGameState();
     selectRandomCategories();
