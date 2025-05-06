@@ -5,6 +5,8 @@ let normalPlayers = [];
 let currentPlayerIndex = 0;
 let sharedPrompt = '';
 let impostorPrompt = '';
+// Track previous impostors across games to make selection more balanced
+let previousImpostors = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
@@ -115,17 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
         
         if (gameState.hasImpostor) {
-            // Randomly select the impostors
-            const playerIndices = Array.from({ length: gameState.playerCount }, (_, i) => i);
-            
-            // Shuffle the player indices
-            for (let i = playerIndices.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [playerIndices[i], playerIndices[j]] = [playerIndices[j], playerIndices[i]];
-            }
-            
-            // Take the first N indices as impostors
-            gameState.impostorIndices = playerIndices.slice(0, gameState.impostorCount);
+            // Use the weighted random selection for impostors instead of completely random
+            gameState.impostorIndices = selectWeightedRandomImpostors(
+                gameState.playerCount, 
+                gameState.impostorCount,
+                previousImpostors
+            );
             
             // Randomly select a phrase pair for this round
             const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
@@ -139,6 +136,16 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Impostors are players: ${gameState.impostorIndices.map(idx => idx + 1).join(', ')}`);
             console.log(`Group prompt: ${gameState.groupPrompt}`);
             console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
+            
+            // Save the current impostors to the history
+            // Add the current impostors to the beginning of the history array
+            previousImpostors = [...gameState.impostorIndices, ...previousImpostors];
+            // Trim the history to keep only the last 3 games' worth of impostors
+            const maxHistoryLength = gameState.playerCount * 3;
+            if (previousImpostors.length > maxHistoryLength) {
+                previousImpostors = previousImpostors.slice(0, maxHistoryLength);
+            }
+            console.log("Updated impostor history:", previousImpostors);
         } else {
             // No impostor game!
             gameState.impostorIndices = [];
@@ -160,6 +167,80 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Switch screen
         showScreen(playerTurnScreen);
+    }
+    
+    // Function to select impostors with weighted randomization
+    // Players who were recently impostors have a lower chance of being selected again
+    function selectWeightedRandomImpostors(playerCount, impostorCount, previousImpostorsList) {
+        // Create an array of all player indices
+        const allPlayerIndices = Array.from({ length: playerCount }, (_, i) => i);
+        
+        // Create weights for each player - players who were recently impostors get lower weights
+        const weights = allPlayerIndices.map(playerIndex => {
+            // Count how many times this player was an impostor in recent games
+            // More recent games have a stronger effect
+            let weight = 1.0; // Base weight
+            
+            // Check if this player was an impostor recently
+            const recentOccurrences = previousImpostorsList.filter(idx => idx === playerIndex);
+            
+            if (recentOccurrences.length > 0) {
+                // Apply a penalty based on how recently and how often they were an impostor
+                for (let i = 0; i < recentOccurrences.length; i++) {
+                    // The more recent, the higher the penalty
+                    const position = previousImpostorsList.indexOf(playerIndex, i);
+                    if (position !== -1) {
+                        // Weight reduction formula: more penalty for more recent selections
+                        // First position: ~50% reduction, Second position: ~25% reduction, Third position: ~10% reduction
+                        const reduction = position === 0 ? 0.5 : 
+                                         position === 1 ? 0.25 : 
+                                         position === 2 ? 0.1 : 0.05;
+                        weight -= reduction;
+                    }
+                }
+                // Ensure weight doesn't go below 0.1 (still a small chance to be selected)
+                weight = Math.max(0.1, weight);
+            }
+            
+            return weight;
+        });
+        
+        // Select impostors based on weights
+        const selectedImpostors = [];
+        let remainingIndices = [...allPlayerIndices];
+        let remainingWeights = [...weights];
+        
+        for (let i = 0; i < impostorCount; i++) {
+            if (remainingIndices.length === 0) break;
+            
+            // Calculate the total weight
+            const totalWeight = remainingWeights.reduce((sum, weight) => sum + weight, 0);
+            
+            // Generate a random value between 0 and the total weight
+            let randomValue = Math.random() * totalWeight;
+            
+            // Select a player based on the weights
+            let selectedIndex = -1;
+            for (let j = 0; j < remainingIndices.length; j++) {
+                randomValue -= remainingWeights[j];
+                if (randomValue <= 0) {
+                    selectedIndex = j;
+                    break;
+                }
+            }
+            
+            // If somehow we didn't select anyone (shouldn't happen), pick the first one
+            if (selectedIndex === -1) selectedIndex = 0;
+            
+            // Add the selected player to the impostor list
+            selectedImpostors.push(remainingIndices[selectedIndex]);
+            
+            // Remove the selected player from the remaining options
+            remainingIndices.splice(selectedIndex, 1);
+            remainingWeights.splice(selectedIndex, 1);
+        }
+        
+        return selectedImpostors;
     }
     
     // Update player turn UI
