@@ -8184,5 +8184,1404 @@
         "correctIndex": 0
       }
     ]
+  },
+  "Logic": {
+  "bambino": [
+    {
+      "question": "If two apples plus three apples make five apples, how much is two pears plus three pears?",
+      "answers": ["5 pears", "6 pears", "4 pears", "3 pears"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which shape comes next in the sequence: square, circle, square, circle, ___?",
+      "answers": ["square", "circle", "triangle", "rectangle"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If all cats meow and Fufi is a cat, then Fufi...?",
+      "answers": ["meows", "barks", "sings", "sleeps"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of these does not belong? 🐶, 🐱, 🐄, 🚗",
+      "answers": ["🚗", "🐶", "🐱", "🐄"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If today is Monday, what day will it be the day after tomorrow?",
+      "answers": ["Wednesday", "Tuesday", "Thursday", "Friday"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Complete the series: 2, 4, 6, ___",
+      "answers": ["8", "7", "5", "10"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If ⭐ + ⭐ = 10, then ⭐ = ?",
+      "answers": ["5", "10", "2", "8"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which object is lighter? 🪨, 🎈, 🏋️, 🚚",
+      "answers": ["🎈", "🪨", "🏋️", "🚚"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If A = 1, B = 2, then C = ?",
+      "answers": ["3", "4", "1", "5"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which image is the mirror image of 👈?",
+      "answers": ["👉", "👆", "👇", "👈"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If a dog has 4 legs, how many legs do 2 dogs have?",
+      "answers": ["8", "4", "6", "10"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which number is missing? 🍎, 🍎, 3, 🍎, 🍎, ___",
+      "answers": ["3", "🍎", "2", "4"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 🟢 + 🔴 = yellow, then 🔵 + 🔴 = ?",
+      "answers": ["purple", "green", "orange", "blue"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which shape completes the pattern? ▲, ▼, ▲, ▼, ___",
+      "answers": ["▲", "▼", "●", "■"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 5 - 3 = 2, what is 7 - 2?",
+      "answers": ["5", "3", "9", "4"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What comes first: night or day?",
+      "answers": ["depends", "night", "day", "they are equal"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 🚗 + 🚗 + 🚗 = 6, then 🚗 = ?",
+      "answers": ["2", "3", "1", "6"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which word is different? dog, cat, fish, apple",
+      "answers": ["apple", "dog", "cat", "fish"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If ⏰ shows 3:00, what will it show in 2 hours?",
+      "answers": ["5:00", "1:00", "3:00", "6:00"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which shape has no corners? 🔺, ⬛, 🔵, ⬜",
+      "answers": ["🔵", "🔺", "⬛", "⬜"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 🟥 + 🟦 = 🟪, then 🟨 + 🟥 = ?",
+      "answers": ["🟧", "🟩", "🟪", "🟫"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many triangles do you see in this figure? ▲▲",
+      "answers": ["3", "2", "1", "4"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 1 week = 7 days, 2 weeks = ?",
+      "answers": ["14 days", "7 days", "10 days", "5 days"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which number comes next: 10, 20, 30, ___?",
+      "answers": ["40", "35", "25", "50"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 🍪 + 🍪 + 🍪 = 9, then 🍪 = ?",
+      "answers": ["3", "2", "6", "9"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which season comes after summer?",
+      "answers": ["autumn", "winter", "spring", "summer"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 🔴 is red and 🟡 is yellow, then 🔵 is ___?",
+      "answers": ["blue", "green", "red", "yellow"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is missing? 👁️, 👃, ___, 👄",
+      "answers": ["👂", "👋", "🦵", "👀"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 5 + ⭐ = 8, then ⭐ = ?",
+      "answers": ["3", "5", "2", "8"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which word rhymes with 'sole'?",
+      "answers": ["vole", "house", "sea", "bread"],
+      "correctIndex": 0
+    }
+  ],
+"facile": [
+  {
+    "question": "If THREE plus FOUR equals SEVEN, how much is FIVE plus SIX?",
+    "answers": ["ELEVEN", "TWELVE", "TEN", "NINE"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Complete the series: 5, 10, 15, ___",
+    "answers": ["20", "25", "18", "30"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If all birds fly and the penguin is a bird, then:",
+    "answers": ["The penguin does not always fly", "The penguin flies", "The penguin is a mammal", "None of the above"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word does not belong? Rome, Milan, Paris, Pizza",
+    "answers": ["Pizza", "Rome", "Milan", "Paris"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If A = 1, B = 2, C = 3, how much is A + C?",
+    "answers": ["4", "5", "6", "3"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which shape completes the sequence? ▲, ▲▼, ▲▼▲, ___",
+    "answers": ["▲▼▲▼", "▼▼▼▼", "▲▲▲▲", "▼▲▼▲"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 3 books cost 15 euros, how much does 1 book cost?",
+    "answers": ["5 euros", "10 euros", "3 euros", "15 euros"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What is the opposite of 'tall'?",
+    "answers": ["short", "wide", "flat", "long"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If today is Wednesday, what day was yesterday?",
+    "answers": ["Tuesday", "Thursday", "Monday", "Friday"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Complete the analogy: dog → puppy : cat → ___",
+    "answers": ["kitten", "kitty", "feline", "stray"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which number is missing? 8, 16, ___, 32, 40",
+    "answers": ["24", "20", "28", "30"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If ☆ + ☆☆ = 12, then ☆ = ?",
+    "answers": ["4", "3", "6", "5"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is different? tulip, rose, apple, daisy",
+    "answers": ["apple", "tulip", "rose", "daisy"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 1 hour = 60 minutes, 1 hour and a half = ___ minutes",
+    "answers": ["90", "60", "120", "30"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which shape is the mirror image of ╱?",
+    "answers": ["╲", "│", "─", "╱"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 4 × □ = 20, then □ = ?",
+    "answers": ["5", "4", "6", "10"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which month comes before August?",
+    "answers": ["July", "September", "June", "May"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 🟦 + 🟨 = 🟩, then 🟥 + 🟦 = ?",
+    "answers": ["🟪", "🟧", "🟫", "🟩"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word completes the series: moon, sun, star, ___",
+    "answers": ["planet", "tree", "car", "book"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 12 - △ = 7, then △ = ?",
+    "answers": ["5", "3", "6", "4"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which item is not a musical instrument? guitar, piano, hammer, violin",
+    "answers": ["hammer", "guitar", "piano", "violin"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If ⚪ + ⚫ = grey, then 🔴 + 🔵 = ?",
+    "answers": ["purple", "green", "orange", "yellow"],
+    "correctIndex": 0
+  },
+  {
+    "question": "How many sides does a pentagon have?",
+    "answers": ["5", "4", "6", "3"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 6 ÷ 2 = 3, how much is 9 ÷ 3?",
+    "answers": ["3", "2", "4", "6"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is a synonym of 'happy'?",
+    "answers": ["content", "sad", "angry", "tired"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 🕋 - │ = ─, then 🕿 - ╽ = ?",
+    "answers": ["┌", "┐", "┬", "┼"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which number is double 7?",
+    "answers": ["14", "21", "10", "5"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 🌞 → day, then 🌙 → ___",
+    "answers": ["night", "evening", "dawn", "afternoon"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is not an animal? lion, eagle, table, dolphin",
+    "answers": ["table", "lion", "eagle", "dolphin"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 2 apples + 3 oranges = 5 fruits, then 4 pears + 1 banana = ?",
+    "answers": ["5 fruits", "4 fruits", "6 fruits", "3 fruits"],
+    "correctIndex": 0
   }
+],
+"medio": [
+  {
+    "question": "If the code for 'CAT' is 31234 and 'DOG' is 6157, how is 'GOOSE' encoded?",
+    "answers": ["431", "341", "413", "134"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Complete the series: 1, 1, 2, 3, 5, ___",
+    "answers": ["8", "7", "6", "9"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 'RED' relates to 'COLOR' as 'DOG' relates to:",
+    "answers": ["ANIMAL", "PUPPY", "CAT", "BARKING"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What is the missing number? [ [2,5,10], [3,10,29], [4,17,?] ]",
+    "answers": ["66", "58", "72", "45"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If A * B = 24, B * C = 30 and A * C = 20, what is the value of A * B * C?",
+    "answers": ["120", "100", "80", "60"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is the odd one out? TOWER, CHESS, PAWN, BISHOP, CHECKERS",
+    "answers": ["CHECKERS", "TOWER", "CHESS", "PAWN"],
+    "correctIndex": 2
+  },
+  {
+    "question": "If 3 workers build 3 walls in 3 hours, how long will 6 workers take to build 6 walls?",
+    "answers": ["3 hours", "6 hours", "2 hours", "1 hour"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Complete the analogy: 9 : 81 :: 13 : ___",
+    "answers": ["169", "144", "196", "121"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which figure completes the series? ◻️, ◼️, ◻️, ◼️, ◻️, ___",
+    "answers": ["◼️", "◻️", "🔶", "🔷"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If X = 5 and Y = 10, what is (X + Y) / (Y - X)?",
+    "answers": ["3", "2", "1.5", "5"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Find the intruder: 16, 25, 36, 49, 64, 80",
+    "answers": ["80", "25", "49", "64"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 'BRT' = '68' and 'CRS' = '78', what is the value of 'DMB'?",
+    "answers": ["54", "62", "47", "58"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What is the next symbol? ➕, ➖, ✖️, ➗, ___",
+    "answers": ["➕", "➖", "✔️", "✖️"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 5 machines produce 5 parts in 5 minutes, how long will 100 machines take to produce 100 parts?",
+    "answers": ["5 minutes", "100 minutes", "20 minutes", "1 minute"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which letter completes the series: A, D, G, J, ___",
+    "answers": ["M", "N", "K", "L"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 20% of X is 30, what is X?",
+    "answers": ["150", "100", "200", "60"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which Roman numeral is incorrect?",
+    "answers": ["VX", "XLV", "LXX", "XC"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 🌞 + 🌞 = 🌙 and 🌙 + 🌙 = ☁️, then 🌞 + ☁️ = ?",
+    "answers": ["☁️🌞", "🌙🌙", "🌞🌞", "☁️☁️"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Complete: 2, 5, 11, 23, ___",
+    "answers": ["47", "46", "48", "45"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 'APPLE' is written with 5 letters and 'STRAWBERRY' with 10, how many letters are needed for 'PINEAPPLE'?",
+    "answers": ["6", "5", "7", "8"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which pair does not match? (Milk:Cow), (Eggs:Hen), (Honey:Bees), (Oil:Pig)",
+    "answers": ["Oil:Pig", "Milk:Cow", "Eggs:Hen", "Honey:Bees"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 3 pencils cost as much as 2 pens, and 4 pens cost 12€, how much is 1 pencil?",
+    "answers": ["2€", "3€", "4€", "1.5€"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Find the missing term: 4, 9, 16, 25, ___",
+    "answers": ["36", "30", "49", "64"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 1 kg of iron and 1 kg of feathers weigh:",
+    "answers": ["The same", "Iron is heavier", "Feathers are heavier", "Depends"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is different? Cube, Sphere, Pyramid, Square",
+    "answers": ["Square", "Cube", "Sphere", "Pyramid"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 5 + 3 = 28 and 7 + 2 = 59, what is 6 + 4?",
+    "answers": ["210", "46", "24", "102"],
+    "correctIndex": 3
+  },
+  {
+    "question": "Which number completes: 1, 4, 9, 16, 25, ___",
+    "answers": ["36", "30", "49", "64"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If 'TRIANGLE' has 9 letters and 'CIRCLE' 7, how many letters does 'HEXAGON' have?",
+    "answers": ["7", "8", "6", "9"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If today is January 3rd and Luca’s birthday is in 45 days, what date will it fall on?",
+    "answers": ["February 17th", "February 20th", "February 15th", "February 18th"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which word is not an anagram of 'DINNER'?",
+    "answers": ["CANE", "NECA", "ACNE", "ENCA"],
+    "correctIndex": 3
+  }
+],
+"esperto": [
+      {
+        "question": "If the code for 'BOOK' is 31234 and 'PEN' is 65521, how is 'PENCIL' encoded?",
+        "answers": ["411292", "412912", "421291", "412191"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Complete the series: 1, 11, 21, 1211, 111221, ___",
+        "answers": ["312211", "122111", "211122", "111212"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 'CIRCLE' is to 'RADIUS' as 'CUBE' is to:",
+        "answers": ["EDGE", "DIAGONAL", "FACE", "VERTEX"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the missing number? [ [3,4,5], [5,12,13], [7,24,?] ]",
+        "answers": ["25", "30", "28", "23"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If A + B = 15, B + C = 20, and A + C = 25, what is the value of A/B?",
+        "answers": ["2", "1.5", "0.5", "3"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which word is the odd one out? HYPOTENUSE, LEG, TRAPEZIUM, DIAMETER",
+        "answers": ["TRAPEZIUM", "HYPOTENUSE", "LEG", "DIAMETER"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 3 employees type 3 reports in 3 hours, how long do 9 employees take for 27 reports?",
+        "answers": ["3 hours", "9 hours", "6 hours", "1 hour"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Complete the analogy: 12 : 144 :: 20 : ___",
+        "answers": ["400", "240", "120", "40"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which shape completes the series? ◰, ◳, ◲, ◱, ___",
+        "answers": ["◰", "◳", "◲", "◱"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If X/Y = 4 and X*Y = 64, what is the value of X - Y?",
+        "answers": ["12", "8", "16", "4"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Find the odd one out: 127, 63, 31, 15, 8",
+        "answers": ["8", "63", "31", "15"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 'DGJ' = '1047' and 'HLP' = '181112', what is the value of 'KNS'?",
+        "answers": ["191314", "111914", "141319", "914111"],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the next symbol? ◐, ◓, ◑, ◒, ___",
+        "answers": ["◐", "◓", "◑", "◒"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 5 printers produce 5 books in 5 hours, how long do 100 printers take for 100 books?",
+        "answers": ["5 hours", "100 hours", "20 hours", "1 hour"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which word completes the sequence: B, D, G, K, ___",
+        "answers": ["P", "N", "O", "Q"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 125% of X is 75, what is the value of X?",
+        "answers": ["60", "80", "100", "50"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Roman numeral follows non-standard rules? IIX, XIV, XIX, XXI",
+        "answers": ["IIX", "XIV", "XIX", "XXI"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If ★ + ★★ = 12 and ★★ + ★★★ = 20, then ★ + ★★★ = ?",
+        "answers": ["16", "14", "18", "20"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Complete the sequence: 0, 1, 1, 2, 4, 7, 13, ___",
+        "answers": ["24", "21", "18", "20"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 'HEXAGON' has 7 letters and 'PENTAGON' has 9, how many letters does 'HEPTAGON' have?",
+        "answers": ["8", "7", "9", "10"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which pair doesn't match? (Fibonacci:Numbers), (Pascal:Triangle), (Euclid:Algorithm), (Pythagoras:Theorem)",
+        "answers": ["Euclid:Algorithm", "Fibonacci:Numbers", "Pascal:Triangle", "Pythagoras:Theorem"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 5 apples cost as much as 3 oranges, and 8 oranges cost 24€, how much do 10 apples cost?",
+        "answers": ["18€", "20€", "15€", "12€"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Find the missing term: 2, 6, 12, 20, 30, ___",
+        "answers": ["42", "38", "44", "40"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 1 liter of water and 1 liter of oil have:",
+        "answers": ["Same volume, different weight", "Same weight, different volume", "Same volume and weight", "Different weight and volume"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which concept is different? Median, Mode, Frequency, Mean",
+        "answers": ["Frequency", "Median", "Mode", "Mean"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 7▲3=31 and 5▲2=18, then 4▲5=?",
+        "answers": ["21", "29", "14", "31"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which number completes the sequence: 1, 3, 7, 15, 31, ___",
+        "answers": ["63", "62", "64", "60"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If 'PARALLELEPIPED' has 14 letters, how many letters does 'ICOSAHEDRON' have?",
+        "answers": ["9", "8", "10", "11"],
+        "correctIndex": 0
+      },
+      {
+        "question": "If today is March 15th and the exam is in 100 days, what date will it be?",
+        "answers": ["June 23", "June 22", "June 24", "June 25"],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which word is not an anagram of 'ALGORITHM'?",
+        "answers": ["LOGARITHM", "ALGOMIRTO", "MIRTALOGO", "TAGLIORMO"],
+        "correctIndex": 3
+      }
+    ],
+    "laureato": [
+  {
+    "question": "In a ternary system (base 3), if '1201' represents a number, what is its equivalent in base 9?",
+    "answers": ["46", "64", "37", "73"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Given the Gödel sequence for the operation '2+3=5' (where '+=' is encoded as 5), what is the Gödel number for '3×4=12' if '×=' is encoded as 7?",
+    "answers": ["37412", "34712", "37142", "37421"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In an undirected graph with 7 vertices where each vertex has degree 4, how many edges does it have?",
+    "answers": ["14", "12", "16", "21"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If the complexity of an algorithm is O(n log n) and it takes 5ms for n=1000, how long will it take for n=10000?",
+    "answers": ["≈65ms", "≈50ms", "≈500ms", "≈150ms"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which data structure uses the fewest comparisons in the worst-case sorting scenario?",
+    "answers": ["Heap sort", "Quick sort", "Merge sort", "Bubble sort"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If a finite state automaton recognizes the language (ab)*∪(ba)*, how many states does the minimal equivalent automaton have?",
+    "answers": ["4", "3", "5", "6"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In cryptography, if p=11 and q=13, what is the value of φ(n) in RSA?",
+    "answers": ["120", "143", "24", "72"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Given the recursive function f(n)=f(n-1)+2f(n-2) with f(0)=1 and f(1)=1, what is f(5)?",
+    "answers": ["21", "13", "34", "15"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which theorem guarantees that every program can be converted into an equivalent Boolean circuit?",
+    "answers": ["Cook-Levin Theorem", "Church-Turing Theorem", "Rice's Theorem", "Kleene's Theorem"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If an artificial neuron has 5 inputs with weights [0.2,-0.4,0.1,0.3,-0.5] and a bias of 0.7, what is the output with input [1,0,1,1,0] and a step activation function?",
+    "answers": ["1", "0", "0.5", "-1"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In Haskell's type system, what is the type of (.) . (.)?",
+    "answers": ["(b -> c) -> (a1 -> a2 -> b) -> a1 -> a2 -> c", "(a -> b) -> (b -> c) -> a -> c", "(a -> b -> c) -> (d -> a) -> d -> b -> c", "((a -> b) -> c) -> (d -> a) -> d -> b -> c"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If the 3D rotation matrix around the Z-axis by 45° has element M[1][1]=√2/2, what is M[2][1]?",
+    "answers": ["√2/2", "-√2/2", "1/2", "-1/2"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What number is missing in the sequence of binomial coefficients C(7,k) for k=0...7? 1, 7, 21, 35, ___, 21, 7, 1",
+    "answers": ["35", "28", "42", "14"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In quantum physics, if |ψ⟩=(|0⟩+|1⟩)/√2, what is the probability of measuring |1⟩?",
+    "answers": ["50%", "25%", "75%", "100%"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If language L is NP-complete and L∈P, what does this imply for all problems in NP?",
+    "answers": ["P=NP", "P⊂NP", "NP⊂P", "P≠NP"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which topology is not metrizable?",
+    "answers": ["Cofinite topology on R", "Euclidean topology", "Discrete topology", "Order topology"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If ∂f/∂x=3x²y and ∂f/∂y=x³+2y, what is f(x,y)?",
+    "answers": ["x³y + y² + C", "x³y + xy² + C", "3x²y² + C", "x³ + y² + C"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In group theory, what is the order of the alternating group A₄?",
+    "answers": ["12", "6", "24", "8"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If a signal has a bandwidth of 10kHz and is sampled at 15kHz, what happens?",
+    "answers": ["Aliasing", "Compression", "Perfect reconstruction", "Distortion"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which algorithm solves the maximum flow problem in O(VE²) time?",
+    "answers": ["Edmonds-Karp", "Ford-Fulkerson", "Dinic", "Push-Relabel"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If the gradient of f at (1,1) is (2,3), what is the directional derivative along (1,-1)?",
+    "answers": ["-1/√2", "5/√2", "1/√2", "-5/√2"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In statistics, if X∼N(0,1) and Y=X², what is E[Y]?",
+    "answers": ["1", "0", "2", "√2"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What is the eigenvalue of the matrix [[2,1],[1,2]]?",
+    "answers": ["3", "1", "4", "2"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If a correcting code has a minimum distance of 5, how many errors can it detect?",
+    "answers": ["4", "2", "5", "3"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In computability theory, which problem is decidable?",
+    "answers": ["Verify if a DFA accepts a string", "Halting problem", "Post Correspondence Problem", "Equivalence of two context-free grammars"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If f(z)=z²+1, what is the residue at z=i?",
+    "answers": ["0", "1", "2i", "-1"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Which physical law implies that ∇×E=-∂B/∂t?",
+    "answers": ["Faraday's Law", "Ampère's Law", "Gauss's Law", "Ohm's Law"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If a system has a transfer function H(s)=1/(s²+2s+5), what is the impulse response?",
+    "answers": ["e^(-t)sin(2t)/2", "e^(-2t)sin(t)", "e^(-t)cos(2t)", "e^(-2t)cos(t)"],
+    "correctIndex": 0
+  },
+  {
+    "question": "In SQL, which operation is not always commutative?",
+    "answers": ["LEFT JOIN", "INNER JOIN", "UNION", "INTERSECT"],
+    "correctIndex": 0
+  },
+  {
+    "question": "If a binary tree has 31 nodes, what is its minimum height?",
+    "answers": ["4", "5", "6", "3"],
+    "correctIndex": 0
+  }
+]
+},
+"Art": {
+  "bambino": [
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answers": ["Pablo Picasso", "Leonardo da Vinci", "Michelangelo", "Van Gogh"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What color is the sky in a typical painting?",
+      "answers": ["Red", "Green", "Blue", "Yellow"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What tool is used for painting?",
+      "answers": ["Screwdriver", "Brush", "Scissors", "Hammer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of these is a primary color?",
+      "answers": ["Pink", "Blue", "Green", "Orange"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What do you use to color with your hands?",
+      "answers": ["Tempura", "Markers", "Crayons", "Finger paints"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who is the artist famous for 'Campbell’s Soup Cans'?",
+      "answers": ["Leonardo", "Andy Warhol", "Monet", "Michelangelo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where do you hang a painting?",
+      "answers": ["On the floor", "On the wall", "On the window", "On the door"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who sculpted the David?",
+      "answers": ["Donatello", "Michelangelo", "Raphael", "Da Vinci"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What shape does a wheel have?",
+      "answers": ["Square", "Triangular", "Round", "Rectangular"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What do you do with clay?",
+      "answers": ["Eat it", "Shape it", "Read it", "Play it"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What color do you get by mixing red and yellow?",
+      "answers": ["Green", "Orange", "Blue", "Brown"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who is famous for sunflowers?",
+      "answers": ["Van Gogh", "Picasso", "Da Vinci", "Dalí"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What do you use to draw?",
+      "answers": ["Pencil", "Knife", "Spoon", "Hammer"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What color is a lemon?",
+      "answers": ["Blue", "Yellow", "Pink", "Green"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a piece of art made by gluing different pieces together called?",
+      "answers": ["Sculpture", "Collage", "Drawing", "Portrait"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What can you find in a museum?",
+      "answers": ["Cars", "Paintings and statues", "Animals", "Toys"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What color is the sun in children’s drawings?",
+      "answers": ["Purple", "Yellow", "Sky blue", "Black"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does an artist do?",
+      "answers": ["Run", "Draw or paint", "Cook", "Play sports"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who painted the ceiling of the Sistine Chapel?",
+      "answers": ["Raphael", "Michelangelo", "Caravaggio", "Donatello"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What shape is a whole pizza?",
+      "answers": ["Triangular", "Oval", "Rectangular", "Round"],
+      "correctIndex": 3
+    },
+    {
+      "question": "What tool is used to erase a pencil drawing?",
+      "answers": ["Ruler", "Pen", "Eraser", "Scissors"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does a painter do?",
+      "answers": ["Paints pictures", "Sells clothes", "Plays instruments", "Builds houses"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What color is blood in drawings?",
+      "answers": ["Blue", "Green", "Red", "Orange"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What color is the grass?",
+      "answers": ["Yellow", "Red", "Green", "Black"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What do you do in an art class?",
+      "answers": ["Sing", "Dance", "Draw or paint", "Run"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who is famous for painting with dots?",
+      "answers": ["Monet", "Seurat", "Van Gogh", "Picasso"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the art of making statues called?",
+      "answers": ["Painting", "Sculpture", "Drawing", "Mosaic"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where are the most famous paintings in the world found?",
+      "answers": ["In a restaurant", "In a museum", "In a cinema", "In a school"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What do you use to paint with water?",
+      "answers": ["Crayons", "Tempura", "Watercolors", "Pencils"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What can you do with modeling clay?",
+      "answers": ["Write", "Shape", "Sew", "Draw"],
+      "correctIndex": 1
+    }
+  ],
+  "facile": [
+    {
+      "question": "Who painted 'The Starry Night'?",
+      "answers": ["Pablo Picasso", "Vincent van Gogh", "Claude Monet", "Leonardo da Vinci"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which artist is famous for his sunflower paintings?",
+      "answers": ["Vincent van Gogh", "Claude Monet", "Paul Cézanne", "Henri Matisse"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who sculpted the David?",
+      "answers": ["Donatello", "Michelangelo", "Gian Lorenzo Bernini", "Antonio Canova"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which artist is known for the painting 'Guernica'?",
+      "answers": ["Salvador Dalí", "Pablo Picasso", "Joan Miró", "Henri Rousseau"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which city is the Louvre Museum located?",
+      "answers": ["Rome", "London", "Paris", "Madrid"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'The Birth of Venus'?",
+      "answers": ["Sandro Botticelli", "Leonardo da Vinci", "Michelangelo", "Raphael"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which painter is associated with the impressionist movement?",
+      "answers": ["Claude Monet", "Pablo Picasso", "Vincent van Gogh", "Salvador Dalí"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which type of art is characterized by geometric shapes and vibrant colors?",
+      "answers": ["Cubism", "Surrealism", "Pop Art", "Expressionism"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who is the artist known for the 'Campbell Soup Cans'?",
+      "answers": ["Roy Lichtenstein", "Andy Warhol", "Keith Haring", "Jean-Michel Basquiat"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sculptor created 'The Thinker'?",
+      "answers": ["Auguste Rodin", "Henry Moore", "Gian Lorenzo Bernini", "Donatello"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which country is the Sistine Chapel located?",
+      "answers": ["Italy", "France", "Spain", "Germany"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who painted 'The Kiss'?",
+      "answers": ["Gustav Klimt", "Edvard Munch", "Egon Schiele", "Frida Kahlo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which artist is known for his self-portraits and strong eyebrows?",
+      "answers": ["Frida Kahlo", "Georgia O'Keeffe", "Mary Cassatt", "Tamara de Lempicka"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a fresco?",
+      "answers": ["A marble sculpture", "A painting on canvas", "A painting on a wall with fresh plaster", "A print on paper"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'The School of Athens'?",
+      "answers": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Caravaggio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which artist is famous for his melting clocks?",
+      "answers": ["Salvador Dalí", "Pablo Picasso", "Joan Miró", "René Magritte"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which city is the Uffizi Museum located?",
+      "answers": ["Rome", "Milan", "Florence", "Venice"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'The Luncheon of the Boating Party'?",
+      "answers": ["Claude Monet", "Pierre-Auguste Renoir", "Édouard Manet", "Camille Pissarro"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which artist is known for his pointillist works?",
+      "answers": ["Georges Seurat", "Paul Signac", "Henri Matisse", "Vincent van Gogh"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a still life?",
+      "answers": ["A painting of landscapes", "A painting of inanimate objects", "A portrait", "A sculpture of animals"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who painted 'The Persistence of Memory'?",
+      "answers": ["Salvador Dalí", "René Magritte", "Max Ernst", "Joan Miró"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which artist is famous for his works with colorful polka dots?",
+      "answers": ["Yayoi Kusama", "Damien Hirst", "Jeff Koons", "Takashi Murakami"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is chiaroscuro?",
+      "answers": ["A sculpting technique", "A type of abstract painting", "The use of light and shadow to create depth", "A modern artistic movement"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'The Scream'?",
+      "answers": ["Edvard Munch", "Gustav Klimt", "Egon Schiele", "Paul Klee"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which city is the Prado Museum located?",
+      "answers": ["Barcelona", "Madrid", "Seville", "Valencia"],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "Which artist is associated with the Blue Period?",
+      "answers": ["Claude Monet", "Salvador Dalí", "Pablo Picasso", "Gustav Klimt"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'Impression, Sunrise', which gave its name to Impressionism?",
+      "answers": ["Manet", "Renoir", "Monet", "Degas"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which country was the painter Edvard Munch born?",
+      "answers": ["Norway", "Sweden", "Netherlands", "Germany"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which artistic technique involves engraving the design onto a metal plate?",
+      "answers": ["Watercolor", "Fresco", "Engraving", "Pastel"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who painted 'Liberty Leading the People'?",
+      "answers": ["Jacques-Louis David", "Eugène Delacroix", "Théodore Géricault", "Ingres"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which architect designed the Sagrada Família in Barcelona?",
+      "answers": ["Oscar Niemeyer", "Antoni Gaudí", "Le Corbusier", "Frank Lloyd Wright"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who sculpted the marble group 'Laocoön and His Sons'?",
+      "answers": ["Michelangelo", "Phidias", "Rhodes Sculptors", "Donatello"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the main subject of Georgia O'Keeffe's paintings?",
+      "answers": ["Urban landscapes", "Flowers and abstract nature", "Portraits", "Religious scenes"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the famous fresco 'The School of Athens' represent?",
+      "answers": ["A battle", "Philosophers of antiquity", "The creation of the world", "The discovery of America"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Spanish painter is known for his surrealist style?",
+      "answers": ["Miró", "Goya", "Dalí", "Velázquez"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where is Botticelli's 'The Birth of Venus' located?",
+      "answers": ["Louvre", "Uffizi", "Prado", "Vatican"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who is the author of the 'Water Lilies' series?",
+      "answers": ["Van Gogh", "Monet", "Cézanne", "Seurat"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the name of the artistic period from 1600 to 1750?",
+      "answers": ["Gothic", "Baroque", "Romantic", "Renaissance"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What are 'trompe-l'œil' in painting?",
+      "answers": ["Childish drawings", "Realistic optical illusions", "Miniature portraits", "Collages with materials"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who painted the fresco cycle in the Scrovegni Chapel in Padua?",
+      "answers": ["Masaccio", "Giotto", "Beato Angelico", "Piero della Francesca"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which artistic movement is characterized by geometric and angular forms?",
+      "answers": ["Cubism", "Surrealism", "Expressionism", "Romanticism"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who created 'Guernica'?",
+      "answers": ["Salvador Dalí", "Francisco Goya", "Pablo Picasso", "Joan Miró"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is an icon in religious art?",
+      "answers": ["Votive statue", "Sacred theme panel painting", "Wall mosaic", "Stained glass rose window"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which artistic movement is inspired by classical Greco-Roman culture?",
+      "answers": ["Cubism", "Neoclassicism", "Futurism", "Gothic"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who sculpted 'The Thinker'?",
+      "answers": ["Rodin", "Canova", "Michelangelo", "Bernini"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where is Klimt's famous painting 'The Kiss' located?",
+      "answers": ["Musée d'Orsay", "Belvedere in Vienna", "National Gallery", "Hermitage"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the dove often symbolize in art?",
+      "answers": ["War", "Peace", "Wisdom", "Death"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who developed conceptual art in the 1960s?",
+      "answers": ["Andy Warhol", "Marcel Duchamp", "Joseph Kosuth", "Yoko Ono"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the main support for a fresco?",
+      "answers": ["Paper", "Wood", "Plastered wall", "Canvas"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who is the author of 'The Fourth Estate'?",
+      "answers": ["Pellizza da Volpedo", "Caravaggio", "De Chirico", "Modigliani"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Italian painter is associated with metaphysical art?",
+      "answers": ["Boccioni", "Giorgio de Chirico", "Guttuso", "Morandi"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the typical subject of a still life?",
+      "answers": ["People", "Landscapes", "Inanimate objects", "Historical scenes"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does cave art represent?",
+      "answers": ["Roman art", "Medieval art", "Prehistoric rock art", "Baroque art"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who is considered the father of Impressionism?",
+      "answers": ["Manet", "Degas", "Monet", "Renoir"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of these is a famous sculptor of Neoclassicism?",
+      "answers": ["Canova", "Bernini", "Donatello", "Rodin"],
+      "correctIndex": 0
+    }    
+  ],
+  "esperto": [
+    {
+        "question": "Who was Raphael's main heir?",
+        "answers": ["Giulio Romano", "Sandro Botticelli", "Donatello", "Leonardo da Vinci"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Where is Michelangelo's David kept?",
+        "answers": ["Louvre in Paris", "National Museum of Capodimonte in Naples", "Prado Museum in Madrid", "Accademia Gallery in Florence"],
+        "correctIndex": 3
+    },
+    {
+        "question": "Who promoted the new rule that embraced austerity and geometrization in churches?",
+        "answers": ["Bernardo di Chiaravalle", "Leonardo da Vinci", "Giorgio Vasari", "Giulio Romano"],
+        "correctIndex": 0
+    },
+    {
+        "question": "When was Giovan Battista Salvi born?",
+        "answers": ["1635", "1580", "1609", "1672"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Who wrote Vasari's Book?",
+        "answers": ["Michelangelo", "Leonardo da Vinci", "Giorgio Vasari", "Lorenzo the Magnificent"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Where is the Muse Calliope from the Ferrarese studiolo kept?",
+        "answers": ["National Museum of Capodimonte in Naples", "Louvre in Paris", "National Gallery in London", "Prado Museum in Madrid"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Who was the first to look at ancient fragments and remember them in their works in Italy?",
+        "answers": ["Giovanni Bellini", "Andrea Mantegna", "Wiligelmo", "Nicola Pisano"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which artist is known for his unique pointillist painting style?",
+        "answers": ["Georges Seurat", "Paul Gauguin", "Henri Rousseau", "Vincent van Gogh"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Which artistic movement is characterized by the accurate and detailed representation of nature?",
+        "answers": ["Realism", "Neoclassicism", "Naturalism", "Impressionism"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which artistic movement is characterized by bold and vibrant use of color and simplified forms?",
+        "answers": ["Impressionism", "Fauvism", "Cubism", "Expressionism"],
+        "correctIndex": 1
+    },
+    {
+        "question": "To which artistic movement does El Greco's 'The Knight with the Hand on the Chest' belong?",
+        "answers": ["Renaissance", "Mannerism", "Baroque", "Romanticism"],
+        "correctIndex": 1
+    },
+    {
+        "question": "Which artistic movement developed in response to and as an evolution of Impressionism, focusing on formal and symbolic structures rather than realistic representation?",
+        "answers": ["Surrealism", "Post-Impressionism", "Neoclassicism", "Cubism"],
+        "correctIndex": 1
+    },
+    {
+        "question": "Which of these artists is considered a representative of Fauvism?",
+        "answers": ["Henri Matisse", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Who designed the dome of St. Peter's in Rome?",
+        "answers": ["Michelangelo Buonarroti", "Gian Lorenzo Bernini", "Leonardo da Vinci", "Donato Bramante"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Which 20th-century Italian painter belonged to the metaphysical movement?",
+        "answers": ["Umberto Boccioni", "Giorgio De Chirico", "Renato Guttuso", "Carlo Carrà"],
+        "correctIndex": 1
+    },
+    {
+        "question": "In which city is Leonardo da Vinci's Last Supper located?",
+        "answers": ["Rome", "Milan", "Florence", "Venice"],
+        "correctIndex": 1
+    },
+    {
+        "question": "What is the name of the large architectural complex in Pavia?",
+        "answers": ["Cathedral", "Sforza Castle", "Certosa", "Ducal Palace"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which Renaissance painter wrote a treatise on perspective?",
+        "answers": ["Canaletto", "Caravaggio", "Piero Della Francesca", "Leonardo da Vinci"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which painter became famous for the red color he used?",
+        "answers": ["Titian", "Andrea Mantegna", "Sandro Botticelli", "Giorgio Vasari"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Who painted the famous School of Athens?",
+        "answers": ["Giotto", "Cimabue", "Raphael Sanzio", "Michelangelo"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which painter painted women with elongated necks?",
+        "answers": ["Carlo Carrà", "Giovanni Fattori", "Amedeo Modigliani", "Giorgio Morandi"],
+        "correctIndex": 2
+    }
+],
+"laureato": [
+  {
+    "question": "Who is Max J. Friedländer?",
+    "answers": ["A Renaissance architect", "A 20th-century literary critic", "An expert in Flemish art", "A famous impressionist painter"],
+    "correctIndex": 2
+  },
+  {
+    "question": "What is the main goal of Friedländer's book?",
+    "answers": ["Analyze Italian Renaissance painting", "Explore Baroque sculpture", "Study Flemish art and the role of the connoisseur", "Describe contemporary European art"],
+    "correctIndex": 2
+  },
+  {
+    "question": "When does a break with the artistic tradition occur, according to Friedländer?",
+    "answers": ["During the Renaissance", "In the Baroque period", "With the advent of modern art", "During Impressionism"],
+    "correctIndex": 2
+  },
+  {
+    "question": "What is the importance of tone and light according to Friedländer?",
+    "answers": ["They determine the geometric composition", "They give depth and realism to the work", "They are irrelevant in Flemish painting", "They only serve to decorate the work"],
+    "correctIndex": 1
+  },
+  {
+    "question": "How did the format of a painting influence in the past?",
+    "answers": ["It had no influence", "It determined the function and placement of the work", "It was chosen randomly by the artist", "It only depended on the cost of materials"],
+    "correctIndex": 1
+  },
+  {
+    "question": "What is one effect of a large-format painting on the viewer?",
+    "answers": ["Creates a sense of intimacy", "Reduces visual impact", "Increases emotional involvement", "Makes the work less accessible"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Which technique is used to represent movement according to Friedländer?",
+    "answers": ["Chiaroscuro", "Linear perspective", "Sfumato", "Diagonal lines and dynamic composition"],
+    "correctIndex": 3
+  },
+  {
+    "question": "What is the main role of the frame in a painting's composition according to Friedländer?",
+    "answers": ["Decorative element", "Protection of the work", "Separation between art and reality", "Tool to focus attention"],
+    "correctIndex": 3
+  },
+  {
+    "question": "What trend characterized historical-themed painting according to Friedländer?",
+    "answers": ["Detailed realism", "Idealization of events", "Symbolic abstraction", "Mythological representation"],
+    "correctIndex": 1
+  },
+  {
+    "question": "How does the representation of the nude differ in Mediterranean countries compared to puritan northern countries?",
+    "answers": ["It is more idealized in northern countries", "It is more naturalistic in Mediterranean countries", "It is absent in Mediterranean countries", "It is more accepted in northern countries"],
+    "correctIndex": 1
+  },
+  {
+    "question": "What is one of the issues that emerged during the Renaissance regarding the study of the human body?",
+    "answers": ["Lack of models", "Dissection prohibition", "Influence of the Church", "Lack of scientific interest"],
+    "correctIndex": 1
+  },
+  {
+    "question": "What is the main subject of genre painting according to Friedländer?",
+    "answers": ["Mythological scenes", "Historical events", "Scenes of daily life", "Portraits of nobles"],
+    "correctIndex": 2
+  },
+  {
+    "question": "In which century did genre painting begin to take an autonomous form?",
+    "answers": ["14th century", "15th century", "16th century", "17th century"],
+    "correctIndex": 3
+  },
+  {
+    "question": "Which genre of painting is particularly represented in the Netherlands according to Friedländer?",
+    "answers": ["Landscape", "Still life", "Portrait", "Religious scene"],
+    "correctIndex": 1
+  },
+  {
+    "question": "What does still life represent in the context of Northern painting?",
+    "answers": ["Religious symbolism", "Exhibition of technical skill", "Reflection on the transience of life", "Ornamental decoration"],
+    "correctIndex": 2
+  },
+  {
+    "question": "How has the perception of the painter changed over time according to Friedländer?",
+    "answers": ["From craftsman to creative genius", "From scientist to artist", "From religious to secular", "From anonymous to celebrity"],
+    "correctIndex": 0
+  },
+  {
+    "question": "What is the main difference between a talented artist and a genius according to Friedländer?",
+    "answers": ["The genius has divine inspiration", "Talent is innate, genius is acquired", "The genius creates new forms, talent reproduces", "There is no significant difference"],
+    "correctIndex": 2
+  },
+  {
+    "question": "What does the romantic concept of an artist described in the text represent?",
+    "answers": ["An experienced craftsman", "An inspired and solitary individual", "A member of society", "A collective worker"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Who coined the term 'Vienna School' and in what historical context?",
+    "answers": ["Alois Riegl in the context of formalism", "Ernst Gombrich during the Renaissance", "Heinrich Wölfflin in the Baroque period", "Max J. Friedländer in Flemish context"],
+    "correctIndex": 0
+  }
+]
+}
 } 

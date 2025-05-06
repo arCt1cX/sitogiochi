@@ -1665,7 +1665,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Award points based on difficulty
                 switch (gameState.currentDifficulty) {
                     case 'bambino': pointsEarned = 1; break;
-                    case 'facile': pointsEarned = 2; break;
+                    case 'facile': pointsEarned = 1; break;
                     case 'medio': pointsEarned = 3; break;
                     case 'esperto': pointsEarned = 4; break;
                     case 'laureato': pointsEarned = 5; break;

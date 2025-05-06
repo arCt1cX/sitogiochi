@@ -13708,5 +13708,767 @@
       "correctIndex": 0
     }
   ]
+},
+"Medicina": {
+  "bambino": [
+    {
+      "question": "Dove batte il cuore?",
+      "answers": ["Nel petto", "Nella testa", "Nel piede", "Nella pancia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A cosa serve lo stetoscopio?",
+      "answers": ["Ad ascoltare il cuore", "A vedere le ossa", "A misurare la febbre", "A fare le punture"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si usa per scrivere una ricetta medica?",
+      "answers": ["Una penna", "Una siringa", "Un bisturi", "Un cucchiaio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il medico dei bambini?",
+      "answers": ["Pediatra", "Dentista", "Chirurgo", "Psicologo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa mettiamo su una ferita?",
+      "answers": ["Un cerotto", "Una scarpa", "Un cappello", "Un guanto"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa succede se hai la febbre?",
+      "answers": ["Hai caldo e sei stanco", "Hai fame", "Hai sonno", "Corri veloce"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l’organo che ci fa respirare?",
+      "answers": ["I polmoni", "Il fegato", "Lo stomaco", "Le ossa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quante dita abbiamo in totale?",
+      "answers": ["20", "10", "15", "18"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa succede quando il medico ti dà una puntura?",
+      "answers": ["Ricevi una medicina", "Ti danno un regalo", "Ti fanno ridere", "Ti tolgono i denti"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama la parte del corpo che usiamo per pensare?",
+      "answers": ["Cervello", "Cuore", "Fegato", "Mano"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa serve per lavarsi bene le mani?",
+      "answers": ["Acqua e sapone", "Farina e zucchero", "Sale e pepe", "Matite colorate"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che colore ha il sangue?",
+      "answers": ["Rosso", "Blu", "Verde", "Giallo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si mette sul braccio per misurare la pressione?",
+      "answers": ["Il bracciale", "Il casco", "La benda", "Il guanto"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il dottore che cura i denti?",
+      "answers": ["Dentista", "Oculista", "Pediatra", "Cardiologo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa succede quando starnutisci?",
+      "answers": ["Esce aria dal naso", "Ti cresce un capello", "Ti cambia la voce", "Ti vengono i brividi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama l'osso del braccio?",
+      "answers": ["Omero", "Femore", "Cranio", "Costola"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A cosa serve il termometro?",
+      "answers": ["A misurare la febbre", "A contare le dita", "A vedere il cuore", "A pesare le scarpe"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si trovano le orecchie?",
+      "answers": ["Ai lati della testa", "Sulle mani", "Sulle gambe", "Vicino ai piedi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il liquido che disinfetta le ferite?",
+      "answers": ["Disinfettante", "Colla", "Acqua frizzante", "Colorante"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama la parte del corpo che pompa il sangue?",
+      "answers": ["Cuore", "Fegato", "Polmone", "Stomaco"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa indossa un chirurgo in sala operatoria?",
+      "answers": ["Camice e mascherina", "Pigiama e ciabatte", "Cravatta e giacca", "Costume da bagno"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa ci fa lo scheletro?",
+      "answers": ["Tiene su il corpo", "Fa respirare", "Ci fa ridere", "Ci aiuta a digerire"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama la medicina per togliere il dolore?",
+      "answers": ["Antidolorifico", "Anticalcare", "Sciroppo", "Dolcificante"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che parte del corpo controlla il movimento?",
+      "answers": ["Il cervello", "Il piede", "Il naso", "L’orecchio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cosa serve per vedere dentro al corpo?",
+      "answers": ["Radiografia", "Fotocopia", "Binocolo", "Specchio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa il sangue nel corpo?",
+      "answers": ["Trasporta ossigeno", "Mette musica", "Fa crescere le unghie", "Aiuta a dormire"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti occhi ha una persona?",
+      "answers": ["Due", "Tre", "Uno", "Quattro"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa il fegato?",
+      "answers": ["Pulisce il sangue", "Ti fa respirare", "Ti fa camminare", "Fa battere il cuore"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa usi per respirare?",
+      "answers": ["Il naso", "Le orecchie", "Gli occhi", "La lingua"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa il medico quando visiti?",
+      "answers": ["Controlla che tu stia bene", "Ti fa ballare", "Ti compra un gelato", "Ti racconta una favola"],
+      "correctIndex": 0
+    }
+  ],
+  "facile": [
+    {
+      "question": "Qual è la funzione principale del cuore?",
+      "answers": ["Pompare il sangue", "Produrre ossigeno", "Digestione", "Filtrare l'urina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale organo è responsabile della respirazione?",
+      "answers": ["Polmoni", "Cuore", "Stomaco", "Reni"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che tipo di medico si occupa dei denti?",
+      "answers": ["Dentista", "Ortopedico", "Oculista", "Pediatra"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quante ossa ha il corpo umano adulto?",
+      "answers": ["206", "300", "150", "178"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l'organo principale dell'apparato digerente?",
+      "answers": ["Stomaco", "Cuore", "Polmone", "Rene"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione dei globuli rossi?",
+      "answers": ["Trasportare ossigeno", "Difendere dalle infezioni", "Coagulare il sangue", "Produrre ormoni"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si trova il cervelletto?",
+      "answers": ["Nella testa", "Nel torace", "Nella gamba", "Nel braccio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il medico specializzato in occhi?",
+      "answers": ["Oculista", "Cardiologo", "Neurologo", "Psichiatra"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale esame si usa per vedere le ossa?",
+      "answers": ["Radiografia", "Ecografia", "Tacchiometria", "Endoscopia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che organo produce l'insulina?",
+      "answers": ["Pancreas", "Fegato", "Cuore", "Rene"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa misura un termometro?",
+      "answers": ["Temperatura corporea", "Pressione", "Battiti", "Peso"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama l'osso della coscia?",
+      "answers": ["Femore", "Tibia", "Omero", "Perone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa un vaccino?",
+      "answers": ["Protegge dalle malattie", "Fa dimagrire", "Fa crescere i muscoli", "Controlla la vista"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che funzione ha il fegato?",
+      "answers": ["Depura il sangue", "Respira", "Pompa il sangue", "Digerisce i grassi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa serve per ascoltare il battito del cuore?",
+      "answers": ["Stetoscopio", "Termometro", "Sfigmomanometro", "Siringa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che tipo di medico è un neurologo?",
+      "answers": ["Specialista del sistema nervoso", "Dottore dei polmoni", "Dentista", "Chirurgo estetico"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cosa cura un dermatologo?",
+      "answers": ["La pelle", "Le ossa", "Il sangue", "I muscoli"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale organo è responsabile della vista?",
+      "answers": ["Occhio", "Orecchio", "Naso", "Bocca"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione principale dei reni?",
+      "answers": ["Filtrare il sangue", "Produrre saliva", "Aiutare la digestione", "Controllare i nervi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si trovano i polmoni?",
+      "answers": ["Nel torace", "Nell'addome", "Nelle gambe", "Nella testa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa significa 'diagnosi'?",
+      "answers": ["Identificazione di una malattia", "Una medicina", "Un'operazione", "Un controllo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l’organo che controlla tutto il corpo?",
+      "answers": ["Cervello", "Cuore", "Polmoni", "Fegato"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa succede se si ha l’influenza?",
+      "answers": ["Febbre, stanchezza, mal di gola", "Cadono i denti", "Si diventa più alti", "Si perde la memoria"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale esame controlla il battito cardiaco?",
+      "answers": ["Elettrocardiogramma", "Ecografia", "Tac", "Endoscopia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quanti polmoni abbiamo?",
+      "answers": ["Due", "Uno", "Tre", "Quattro"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il nome scientifico delle ossa?",
+      "answers": ["Scheletro", "Muscolo", "Tendine", "Organo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa il sistema immunitario?",
+      "answers": ["Difende il corpo dalle malattie", "Aiuta a dormire", "Regola la temperatura", "Fa battere il cuore"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cosa sono i linfonodi?",
+      "answers": ["Piccole ghiandole del sistema immunitario", "Ossa del collo", "Muscoli delle gambe", "Organi del cuore"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa il sistema nervoso?",
+      "answers": ["Trasmette segnali al corpo", "Pompa sangue", "Assorbe vitamine", "Produce globuli rossi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama la scienza che studia le malattie?",
+      "answers": ["Patologia", "Biologia", "Chimica", "Filosofia"],
+      "correctIndex": 0
+    }
+  ],
+  "medio": [
+    {
+      "question": "Qual è il ruolo principale dell'emoglobina nel sangue?",
+      "answers": ["Trasportare ossigeno", "Combattere infezioni", "Coagulare il sangue", "Produrre ormoni"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si trova il nodo senoatriale, che regola il battito cardiaco?",
+      "answers": ["Nell'atrio destro", "Nel ventricolo sinistro", "Nell'aorta", "Nel setto interatriale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale vitamina è essenziale per la coagulazione del sangue?",
+      "answers": ["Vitamina K", "Vitamina C", "Vitamina D", "Vitamina B12"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa produce la tiroide?",
+      "answers": ["Ormoni che regolano il metabolismo", "Insulina", "Globuli bianchi", "Adrenalina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale parte del sistema nervoso è coinvolta nei riflessi automatici?",
+      "answers": ["Midollo spinale", "Cervello", "Cervelletto", "Nervi periferici"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione principale del sistema linfatico?",
+      "answers": ["Difesa immunitaria e drenaggio dei liquidi", "Produzione di ormoni", "Ossigenazione dei tessuti", "Digestione dei grassi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è un ECG?",
+      "answers": ["Un esame del cuore", "Una scansione del cervello", "Un test del sangue", "Una radiografia del torace"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa fa l'insulina nel corpo?",
+      "answers": ["Regola i livelli di zucchero nel sangue", "Favorisce la digestione", "Accelera il battito cardiaco", "Aumenta la pressione"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che cos'è il peristaltismo?",
+      "answers": ["Movimento involontario dell'intestino", "Battito del cuore", "Contrazione muscolare volontaria", "Produzione di urina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si trova l’ipofisi?",
+      "answers": ["Alla base del cervello", "Nel cuore", "Nel fegato", "Nel pancreas"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama il processo di formazione del sangue?",
+      "answers": ["Emopoiesi", "Ossigenazione", "Glicolisi", "Linfocitosi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale tra questi è un antibiotico?",
+      "answers": ["Amoxicillina", "Ibuprofene", "Paracetamolo", "Omeprazolo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A cosa serve la milza?",
+      "answers": ["Filtra il sangue e partecipa alla risposta immunitaria", "Produce insulina", "Ossigena il sangue", "Aiuta nella digestione"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa indica una pressione arteriosa di 140/90 mmHg?",
+      "answers": ["Ipertensione", "Valori normali", "Ipotensione", "Tachicardia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiamano i globuli bianchi anche detti leucociti?",
+      "answers": ["Cellule immunitarie", "Cellule nervose", "Cellule epatiche", "Cellule muscolari"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale parte del corpo si trova il duodeno?",
+      "answers": ["Tra stomaco e intestino tenue", "Nel cuore", "Nel cervello", "Nel polmone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale ormone stimola la produzione di latte materno?",
+      "answers": ["Prolattina", "Estrogeno", "Cortisolo", "Testosterone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa sono le piastrine?",
+      "answers": ["Elementi del sangue che favoriscono la coagulazione", "Cellule nervose", "Batteri benefici", "Ormoni"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa significa 'tachicardia'?",
+      "answers": ["Battito cardiaco accelerato", "Battito rallentato", "Mancanza di battito", "Cuore ingrossato"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione principale del colon?",
+      "answers": ["Assorbire acqua e formare feci", "Digestione dei grassi", "Assorbire proteine", "Produrre enzimi digestivi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che tipo di farmaco è il paracetamolo?",
+      "answers": ["Antipiretico e analgesico", "Antibiotico", "Ansiolitico", "Anticoagulante"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione della retina?",
+      "answers": ["Percezione della luce e delle immagini", "Controllo del battito", "Regolazione della temperatura", "Produzione di lacrime"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale struttura collega muscolo e osso?",
+      "answers": ["Tendine", "Legamento", "Cartilagine", "Capsula sinoviale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa produce il fegato?",
+      "answers": ["Bile", "Insulina", "Globuli bianchi", "Linfociti"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si intende per anemia?",
+      "answers": ["Bassa quantità di emoglobina o globuli rossi", "Pressione alta", "Eccesso di zucchero nel sangue", "Infiammazione articolare"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa regola il sistema endocrino?",
+      "answers": ["Gli ormoni", "La circolazione", "La respirazione", "La digestione"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove avviene lo scambio di gas nel sistema respiratorio?",
+      "answers": ["Negli alveoli polmonari", "Nella trachea", "Nei bronchi", "Nel diaframma"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione della corteccia cerebrale?",
+      "answers": ["Elaborare pensieri e sensazioni", "Controllare il battito", "Regolare la digestione", "Produrre ormoni"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale parte del cervello controlla equilibrio e coordinazione?",
+      "answers": ["Cervelletto", "Ipotalamo", "Midollo allungato", "Lobo frontale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che tipo di tessuto è il sangue?",
+      "answers": ["Tessuto connettivo", "Tessuto epiteliale", "Tessuto muscolare", "Tessuto nervoso"],
+      "correctIndex": 0
+    }
+  ],
+  "difficile": [
+    {
+      "question": "Quale enzima è responsabile della digestione dei grassi nell'intestino tenue?",
+      "answers": ["Lipasi pancreatica", "Tripsina", "Amilasi salivare", "Pepsina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il sistema del complemento?",
+      "answers": ["Una parte del sistema immunitario innato", "Una rete nervosa periferica", "Una componente dell'apparato digerente", "Un tipo di ormone steroideo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione della vitamina B12?",
+      "answers": ["Sintesi del DNA e maturazione dei globuli rossi", "Produzione di bile", "Assorbimento di calcio", "Digestione dei grassi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa causa la fenilchetonuria?",
+      "answers": ["Un difetto nel metabolismo della fenilalanina", "Una carenza di vitamina C", "Un'infezione batterica cronica", "Un eccesso di ferro nel sangue"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa indicano alti livelli di troponina nel sangue?",
+      "answers": ["Danno miocardico", "Insufficienza renale", "Infezione epatica", "Sclerosi multipla"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il principale neurotrasmettitore del sistema nervoso parasimpatico?",
+      "answers": ["Acetilcolina", "Dopamina", "Noradrenalina", "Glutammato"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale organo è colpito principalmente dalla cirrosi?",
+      "answers": ["Fegato", "Rene", "Cuore", "Polmone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama l'ormone prodotto dalla placenta che si rileva nei test di gravidanza?",
+      "answers": ["hCG", "LH", "FSH", "TSH"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale struttura del rene è responsabile della filtrazione del sangue?",
+      "answers": ["Glomerulo", "Nefrone distale", "Uretere", "Pelvi renale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale malattia è causata da una carenza di dopamina nel cervello?",
+      "answers": ["Morbo di Parkinson", "Sclerosi multipla", "Alzheimer", "Epilessia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il significato di 'iatrogeno'?",
+      "answers": ["Causato da un trattamento medico", "Di origine genetica", "Autoimmune", "Di origine infettiva"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il principale effetto collaterale dei FANS a lungo termine?",
+      "answers": ["Ulcera gastrica", "Ipoglicemia", "Ipertrofia cardiaca", "Parestesia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale delle seguenti condizioni è un'emergenza medica endocrinologica?",
+      "answers": ["Crisi tireotossica", "Ipotermia", "Anemia sideropenica", "Dermatite atopica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il segno di Babinski?",
+      "answers": ["Estensione dell'alluce alla stimolazione plantare", "Perdita di equilibrio in piedi chiusi", "Rigidità del collo", "Tremore a riposo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale area del cervello si trova l'area di Broca?",
+      "answers": ["Lobo frontale", "Lobo temporale", "Lobo parietale", "Tronco encefalico"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il principale fattore di rischio per il carcinoma polmonare?",
+      "answers": ["Fumo di sigaretta", "Obesità", "Sedentarietà", "Dieta povera di fibre"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è una fistola artero-venosa?",
+      "answers": ["Un collegamento anomalo tra arteria e vena", "Una valvola cardiaca difettosa", "Una lesione della milza", "Una malformazione del midollo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si intende per 'comorbidità'?",
+      "answers": ["Presenza di più malattie contemporaneamente", "Assenza di sintomi", "Effetto collaterale dei farmaci", "Progressione rapida di una malattia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A cosa serve il test di Coombs?",
+      "answers": ["Individuare anticorpi anti-eritrociti", "Valutare la coagulazione", "Dosare la creatinina", "Misurare i livelli di emoglobina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale ormone stimola la secrezione di cortisolo?",
+      "answers": ["ACTH", "TSH", "ADH", "GH"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale patologia è associata a un eccesso di GH nell’adulto?",
+      "answers": ["Acromegalia", "Gigantismo", "Morbo di Addison", "Cretinismo"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la principale complicanza del diabete mellito non controllato?",
+      "answers": ["Chetoacidosi", "Anemia", "Ipotensione", "Tubercolosi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa sono le cellule di Langerhans nel pancreas?",
+      "answers": ["Gruppi di cellule endocrine", "Macrofagi epatici", "Neuroni", "Globuli bianchi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale struttura cardiaca impedisce il reflusso del sangue dal ventricolo sinistro all’atrio sinistro?",
+      "answers": ["Valvola mitrale", "Valvola tricuspide", "Valvola aortica", "Valvola polmonare"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la funzione della surfactante nei polmoni?",
+      "answers": ["Riduce la tensione superficiale negli alveoli", "Favorisce la vasocostrizione", "Stimola la tosse", "Aumenta l'assorbimento di ossigeno"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale disturbo si ha una degenerazione della guaina mielinica?",
+      "answers": ["Sclerosi multipla", "Morbo di Crohn", "Lupus", "Gotta"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si intende con il termine 'ematemesi'?",
+      "answers": ["Vomito di sangue", "Feci nere", "Sangue nelle urine", "Respiro affannoso"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale fattore è indispensabile per l’assorbimento della vitamina B12?",
+      "answers": ["Fattore intrinseco", "Pepsina", "Bile", "Vitamina D"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa provoca l’iponatriemia?",
+      "answers": ["Bassi livelli di sodio nel sangue", "Eccesso di potassio", "Alti livelli di calcio", "Deficit di glucosio"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l’organo principalmente responsabile dell’omeostasi acido-base?",
+      "answers": ["Rene", "Fegato", "Cuore", "Pancreas"],
+      "correctIndex": 0
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Quale farmaco è comunemente usato come antagonista dell’aldosterone nello scompenso cardiaco?",
+      "answers": ["Spironolattone", "Furosemide", "Lisinopril", "Amlodipina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale patologia si osserva tipicamente una ‘cellula a occhio di civetta’ all’esame istologico?",
+      "answers": ["Mononucleosi infettiva", "Linfoma di Hodgkin", "Tubercolosi", "Sarcoidosi"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale tra le seguenti affermazioni descrive il meccanismo d’azione degli inibitori della DPP-4?",
+      "answers": ["Prolungano l’azione del GLP-1 aumentando l’insulina", "Inibiscono la secrezione di glucagone direttamente", "Stimolano la gluconeogenesi", "Aumentano la lipolisi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il principale effetto collaterale del trattamento con amiodarone?",
+      "answers": ["Tossicità polmonare", "Ipoglicemia", "Alopecia", "Ipertrofia gengivale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la differenza principale tra artrite reumatoide e osteoartrosi all’imaging radiologico?",
+      "answers": ["Erosioni marginali nelle articolazioni colpite", "Calcificazioni periarticolari", "Ispessimento della corticale ossea", "Presenza di cisti sinoviali"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale delle seguenti condizioni può portare a iponatriemia euvolemica?",
+      "answers": ["Sindrome da inappropriata secrezione di ADH (SIADH)", "Insufficienza cardiaca", "Carenza di sodio nella dieta", "Vomito prolungato"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il segno di Grey-Turner è indicativo di quale condizione?",
+      "answers": ["Pancreatite acuta emorragica", "Colica renale", "Appendicite", "Trombosi portale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nella classificazione TNM, cosa indica una categoria T4?",
+      "answers": ["Invasione di organi adiacenti", "Tumore confinato al tessuto d'origine", "Presenza di metastasi linfonodali", "Tumore in fase iniziale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale test è più indicato per confermare una diagnosi di feocromocitoma?",
+      "answers": ["Dosaggio delle metanefrine plasmatiche", "TAC addome", "Test di soppressione al desametasone", "Dosaggio della aldosterone/renina"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La sindrome di Cushing può essere causata da:",
+      "answers": ["Adenoma ipofisario ACTH-secernente", "Diabete mellito", "Ipertiroidismo", "Feocromocitoma"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale condizione si osservano tipicamente granulomi non caseosi?",
+      "answers": ["Sarcoidosi", "Tubercolosi", "Brucellosi", "Aspergillosi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la complicanza più comune dell’endocardite infettiva?",
+      "answers": ["Insufficienza valvolare", "Infarto miocardico", "Aritmia ventricolare", "Emorragia cerebrale"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale fra le seguenti mutazioni è frequentemente associata al carcinoma colorettale ereditario non poliposico (HNPCC)?",
+      "answers": ["MLH1", "BRCA1", "TP53", "RET"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è l’agente eziologico più comune di polmonite acquisita in comunità?",
+      "answers": ["Streptococcus pneumoniae", "Haemophilus influenzae", "Mycoplasma pneumoniae", "Klebsiella pneumoniae"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La manovra di Valsalva è utile per valutare:",
+      "answers": ["Tono vagale e risposta baroriflessa", "Funzione epatica", "Conduzione ventricolare", "Pressione arteriosa sistolica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In caso di infarto miocardico inferiore, quale derivazione ECG mostra solitamente ST elevato?",
+      "answers": ["DII, DIII, aVF", "V1-V2", "aVR", "V5-V6"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La sindrome nefrosica è caratterizzata da:",
+      "answers": ["Proteinuria > 3,5 g/die, ipoalbuminemia, edema", "Ematuria e proteinuria lieve", "Ridotta filtrazione glomerulare", "Glicosuria e iperkaliemia"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quale score si usa per valutare il rischio di ictus nei pazienti con fibrillazione atriale?",
+      "answers": ["CHA2DS2-VASc", "Glasgow", "Wells", "APACHE II"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il meccanismo patogenetico del lupus eritematoso sistemico?",
+      "answers": ["Autoanticorpi contro il DNA e complessi immuni", "Infezione virale acuta", "Deficit di complemento C1q", "Mutazione somatica acquisita"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si intende per 'ipertensione resistente'?",
+      "answers": ["Pressione alta non controllata con almeno 3 farmaci", "Ipertensione secondaria a tumori", "Ipertensione solo notturna", "Ipertensione isolata sistolica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Un aumento isolato della bilirubina indiretta può essere osservato in:",
+      "answers": ["Sindrome di Gilbert", "Ittero ostruttivo", "Cirrosi biliare primaria", "Colangite sclerosante"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il trattamento di prima linea per la trombosi venosa profonda?",
+      "answers": ["Eparina a basso peso molecolare", "Aspirina", "Statine", "Beta-bloccanti"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale condizione si può osservare il segno di Rovsing positivo?",
+      "answers": ["Appendicite acuta", "Colite ulcerosa", "Calcolosi renale", "Gastrite"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il trattamento d’elezione per l’ipertiroidismo da morbo di Basedow è:",
+      "answers": ["Metimazolo", "Levotiroxina", "Insulina", "Cortisonici"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è la complicanza più temuta dell’aneurisma dell’aorta addominale?",
+      "answers": ["Rottura", "Ictus", "Trombosi venosa profonda", "Dissezione aortica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In quale caso si ha ipocalcemia con iperfosfatemia?",
+      "answers": ["Ipoparatiroidismo", "Iperparatiroidismo primario", "Morbo di Addison", "Tireotossicosi"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La glomerulonefrite post-streptococcica è un esempio di quale tipo di reazione immunitaria?",
+      "answers": ["Tipo III (immunocomplessi)", "Tipo I (IgE)", "Tipo II (citotossica)", "Tipo IV (ritardata)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "La sindrome di Klinefelter è dovuta a quale anomalia cromosomica?",
+      "answers": ["XXY", "XO", "XXX", "XYY"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Qual è il trattamento più efficace per il carcinoma midollare della tiroide?",
+      "answers": ["Tiroidectomia totale", "Terapia con iodio radioattivo", "Antibiotici", "Terapia cortisonica"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa indica la presenza di cellule Reed-Sternberg all’esame istologico?",
+      "answers": ["Linfoma di Hodgkin", "Linfoma non Hodgkin", "Leucemia mieloide", "Mieloma multiplo"],
+      "correctIndex": 0
+    }
+  ]
 }
 }
