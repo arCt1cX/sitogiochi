@@ -1,4 +1,4 @@
-// TikTakEmoji Game Logic
+// TicTacTopics Game Logic
 let gameState = {
     filmsAndSeries: {}, // Store all entries from combinazioni_film_e_serie.json
     categories: {}, // Store all categories
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await fetchFilmsAndSeries();
     
     // Check if there's a password saved in localStorage
-    const savedPassword = localStorage.getItem("tiktakemoji_password");
+    const savedPassword = localStorage.getItem("tictactopics_password");
     if (savedPassword === GAME_PASSWORD) {
         // If correct password is saved, skip to instructions
         showScreen("instructions");
@@ -238,7 +238,7 @@ function showScreen(screenName) {
     
     // If showing the instructions or game screen, save the password
     if (screenName === "instructions" || screenName === "game") {
-        localStorage.setItem("tiktakemoji_password", GAME_PASSWORD);
+        localStorage.setItem("tictactopics_password", GAME_PASSWORD);
     }
 }
 

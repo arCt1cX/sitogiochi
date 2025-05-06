@@ -447,14 +447,14 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
-            id: "tiktakemoji",
-            displayName: getTranslation('tiktakemoji', 'title'),
-            catchphrase: getTranslation('tiktakemoji', 'catchphrase'),
+            id: "tictactopics",
+            displayName: getTranslation('tictactopics', 'title'),
+            catchphrase: getTranslation('tictactopics', 'catchphrase'),
             iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
                 <!-- Light background glow -->
                 <circle cx="40" cy="40" r="30" fill="rgba(123,104,238,0.1)" />
                 
-                <!-- Game board with emoji labels -->
+                <!-- Game board with topics -->
                 <rect x="15" y="15" width="50" height="50" rx="3" fill="none" stroke="white" stroke-width="1.5" />
                 
                 <!-- Grid lines -->
@@ -463,37 +463,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 <line x1="15" y1="32" x2="65" y2="32" stroke="white" stroke-width="1" />
                 <line x1="15" y1="48" x2="65" y2="48" stroke="white" stroke-width="1" />
                 
-                <!-- Emoji labels for rows and columns -->
+                <!-- Category labels for rows and columns -->
                 <circle cx="10" cy="24" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="26" font-size="4" text-anchor="middle" fill="white">🍕</text>
+                <text x="10" y="26" font-size="4" text-anchor="middle" fill="white">A</text>
                 
                 <circle cx="10" cy="40" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="42" font-size="4" text-anchor="middle" fill="white">🐶</text>
+                <text x="10" y="42" font-size="4" text-anchor="middle" fill="white">B</text>
                 
                 <circle cx="10" cy="56" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="58" font-size="4" text-anchor="middle" fill="white">👻</text>
+                <text x="10" y="58" font-size="4" text-anchor="middle" fill="white">C</text>
                 
                 <circle cx="24" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="24" y="12" font-size="4" text-anchor="middle" fill="white">❤️</text>
+                <text x="24" y="12" font-size="4" text-anchor="middle" fill="white">X</text>
                 
                 <circle cx="40" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="40" y="12" font-size="4" text-anchor="middle" fill="white">🦴</text>
+                <text x="40" y="12" font-size="4" text-anchor="middle" fill="white">Y</text>
                 
                 <circle cx="56" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="56" y="12" font-size="4" text-anchor="middle" fill="white">🎉</text>
+                <text x="56" y="12" font-size="4" text-anchor="middle" fill="white">Z</text>
                 
-                <!-- Player tokens and emojis -->
+                <!-- Player tokens and topics -->
                 <circle cx="24" cy="24" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
-                <text x="24" y="26" font-size="6" text-anchor="middle" fill="white">😍</text>
+                <text x="24" y="26" font-size="4" text-anchor="middle" fill="white">Movie1</text>
                 
                 <circle cx="40" cy="24" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
-                <text x="40" y="26" font-size="6" text-anchor="middle" fill="white">🦮</text>
+                <text x="40" y="26" font-size="4" text-anchor="middle" fill="white">TV Show</text>
                 
                 <circle cx="56" cy="40" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
-                <text x="56" y="42" font-size="6" text-anchor="middle" fill="white">🎃</text>
+                <text x="56" y="42" font-size="4" text-anchor="middle" fill="white">Book</text>
                 
                 <circle cx="40" cy="56" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
-                <text x="40" y="58" font-size="6" text-anchor="middle" fill="white">😱</text>
+                <text x="40" y="58" font-size="4" text-anchor="middle" fill="white">Game</text>
                 
                 <!-- Diagonal win line -->
                 <line x1="18" y1="18" x2="62" y2="62" stroke="rgba(255,215,0,0.6)" stroke-width="2" stroke-dasharray="3 2" />
@@ -503,9 +503,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <circle cx="56" cy="56" r="2" fill="rgba(255,255,255,0.5)" />
                 <path d="M54,54 L58,58 M58,54 L54,58" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
                 
-                <!-- Emoji selection popup -->
+                <!-- Topic selection popup -->
                 <rect x="50" y="70" width="20" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="0.8" />
-                <text x="55" y="74" font-size="4" fill="white">💀 👻 😱</text>
+                <text x="55" y="74" font-size="3" fill="white">Film Topic</text>
                 <path d="M56,65 L56,70" stroke="white" stroke-width="0.5" stroke-dasharray="1 1" />
             </svg>`
         }

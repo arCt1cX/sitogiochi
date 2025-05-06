@@ -58,9 +58,9 @@ const translations = {
             'title': 'Quizzy',
             'catchphrase': 'Sfida i tuoi amici in un divertente gioco a quiz!'
         },
-        'tiktakemoji': {
-            'title': 'TikTakEmoji',
-            'catchphrase': 'Versione del tris con connessioni di emoji!'
+        'tictactopics': {
+            'title': 'TicTacTopics',
+            'catchphrase': 'Tris con argomenti tematici, film, serie TV e molto altro!'
         }
     },
     'en': {
@@ -121,9 +121,9 @@ const translations = {
             'title': 'Quizzy',
             'catchphrase': 'Challenge your friends in a fun quiz game!'
         },
-        'tiktakemoji': {
-            'title': 'TikTakEmoji',
-            'catchphrase': 'Tic-Tac-Toe with emoji connections!'
+        'tictactopics': {
+            'title': 'TicTacTopics',
+            'catchphrase': 'Tic-Tac-Toe with thematic topics, movies, TV shows and more!'
         }
     }
 };
