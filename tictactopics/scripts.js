@@ -168,7 +168,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         // If correct password is saved, skip to instructions
         showScreen("instructions");
     }
+    
+    // Initialize translations for the game buttons
+    updateGameButtonsTranslations();
 });
+
+// Function to update translations for game buttons
+function updateGameButtonsTranslations() {
+    document.getElementById("endGameText").textContent = window.getTranslation("endGameText");
+    document.getElementById("newGameText").textContent = window.getTranslation("newGameText");
+    document.getElementById("changeTopicText").textContent = window.getTranslation("changeTopicText");
+}
 
 // Show topic selection screen
 function showTopicSelection() {
@@ -220,6 +230,9 @@ async function startGame() {
     
     // Hide new game button until the game is over
     document.getElementById("new-game").style.display = "none";
+    
+    // Update translations for game buttons
+    updateGameButtonsTranslations();
     
     // Show game screen
     showScreen("game");
@@ -1363,6 +1376,9 @@ function endGame(isDraw) {
     document.getElementById("new-game").style.display = "block";
     document.getElementById("end-game").style.display = "none";
     document.getElementById("change-topic").style.display = "block";
+    
+    // Update translations for game buttons
+    updateGameButtonsTranslations();
 }
 
 // Declare the game as a draw
@@ -1383,6 +1399,9 @@ function declareGameDraw() {
     document.getElementById("new-game").style.display = "block";
     document.getElementById("end-game").style.display = "none";
     document.getElementById("change-topic").style.display = "block";
+    
+    // Update translations for game buttons
+    updateGameButtonsTranslations();
 }
 
 // Helper function to shuffle array
@@ -1478,5 +1497,9 @@ async function startNewGameSameTopic() {
     resetGameState();
     selectRandomCategories();
     createGameBoard();
+    
+    // Update translations for game buttons
+    updateGameButtonsTranslations();
+    
     showScreen("game");
 } 
