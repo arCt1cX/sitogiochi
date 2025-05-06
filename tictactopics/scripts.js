@@ -109,7 +109,7 @@ async function fetchTopicData(topicId) {
         if (topicId === 'movies-tv') {
             jsonFile = lang === 'en' ? "movies_tv_en.json" : "movies_tv.json";
         } else if (topicId === 'songs') {
-            jsonFile = lang === 'en' ? "combinazioni_canzoni_en.json" : "combinazioni_canzoni.json";
+            jsonFile = lang === 'en' ? "songs_en.json" : "songs.json";
         } else if (topicId === 'video-games') {
             jsonFile = lang === 'en' ? "video_games_en.json" : "video_games.json";
         } else {

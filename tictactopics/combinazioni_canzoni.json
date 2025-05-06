@@ -86,10 +86,25 @@
     ],
     "feat": [
       "no",
-      "1",
-      "2",
-      "3",
-      "gruppo"
+      "Daddy Yankee",
+      "Blanco",
+      "Bradley Cooper",
+      "Snoop Dogg",
+      "Jay-Z",
+      "Ariana Grande",
+      "Post Malone",
+      "Cardi B",
+      "Drake",
+      "Justin Bieber",
+      "Nicki Minaj",
+      "Travis Scott",
+      "Elisa",
+      "Sfera Ebbasta",
+      "Elodie",
+      "Salmo",
+      "Tiziano Ferro",
+      "J Balvin",
+      "Bad Bunny"
     ]
   },
   "entries": [
@@ -136,7 +151,7 @@
       "genere": ["Reggaeton", "Pop"],
       "tema": ["Amore", "Festa"],
       "anni": "2010s",
-      "feat": "1"
+      "feat": "Daddy Yankee"
     },
     {
       "title": "Hello",
@@ -154,7 +169,7 @@
       "genere": ["Pop", "Indie"],
       "tema": ["Amore", "Vulnerabilità"],
       "anni": "2020s",
-      "feat": "1"
+      "feat": "Blanco"
     },
     {
       "title": "Bad Guy",
@@ -235,7 +250,7 @@
       "genere": ["Pop", "Country"],
       "tema": ["Amore", "Crescita"],
       "anni": "2010s",
-      "feat": "1"
+      "feat": "Bradley Cooper"
     },
     {
       "title": "PERSONE",
@@ -274,21 +289,30 @@
       "feat": "no"
     },
     {
-      "title": "Love The Way You Lie",
-      "autore": "Eminem",
-      "lingua": "Inglese",
-      "genere": ["Hip Hop", "Pop"],
-      "tema": ["Relazioni", "Violenza"],
+      "title": "Mi Gente",
+      "autore": "J Balvin",
+      "lingua": "Spagnolo",
+      "genere": ["Reggaeton", "Dance"],
+      "tema": ["Festa", "Divertimento"],
       "anni": "2010s",
-      "feat": "1"
+      "feat": "Willy William"
     },
     {
-      "title": "Permission to Dance",
-      "autore": "BTS",
+      "title": "SICKO MODE",
+      "autore": "Travis Scott",
       "lingua": "Inglese",
-      "genere": ["K-pop", "Pop"],
-      "tema": ["Libertà", "Felicità"],
-      "anni": "2020s",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Potere"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "L'amour Toujours",
+      "autore": "Gigi D'Agostino",
+      "lingua": "Francese",
+      "genere": ["Dance", "Elettronica"],
+      "tema": ["Amore", "Eternità"],
+      "anni": "2000s",
       "feat": "no"
     },
     {
@@ -298,43 +322,16 @@
       "genere": ["Hip Hop", "Trap"],
       "tema": ["Fama", "Stile di vita"],
       "anni": "2010s",
-      "feat": "1"
+      "feat": "21 Savage"
     },
     {
-      "title": "Una su un milione",
-      "autore": "Ermal Meta",
+      "title": "Mille",
+      "autore": "Fedez",
       "lingua": "Italiano",
-      "genere": "Pop",
-      "tema": ["Amore", "Unicità"],
-      "anni": "2010s",
-      "feat": "no"
-    },
-    {
-      "title": "Chained to the Rhythm",
-      "autore": "Katy Perry",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Dance"],
-      "tema": ["Società", "Consapevolezza"],
-      "anni": "2010s",
-      "feat": "1"
-    },
-    {
-      "title": "Fai Rumore",
-      "autore": "Diodato",
-      "lingua": "Italiano",
-      "genere": "Pop",
-      "tema": ["Amore", "Comunicazione"],
+      "genere": ["Pop", "Rap"],
+      "tema": ["Estate", "Divertimento"],
       "anni": "2020s",
-      "feat": "no"
-    },
-    {
-      "title": "Someone Like You",
-      "autore": "Adele",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Soul"],
-      "tema": ["Rottura", "Accettazione"],
-      "anni": "2010s",
-      "feat": "no"
+      "feat": "Achille Lauro, Orietta Berti"
     },
     {
       "title": "Tusa",
@@ -342,88 +339,43 @@
       "lingua": "Spagnolo",
       "genere": ["Reggaeton", "Pop"],
       "tema": ["Rottura", "Empowerment"],
-      "anni": "2010s",
-      "feat": "1"
-    },
-    {
-      "title": "Volare",
-      "autore": "Domenico Modugno",
-      "lingua": "Italiano",
-      "genere": "Pop",
-      "tema": ["Libertà", "Sogno"],
-      "anni": "1950s",
-      "feat": "no"
-    },
-    {
-      "title": "Thriller",
-      "autore": "Michael Jackson",
-      "lingua": "Inglese",
-      "genere": ["Pop", "R&B"],
-      "tema": ["Paura", "Suspense"],
-      "anni": "1980s",
-      "feat": "no"
-    },
-    {
-      "title": "Levitating",
-      "autore": "Dua Lipa",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Disco"],
-      "tema": ["Amore", "Festa"],
       "anni": "2020s",
-      "feat": "1"
-    },
-    {
-      "title": "Mille",
-      "autore": "Fedez",
-      "lingua": "Italiano",
-      "genere": ["Pop", "Dance"],
-      "tema": ["Estate", "Divertimento"],
-      "anni": "2020s",
-      "feat": "2"
-    },
-    {
-      "title": "Stairway to Heaven",
-      "autore": "Led Zeppelin",
-      "lingua": "Inglese",
-      "genere": "Rock",
-      "tema": ["Spiritualità", "Ricerca"],
-      "anni": "1970s",
-      "feat": "no"
-    },
-    {
-      "title": "Imagine",
-      "autore": "John Lennon",
-      "lingua": "Inglese",
-      "genere": "Pop",
-      "tema": ["Pace", "Utopia"],
-      "anni": "1970s",
-      "feat": "no"
+      "feat": "Nicki Minaj"
     },
     {
       "title": "WAP",
       "autore": "Cardi B",
       "lingua": "Inglese",
       "genere": ["Hip Hop", "Rap"],
-      "tema": ["Sessualità", "Empowerment"],
+      "tema": ["Sessualità", "Potere"],
       "anni": "2020s",
-      "feat": "1"
+      "feat": "Megan Thee Stallion"
     },
     {
-      "title": "Tanti Auguri",
-      "autore": "Raffaella Carrà",
+      "title": "Italiana",
+      "autore": "J-Ax",
       "lingua": "Italiano",
-      "genere": ["Pop", "Disco"],
-      "tema": ["Festa", "Divertimento"],
-      "anni": "1970s",
+      "genere": ["Pop", "Rap"],
+      "tema": ["Identità", "Estate"],
+      "anni": "2010s",
+      "feat": "Fedez"
+    },
+    {
+      "title": "God's Plan",
+      "autore": "Drake",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Successo", "Generosità"],
+      "anni": "2010s",
       "feat": "no"
     },
     {
-      "title": "Sweet Child O' Mine",
-      "autore": "Guns N' Roses",
+      "title": "Imagine",
+      "autore": "John Lennon",
       "lingua": "Inglese",
-      "genere": ["Rock", "Hard Rock"],
-      "tema": ["Amore", "Innocenza"],
-      "anni": "1980s",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Pace", "Unità"],
+      "anni": "1970s",
       "feat": "no"
     },
     {
@@ -431,34 +383,7 @@
       "autore": "PSY",
       "lingua": "Coreano",
       "genere": ["K-pop", "Dance"],
-      "tema": ["Satira", "Divertimento"],
-      "anni": "2010s",
-      "feat": "no"
-    },
-    {
-      "title": "My Heart Will Go On",
-      "autore": "Celine Dion",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Ballata"],
-      "tema": ["Amore", "Perdita"],
-      "anni": "1990s",
-      "feat": "no"
-    },
-    {
-      "title": "Maledetta Primavera",
-      "autore": "Loretta Goggi",
-      "lingua": "Italiano",
-      "genere": "Pop",
-      "tema": ["Amore", "Gelosia"],
-      "anni": "1980s",
-      "feat": "no"
-    },
-    {
-      "title": "Pookie",
-      "autore": "Aya Nakamura",
-      "lingua": "Francese",
-      "genere": ["R&B", "Afrobeat"],
-      "tema": ["Relazioni", "Tradimento"],
+      "tema": ["Festa", "Satira"],
       "anni": "2010s",
       "feat": "no"
     },
@@ -467,26 +392,116 @@
       "autore": "Måneskin",
       "lingua": "Inglese",
       "genere": ["Rock", "Pop"],
-      "tema": ["Supplica", "Relazioni"],
+      "tema": ["Amore", "Dipendenza"],
       "anni": "2020s",
       "feat": "no"
     },
     {
-      "title": "Sabato Sera",
-      "autore": "Elodie",
-      "lingua": "Italiano",
-      "genere": ["Pop", "R&B"],
-      "tema": ["Festa", "Libertà"],
-      "anni": "2020s",
-      "feat": "no"
-    },
-    {
-      "title": "Butter",
-      "autore": "BTS",
+      "title": "Uptown Funk",
+      "autore": "Mark Ronson",
       "lingua": "Inglese",
-      "genere": ["K-pop", "Dance"],
-      "tema": ["Attrazione", "Divertimento"],
+      "genere": ["Funk", "Pop"],
+      "tema": ["Festa", "Fiducia"],
+      "anni": "2010s",
+      "feat": "Bruno Mars"
+    },
+    {
+      "title": "MAMBO SALENTINO",
+      "autore": "Boomdabash",
+      "lingua": "Italiano",
+      "genere": ["Reggae", "Dance"],
+      "tema": ["Estate", "Amore"],
+      "anni": "2010s",
+      "feat": "Alessandra Amoroso"
+    },
+    {
+      "title": "Thinking Out Loud",
+      "autore": "Ed Sheeran",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Soul"],
+      "tema": ["Amore", "Eternità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Una Vita In Vacanza",
+      "autore": "Lo Stato Sociale",
+      "lingua": "Italiano",
+      "genere": ["Indie", "Pop"],
+      "tema": ["Società", "Critica"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Billie Jean",
+      "autore": "Michael Jackson",
+      "lingua": "Inglese",
+      "genere": ["Pop", "R&B"],
+      "tema": ["Scandalo", "Negazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Fai Rumore",
+      "autore": "Diodato",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Indie"],
+      "tema": ["Rottura", "Comunicazione"],
       "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "I Want It That Way",
+      "autore": "Backstreet Boys",
+      "lingua": "Inglese",
+      "genere": "Pop",
+      "tema": ["Amore", "Desiderio"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "I Gotta Feeling",
+      "autore": "Black Eyed Peas",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Dance"],
+      "tema": ["Festa", "Ottimismo"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "KARAOKE",
+      "autore": "Boomdabash",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Reggae"],
+      "tema": ["Estate", "Divertimento"],
+      "anni": "2020s",
+      "feat": "Alessandra Amoroso"
+    },
+    {
+      "title": "Old Town Road",
+      "autore": "Lil Nas X",
+      "lingua": "Inglese",
+      "genere": ["Country", "Trap"],
+      "tema": ["Viaggio", "Libertà"],
+      "anni": "2010s",
+      "feat": "Billy Ray Cyrus"
+    },
+    {
+      "title": "Volare",
+      "autore": "Domenico Modugno",
+      "lingua": "Italiano",
+      "genere": ["Pop", "Classica"],
+      "tema": ["Sogno", "Libertà"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Seven Nation Army",
+      "autore": "The White Stripes",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Alternative"],
+      "tema": ["Determinazione", "Forza"],
+      "anni": "2000s",
       "feat": "no"
     }
   ]
