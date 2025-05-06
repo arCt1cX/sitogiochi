@@ -293,7 +293,7 @@ Divisa
 Fischio
 Arbitro
 Partita
-Gol
+Goal
 Vittoria
 Sconfitta
 Pareggio

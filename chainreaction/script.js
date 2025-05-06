@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Game Variables
     let words = [];
+    let usedWords = []; // Track words that have been used
     let currentWord = '';
     let score = 0;
     let passesRemaining = 3;
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the game
     async function initGame() {
         words = await fetchWords();
+        usedWords = []; // Reset used words when initializing
         console.log("Loaded words:", words.length); // Debug log
         
         // Button event listeners
@@ -133,9 +135,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Get a random index
-        const randomIndex = Math.floor(Math.random() * words.length);
-        currentWord = words[randomIndex];
+        // If we've used most of the words, reset the used words list to allow re-using words
+        // This ensures we eventually use all words but still maintain good variety
+        if (usedWords.length >= words.length * 0.7) { // Reset after using 70% of all words
+            console.log("Resetting used words tracking - used", usedWords.length, "of", words.length);
+            usedWords = [];
+        }
+        
+        // Find words that haven't been used yet
+        const availableWords = words.filter(word => !usedWords.includes(word));
+        
+        if (availableWords.length === 0) {
+            // This should rarely happen (if all words are in usedWords but we haven't reached 
+            // the threshold to reset)
+            usedWords = [];
+            getNewWord(); // Try again with empty usedWords
+            return;
+        }
+        
+        // Get a random index from available words
+        const randomIndex = Math.floor(Math.random() * availableWords.length);
+        currentWord = availableWords[randomIndex];
+        
+        // Add the word to the used words list
+        usedWords.push(currentWord);
+        
         wordDisplay.textContent = currentWord;
     }
     
@@ -256,6 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
         timeRemaining = 60;
         isPaused = true;
         isGamePaused = true;
+        
+        // Note: We don't reset usedWords here to maintain variety across game sessions
         
         // Update UI
         updateUI();
