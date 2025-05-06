@@ -203,7 +203,7 @@ function showTopicSelection() {
     document.getElementById("moviesTVDesc").textContent = window.getTranslation("moviesTVDesc");
     document.getElementById("videoGamesTitle").textContent = window.getTranslation("videoGamesTitle");
     document.getElementById("songsTitle").textContent = window.getTranslation("songsTitle");
-    document.getElementById("comingSoonText").textContent = window.getTranslation("comingSoonText");
+    document.getElementById("songsDesc").textContent = window.getTranslation("songsDesc");
     document.getElementById("comingSoonText2").textContent = window.getTranslation("comingSoonText");
     
     // Add click event to topic cards
