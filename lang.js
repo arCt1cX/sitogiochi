@@ -19,20 +19,71 @@ const translations = {
         
         // Navigation Items
         'navHome': 'Home',
+        'navGames': 'Giochi',
         'navAbout': 'Chi Siamo',
         'navLegalHeader': 'Legale',
         'navPrivacy': 'Privacy Policy',
         'navTerms': 'Termini di Servizio',
         'navCookies': 'Cookie Policy',
         
+        // Games Catalog Page
+        'gamesPageTitle': 'La Collezione Completa dei Giochi',
+        'gamesIntro': 'Benvenuti nella nostra collezione completa di giochi! Qui puoi esplorare ogni gioco nel dettaglio, imparare come si gioca e scoprire suggerimenti per rendere l\'esperienza ancora più divertente. Tutti i nostri giochi sono progettati per essere giocati con amici offline, senza bisogno di internet dopo il caricamento iniziale.',
+        'tocTitle': 'Indice dei Giochi',
+        'playNow': 'Gioca Ora',
+        'features': 'Caratteristiche',
+        'howToPlay': 'Come Giocare',
+        'playersNeeded': 'Giocatori Necessari',
+        'duration': 'Durata',
+        'difficulty': 'Difficoltà',
+        'beginner': 'Principiante',
+        'intermediate': 'Intermedio',
+        'advanced': 'Avanzato',
+        'minutes': 'minuti',
+        'players': 'giocatori',
+        
         // Game titles and descriptions
         'impostor': {
             'title': 'Impostor',
-            'catchphrase': 'Scopri chi mente nel gruppo!'
+            'catchphrase': 'Scopri chi mente nel gruppo!',
+            'description': 'Impostor è un gioco di deduzione sociale dove un giocatore è l\'impostore che non conosce l\'argomento. Gli altri giocatori devono scoprire chi è l\'impostore, mentre l\'impostore cerca di mimetizzarsi e identificare l\'argomento segreto.',
+            'players': '4-10 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Modalità di gioco casuale e personalizzata',
+                'Centinaia di argomenti predefiniti',
+                'Timer integrato per le discussioni',
+                'Interfaccia semplice e intuitiva'
+            ],
+            'instructions': [
+                'Un giocatore sarà scelto casualmente come impostore',
+                'A tutti gli altri giocatori viene mostrato un argomento segreto',
+                'A turno, ogni giocatore deve dire una parola relativa all\'argomento',
+                'Dopo alcuni turni, tutti votano per chi pensano sia l\'impostore',
+                'L\'impostore vince se non viene individuato o se indovina l\'argomento'
+            ]
         },
         'colorgrid': {
             'title': 'Color Grid',
-            'catchphrase': 'Indovina la cella colorata segreta!'
+            'catchphrase': 'Indovina la cella colorata segreta!',
+            'description': 'In Color Grid, i giocatori devono indovinare la posizione di una cella colorata nascosta in una griglia. Ad ogni tentativo, riceveranno un indizio sulla distanza dalla cella segreta. Un gioco di logica e deduzione perfetto per sfidare gli amici!',
+            'players': '2-8 giocatori',
+            'time': '5-10 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Griglie di diverse dimensioni (da 5x5 a 10x10)',
+                'Modalità competitiva e cooperativa',
+                'Sistema di punteggi basato sui tentativi',
+                'Design colorato e accattivante'
+            ],
+            'instructions': [
+                'Scegli la dimensione della griglia',
+                'Una cella colorata viene nascosta casualmente',
+                'I giocatori fanno a turno per indovinare',
+                'Dopo ogni tentativo, viene mostrato quanto sei vicino',
+                'Vince chi trova la cella con meno tentativi'
+            ]
         },
         'guessthepic': {
             'title': 'Guess Rush',
@@ -82,20 +133,71 @@ const translations = {
         
         // Navigation Items
         'navHome': 'Home',
+        'navGames': 'Games',
         'navAbout': 'About Us',
         'navLegalHeader': 'Legal',
         'navPrivacy': 'Privacy Policy',
         'navTerms': 'Terms of Service',
         'navCookies': 'Cookie Policy',
         
+        // Games Catalog Page
+        'gamesPageTitle': 'The Complete Collection of Games',
+        'gamesIntro': 'Welcome to our complete collection of games! Here you can explore each game in detail, learn how to play, and discover tips to make the experience even more fun. All our games are designed to be played with friends offline, with no need for internet after the initial loading.',
+        'tocTitle': 'Games Index',
+        'playNow': 'Play Now',
+        'features': 'Features',
+        'howToPlay': 'How to Play',
+        'playersNeeded': 'Players Needed',
+        'duration': 'Duration',
+        'difficulty': 'Difficulty',
+        'beginner': 'Beginner',
+        'intermediate': 'Intermediate',
+        'advanced': 'Advanced',
+        'minutes': 'minutes',
+        'players': 'players',
+        
         // Game titles and descriptions
         'impostor': {
             'title': 'Impostor',
-            'catchphrase': 'Find out who is lying in the group!'
+            'catchphrase': 'Find out who is lying in the group!',
+            'description': 'Impostor is a social deduction game where one player is the impostor who doesn\'t know the topic. The other players must figure out who the impostor is, while the impostor tries to blend in and identify the secret topic.',
+            'players': '4-10 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Random and custom game modes',
+                'Hundreds of predefined topics',
+                'Built-in timer for discussions',
+                'Simple and intuitive interface'
+            ],
+            'instructions': [
+                'One player will be randomly chosen as the impostor',
+                'All other players are shown a secret topic',
+                'Taking turns, each player must say a word related to the topic',
+                'After several rounds, everyone votes for who they think is the impostor',
+                'The impostor wins if they remain undetected or guess the topic'
+            ]
         },
         'colorgrid': {
             'title': 'Color Grid',
-            'catchphrase': 'Guess the secret colored cell!'
+            'catchphrase': 'Guess the secret colored cell!',
+            'description': 'In Color Grid, players must guess the position of a hidden colored cell in a grid. With each attempt, they will receive a clue about the distance from the secret cell. A game of logic and deduction perfect for challenging friends!',
+            'players': '2-8 players',
+            'time': '5-10 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Grids of different sizes (from 5x5 to 10x10)',
+                'Competitive and cooperative modes',
+                'Scoring system based on attempts',
+                'Colorful and engaging design'
+            ],
+            'instructions': [
+                'Choose the grid size',
+                'A colored cell is randomly hidden',
+                'Players take turns guessing',
+                'After each attempt, you\'re shown how close you are',
+                'The player who finds the cell with fewer attempts wins'
+            ]
         },
         'guessthepic': {
             'title': 'Guess Rush',

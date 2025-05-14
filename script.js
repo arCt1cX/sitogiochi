@@ -768,4 +768,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     `;
+
+    // Update navigation text based on language
+    document.addEventListener('DOMContentLoaded', function() {
+        // Navigation will be updated when translations are applied
+        if (typeof applyTranslations === 'function') {
+            const originalApply = applyTranslations;
+            applyTranslations = function() {
+                originalApply();
+                updateNavigationText();
+            };
+        }
+        
+        function updateNavigationText() {
+            if (typeof getTranslation === 'function') {
+                document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
+                document.getElementById('nav-games').textContent = getTranslation('navGames') || 'Games';
+                document.getElementById('nav-about').textContent = getTranslation('navAbout') || 'About Us';
+                document.getElementById('legal-header').textContent = getTranslation('navLegalHeader') || 'Legal';
+                document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
+                document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';
+                document.getElementById('nav-cookies').textContent = getTranslation('navCookies') || 'Cookie Policy';
+            }
+        }
+    });
 }); 

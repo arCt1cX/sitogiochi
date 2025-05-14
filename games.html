@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+      // Run this before other meta tags
+      const preferredLang = navigator.language || navigator.userLanguage;
+      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+      
+      if (isItalian) {
+        document.write('<title id="pageTitle">DrewGames - La Guida Completa ai Nostri Giochi</title>');
+        document.write('<meta id="pageDescription" name="description" content="Esplora la collezione completa di giochi DrewGames: descrizioni dettagliate, istruzioni di gioco e consigli per ogni gioco della nostra collezione.">');
+      } else {
+        document.write('<title>DrewGames - The Complete Guide to Our Games</title>');
+        document.write('<meta id="pageDescription" name="description" content="Explore the complete collection of DrewGames: detailed descriptions, gameplay instructions, and tips for every game in our collection.">');
+      }
+    </script>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.partygamesdrew.com/games.html">
+    <meta property="og:title" content="DrewGames - The Complete Guide to Our Games">
+    <meta property="og:description" content="Explore the complete collection of DrewGames: detailed descriptions, gameplay instructions, and tips for every game in our collection.">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.partygamesdrew.com/games.html">
+    <meta name="twitter:title" content="DrewGames - The Complete Guide to Our Games">
+    <meta name="twitter:description" content="Explore the complete collection of DrewGames: detailed descriptions, gameplay instructions, and tips for every game in our collection.">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
+    
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/games.html?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/games.html?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/games.html" />
+    <script>
+        // Set language as early as possible
+        (function() {
+            function getInitialLang() {
+                // Check URL parameter first
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlLang = urlParams.get('lang');
+                if (urlLang === 'en' || urlLang === 'it') {
+                    return urlLang;
+                }
+                
+                // Check localStorage
+                const storedLang = localStorage.getItem('lang');
+                if (storedLang) {
+                    return storedLang;
+                }
+                
+                // Check browser language
+                const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+                    return 'it';
+                }
+                
+                // Default to English
+                return 'en';
+            }
+            
+            // Set the lang attribute
+            document.documentElement.lang = getInitialLang();
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.partygamesdrew.com/games.html">
+    
+    <!-- JSON-LD structured data for better search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "DrewGames - Complete Game Collection",
+      "url": "https://www.partygamesdrew.com/games.html",
+      "description": "Explore the complete collection of DrewGames: detailed descriptions, gameplay instructions, and tips for every game in our collection.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "DrewGames",
+        "url": "https://www.partygamesdrew.com/"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Sidebar Navigation Styles */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: rgba(35, 30, 65, 0.97);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+        
+        .sidenav a:hover {
+            color: #7b68ee;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid #7b68ee;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            border-left: none;
+            padding: 8px 16px;
+        }
+        
+        .sidenav .closebtn:hover {
+            background-color: transparent;
+            border-left: none;
+        }
+        
+        .sidenav-section {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        
+        .sidenav-header {
+            color: #aaa;
+            font-size: 14px;
+            padding: 5px 25px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hamburger-menu {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 1000;
+            padding: 5px;
+            gap: 5px;
+        }
+        
+        .hamburger-menu div {
+            width: 100%;
+            height: 3.5px;
+            background-color: #7b68ee;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
+        }
+        
+        .hamburger-menu div:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Overlay when sidebar is open */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            transition: 0.3s;
+        }
+        
+        /* Main content shift */
+        #main {
+            transition: margin-left 0.3s;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 16px;}
+        }
+        
+        .tagline {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            font-style: italic;
+            background: linear-gradient(90deg, 
+                #473c8b, 
+                #614dc2, 
+                #7b68ee, 
+                #473c8b);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+            filter: drop-shadow(0 0 2px rgba(71, 60, 139, 0.7));
+            text-shadow: 0 0 15px rgba(71, 60, 139, 0.5);
+        }
+        
+        @keyframes shine {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 300% center;
+            }
+        }
+        
+        .language-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 28px;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flag-icon {
+            width: 24px;
+            height: 16px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Games Catalog Page Specific Styles */
+        .games-catalog {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .games-intro {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .games-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #f1f1f1;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+
+        .game-details {
+            background-color: rgba(123, 104, 238, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-details-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1.5rem;
+        }
+
+        .game-icon-large {
+            width: 120px;
+            height: 120px;
+            flex-shrink: 0;
+        }
+
+        .game-title-section {
+            flex-grow: 1;
+        }
+
+        .game-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #8a7ced, #614dc2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .game-catchphrase {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #d1c7ff;
+        }
+
+        .game-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .game-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f1f1f1;
+        }
+
+        .game-features, .game-instructions {
+            margin-top: 1rem;
+        }
+
+        .game-features h4, .game-instructions h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #d1c7ff;
+        }
+
+        .game-features ul, .game-instructions ol {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-features li, .game-instructions li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .play-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #6a5acd, #9370db);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(122, 103, 238, 0.4);
+        }
+
+        .play-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(122, 103, 238, 0.6);
+            background: linear-gradient(45deg, #7a67ee, #a586e7);
+        }
+
+        .play-button:active {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .game-details-header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+            
+            .game-icon-large {
+                margin: 0 auto 1rem;
+            }
+            
+            .game-title-section {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        
+        .toc {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .toc-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #d1c7ff;
+            text-align: center;
+        }
+        
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .toc-item {
+            background-color: rgba(123, 104, 238, 0.15);
+            border-radius: 50px;
+            padding: 0.5rem 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            background-color: rgba(123, 104, 238, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .toc-link {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="games.html" id="nav-games">Games</a>
+        <a href="about.html" id="nav-about">About Us</a>
+        
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="legal-header">Legal</div>
+            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
+            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
+            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+        </div>
+    </div>
+
+    <!-- Overlay for when sidebar is open -->
+    <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+                <!-- The country flag SVG will be inserted here by JavaScript -->
+            </svg>
+        </button>
+        
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+            </div>
+            <h1>Drew Games</h1>
+            <div id="gamesPageTitle" class="tagline">La Collezione Completa dei Giochi</div>
+        </header>
+
+        <main class="games-catalog">
+            <section class="games-intro">
+                <p id="gamesIntro">Benvenuti nella nostra collezione completa di giochi! Qui puoi esplorare ogni gioco nel dettaglio, imparare come si gioca e scoprire suggerimenti per rendere l'esperienza ancora più divertente. Tutti i nostri giochi sono progettati per essere giocati con amici offline, senza bisogno di internet dopo il caricamento iniziale.</p>
+            </section>
+            
+            <section class="toc">
+                <h3 class="toc-title" id="tocTitle">Indice dei Giochi</h3>
+                <div class="toc-list" id="tocList">
+                    <!-- TOC items will be generated by JavaScript -->
+                </div>
+            </section>
+            
+            <div id="gamesDetailContainer">
+                <!-- Game details will be inserted here by JavaScript -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="social-media-container">
+                    <a href="https://www.instagram.com/partygamesdrew?igsh=MXNjZXM0b2Z2MTA0Mw==" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@drewgames-x5e?si=24OZlWz0AlbBFRCB" target="_blank" class="social-icon" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@partygamesdrew?_t=ZN-8w8IirJpb2E&_r=1" target="_blank" class="social-icon" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                </div>
+                <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
+                <div class="support-container">
+                    <!-- Mobile-friendly BMC button implementation -->
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    </a>
+                    <script>
+                        // Load the official BMC script
+                        (function() {
+                            const script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+                            script.setAttribute('data-name', 'bmc-button');
+                            script.setAttribute('data-slug', 'partygamesdrew');
+                            script.setAttribute('data-color', '#BD5FFF');
+                            script.setAttribute('data-emoji', '');
+                            script.setAttribute('data-font', 'Cookie');
+                            script.setAttribute('data-text', 'Buy me a coffee');
+                            script.setAttribute('data-outline-color', '#000000');
+                            script.setAttribute('data-font-color', '#ffffff');
+                            script.setAttribute('data-coffee-color', '#FFDD00');
+                            
+                            // On script load, hide our fallback if the official button rendered properly
+                            script.onload = function() {
+                                setTimeout(function() {
+                                    const bmcButton = document.querySelector('.bmc-btn');
+                                    if (bmcButton) {
+                                        // If the official button is present, hide our fallback
+                                        document.getElementById('bmc-link').style.display = 'none';
+                                        
+                                        // Add touchend event listener for mobile devices
+                                        bmcButton.addEventListener('touchend', function(e) {
+                                            window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
+                                        });
+                                    }
+                                }, 1000); // Wait a second for the button to render
+                            };
+                            
+                            document.body.appendChild(script);
+                        })();
+                    </script>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="lang.js"></script>
+    <script>
+        // JavaScript for Games Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Apply translations
+            applyTranslations();
+            
+            // Update page content with current language
+            document.getElementById('gamesPageTitle').textContent = getTranslation('gamesPageTitle');
+            document.getElementById('gamesIntro').textContent = getTranslation('gamesIntro');
+            document.getElementById('tocTitle').textContent = getTranslation('tocTitle');
+            document.getElementById('copyright').textContent = getTranslation('copyright');
+            
+            // Games array with detailed information
+            const games = [
+                {
+                    id: "impostor",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                               <!-- Shadow element -->
+                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
+
+                                <!-- Group of silhouettes -->
+                <!-- Left character (suspicious) -->
+                <g class="suspicious-character">
+
+                    <!-- Body with connected head -->
+                                        <path d="M16,65 C16,50 20,45 24,45 C28,45 32,50 32,65" stroke="white" stroke-linecap="round" />
+                    <path d="M18.5,39 C18,36 19,33 24,33 C29,33 30,36 29.5,39 C29,42 28,45 24,45 C20,45 19,42 18.5,39Z" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="24" cy="25" r="9" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
+
+                                        <!-- Suspicious elements -->
+                    <path d="M21,24 L23,22 M25,22 L27,24" stroke="white" stroke-width="1.2" />
+                    <path d="M24,31 C22,29 26,29 24,31" stroke="white" stroke-width="1" />
+                    <path d="M22,55 L26,55" stroke="rgba(255,0,0,0.5)" stroke-width="1.2" stroke-dasharray="1 1" />
+
+                </g>
+                
+                                <!-- Middle character -->
+
+                <g>
+                    <!-- Body with connected head -->
+                                      <path d="M33,65 C33,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
+                    <path d="M35.5,38 C35,35 36,32 40,32 C44,32 45,35 44.5,38 C44,41 43,45 40,45 C37,45 36,41 35.5,38Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="40" cy="22" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+
+                    <path d="M37,21 L39,21 M41,21 L43,21" stroke="white" stroke-width="1.2" />
+                    <path d="M40,27 C38,25 42,25 40,27" stroke="white" stroke-width="1" />
+                </g>
+                
+                <!-- Right character -->
+                <g>
+                    <!-- Body with connected head -->
+                    <path d="M49,65 C49,50 53,45 56,45 C59,45 63,50 63,65" stroke="white" stroke-linecap="round" />
+                    <path d="M51.5,39 C51,36 52,33 56,33 C60,33 61,36 60.5,39 C60,42 59,45 56,45 C53,45 52,42 51.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="56" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
+                    
+                    <path d="M53,24 L55,24 M57,24 L59,24" stroke="white" stroke-width="1.2" />
+                    <path d="M56,30 C54,28 58,28 56,30" stroke="white" stroke-width="1" />
+                </g>
+                
+                <!-- Investigation elements -->
+                <circle cx="24" cy="25" r="14" fill="none" stroke="rgba(255,0,0,0.3)" stroke-width="1" stroke-dasharray="2 2" />
+                <path d="M12,33 L14,33.5 L13,35" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
+                <path d="M36,12 L34,15 L38,14" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
+                
+                <!-- Connection lines suggesting discussion -->
+                <path d="M32,25 L37,23" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
+                <path d="M48,24 L54,24" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
+                
+                <!-- Question mark hovering over the group -->
+                <text x="40" y="12" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+                <circle cx="40" cy="10" r="8" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="1 2" />
+                
+                <!-- Pointing gesture -->
+                <path d="M60,35 C63,38 65,40 63,35" stroke="white" stroke-width="1" />
+                <path d="M63,35 L55,30" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <path d="M45,38 C42,42 39,39 40,36" stroke="white" stroke-width="1" />
+                <path d="M40,36 L32,28" stroke="white" stroke-width="1" stroke-linecap="round" />
+            </svg>`
+                },
+                {
+                    id: "colorgrid",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Grid shadow -->
+                <rect x="17" y="17" width="50" height="50" rx="4" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Main grid -->
+                <rect x="15" y="15" width="50" height="50" rx="4" stroke-width="1.5" />
+                
+                <!-- Grid cells with improved colors and inner details -->
+                <rect x="15" y="15" width="16.6" height="16.6" fill="rgba(255,0,0,0.7)" stroke="white" />
+                <rect x="16.5" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="31.6" y="15" width="16.6" height="16.6" fill="rgba(0,255,0,0.7)" stroke="white" />
+                <rect x="33.1" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                <path d="M39.9,21 L39.9,25 M37.9,23 L41.9,23" stroke="rgba(255,255,255,0.7)" stroke-width="0.8" />
+                
+                <rect x="48.2" y="15" width="16.6" height="16.6" fill="rgba(255,255,0,0.7)" stroke="white" />
+                <rect x="49.7" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="15" y="31.6" width="16.6" height="16.6" fill="rgba(0,0,255,0.7)" stroke="white" />
+                <rect x="16.5" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <!-- Highlighted cell with special effects -->
+                <rect x="31.6" y="31.6" width="16.6" height="16.6" fill="rgba(255,0,255,0.7)" stroke="white" stroke-width="3" />
+                <rect x="33.1" y="33.1" width="13.6" height="13.6" fill="none" stroke="white" stroke-width="0.5" />
+                <circle cx="39.9" cy="39.9" r="5" fill="none" stroke="white" stroke-width="1" />
+                <path d="M35.9,35.9 L43.9,43.9 M43.9,35.9 L35.9,43.9" stroke="white" stroke-width="0.5" />
+                
+                <rect x="48.2" y="31.6" width="16.6" height="16.6" fill="rgba(0,255,255,0.7)" stroke="white" />
+                <rect x="49.7" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="15" y="48.2" width="16.6" height="16.6" fill="rgba(255,165,0,0.7)" stroke="white" />
+                <rect x="16.5" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="31.6" y="48.2" width="16.6" height="16.6" fill="rgba(128,0,128,0.7)" stroke="white" />
+                <rect x="33.1" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <rect x="48.2" y="48.2" width="16.6" height="16.6" fill="rgba(0,128,0,0.7)" stroke="white" />
+                <rect x="49.7" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
+                
+                <!-- Selection cursor -->
+                <path d="M31.6,31.6 L28,28" stroke="white" stroke-width="1" stroke-linecap="round" />
+                <path d="M26,26 L22,22" stroke="white" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2" />
+                <circle cx="20" cy="20" r="3" stroke="white" fill="none" />
+                <path d="M22,18 L18,22 M18,18 L22,22" stroke="white" stroke-width="0.8" />
+            </svg>`
+                }
+                // Add other games here...
+            ];
+            
+            // Generate table of contents
+            const tocList = document.getElementById('tocList');
+            games.forEach(game => {
+                const tocItem = document.createElement('div');
+                tocItem.className = 'toc-item';
+                
+                const tocLink = document.createElement('a');
+                tocLink.className = 'toc-link';
+                tocLink.href = `#${game.id}`;
+                tocLink.textContent = getTranslation(game.id, 'title');
+                
+                tocItem.appendChild(tocLink);
+                tocList.appendChild(tocItem);
+            });
+            
+            // Generate game details
+            const gamesDetailContainer = document.getElementById('gamesDetailContainer');
+            games.forEach(game => {
+                const gameDetail = document.createElement('section');
+                gameDetail.className = 'game-details';
+                gameDetail.id = game.id;
+                
+                // Game header (title, icon, catchphrase)
+                const gameHeader = document.createElement('div');
+                gameHeader.className = 'game-details-header';
+                
+                const gameIcon = document.createElement('div');
+                gameIcon.className = 'game-icon-large';
+                gameIcon.innerHTML = game.iconSvg;
+                
+                const gameTitleSection = document.createElement('div');
+                gameTitleSection.className = 'game-title-section';
+                
+                const gameTitle = document.createElement('h2');
+                gameTitle.className = 'game-title';
+                gameTitle.textContent = getTranslation(game.id, 'title');
+                
+                const gameCatchphrase = document.createElement('div');
+                gameCatchphrase.className = 'game-catchphrase';
+                gameCatchphrase.textContent = getTranslation(game.id, 'catchphrase');
+                
+                gameTitleSection.appendChild(gameTitle);
+                gameTitleSection.appendChild(gameCatchphrase);
+                
+                gameHeader.appendChild(gameIcon);
+                gameHeader.appendChild(gameTitleSection);
+                
+                // Game content
+                const gameContent = document.createElement('div');
+                gameContent.className = 'game-content';
+                
+                // Game description
+                const gameDescription = document.createElement('p');
+                gameDescription.className = 'game-description';
+                gameDescription.textContent = getTranslation(game.id, 'description');
+                
+                // Game info (players, time, difficulty)
+                const gameInfo = document.createElement('div');
+                gameInfo.className = 'game-info';
+                gameInfo.innerHTML = `
+                    <div><strong>${getTranslation('playersNeeded')}:</strong> ${getTranslation(game.id, 'players')}</div>
+                    <div><strong>${getTranslation('duration')}:</strong> ${getTranslation(game.id, 'time')}</div>
+                    <div><strong>${getTranslation('difficulty')}:</strong> ${getTranslation(game.id, 'difficulty')}</div>
+                `;
+                
+                // Game features
+                const gameFeatures = document.createElement('div');
+                gameFeatures.className = 'game-features';
+                
+                const featuresTitle = document.createElement('h4');
+                featuresTitle.textContent = getTranslation('features');
+                
+                const featuresList = document.createElement('ul');
+                const features = getTranslation(game.id, 'features');
+                if (Array.isArray(features)) {
+                    features.forEach(feature => {
+                        const featureItem = document.createElement('li');
+                        featureItem.textContent = feature;
+                        featuresList.appendChild(featureItem);
+                    });
+                }
+                
+                gameFeatures.appendChild(featuresTitle);
+                gameFeatures.appendChild(featuresList);
+                
+                // Game instructions
+                const gameInstructions = document.createElement('div');
+                gameInstructions.className = 'game-instructions';
+                
+                const instructionsTitle = document.createElement('h4');
+                instructionsTitle.textContent = getTranslation('howToPlay');
+                
+                const instructionsList = document.createElement('ol');
+                const instructions = getTranslation(game.id, 'instructions');
+                if (Array.isArray(instructions)) {
+                    instructions.forEach(instruction => {
+                        const instructionItem = document.createElement('li');
+                        instructionItem.textContent = instruction;
+                        instructionsList.appendChild(instructionItem);
+                    });
+                }
+                
+                gameInstructions.appendChild(instructionsTitle);
+                gameInstructions.appendChild(instructionsList);
+                
+                // Play button
+                const playButton = document.createElement('a');
+                playButton.className = 'play-button';
+                playButton.href = `${game.id}/index.html`;
+                playButton.textContent = getTranslation('playNow');
+                
+                // Assemble game content
+                gameContent.appendChild(gameDescription);
+                gameContent.appendChild(gameInfo);
+                gameContent.appendChild(gameFeatures);
+                gameContent.appendChild(gameInstructions);
+                gameContent.appendChild(playButton);
+                
+                // Assemble game detail
+                gameDetail.appendChild(gameHeader);
+                gameDetail.appendChild(gameContent);
+                
+                gamesDetailContainer.appendChild(gameDetail);
+            });
+        });
+    </script>
+    
+    <!-- JavaScript for Sidebar Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("myOverlay").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("myOverlay").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        
+        // Update navigation text based on language
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation will be updated when translations are applied
+            if (typeof applyTranslations === 'function') {
+                const originalApply = applyTranslations;
+                applyTranslations = function() {
+                    originalApply();
+                    updateNavigationText();
+                };
+            }
+            
+            function updateNavigationText() {
+                if (typeof getTranslation === 'function') {
+                    document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
+                    document.getElementById('nav-games').textContent = getTranslation('navGames') || 'Games';
+                    document.getElementById('nav-about').textContent = getTranslation('navAbout') || 'About Us';
+                    document.getElementById('legal-header').textContent = getTranslation('navLegalHeader') || 'Legal';
+                    document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
+                    document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';
+                    document.getElementById('nav-cookies').textContent = getTranslation('navCookies') || 'Cookie Policy';
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
