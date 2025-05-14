@@ -87,31 +87,156 @@ const translations = {
         },
         'guessthepic': {
             'title': 'Guess Rush',
-            'catchphrase': 'Indovina cosa mostrano le 5 immagini e accumula più punti!'
+            'catchphrase': 'Indovina cosa mostrano le 5 immagini e accumula più punti!',
+            'description': 'Guess Rush è un gioco veloce dove dovrai indovinare cosa rappresentano le cinque immagini mostrate sullo schermo. Più velocemente indovini, più punti guadagni! Perfetto per mettere alla prova la tua capacità di osservazione e la tua conoscenza generale.',
+            'players': '2-8 giocatori',
+            'time': '5-10 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Centinaia di immagini diverse',
+                'Sistema di punteggio basato sulla velocità',
+                'Modalità competitiva e collaborativa',
+                'Categorie tematiche variegate'
+            ],
+            'instructions': [
+                'Viene mostrata una serie di 5 immagini sullo schermo',
+                'I giocatori devono indovinare cosa rappresentano le immagini',
+                'Scrivi la tua risposta il più velocemente possibile',
+                'Guadagni punti in base alla velocità con cui indovini',
+                'Vince il giocatore con più punti alla fine'
+            ]
         },
         'timergame': {
             'title': 'Wordrace',
-            'catchphrase': 'Corri contro il tempo in questa sfida di parole!'
+            'catchphrase': 'Corri contro il tempo in questa sfida di parole!',
+            'description': 'Wordrace è un gioco frenetico dove dovrai trovare parole che iniziano con una lettera specifica prima che il tempo finisca. Un ottimo modo per migliorare il tuo vocabolario e la velocità di pensiero sotto pressione!',
+            'players': '2-10 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Intermedio',
+            'features': [
+                'Timer personalizzabile',
+                'Lettera casuale ad ogni round',
+                'Categorie tematiche opzionali',
+                'Sistema di punteggio integrato'
+            ],
+            'instructions': [
+                'Una lettera casuale viene estratta all\'inizio di ogni round',
+                'Il timer parte immediatamente',
+                'Ogni giocatore deve dire una parola che inizia con quella lettera',
+                'Non si possono ripetere parole già dette',
+                'Se un giocatore non trova una parola entro il tempo limite, viene eliminato',
+                'L\'ultimo giocatore rimasto vince'
+            ]
         },
         'chainreaction': {
             'title': 'Chain Reaction',
-            'catchphrase': 'Crea concatenazioni di parole in questa sfida a squadre!'
+            'catchphrase': 'Crea concatenazioni di parole in questa sfida a squadre!',
+            'description': 'Chain Reaction è un gioco di associazioni di parole a squadre. Ogni giocatore deve dire una parola associata alla precedente, creando una catena che si sviluppa in direzioni inaspettate. Un gioco che stimola la creatività e il pensiero laterale!',
+            'players': '4-12 giocatori',
+            'time': '15-20 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Modalità a squadre competitive',
+                'Punteggio basato sulla lunghezza delle catene',
+                'Categorie tematiche opzionali',
+                'Timer opzionale per aumentare la difficoltà'
+            ],
+            'instructions': [
+                'I giocatori si dividono in squadre',
+                'Viene scelta una parola iniziale',
+                'A turno, ogni giocatore deve dire una parola associata a quella detta precedentemente',
+                'Se un giocatore non trova un\'associazione entro il tempo, la catena si interrompe',
+                'La squadra guadagna punti in base alla lunghezza della catena creata',
+                'Vince la squadra che accumula più punti'
+            ]
         },
         'alphabetgame': {
             'title': 'Alphabet Game',
-            'catchphrase': 'Trova parole che iniziano con una lettera specifica!'
+            'catchphrase': 'Trova parole che iniziano con una lettera specifica!',
+            'description': 'Alphabet Game è un gioco di vocabolario dove i giocatori devono trovare parole che iniziano con una lettera specifica e appartengono a una categoria scelta. Un gioco stimolante che metterà alla prova la tua conoscenza e velocità di pensiero!',
+            'players': '2-8 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Molte categorie diverse tra cui scegliere',
+                'Lettere estratte casualmente',
+                'Sistema di punteggio con bonus',
+                'Facile da imparare e giocare'
+            ],
+            'instructions': [
+                'Viene scelta una categoria (es. animali, città, cibo)',
+                'Viene estratta una lettera casuale',
+                'I giocatori a turno devono dire una parola che inizia con quella lettera e appartiene alla categoria',
+                'Non si possono ripetere parole già dette',
+                'Se un giocatore non trova una parola entro il tempo, perde un punto',
+                'Dopo più round, vince chi ha più punti'
+            ]
         },
         'bluffme': {
             'title': 'BluffMe',
-            'catchphrase': 'Riuscirai a bluffare i tuoi amici e vincere la partita?'
+            'catchphrase': 'Riuscirai a bluffare i tuoi amici e vincere la partita?',
+            'description': 'BluffMe è un gioco di bluff e intuizione dove devi contare oggetti di una determinata categoria, ma puoi anche mentire! Gli altri giocatori dovranno decidere se crederti o se metterti alla prova. Un gioco di astuzia e psicologia!',
+            'players': '3-8 giocatori',
+            'time': '15-20 minuti',
+            'difficulty': 'Intermedio',
+            'features': [
+                'Meccaniche di bluff strategico',
+                'Centinaia di categorie diverse',
+                'Sistema di punteggio e penalità',
+                'Dinamiche sociali coinvolgenti'
+            ],
+            'instructions': [
+                'Viene scelta una categoria (es. "animali con la coda")',
+                'A turno, ogni giocatore dice un numero (es. "7") e un elemento della categoria (es. "gatto")',
+                'Il numero deve essere maggiore di quello detto dal giocatore precedente',
+                'Gli altri giocatori possono accettare o dubitare',
+                'Chi dubita correttamente guadagna punti, chi sbaglia ne perde',
+                'Vince chi raggiunge per primo il punteggio stabilito'
+            ]
         },
         'quizzy': {
             'title': 'Quizzy',
-            'catchphrase': 'Sfida i tuoi amici in un divertente gioco a quiz!'
+            'catchphrase': 'Sfida i tuoi amici in un divertente gioco a quiz!',
+            'description': 'Quizzy è un gioco di quiz interattivo con migliaia di domande su vari argomenti: storia, geografia, sport, cinema, musica e molto altro. Testa le tue conoscenze contro gli amici in questa sfida all\'ultimo punto!',
+            'players': '2-8 giocatori',
+            'time': '15-30 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Migliaia di domande in molte categorie',
+                'Livelli di difficoltà personalizzabili',
+                'Sistema di punteggio con bonus',
+                'Modalità a squadre opzionale'
+            ],
+            'instructions': [
+                'Scegli le categorie e la difficoltà del quiz',
+                'Viene mostrata una domanda a tutti i giocatori',
+                'Rispondi il più velocemente possibile selezionando l\'opzione corretta',
+                'Guadagni punti per ogni risposta corretta, con bonus per la velocità',
+                'Possono esserci domande a risposta multipla o vero/falso',
+                'Vince il giocatore con più punti alla fine'
+            ]
         },
         'tictactopics': {
             'title': 'TicTacTopics',
-            'catchphrase': 'Tris con argomenti tematici, film, serie TV e molto altro!'
+            'catchphrase': 'Tris con argomenti tematici, film, serie TV e molto altro!',
+            'description': 'TicTacTopics combina il classico gioco del tris con sfide di conoscenza. Per conquistare una casella, devi rispondere correttamente a una domanda sull\'argomento assegnato. Un mix perfetto di strategia e cultura generale!',
+            'players': '2 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Intermedio',
+            'features': [
+                'Griglia 3x3 con argomenti diversi in ogni casella',
+                'Oltre 20 categorie tematiche',
+                'Difficoltà adattiva in base alle risposte',
+                'Modalità torneo per più giocatori'
+            ],
+            'instructions': [
+                'La griglia 3x3 contiene un argomento diverso in ogni casella',
+                'A turno, i giocatori scelgono una casella da conquistare',
+                'Per conquistare la casella, devi rispondere a una domanda sull\'argomento',
+                'Se rispondi correttamente, conquisti la casella con il tuo simbolo (X o O)',
+                'Se sbagli, la casella rimane libera',
+                'Vince chi forma per primo una linea di tre simboli'
+            ]
         }
     },
     'en': {
@@ -201,31 +326,156 @@ const translations = {
         },
         'guessthepic': {
             'title': 'Guess Rush',
-            'catchphrase': 'Guess what the 5 images show and score points!'
+            'catchphrase': 'Guess what the 5 images show and score points!',
+            'description': 'Guess Rush is a fast-paced game where you need to guess what five images on the screen represent. The faster you guess, the more points you earn! Perfect for testing your observation skills and general knowledge.',
+            'players': '2-8 players',
+            'time': '5-10 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Hundreds of different images',
+                'Speed-based scoring system',
+                'Competitive and collaborative modes',
+                'Various thematic categories'
+            ],
+            'instructions': [
+                'A series of 5 images is shown on the screen',
+                'Players must guess what the images represent',
+                'Write your answer as quickly as possible',
+                'Earn points based on how quickly you guess',
+                'The player with the most points at the end wins'
+            ]
         },
         'timergame': {
             'title': 'Wordrace',
-            'catchphrase': 'Race against time in this word challenge!'
+            'catchphrase': 'Race against time in this word challenge!',
+            'description': 'Wordrace is a frantic game where you need to find words that start with a specific letter before time runs out. A great way to improve your vocabulary and quick thinking under pressure!',
+            'players': '2-10 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Intermediate',
+            'features': [
+                'Customizable timer',
+                'Random letter each round',
+                'Optional thematic categories',
+                'Integrated scoring system'
+            ],
+            'instructions': [
+                'A random letter is drawn at the beginning of each round',
+                'The timer starts immediately',
+                'Each player must say a word that starts with that letter',
+                'Words cannot be repeated',
+                'If a player cannot find a word within the time limit, they are eliminated',
+                'The last player remaining wins'
+            ]
         },
         'chainreaction': {
             'title': 'Chain Reaction',
-            'catchphrase': 'Create word chains in this team challenge!'
+            'catchphrase': 'Create word chains in this team challenge!',
+            'description': 'Chain Reaction is a team word association game. Each player must say a word associated with the previous one, creating a chain that develops in unexpected directions. A game that stimulates creativity and lateral thinking!',
+            'players': '4-12 players',
+            'time': '15-20 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Competitive team modes',
+                'Score based on chain length',
+                'Optional thematic categories',
+                'Optional timer to increase difficulty'
+            ],
+            'instructions': [
+                'Players divide into teams',
+                'An initial word is chosen',
+                'Taking turns, each player must say a word associated with the previously said word',
+                'If a player cannot find an association within the time, the chain breaks',
+                'The team earns points based on the length of the chain created',
+                'The team with the most points wins'
+            ]
         },
         'alphabetgame': {
             'title': 'Alphabet Game',
-            'catchphrase': 'Find words that start with a specific letter!'
+            'catchphrase': 'Find words that start with a specific letter!',
+            'description': 'Alphabet Game is a vocabulary game where players must find words that begin with a specific letter and belong to a chosen category. A stimulating game that will test your knowledge and quick thinking!',
+            'players': '2-8 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Many different categories to choose from',
+                'Randomly drawn letters',
+                'Scoring system with bonuses',
+                'Easy to learn and play'
+            ],
+            'instructions': [
+                'A category is chosen (e.g., animals, cities, food)',
+                'A random letter is drawn',
+                'Players take turns saying a word that starts with that letter and belongs to the category',
+                'Words cannot be repeated',
+                'If a player cannot find a word within the time, they lose a point',
+                'After multiple rounds, the player with the most points wins'
+            ]
         },
         'bluffme': {
             'title': 'BluffMe',
-            'catchphrase': 'Can you bluff your friends and win the game?'
+            'catchphrase': 'Can you bluff your friends and win the game?',
+            'description': 'BluffMe is a game of bluffing and intuition where you must count objects in a specific category, but you can also lie! Other players will have to decide whether to believe you or challenge you. A game of cunning and psychology!',
+            'players': '3-8 players',
+            'time': '15-20 minutes',
+            'difficulty': 'Intermediate',
+            'features': [
+                'Strategic bluffing mechanics',
+                'Hundreds of different categories',
+                'Scoring and penalty system',
+                'Engaging social dynamics'
+            ],
+            'instructions': [
+                'A category is chosen (e.g., "animals with tails")',
+                'Taking turns, each player says a number (e.g., "7") and an item in the category (e.g., "cat")',
+                'The number must be higher than the one said by the previous player',
+                'Other players can accept or doubt',
+                'Correct doubters earn points, incorrect ones lose points',
+                'The first player to reach the set score wins'
+            ]
         },
         'quizzy': {
             'title': 'Quizzy',
-            'catchphrase': 'Challenge your friends in a fun quiz game!'
+            'catchphrase': 'Challenge your friends in a fun quiz game!',
+            'description': 'Quizzy is an interactive quiz game with thousands of questions on various topics: history, geography, sports, movies, music, and much more. Test your knowledge against friends in this challenge to the last point!',
+            'players': '2-8 players',
+            'time': '15-30 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Thousands of questions in many categories',
+                'Customizable difficulty levels',
+                'Scoring system with bonuses',
+                'Optional team mode'
+            ],
+            'instructions': [
+                'Choose the categories and difficulty of the quiz',
+                'A question is shown to all players',
+                'Answer as quickly as possible by selecting the correct option',
+                'Earn points for each correct answer, with bonuses for speed',
+                'There may be multiple-choice or true/false questions',
+                'The player with the most points at the end wins'
+            ]
         },
         'tictactopics': {
             'title': 'TicTacTopics',
-            'catchphrase': 'Tic-Tac-Toe with thematic topics, movies, TV shows and more!'
+            'catchphrase': 'Tic-Tac-Toe with thematic topics, movies, TV shows and more!',
+            'description': 'TicTacTopics combines the classic game of tic-tac-toe with knowledge challenges. To capture a square, you must correctly answer a question on the assigned topic. A perfect mix of strategy and general knowledge!',
+            'players': '2 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Intermediate',
+            'features': [
+                '3x3 grid with different topics in each square',
+                'Over 20 thematic categories',
+                'Adaptive difficulty based on responses',
+                'Tournament mode for more players'
+            ],
+            'instructions': [
+                'The 3x3 grid contains a different topic in each square',
+                'Taking turns, players choose a square to capture',
+                'To capture the square, you must answer a question on the topic',
+                'If you answer correctly, you capture the square with your symbol (X or O)',
+                'If you are wrong, the square remains free',
+                'The first to form a line of three symbols wins'
+            ]
         }
     }
 };

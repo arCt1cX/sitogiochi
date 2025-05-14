@@ -203,7 +203,7 @@
         
         /* Main content shift */
         #main {
-            transition: margin-left 0.3s;
+            /* Removed: transition: margin-left 0.3s; */
         }
         
         /* Privacy Policy Specific Styles */
@@ -466,13 +466,11 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById("myOverlay").style.width = "100%";
-            document.getElementById("main").style.marginLeft = "250px";
         }
         
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("myOverlay").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
         }
         
         // Set the flag icon based on current language
