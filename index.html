@@ -402,8 +402,9 @@
     <!-- Sidebar Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html" id="nav-home">Home</a>
-        <a href="about.html" id="nav-about">About Us</a>
+        <a href="index.html" id="homeLink">Home</a>
+        <a href="about.html" id="aboutLink">About</a>
+        <a href="blog.html" id="blogLink">Blog</a>
         
         <div class="sidenav-section">
             <div class="sidenav-header" id="legal-header">Legal</div>
@@ -434,13 +435,227 @@
         </header>
 
         <main>
-            <div class="games-container" id="gamesContainer">
-                <!-- Game cards will be inserted here by JavaScript -->
+            <div class="game-container" id="gamesContainer">
+                <!-- Games will be loaded here dynamically -->
             </div>
+
+            <!-- Adding detailed game descriptions section -->
+            <section class="game-descriptions">
+                <h2 class="section-title" id="gameDescriptionsTitle">Our Games</h2>
+                
+                <div class="game-description-card">
+                    <h3>Impostor</h3>
+                    <p id="impostorDesc">A social deduction game where players must identify the impostor among them. One player receives a different word than the others and must blend in without getting caught. Perfect for groups of 4-10 players.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>Each player takes turns looking at the word on the screen</li>
+                        <li>One player will see a different but related word - they are the impostor</li>
+                        <li>Players discuss the topic without directly saying the word</li>
+                        <li>At the end, everyone votes on who they think is the impostor</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>ColorGrid</h3>
+                    <p id="colorGridDesc">Test your memory and visual perception with this challenging color-matching game. Remember the pattern and recreate it before time runs out.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>A grid of colored squares will appear briefly</li>
+                        <li>Memorize the pattern of colors</li>
+                        <li>Recreate the pattern by selecting the correct colors</li>
+                        <li>Complete increasingly difficult levels with larger grids and more colors</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>GuessThePic</h3>
+                    <p id="guessThePicDesc">A visual guessing game where an image is gradually revealed. Players compete to identify the picture with as few reveals as possible.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>An image is hidden behind a grid</li>
+                        <li>Take turns revealing one square at a time</li>
+                        <li>The first player to correctly guess the image wins</li>
+                        <li>Choose from various categories including animals, places, and famous landmarks</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>TimerGame</h3>
+                    <p id="timerGameDesc">A thrilling reaction game that tests your timing skills. Stop the countdown as close to zero as possible without going past.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>A timer starts counting down from a random number</li>
+                        <li>Tap the screen to stop the timer</li>
+                        <li>Try to stop as close to zero as possible without going negative</li>
+                        <li>Compete with friends for the highest accuracy score</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>ChainReaction</h3>
+                    <p id="chainReactionDesc">A turn-based strategy game where players place atoms on a grid, creating chain reactions to capture opponent's cells.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>Players take turns placing atoms on the grid</li>
+                        <li>When a cell reaches its critical mass, it explodes and distributes atoms to adjacent cells</li>
+                        <li>This can trigger chain reactions across the board</li>
+                        <li>Capture all opponent's cells to win</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>AlphabetGame</h3>
+                    <p id="alphabetGameDesc">A fast-paced word game where players must quickly think of words starting with specific letters.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>A random letter appears on screen</li>
+                        <li>Players take turns naming words that start with that letter</li>
+                        <li>Each round introduces a new category (animals, countries, foods, etc.)</li>
+                        <li>Players who can't think of a word within the time limit are eliminated</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>BluffMe</h3>
+                    <p id="bluffMeDesc">A bluffing game where players create convincing fake definitions for obscure words to fool their friends.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>An unusual word is displayed to all players</li>
+                        <li>Each player writes a convincing definition for the word</li>
+                        <li>The real definition is mixed with the player-created ones</li>
+                        <li>Players vote on which definition they believe is correct</li>
+                        <li>Points are awarded for choosing the correct definition or for fooling others</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>TicTacTopics</h3>
+                    <p id="ticTacTopicsDesc">A creative twist on the classic tic-tac-toe game, incorporating various conversation topics and challenges.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>The game board displays a 3x3 grid with different topics or challenges</li>
+                        <li>Players take turns selecting a square and completing the associated challenge</li>
+                        <li>Successfully completing a challenge allows the player to claim that square</li>
+                        <li>Form a line of three squares to win</li>
+                    </ol>
+                </div>
+                
+                <div class="game-description-card">
+                    <h3>Quizzy</h3>
+                    <p id="quizzyDesc">A customizable quiz game with thousands of questions across various categories and difficulty levels.</p>
+                    <h4>How to Play:</h4>
+                    <ol>
+                        <li>Select a category and difficulty level</li>
+                        <li>Answer multiple-choice questions within the time limit</li>
+                        <li>Score points for correct answers and quick responses</li>
+                        <li>Compare scores with friends to determine the quiz champion</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="blog-section">
+                <h2 class="section-title" id="blogTitle">Game Tips & Ideas</h2>
+                
+                <div class="blog-container">
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>How to Host the Perfect Game Night</h3>
+                            <div class="blog-meta">
+                                <span class="date">July 15, 2023</span>
+                            </div>
+                            <p>Planning a successful game night takes more than just gathering friends and pulling out board games. Here are our top tips for hosting an unforgettable game night experience.</p>
+                            <h4>Essential Game Night Tips:</h4>
+                            <ul>
+                                <li>Plan for the right mix of games - include options for different preferences and skill levels</li>
+                                <li>Prepare your space with comfortable seating and good lighting</li>
+                                <li>Set up device charging stations for phone-based games</li>
+                                <li>Have snacks and drinks that are easy to eat while playing</li>
+                                <li>Consider a theme night to make the event more memorable</li>
+                            </ul>
+                            <p>The key to a successful game night is creating an environment where everyone feels comfortable participating. Mix competitive games with cooperative ones to keep the energy balanced throughout the evening.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>Using Party Games for Team Building</h3>
+                            <div class="blog-meta">
+                                <span class="date">August 3, 2023</span>
+                            </div>
+                            <p>Games aren't just for entertainment - they can be powerful tools for building stronger teams in professional environments. Here's how to effectively use party games for team building.</p>
+                            <h4>Benefits of Game-Based Team Building:</h4>
+                            <ul>
+                                <li>Improves communication between team members</li>
+                                <li>Reveals natural leadership qualities in a low-pressure environment</li>
+                                <li>Builds trust through cooperative gameplay</li>
+                                <li>Creates shared experiences and memories</li>
+                                <li>Helps identify strengths and problem-solving styles</li>
+                            </ul>
+                            <p>Social deduction games like Impostor are particularly effective for team building as they require careful observation, communication, and strategic thinking - all valuable skills in the workplace.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>The Psychology Behind Party Games</h3>
+                            <div class="blog-meta">
+                                <span class="date">September 12, 2023</span>
+                            </div>
+                            <p>Ever wonder why certain games create such excitement and engagement? The psychology behind successful party games reveals fascinating insights into human behavior and social dynamics.</p>
+                            <h4>Psychological Elements in Popular Games:</h4>
+                            <ul>
+                                <li>Social deduction games tap into our natural desire to read others and detect deception</li>
+                                <li>Memory games like ColorGrid activate cognitive processes that become more engaging in a group setting</li>
+                                <li>Time-pressure elements create adrenaline that enhances the play experience</li>
+                                <li>Cooperative games satisfy our need for belonging and collective achievement</li>
+                                <li>Competitive elements tap into our innate drive for status and recognition</li>
+                            </ul>
+                            <p>Understanding these psychological elements can help you choose the right games for different groups and occasions, ensuring everyone has a memorable experience.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <div class="blog-content">
+                            <h3>Adapting Classic Games for Digital Play</h3>
+                            <div class="blog-meta">
+                                <span class="date">October 5, 2023</span>
+                            </div>
+                            <p>The transition from tabletop to digital formats offers both challenges and opportunities for game designers and players alike. Here's how classic games have evolved for the digital age.</p>
+                            <h4>Successful Digital Adaptations:</h4>
+                            <ul>
+                                <li>Implementing intuitive touch controls that mimic physical interactions</li>
+                                <li>Adding visual feedback that wasn't possible in physical versions</li>
+                                <li>Creating persistence through saved games and statistics</li>
+                                <li>Incorporating accessibility features for wider audiences</li>
+                                <li>Adding progressive difficulty that adapts to player skill</li>
+                            </ul>
+                            <p>Our collection of games at DrewGames combines the best elements of traditional party games with the convenience and enhanced features of digital play, creating experiences that bring people together in the physical world while using digital tools.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <footer>
             <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="aboutFooter">About DrewGames</h3>
+                    <p id="aboutFooterText">A collection of fun games to play with friends offline. Perfect for parties, gatherings, or any social occasion.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 id="linksFooter">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" id="homeFooter">Home</a></li>
+                        <li><a href="about.html" id="aboutFooterLink">About</a></li>
+                        <li><a href="blog.html" id="blogFooterLink">Blog</a></li>
+                        <li><a href="privacy-policy.html" id="privacyFooter">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" id="cookieFooter">Cookie Policy</a></li>
+                        <li><a href="terms-of-service.html" id="termsFooter">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
                 <div class="social-media-container">
                     <a href="https://www.instagram.com/partygamesdrew?igsh=MXNjZXM0b2Z2MTA0Mw==" target="_blank" class="social-icon" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -528,8 +743,9 @@
             
             function updateNavigationText() {
                 if (typeof getTranslation === 'function') {
-                    document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
-                    document.getElementById('nav-about').textContent = getTranslation('navAbout') || 'About Us';
+                    document.getElementById('homeLink').textContent = getTranslation('navHome') || 'Home';
+                    document.getElementById('aboutLink').textContent = getTranslation('navAbout') || 'About';
+                    document.getElementById('blogLink').textContent = getTranslation('navBlog') || 'Blog';
                     document.getElementById('legal-header').textContent = getTranslation('navLegalHeader') || 'Legal';
                     document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
                     document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';

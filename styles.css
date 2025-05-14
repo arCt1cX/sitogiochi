@@ -217,13 +217,84 @@ h2 {
     animation: cdShine 4s infinite ease-in-out;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: auto;
-    color: #555;
-    font-size: 0.9rem;
+/* Updated Footer Styles */
+.footer-section {
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+    color: #eee;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section h3:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #7b68ee;
+    bottom: -6px;
+    left: 0;
+}
+
+.footer-section p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #7b68ee;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .social-media-container {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    .support-container {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    
+    .social-media-container {
+        grid-column: auto;
+        text-align: left;
+    }
 }
 
 /* Animations */
@@ -368,4 +439,321 @@ footer {
     header, footer {
         padding: 1.5rem 0;
     }
+}
+
+/* Game Description Cards Styles */
+.game-descriptions {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #473c8b, #7b68ee);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.game-description-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #7b68ee;
+}
+
+.game-description-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.game-description-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #473c8b;
+}
+
+.game-description-card h4 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+}
+
+.game-description-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.game-description-card ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-description-card li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media (min-width: 768px) {
+    .game-descriptions {
+        padding: 3rem 2rem;
+    }
+    
+    .game-description-card {
+        padding: 2rem;
+    }
+}
+
+/* Blog Section Styles */
+.blog-section {
+    padding: 3rem 1rem;
+    background-color: #f8f9fa;
+    max-width: 100%;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #473c8b;
+}
+
+.blog-meta {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.blog-meta .date {
+    font-style: italic;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.blog-card h4 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+}
+
+.blog-card ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-card li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media (min-width: 768px) {
+    .blog-section {
+        padding: 4rem 2rem;
+    }
+    
+    .blog-content {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .blog-card {
+        margin-bottom: 0;
+    }
+}
+
+/* Blog Page Styles */
+.blog-hero {
+    background: linear-gradient(135deg, #614dc2 0%, #473c8b 100%);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blog-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.blog-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.featured-article {
+    margin-bottom: 3rem;
+}
+
+.blog-article {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.blog-article h2 {
+    font-size: 1.8rem;
+    color: #473c8b;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.article-content {
+    line-height: 1.7;
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.8rem;
+    color: #555;
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.blog-list {
+    margin-top: 2rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #7b68ee;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #473c8b;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .blog-hero {
+        padding: 4rem 2rem;
+    }
+    
+    .blog-title {
+        font-size: 3rem;
+    }
+    
+    .blog-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .blog-main {
+        padding: 3rem 2rem;
+    }
+    
+    .blog-article {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .blog-list .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+    color: #555;
+    font-size: 0.9rem;
+    background-color: #231e41;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#copyright {
+    margin-top: 1rem;
+    color: #aaa;
+    font-size: 0.85rem;
 } 
