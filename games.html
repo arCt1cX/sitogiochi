@@ -720,8 +720,240 @@
                 <circle cx="20" cy="20" r="3" stroke="white" fill="none" />
                 <path d="M22,18 L18,22 M18,18 L22,22" stroke="white" stroke-width="0.8" />
             </svg>`
+                },
+                {
+                    id: "guessthepic",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <rect x="15" y="15" width="50" height="50" rx="4" stroke="white" stroke-width="1.5" fill="rgba(0,0,0,0.2)" />
+                <rect x="18" y="18" width="44" height="44" rx="2" stroke="white" stroke-width="1" fill="none" />
+                
+                <!-- Image frames -->
+                <rect x="20" y="20" width="18" height="18" fill="rgba(255,255,255,0.2)" stroke="white" />
+                <rect x="42" y="20" width="18" height="18" fill="rgba(255,255,255,0.2)" stroke="white" />
+                <rect x="20" y="42" width="18" height="18" fill="rgba(255,255,255,0.2)" stroke="white" />
+                <rect x="42" y="42" width="18" height="18" fill="rgba(255,255,255,0.2)" stroke="white" />
+                
+                <!-- Question mark and magnifying glass -->
+                <text x="29" y="33" font-size="14" fill="white" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="51" y="33" font-size="14" fill="white" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                <text x="29" y="55" font-size="14" fill="white" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                
+                <!-- Magnifying glass over one image -->
+                <circle cx="49" cy="49" r="6" stroke="white" stroke-width="1.2" fill="none" />
+                <line x1="53" y1="53" x2="57" y2="57" stroke="white" stroke-width="1.5" />
+                
+                <!-- Timer element at top -->
+                <rect x="30" y="10" width="20" height="6" rx="3" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.1)" />
+                <rect x="32" y="12" width="16" height="2" rx="1" fill="rgba(255,100,100,0.7)" />
+                
+                <!-- Answer indicator -->
+                <rect x="25" y="65" width="30" height="4" rx="2" stroke="white" stroke-width="0.8" fill="none" />
+                <rect x="27" y="65" width="22" height="4" rx="2" fill="rgba(100,255,100,0.6)" />
+            </svg>`
+                },
+                {
+                    id: "timergame",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Clock face -->
+                <circle cx="40" cy="40" r="25" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.2)" />
+                <circle cx="40" cy="40" r="2" fill="white" />
+                
+                <!-- Clock hands -->
+                <line x1="40" y1="40" x2="40" y2="22" stroke="white" stroke-width="1.5" />
+                <line x1="40" y1="40" x2="52" y2="40" stroke="white" stroke-width="1.5" />
+                
+                <!-- Time markers -->
+                <line x1="40" y1="15" x2="40" y2="18" stroke="white" stroke-width="1.5" />
+                <line x1="40" y1="62" x2="40" y2="65" stroke="white" stroke-width="1.5" />
+                <line x1="15" y1="40" x2="18" y2="40" stroke="white" stroke-width="1.5" />
+                <line x1="62" y1="40" x2="65" y2="40" stroke="white" stroke-width="1.5" />
+                
+                <!-- Decorative elements -->
+                <line x1="25" y1="25" x2="27" y2="27" stroke="white" stroke-width="1.5" />
+                <line x1="53" y1="53" x2="55" y2="55" stroke="white" stroke-width="1.5" />
+                <line x1="25" y1="55" x2="27" y2="53" stroke="white" stroke-width="1.5" />
+                <line x1="53" y1="27" x2="55" y2="25" stroke="white" stroke-width="1.5" />
+                
+                <!-- Letter elements -->
+                <text x="30" y="38" font-size="6" fill="white" font-family="Arial, sans-serif">W</text>
+                <text x="42" y="38" font-size="6" fill="white" font-family="Arial, sans-serif">O</text>
+                <text x="36" y="46" font-size="6" fill="white" font-family="Arial, sans-serif">R</text>
+                <text x="42" y="46" font-size="6" fill="white" font-family="Arial, sans-serif">D</text>
+                
+                <!-- Timer progress indicator -->
+                <circle cx="40" cy="40" r="28" stroke="rgba(255,100,100,0.5)" stroke-width="3" stroke-dasharray="175 175" stroke-dashoffset="30" fill="none" />
+            </svg>`
+                },
+                {
+                    id: "chainreaction",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Chain link nodes -->
+                <circle cx="20" cy="30" r="8" fill="rgba(100,100,255,0.3)" stroke="white" />
+                <circle cx="40" cy="20" r="8" fill="rgba(100,255,100,0.3)" stroke="white" />
+                <circle cx="60" cy="30" r="8" fill="rgba(255,100,100,0.3)" stroke="white" />
+                <circle cx="30" cy="50" r="8" fill="rgba(255,255,100,0.3)" stroke="white" />
+                <circle cx="50" cy="50" r="8" fill="rgba(255,100,255,0.3)" stroke="white" />
+                
+                <!-- Connection lines -->
+                <line x1="26" y1="26" x2="34" y2="24" stroke="white" stroke-width="1" />
+                <line x1="46" y1="24" x2="54" y2="26" stroke="white" stroke-width="1" />
+                <line x1="24" y1="36" x2="28" y2="44" stroke="white" stroke-width="1" />
+                <line x1="36" y1="50" x2="44" y2="50" stroke="white" stroke-width="1" />
+                <line x1="54" y1="36" x2="52" y2="44" stroke="white" stroke-width="1" />
+                
+                <!-- Words in nodes -->
+                <text x="20" y="32" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">WORD</text>
+                <text x="40" y="22" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">LINK</text>
+                <text x="60" y="32" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CHAIN</text>
+                <text x="30" y="52" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">IDEA</text>
+                <text x="50" y="52" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">REACT</text>
+                
+                <!-- Glowing effect for active item -->
+                <circle cx="40" cy="20" r="10" stroke="rgba(100,255,100,0.5)" stroke-width="1" fill="none" />
+                <circle cx="40" cy="20" r="12" stroke="rgba(100,255,100,0.2)" stroke-width="1" stroke-dasharray="3 3" fill="none" />
+            </svg>`
+                },
+                {
+                    id: "alphabetgame",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Letter blocks -->
+                <rect x="15" y="30" width="15" height="15" rx="2" fill="rgba(255,100,100,0.3)" stroke="white" />
+                <rect x="32.5" y="30" width="15" height="15" rx="2" fill="rgba(100,255,100,0.3)" stroke="white" />
+                <rect x="50" y="30" width="15" height="15" rx="2" fill="rgba(100,100,255,0.3)" stroke="white" />
+                
+                <!-- Letters -->
+                <text x="22.5" y="42" font-size="12" fill="white" text-anchor="middle" font-family="Arial, sans-serif">A</text>
+                <text x="40" y="42" font-size="12" fill="white" text-anchor="middle" font-family="Arial, sans-serif">B</text>
+                <text x="57.5" y="42" font-size="12" fill="white" text-anchor="middle" font-family="Arial, sans-serif">C</text>
+                
+                <!-- Category indicator -->
+                <rect x="20" y="15" width="40" height="10" rx="5" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" />
+                <text x="40" y="22.5" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORY</text>
+                
+                <!-- Examples below -->
+                <line x1="22.5" y1="47" x2="22.5" y2="52" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-dasharray="2 2" />
+                <text x="22.5" y="59" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">APPLE</text>
+                
+                <line x1="40" y1="47" x2="40" y2="52" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-dasharray="2 2" />
+                <text x="40" y="59" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">BANANA</text>
+                
+                <line x1="57.5" y1="47" x2="57.5" y2="52" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-dasharray="2 2" />
+                <text x="57.5" y="59" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CHERRY</text>
+            </svg>`
+                },
+                {
+                    id: "bluffme",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Card faces -->
+                <rect x="20" y="20" width="20" height="30" rx="2" fill="rgba(255,255,255,0.1)" stroke="white" />
+                <rect x="40" y="20" width="20" height="30" rx="2" fill="rgba(255,255,255,0.1)" stroke="white" />
+                
+                <!-- Card decorations -->
+                <rect x="23" y="23" width="14" height="5" rx="1" fill="rgba(255,255,255,0.2)" />
+                <rect x="43" y="23" width="14" height="5" rx="1" fill="rgba(255,255,255,0.2)" />
+                
+                <rect x="23" y="42" width="14" height="5" rx="1" fill="rgba(255,255,255,0.2)" />
+                <rect x="43" y="42" width="14" height="5" rx="1" fill="rgba(255,255,255,0.2)" />
+                
+                <!-- Card symbols -->
+                <text x="30" y="38" font-size="12" fill="white" text-anchor="middle" font-family="Arial, sans-serif">7</text>
+                <text x="50" y="38" font-size="12" fill="white" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+                
+                <!-- Thought bubbles for bluffing -->
+                <circle cx="60" cy="20" r="2" fill="white" />
+                <circle cx="64" cy="17" r="3" fill="white" />
+                <circle cx="70" cy="13" r="4" fill="white" />
+                
+                <!-- Hidden info indication -->
+                <path d="M45,50 C45,55 55,55 55,50" stroke="rgba(255,100,100,0.7)" stroke-width="1.5" fill="none" />
+                <path d="M42,55 L58,55" stroke="rgba(255,100,100,0.7)" stroke-width="1.5" stroke-dasharray="2 2" />
+                
+                <!-- Facial expressions suggesting bluffing -->
+                <circle cx="25" cy="60" r="5" stroke="white" fill="none" />
+                <path d="M23,59 L24,60 L23,61" stroke="white" /> <!-- Eye -->
+                <path d="M27,59 L28,60 L27,61" stroke="white" /> <!-- Eye -->
+                <path d="M23,63 C23,65 27,65 27,63" stroke="white" fill="none" /> <!-- Smile -->
+                
+                <circle cx="55" cy="60" r="5" stroke="white" fill="none" />
+                <path d="M53,59 L54,60 L53,61" stroke="white" /> <!-- Eye -->
+                <path d="M57,59 L58,60 L57,61" stroke="white" /> <!-- Eye -->
+                <path d="M53,64 C53,62 57,62 57,64" stroke="white" fill="none" /> <!-- Frown -->
+                
+                <!-- Question mark indicating uncertainty -->
+                <text x="40" y="60" font-size="8" fill="white" text-anchor="middle" font-family="Arial, sans-serif">?</text>
+            </svg>`
+                },
+                {
+                    id: "quizzy",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Quiz board -->
+                <rect x="15" y="20" width="50" height="40" rx="3" fill="rgba(0,0,0,0.2)" stroke="white" />
+                
+                <!-- Question area -->
+                <rect x="20" y="25" width="40" height="10" rx="2" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" />
+                <text x="40" y="32" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">QUESTION?</text>
+                
+                <!-- Answer options -->
+                <rect x="20" y="40" width="18" height="7" rx="2" fill="rgba(100,255,100,0.3)" stroke="white" stroke-width="1" />
+                <text x="29" y="45" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">A: OPTION 1</text>
+                
+                <rect x="42" y="40" width="18" height="7" rx="2" fill="rgba(255,100,100,0.3)" stroke="white" stroke-width="1" />
+                <text x="51" y="45" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">B: OPTION 2</text>
+                
+                <rect x="20" y="50" width="18" height="7" rx="2" fill="rgba(255,255,100,0.3)" stroke="white" stroke-width="1" />
+                <text x="29" y="55" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">C: OPTION 3</text>
+                
+                <rect x="42" y="50" width="18" height="7" rx="2" fill="rgba(100,100,255,0.3)" stroke="white" stroke-width="1" />
+                <text x="51" y="55" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">D: OPTION 4</text>
+                
+                <!-- Category indicator -->
+                <rect x="25" y="15" width="30" height="7" rx="3.5" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" />
+                <text x="40" y="20" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">KNOWLEDGE</text>
+                
+                <!-- Selection indicators -->
+                <circle cx="16" cy="43.5" r="1.5" fill="rgba(100,255,100,0.7)" />
+                <path d="M40,65 L43,70 L46,65" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+            </svg>`
+                },
+                {
+                    id: "tictactopics",
+                    iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Board background -->
+                <rect x="15" y="15" width="50" height="50" rx="2" fill="rgba(0,0,0,0.2)" stroke="white" stroke-width="1" />
+                
+                <!-- Grid lines -->
+                <line x1="31.6" y1="15" x2="31.6" y2="65" stroke="white" stroke-width="1" />
+                <line x1="48.2" y1="15" x2="48.2" y2="65" stroke="white" stroke-width="1" />
+                <line x1="15" y1="31.6" x2="65" y2="31.6" stroke="white" stroke-width="1" />
+                <line x1="15" y1="48.2" x2="65" y2="48.2" stroke="white" stroke-width="1" />
+                
+                <!-- X and O markers -->
+                <path d="M22,22 L25,25 M25,22 L22,25" stroke="white" stroke-width="1.5" />
+                <circle cx="40" cy="23.5" r="4" stroke="white" stroke-width="1.5" fill="none" />
+                <path d="M55,22 L58,25 M58,22 L55,25" stroke="white" stroke-width="1.5" />
+                
+                <circle cx="23.5" cy="40" r="4" stroke="white" stroke-width="1.5" fill="none" />
+                <path d="M38,38 L42,42 M42,38 L38,42" stroke="white" stroke-width="1.5" />
+                <circle cx="56.5" cy="40" r="4" stroke="white" stroke-width="1.5" fill="none" />
+                
+                <path d="M22,55 L25,58 M25,55 L22,58" stroke="white" stroke-width="1.5" />
+                <path d="M38,55 L42,58 M42,55 L38,58" stroke="white" stroke-width="1.5" />
+                <circle cx="56.5" cy="56.5" r="4" stroke="white" stroke-width="1.5" fill="none" />
+                
+                <!-- Topic indicators -->
+                <text x="23.5" y="29" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">MOVIES</text>
+                <text x="40" y="29" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">SPORTS</text>
+                <text x="56.5" y="29" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">HISTORY</text>
+                
+                <text x="23.5" y="46" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">SCIENCE</text>
+                <text x="40" y="46" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">MUSIC</text>
+                <text x="56.5" y="46" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">GEOGRAPHY</text>
+                
+                <text x="23.5" y="63" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">ART</text>
+                <text x="40" y="63" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">TV SHOWS</text>
+                <text x="56.5" y="63" font-size="2.5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">TECH</text>
+            </svg>`
                 }
-                // Add other games here...
             ];
             
             // Generate table of contents
