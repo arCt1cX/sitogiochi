@@ -29,7 +29,80 @@
       "Blanco",
       "Mahmood",
       "BTS",
-      "Billie Eilish"
+      "Billie Eilish",
+      "Aretha Franklin",
+      "Bob Dylan",
+      "John Lennon",
+      "Marvin Gaye",
+      "Nirvana",
+      "Chuck Berry",
+      "The Beatles",
+      "Queen",
+      "Led Zeppelin",
+      "Eagles",
+      "Bruce Springsteen",
+      "Prince",
+      "The Clash",
+      "Bob Marley",
+      "Michael Jackson",
+      "Stevie Wonder",
+      "The Rolling Stones",
+      "The Who",
+      "Elvis Presley",
+      "The Doors",
+      "U2",
+      "The Kinks",
+      "Guns N' Roses",
+      "The Police",
+      "Madonna",
+      "R.E.M.",
+      "Oasis",
+      "Radiohead",
+      "Queen & David Bowie",
+      "David Bowie",
+      "Metallica",
+      "Travis Scott",
+      "Kanye West",
+      "21 Savage",
+      "A$AP Rocky",
+      "A$AP Ferg",
+      "Future",
+      "Playboi Carti",
+      "Lil Uzi Vert",
+      "Migos",
+      "Kodak Black",
+      "Pop Smoke",
+      "Gunna",
+      "Metro Boomin",
+      "Ariana Grande",
+      "50 Cent",
+      "2Pac",
+      "The Notorious B.I.G.",
+      "Kendrick Lamar",
+      "Post Malone",
+      "Lil Baby",
+      "Juice WRLD",
+      "Lil Nas X",
+      "Roddy Ricch",
+      "Lil Uzi Vert",
+      "Olivia Rodrigo",
+      "Chris Brown",
+      "J. Cole",
+      "Jay-Z",
+      "Cardi B",
+      "Megan Thee Stallion",
+      "Nicki Minaj",
+      "Lizzo",
+      "Central Cee",
+      "Polo G",
+      "XXXTENTACION",
+      "Pop Smoke",
+      "Marshmello",
+      "Trippie Redd",
+      "Ski Mask the Slump God",
+      "The Kid LAROI",
+      "Halsey",
+      "Metro Boomin"
     ],
     "genere": [
       "Pop",
@@ -40,18 +113,23 @@
       "Indie",
       "Metal",
       "Rap",
-      "Dance",
-      "Soul",
       "Jazz",
       "Classica",
       "Trap",
       "Reggaeton",
-      "Folk",
       "Country",
       "K-pop",
       "Blues",
       "Alternative",
-      "Punk"
+      "Punk",
+      "Gospel",
+      "Reggae",
+      "Grunge",
+      "Rock and Roll",
+      "Heavy Metal",
+      "Alternative Rock",
+      "Emo Rap",
+      "Female Rap"
     ],
     "tema": [
       "Amore",
@@ -73,7 +151,98 @@
       "Viaggio",
       "Famiglia",
       "Identità",
-      "Estate"
+      "Estate",
+      "Rispetto",
+      "Protesta",
+      "Pace",
+      "Giustizia sociale",
+      "Gioventù",
+      "Spiritualità",
+      "Alienazione",
+      "Depressione",
+      "Redenzione",
+      "Cambiamento",
+      "Guerra",
+      "Religione",
+      "Ossessione",
+      "Esistenzialismo",
+      "Angoscia",
+      "Unità",
+      "Lusso",
+      "Successo",
+      "Fama",
+      "Denaro",
+      "Tradimento",
+      "Ambizione",
+      "Distopia",
+      "Utopia",
+      "Vita di strada",
+      "Ricchezza",
+      "Tour",
+      "Autenticità",
+      "Stile di vita",
+      "Dipendenza",
+      "Macchine",
+      "Droga", 
+      "Vulnerabilità",
+      "Desiderio",
+      "Autodistruzione",
+      "Passione",
+      "Riflessione",
+      "Fiducia",
+      "Seduzione",
+      "Eternità",
+      "Sport",
+      "Territorialità",
+      "Oscurità",
+      "Percezione",
+      "Segreti",
+      "Violenza",
+      "Riscatto",
+      "Dipendenza",
+      "Razzismo",
+      "Vita di strada",
+      "Povertà",
+      "Sopravvivenza",
+      "Rivalità",
+      "Morte",
+      "Eredità",
+      "Autenticità",
+      "Determinazione",
+      "Introspezione",
+      "Orgoglio",
+      "Insicurezza",
+      "Città",
+      "Fuoco",
+      "Lealtà",
+      "Vulnerabilità",
+      "Empowerment femminile",
+      "Sessualità",
+      "Fiducia",
+      "Rivalità musicale",
+      "Droga",
+      "Giustizia",
+      "Calcio",
+      "Trauma",
+      "Guarigione",
+      "Suicidio",
+      "Salute mentale",
+      "Mortalità",
+      "Lutto",
+      "Autoscoperta",
+      "Sconfitta",
+      "Vendetta",
+      "Dolore",
+      "Immortalità",
+      "Rabbia",
+      "Nichilismo",
+      "Fame",
+      "Gangster",
+      "Brooklyn",
+      "Collaborazione",
+      "Attrazione",
+      "Desiderio",
+      "Oscurità"
     ],
     "anni": [
       "1960s",
@@ -82,6 +251,8 @@
       "1990s",
       "2000s",
       "2010s",
+      "2020s",
+      "1950s",
       "2020s"
     ],
     "feat": [
@@ -104,7 +275,73 @@
       "Salmo",
       "Tiziano Ferro",
       "J Balvin",
-      "Bad Bunny"
+      "Bad Bunny",
+      "David Bowie",
+      "Kendrick Lamar",
+      "Kid Cudi",
+      "Young Thug",
+      "Future",
+      "Playboi Carti",
+      "The Weeknd",
+      "21 Savage",
+      "Beyoncé",
+      "Rihanna",
+      "Lil Baby",
+      "Kanye West",
+      "SZA",
+      "Don Toliver",
+      "Gunna",
+      "Nav",
+      "Swae Lee",
+      "Mike Dean",
+      "Pusha T",
+      "Daft Punk",
+      "Chris Brown",
+      "42 Dugg",
+      "Metro Boomin",
+      "J. Cole",
+      "Lil Uzi Vert",
+      "Skepta",
+      "Offset",
+      "2 Chainz",
+      "Dr. Dre",
+      "Rick Ross",
+      "The Notorious B.I.G.",
+      "Quavo",
+      "Migos",
+      "Jack Harlow",
+      "Halsey",
+      "Eminem",
+      "Alicia Keys",
+      "DaBaby",
+      "Lil Wayne",
+      "Megan Thee Stallion",
+      "Beyoncé",
+      "Ed Sheeran",
+      "Doja Cat",
+      "Polo G",
+      "Lil Tjay",
+      "Chief Keef",
+      "NLE Choppa",
+      "Ski Mask the Slump God",
+      "Trippie Redd",
+      "The Kid LAROI",
+      "YoungBoy Never Broke Again",
+      "50 Cent",
+      "Marshmello",
+      "Ellie Goulding",
+      "Benny Blanco",
+      "Juice WRLD",
+      "XXXTENTACION",
+      "DaBaby",
+      "Lil Durk",
+      "Roddy Ricch",
+      "50 Cent",
+      "Chris Brown",
+      "Dua Lipa",
+      "Daft Punk",
+      "A Boogie wit da Hoodie",
+      "Metro Boomin"
     ]
   },
   "entries": [
@@ -370,6 +607,24 @@
       "feat": "no"
     },
     {
+      "title": "Respect",
+      "autore": "Aretha Franklin",
+      "lingua": "Inglese",
+      "genere": ["Soul", "R&B"],
+      "tema": ["Rispetto", "Empowerment"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Like a Rolling Stone",
+      "autore": "Bob Dylan",
+      "lingua": "Inglese",
+      "genere": ["Folk Rock", "Rock"],
+      "tema": ["Cambiamento", "Società"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
       "title": "Imagine",
       "autore": "John Lennon",
       "lingua": "Inglese",
@@ -379,57 +634,138 @@
       "feat": "no"
     },
     {
-      "title": "Gangnam Style",
-      "autore": "PSY",
-      "lingua": "Coreano",
-      "genere": ["K-pop", "Dance"],
-      "tema": ["Festa", "Satira"],
-      "anni": "2010s",
+      "title": "What's Going On",
+      "autore": "Marvin Gaye",
+      "lingua": "Inglese",
+      "genere": ["Soul", "R&B"],
+      "tema": ["Giustizia sociale", "Protesta"],
+      "anni": "1970s",
       "feat": "no"
     },
     {
-      "title": "Beggin'",
-      "autore": "Måneskin",
+      "title": "Smells Like Teen Spirit",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Gioventù", "Ribellione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Johnny B. Goode",
+      "autore": "Chuck Berry",
+      "lingua": "Inglese",
+      "genere": ["Rock and Roll"],
+      "tema": ["Successo", "Crescita"],
+      "anni": "1950s",
+      "feat": "no"
+    },
+    {
+      "title": "Hey Jude",
+      "autore": "The Beatles",
       "lingua": "Inglese",
       "genere": ["Rock", "Pop"],
-      "tema": ["Amore", "Dipendenza"],
-      "anni": "2020s",
+      "tema": ["Conforto", "Speranza"],
+      "anni": "1960s",
       "feat": "no"
     },
     {
-      "title": "Uptown Funk",
-      "autore": "Mark Ronson",
+      "title": "Good Vibrations",
+      "autore": "The Beach Boys",
       "lingua": "Inglese",
-      "genere": ["Funk", "Pop"],
-      "tema": ["Festa", "Fiducia"],
-      "anni": "2010s",
-      "feat": "Bruno Mars"
-    },
-    {
-      "title": "MAMBO SALENTINO",
-      "autore": "Boomdabash",
-      "lingua": "Italiano",
-      "genere": ["Reggae", "Dance"],
-      "tema": ["Estate", "Amore"],
-      "anni": "2010s",
-      "feat": "Alessandra Amoroso"
-    },
-    {
-      "title": "Thinking Out Loud",
-      "autore": "Ed Sheeran",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Soul"],
-      "tema": ["Amore", "Eternità"],
-      "anni": "2010s",
+      "genere": ["Pop", "Psychedelic Rock"],
+      "tema": ["Amore", "Positività"],
+      "anni": "1960s",
       "feat": "no"
     },
     {
-      "title": "Una Vita In Vacanza",
-      "autore": "Lo Stato Sociale",
-      "lingua": "Italiano",
-      "genere": ["Indie", "Pop"],
-      "tema": ["Società", "Critica"],
-      "anni": "2010s",
+      "title": "Yesterday",
+      "autore": "The Beatles",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Rock"],
+      "tema": ["Nostalgia", "Rottura"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "autore": "Queen",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Progressive"],
+      "tema": ["Introspezione", "Conflitto"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Stairway to Heaven",
+      "autore": "Led Zeppelin",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Hard Rock"],
+      "tema": ["Spiritualità", "Ricerca"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Hotel California",
+      "autore": "Eagles",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Eccesso", "Materialismo"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "I Want to Hold Your Hand",
+      "autore": "The Beatles",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Rock"],
+      "tema": ["Amore", "Innocenza"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Let It Be",
+      "autore": "The Beatles",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Conforto", "Spiritualità"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Born to Run",
+      "autore": "Bruce Springsteen",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Libertà", "Speranza"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Purple Rain",
+      "autore": "Prince",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Amore", "Spiritualità"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "London Calling",
+      "autore": "The Clash",
+      "lingua": "Inglese",
+      "genere": ["Punk", "Rock"],
+      "tema": ["Politica", "Apocalisse"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "No Woman, No Cry",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Conforto", "Speranza"],
+      "anni": "1970s",
       "feat": "no"
     },
     {
@@ -442,67 +778,3541 @@
       "feat": "no"
     },
     {
-      "title": "Fai Rumore",
-      "autore": "Diodato",
-      "lingua": "Italiano",
-      "genere": ["Pop", "Indie"],
-      "tema": ["Rottura", "Comunicazione"],
-      "anni": "2020s",
+      "title": "Superstition",
+      "autore": "Stevie Wonder",
+      "lingua": "Inglese",
+      "genere": ["Soul", "Funk"],
+      "tema": ["Credenze", "Consapevolezza"],
+      "anni": "1970s",
       "feat": "no"
     },
     {
-      "title": "I Want It That Way",
-      "autore": "Backstreet Boys",
+      "title": "Gimme Shelter",
+      "autore": "The Rolling Stones",
       "lingua": "Inglese",
-      "genere": "Pop",
-      "tema": ["Amore", "Desiderio"],
-      "anni": "1990s",
-      "feat": "no"
-    },
-    {
-      "title": "I Gotta Feeling",
-      "autore": "Black Eyed Peas",
-      "lingua": "Inglese",
-      "genere": ["Pop", "Dance"],
-      "tema": ["Festa", "Ottimismo"],
-      "anni": "2000s",
-      "feat": "no"
-    },
-    {
-      "title": "KARAOKE",
-      "autore": "Boomdabash",
-      "lingua": "Italiano",
-      "genere": ["Pop", "Reggae"],
-      "tema": ["Estate", "Divertimento"],
-      "anni": "2020s",
-      "feat": "Alessandra Amoroso"
-    },
-    {
-      "title": "Old Town Road",
-      "autore": "Lil Nas X",
-      "lingua": "Inglese",
-      "genere": ["Country", "Trap"],
-      "tema": ["Viaggio", "Libertà"],
-      "anni": "2010s",
-      "feat": "Billy Ray Cyrus"
-    },
-    {
-      "title": "Volare",
-      "autore": "Domenico Modugno",
-      "lingua": "Italiano",
-      "genere": ["Pop", "Classica"],
-      "tema": ["Sogno", "Libertà"],
+      "genere": ["Rock"],
+      "tema": ["Guerra", "Caos"],
       "anni": "1960s",
       "feat": "no"
     },
     {
-      "title": "Seven Nation Army",
-      "autore": "The White Stripes",
+      "title": "A Day in the Life",
+      "autore": "The Beatles",
       "lingua": "Inglese",
-      "genere": ["Rock", "Alternative"],
-      "tema": ["Determinazione", "Forza"],
+      "genere": ["Rock", "Psychedelic Rock"],
+      "tema": ["Vita", "Società"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "My Generation",
+      "autore": "The Who",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Gioventù", "Ribellione"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Blowin' in the Wind",
+      "autore": "Bob Dylan",
+      "lingua": "Inglese",
+      "genere": ["Folk"],
+      "tema": ["Protesta", "Umanità"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "God Only Knows",
+      "autore": "The Beach Boys",
+      "lingua": "Inglese",
+      "genere": ["Pop"],
+      "tema": ["Amore", "Devozione"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Be My Baby",
+      "autore": "The Ronettes",
+      "lingua": "Inglese",
+      "genere": ["Pop", "R&B"],
+      "tema": ["Amore", "Desiderio"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Tutti Frutti",
+      "autore": "Little Richard",
+      "lingua": "Inglese",
+      "genere": ["Rock and Roll"],
+      "tema": ["Festa", "Divertimento"],
+      "anni": "1950s",
+      "feat": "no"
+    },
+    {
+      "title": "I Walk the Line",
+      "autore": "Johnny Cash",
+      "lingua": "Inglese",
+      "genere": ["Country"],
+      "tema": ["Fedeltà", "Amore"],
+      "anni": "1950s",
+      "feat": "no"
+    },
+    {
+      "title": "Hound Dog",
+      "autore": "Elvis Presley",
+      "lingua": "Inglese",
+      "genere": ["Rock and Roll"],
+      "tema": ["Frustrazione", "Accusa"],
+      "anni": "1950s",
+      "feat": "no"
+    },
+    {
+      "title": "People Get Ready",
+      "autore": "The Impressions",
+      "lingua": "Inglese",
+      "genere": ["Gospel", "Soul"],
+      "tema": ["Spiritualità", "Speranza"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "A Change Is Gonna Come",
+      "autore": "Sam Cooke",
+      "lingua": "Inglese",
+      "genere": ["Soul", "R&B"],
+      "tema": ["Diritti Civili", "Speranza"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Bridge Over Troubled Water",
+      "autore": "Simon & Garfunkel",
+      "lingua": "Inglese",
+      "genere": ["Folk", "Pop"],
+      "tema": ["Amicizia", "Supporto"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Waterloo Sunset",
+      "autore": "The Kinks",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Osservazione", "Solitudine"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Sympathy for the Devil",
+      "autore": "The Rolling Stones",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Male", "Storia"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "I Can't Get No (Satisfaction)",
+      "autore": "The Rolling Stones",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Frustrazione", "Consumismo"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Light My Fire",
+      "autore": "The Doors",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Psychedelic Rock"],
+      "tema": ["Desiderio", "Passione"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "One",
+      "autore": "U2",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Unità", "Relazioni"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Dancing in the Street",
+      "autore": "Martha and the Vandellas",
+      "lingua": "Inglese",
+      "genere": ["Soul", "R&B"],
+      "tema": ["Festa", "Gioia"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "You Really Got Me",
+      "autore": "The Kinks",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Desiderio", "Ossessione"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Layla",
+      "autore": "Derek and the Dominos",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Blues"],
+      "tema": ["Amore non corrisposto", "Ossessione"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Help!",
+      "autore": "The Beatles",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Rock"],
+      "tema": ["Vulnerabilità", "Supporto"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Whole Lotta Love",
+      "autore": "Led Zeppelin",
+      "lingua": "Inglese",
+      "genere": ["Hard Rock", "Blues"],
+      "tema": ["Desiderio", "Attrazione"],
+      "anni": "1960s",
+      "feat": "no"
+    },
+    {
+      "title": "Sweet Child o' Mine",
+      "autore": "Guns N' Roses",
+      "lingua": "Inglese",
+      "genere": ["Hard Rock"],
+      "tema": ["Amore", "Innocenza"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Every Breath You Take",
+      "autore": "The Police",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Ossessione", "Controllo"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Like a Prayer",
+      "autore": "Madonna",
+      "lingua": "Inglese",
+      "genere": ["Pop"],
+      "tema": ["Religione", "Sessualità"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Rolling in the Deep",
+      "autore": "Adele",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Soul"],
+      "tema": ["Rottura", "Vendetta"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Losing My Religion",
+      "autore": "R.E.M.",
+      "lingua": "Inglese",
+      "genere": ["Alternative", "Rock"],
+      "tema": ["Ossessione", "Vulnerabilità"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Wonderwall",
+      "autore": "Oasis",
+      "lingua": "Inglese",
+      "genere": ["Britpop", "Rock"],
+      "tema": ["Salvezza", "Amore"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Creep",
+      "autore": "Radiohead",
+      "lingua": "Inglese",
+      "genere": ["Alternative", "Rock"],
+      "tema": ["Alienazione", "Inadeguatezza"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Under Pressure",
+      "autore": "Queen",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Pressione", "Amore"],
+      "anni": "1980s",
+      "feat": "David Bowie"
+    },
+    {
+      "title": "Heroes",
+      "autore": "David Bowie",
+      "lingua": "Inglese",
+      "genere": ["Rock"],
+      "tema": ["Amore", "Speranza"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Karma Police",
+      "autore": "Radiohead",
+      "lingua": "Inglese",
+      "genere": ["Alternative", "Rock"],
+      "tema": ["Alienazione", "Giustizia"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "With or Without You",
+      "autore": "U2",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Pop"],
+      "tema": ["Amore", "Dipendenza"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Nothing Else Matters",
+      "autore": "Metallica",
+      "lingua": "Inglese",
+      "genere": ["Metal", "Rock"],
+      "tema": ["Indipendenza", "Lealtà"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Enter Sandman",
+      "autore": "Metallica",
+      "lingua": "Inglese",
+      "genere": ["Metal", "Thrash Metal"],
+      "tema": ["Paura", "Incubi"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Black",
+      "autore": "Pearl Jam",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Perdita"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Come As You Are",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Identità", "Accettazione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Alive",
+      "autore": "Pearl Jam",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Resilienza", "Identità"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Jeremy",
+      "autore": "Pearl Jam",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Adolescenza", "Solitudine"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Lithium",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Depressione", "Religione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Heart-Shaped Box",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Angoscia"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "In Bloom",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Autenticità", "Critica"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "All Apologies",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Introspezione", "Scuse"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "The Man Who Sold the World",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Identità", "Alienazione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Where Did You Sleep Last Night",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Folk"],
+      "tema": ["Gelosia", "Dolore"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "About a Girl",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Relazioni"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Polly",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Violenza", "Trauma"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Pennyroyal Tea",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Depressione", "Sofferenza"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Rape Me",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Abuso", "Protesta"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Dumb",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Autocritica", "Società"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Something in the Way",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Solitudine", "Povertà"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Love Buzz",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Eccitazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Blew",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Alienazione", "Rabbia"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "School",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Ribellione", "Critica"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Negative Creep",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Alienazione", "Autodistruzione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Floyd the Barber",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Paura", "Violenza"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Paper Cuts",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Abuso", "Isolamento"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Big Cheese",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Autorità", "Ribellione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Downer",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Depressione", "Critica sociale"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Sliver",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Infanzia", "Famiglia"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Dive",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Pressione sociale", "Ribellione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Been a Son",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Genere", "Aspettative"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Stain",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Reputazione", "Società"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Turnaround",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Cambiamento", "Trasformazione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Molly's Lips",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Attrazione", "Ossessione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Son of a Gun",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Identità", "Conflitto"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Aneurysm",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Dipendenza"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Even in His Youth",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Infanzia", "Depressione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Oh, the Guilt",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Colpa", "Vergogna"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Do Re Mi",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Introspezione", "Melodia"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "You Know You're Right",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Relazioni", "Conflitto"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Sappy",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Relazioni tossiche", "Libertà"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Verse Chorus Verse",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Industria musicale", "Critica"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "I Hate Myself and Want to Die",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Depressione", "Autodistruzione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Marigold",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Folk"],
+      "tema": ["Introspezione", "Quiete"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Moist Vagina",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Sessualità", "Provocazione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Gallons of Rubbing Alcohol Flow Through the Strip",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Dipendenza", "Caos"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Talk to Me",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Comunicazione", "Isolamento"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Old Age",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Invecchiamento", "Cambiamento"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "D-7",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Alienazione", "Ribellione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "I Love Her All the Time",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Amore", "Ossessione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Here She Comes Now",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Attrazione", "Desiderio"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "White Lace and Strange",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Società", "Stranezza"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Aero Zeppelin",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Tributo", "Influenze"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Mexican Seafood",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Punk"],
+      "tema": ["Disgusto", "Provocazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Spank Thru",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Sessualità", "Frustrazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Hairspray Queen",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Punk"],
+      "tema": ["Identità", "Cultura"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Big Long Now",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Tempo", "Esistenza"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Sifting",
+      "autore": "Nirvana",
+      "lingua": "Inglese",
+      "genere": ["Grunge", "Rock"],
+      "tema": ["Ricerca", "Significato"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Sicko Mode",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Potere"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Goosebumps",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Amore", "Eccitazione"],
+      "anni": "2010s",
+      "feat": "Kendrick Lamar"
+    },
+    {
+      "title": "Antidote",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Festa", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Highest in the Room",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Dipendenza"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Stargazing",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fama", "Ambizione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Butterfly Effect",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Conseguenze", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "90210",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Fama"],
+      "anni": "2010s",
+      "feat": "Kacy Hill"
+    },
+    {
+      "title": "Stop Trying to Be God",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ego", "Umiltà"],
+      "anni": "2010s",
+      "feat": "Kid Cudi, James Blake"
+    },
+    {
+      "title": "Mamacita",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Donne", "Lusso"],
+      "anni": "2010s",
+      "feat": "Rich Homie Quan, Young Thug"
+    },
+    {
+      "title": "Pick Up the Phone",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Comunicazione", "Relazioni"],
+      "anni": "2010s",
+      "feat": "Young Thug"
+    },
+    {
+      "title": "One Love",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Pace", "Unità"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Buffalo Soldier",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Storia", "Resistenza"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Redemption Song",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae", "Folk"],
+      "tema": ["Libertà", "Emancipazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Get Up, Stand Up",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Diritti", "Protesta"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Could You Be Loved",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae", "R&B"],
+      "tema": ["Amore", "Accettazione"],
+      "anni": "1980s",
+      "feat": "no"
+    },
+    {
+      "title": "Three Little Birds",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Positività", "Speranza"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Is This Love",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Amore", "Devozione"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Waiting in Vain",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Amore non corrisposto", "Pazienza"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "Jamming",
+      "autore": "Bob Marley",
+      "lingua": "Inglese",
+      "genere": ["Reggae"],
+      "tema": ["Musica", "Unità"],
+      "anni": "1970s",
+      "feat": "no"
+    },
+    {
+      "title": "FE!N",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Stile di vita"],
+      "anni": "2020s",
+      "feat": "Playboi Carti"
+    },
+    {
+      "title": "Fair Trade",
+      "autore": "Drake",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Lealtà", "Tradimento"],
+      "anni": "2020s",
+      "feat": "Travis Scott"
+    },
+    {
+      "title": "My Eyes",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Prospettiva", "Introspezione"],
+      "anni": "2020s",
+      "feat": "Sampha"
+    },
+    {
+      "title": "HYAENA",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Predatore", "Potere"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "MELTDOWN",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Crisi", "Caos"],
+      "anni": "2020s",
+      "feat": "Drake"
+    },
+    {
+      "title": "LOST FOREVER",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Eternità", "Eredità"],
+      "anni": "2020s",
+      "feat": "Westside Gunn"
+    },
+    {
+      "title": "I KNOW ?",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Consapevolezza", "Relazioni"],
+      "anni": "2020s",
+      "feat": "SZA"
+    },
+    {
+      "title": "UTOPIA",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Utopia", "Società ideale"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "TWINS",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Dualità", "Simbiosi"],
+      "anni": "2020s",
+      "feat": "21 Savage"
+    },
+    {
+      "title": "WAKE UP",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Risveglio", "Realizzazione"],
+      "anni": "2010s",
+      "feat": "The Weeknd"
+    },
+    {
+      "title": "YOSEMITE",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ricchezza", "Natura"],
+      "anni": "2010s",
+      "feat": "Gunna, Nav"
+    },
+    {
+      "title": "CAN'T SAY",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Segreti", "Lealtà"],
+      "anni": "2010s",
+      "feat": "Don Toliver"
+    },
+    {
+      "title": "NIGHTCRAWLER",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Festa", "Vita notturna"],
+      "anni": "2010s",
+      "feat": "Swae Lee, Chief Keef"
+    },
+    {
+      "title": "GATTI",
+      "autore": "Travis Scott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Pop Smoke"
+    },
+    {
+      "title": "Stronger",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Elettronica"],
+      "tema": ["Resilienza", "Potere"],
       "anni": "2000s",
       "feat": "no"
+    },
+    {
+      "title": "Gold Digger",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Denaro", "Relazioni"],
+      "anni": "2000s",
+      "feat": "Jamie Foxx"
+    },
+    {
+      "title": "Heartless",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Rottura", "Indifferenza"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "POWER",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Potere", "Critica sociale"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Runaway",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Autoriflessione", "Relazioni"],
+      "anni": "2010s",
+      "feat": "Pusha T"
+    },
+    {
+      "title": "Flashing Lights",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Elettronica"],
+      "tema": ["Fama", "Superficialità"],
+      "anni": "2000s",
+      "feat": "Dwele"
+    },
+    {
+      "title": "All of the Lights",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Fama", "Visibilità"],
+      "anni": "2010s",
+      "feat": "Rihanna, Kid Cudi"
+    },
+    {
+      "title": "Black Skinhead",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rock"],
+      "tema": ["Razza", "Identità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Bound 2",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Soul"],
+      "tema": ["Amore", "Dedizione"],
+      "anni": "2010s",
+      "feat": "Charlie Wilson"
+    },
+    {
+      "title": "Jesus Walks",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gospel"],
+      "tema": ["Fede", "Spiritualità"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Can't Tell Me Nothing",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Determinazione", "Successo"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "American Boy",
+      "autore": "Estelle",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Amore", "Avventura"],
+      "anni": "2000s",
+      "feat": "Kanye West"
+    },
+    {
+      "title": "Praise God",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gospel"],
+      "tema": ["Fede", "Resilienza"],
+      "anni": "2020s",
+      "feat": "Baby Keem, Travis Scott"
+    },
+    {
+      "title": "Off the Grid",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Drill"],
+      "tema": ["Indipendenza", "Isolamento"],
+      "anni": "2020s",
+      "feat": "Playboi Carti, Fivio Foreign"
+    },
+    {
+      "title": "Reborn",
+      "autore": "Kids See Ghosts",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Alternative"],
+      "tema": ["Rinascita", "Guarigione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "4th Dimension",
+      "autore": "Kids See Ghosts",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Experimental"],
+      "tema": ["Trascendenza", "Percezione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "I Wonder",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Ambizione", "Riflessione"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Niggas in Paris",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Lusso", "Successo"],
+      "anni": "2010s",
+      "feat": "Jay-Z"
+    },
+    {
+      "title": "Devil in a New Dress",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Soul"],
+      "tema": ["Amore", "Tentazione"],
+      "anni": "2010s",
+      "feat": "Rick Ross"
+    },
+    {
+      "title": "Ghost Town",
+      "autore": "Kanye West",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rock"],
+      "tema": ["Libertà", "Dolore"],
+      "anni": "2010s",
+      "feat": "070 Shake, Kid Cudi"
+    },
+    {
+      "title": "Without Me",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Satira", "Fama"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Stan",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Ossessione", "Fama"],
+      "anni": "2000s",
+      "feat": "Dido"
+    },
+    {
+      "title": "The Real Slim Shady",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Identità", "Controversia"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Love the Way You Lie",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Relazioni tossiche", "Violenza"],
+      "anni": "2010s",
+      "feat": "Rihanna"
+    },
+    {
+      "title": "Not Afraid",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Resilienza", "Riscatto"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Rap God",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Abilità", "Superiorità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Mockingbird",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Famiglia", "Vulnerabilità"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "My Name Is",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Presentazione", "Umorismo"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "When I'm Gone",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Famiglia", "Rimpianto"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "California Love",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "West Coast Hip Hop"],
+      "tema": ["Festa", "Regionalismo"],
+      "anni": "1990s",
+      "feat": "Dr. Dre, Roger Troutman"
+    },
+    {
+      "title": "Changes",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Razzismo", "Cambiamento sociale"],
+      "anni": "1990s",
+      "feat": "Talent"
+    },
+    {
+      "title": "Hail Mary",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Spiritualità", "Mortalità"],
+      "anni": "1990s",
+      "feat": "The Outlawz"
+    },
+    {
+      "title": "Hit 'Em Up",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Rivalità", "Rabbia"],
+      "anni": "1990s",
+      "feat": "The Outlawz"
+    },
+    {
+      "title": "Keep Ya Head Up",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Empowerment", "Rispetto"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Dear Mama",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Famiglia", "Gratitudine"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "2 of Amerikaz Most Wanted",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Vita di strada", "Alleanza"],
+      "anni": "1990s",
+      "feat": "Snoop Dogg"
+    },
+    {
+      "title": "Ambitionz Az a Ridah",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Ambizione", "Sopravvivenza"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "I Get Around",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "West Coast Hip Hop"],
+      "tema": ["Vita sociale", "Donne"],
+      "anni": "1990s",
+      "feat": "Digital Underground"
+    },
+    {
+      "title": "All Eyez on Me",
+      "autore": "2Pac",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Fama", "Paranoia"],
+      "anni": "1990s",
+      "feat": "Big Syke"
+    },
+    {
+      "title": "Juicy",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Successo", "Riscatto"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Big Poppa",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Lusso", "Stile di vita"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Hypnotize",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Successo", "Fascino"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Mo Money Mo Problems",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Ricchezza", "Problemi"],
+      "anni": "1990s",
+      "feat": "Mase, Puff Daddy"
+    },
+    {
+      "title": "Warning",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Paranoia", "Tradimento"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Ten Crack Commandments",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Vita di strada", "Lezioni"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "One More Chance",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Seduzione", "Donne"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Who Shot Ya",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Violenza", "Intimidazione"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Sky's the Limit",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Ambizione", "Speranza"],
+      "anni": "1990s",
+      "feat": "112"
+    },
+    {
+      "title": "Gimme the Loot",
+      "autore": "The Notorious B.I.G.",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Criminalità", "Rapina"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "HUMBLE.",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Umiltà", "Contraddizione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Alright",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Jazz Rap"],
+      "tema": ["Speranza", "Resistenza"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "DNA.",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Eredità", "Identità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Swimming Pools (Drank)",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Dipendenza", "Pressione sociale"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Money Trees",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "West Coast Hip Hop"],
+      "tema": ["Povertà", "Ambizione"],
+      "anni": "2010s",
+      "feat": "Jay Rock"
+    },
+    {
+      "title": "Bitch, Don't Kill My Vibe",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Pace interiore", "Autenticità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "LOVE.",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Amore", "Devozione"],
+      "anni": "2010s",
+      "feat": "Zacari"
+    },
+    {
+      "title": "King Kunta",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Funk"],
+      "tema": ["Potere", "Libertà"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "m.A.A.d city",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "West Coast Hip Hop"],
+      "tema": ["Vita di strada", "Violenza"],
+      "anni": "2010s",
+      "feat": "MC Eiht"
+    },
+    {
+      "title": "The Blacker the Berry",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Razzismo", "Identità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "LUTHER",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Religione", "Identità"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "All The Stars",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Speranza", "Destino"],
+      "anni": "2010s",
+      "feat": "SZA"
+    },
+    {
+      "title": "LOYALTY.",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Lealtà", "Relazioni"],
+      "anni": "2010s",
+      "feat": "Rihanna"
+    },
+    {
+      "title": "Die Hard",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Vulnerabilità", "Redenzione"],
+      "anni": "2020s",
+      "feat": "Blxst, Amanda Reifer"
+    },
+    {
+      "title": "family ties",
+      "autore": "Baby Keem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Famiglia", "Competizione"],
+      "anni": "2020s",
+      "feat": "Kendrick Lamar"
+    },
+    {
+      "title": "Poetic Justice",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Amore", "Poesia"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Sing About Me, I'm Dying of Thirst",
+      "autore": "Kendrick Lamar",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Mortalità", "Eredità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Congratulations",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Rivincita"],
+      "anni": "2010s",
+      "feat": "Quavo"
+    },
+    {
+      "title": "Yes Indeed",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Ricchezza"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Walk It Talk It",
+      "autore": "Migos",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Autenticità", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Lucid Dreams",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Rottura", "Dolore"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "INDUSTRY BABY",
+      "autore": "Lil Nas X",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop Rap"],
+      "tema": ["Successo", "Fiducia"],
+      "anni": "2020s",
+      "feat": "Jack Harlow"
+    },
+    {
+      "title": "Way 2 Sexy",
+      "autore": "Drake",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fascino", "Sicurezza"],
+      "anni": "2020s",
+      "feat": "Future, Young Thug"
+    },
+    {
+      "title": "The Box",
+      "autore": "Roddy Ricch",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Stile di vita"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Rockstar",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fama", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "21 Savage"
+    },
+    {
+      "title": "I Had Some Help",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Supporto", "Gratitudine"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Sunflower",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Amore", "Dedizione"],
+      "anni": "2010s",
+      "feat": "Swae Lee"
+    },
+    {
+      "title": "Chemical",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Rock"],
+      "tema": ["Attrazione", "Dipendenza"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Die For Me",
+      "autore": "Post Malone",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Tradimento", "Relazioni"],
+      "anni": "2010s",
+      "feat": "Future, Halsey"
+    },
+    {
+      "title": "deja vu",
+      "autore": "Olivia Rodrigo",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Alternative"],
+      "tema": ["Rottura", "Gelosia"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "The Monster",
+      "autore": "Eminem",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Salute mentale", "Lotta interiore"],
+      "anni": "2010s",
+      "feat": "Rihanna"
+    },
+    {
+      "title": "XO Tour Llif3",
+      "autore": "Lil Uzi Vert",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Depressione", "Rottura"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Candy Shop",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Seduzione", "Sessualità"],
+      "anni": "2000s",
+      "feat": "Olivia"
+    },
+    {
+      "title": "Many Men (Wish Death)",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Violenza", "Sopravvivenza"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "P.I.M.P.",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Stile di vita", "Donne"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Questions",
+      "autore": "Chris Brown",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Dancehall"],
+      "tema": ["Relazioni", "Dubbi"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Don't Push Me",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Determinazione", "Avvertimento"],
+      "anni": "2000s",
+      "feat": "Eminem, Lloyd Banks"
+    },
+    {
+      "title": "Patiently Waiting",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Pazienza", "Ambizione"],
+      "anni": "2000s",
+      "feat": "Eminem"
+    },
+    {
+      "title": "Wanksta",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Autenticità", "Critica"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "What Up Gangsta",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Gangsta Rap"],
+      "tema": ["Potere", "Vita di strada"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Ayo Technology",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop Rap"],
+      "tema": ["Tecnologia", "Desiderio"],
+      "anni": "2000s",
+      "feat": "Justin Timberlake"
+    },
+    {
+      "title": "Empire State of Mind",
+      "autore": "Jay-Z",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "East Coast Hip Hop"],
+      "tema": ["Città", "Successo"],
+      "anni": "2000s",
+      "feat": "Alicia Keys"
+    },
+    {
+      "title": "Middle Child",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Posizione", "Generazioni"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "No Role Modelz",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Modelli", "Relazioni"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Power Trip",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Amore", "Ossessione"],
+      "anni": "2010s",
+      "feat": "Miguel"
+    },
+    {
+      "title": "Motiv8",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Motivazione", "Successo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Love Yourz",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Contentezza", "Riflessione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Fire Squad",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Fuoco", "Industria musicale"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "G.O.M.D",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Frustrazione", "Ribellione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Wet Dreamz",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Giovinezza", "Prima volta"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "A Tale of 2 Citiez",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Dualità", "Vita di strada"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Apparently",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Crescita", "Consapevolezza"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Work Out",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop Rap"],
+      "tema": ["Festa", "Divertimento"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "My Life",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Vita", "Riflessione"],
+      "anni": "2020s",
+      "feat": "21 Savage, Morray"
+    },
+    {
+      "title": "First Person Shooter",
+      "autore": "Drake",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Rap"],
+      "tema": ["Competizione", "Abilità"],
+      "anni": "2020s",
+      "feat": "J. Cole"
+    },
+    {
+      "title": "Pride is the Devil",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Orgoglio", "Tentazione"],
+      "anni": "2020s",
+      "feat": "Lil Baby"
+    },
+    {
+      "title": "Say Na",
+      "autore": "6LACK",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Trap"],
+      "tema": ["Amore", "Dubbio"],
+      "anni": "2010s",
+      "feat": "Ari Lennox"
+    },
+    {
+      "title": "Pretty Little Fears",
+      "autore": "6LACK",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Hip Hop"],
+      "tema": ["Amore", "Insicurezza"],
+      "anni": "2010s",
+      "feat": "J. Cole"
+    },
+    {
+      "title": "Under the Sun",
+      "autore": "Dreamville",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Southern Hip Hop"],
+      "tema": ["Successo", "Collaborazione"],
+      "anni": "2010s",
+      "feat": "J. Cole, DaBaby, Lute"
+    },
+    {
+      "title": "HYB",
+      "autore": "Dreamville",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Amore", "Desiderio"],
+      "anni": "2010s",
+      "feat": "Ari Lennox, Bas, Cozz"
+    },
+    {
+      "title": "In the Morning",
+      "autore": "J. Cole",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Mattino", "Desiderio"],
+      "anni": "2010s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Nobody",
+      "autore": "DJ Khaled",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop Rap"],
+      "tema": ["Relazioni", "Esclusività"],
+      "anni": "2010s",
+      "feat": "Alicia Keys, Nicki Minaj"
+    },
+    {
+      "title": "Perfect",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Perfezione", "Successo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "London",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Viaggio", "Stile di vita"],
+      "anni": "2020s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Drip Too Hard",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Stile", "Successo"],
+      "anni": "2010s",
+      "feat": "Gunna"
+    },
+    {
+      "title": "Woah",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Sorpresa"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Freestyle",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Abilità", "Vita di strada"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "The Bigger Picture",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Giustizia sociale", "Protesta"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Emotionally Scarred",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Trauma", "Guarigione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "In a Minute",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Ambizione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Close Friends",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Relazioni", "Confidenza"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Pure Cocaine",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Droga", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Sum 2 Prove",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Determinazione", "Ambizione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Grace",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Spiritualità", "Gratitudine"],
+      "anni": "2020s",
+      "feat": "42 Dugg"
+    },
+    {
+      "title": "Bodak Yellow",
+      "autore": "Cardi B",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Successo", "Empowerment femminile"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "WAP",
+      "autore": "Cardi B",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Sessualità", "Empowerment femminile"],
+      "anni": "2020s",
+      "feat": "Megan Thee Stallion"
+    },
+    {
+      "title": "Savage Remix",
+      "autore": "Megan Thee Stallion",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Fiducia", "Empowerment femminile"],
+      "anni": "2020s",
+      "feat": "Beyoncé"
+    },
+    {
+      "title": "Anaconda",
+      "autore": "Nicki Minaj",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Sessualità", "Empowerment femminile"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Super Bass",
+      "autore": "Nicki Minaj",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop Rap"],
+      "tema": ["Amore", "Attrazione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Hot Girl Summer",
+      "autore": "Megan Thee Stallion",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Estate", "Fiducia"],
+      "anni": "2010s",
+      "feat": "Nicki Minaj, Ty Dolla $ign"
+    },
+    {
+      "title": "Big Energy",
+      "autore": "Latto",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Fiducia", "Empowerment femminile"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Do It",
+      "autore": "Chloe x Halle",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Indipendenza", "Fiducia"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Work It",
+      "autore": "Missy Elliott",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Female Rap"],
+      "tema": ["Festa", "Sensualità"],
+      "anni": "2000s",
+      "feat": "no"
+    },
+    {
+      "title": "Truth Hurts",
+      "autore": "Lizzo",
+      "lingua": "Inglese",
+      "genere": ["Pop", "Hip Hop"],
+      "tema": ["Empowerment femminile", "Indipendenza"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Vossi Bop",
+      "autore": "Stormzy",
+      "lingua": "Inglese",
+      "genere": ["Grime", "UK Drill"],
+      "tema": ["Orgoglio", "Fiducia"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Shut Up",
+      "autore": "Stormzy",
+      "lingua": "Inglese",
+      "genere": ["Grime", "UK Drill"],
+      "tema": ["Rivalità musicale", "Fiducia"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Don't Rush",
+      "autore": "Young T & Bugsey",
+      "lingua": "Inglese",
+      "genere": ["Afrobeats", "Hip Hop"],
+      "tema": ["Amore", "Serenità"],
+      "anni": "2020s",
+      "feat": "Headie One"
+    },
+    {
+      "title": "Funky Friday",
+      "autore": "Dave",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Fiducia", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Fredo"
+    },
+    {
+      "title": "Thiago Silva",
+      "autore": "Dave",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Grime"],
+      "tema": ["Calcio", "Fiducia"],
+      "anni": "2010s",
+      "feat": "AJ Tracey"
+    },
+    {
+      "title": "Clash",
+      "autore": "Dave",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Rivalità", "Successo"],
+      "anni": "2020s",
+      "feat": "Stormzy"
+    },
+    {
+      "title": "Own It",
+      "autore": "Stormzy",
+      "lingua": "Inglese",
+      "genere": ["Afrobeats", "Hip Hop"],
+      "tema": ["Amore", "Possessività"],
+      "anni": "2010s",
+      "feat": "Ed Sheeran, Burna Boy"
+    },
+    {
+      "title": "Location",
+      "autore": "Dave",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Afrobeats"],
+      "tema": ["Viaggio", "Amore"],
+      "anni": "2010s",
+      "feat": "Burna Boy"
+    },
+    {
+      "title": "Doja",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Attrazione", "Social media"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Loading",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Crescita", "Pazienza"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Ready",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Preparazione", "Fiducia"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Never Recover",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Resilienza"],
+      "anni": "2010s",
+      "feat": "Gunna, Drake"
+    },
+    {
+      "title": "Sprinter",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Velocità", "Successo"],
+      "anni": "2020s",
+      "feat": "Dave"
+    },
+    {
+      "title": "Obsessed With You",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Ossessione", "Amore"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "On The Radar Freestyle",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Abilità", "Fiducia"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Eurovision",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Europa", "Internazionalità"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Martin & Gina",
+      "autore": "Polo G",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Amore", "Relazioni"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Hate The Other Side",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Rivalità", "Vita di strada"],
+      "anni": "2020s",
+      "feat": "Polo G, The Kid LAROI, Marshmello"
+    },
+    {
+      "title": "Not Sober",
+      "autore": "Polo G",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Dipendenza", "Introspezione"],
+      "anni": "2020s",
+      "feat": "Fivio Foreign, Pop Smoke"
+    },
+    {
+      "title": "Through Da Storm",
+      "autore": "Polo G",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Resilienza", "Difficoltà"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Don't Play",
+      "autore": "Central Cee",
+      "lingua": "Inglese",
+      "genere": ["UK Drill", "Hip Hop"],
+      "tema": ["Determinazione", "Avvertimento"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Bad Man (Smooth Criminal)",
+      "autore": "Polo G",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Vita di strada", "Omaggio"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Flex",
+      "autore": "Polo G",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Successo"],
+      "anni": "2020s",
+      "feat": "Juice WRLD"
+    },
+    {
+      "title": "All Girls Are the Same",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Rottura", "Disillusione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Robbery",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Amore", "Dolore"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Legends",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Mortalità", "Tributo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Wishing Well",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Dipendenza", "Salute mentale"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Lean Wit Me",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Dipendenza", "Autodistruzione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Bandit",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Vita di strada", "Amore"],
+      "anni": "2010s",
+      "feat": "YoungBoy Never Broke Again"
+    },
+    {
+      "title": "Come & Go",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Relazioni", "Insicurezza"],
+      "anni": "2020s",
+      "feat": "Marshmello"
+    },
+    {
+      "title": "Hate Me",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Relazioni tossiche", "Auto-sabotaggio"],
+      "anni": "2010s",
+      "feat": "Ellie Goulding"
+    },
+    {
+      "title": "Smile",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Positività", "Dolore"],
+      "anni": "2020s",
+      "feat": "The Weeknd"
+    },
+    {
+      "title": "Tell Me U Luv Me",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Amore", "Rassicurazione"],
+      "anni": "2020s",
+      "feat": "Trippie Redd"
+    },
+    {
+      "title": "Life's a Mess",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Amore", "Conforto"],
+      "anni": "2020s",
+      "feat": "Halsey"
+    },
+    {
+      "title": "Stay High",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Dipendenza", "Evasione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Up Up and Away",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Elevazione", "Libertà"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Fine China",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Amore", "Preziosità"],
+      "anni": "2010s",
+      "feat": "Future"
+    },
+    {
+      "title": "Empty",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Vuoto", "Depressione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Who Shot Cupid?",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Amore", "Dolore"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Ring Ring",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Evitamento", "Ansia"],
+      "anni": "2010s",
+      "feat": "Clever"
+    },
+    {
+      "title": "Wasted",
+      "autore": "Juice WRLD",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Dipendenza", "Amore"],
+      "anni": "2010s",
+      "feat": "Lil Uzi Vert"
+    },
+    {
+      "title": "Look At Me!",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "SoundCloud Rap"],
+      "tema": ["Rabbia", "Provocazione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "SAD!",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Depressione", "Relazioni"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Moonlight",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Solitudine", "Introspezione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Jocelyn Flores",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Suicidio", "Lutto"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "changes",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Cambiamento", "Relazioni"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Hope",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Speranza", "Supporto"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Fuck Love",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Amore", "Disillusione"],
+      "anni": "2010s",
+      "feat": "Trippie Redd"
+    },
+    {
+      "title": "Everybody Dies in Their Nightmares",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Emo Rap"],
+      "tema": ["Mortalità", "Paura"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Revenge",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Alternative"],
+      "tema": ["Vendetta", "Dolore"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Take a Step Back",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Rabbia", "Energia"],
+      "anni": "2010s",
+      "feat": "Ski Mask the Slump God"
+    },
+    {
+      "title": "Infinity (888)",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Conscious Hip Hop"],
+      "tema": ["Infinito", "Filosofia"],
+      "anni": "2010s",
+      "feat": "Joey Bada$$"
+    },
+    {
+      "title": "SMASH!",
+      "autore": "XXXTENTACION",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Aggressività", "Dominanza"],
+      "anni": "2010s",
+      "feat": "Travis Scott"
+    },
+    {
+      "title": "Dior",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Lusso", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Welcome to the Party",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Festa", "Territorialità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Mood Swings",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Relazioni", "Emozioni"],
+      "anni": "2020s",
+      "feat": "Lil Tjay"
+    },
+    {
+      "title": "For the Night",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Vita notturna", "Fugacità"],
+      "anni": "2020s",
+      "feat": "Lil Baby, DaBaby"
+    },
+    {
+      "title": "The Woo",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Brooklyn", "Potere"],
+      "anni": "2020s",
+      "feat": "50 Cent, Roddy Ricch"
+    },
+    {
+      "title": "What You Know Bout Love",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Amore", "Autenticità"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Got It On Me",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Protezione", "Omaggio"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Christopher Walking",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Gangster", "Brooklyn"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Element",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Ambiente", "Controllo"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Hello",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Introduzione", "Fiducia"],
+      "anni": "2020s",
+      "feat": "A Boogie wit da Hoodie"
+    },
+    {
+      "title": "Invincible",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Immortalità", "Potere"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Woo Baby",
+      "autore": "50 Cent",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Desiderio", "Attrazione"],
+      "anni": "2020s",
+      "feat": "Chris Brown"
+    },
+    {
+      "title": "Mr. Jones",
+      "autore": "Counting Crows",
+      "lingua": "Inglese",
+      "genere": ["Rock", "Alternative Rock"],
+      "tema": ["Fama", "Sogni"],
+      "anni": "1990s",
+      "feat": "no"
+    },
+    {
+      "title": "Bout a Million",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Ricchezza", "Ambizione"],
+      "anni": "2020s",
+      "feat": "21 Savage, 42 Dugg"
+    },
+    {
+      "title": "Tell The Vision",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Ambizione", "Visione"],
+      "anni": "2020s",
+      "feat": "Kanye West, Pusha T"
+    },
+    {
+      "title": "Demeanor",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Pop"],
+      "tema": ["Atteggiamento", "Fiducia"],
+      "anni": "2020s",
+      "feat": "Dua Lipa"
+    },
+    {
+      "title": "Get Back",
+      "autore": "Pop Smoke",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "NY Drill"],
+      "tema": ["Territorialità", "Avvertimento"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Pushin P",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Stile di vita", "Autenticità"],
+      "anni": "2020s",
+      "feat": "Future, Young Thug"
+    },
+    {
+      "title": "Lemonade",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Successo"],
+      "anni": "2020s",
+      "feat": "Nav, Don Toliver"
+    },
+    {
+      "title": "Sold Out Dates",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Tour"],
+      "anni": "2010s",
+      "feat": "Lil Baby"
+    },
+    {
+      "title": "Oh Okay",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Approvazione", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Young Thug, Lil Baby"
+    },
+    {
+      "title": "Dollaz on My Head",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ricchezza", "Successo"],
+      "anni": "2020s",
+      "feat": "Young Thug"
+    },
+    {
+      "title": "Fukumean",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Sfida", "Atteggiamento"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Space Cadet",
+      "autore": "Metro Boomin",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Spazio", "Alterazione"],
+      "anni": "2020s",
+      "feat": "Gunna"
+    },
+    {
+      "title": "P Power",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Potere", "Seduzione"],
+      "anni": "2020s",
+      "feat": "Drake"
+    },
+    {
+      "title": "Street Sweeper",
+      "autore": "Future",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Vita di strada", "Potere"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Skybox",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Successo"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Life Goes On",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Resilienza", "Perseveranza"],
+      "anni": "2020s",
+      "feat": "Gunna, Lil Uzi Vert"
+    },
+    {
+      "title": "Relentless",
+      "autore": "Future",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Determinazione", "Ambizione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Car Sick",
+      "autore": "Gunna",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Macchine"],
+      "anni": "2010s",
+      "feat": "Metro Boomin, NAV"
+    },
+    {
+      "title": "Belly",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ricchezza", "Vita di strada"],
+      "anni": "2020s",
+      "feat": "Gunna"
+    },
+    {
+      "title": "Heatin Up",
+      "autore": "Lil Baby",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Momento"],
+      "anni": "2020s",
+      "feat": "Gunna"
+    },
+    {
+      "title": "Starboy",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Fama", "Successo"],
+      "anni": "2010s",
+      "feat": "Daft Punk"
+    },
+    {
+      "title": "The Hills",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Dipendenza", "Oscurità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Can't Feel My Face",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Dipendenza", "Amore"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Save Your Tears",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Synth Pop"],
+      "tema": ["Rimpianto", "Rimorso"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Earned It",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Soul"],
+      "tema": ["Desiderio", "Apprezzamento"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "I Feel It Coming",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Amore", "Anticipazione"],
+      "anni": "2010s",
+      "feat": "Daft Punk"
+    },
+    {
+      "title": "In The Night",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Trauma", "Oscurità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "After Hours",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Elettronica"],
+      "tema": ["Notte", "Dolore"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Die For You",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Amore", "Dedizione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Call Out My Name",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Soul"],
+      "tema": ["Rottura", "Vulnerabilità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Often",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Hip Hop"],
+      "tema": ["Sessualità", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Acquainted",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Relazioni", "Familiarità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Wicked Games",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Alternative"],
+      "tema": ["Desiderio", "Vulnerabilità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Reminder",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Fama", "Identità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Pray For Me",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Hip Hop"],
+      "tema": ["Sacrificio", "Eroismo"],
+      "anni": "2010s",
+      "feat": "Kendrick Lamar"
+    },
+    {
+      "title": "Sacrifice",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Relazioni", "Sacrificio"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Out of Time",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Rimpianto", "Tempo"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Lost in the Fire",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Elettronica"],
+      "tema": ["Desiderio", "Passione"],
+      "anni": "2010s",
+      "feat": "Gesaffelstein"
+    },
+    {
+      "title": "In Your Eyes",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Amore", "Connessione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Heartless",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Trap"],
+      "tema": ["Disincanto", "Autodistruzione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Gasoline",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Elettronica"],
+      "tema": ["Autodistruzione", "Ossessione"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Secrets",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Infedeltà", "Segreti"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Love Me Harder",
+      "autore": "Ariana Grande",
+      "lingua": "Inglese",
+      "genere": ["Pop", "R&B"],
+      "tema": ["Desiderio", "Intimità"],
+      "anni": "2010s",
+      "feat": "The Weeknd"
+    },
+    {
+      "title": "Faith",
+      "autore": "The Weeknd",
+      "lingua": "Inglese",
+      "genere": ["R&B", "Pop"],
+      "tema": ["Dipendenza", "Spiritualità"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Timeless",
+      "autore": "Metro Boomin",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "R&B"],
+      "tema": ["Tempo", "Eternità"],
+      "anni": "2020s",
+      "feat": "The Weeknd"
+    },
+    {
+      "title": "Woke Up Like This",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fiducia", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Lil Uzi Vert"
+    },
+    {
+      "title": "Fell In Luv",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Amore", "Infatuazione"],
+      "anni": "2010s",
+      "feat": "Bryson Tiller"
+    },
+    {
+      "title": "Magnolia",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Vita di strada", "Successo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Location",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ambientazione", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Shoota",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Potere", "Protezione"],
+      "anni": "2010s",
+      "feat": "Lil Uzi Vert"
+    },
+    {
+      "title": "Sky",
+      "autore": "Playboi Carti",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Relazioni", "Rottura"],
+      "anni": "2020s",
+      "feat": "no"
+    },
+    {
+      "title": "Bank Account",
+      "autore": "21 Savage",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ricchezza", "Successo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "A Lot",
+      "autore": "21 Savage",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Riflessione", "Percorso di vita"],
+      "anni": "2010s",
+      "feat": "J. Cole"
+    },
+    {
+      "title": "X",
+      "autore": "21 Savage",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Tradimento", "Vendetta"],
+      "anni": "2010s",
+      "feat": "Metro Boomin, Future"
+    },
+    {
+      "title": "Runnin",
+      "autore": "21 Savage",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Fuga", "Sopravvivenza"],
+      "anni": "2010s",
+      "feat": "Metro Boomin"
+    },
+    {
+      "title": "Glock in My Lap",
+      "autore": "21 Savage",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Autodifesa", "Vita di strada"],
+      "anni": "2020s",
+      "feat": "Metro Boomin"
+    },
+    {
+      "title": "F**kin' Problems",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Donne", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Drake, 2 Chainz, Kendrick Lamar"
+    },
+    {
+      "title": "Praise The Lord",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Successo", "Spiritualità"],
+      "anni": "2010s",
+      "feat": "Skepta"
+    },
+    {
+      "title": "L$D",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Psychedelic"],
+      "tema": ["Droga", "Percezione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Everyday",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Persistenza", "Quotidianità"],
+      "anni": "2010s",
+      "feat": "Rod Stewart, Miguel, Mark Ronson"
+    },
+    {
+      "title": "Long Live A$AP",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop"],
+      "tema": ["Immortalità", "Eredità"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Phoenix",
+      "autore": "A$AP Rocky",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Alternative"],
+      "tema": ["Rinascita", "Trasformazione"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "New Level",
+      "autore": "A$AP Ferg",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Successo", "Evoluzione"],
+      "anni": "2010s",
+      "feat": "Future"
+    },
+    {
+      "title": "Plain Jane",
+      "autore": "A$AP Ferg",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Autenticità", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Nicki Minaj"
+    },
+    {
+      "title": "Floor Seats",
+      "autore": "A$AP Ferg",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Status"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Mask Off",
+      "autore": "Future",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Autenticità", "Droga"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Money Longer",
+      "autore": "Lil Uzi Vert",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Ricchezza", "Successo"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Bad and Boujee",
+      "autore": "Migos",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Lusso", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Lil Uzi Vert"
+    },
+    {
+      "title": "Trap Queen",
+      "autore": "Fetty Wap",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Amore", "Vita di strada"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Mo Bamba",
+      "autore": "Sheck Wes",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Celebrazione", "Sport"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "Panda",
+      "autore": "Desiigner",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Macchine", "Lusso"],
+      "anni": "2010s",
+      "feat": "no"
+    },
+    {
+      "title": "ZeZe",
+      "autore": "Kodak Black",
+      "lingua": "Inglese",
+      "genere": ["Hip Hop", "Trap"],
+      "tema": ["Festa", "Stile di vita"],
+      "anni": "2010s",
+      "feat": "Travis Scott, Offset"
     }
   ]
 }
