@@ -14473,1045 +14473,1045 @@
 },
 "Giurisprudenza": {
   "bambino": [
-    {
-      "question": "Chi decide se qualcuno ha rispettato la legge?",
-      "answers": ["Il cuoco", "Il giudice", "L'insegnante", "Il postino"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa succede in un tribunale?",
-      "answers": ["Si fanno lezione", "Si guardano film", "Si decide chi ha ragione", "Si gioca a calcio"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Come si chiama la persona che difende chi è accusato?",
-      "answers": ["Il dottore", "L’avvocato", "Il sindaco", "Il pompiere"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cos'è una legge?",
-      "answers": ["Una canzone", "Una regola importante per tutti", "Un gioco", "Un dolce"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi fa le leggi in Italia?",
-      "answers": ["Il Parlamento", "La polizia", "La televisione", "I professori"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa fa la polizia?",
-      "answers": ["Cucina", "Aiuta a rispettare le leggi", "Costruisce case", "Insegna a scuola"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Come si chiama il libro con tutte le leggi italiane?",
-      "answers": ["Il ricettario", "Il Codice Civile", "Il diario", "L'enciclopedia"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi può dire se una persona deve andare in prigione?",
-      "answers": ["Il bidello", "Il giudice", "Il medico", "Il giornalista"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Come si chiama la persona che accusa qualcuno in un processo?",
-      "answers": ["L’accusato", "Il giudice", "Il pubblico ministero", "Il testimone"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Come si chiama la persona che racconta cosa ha visto in un processo?",
-      "answers": ["Il cantante", "Il testimone", "Il pittore", "Il regista"],
-      "correctIndex": 1
-    },
-    {
-      "question": "A cosa serve la legge?",
-      "answers": ["A fare disegni", "A far funzionare la giustizia", "A organizzare feste", "A fare sport"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa succede se non rispetti una legge?",
-      "answers": ["Nulla", "Ti premiano", "Ci possono essere conseguenze", "Ti regalano qualcosa"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi può aiutarti se hai un problema legale?",
-      "answers": ["Il barista", "L’avvocato", "Il tassista", "Il musicista"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Come si chiama la persona che deve rispettare la legge?",
-      "answers": ["Il re", "Ogni cittadino", "Solo i poliziotti", "I bambini"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi è il Presidente della Repubblica?",
-      "answers": ["Un cantante", "Il capo dello Stato", "Un attore", "Un medico"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa serve per vivere tutti insieme in pace?",
-      "answers": ["La musica", "Le leggi", "I dolci", "Le gare"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi fa rispettare le leggi per strada?",
-      "answers": ["Il cuoco", "Il vigile urbano", "Il farmacista", "Il postino"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cos'è una regola?",
-      "answers": ["Una cosa da mangiare", "Un’indicazione su cosa si può o non si può fare", "Un gioco", "Una macchina"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Dove lavorano i giudici?",
-      "answers": ["A scuola", "In tribunale", "In ospedale", "In biblioteca"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Che cos’è un processo?",
-      "answers": ["Una festa", "Un momento in cui si decide chi ha ragione", "Un film", "Un videogioco"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi guida un processo?",
-      "answers": ["L’insegnante", "Il giudice", "Il poliziotto", "Il sindaco"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Come si chiama la persona che riceve una punizione?",
-      "answers": ["Il punito", "L’accusato", "Il colpevole", "Il premiato"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa succede se un giudice sbaglia?",
-      "answers": ["Non succede nulla", "Deve essere controllato da altri giudici", "Vince un premio", "Diventa avvocato"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Quale di queste è una legge importante in Italia?",
-      "answers": ["La Costituzione", "La ricetta della pizza", "Il manuale delle biciclette", "Il dizionario"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si usa per firmare le leggi?",
-      "answers": ["La penna", "Il martello", "La spada", "La bacchetta magica"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Chi controlla se una legge è giusta?",
-      "answers": ["Il muratore", "La Corte Costituzionale", "Il parrucchiere", "Il bibliotecario"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi è il difensore civico?",
-      "answers": ["Un supereroe", "Chi protegge i diritti dei cittadini", "Un giudice", "Un maestro"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Che differenza c’è tra legge e regola?",
-      "answers": ["Nessuna", "La legge è per tutti, la regola può valere solo in certi posti", "La regola è più importante", "La legge si applica solo a scuola"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi è il colpevole in un processo?",
-      "answers": ["Chi ha rotto la legge", "Chi è il giudice", "Chi racconta la verità", "Chi fa le domande"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa può fare un avvocato per il suo cliente?",
-      "answers": ["Punirlo", "Difenderlo", "Insegnargli a leggere", "Farlo cucinare"],
-      "correctIndex": 1
-    }
+  {
+    "question": "Chi decide se qualcuno ha rispettato la legge?",
+    "answers": ["Il cuoco", "Il giudice", "L'insegnante", "Il postino"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa succede in un tribunale?",
+    "answers": ["Si studia", "Si guardano film", "Si decide la verità", "Si gioca"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Come si chiama chi difende un accusato?",
+    "answers": ["Il medico", "L’avvocato", "Il sindaco", "Il pompiere"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cos'è una legge?",
+    "answers": ["Una canzone", "Una regola per tutti", "Un gioco", "Un dolce"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi fa le leggi in Italia?",
+    "answers": ["Il Parlamento", "La polizia", "La TV", "I maestri"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa fa la polizia?",
+    "answers": ["Cucina", "Fa rispettare le regole", "Costruisce", "Insegna"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Come si chiama il libro delle leggi?",
+    "answers": ["Il ricettario", "Il Codice", "Il diario", "L'enciclopedia"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi decide se uno va in prigione?",
+    "answers": ["Il bidello", "Il giudice", "Il medico", "Il giornalista"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi accusa qualcuno in un processo?",
+    "answers": ["L’accusato", "Il giudice", "Il PM", "Il testimone"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi racconta cosa ha visto?",
+    "answers": ["Il cantante", "Il testimone", "Il pittore", "Il regista"],
+    "correctIndex": 1
+  },
+  {
+    "question": "A cosa serve la legge?",
+    "answers": ["A disegnare", "A fare giustizia", "A fare feste", "A fare sport"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa succede se non segui la legge?",
+    "answers": ["Niente", "Ti premiano", "Hai una punizione", "Ti regalano"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi aiuta in un problema legale?",
+    "answers": ["Il barista", "L’avvocato", "Il tassista", "Il musicista"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi deve rispettare la legge?",
+    "answers": ["Il re", "Ogni persona", "Solo i poliziotti", "I bimbi"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi è il Presidente della Repubblica?",
+    "answers": ["Un cantante", "Il capo dello Stato", "Un attore", "Un medico"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa serve per vivere in pace?",
+    "answers": ["La musica", "Le leggi", "I dolci", "Le gare"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi fa rispettare le regole in strada?",
+    "answers": ["Il cuoco", "Il vigile", "Il farmacista", "Il postino"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cos'è una regola?",
+    "answers": ["Un cibo", "Un cosa da seguire", "Un gioco", "Una macchina"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Dove lavorano i giudici?",
+    "answers": ["A scuola", "In tribunale", "In ospedale", "In biblioteca"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Che cos’è un processo?",
+    "answers": ["Una festa", "Un giudizio in tribunale", "Un film", "Un videogioco"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi guida un processo?",
+    "answers": ["Il maestro", "Il giudice", "Il poliziotto", "Il sindaco"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi riceve una punizione?",
+    "answers": ["Il punito", "L’accusato", "Il colpevole", "Il premiato"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa succede se un giudice sbaglia?",
+    "answers": ["Nulla", "Lo controllano altri", "Vince un premio", "Diventa avvocato"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Qual è una legge importante in Italia?",
+    "answers": ["La Costituzione", "La ricetta", "Il manuale", "Il dizionario"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si usa per firmare le leggi?",
+    "answers": ["La penna", "Il martello", "La spada", "La bacchetta"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Chi controlla se una legge è giusta?",
+    "answers": ["Il muratore", "La Corte", "Il parrucchiere", "Il bibliotecario"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi è il difensore civico?",
+    "answers": ["Un eroe", "Chi protegge i diritti", "Un giudice", "Un maestro"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Che differenza c’è tra legge e regola?",
+    "answers": ["Nessuna", "La legge è per tutti", "La regola è più forte", "La legge vale solo a scuola"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi è il colpevole in un processo?",
+    "answers": ["Chi ha sbagliato", "Il giudice", "Chi racconta", "Chi fa domande"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa fa un avvocato per il cliente?",
+    "answers": ["Lo punisce", "Lo difende", "Gli insegna", "Lo fa cucinare"],
+    "correctIndex": 1
+  }
   ],
   "facile": [
-    {
-      "question": "Cosa indica il termine 'Costituzione'?",
-      "answers": ["Un codice fiscale", "Un insieme di leggi fondamentali dello Stato", "Una ricetta", "Un documento sportivo"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Quanti sono i poteri dello Stato secondo la Costituzione italiana?",
-      "answers": ["2", "3", "5", "10"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi fa le leggi in Italia?",
-      "answers": ["Il Presidente della Repubblica", "Il Governo", "Il Parlamento", "Il Giudice"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Qual è la funzione del potere giudiziario?",
-      "answers": ["Emanare leggi", "Controllare le aziende", "Applicare la legge e giudicare", "Organizzare le elezioni"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi è il Capo dello Stato in Italia?",
-      "answers": ["Il Papa", "Il Primo Ministro", "Il Presidente della Repubblica", "Il Ministro della Giustizia"],
-      "correctIndex": 2
-    },
-    {
-      "question": "In quale anno è entrata in vigore la Costituzione italiana?",
-      "answers": ["1948", "1861", "1989", "2001"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos’è un reato?",
-      "answers": ["Un errore grammaticale", "Una regola", "Una violazione della legge", "Una festa illegale"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi rappresenta l’accusa in un processo penale?",
-      "answers": ["L’avvocato della difesa", "Il testimone", "Il Pubblico Ministero", "Il giudice"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi ha il compito di difendere l'imputato in un processo?",
-      "answers": ["Il Pubblico Ministero", "Il giudice", "L’avvocato difensore", "La giuria"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è il diritto civile?",
-      "answers": ["La legge dei militari", "Il diritto che regola i rapporti tra privati", "Una legge religiosa", "Una regola della scuola"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Che cos'è un contratto?",
-      "answers": ["Un tipo di reato", "Una decisione politica", "Un accordo tra due o più parti con valore legale", "Un documento segreto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è una multa?",
-      "answers": ["Una promozione", "Un premio", "Una sanzione economica per una violazione", "Un documento notarile"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi è il legislatore?",
-      "answers": ["Chi scrive i libri di storia", "Chi emette sentenze", "Chi fa le leggi", "Chi insegna diritto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa si intende per 'pena detentiva'?",
-      "answers": ["Una multa", "Una sanzione civile", "La reclusione in carcere", "Un permesso speciale"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è un testimone?",
-      "answers": ["Chi assiste e racconta un fatto davanti al giudice", "Il giudice stesso", "Un poliziotto", "Un avvocato"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa significa essere imputato?",
-      "answers": ["Aver vinto un processo", "Essere accusato di un reato", "Essere giudice", "Essere avvocato"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi ha il diritto di voto in Italia?",
-      "answers": ["Tutti, anche i bambini", "Solo i magistrati", "I cittadini maggiorenni", "Solo chi lavora nella pubblica amministrazione"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Quale tra questi è un diritto civile?",
-      "answers": ["Essere assunti", "Guidare un'auto", "Votare alle elezioni", "Essere ricchi"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è una causa civile?",
-      "answers": ["Una causa che riguarda due privati", "Un processo penale", "Una causa persa", "Una manifestazione pubblica"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Come si chiama l'insieme delle norme che regolano lo Stato?",
-      "answers": ["Il Codice Etico", "La Legge", "La Costituzione", "Il Codice Segreto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi è il Ministro della Giustizia?",
-      "answers": ["Un giudice", "Un avvocato", "Un membro del Governo responsabile dell’organizzazione della giustizia", "Un poliziotto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa fa un notaio?",
-      "answers": ["Arresta i criminali", "Scrive articoli di legge", "Autentica atti pubblici e privati", "Insegna diritto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è una sentenza?",
-      "answers": ["Una domanda", "Un'opinione personale", "La decisione finale del giudice", "Un libro di legge"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa significa 'appello' in ambito giudiziario?",
-      "answers": ["Un invito", "Un nuovo processo richiesto da chi non è d'accordo con la sentenza", "Una legge nuova", "Un premio al giudice"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Qual è la funzione del giudice di pace?",
-      "answers": ["Gestisce cause internazionali", "Interviene nelle guerre", "Si occupa di controversie minori", "Scrive leggi"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è un codice penale?",
-      "answers": ["Un libro di poesie", "Un manuale di comportamento", "L’insieme delle leggi che puniscono i reati", "Una lista telefonica"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cosa significa 'legittima difesa'?",
-      "answers": ["Una regola sportiva", "Una difesa prevista dalla legge in caso di pericolo", "Una scusa qualsiasi", "Un diritto al voto"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa significa 'presunzione di innocenza'?",
-      "answers": ["Che tutti sono colpevoli fino a prova contraria", "Che bisogna essere sospettosi", "Che si è innocenti fino a prova del contrario", "Che nessuno può essere giudicato"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa sono i diritti umani?",
-      "answers": ["Regole per i politici", "Diritti garantiti a ogni persona", "Leggi per chi lavora", "Obblighi religiosi"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi decide se una legge è costituzionale?",
-      "answers": ["Il Parlamento", "La Corte dei Conti", "La Corte Costituzionale", "Il Presidente della Repubblica"],
-      "correctIndex": 2
-    }
+  {
+    "question": "Cosa indica il termine 'Costituzione'?",
+    "answers": ["Codice fiscale", "Leggi base dello Stato", "Una ricetta", "Documento sportivo"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Quanti sono i poteri dello Stato secondo la Costituzione italiana?",
+    "answers": ["Due", "Tre", "Cinque", "Dieci"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi fa le leggi in Italia?",
+    "answers": ["Presidente", "Governo", "Parlamento", "Giudice"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Qual è la funzione del potere giudiziario?",
+    "answers": ["Fare leggi", "Controllare aziende", "Applicare la legge", "Organizzare voti"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi è il Capo dello Stato in Italia?",
+    "answers": ["Papa", "Premier", "Presidente", "Ministro"],
+    "correctIndex": 2
+  },
+  {
+    "question": "In quale anno è entrata in vigore la Costituzione italiana?",
+    "answers": ["1948", "1861", "1989", "2001"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos’è un reato?",
+    "answers": ["Errore", "Regola", "Violazione di legge", "Festa vietata"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi rappresenta l’accusa in un processo penale?",
+    "answers": ["Difensore", "Testimone", "PM", "Giudice"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi difende l'imputato?",
+    "answers": ["PM", "Giudice", "Avvocato", "Giuria"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è il diritto civile?",
+    "answers": ["Legge militare", "Tra privati", "Legge religiosa", "Regola scolastica"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Che cos'è un contratto?",
+    "answers": ["Reato", "Decisione", "Accordo legale", "Documento segreto"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è una multa?",
+    "answers": ["Promo", "Premio", "Sanzione economica", "Atto notarile"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi è il legislatore?",
+    "answers": ["Storico", "Giudice", "Chi fa le leggi", "Insegnante"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa si intende per 'pena detentiva'?",
+    "answers": ["Multa", "Sanzione", "Carcere", "Permesso"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è un testimone?",
+    "answers": ["Chi racconta un fatto", "Giudice", "Poliziotto", "Avvocato"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa significa essere imputato?",
+    "answers": ["Vincitore", "Accusato", "Giudice", "Avvocato"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi ha il diritto di voto in Italia?",
+    "answers": ["Anche i bambini", "Solo giudici", "Maggiorenni", "Dipendenti pubblici"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Quale tra questi è un diritto civile?",
+    "answers": ["Essere assunti", "Guidare", "Votare", "Essere ricchi"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è una causa civile?",
+    "answers": ["Tra privati", "Penale", "Persa", "Protesta"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Come si chiama l'insieme delle norme dello Stato?",
+    "answers": ["Codice Etico", "Legge", "Costituzione", "Codice Segreto"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi è il Ministro della Giustizia?",
+    "answers": ["Giudice", "Avvocato", "Membro del Governo", "Poliziotto"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa fa un notaio?",
+    "answers": ["Arresta", "Scrive leggi", "Autentica atti", "Insegna"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è una sentenza?",
+    "answers": ["Domanda", "Opinione", "Decisione del giudice", "Libro"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa significa 'appello' in ambito giudiziario?",
+    "answers": ["Invito", "Nuovo processo", "Nuova legge", "Premio"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Qual è la funzione del giudice di pace?",
+    "answers": ["Cause estere", "Guerre", "Controversie minori", "Scrive leggi"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è un codice penale?",
+    "answers": ["Poesie", "Comportamento", "Leggi sui reati", "Elenco nomi"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa significa 'legittima difesa'?",
+    "answers": ["Regola sportiva", "Difesa permessa", "Scusa", "Diritto al voto"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa significa 'presunzione di innocenza'?",
+    "answers": ["Tutti colpevoli", "Sospetto", "Innocente finché provato", "Non si giudica"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa sono i diritti umani?",
+    "answers": ["Per politici", "Per tutti", "Per lavoratori", "Religiosi"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi decide se una legge è costituzionale?",
+    "answers": ["Parlamento", "Corte dei Conti", "Corte Costituzionale", "Presidente"],
+    "correctIndex": 2
+  }
   ],
   "medio": [
-    {
-      "question": "Qual è la principale differenza tra reato doloso e reato colposo?",
-      "answers": ["Il dolo implica intenzione, il colposo no", "Il colposo è più grave", "Il doloso è sempre civile", "Il colposo riguarda solo i minori"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'prescrizione' in ambito penale?",
-      "answers": ["Una multa", "Una pena sospesa", "L’estinzione del reato per il trascorrere del tempo", "Un consiglio del giudice"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa regola il diritto amministrativo?",
-      "answers": ["I rapporti familiari", "I rapporti tra Stato e cittadini", "Le regole religiose", "Le transazioni bancarie"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Quale organo è competente a giudicare la costituzionalità delle leggi?",
-      "answers": ["Il Consiglio dei Ministri", "La Corte Costituzionale", "Il Parlamento", "Il Consiglio Superiore della Magistratura"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi esercita il potere esecutivo in Italia?",
-      "answers": ["Il Parlamento", "Il Presidente della Repubblica", "Il Governo", "La Corte di Cassazione"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cos’è un atto amministrativo?",
-      "answers": ["Un contratto privato", "Una legge", "Una decisione della pubblica amministrazione", "Un documento notarile"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è il Codice Civile?",
-      "answers": ["Un documento politico", "Una raccolta di leggi sulla materia penale", "Una raccolta di norme sui rapporti tra privati", "Un codice etico"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Che cos'è l’habeas corpus?",
-      "answers": ["Una formula religiosa", "Un principio che tutela la libertà personale", "Un tipo di contratto", "Una figura del diritto romano"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa si intende per 'giurisdizione'?",
-      "answers": ["Una zona geografica", "Il potere di giudicare", "Un diritto privato", "Un reato"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Chi può proporre una legge in Parlamento?",
-      "answers": ["Solo il Presidente della Repubblica", "Solo i cittadini", "I parlamentari, il Governo e alcuni organi", "Solo il Consiglio Superiore della Magistratura"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cos’è il diritto penale?",
-      "answers": ["Un insieme di norme per i contratti", "Un codice per le aziende", "L’insieme delle norme che stabiliscono i reati e le pene", "Una branca del diritto privato"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cos'è una norma imperativa?",
-      "answers": ["Una norma opzionale", "Una regola morale", "Una norma che non può essere derogata dalle parti", "Una regola della pubblicità"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Chi decide in ultima istanza in un processo civile?",
-      "answers": ["Il giudice di pace", "La Corte d’Appello", "La Corte di Cassazione", "Il prefetto"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Qual è la differenza tra diritto pubblico e diritto privato?",
-      "answers": ["Il pubblico riguarda lo Stato, il privato i cittadini tra loro", "Il privato è più importante", "Il pubblico è più recente", "Non c’è differenza"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Che cos'è il principio di legalità?",
-      "answers": ["Tutto ciò che non è vietato è permesso", "Nessuno può essere punito se non in forza di una legge", "La legge non è uguale per tutti", "Il giudice è sopra la legge"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa si intende per 'capacità giuridica'?",
-      "answers": ["La capacità di firmare documenti", "La capacità di possedere diritti e doveri", "Il diritto di voto", "La capacità di testimoniare"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Che cos’è un'ordinanza?",
-      "answers": ["Una legge nazionale", "Un provvedimento del giudice o della pubblica amministrazione", "Un regolamento comunale", "Un atto parlamentare"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Qual è la funzione della Corte dei Conti?",
-      "answers": ["Legiferare", "Controllare la correttezza della spesa pubblica", "Eseguire le sentenze", "Eleggere il Presidente della Repubblica"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa distingue un atto nullo da uno annullabile?",
-      "answers": ["Il nullo è invalido sin dall’inizio, l’annullabile può essere reso valido", "Non c’è differenza", "L’annullabile è più grave", "Il nullo può essere sanato"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Quale tra questi è un diritto reale?",
-      "answers": ["Il diritto di voto", "La proprietà", "La cittadinanza", "Il matrimonio"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa regola il diritto del lavoro?",
-      "answers": ["I rapporti tra studenti", "I rapporti tra lavoratori e datori di lavoro", "La libertà di espressione", "Il diritto penale minorile"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cos’è un contratto nullo?",
-      "answers": ["Un contratto con valore limitato", "Un contratto mai esistito legalmente", "Un contratto sospeso", "Un contratto tra minorenni"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa significa 'ius soli'?",
-      "answers": ["Diritto del sangue", "Diritto di proprietà", "Diritto acquisito per nascita sul territorio", "Diritto del padre"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cos’è un vincolo giuridico?",
-      "answers": ["Un obbligo imposto da una legge o da un contratto", "Una punizione", "Un diritto morale", "Una garanzia bancaria"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa sono i diritti patrimoniali?",
-      "answers": ["Diritti morali", "Diritti politici", "Diritti che riguardano beni economici", "Diritti religiosi"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa stabilisce l’articolo 3 della Costituzione Italiana?",
-      "answers": ["Il diritto al lavoro", "L’uguaglianza di tutti i cittadini davanti alla legge", "La libertà religiosa", "Il dovere di istruzione"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Qual è l’organo di autogoverno della magistratura italiana?",
-      "answers": ["Il Parlamento", "Il Ministero dell’Interno", "Il Consiglio Superiore della Magistratura", "La Corte di Cassazione"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cos'è il principio del contraddittorio?",
-      "answers": ["Una regola politica", "Il diritto delle parti di essere ascoltate in giudizio", "Un principio penale", "Un vincolo procedurale solo civile"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Cosa rappresenta la giurisprudenza?",
-      "answers": ["Una legge", "Una sentenza isolata", "L’insieme delle interpretazioni giuridiche dei giudici", "Un manuale universitario"],
-      "correctIndex": 2
-    },
-    {
-      "question": "Cosa si intende per 'onere della prova'?",
-      "answers": ["La responsabilità dell’imputato", "L’obbligo di dimostrare un fatto in giudizio", "Una tassa", "Una decisione del giudice"],
-      "correctIndex": 1
-    }
+  {
+    "question": "Qual è la principale differenza tra reato doloso e reato colposo?",
+    "answers": ["Il dolo è intenzionale", "Il colposo è più grave", "Il doloso è civile", "Il colposo riguarda i minori"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'prescrizione' in ambito penale?",
+    "answers": ["Una multa", "Pena sospesa", "Reato estinto per tempo trascorso", "Suggerimento del giudice"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa regola il diritto amministrativo?",
+    "answers": ["Famiglia", "Rapporti tra cittadini e Stato", "Religione", "Banche"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Quale organo giudica la costituzionalità delle leggi?",
+    "answers": ["Ministri", "Corte Costituzionale", "Parlamento", "CSM"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi esercita il potere esecutivo in Italia?",
+    "answers": ["Parlamento", "Presidente", "Governo", "Cassazione"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cos’è un atto amministrativo?",
+    "answers": ["Contratto privato", "Legge", "Decisione della PA", "Nota notarile"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è il Codice Civile?",
+    "answers": ["Documento politico", "Norme penali", "Norme tra privati", "Codice morale"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Che cos'è l’habeas corpus?",
+    "answers": ["Frase latina", "Tutela della libertà", "Tipo di contratto", "Figura antica"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa si intende per 'giurisdizione'?",
+    "answers": ["Zona geografica", "Potere di giudicare", "Diritto privato", "Tipo di reato"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Chi può proporre una legge in Parlamento?",
+    "answers": ["Solo il Presidente", "Solo cittadini", "Parlamentari e Governo", "Solo il CSM"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cos’è il diritto penale?",
+    "answers": ["Norme sui contratti", "Codice per aziende", "Norme su reati e pene", "Diritto privato"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cos'è una norma imperativa?",
+    "answers": ["Facoltativa", "Morale", "Obbligatoria e inderogabile", "Pubblicitaria"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Chi decide in ultima istanza in un processo civile?",
+    "answers": ["Giudice di pace", "Appello", "Cassazione", "Prefetto"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Differenza tra diritto pubblico e privato?",
+    "answers": ["Stato vs cittadini", "Privato è superiore", "Pubblico è nuovo", "Nessuna differenza"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Che cos'è il principio di legalità?",
+    "answers": ["Tutto è permesso", "Punizioni solo per legge", "Legge non uguale", "Giudice superiore"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa si intende per 'capacità giuridica'?",
+    "answers": ["Firmare", "Avere diritti e doveri", "Votare", "Testimoniare"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Che cos’è un'ordinanza?",
+    "answers": ["Legge statale", "Provvedimento PA o giudice", "Regola comunale", "Atto del Parlamento"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Funzione della Corte dei Conti?",
+    "answers": ["Fare leggi", "Controllo spesa pubblica", "Eseguire sentenze", "Eleggere il Presidente"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Atto nullo vs annullabile?",
+    "answers": ["Nullo è sempre invalido", "Sono uguali", "Annullabile è più grave", "Nullo si può sanare"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Quale è un diritto reale?",
+    "answers": ["Voto", "Proprietà", "Cittadinanza", "Matrimonio"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa regola il diritto del lavoro?",
+    "answers": ["Studenti", "Rapporti lavorativi", "Libertà di parola", "Penale minorile"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cos’è un contratto nullo?",
+    "answers": ["Valore limitato", "Mai esistito legalmente", "Sospeso", "Tra minorenni"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa significa 'ius soli'?",
+    "answers": ["Diritto di sangue", "Proprietà", "Nascita sul territorio", "Diritto paterno"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cos’è un vincolo giuridico?",
+    "answers": ["Obbligo legale o contrattuale", "Punizione", "Morale", "Garanzia bancaria"],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa sono i diritti patrimoniali?",
+    "answers": ["Morali", "Politici", "Legati a beni", "Religiosi"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa stabilisce l’articolo 3 della Costituzione?",
+    "answers": ["Lavoro", "Uguaglianza dei cittadini", "Religione", "Istruzione"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Organo di autogoverno della magistratura?",
+    "answers": ["Parlamento", "Interno", "CSM", "Cassazione"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cos'è il principio del contraddittorio?",
+    "answers": ["Regola politica", "Diritto a farsi sentire", "Solo penale", "Solo civile"],
+    "correctIndex": 1
+  },
+  {
+    "question": "Cosa rappresenta la giurisprudenza?",
+    "answers": ["Legge", "Sentenza isolata", "Interpretazioni dei giudici", "Libro di testo"],
+    "correctIndex": 2
+  },
+  {
+    "question": "Cosa si intende per 'onere della prova'?",
+    "answers": ["Responsabilità dell’imputato", "Dimostrare un fatto in giudizio", "Tassa", "Decisione del giudice"],
+    "correctIndex": 1
+  }
   ],
   "esperto": [
-    {
-      "question": "In ambito penale, cosa si intende per 'concorso formale di reati'?",
-      "answers": [
-        "La commissione di più reati con una sola azione od omissione",
-        "La commissione di un solo reato con più azioni",
-        "La partecipazione di più persone a un reato",
-        "La reiterazione di reati simili nel tempo"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto civile, quale è la differenza tra 'nullità' e 'annullabilità' di un contratto?",
-      "answers": [
-        "La nullità comporta l'inefficacia assoluta del contratto, l'annullabilità può essere sanata",
-        "La nullità è meno grave dell'annullabilità",
-        "L'annullabilità riguarda solo i contratti verbali",
-        "Non esiste differenza sostanziale"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa prevede l'articolo 97 della Costituzione italiana in merito alla pubblica amministrazione?",
-      "answers": [
-        "Che la pubblica amministrazione deve essere imparziale e funzionare secondo criteri di efficienza",
-        "Che la pubblica amministrazione può agire discrezionalmente",
-        "Che la pubblica amministrazione è soggetta solo al controllo politico",
-        "Che la pubblica amministrazione non è tenuta a rispettare la legge"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto commerciale, cosa si intende per 'società in accomandita semplice'?",
-      "answers": [
-        "Una società con due categorie di soci: accomandatari e accomandanti",
-        "Una società composta solo da soci accomandatari",
-        "Una società di persone con responsabilità limitata",
-        "Una società anonima"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la funzione principale del Consiglio Superiore della Magistratura?",
-      "answers": [
-        "Garantire l'autonomia e l'indipendenza della magistratura",
-        "Emanare leggi in materia giudiziaria",
-        "Controllare l'operato del Parlamento",
-        "Gestire le finanze pubbliche"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "In ambito penale, cosa si intende per 'reato omissivo improprio'?",
-      "answers": [
-        "Un reato che si configura per mancata azione quando vi è obbligo giuridico di agire",
-        "Un reato commesso per errore",
-        "Un reato che non comporta pena detentiva",
-        "Un reato che si estingue automaticamente"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto civile, cosa rappresenta la 'responsabilità extracontrattuale'?",
-      "answers": [
-        "La responsabilità derivante da un fatto illecito non legato a un contratto",
-        "La responsabilità per inadempimento contrattuale",
-        "La responsabilità dello Stato per leggi incostituzionali",
-        "La responsabilità penale per reati civili"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa stabilisce il principio di 'legalità' nel diritto penale?",
-      "answers": [
-        "Nessuno può essere punito se non in forza di una legge che preveda il fatto come reato",
-        "Le pene possono essere applicate discrezionalmente",
-        "Il giudice può creare nuove fattispecie di reato",
-        "La legge può avere effetti retroattivi in materia penale"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto amministrativo, cosa si intende per 'silenzio-assenso'?",
-      "answers": [
-        "Il silenzio dell'amministrazione equivale ad accoglimento dell'istanza dopo un certo periodo",
-        "Il silenzio dell'amministrazione equivale a rigetto dell'istanza",
-        "Il silenzio dell'amministrazione non ha alcun valore giuridico",
-        "Il silenzio dell'amministrazione sospende il procedimento"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'diritto soggettivo' nel diritto civile?",
-      "answers": [
-        "Una situazione giuridica attiva che consente al titolare di pretendere una prestazione",
-        "Un dovere imposto dalla legge",
-        "Una facoltà morale senza rilevanza giuridica",
-        "Un obbligo nei confronti dello Stato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto penale, cosa si intende per 'tentativo punibile'?",
-      "answers": [
-        "Un atto diretto in modo non equivoco a commettere un reato, che non si realizza per cause indipendenti dalla volontà dell'agente",
-        "Un reato commesso con dolo eventuale",
-        "Un reato commesso con colpa",
-        "Un reato che si estingue per prescrizione"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa prevede l'articolo 41 della Costituzione italiana riguardo all'iniziativa economica privata?",
-      "answers": [
-        "L'iniziativa economica privata è libera, ma non può svolgersi in contrasto con l'utilità sociale",
-        "L'iniziativa economica privata è subordinata all'autorizzazione statale",
-        "L'iniziativa economica privata è vietata",
-        "L'iniziativa economica privata è riservata alle imprese pubbliche"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto commerciale, cosa si intende per 'titolo di credito all'ordine'?",
-      "answers": [
-        "Un titolo trasferibile mediante girata",
-        "Un titolo nominativo non trasferibile",
-        "Un titolo al portatore",
-        "Un titolo che non può essere ceduto"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'giurisdizione' nel diritto processuale?",
-      "answers": [
-        "Il potere dello Stato di risolvere le controversie mediante l'applicazione della legge",
-        "La facoltà delle parti di scegliere il giudice",
-        "La competenza territoriale di un tribunale",
-        "La possibilità di appellare una sentenza"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto penale, cosa si intende per 'circostanza attenuante'?",
-      "answers": [
-        "Un elemento che diminuisce la gravità del reato e la pena",
-        "Un elemento che aggrava la pena",
-        "Una causa di giustificazione",
-        "Un motivo di estinzione del reato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa rappresenta il 'principio del contraddittorio' nel processo penale?",
-      "answers": [
-        "Il diritto delle parti di confrontarsi e controbattere le prove dell'altra parte",
-        "La possibilità per il giudice di decidere senza ascoltare le parti",
-        "L'obbligo dell'imputato di confessare",
-        "La facoltà del pubblico ministero di agire senza contraddittorio"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto civile, cosa si intende per 'obbligazione solidale'?",
-      "answers": [
-        "Un'obbligazione in cui ciascun debitore può essere tenuto all'intera prestazione",
-        "Un'obbligazione divisibile tra più debitori",
-        "Un'obbligazione che si estingue con il pagamento di una parte",
-        "Un'obbligazione che non prevede responsabilità"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'legittima difesa' nel diritto penale?",
-      "answers": [
-        "La reazione proporzionata a un'aggressione ingiusta per difendere un diritto proprio o altrui",
-        "L'uso della forza per vendetta",
-        "La difesa preventiva contro un possibile pericolo",
-        "L'azione punitiva contro un reato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto amministrativo, cosa si intende per 'autotutela'?",
-      "answers": [
-        "Il potere della pubblica amministrazione di annullare o revocare i propri atti illegittimi o inopportuni",
-        "La difesa personale del cittadino",
-        "La possibilità per il giudice di modificare le decisioni amministrative",
-        "L'obbligo dell'amministrazione di mantenere i propri atti"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa rappresenta il 'principio di sussidiarietà' nel diritto costituzionale?",
-      "answers": [
-        "Il principio secondo cui le funzioni devono essere svolte dall'autorità più vicina ai cittadini",
-        "Il principio che attribuisce tutte le competenze allo Stato centrale",
-        "Il principio che limita l'autonomia locale",
-        "Il principio che esclude la partecipazione dei cittadini"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'giudicato penale'?",
-      "answers": [
-        "Una sentenza penale passata in giudicato e quindi non più impugnabile",
-        "Una decisione del giudice civile su un fatto penale",
-        "Una sentenza che può essere modificata dal pubblico ministero",
-        "Un accordo tra imputato e vittima"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Che cos'è il 'negozio giuridico' nel diritto privato?",
-      "answers": [
-        "Un atto di autonomia privata idoneo a produrre effetti giuridici",
-        "Un contratto commerciale tra aziende",
-        "Una norma scritta dello Stato",
-        "Un'azione giudiziaria"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la funzione del principio di 'tipicità' nel diritto penale?",
-      "answers": [
-        "Impedire che condotte non espressamente previste dalla legge siano considerate reato",
-        "Consentire l’estensione analogica delle norme penali",
-        "Definire la procedura del processo penale",
-        "Autorizzare il giudice a creare nuovi reati"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "In ambito processuale civile, cos'è la 'litispendenza'?",
-      "answers": [
-        "La pendenza di una causa tra le stesse parti per il medesimo oggetto e causa",
-        "Il deposito degli atti in cancelleria",
-        "L'accordo tra le parti prima del processo",
-        "Il giudizio davanti al giudice di pace"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'clausola compromissoria' in un contratto?",
-      "answers": [
-        "Una clausola con cui le parti si impegnano a risolvere le controversie mediante arbitrato",
-        "Una clausola penale",
-        "Una clausola che annulla il contratto",
-        "Una clausola sulle garanzie bancarie"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto penale, cos'è la 'recidiva'?",
-      "answers": [
-        "La ricaduta nel reato da parte di chi è già stato condannato",
-        "L’estinzione della pena",
-        "La sospensione del processo",
-        "La pena alternativa al carcere"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa rappresenta il 'principio dispositivo' nel processo civile?",
-      "answers": [
-        "Le parti hanno l’onere di promuovere l’azione e introdurre le prove",
-        "Il giudice dirige d’ufficio l’istruttoria",
-        "La causa è sempre decisa in via arbitrale",
-        "Il processo si conclude con una mediazione"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'imputabilità' nel diritto penale?",
-      "answers": [
-        "La capacità di intendere e volere al momento del fatto",
-        "La responsabilità civile per danno",
-        "La condanna definitiva",
-        "Il rinvio a giudizio"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Nel diritto delle obbligazioni, cos'è la 'datio in solutum'?",
-      "answers": [
-        "L’adempimento di un’obbligazione mediante una prestazione diversa da quella dovuta, con accordo del creditore",
-        "La restituzione di un prestito",
-        "La cessione di credito",
-        "Il pagamento in ritardo con penale"
-      ],
-      "correctIndex": 0
-    }
-  ],
+  {
+    "question": "In ambito penale, cosa si intende per 'concorso formale di reati'?",
+    "answers": [
+      "Più reati commessi con una sola azione o omissione",
+      "Un solo reato realizzato con diverse azioni",
+      "Coinvolgimento di più persone in un reato",
+      "Serie di reati simili nel tempo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto civile, quale è la differenza tra 'nullità' e 'annullabilità' di un contratto?",
+    "answers": [
+      "Nullità è inefficacia assoluta, annullabilità può essere sanata",
+      "La nullità è meno grave rispetto all'annullabilità",
+      "L'annullabilità riguarda solo i contratti orali",
+      "Non vi è una differenza significativa"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa prevede l'articolo 97 della Costituzione italiana in merito alla pubblica amministrazione?",
+    "answers": [
+      "Obbligo di imparzialità ed efficienza dell'amministrazione",
+      "Libertà di agire in modo discrezionale",
+      "Soggezione al controllo del Parlamento",
+      "Esenzione dal rispetto delle leggi"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto commerciale, cosa si intende per 'società in accomandita semplice'?",
+    "answers": [
+      "Società con soci accomandatari e accomandanti",
+      "Società formata solo da accomandatari",
+      "Società di persone con responsabilità limitata",
+      "Società con personalità giuridica autonoma"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la funzione principale del Consiglio Superiore della Magistratura?",
+    "answers": [
+      "Tutelare l'indipendenza e l'autonomia della magistratura",
+      "Redigere norme giudiziarie vincolanti",
+      "Controllare direttamente il Parlamento",
+      "Gestire risorse economiche dello Stato"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In ambito penale, cosa si intende per 'reato omissivo improprio'?",
+    "answers": [
+      "Reato per mancata azione quando esiste un obbligo di agire",
+      "Reato provocato da errore umano",
+      "Reato sanzionato senza reclusione",
+      "Reato destinato all’estinzione automatica"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto civile, cosa rappresenta la 'responsabilità extracontrattuale'?",
+    "answers": [
+      "Risarcimento dovuto per un illecito fuori da un contratto",
+      "Colpa contrattuale per inadempimento",
+      "Danno provocato da una norma incostituzionale",
+      "Responsabilità penale su base civile"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa stabilisce il principio di 'legalità' nel diritto penale?",
+    "answers": [
+      "Nessuna pena senza una legge che definisca il reato",
+      "Il giudice può punire secondo discrezione",
+      "È possibile creare reati per analogia",
+      "Le norme penali possono valere retroattivamente"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto amministrativo, cosa si intende per 'silenzio-assenso'?",
+    "answers": [
+      "Il silenzio equivale ad accoglimento dell’istanza",
+      "Il silenzio equivale a rigetto dell’istanza",
+      "Il silenzio non ha rilevanza giuridica",
+      "Il silenzio blocca il procedimento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'diritto soggettivo' nel diritto civile?",
+    "answers": [
+      "Situazione giuridica che consente di esigere una prestazione",
+      "Obbligo personale verso lo Stato",
+      "Facoltà morale senza effetti giuridici",
+      "Dovere imposto dall’ordinamento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto penale, cosa si intende per 'tentativo punibile'?",
+    "answers": [
+      "Azione diretta a commettere reato non compiuto per cause esterne",
+      "Condotta dolosa punita a discrezione",
+      "Reato colposo che non ha effetto",
+      "Fatto prescritto prima del giudizio"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa prevede l'articolo 41 della Costituzione italiana riguardo all'iniziativa economica privata?",
+    "answers": [
+      "È libera ma non deve violare l'utilità sociale",
+      "È subordinata a una licenza dello Stato",
+      "È vietata salvo casi eccezionali",
+      "È concessa solo a soggetti pubblici"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto commerciale, cosa si intende per 'titolo di credito all'ordine'?",
+    "answers": [
+      "Titolo trasferibile tramite girata",
+      "Titolo nominativo bloccato",
+      "Titolo anonimo al portatore",
+      "Titolo escluso dalla cessione"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'giurisdizione' nel diritto processuale?",
+    "answers": [
+      "Potere di applicare la legge per risolvere controversie",
+      "Libertà di scelta del giudice da parte delle parti",
+      "Competenza territoriale di un giudice",
+      "Facoltà di impugnare una decisione"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto penale, cosa si intende per 'circostanza attenuante'?",
+    "answers": [
+      "Fattore che riduce la gravità e la pena del reato",
+      "Elemento che rende la pena più severa",
+      "Giustificazione della condotta",
+      "Causa di estinzione della responsabilità"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa rappresenta il 'principio del contraddittorio' nel processo penale?",
+    "answers": [
+      "Diritto di confrontarsi e replicare alle prove avversarie",
+      "Possibilità per il giudice di decidere senza dibattito",
+      "Obbligo di confessare l’illecito",
+      "Azione autonoma del pubblico ministero"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto civile, cosa si intende per 'obbligazione solidale'?",
+    "answers": [
+      "Ciascun debitore può essere tenuto all’intero debito",
+      "Il debito viene diviso tra tutti i soggetti coinvolti",
+      "Il debito si estingue parzialmente con un pagamento",
+      "Non vi è responsabilità individuale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'legittima difesa' nel diritto penale?",
+    "answers": [
+      "Reazione proporzionata a un’aggressione per tutelarsi",
+      "Uso della forza per vendicarsi di un danno",
+      "Difesa anticipata contro pericolo ipotetico",
+      "Punizione diretta dell’autore di un reato"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto amministrativo, cosa si intende per 'autotutela'?",
+    "answers": [
+      "Facoltà della PA di annullare o revocare propri atti illegittimi",
+      "Tutela del cittadino con mezzi personali",
+      "Modifica delle decisioni amministrative da parte del giudice",
+      "Obbligo per la PA di mantenere i propri provvedimenti"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa rappresenta il 'principio di sussidiarietà' nel diritto costituzionale?",
+    "answers": [
+      "Attribuzione delle funzioni al livello più vicino ai cittadini",
+      "Accentramento delle funzioni nello Stato",
+      "Limitazione dell’autonomia delle Regioni",
+      "Esclusione della partecipazione civica"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'giudicato penale'?",
+    "answers": [
+      "Sentenza definitiva che non può essere impugnata",
+      "Decisione civile su un fatto penale",
+      "Pronuncia modificabile dal pubblico ministero",
+      "Accordo concluso tra accusato e vittima"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Che cos'è il 'negozio giuridico' nel diritto privato?",
+    "answers": [
+      "Atto di autonomia privata con effetti giuridici",
+      "Contratto concluso tra aziende private",
+      "Disposizione normativa statale",
+      "Azione promossa in tribunale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la funzione del principio di 'tipicità' nel diritto penale?",
+    "answers": [
+      "Escludere reati non previsti espressamente dalla legge",
+      "Consentire l’estensione delle norme ai casi simili",
+      "Stabilire le fasi del procedimento penale",
+      "Autorizzare il giudice a creare nuove fattispecie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In ambito processuale civile, cos'è la 'litispendenza'?",
+    "answers": [
+      "Causa già pendente tra le stesse parti e per lo stesso oggetto",
+      "Archivio degli atti processuali in tribunale",
+      "Accordo raggiunto prima del giudizio",
+      "Giudizio davanti al giudice di pace"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'clausola compromissoria' in un contratto?",
+    "answers": [
+      "Accordo per risolvere controversie con arbitrato",
+      "Previsione di una penale in caso di inadempimento",
+      "Condizione che invalida il contratto",
+      "Garanzia prestata da un istituto bancario"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto penale, cos'è la 'recidiva'?",
+    "answers": [
+      "Nuova commissione di un reato da parte di un condannato",
+      "Cancellazione automatica della pena",
+      "Sospensione di un procedimento in corso",
+      "Sanzione alternativa alla detenzione"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa rappresenta il 'principio dispositivo' nel processo civile?",
+    "answers": [
+      "Le parti devono promuovere l’azione e proporre le prove",
+      "Il giudice guida d’ufficio la raccolta delle prove",
+      "Il procedimento si svolge solo in via arbitrale",
+      "Il processo termina sempre con la mediazione"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'imputabilità' nel diritto penale?",
+    "answers": [
+      "Capacità di intendere e volere al momento del fatto",
+      "Obbligo di risarcire il danno civile",
+      "Condizione di essere condannati definitivamente",
+      "Semplice rinvio a giudizio"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Nel diritto delle obbligazioni, cos'è la 'datio in solutum'?",
+    "answers": [
+      "Pagamento con prestazione diversa da quella originaria con accordo",
+      "Restituzione di quanto ricevuto in prestito",
+      "Trasferimento del diritto di credito",
+      "Pagamento tardivo con penale aggiuntiva"
+    ],
+    "correctIndex": 0
+  }
+],
   "laureato": [
-    {
-      "question": "Cosa disciplina l'art. 2043 del Codice Civile italiano?",
-      "answers": [
-        "La responsabilità extracontrattuale per fatto illecito",
-        "L'inadempimento contrattuale",
-        "La responsabilità penale",
-        "La successione legittima"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "In ambito penale, cosa prevede l'art. 5 del Codice Penale?",
-      "answers": [
-        "L’ignoranza della legge non scusa",
-        "Il principio di legalità",
-        "Il principio di colpevolezza",
-        "La recidiva"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la differenza tra simulazione assoluta e relativa nel diritto civile?",
-      "answers": [
-        "Assoluta: nessun contratto è voluto; relativa: contratto diverso da quello apparente",
-        "Assoluta: contratto nullo; relativa: contratto annullabile",
-        "Assoluta: contratto stipulato all'estero; relativa: stipulato in Italia",
-        "Non c’è differenza sostanziale"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'interesse legittimo' nel diritto amministrativo?",
-      "answers": [
-        "Una posizione giuridica soggettiva che si configura quando l'interesse è tutelato indirettamente dalla legge",
-        "Un diritto soggettivo perfetto",
-        "Una mera aspettativa",
-        "Un interesse economico generico"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa prevede il principio del 'ne bis in idem' nel diritto penale?",
-      "answers": [
-        "Nessuno può essere giudicato due volte per lo stesso fatto",
-        "Ogni reato comporta una sola pena",
-        "I reati fiscali sono imprescrittibili",
-        "Un’imputazione può essere modificata senza limiti"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "In ambito civilistico, cos'è la 'capacità giuridica'?",
-      "answers": [
-        "L'idoneità ad essere titolari di diritti e doveri",
-        "La capacità di agire in giudizio",
-        "La capacità di concludere contratti validi",
-        "La capacità lavorativa"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos’è la 'colpa in eligendo' nella responsabilità civile?",
-      "answers": [
-        "La responsabilità per scelta negligente del collaboratore o ausiliario",
-        "La responsabilità per azione diretta",
-        "Una forma di dolo",
-        "Una clausola contrattuale"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la natura giuridica della sentenza di condanna penale definitiva?",
-      "answers": [
-        "Un titolo esecutivo",
-        "Una semplice dichiarazione giudiziale",
-        "Un atto amministrativo",
-        "Una misura cautelare"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Quando si applica il 'favor rei'?",
-      "answers": [
-        "Quando vi è successione di leggi penali nel tempo e si applica la più favorevole",
-        "Quando l’imputato è collaboratore di giustizia",
-        "Quando la vittima ritira la querela",
-        "Quando l’imputato è incensurato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa prevede l'art. 3 della Costituzione Italiana?",
-      "answers": [
-        "Il principio di uguaglianza formale e sostanziale",
-        "La libertà di stampa",
-        "Il diritto alla salute",
-        "Il diritto al lavoro"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la differenza tra 'nullità' e 'inesistenza' di un atto amministrativo?",
-      "answers": [
-        "Nullità: atto viziato ma esistente; inesistenza: atto privo dei requisiti minimi",
-        "Non c’è differenza",
-        "Nullità è più grave",
-        "Inesistenza è sanabile, nullità no"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Che cosa rappresenta l'art. 138 della Costituzione italiana?",
-      "answers": [
-        "Il procedimento di revisione costituzionale",
-        "La disciplina delle Regioni",
-        "I poteri del Presidente della Repubblica",
-        "L’approvazione del bilancio dello Stato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos'è un 'contratto con obbligazioni a carico di un solo contraente'?",
-      "answers": [
-        "Un contratto unilaterale",
-        "Un contratto bilaterale",
-        "Un contratto plurilaterale",
-        "Un contratto oneroso"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa sono le 'fonti-fatto' del diritto?",
-      "answers": [
-        "Usi e consuetudini",
-        "Leggi ordinarie",
-        "Sentenze della Corte Costituzionale",
-        "Regolamenti parlamentari"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Quando una norma è considerata 'precettiva'?",
-      "answers": [
-        "Quando impone un comportamento obbligatorio",
-        "Quando abroga un'altra norma",
-        "Quando definisce concetti giuridici",
-        "Quando è soggetta a interpretazione estensiva"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'obbligazione naturale' nel diritto civile?",
-      "answers": [
-        "Un’obbligazione non giuridicamente coercibile ma moralmente doverosa",
-        "Un’obbligazione contrattuale classica",
-        "Un debito pubblico",
-        "Un’obbligazione sorta da illecito penale"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos'è l'azione surrogatoria?",
-      "answers": [
-        "L’azione con cui il creditore può esercitare i diritti del debitore verso terzi",
-        "Un'azione di responsabilità extracontrattuale",
-        "Una forma di successione ereditaria",
-        "L’azione di risoluzione per inadempimento"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "In ambito processuale, cos'è la 'cosa giudicata'?",
-      "answers": [
-        "Una decisione definitiva non più soggetta a impugnazione",
-        "Una prova testimoniale",
-        "Un atto interruttivo della prescrizione",
-        "Un effetto sospensivo"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa disciplina il D.lgs. 231/2001?",
-      "answers": [
-        "La responsabilità amministrativa degli enti per reati commessi nel loro interesse",
-        "Il codice del consumo",
-        "La mediazione civile obbligatoria",
-        "La riforma della giustizia tributaria"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la finalità del giudizio di ottemperanza nel diritto amministrativo?",
-      "answers": [
-        "Assicurare l’esecuzione delle sentenze amministrative",
-        "Impugnare una delibera comunale",
-        "Accedere agli atti",
-        "Avviare una mediazione"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Che natura ha il potere discrezionale della Pubblica Amministrazione?",
-      "answers": [
-        "È vincolato ai limiti posti dalla legge e deve rispettare il principio di proporzionalità",
-        "È assoluto e non sindacabile",
-        "È limitato solo da decisioni politiche",
-        "Non ha rilievo giuridico"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa comporta il principio di autoresponsabilità nel processo civile?",
-      "answers": [
-        "Le parti sopportano le conseguenze delle proprie omissioni e errori",
-        "Il giudice interviene per correggere ogni errore delle parti",
-        "L'imputato è obbligato a difendersi da solo",
-        "I testimoni possono modificare le proprie dichiarazioni"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos'è un 'negozio fiduciario'?",
-      "answers": [
-        "Un contratto con obbligo di trasferimento in favore di un terzo fiduciario",
-        "Un accordo simulato",
-        "Un contratto nullo per mancanza di causa",
-        "Un patto successorio vietato"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos'è la prescrizione estintiva?",
-      "answers": [
-        "L’estinzione di un diritto soggettivo per inerzia del titolare",
-        "Una sanzione disciplinare",
-        "L'annullamento di un atto amministrativo",
-        "La perdita di capacità giuridica"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa rappresenta la clausola 'solve et repete'?",
-      "answers": [
-        "L'obbligo di pagare quanto richiesto prima di poter impugnare",
-        "Un patto di non concorrenza",
-        "Un vincolo contrattuale irrinunciabile",
-        "Una modalità di estinzione della servitù"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos’è la 'declaratoria di incostituzionalità'?",
-      "answers": [
-        "Una sentenza della Corte Costituzionale che annulla una norma in contrasto con la Costituzione",
-        "Un giudizio di appello",
-        "Una delibera parlamentare",
-        "Un ricorso straordinario"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Qual è la differenza tra 'sospensione' e 'interruzione' della prescrizione?",
-      "answers": [
-        "La sospensione congela il tempo; l’interruzione lo azzera e ricomincia da capo",
-        "Sono sinonimi",
-        "L’interruzione vale solo in ambito penale",
-        "La sospensione è definitiva"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cos'è un 'diritto potestativo'?",
-      "answers": [
-        "Un diritto che incide sulla sfera giuridica altrui senza bisogno di consenso",
-        "Un diritto soggetto a condizioni",
-        "Un diritto disponibile solo per enti pubblici",
-        "Un diritto soggetto a prescrizione breve"
-      ],
-      "correctIndex": 0
-    },
-    {
-      "question": "Cosa si intende per 'giurisdizione esclusiva' del giudice amministrativo?",
-      "answers": [
-        "Quando il giudice amministrativo giudica su diritti soggettivi e interessi legittimi",
-        "Quando decide solo sui regolamenti comunali",
-        "Quando è l’unico giudice per le controversie penali",
-        "Quando non si può ricorrere in Cassazione"
-      ],
-      "correctIndex": 0
-    }
-  ]
+  {
+    "question": "Cosa disciplina l'art. 2043 del Codice Civile italiano?",
+    "answers": [
+      "La responsabilità extracontrattuale per fatto illecito e il conseguente obbligo risarcitorio",
+      "L'inadempimento contrattuale nelle obbligazioni scaturenti da un accordo tra le parti",
+      "La responsabilità penale derivante dalla commissione di reati previsti dalla legge",
+      "La successione legittima in mancanza di disposizioni testamentarie del de cuius"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In ambito penale, cosa prevede l'art. 5 del Codice Penale?",
+    "answers": [
+      "L’ignoranza della legge penale non scusa e non esonera dalla responsabilità",
+      "Il principio di legalità che vieta la retroattività delle norme incriminatrici",
+      "Il principio di colpevolezza che richiede dolo o colpa per la punibilità",
+      "La recidiva come circostanza aggravante nei reati reiterati"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la differenza tra simulazione assoluta e relativa nel diritto civile?",
+    "answers": [
+      "Assoluta: nessun contratto è voluto; relativa: contratto diverso da quello apparente ma con effetti reali",
+      "Assoluta: contratto nullo e privo di effetti; relativa: contratto affetto da vizio sanabile",
+      "Assoluta: contratto fittizio tra le parti; relativa: stipulato con un’intenzione occulta",
+      "Non c’è differenza sostanziale tra le due forme, entrambe prive di effetti"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'interesse legittimo' nel diritto amministrativo?",
+    "answers": [
+      "Una posizione soggettiva tutelata dalla legge quando l'interesse è coinvolto dall'esercizio del potere pubblico",
+      "Un diritto pieno ed esclusivo che può essere fatto valere in giudizio direttamente",
+      "Una speranza non tutelata giuridicamente che può diventare diritto futuro",
+      "Un interesse personale privo di specifica protezione normativa o procedimentale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa prevede il principio del 'ne bis in idem' nel diritto penale?",
+    "answers": [
+      "Nessuno può essere processato o punito due volte per lo stesso fatto, se già giudicato con sentenza definitiva",
+      "Ogni condotta penalmente rilevante può dare luogo ad un’unica sanzione principale",
+      "I reati in ambito tributario non sono soggetti a prescrizione per la loro gravità",
+      "Un'imputazione può essere riformulata liberamente nel corso del dibattimento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In ambito civilistico, cos'è la 'capacità giuridica'?",
+    "answers": [
+      "L'idoneità riconosciuta a ogni persona ad essere titolare di diritti e di doveri sin dalla nascita",
+      "La capacità di agire in giudizio attraverso la rappresentanza legale o assistenza tecnica",
+      "La possibilità di stipulare contratti validi secondo la legge vigente",
+      "La facoltà di svolgere attività lavorativa a fini di sostentamento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos’è la 'colpa in eligendo' nella responsabilità civile?",
+    "answers": [
+      "La responsabilità per aver scelto in modo negligente un collaboratore inidoneo a svolgere un’attività",
+      "La responsabilità diretta che ricade sul soggetto che commette l’illecito",
+      "Una forma di dolo che si manifesta nella stipula fraudolenta di un contratto",
+      "Una clausola contrattuale che limita la responsabilità delle parti coinvolte"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la natura giuridica della sentenza di condanna penale definitiva?",
+    "answers": [
+      "Un titolo esecutivo che consente l’esecuzione della pena e delle statuizioni accessorie",
+      "Una dichiarazione giudiziale di valore meramente ricognitivo della colpevolezza",
+      "Un provvedimento amministrativo soggetto a conferma dell’autorità di vigilanza",
+      "Una misura temporanea in attesa della conferma da parte del giudice di merito"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Quando si applica il 'favor rei'?",
+    "answers": [
+      "Quando esistono più leggi penali nel tempo e si applica quella più favorevole all’imputato",
+      "Quando un soggetto incolpato collabora efficacemente con l’autorità giudiziaria",
+      "Quando la vittima del reato decide di ritirare la propria querela scritta",
+      "Quando l’imputato non ha precedenti penali e gode di buona condotta"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa prevede l'art. 3 della Costituzione Italiana?",
+    "answers": [
+      "Il principio di uguaglianza formale e sostanziale e l’obbligo dello Stato di rimuovere gli ostacoli",
+      "La libertà di stampa e il diritto all’informazione libera nel rispetto della legge",
+      "Il diritto alla salute individuale e collettiva tutelato dal Servizio Sanitario Nazionale",
+      "Il diritto al lavoro quale strumento di realizzazione personale e sociale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la differenza tra 'nullità' e 'inesistenza' di un atto amministrativo?",
+    "answers": [
+      "Nullità: atto viziato ma esistente; inesistenza: atto privo dei requisiti essenziali per essere considerato tale",
+      "Non c’è differenza perché entrambe le ipotesi determinano l’invalidità dell’atto",
+      "La nullità è più grave perché comporta conseguenze sanzionatorie automatiche",
+      "L’inesistenza può essere sanata attraverso atti successivi di convalida"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Che cosa rappresenta l'art. 138 della Costituzione italiana?",
+    "answers": [
+      "Il procedimento di revisione costituzionale, stabilendo le modalità e i limiti della modifica",
+      "La disciplina relativa al funzionamento delle Regioni e delle autonomie locali",
+      "I poteri conferiti al Presidente della Repubblica nella formazione delle leggi",
+      "L’approvazione del bilancio dello Stato con maggioranza parlamentare"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos'è un 'contratto con obbligazioni a carico di un solo contraente'?",
+    "answers": [
+      "Un contratto unilaterale in cui solo una parte assume obblighi giuridicamente rilevanti",
+      "Un contratto bilaterale con clausole diseguali tra le parti contraenti",
+      "Un contratto plurilaterale con effetti collettivi su più soggetti",
+      "Un contratto oneroso con prestazioni a carico di una sola parte per volontà comune"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa sono le 'fonti-fatto' del diritto?",
+    "answers": [
+      "Usi e consuetudini riconosciuti come vincolanti per la collettività in determinati ambiti",
+      "Leggi ordinarie approvate dal Parlamento e pubblicate in Gazzetta Ufficiale",
+      "Sentenze della Corte Costituzionale con efficacia generale ed erga omnes",
+      "Regolamenti parlamentari che disciplinano il funzionamento delle Camere"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Quando una norma è considerata 'precettiva'?",
+    "answers": [
+      "Quando impone un comportamento obbligatorio o vieta una determinata condotta",
+      "Quando abroga esplicitamente o implicitamente una norma precedente",
+      "Quando definisce in modo chiaro e tecnico concetti giuridici fondamentali",
+      "Quando è soggetta a una specifica interpretazione giurisprudenziale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'obbligazione naturale' nel diritto civile?",
+    "answers": [
+      "Un’obbligazione moralmente doverosa, non giuridicamente coercibile ma efficace se adempiuta",
+      "Un’obbligazione contrattuale ordinaria scaturente da un accordo tra le parti",
+      "Un debito pubblico che nasce da obblighi di spesa dello Stato",
+      "Un’obbligazione derivante da un comportamento penalmente rilevante"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos'è l'azione surrogatoria?",
+    "answers": [
+      "L’azione con cui il creditore può sostituirsi al debitore inattivo per esercitare i suoi diritti verso terzi",
+      "Un'azione di natura risarcitoria intrapresa da un danneggiato contro un soggetto privato",
+      "Una modalità con cui si acquisiscono i diritti ereditari in caso di morte",
+      "L’azione civile con cui si risolve un contratto per inadempimento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "In ambito processuale, cos'è la 'cosa giudicata'?",
+    "answers": [
+      "Una decisione definitiva che non può più essere oggetto di impugnazione ordinaria",
+      "Una testimonianza acquisita che assume valore probatorio nel processo",
+      "Un atto processuale che interrompe il decorso della prescrizione",
+      "Un provvedimento giudiziario che sospende l’efficacia di un atto precedente"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa disciplina il D.lgs. 231/2001?",
+    "answers": [
+      "La responsabilità amministrativa degli enti per reati commessi nell’interesse o vantaggio dell’ente stesso",
+      "Il codice del consumo e la tutela dei diritti dei consumatori nei rapporti contrattuali",
+      "La disciplina della mediazione obbligatoria nelle controversie civili e commerciali",
+      "La recente riforma della giustizia tributaria e delle relative giurisdizioni"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la finalità del giudizio di ottemperanza nel diritto amministrativo?",
+    "answers": [
+      "Assicurare l’esecuzione delle sentenze amministrative quando l’amministrazione non vi ottempera spontaneamente",
+      "Impugnare una delibera adottata dal consiglio comunale in via straordinaria",
+      "Ottenere l’accesso agli atti amministrativi detenuti dalla pubblica amministrazione",
+      "Avviare un procedimento di mediazione tra cittadino e amministrazione pubblica"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Che natura ha il potere discrezionale della Pubblica Amministrazione?",
+    "answers": [
+      "È vincolato ai limiti posti dalla legge e deve essere esercitato nel rispetto dei principi di proporzionalità e ragionevolezza",
+      "È assoluto e insindacabile in quanto fondato sull’autonomia organizzativa dell’ente",
+      "È soggetto esclusivamente a valutazioni politiche e non giurisdizionali",
+      "Non ha rilevanza giuridica diretta e si manifesta solo a livello interno"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa comporta il principio di autoresponsabilità nel processo civile?",
+    "answers": [
+      "Le parti devono sopportare le conseguenze negative derivanti dalle proprie omissioni ed errori procedurali",
+      "Il giudice ha l’obbligo di correggere eventuali errori commessi dalle parti in causa",
+      "L'imputato non può essere assistito da un difensore ma deve difendersi da solo",
+      "I testimoni possono rivedere le proprie dichiarazioni in qualsiasi momento"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos'è un 'negozio fiduciario'?",
+    "answers": [
+      "Un contratto in cui una parte si obbliga a trasferire beni in favore di un terzo fiduciario per uno scopo determinato",
+      "Un accordo simulato tra due soggetti con l’intento di ingannare terzi o eludere la legge",
+      "Un contratto privo di causa giuridica e quindi considerato nullo dall’ordinamento",
+      "Un patto successorio non ammesso dall’ordinamento giuridico italiano"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos'è la prescrizione estintiva?",
+    "answers": [
+      "L’estinzione di un diritto soggettivo per mancato esercizio entro un determinato termine legale",
+      "Una sanzione disciplinare comminata per violazione di regole deontologiche",
+      "L'annullamento di un atto amministrativo per vizio formale o sostanziale",
+      "La perdita della capacità giuridica in seguito a provvedimento giudiziario"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa rappresenta la clausola 'solve et repete'?",
+    "answers": [
+      "L'obbligo di eseguire il pagamento richiesto prima di poter avviare un’azione giudiziaria di impugnazione",
+      "Un accordo tra le parti che vieta la concorrenza per un periodo stabilito",
+      "Un vincolo contrattuale che impedisce la rinuncia ai propri diritti soggettivi",
+      "Una modalità attraverso cui si estingue un diritto reale di servitù"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos’è la 'declaratoria di incostituzionalità'?",
+    "answers": [
+      "Una sentenza della Corte Costituzionale che dichiara l’illegittimità di una norma rispetto alla Costituzione",
+      "Un giudizio di secondo grado volto alla riforma della sentenza impugnata",
+      "Una deliberazione parlamentare in merito alla modifica della Costituzione",
+      "Un ricorso straordinario proposto nei confronti di un atto amministrativo illegittimo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Qual è la differenza tra 'sospensione' e 'interruzione' della prescrizione?",
+    "answers": [
+      "La sospensione ferma il decorso del termine; l’interruzione lo azzera e fa ripartire un nuovo termine",
+      "Sono due concetti identici che indicano l’interruzione del decorso temporale",
+      "L’interruzione è prevista solo nei procedimenti penali di particolare gravità",
+      "La sospensione è definitiva mentre l’interruzione è temporanea e revocabile"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cos'è un 'diritto potestativo'?",
+    "answers": [
+      "Un diritto che consente di modificare la situazione giuridica altrui senza bisogno del suo consenso",
+      "Un diritto che può essere esercitato solo al ricorrere di specifiche condizioni legali",
+      "Un diritto che può essere riconosciuto solo a favore degli enti pubblici",
+      "Un diritto soggetto a una prescrizione particolarmente breve nel tempo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "question": "Cosa si intende per 'giurisdizione esclusiva' del giudice amministrativo?",
+    "answers": [
+      "Quando il giudice amministrativo è competente a decidere sia su diritti soggettivi sia su interessi legittimi",
+      "Quando la competenza è limitata alla verifica della legittimità dei regolamenti comunali",
+      "Quando il giudice amministrativo può giudicare anche in ambito penale",
+      "Quando la decisione non è appellabile in Cassazione per ragioni di economia processuale"
+    ],
+    "correctIndex": 0
+  }
+]
 },
 "Sport": {
   "bambino": [
@@ -16277,6 +16277,768 @@
       "question": "Quante volte Michael Schumacher ha vinto il Mondiale di Formula 1?",
       "answers": ["5", "6", "7", "8"],
       "correctIndex": 2
+    }
+  ]
+},
+"Patente": {
+  "bambino": [
+    {
+      "question": "Cosa si deve fare quando il semaforo è rosso?",
+      "answers": ["Accelerare", "Fermarsi", "Suonare il clacson", "Andare più piano"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si deve fare prima di attraversare la strada?",
+      "answers": ["Correre veloce", "Guardare bene a destra e a sinistra", "Chiudere gli occhi", "Fischiare"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Di che colore è il semaforo che dice di andare?",
+      "answers": ["Rosso", "Giallo", "Verde", "Blu"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa significa un cartello con un bambino che corre?",
+      "answers": ["Attenzione: scuola vicina", "Parco giochi", "Divieto di correre", "Autostrada"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dove si deve mettere la cintura di sicurezza?",
+      "answers": ["Al volante", "Intorno alla testa", "Intorno alla vita", "Nelle mani"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi può guidare un'auto?",
+      "answers": ["Chi ha la patente", "Chi ha più di 5 anni", "Chi sa andare in bici", "Chi vuole"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa si fa prima di girare in auto?",
+      "answers": ["Si spegne il motore", "Si accende la radio", "Si mette la freccia", "Si frena forte"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il veicolo che porta a scuola i bambini?",
+      "answers": ["Ambulanza", "Camion", "Scuolabus", "Trattore"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando si attraversa sulle strisce, chi ha la precedenza?",
+      "answers": ["Le auto", "I camion", "Le biciclette", "Il pedone"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Qual è il segnale che indica STOP?",
+      "answers": ["Quello rotondo blu", "Quello triangolare rosso", "Quello ottagonale rosso", "Quello giallo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si deve fare in un passaggio pedonale?",
+      "answers": ["Correre", "Aspettare che si fermi l’auto", "Fischiare", "Saltare"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il segnale che indica divieto di entrare?",
+      "answers": ["Cerchio rosso con una linea bianca orizzontale", "Triangolo giallo", "Quadrato blu", "Cartello verde"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Come si chiama chi guida un’auto?",
+      "answers": ["Pittore", "Pilota", "Conduttore", "Conducente"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Cosa serve per guidare un’auto?",
+      "answers": ["Scarpe nuove", "Un cappello", "Una patente", "Un fischietto"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando si deve accendere il tergicristallo?",
+      "answers": ["Quando fa buio", "Quando piove", "Quando si ha caldo", "Quando si parcheggia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cosa fa il clacson?",
+      "answers": ["Lava il vetro", "Suona", "Accende i fari", "Apre il bagagliaio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si trova su una bicicletta per indicare che si gira?",
+      "answers": ["Una freccia", "Una bandiera", "Un campanello", "Il braccio alzato"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Quale luce si accende quando si frena?",
+      "answers": ["Luce blu", "Luce verde", "Luce rossa", "Luce arancione"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Dove si devono sedere i bambini in auto?",
+      "answers": ["Davanti", "Sul tetto", "Nel bagagliaio", "Nei seggiolini dietro"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Cosa indica una freccia lampeggiante su un’auto?",
+      "answers": ["Si accende il clacson", "Il guidatore vuole girare", "Il motore si spegne", "La radio è accesa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che forma ha il cartello di pericolo?",
+      "answers": ["Quadrata", "Tonda", "Triangolare", "Ottagonale"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si deve fare quando si sente un'ambulanza arrivare?",
+      "answers": ["Andare più veloci", "Fermarsi o spostarsi", "Suonare il clacson", "Chiudere i finestrini"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa serve per fermare l’auto?",
+      "answers": ["Acceleratore", "Frizione", "Volante", "Freno"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Che cosa segnala il semaforo giallo?",
+      "answers": ["Via libera", "Pericolo", "Fermarsi se si può", "Corri!"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chi attraversa la strada con il verde per i pedoni?",
+      "answers": ["Le auto", "Le moto", "I pedoni", "I cani"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si deve fare prima di accendere l’auto?",
+      "answers": ["Indossare la cintura", "Aprire il finestrino", "Chiamare un amico", "Mangiare"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Che veicolo guida un pompiere?",
+      "answers": ["Ambulanza", "Auto della polizia", "Camion dei pompieri", "Trattore"],
+      "correctIndex": 2
+    },
+    {
+      "question": "A cosa serve lo specchietto dell’auto?",
+      "answers": ["Per pettinarsi", "Per guardare dietro", "Per guardare il cielo", "Per guardare a destra"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il colore delle luci posteriori quando l'auto va in retromarcia?",
+      "answers": ["Rosse", "Verdi", "Bianche", "Blu"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa indica un cartello con una bici dentro un cerchio rosso?",
+      "answers": ["Pista ciclabile", "Divieto per le bici", "Parcheggio bici", "Noleggio bici"],
+      "correctIndex": 1
+    }
+  ],
+  "facile": [
+    {
+      "question": "Cosa indica un segnale triangolare con bordo rosso e centro bianco?",
+      "answers": ["Divieto", "Pericolo", "Obbligo", "Autostrada"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa un cartello rotondo blu con una freccia bianca?",
+      "answers": ["Divieto di accesso", "Obbligo di andare dritto", "Attenzione", "Senso vietato"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa bisogna fare quando si vede un cartello STOP?",
+      "answers": ["Accelerare", "Fermarsi e dare precedenza", "Guardare e passare", "Suonare il clacson"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il limite massimo di velocità in città (salvo diversa segnalazione)?",
+      "answers": ["30 km/h", "50 km/h", "60 km/h", "70 km/h"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale documento è obbligatorio per guidare un'auto?",
+      "answers": ["Carta d'identità", "Codice fiscale", "Patente di guida", "Passaporto"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica un cartello con una 'P' bianca su sfondo blu?",
+      "answers": ["Parcheggio", "Pedaggio", "Passaggio a livello", "Ponte"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando si accendono le luci anabbaglianti?",
+      "answers": ["Solo di giorno", "Solo in galleria", "Di notte o in condizioni di scarsa visibilità", "Mai"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica una linea continua sulla strada?",
+      "answers": ["Si può superare", "Non si può superare", "Parcheggio", "Zona a traffico limitato"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si intende per distanza di sicurezza?",
+      "answers": ["La distanza tra auto e marciapiede", "La distanza minima da mantenere dal veicolo davanti", "Lo spazio per parcheggiare", "Il tempo di frenata"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale caso si può usare il clacson?",
+      "answers": ["Per salutare un amico", "Per segnalare pericolo", "In città sempre", "Mai"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando è obbligatorio indossare la cintura di sicurezza?",
+      "answers": ["Solo in autostrada", "Sempre, sia davanti che dietro", "Solo il conducente", "Solo in caso di pioggia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il colore della luce del semaforo che impone di fermarsi?",
+      "answers": ["Giallo", "Verde", "Rosso", "Blu"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa bisogna fare prima di sorpassare?",
+      "answers": ["Suonare", "Guardare negli specchietti e mettere la freccia", "Accelerare subito", "Spostarsi a sinistra"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale situazione si deve accendere la freccia?",
+      "answers": ["Solo in curva", "Quando si cambia direzione o corsia", "Mai", "Solo in città"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa un segnale con un triangolo rosso e dentro un cervo?",
+      "answers": ["Zona di caccia", "Rischio attraversamento animali selvatici", "Divieto di caccia", "Strada chiusa"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la funzione dello specchietto retrovisore?",
+      "answers": ["Vedere dietro l’auto", "Vedere il passeggero", "Aumentare la velocità", "Illuminare la strada"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cosa bisogna fare prima di partire con l'auto?",
+      "answers": ["Accendere la radio", "Indossare la cintura e controllare specchietti", "Aprire il cofano", "Guardare il telefono"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si deve fare se un pedone attraversa sulle strisce?",
+      "answers": ["Suonare", "Fermarsi e farlo passare", "Accelerare", "Ignorarlo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi ha la precedenza a un incrocio senza segnaletica?",
+      "answers": ["Chi arriva da sinistra", "Chi arriva da destra", "Chi va più veloce", "Chi ha il clacson acceso"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il significato di una luce gialla lampeggiante?",
+      "answers": ["Obbligo di fermarsi", "Procedere con cautela", "Passaggio vietato", "Precedenza assoluta"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A cosa serve la frizione?",
+      "answers": ["A frenare", "A cambiare marcia", "A suonare", "A far partire i tergicristalli"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si chiama il documento che dimostra che l’auto è assicurata?",
+      "answers": ["Libretto", "Bollo auto", "Certificato di assicurazione", "Revisione"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica il cartello rotondo rosso con linea bianca orizzontale?",
+      "answers": ["Senso unico", "Divieto di accesso", "Rotatoria", "Stop"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A che serve il freno a mano?",
+      "answers": ["A parcheggiare in sicurezza", "A suonare", "A cambiare marcia", "A controllare le luci"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando si usa la retromarcia?",
+      "answers": ["Per andare più veloce", "Per parcheggiare o tornare indietro", "Per girare a sinistra", "Per frenare meglio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si rischia se non si rispetta il semaforo rosso?",
+      "answers": ["Nulla", "Una multa e punti tolti dalla patente", "Solo un clacson", "Si riceve un avviso"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chi può guidare in autostrada?",
+      "answers": ["Biciclette", "Auto e moto con cilindrata sopra i 150cc", "Pedoni", "Trattori"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica un cartello con due auto, una rossa e una nera?",
+      "answers": ["Strada a senso unico", "Divieto di sorpasso", "Limite di velocità", "Autostrada"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Dove si trovano le cinture di sicurezza obbligatorie?",
+      "answers": ["Solo davanti", "Solo dietro", "Davanti e dietro", "Solo per il guidatore"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che cosa succede se si supera il limite di velocità?",
+      "answers": ["Si risparmia tempo", "Si può prendere una multa o perdere punti", "Si raddoppia il punteggio patente", "Si diventa più esperti"],
+      "correctIndex": 1
+    }
+  ],
+  "medio": [
+    {
+      "question": "Qual è il limite massimo di velocità sulle autostrade italiane, salvo diversa segnalazione?",
+      "answers": ["110 km/h", "120 km/h", "130 km/h", "140 km/h"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica un pannello integrativo con la scritta '2 km' sotto un segnale di pericolo?",
+      "answers": ["Distanza dal pericolo", "Lunghezza del tratto pericoloso", "Distanza consigliata", "Limite di velocità"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In presenza di un semaforo guasto, chi regola il traffico?",
+      "answers": ["Nessuno, vale la precedenza a destra", "Il vigile urbano", "Il conducente con più esperienza", "Il pedone"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa una doppia linea continua al centro della carreggiata?",
+      "answers": ["Si può sorpassare solo a sinistra", "Divieto di sorpasso per entrambi i sensi di marcia", "Precedenza ai pedoni", "Corsia riservata ai mezzi pesanti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A quale distanza bisogna accendere gli indicatori di direzione prima di svoltare?",
+      "answers": ["Almeno 100 metri", "Almeno 50 metri", "Appena si gira", "Solo se ci sono auto dietro"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quale caso si può superare un veicolo sulla destra?",
+      "answers": ["Mai", "In autostrada", "Quando il veicolo davanti sta svoltando a sinistra", "Se si ha fretta"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il significato di un segnale rotondo blu con un simbolo di catene da neve?",
+      "answers": ["Catene da neve vietate", "Obbligo di catene o pneumatici invernali", "Zona di sosta", "Percorso pedonale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se il conducente ha un tasso alcolemico superiore a 0,5 g/l ma inferiore a 0,8 g/l, cosa rischia?",
+      "answers": ["Una multa", "La revoca della patente", "Una sanzione amministrativa e la sospensione della patente", "Nessuna sanzione"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando si deve effettuare la revisione di un’auto nuova?",
+      "answers": ["Dopo 2 anni", "Dopo 4 anni", "Dopo 5 anni", "Ogni anno"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa succede se si guida con la patente scaduta?",
+      "answers": ["Nulla", "Solo una multa", "Sanzione amministrativa e ritiro della patente", "Perdita del veicolo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è la distanza minima per posizionare il triangolo in caso di emergenza fuori città?",
+      "answers": ["10 metri", "30 metri", "50 metri", "100 metri"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In un incrocio con segnaletica verticale e orizzontale contrastanti, quale prevale?",
+      "answers": ["Orizzontale", "Verticale", "Nessuna", "Quella più nuova"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica un segnale a forma di X rossa su sfondo bianco con bordo rosso?",
+      "answers": ["Incrocio pericoloso", "Attraversamento pedonale", "Passaggio a livello senza barriere", "Stazione di servizio"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa comporta la decurtazione totale dei punti della patente?",
+      "answers": ["Nulla", "Obbligo di rifare solo l’esame teorico", "Revisione della patente", "Revoca definitiva della patente"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In presenza di un dosso, cosa è consigliato fare?",
+      "answers": ["Accelerare", "Frenare bruscamente", "Rallentare e non sorpassare", "Spegnere i fari"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando si possono usare i fari abbaglianti?",
+      "answers": ["Sempre", "Solo in città", "In caso di nebbia", "Fuori dai centri abitati, se non si abbaglia nessuno"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Cosa indica una striscia bianca tratteggiata al centro della carreggiata?",
+      "answers": ["Divieto di sorpasso", "Separazione tra le corsie", "Zona di parcheggio", "Corsia preferenziale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa significa una luce verde accesa sul cruscotto?",
+      "answers": ["Freno a mano inserito", "Fari anabbaglianti accesi", "Indicatori di direzione attivi", "Riserva carburante"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica il pannello con un rettangolo bianco e una freccia nera curvata a sinistra?",
+      "answers": ["Rotatoria", "Svolta obbligatoria a sinistra", "Strada interrotta", "Precedenza a sinistra"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si comporta il conducente se viene coinvolto in un incidente con soli danni materiali?",
+      "answers": ["Si allontana se ha fretta", "Compila la constatazione amichevole", "Chiama sempre i vigili", "Parcheggia e va via"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si controlla la pressione degli pneumatici?",
+      "answers": ["Guardandoli", "Con uno strumento specifico a freddo", "Battendoli con il piede", "Quando si accende la spia dell’olio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa comporta il sorpasso in prossimità di una curva con linea continua?",
+      "answers": ["È consentito se si ha fretta", "È vietato", "È possibile se c’è spazio", "È obbligatorio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica un segnale blu con una bicicletta bianca?",
+      "answers": ["Divieto di bici", "Parcheggio per bici", "Pista ciclabile", "Attraversamento ciclabile"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è il tempo massimo per comunicare il cambio di residenza sulla patente?",
+      "answers": ["3 giorni", "10 giorni", "30 giorni", "60 giorni"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa bisogna fare quando si affronta un passaggio a livello con barriere abbassate?",
+      "answers": ["Passare lo stesso", "Aspettare il loro completo sollevamento", "Suonare il clacson", "Invertire la marcia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Un segnale di divieto ha normalmente quale forma e colore?",
+      "answers": ["Quadrato blu", "Triangolo giallo", "Cerchio rosso con sfondo bianco", "Rettangolo verde"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa rappresenta un cartello quadrato con sfondo blu e una freccia bianca a destra?",
+      "answers": ["Divieto di svolta a sinistra", "Direzione obbligatoria a destra", "Senso unico", "Parcheggio obbligatorio"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se l’auto sbanda su strada bagnata, cosa si deve fare?",
+      "answers": ["Sterzare bruscamente", "Frenare forte", "Mantenere la calma e correggere dolcemente lo sterzo", "Accelerare"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica una luce gialla fissa sul cruscotto a forma di motore?",
+      "answers": ["Manutenzione imminente", "Problema al motore", "Batteria scarica", "Portiera aperta"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando si ha l’obbligo di dare la precedenza?",
+      "answers": ["Solo in autostrada", "Quando si entra da una strada secondaria", "Quando si è sulla rotonda", "Quando si svolta a destra"],
+      "correctIndex": 1
+    }
+  ],
+  "esperto": [
+    {
+      "question": "Quando un veicolo può effettuare la marcia per file parallele?",
+      "answers": ["Solo fuori città", "Solo nei sorpassi", "In caso di traffico intenso su carreggiate con più corsie per senso di marcia", "Mai"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cos'è l'effetto aquaplaning?",
+      "answers": ["Un guasto al motore", "La perdita di aderenza su strada bagnata", "Una tecnica di frenata", "L'impatto con una pozzanghera"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa comporta la guida in stato di ebbrezza con tasso alcolemico superiore a 1,5 g/l?",
+      "answers": ["Solo una multa", "Ritiro della patente e arresto", "Decurtazione di 2 punti", "Nulla se non ci sono incidenti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando un veicolo perde olio sulla carreggiata, cosa si rischia?",
+      "answers": ["Solo una multa", "Intralcio alla circolazione", "Sanzioni e possibili incidenti per perdita di aderenza", "Ritiro immediato della patente"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è la distanza di sicurezza adeguata in autostrada a 130 km/h in condizioni ottimali?",
+      "answers": ["15 metri", "26 metri", "Circa 100 metri", "60 metri"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando è vietato il sorpasso in prossimità di un attraversamento pedonale?",
+      "answers": ["Sempre", "Solo se vi sono pedoni che attraversano", "Mai", "Solo se c'è traffico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale dispositivo consente il minor consumo di carburante durante la guida?",
+      "answers": ["Trazione integrale", "Cruise control su tratti pianeggianti", "Uso continuo degli abbaglianti", "Frenata brusca"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il mancato uso delle luci in galleria può comportare:",
+      "answers": ["Nessuna conseguenza", "Solo una multa simbolica", "Sanzione amministrativa e decurtazione punti", "Revoca della patente"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che tipo di segnale è il cartello triangolare con un camion in discesa?",
+      "answers": ["Divieto", "Indicazione", "Pericolo", "Obbligo"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quando si deve disinserire il freno a mano?",
+      "answers": ["Solo in salita", "Sempre prima di partire", "Quando si parcheggia", "Quando si frena"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos'è il freno motore?",
+      "answers": ["Un freno ausiliario", "Il rallentamento dell'auto togliendo il gas e scalando marcia", "Un sistema elettronico", "Un tipo di freno d'emergenza"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quali veicoli non possono circolare in autostrada?",
+      "answers": ["Moto di cilindrata >150cc", "Ciclomotori e macchine agricole", "Autocarri", "Autobus turistici"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In caso di nebbia fitta, quali luci vanno utilizzate?",
+      "answers": ["Solo abbaglianti", "Solo luci di posizione", "Fendinebbia anteriori e posteriori", "Luci intermittenti"],
+      "correctIndex": 2
+    },
+    {
+      "question": "A quale categoria appartiene un veicolo con massa superiore a 3,5 tonnellate?",
+      "answers": ["Categoria M1", "Categoria N1", "Categoria N2 o N3", "Categoria B"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come si può ridurre lo spazio di frenata?",
+      "answers": ["Sterzando con decisione", "Usando pneumatici sgonfi", "Evitando frenate improvvise e mantenendo pneumatici efficienti", "Guidando in discesa"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Che funzione ha l’ABS in frenata?",
+      "answers": ["Aumenta la potenza del motore", "Riduce l’usura dei pneumatici", "Evita il bloccaggio delle ruote", "Allunga la frenata"],
+      "correctIndex": 2
+    },
+    {
+      "question": "In quali situazioni il conducente ha l'obbligo di accendere i proiettori anabbaglianti anche di giorno?",
+      "answers": ["In autostrada", "Solo in inverno", "Su strade extraurbane e in galleria", "Mai"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa si intende per 'effetto tunnel' durante la guida in autostrada?",
+      "answers": ["Frenata automatica", "Perdita di attenzione dovuta alla monotonia del viaggio", "Guida sportiva", "Effetto di scia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa si rischia guidando con pneumatici usurati oltre il limite?",
+      "answers": ["Nessun rischio reale", "Multa e rischio aquaplaning", "Solo consumo di carburante", "Revoca patente"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa indica una striscia trasversale a zig zag prima di un attraversamento?",
+      "answers": ["Zona scolastica", "Indicazione di rallentare e attenzione ai pedoni", "Divieto di sorpasso", "Parcheggio riservato"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la principale causa di incidenti su strade extraurbane?",
+      "answers": ["Pioggia", "Animali", "Velocità eccessiva", "Buche"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Se un veicolo è coinvolto in un incidente con soli danni materiali e intralcia la circolazione, cosa bisogna fare?",
+      "answers": ["Attendere l’arrivo della polizia", "Rimuovere il veicolo dalla carreggiata dopo aver documentato", "Lasciare tutto com’è", "Andarsene"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è il valore minimo del battistrada per legge?",
+      "answers": ["1,0 mm", "1,6 mm", "2,0 mm", "3,0 mm"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa comporta la presenza di una ruota sgonfia durante la guida?",
+      "answers": ["Migliore aderenza", "Maggiore stabilità", "Perdita di controllo e aumento consumi", "Minor attrito"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa indica una spia rossa con un punto esclamativo sul cruscotto?",
+      "answers": ["Luci accese", "Freni non funzionanti o freno a mano inserito", "Cinture allacciate", "Marcia errata"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In caso di incidente con feriti, cosa si deve fare prima di tutto?",
+      "answers": ["Spostare i feriti", "Prestare soccorso e chiamare i soccorsi", "Scappare", "Aspettare la polizia"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Se il veicolo ha problemi ai freni durante la marcia, cosa si deve fare?",
+      "answers": ["Accelerare", "Frenare di colpo", "Usare il freno motore e cercare di accostare in sicurezza", "Suonare il clacson"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Qual è l’effetto di una pressione eccessiva nei pneumatici?",
+      "answers": ["Aderenza ottimale", "Usura centrale e minore aderenza", "Minor consumo", "Migliore frenata"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale documento indica che un veicolo ha superato la revisione?",
+      "answers": ["Libretto di circolazione aggiornato", "Certificato medico", "Bollo", "Foglio rosa"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quando è vietato usare il clacson?",
+      "answers": ["Mai", "In autostrada", "Nei centri abitati salvo pericolo immediato", "Di giorno"],
+      "correctIndex": 2
+    }
+  ],
+  "laureato": [
+    {
+      "question": "Cos’è la ‘revoca della patente’ ai sensi dell’art. 130 del Codice della Strada?",
+      "answers": ["Una sospensione temporanea", "La perdita definitiva del titolo di guida", "Un ammonimento formale", "Una multa accessoria"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la differenza tra sospensione e revoca della patente?",
+      "answers": ["Nessuna", "La sospensione è temporanea, la revoca è definitiva", "La revoca è solo per neopatentati", "La sospensione implica ritiro del veicolo"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa prevede l’art. 186 bis del Codice della Strada per i neopatentati in merito all’alcol?",
+      "answers": ["Tasso alcolemico massimo 0,2 g/l", "Tolleranza zero: 0,0 g/l", "Massimo 0,5 g/l come gli altri", "Fino a 0,8 g/l con sanzione lieve"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Il superamento dei limiti di velocità di oltre 60 km/h comporta:",
+      "answers": ["Solo una multa", "Sospensione patente da 6 a 12 mesi", "Decurtazione di 5 punti", "Revoca immediata della patente"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la principale funzione del servofreno?",
+      "answers": ["Migliora l’accelerazione", "Aumenta l’efficienza della frenata riducendo lo sforzo sul pedale", "Aumenta la durata del freno", "Riduce l'usura dei pneumatici"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa stabilisce il Regolamento UE 2019/2144 in merito ai dispositivi ADAS?",
+      "answers": ["Obbligo dal 2022 su tutti i veicoli nuovi", "Divieto nei veicoli commerciali", "Solo raccomandazioni", "Applicabile solo in Germania"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos'è il sistema ESC (Electronic Stability Control)?",
+      "answers": ["Un optional per SUV", "Sistema di controllo della stabilità attiva", "Un sistema di navigazione", "Un tipo di cambio automatico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quando è prevista la confisca del veicolo ai sensi del Codice della Strada?",
+      "answers": ["Mai, è incostituzionale", "In caso di guida in stato di ebbrezza grave o senza patente", "Solo per furto", "Sempre in caso di incidente"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale norma impone la distanza minima di sicurezza?",
+      "answers": ["Art. 141 CdS", "Art. 148 CdS", "Art. 157 CdS", "Art. 192 CdS"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Il controllo tecnico periodico (revisione) è disciplinato da quale direttiva UE?",
+      "answers": ["2006/126/CE", "2014/45/UE", "2019/2144/UE", "2008/68/CE"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cosa comporta la perdita totale dei 20 punti patente senza corsi di recupero?",
+      "answers": ["Revoca automatica", "Obbligo di revisione della patente", "Multa", "Nulla"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che cos'è la 'revisione della patente'?",
+      "answers": ["Controllo dei documenti", "Esame teorico e/o pratico su richiesta dell'autorità", "Cambio del tipo di patente", "Controllo medico annuale"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale tipo di curva comporta un maggiore rischio di sbandamento?",
+      "answers": ["Curva sopraelevata", "Curva in discesa e senza visibilità", "Curva a sinistra in pianura", "Curva in salita"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A cosa serve il sistema EBD (Electronic Brakeforce Distribution)?",
+      "answers": ["Distribuisce automaticamente la forza frenante alle ruote", "Aumenta la velocità", "Sistema di frenata d’emergenza", "Blocca le ruote in curva"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quali veicoli sono soggetti al tachigrafo digitale?",
+      "answers": ["Solo i taxi", "Veicoli commerciali oltre 3,5 t", "Motocicli oltre 500cc", "Tutti i veicoli privati"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cos’è il ‘coefficiente di aderenza’?",
+      "answers": ["La capacità del motore di erogare coppia", "Il rapporto tra forza frenante e forza peso", "Un indice dell’aderenza pneumatico-strada", "La forza centrifuga"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Come agisce il freno a tamburo rispetto a quello a disco?",
+      "answers": ["È più efficace", "Ha un’efficienza minore, ma è più economico", "È usato solo in Formula 1", "Ha raffreddamento automatico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Qual è la funzione dell’alternatore in un veicolo?",
+      "answers": ["Fornisce coppia alle ruote", "Ricarica la batteria e alimenta i circuiti elettrici", "Raffredda il motore", "Aziona i tergicristalli"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quali condizioni il Codice della Strada prevede l'obbligo dell’uso delle catene da neve?",
+      "answers": ["Solo su richiesta del conducente", "Solo in presenza di ghiaccio", "Su tratti indicati da segnaletica specifica", "In tutte le città italiane"],
+      "correctIndex": 2
+    },
+    {
+      "question": "La 'patente a punti' è stata introdotta in quale anno?",
+      "answers": ["2001", "2003", "2005", "2008"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale componente meccanico trasmette la rotazione del motore alle ruote motrici?",
+      "answers": ["Compressore", "Trasmissione", "Ammortizzatore", "Cinghia dentata"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Secondo la normativa ADR, quali veicoli sono soggetti a obblighi speciali di trasporto?",
+      "answers": ["Solo taxi", "Veicoli che trasportano merci pericolose", "Veicoli ibridi", "Autobus scolastici"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In quali casi la patente di categoria B non consente la guida di un camper?",
+      "answers": ["Se il camper pesa più di 3,5 tonnellate", "Se è immatricolato come autocarro", "Se supera i 9 metri", "Mai"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cos’è il ‘parabrezza laminato’?",
+      "answers": ["Un vetro rinforzato per evitare schegge", "Un vetro a doppio strato con pellicola interna che evita la frantumazione", "Vetro antisfondamento per la polizia", "Vetro a doppio isolamento termico"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quale valore del battistrada è raccomandato per prestazioni ottimali?",
+      "answers": ["1 mm", "1,6 mm", "3 mm", "0,5 mm"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cosa disciplina la Direttiva 2006/126/CE dell'UE?",
+      "answers": ["Limiti di velocità", "Patenti di guida", "Dispositivi di sicurezza", "Emissioni ambientali"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Come si comporta l’auto in presenza di una pendenza se si rilascia improvvisamente la frizione?",
+      "answers": ["Accelera", "Resta ferma", "Arresta il motore", "Può arretrare pericolosamente"],
+      "correctIndex": 3
+    },
+    {
+      "question": "In caso di incidente mortale sotto effetto di alcol, cosa prevede il Codice della Strada?",
+      "answers": ["Sospensione patente 6 mesi", "Revoca patente e reato penale", "Solo una multa", "Decurtazione di 10 punti"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La revisione straordinaria di un veicolo può essere disposta:",
+      "answers": ["Solo dal proprietario", "Dalla Motorizzazione Civile", "Solo dalla Polizia", "Ogni 5 anni"],
+      "correctIndex": 1
+    },
+    {
+      "question": "La striscia bianca trasversale sull’asfalto indica:",
+      "answers": ["Divieto di accesso", "Linea d’arresto", "Zona di sosta", "Corsia di emergenza"],
+      "correctIndex": 1
     }
   ]
 }

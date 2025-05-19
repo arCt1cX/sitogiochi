@@ -578,7 +578,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const playerNameEl = document.getElementById('current-player-name');
             const playerScoreEl = document.getElementById('current-player-score');
             
-            if (playerNameEl) playerNameEl.textContent = currentPlayer.name;
+            if (playerNameEl) {
+                // Make the player name bold
+                playerNameEl.innerHTML = `<strong>${currentPlayer.name}</strong>`;
+            }
             if (playerScoreEl) playerScoreEl.textContent = currentPlayer.score;
             
             // Clear any previous assigned elements
@@ -620,7 +623,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
                 </svg>`;
-                playerNameEl.innerHTML = `${currentPlayer.name} ${crownIcon}`;
+                playerNameEl.innerHTML = `<strong>${currentPlayer.name}</strong> ${crownIcon}`;
             }
             
             // Check if this is a shock round
@@ -2378,6 +2381,37 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show game over screen
         showScreen(screens.gameOver);
         gameState.gameOver = true;
+
+        // Trigger confetti animation
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            
+            // since particles fall down, start a bit higher than random
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+            });
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+            });
+        }, 250);
     }
     
     // Generate the final scores list
