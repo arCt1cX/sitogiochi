@@ -510,6 +510,57 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>`
         },
         {
+            id: "mrdrew",
+            displayName: getTranslation('mrdrew', 'title'),
+            catchphrase: getTranslation('mrdrew', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
+                <!-- Shadow element -->
+                <ellipse cx="40" cy="72" rx="25" ry="3" fill="rgba(0,0,0,0.2)" />
+                
+                <!-- Mr. Drew mysterious silhouette (center, highlighted) -->
+                <g class="mrdrew-character">
+                    <path d="M33,68 C33,52 37,47 40,47 C43,47 47,52 47,68" stroke="#cf6679" stroke-width="2" stroke-linecap="round" fill="rgba(207,102,121,0.15)" />
+                    <path d="M35.5,40 C35,37 36,34 40,34 C44,34 45,37 44.5,40 C44,43 43,47 40,47 C37,47 36,43 35.5,40Z" fill="rgba(207,102,121,0.2)" stroke="#cf6679" stroke-width="1.5" />
+                    <circle cx="40" cy="24" r="10" fill="rgba(207,102,121,0.2)" stroke="#cf6679" stroke-width="1.5" />
+                    
+                    <!-- Question mark face -->
+                    <text x="40" y="28" font-size="12" fill="#cf6679" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
+                </g>
+                
+                <!-- Left civilian -->
+                <g class="civilian">
+                    <path d="M12,68 C12,55 15,50 18,50 C21,50 24,55 24,68" stroke="white" stroke-linecap="round" />
+                    <path d="M14,44 C13.5,42 14.5,39 18,39 C21.5,39 22.5,42 22,44 C21.5,46 20.5,50 18,50 C15.5,50 14.5,46 14,44Z" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="18" cy="30" r="7" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
+                    <path d="M16,29 L17,29 M19,29 L20,29" stroke="white" stroke-width="1" />
+                    <path d="M18,34 C16.5,32.5 19.5,32.5 18,34" stroke="white" stroke-width="0.8" />
+                </g>
+                
+                <!-- Right civilian -->
+                <g class="civilian">
+                    <path d="M56,68 C56,55 59,50 62,50 C65,50 68,55 68,68" stroke="white" stroke-linecap="round" />
+                    <path d="M58,44 C57.5,42 58.5,39 62,39 C65.5,39 66.5,42 66,44 C65.5,46 64.5,50 62,50 C59.5,50 58.5,46 58,44Z" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
+                    <circle cx="62" cy="30" r="7" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
+                    <path d="M60,29 L61,29 M63,29 L64,29" stroke="white" stroke-width="1" />
+                    <path d="M62,34 C60.5,32.5 63.5,32.5 62,34" stroke="white" stroke-width="0.8" />
+                </g>
+                
+                <!-- Speech bubbles suggesting word description -->
+                <ellipse cx="10" cy="20" rx="6" ry="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" />
+                <text x="10" y="21" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">...</text>
+                
+                <ellipse cx="70" cy="20" rx="6" ry="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" />
+                <text x="70" y="21" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">...</text>
+                
+                <!-- Connecting lines (discussion) -->
+                <path d="M24,35 L33,38" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="2 2" />
+                <path d="M56,35 L47,38" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="2 2" />
+                
+                <!-- Mystery aura around Mr. Drew -->
+                <circle cx="40" cy="40" r="22" fill="none" stroke="rgba(207,102,121,0.3)" stroke-width="1" stroke-dasharray="3 3" />
+            </svg>`
+        },
+        {
             id: "drewnking",
             displayName: getTranslation('drewnking', 'title'),
             catchphrase: getTranslation('drewnking', 'catchphrase'),
