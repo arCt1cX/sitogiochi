@@ -7,6 +7,9 @@ const gameTranslations = {
         'home': 'Home',
         'setupTitle': 'Impostazioni del Gioco',
         'playerCountLabel': 'Numero di Giocatori:',
+        'modeLabel': 'Modalità:',
+        'simpleModeOption': 'Senza Undercover',
+        'undercoverModeOption': 'Con Undercover',
         'players': 'Giocatori',
         'player': 'Giocatore',
         'startGameText': 'Inizia Gioco',
@@ -25,6 +28,7 @@ const gameTranslations = {
         'undercoverPlayerText': 'Il giocatore',
         'undercoverWordWasText': 'La sua parola era:',
         'civilWordWasText': 'La parola dei Civili era:',
+        'revealWordText': 'Rivela la Parola',
         'mrdrewGuessText': 'Mr. Drew, prova a indovinare la parola! Se la indovini, vinci tu!',
         'playAgainText': 'Gioca di Nuovo',
         'roleInfoText': 'Con questo numero di giocatori ci saranno:',
@@ -42,6 +46,9 @@ const gameTranslations = {
         'home': 'Home',
         'setupTitle': 'Game Settings',
         'playerCountLabel': 'Number of Players:',
+        'modeLabel': 'Mode:',
+        'simpleModeOption': 'Without Undercover',
+        'undercoverModeOption': 'With Undercover',
         'players': 'Players',
         'player': 'Player',
         'startGameText': 'Start Game',
@@ -60,6 +67,7 @@ const gameTranslations = {
         'undercoverPlayerText': 'Player',
         'undercoverWordWasText': 'Their word was:',
         'civilWordWasText': 'The Civilians\' word was:',
+        'revealWordText': 'Reveal the Word',
         'mrdrewGuessText': 'Mr. Drew, try to guess the word! If you guess it, you win!',
         'playAgainText': 'Play Again',
         'roleInfoText': 'With this number of players there will be:',
@@ -76,31 +84,40 @@ const gameTranslations = {
 function applyGameTranslations() {
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
-    
+
     // Update page title and meta description
     document.title = translations.pageTitleDesc;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', translations.metaDescription);
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update the language toggle button
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
         // Hide language toggle on game pages as requested
         languageToggle.style.display = 'none';
     }
-    
+
     // Update home button text
     document.getElementById('homeText').textContent = translations.home;
-    
+
     // Update all text elements
     document.getElementById('gameTitle').textContent = translations.gameTitle;
     document.getElementById('setupTitle').textContent = translations.setupTitle;
     document.getElementById('playerCountLabel').textContent = translations.playerCountLabel;
+
+    // Update mode selector
+    const modeLabel = document.getElementById('modeLabel');
+    if (modeLabel) modeLabel.textContent = translations.modeLabel;
+    const simpleModeOption = document.getElementById('simpleModeOption');
+    if (simpleModeOption) simpleModeOption.textContent = translations.simpleModeOption;
+    const undercoverModeOption = document.getElementById('undercoverModeOption');
+    if (undercoverModeOption) undercoverModeOption.textContent = translations.undercoverModeOption;
+
     document.getElementById('startGameText').textContent = translations.startGameText;
     document.getElementById('playerTurnText').textContent = translations.playerTurnText;
     document.getElementById('passPhoneText').textContent = translations.passPhoneText;
@@ -117,9 +134,14 @@ function applyGameTranslations() {
     document.getElementById('undercoverPlayerText').textContent = translations.undercoverPlayerText;
     document.getElementById('undercoverWordWasText').textContent = translations.undercoverWordWasText;
     document.getElementById('civilWordWasText').textContent = translations.civilWordWasText;
+
+    // Update reveal word button
+    const revealWordText = document.getElementById('revealWordText');
+    if (revealWordText) revealWordText.textContent = translations.revealWordText;
+
     document.getElementById('mrdrewGuessText').textContent = translations.mrdrewGuessText;
     document.getElementById('playAgainText').textContent = translations.playAgainText;
-    
+
     // Update player count dropdown
     const playerSelect = document.getElementById('player-count');
     const playerOptions = playerSelect.querySelectorAll('option');

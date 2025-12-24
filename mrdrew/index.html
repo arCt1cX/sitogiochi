@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>Mr. Drew - Chi sarà il Mr. White? | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a Mr. Drew: il gioco di deduzione sociale dove devi scoprire chi non conosce la parola segreta! Un perfetto party game da fare con gli amici offline.">');
-      } else {
-        document.write('<title>Mr. Drew - Who is Mr. White? | DrewGames</title>');
-        document.write('<meta name="description" content="Play Mr. Drew: a social deduction game where you must find out who does not know the secret word! A perfect party game to play with friends offline.">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Mr. Drew - Chi sarà il Mr. White? | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Mr. Drew: il gioco di deduzione sociale dove devi scoprire chi non conosce la parola segreta! Un perfetto party game da fare con gli amici offline.">');
+        } else {
+            document.write('<title>Mr. Drew - Who is Mr. White? | DrewGames</title>');
+            document.write('<meta name="description" content="Play Mr. Drew: a social deduction game where you must find out who does not know the secret word! A perfect party game to play with friends offline.">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/mrdrew/?lang=en" />
@@ -24,11 +25,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
@@ -37,7 +38,7 @@
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <style>
         .home-button {
             position: fixed;
@@ -55,16 +56,16 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
-        
+
         .language-toggle {
             position: fixed;
             top: 10px;
@@ -81,7 +82,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
-        
+
         .language-toggle:hover {
             background-color: rgba(71, 60, 139, 0.95);
             transform: translateY(-2px);
@@ -89,10 +90,12 @@
         }
     </style>
 </head>
+
 <body>
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
-    
+
     <div class="container">
         <div id="game-title">
             <h1 id="gameTitle">Mr. Drew</h1>
@@ -114,8 +117,16 @@
                     <option value="10">10 <span class="players-text">Giocatori</span></option>
                 </select>
             </div>
+            <div class="form-group">
+                <label for="mode-select" id="modeLabel">Modalità:</label>
+                <select id="mode-select">
+                    <option value="simple" id="simpleModeOption">Senza Undercover</option>
+                    <option value="undercover" id="undercoverModeOption">Con Undercover</option>
+                </select>
+            </div>
             <div class="info-card" id="role-info">
-                <p id="roleInfoText">Con questo numero di giocatori ci saranno: <strong><span id="roleBreakdown">2 Civili, 1 Undercover, 1 Mr. Drew</span></strong></p>
+                <p id="roleInfoText">Con questo numero di giocatori ci saranno: <strong><span id="roleBreakdown">2
+                            Civili, 1 Undercover, 1 Mr. Drew</span></strong></p>
             </div>
             <button id="start-game" class="btn primary-btn"><span id="startGameText">Inizia Gioco</span></button>
         </div>
@@ -123,12 +134,14 @@
         <!-- Player Turn Screen -->
         <div id="player-turn-screen" class="game-screen">
             <h2><span id="playerTurnText">Turno del Giocatore</span> <span id="current-player-num">1</span></h2>
-            <p><span id="passPhoneText">Passa il telefono al giocatore</span> <span id="current-player-num-text">1</span></p>
-            <button id="show-word" class="btn primary-btn pulse-btn"><span id="showWordText">Scopri la tua Parola</span></button>
-            
+            <p><span id="passPhoneText">Passa il telefono al giocatore</span> <span
+                    id="current-player-num-text">1</span></p>
+            <button id="show-word" class="btn primary-btn pulse-btn"><span id="showWordText">Scopri la tua
+                    Parola</span></button>
+
             <div id="word-container" class="hidden">
-                <p class="word-text" id="player-word"></p>
                 <p class="role-badge" id="player-role"></p>
+                <p class="word-text" id="player-word"></p>
                 <button id="hide-word" class="btn secondary-btn"><span id="seenItText">Ho Visto</span></button>
             </div>
         </div>
@@ -137,13 +150,17 @@
         <div id="playing-screen" class="game-screen">
             <h2 id="playingTitle">Giocate!</h2>
             <div class="info-card">
-                <p id="playingInstructionsText">Tutti i giocatori hanno visto la loro parola. Ora giocate a voce: a turno, ogni giocatore dice UNA parola che descrive il proprio termine.</p>
-                <p id="playingTipText"><strong>Consiglio:</strong> I Civili devono farsi riconoscere senza dare troppi indizi a Mr. Drew!</p>
+                <p id="playingInstructionsText">Tutti i giocatori hanno visto la loro parola. Ora giocate a voce: a
+                    turno, ogni giocatore dice UNA parola che descrive il proprio termine.</p>
+                <p id="playingTipText"><strong>Consiglio:</strong> I Civili devono farsi riconoscere senza dare troppi
+                    indizi a Mr. Drew!</p>
             </div>
             <div class="shared-prompt-container">
-                <p id="discussInstructionsText">Discutete e votate chi pensate sia Mr. Drew. Quando siete pronti, rivelate i ruoli!</p>
+                <p id="discussInstructionsText">Discutete e votate chi pensate sia Mr. Drew. Quando siete pronti,
+                    rivelate i ruoli!</p>
             </div>
-            <button id="reveal-roles" class="btn primary-btn glow-btn"><span id="revealRolesText">Rivela i Ruoli</span></button>
+            <button id="reveal-roles" class="btn primary-btn glow-btn"><span id="revealRolesText">Rivela i
+                    Ruoli</span></button>
         </div>
 
         <!-- Reveal Screen -->
@@ -152,23 +169,26 @@
                 <h2 id="mrdrewIsText">Mr. Drew era...</h2>
                 <p class="mrdrew-reveal"><span id="playerText">Il giocatore</span> <span id="mrdrew-num">X</span>!</p>
             </div>
-            
+
             <div id="undercover-reveal-container" class="impostor-prompt-container hidden">
                 <p id="undercoverWasText">L'Undercover era:</p>
-                <p class="undercover-reveal"><span id="undercoverPlayerText">Il giocatore</span> <span id="undercover-num">X</span></p>
+                <p class="undercover-reveal"><span id="undercoverPlayerText">Il giocatore</span> <span
+                        id="undercover-num">X</span></p>
                 <p id="undercoverWordWasText">La sua parola era:</p>
                 <p id="undercover-word" class="word-text undercover-word"></p>
             </div>
-            
-            <div class="shared-prompt-container">
+
+            <div class="shared-prompt-container" id="civil-word-container">
                 <p id="civilWordWasText">La parola dei Civili era:</p>
-                <p id="civil-word" class="word-text"></p>
+                <p id="civil-word" class="word-text hidden">???</p>
+                <button id="reveal-civil-word" class="btn secondary-btn"><span id="revealWordText">Rivela la
+                        Parola</span></button>
             </div>
-            
+
             <div class="info-card mrdrew-card">
                 <p id="mrdrewGuessText">Mr. Drew, prova a indovinare la parola! Se la indovini, vinci tu!</p>
             </div>
-            
+
             <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
         </div>
     </div>
@@ -177,4 +197,5 @@
     <script src="translations.js"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>

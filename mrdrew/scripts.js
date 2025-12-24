@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealScreen = document.getElementById('reveal-screen');
 
     const playerCountInput = document.getElementById('player-count');
+    const modeSelect = document.getElementById('mode-select');
     const startGameBtn = document.getElementById('start-game');
     const roleBreakdown = document.getElementById('roleBreakdown');
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const undercoverNum = document.getElementById('undercover-num');
     const undercoverWord = document.getElementById('undercover-word');
     const civilWord = document.getElementById('civil-word');
+    const revealCivilWordBtn = document.getElementById('reveal-civil-word');
     const playAgainBtn = document.getElementById('play-again');
 
     // Apply game translations
@@ -41,9 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         undercoverWord: '',
         allWordPairs: []
     };
-
-    // Minimum players for undercover
-    const MIN_PLAYERS_FOR_UNDERCOVER = 6;
 
     // Load word pairs from the text file
     async function loadWordPairs() {
@@ -78,10 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update role breakdown display
     function updateRoleBreakdown() {
         const playerCount = parseInt(playerCountInput.value) || 4;
+        const selectedMode = modeSelect ? modeSelect.value : 'simple';
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
-        const hasUndercover = playerCount >= MIN_PLAYERS_FOR_UNDERCOVER;
+        // Check if undercover mode is selected
+        const hasUndercover = selectedMode === 'undercover' && playerCount >= 4;
         const numMrDrew = 1;
         const numUndercover = hasUndercover ? 1 : 0;
         const numCivils = playerCount - numMrDrew - numUndercover;
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the game
     function initGame() {
         gameState.playerCount = parseInt(playerCountInput.value) || 4;
+        const selectedMode = modeSelect ? modeSelect.value : 'simple';
 
         // Ensure minimum 3 players
         if (gameState.playerCount < 3) {
@@ -107,7 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset game state
         gameState.currentPlayer = 1;
-        gameState.hasUndercover = gameState.playerCount >= MIN_PLAYERS_FOR_UNDERCOVER;
+
+        // Determine if undercover based on mode selection (requires at least 4 players)
+        gameState.hasUndercover = selectedMode === 'undercover' && gameState.playerCount >= 4;
 
         // Randomly select Mr. Drew
         gameState.mrdrewIndex = Math.floor(Math.random() * gameState.playerCount);
@@ -215,10 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
             undercoverRevealContainer.classList.add('hidden');
         }
 
-        // Show civil word
+        // Hide civil word initially (Mr. Drew can try to guess first)
         civilWord.textContent = gameState.civilWord;
+        civilWord.classList.add('hidden');
+        revealCivilWordBtn.classList.remove('hidden');
 
         showScreen(revealScreen);
+    }
+
+    // Reveal the civil word (after Mr. Drew tries to guess)
+    function revealCivilWord() {
+        civilWord.classList.remove('hidden');
+        revealCivilWordBtn.classList.add('hidden');
     }
 
     // Helper to show a specific screen and hide others
@@ -242,14 +254,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealRolesBtn.addEventListener('click', revealRoles);
 
+    revealCivilWordBtn.addEventListener('click', revealCivilWord);
+
     playAgainBtn.addEventListener('click', () => {
         showScreen(setupScreen);
     });
 
-    // Update role breakdown when player count changes
+    // Update role breakdown when player count or mode changes
     playerCountInput.addEventListener('change', updateRoleBreakdown);
+    if (modeSelect) {
+        modeSelect.addEventListener('change', updateRoleBreakdown);
+    }
 
     // Initial load
     loadWordPairs();
     updateRoleBreakdown();
 });
+
