@@ -4,7 +4,7 @@ const translations = {
         // Meta data
         'pageTitle': 'DrewGames - Giochi da fare con gli amici offline',
         'pageDescription': 'DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!',
-        
+
         // Common elements across all pages
         'home': 'Home',
         'play': 'Gioca',
@@ -16,7 +16,7 @@ const translations = {
         'subtitle': 'Giochi da fare con gli amici offline 🎉',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Solo Italiano',
-        
+
         // Navigation Items
         'navHome': 'Home',
         'navGames': 'Giochi',
@@ -26,7 +26,7 @@ const translations = {
         'navTerms': 'Termini di Servizio',
         'navCookies': 'Cookie Policy',
         'navTournament': 'Modalità Torneo',
-        
+
         // Games Catalog Page
         'gamesPageTitle': 'La Collezione Completa dei Giochi',
         'gamesIntro': 'Benvenuti nella nostra collezione completa di giochi! Qui puoi esplorare ogni gioco nel dettaglio, imparare come si gioca e scoprire suggerimenti per rendere l\'esperienza ancora più divertente. Tutti i nostri giochi sono progettati per essere giocati con amici offline, senza bisogno di internet dopo il caricamento iniziale.',
@@ -42,7 +42,7 @@ const translations = {
         'advanced': 'Avanzato',
         'minutes': 'minuti',
         'players': 'giocatori',
-        
+
         // Game titles and descriptions
         'impostor': {
             'title': 'Impostor',
@@ -239,6 +239,28 @@ const translations = {
                 'Vince chi forma per primo una linea di tre simboli'
             ]
         },
+        'mrdrew': {
+            'title': 'Mr. Drew',
+            'catchphrase': 'Scopri chi non conosce la parola segreta!',
+            'description': 'Mr. Drew è un gioco di deduzione sociale ispirato a "Mr. White". Un giocatore è Mr. Drew e non conosce la parola segreta, mentre i Civili (e l\'Undercover con più giocatori) devono scoprire chi è. I giocatori descrivono la loro parola a turno, cercando di identificare chi non la conosce!',
+            'players': '3-10 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Ruoli dinamici: Civili, Undercover (6+ giocatori) e Mr. Drew',
+                'Centinaia di coppie di parole',
+                'Meccanica vocale senza scrittura',
+                'Interfaccia semplice e intuitiva'
+            ],
+            'instructions': [
+                'Scegli il numero di giocatori (3-10)',
+                'Ogni giocatore guarda la propria parola in segreto',
+                'Mr. Drew vede "???" perché non conosce la parola',
+                'A turno, ogni giocatore dice UNA parola che descrive il proprio termine',
+                'Discutete e votate chi pensate sia Mr. Drew',
+                'Se Mr. Drew viene scoperto, può provare a indovinare la parola per vincere!'
+            ]
+        },
         'tournamentTitle': 'Modalità Torneo',
         'numberOfGames': 'Numero di Partite',
         'players': 'Giocatori',
@@ -263,7 +285,7 @@ const translations = {
         // Meta data
         'pageTitle': 'DrewGames - Games to play with friends offline',
         'pageDescription': 'DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!',
-        
+
         // Common elements across all pages
         'home': 'Home',
         'play': 'Play',
@@ -275,7 +297,7 @@ const translations = {
         'subtitle': 'Games to play with friends offline 🎉',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Italian Only',
-        
+
         // Navigation Items
         'navHome': 'Home',
         'navGames': 'Games',
@@ -285,7 +307,7 @@ const translations = {
         'navTerms': 'Terms of Service',
         'navCookies': 'Cookie Policy',
         'navTournament': 'Tournament Mode',
-        
+
         // Games Catalog Page
         'gamesPageTitle': 'The Complete Collection of Games',
         'gamesIntro': 'Welcome to our complete collection of games! Here you can explore each game in detail, learn how to play, and discover tips to make the experience even more fun. All our games are designed to be played with friends offline, with no need for internet after the initial loading.',
@@ -301,7 +323,7 @@ const translations = {
         'advanced': 'Advanced',
         'minutes': 'minutes',
         'players': 'players',
-        
+
         // Game titles and descriptions
         'impostor': {
             'title': 'Impostor',
@@ -498,6 +520,28 @@ const translations = {
                 'The first to form a line of three symbols wins'
             ]
         },
+        'mrdrew': {
+            'title': 'Mr. Drew',
+            'catchphrase': 'Find out who doesn\'t know the secret word!',
+            'description': 'Mr. Drew is a social deduction game inspired by "Mr. White". One player is Mr. Drew and doesn\'t know the secret word, while Civilians (and the Undercover with more players) must find out who it is. Players describe their word in turns, trying to identify who doesn\'t know it!',
+            'players': '3-10 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Dynamic roles: Civilians, Undercover (6+ players) and Mr. Drew',
+                'Hundreds of word pairs',
+                'Voice-based gameplay without writing',
+                'Simple and intuitive interface'
+            ],
+            'instructions': [
+                'Choose the number of players (3-10)',
+                'Each player secretly views their word',
+                'Mr. Drew sees "???" because they don\'t know the word',
+                'Taking turns, each player says ONE word that describes their term',
+                'Discuss and vote on who you think is Mr. Drew',
+                'If Mr. Drew is caught, they can try to guess the word to win!'
+            ]
+        },
         'tournamentTitle': 'Tournament Mode',
         'numberOfGames': 'Number of Games',
         'players': 'Players',
@@ -550,17 +594,17 @@ function getUserLanguage() {
         localStorage.setItem('lang', urlLang);
         return urlLang;
     }
-    
+
     // Check if a language is stored in localStorage
     const storedLang = localStorage.getItem('lang');
     if (storedLang) {
         return storedLang;
     }
-    
+
     // If no stored preference, try to detect based on browser language
     const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     console.log('Detected browser language:', browserLang);
-    
+
     // More specific check for Italian language
     if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
         localStorage.setItem('lang', 'it');
@@ -586,7 +630,7 @@ function toggleLanguage() {
     const currentLang = getUserLanguage();
     const newLang = currentLang === 'it' ? 'en' : 'it';
     setUserLanguage(newLang);
-    
+
     // Update URL if needed
     const url = new URL(window.location.href);
     url.searchParams.set('lang', newLang);
@@ -596,7 +640,7 @@ function toggleLanguage() {
 // Function to get a translation
 function getTranslation(key, subKey = null) {
     const lang = getUserLanguage();
-    
+
     if (subKey) {
         // For nested translations like game titles/descriptions
         if (translations[lang][key] && translations[lang][key][subKey]) {
@@ -627,7 +671,7 @@ function setFlagIcon() {
     if (currentFlag) {
         const lang = getUserLanguage();
         currentFlag.innerHTML = flagSVGs[lang];
-        
+
         // Set aria-label for accessibility
         const languageToggle = document.getElementById('languageToggle');
         if (languageToggle) {
@@ -647,21 +691,21 @@ function applyTranslations() {
     console.log('- navigator.userLanguage:', navigator.userLanguage);
     console.log('- document.documentElement.lang:', document.documentElement.lang);
     console.log('- Selected language:', getUserLanguage());
-    
+
     const lang = getUserLanguage();
     document.documentElement.lang = lang;
-    
+
     // Update meta tags if they exist
     const pageTitle = document.getElementById('pageTitle');
     if (pageTitle) {
         document.title = getTranslation('pageTitle');
     }
-    
+
     const pageDescription = document.getElementById('pageDescription');
     if (pageDescription) {
         pageDescription.setAttribute('content', getTranslation('pageDescription'));
     }
-    
+
     // Handle language toggle - only show on main page
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {

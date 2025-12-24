@@ -1,0 +1,168 @@
+Pizza|Focaccia
+Ice Cream|Sorbet
+Pasta|Rice
+Coffee|Tea
+Dog|Cat
+Sea|Lake
+Mountain|Hill
+New York|Los Angeles
+Ferrari|Lamborghini
+Soccer|Basketball
+Guitar|Piano
+Beer|Wine
+Christmas|New Year
+Summer|Spring
+Sun|Moon
+Airplane|Helicopter
+Train|Subway
+Bicycle|Scooter
+Apple|Pear
+Banana|Pineapple
+Tomato|Pepper
+Bread|Breadsticks
+Cheese|Mozzarella
+Ham|Salami
+Chocolate|Candy
+Cake|Cookie
+Milk|Yogurt
+Water|Juice
+Book|Magazine
+Movie|TV Show
+Music|Podcast
+Phone|Tablet
+Computer|Laptop
+Shoes|Sandals
+Jeans|Pants
+T-shirt|Shirt
+Jacket|Coat
+Hat|Cap
+Glasses|Contact Lenses
+Watch|Bracelet
+Ring|Necklace
+Bag|Backpack
+Wallet|Purse
+Umbrella|Raincoat
+Chair|Armchair
+Table|Desk
+Bed|Sofa
+Wardrobe|Dresser
+Lamp|Candle
+Mirror|Painting
+Window|Door
+Wall|Floor
+Garden|Balcony
+Tree|Bush
+Flower|Plant
+Grass|Leaf
+Bird|Butterfly
+Fish|Dolphin
+Lion|Tiger
+Elephant|Rhino
+Monkey|Gorilla
+Snake|Lizard
+Spider|Ant
+Bee|Wasp
+Fly|Mosquito
+Rabbit|Hamster
+Horse|Donkey
+Cow|Bull
+Pig|Boar
+Sheep|Goat
+Chicken|Turkey
+Duck|Goose
+Eagle|Falcon
+Owl|Barn Owl
+Parrot|Canary
+Penguin|Seal
+Bear|Panda
+Wolf|Fox
+Deer|Reindeer
+Dinosaur|Dragon
+Unicorn|Pegasus
+Mermaid|Merman
+Vampire|Werewolf
+Ghost|Zombie
+Witch|Wizard
+Fairy|Elf
+King|Queen
+Prince|Princess
+Knight|Samurai
+Pirate|Ninja
+Astronaut|Alien
+Robot|Android
+Superhero|Supervillain
+Spiderman|Batman
+Superman|Captain America
+Ironman|Thor
+Hulk|Thanos
+Mario|Luigi
+Sonic|Pikachu
+Minecraft|Fortnite
+PlayStation|Xbox
+Netflix|Disney+
+Instagram|TikTok
+WhatsApp|Telegram
+Google|Facebook
+Amazon|eBay
+Apple|Samsung
+McDonald's|Burger King
+Coca-Cola|Pepsi
+Nike|Adidas
+IKEA|Target
+Ford|Chevrolet
+Yankees|Red Sox
+Lakers|Celtics
+Real Madrid|Barcelona
+Messi|Ronaldo
+Tennis|Ping Pong
+Swimming|Water Polo
+Skiing|Snowboarding
+Volleyball|Beach Volleyball
+Rugby|American Football
+Golf|Bowling
+Boxing|Karate
+Yoga|Pilates
+Gym|Pool
+Stadium|Arena
+Theater|Cinema
+Museum|Gallery
+Library|Bookstore
+School|University
+Hospital|Clinic
+Pharmacy|Health Store
+Bank|Post Office
+Supermarket|Market
+Restaurant|Diner
+Bar|Pub
+Club|Lounge
+Hotel|B&B
+Beach|Pool
+Park|Public Garden
+Zoo|Aquarium
+Amusement Park|Circus
+Concert|Festival
+Wedding|Baptism
+Birthday|Anniversary
+Halloween|Carnival
+Easter|Fourth of July
+Valentine's Day|Mother's Day
+Sunday|Saturday
+January|February
+Spring|Fall
+Morning|Afternoon
+Breakfast|Lunch
+Dinner|Happy Hour
+Appetizer|First Course
+Main Course|Side Dish
+Dessert|Fruit
+Espresso|Cappuccino
+Orange|Tangerine
+Purple|Lavender
+Light Blue|Sky Blue
+Red|Burgundy
+Green|Emerald
+Yellow|Gold
+Black|Gray
+White|Ivory
+Pink|Fuchsia
+Brown|Beige
