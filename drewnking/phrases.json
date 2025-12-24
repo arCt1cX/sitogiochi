@@ -1,0 +1,1109 @@
+{
+  "normal": {
+    "color": "#473c8b",
+    "weight": 45,
+    "phrases": [
+      "{player} deve bere un sorso se si è mai pisciato addosso",
+      "{player}, bevi se hai mai rubato qualcosa",
+      "{player} deve bere se ha mai baciato qualcuno di questo gruppo",
+      "Tutti bevete se siete mai stati fermati dalla polizia",
+      "Tutti bevono se {player} ha mai vomitato per colpa dell'alcool",
+      "{player} deve bere se ha mai fumato qualcosa di illegale",
+      "{player} beve se ha mai pianto guardando un film",
+      "Chi ha mandato un messaggio alla persona sbagliata beve",
+      "{player} sei il numero uno dei coglioni, bevi un sorso",
+      "{player} deve bere se ha mai avuto una cotta per qualcuno qui presente",
+      "Chi ha mai fatto finta di essere malato per non uscire con gli amici beve",
+      "{player} beve se ha mai parlato male di qualcuno qui presente",
+      "Chi ha mai spiato il telefono di qualcuno beve",
+      "{player} deve bere se ha mai fatto pipì in piscina",
+      "Bevi se hai mai rubato qualcosa ai tuoi genitori",
+      "{player} beve se ha mai fatto un autogol a calcio", 
+      "Chi utilizza Spotify craccato beve",
+      "Chi non è mai stato ad un concerto beve",
+      "Chi non ha mai viaggiato fuori dall'Europa beve",
+      "Chi non ha mai fatto sport beve",
+      "Chi sta indossando un assorbente beve",
+      "Chi non ha la patente beve",
+      "Chi ha paura di volare beve",
+      "Chi è omosessuale beve. Se non ce ne sono, bevono tutti i giocatori",
+      "Chi ha almeno un tatuaggio beve",
+      "Chi non aveva mai giocato a DrewGames prima d'ora beve",
+      "Chi indossa i pantaloni della tuta distribuisce da bere a 3 giocatori",
+      "Chi deve guidare distribuisce da bere a 2 giocatori",
+      "Chi ha già giocato a DrewGames prima di oggi distribuisce da bere a 3 persone",
+      "Giocano il primo giocatore maschio alla destra di chi tiene il telefono e il primo maschio a sinistra di chi tiene il telefono: chi dei due è mai stato truccato dalla propria ragazza beve. Se siete stati entrambi penitenza massima. Se non vi è mai capitato bevono tutti gli altri giocatori",
+      "Giocano il primo giocatore maschio alla destra di chi tiene il telefono e il primo maschio a sinistra di chi tiene il telefono: chi dei due è mai stato truccato dalla propria sorella beve. Se siete stati entrambi penitenza massima. Se non vi è mai capitato bevono tutti gli altri giocatori",
+      "Il più boomer beve",
+      "Il più acculturato beve",
+      "Il più ignorante beve",
+      "Chi ha bevuto per la prima volta da più giovane beve",
+      "Chi ha preso la patente da più giovane beve",
+      "Il giocatore/i giocatori che hanno bestemmiato nel corso della serata bevono",
+      "Chi ha vomitato a causa dell'alcol più recentemente beve",
+      "Tutti i giocatori che nel corso della partita hanno già nominato un meme di J0k3r bevono",
+      "Tutti i giocatori che nel corso della partita hanno già nominato un meme di cicciogamer89 bevono",
+      "Tutti i giocatori che nel corso della partita hanno già nominato i brainrot bevono",
+      "Se hai mai paccato una obesa con i capelli rosa bevi tre sorsi",
+      "Se è presente una persona che è il coniuge di Frattesi, questa beve tre sorsi nitrendo",
+      "Hai mai cagato in palestra? Se sì, bevi tanti sorsi quanti sono i chili di massa grassa di Dodoria",
+      "Chi si è fatto una canna nell'ultima settimana beve",
+      "Chi tra i presenti si è cagato nelle mutande dopo una scorreggia almeno una volta distribuisce due sorsi",
+      "Ricevete tante penalità quante sigarette (normali o elettroniche) avete fumato nel corso della serata",
+      "{player}, se hai già sbrattato in uno spazio pubblico aperto bevi",
+      "{player}, se hai almeno una volta hackerato qualcosa bevi 3 sorsi",
+      "{player}, se hai mai chiuso gli occhi dalla paura davanti ad un film horror bevi",
+      "{player}, se oggi ti sei masturbato più di una volta bevi 3 sorsi",
+      "Chi è nato in un paese o città diverso da quello in cui state giocando beve un sorso",
+      "Il prossimo giocatore a ricevere una penalità ne distribuisce 2 ad altri giocatori",
+      "{player}, penalità massima se non hai mai fatto 100kg di panca piana",
+      "Se sei mai stato ad Amsterdam bevi un sorso",
+      "Ricevi 2 penalità se non hai la barba",
+      "Bevi 2 sorsi se hai mai cagato sangue",
+      "{player}, se hai un pacchetto di sigarette con te ricevi tante penalità quante sono le sigarette nel pacchetto. Se più di 5, penalità massima!",
+      "{player}, la prossima persona che guardi negli occhi riceve 2 penalità",
+      "{player}, puoi distribuire tante penalità quanti sono i tuoi zii",
+      "{player}, distribuisci tante penalità quante sono le 'e' nel tuo nome e ne ricevi tante quante sono le 'a'",
+      "{player}, distribuisci 2 penalità ad un giocatore meno muscoloso di te. Se non c'è, bevi 2 sorsi",
+      "Quelli che stanno fumando ricevono 3 penalità",
+      "{player} è un popozzo pagliacciozzo e distribuisce anche 2 sorsi",
+      "Fino alla fine del gioco il primo giocatore a dire 'no' riceve la massima penalità",
+      "L'ultima persona ad essere andata in bagno riceve 2 penalità",
+      "{player}, dai 2 penalità al giocatore che conosci di più",
+      "{player}, sfida chi vuoi alla guerra dei pollici. Chi perde riceve 5 penalità",
+      "Si cambia giro, passa il telefono al giocatore che te lo ha appena passato. Inoltre, {player} deve urlare 'Sembro Mussolini' o beve un sorso",
+      "Il primo giocatore che ride beve 4 sorsi",
+      "Il giocatore che è finito più volte all'ospedale distribuisce 4 sorsi",
+      "Distribuiscono 1 sorso i giocatori che sono stati già respinti da un locale",
+      "Distribuiscono 3 sorsi i giocatori che sanno parlare più di due lingue",
+      "Distribuiscono 3 sorsi i giocatori che si sono tinti almeno una volta i capelli",
+      "Bevono i giocatori che almeno una volta hanno pisciato scuola o università per andare ad una manifestazione",
+      "Pausa omofoba. Bicchiere pieno a goccia per tutti i giocatori che sono andati almeno una volta a un gay pride",
+      "{player}, mi sa che il tuo drink ha qualcosa di strano. Verifica. Immergi il naso dentro al drink o bevi 5 sorsi",
+      "Chi sta indossando un orologio beve 1 sorso",
+      "Chi è già stato ad Amsterdam beve 1 sorso. 2 se è andato nei CoffeeShop, 5 se è andato a puttane",
+      "{player}, fai tre capriole per terra di fila o bevi 4 sorsi",
+      "{player}, distribuisci 2 sorsi",
+      "Chi ha già vomitato in un cespuglio o aiuola pubblica distribuisce 2 sorsi",
+      "Chi gioca a Clash Royale beve 2 sorsi",
+      "Distribuisci tanti sorsi quante seghe ti sei fatto oggi. Quello che se ne è fatta di più ne distribuisce 1 aggiuntiva, ma viene soprannominato 'Il Pedofilo' fino a fine partita",
+      "Sei una forte, potente e indipendente donna afro-americana gay. Ricevi 1 sorso come premio",
+      "Momento antisemita. I giocatori di origine ebraica ricevono 3 sorsi",
+      "Momento razzista. I giocatori di origine africana ricevono 3 sorsi",
+      "I giocatori con origini asiatiche ricevono 2 sorsi",
+      "Bevono 2 sorsi i giocatori che hanno usato o usano ancora Tinder",
+      "{player}, maledetto coglionazzo che non sei altro, bevi 1 sorso",
+      "Ricevi 1 sorso se almeno una volta hai studiato da ubriaco o fatto di erba",
+      "Ricevi 1 sorso se ti sei mai fatto una canna a scuola",
+      "Sei proprio un segaiolo {player}! Fatti subito un sorso e smettila di segarti tutto il giorno",
+      "{player}, smettila di fare il finocchio e bevi 1 sorso",
+      "{player} ha rotto il cazzo, è tutta la serata che non fa altro che sparare cazzate una dopo l'altra. Beve subito 2 sorsi",
+      "{player}, smettila di specchiarti sullo schermo del telefono, sembri un ornitorinco dipendente dal crack. Bevi 1 sorso e non rompere",
+      "{player} è un idiota coglione",
+      "A morte il nerd! Il giocatore più appassionato di manga e anime riceve 4 sorsi",
+      "Chi colleziona Funkopops riceve 3 sorsi e gli insulti di tutti gli altri partecipanti, perché va bene fatto ma quei pupazzi di merda sono inguardabili",
+      "Chi ha già fumato una pipa di legno riceve 1 sorso. 2 se il contenuto non era solo tabacco",
+      "Chi ha letto almeno un libro nell'ultimo anno distribuisce 1 sorso",
+      "Ricevi tanti sorsi per quante volte ti tagli i capelli al mese",
+      "Chi si depila le ascelle riceve 1 sorso",
+      "Chi si depila le gambe riceve 2 sorsi",
+      "Chi porta gli occhiali distribuisce 1 sorso",
+      "{player}, ultimamente sei davvero un panzone maledetto. Beviti 2 sorsi già che ci sei, tanto la situazione ormai è compromessa",
+      "Allarme Terremoto! L'ultimo giocatore a mettersi sotto al tavolo riceve 3 sorsi",
+      "Se hai già bevuto dell'acqua dall'inizio della serata, ricevi 2 sorsi. Così ti disidrati per bene, ridicolo pagliaccio che non sei altro",
+      "Chi si è masturbato dentro un calzino almeno una volta riceve 4 sorsi",
+      "Quello scherzo della natura di {player} beve 1 sorso, così è un minimo più presentabile",
+      "Dov'è quel nano bastardo? Il giocatore più basso beve 1 sorso",
+      "Chi è laureato distribuisce 1 sorso",
+      "I giocatori che assumono creatina bevono 2 sorsi",
+      "{player}, sei veramente un pezzente bastardo stronzo coglione. {player}, fatti 1 sorso",
+      "Chi ha i calzini bianchi riceve 1 sorso",
+      "Vi rivelo un segreto, {player} e {player} vanno a trans tutte le sere. Ricevono 1 sorso già che ci sono",
+      "{player}, smettila di scoparti i boiler di 140 kg e fatti un sorso",
+      "Distribuisci tanti sorsi quante sono le volte che ti lavi i denti al giorno",
+      "{player}, fottuto ubriacone bastardo, sei veramente senza speranza. Ti aiuto io, distribuisci 3 sorsi",
+      "{player}, distribuisci tanti sorsi quanti pali hai preso negli ultimi 2 anni",
+      "{player} chiude gli occhi per 1 minuto. Quell'ebeto di {player} invece riceve 1 sorso",
+      "Chi ha fatto nuoto da piccolo riceve 1 sorso",
+      "Chi ha ricevuto un palo nell'ultimo mese distribuisce 2 sorsi",
+      "Chi ha fatto arrampicata almeno una volta distribuisce 1 sorso",
+      "Chi è un musicista o ha parenti musicisti riceve 1 sorso",
+      "{player}, imita una rana per 15 secondi e distribuisci 2 sorsi. Altrimenti li bevi",
+      "Il giocatore più giovane riempie con bevande a sua scelta i bicchieri dei giocatori che non hanno il bicchiere pieno al massimo",
+      "Il giocatore più basso distribuisce 2 sorsi",
+      "Chi è andato in un centro scommesse (o nel sito) nell'ultima settimana riceve 2 sorsi",
+      "Ricevi tanti sorsi per quante schedine hai giocato nell'ultima settimana",
+      "Tutti i giocatori che giocano abitualmente a scacchi bevono 1 sorso e devono esclamare 'scacco matto nel mio ano', sennò bevono altri 2 sorsi",
+      "Chi ha già avuto un attacco di rabbia clamoroso per FIFA deve bere 2 sorsi",
+      "I giocatori che riescono a fischiare con le dita distribuiscono 2 sorsi",
+      "{player} distribuisce 3 sorsi perché è davvero un splendido piccolo omossessuale",
+      "Chi è mai andato a escort o si è fatto fare un balletto allo strip club beve 2 sorsi",
+      "Chi ha la macchina più nuova beve 1 sorso",
+      "{player} ottiene uno scudo. Può annullare una volta una penalità a lui assegnata",
+      "{player} ottiene uno scudo. Può annullare una volta una penalità a lui assegnata",
+      "{player} ottiene uno scudo. Può annullare una volta una penalità a lui assegnata",
+      "{player} ottiene uno specchio. Può rispedire una volta a un altro giocatore una penalità",
+      "{player} ottiene uno specchio. Può rispedire una volta a un altro giocatore una penalità",
+      "Salta il turno coglione!",
+      "Salta il turno farabutto!",
+      "Salta il turno merdone che non sei altro!",
+      "{player} è l'ebreo. {player} gli deve dare 1€ di interessi oppure beve 2 sorsi",
+      "Chi ha passato più di un'ora al computer oggi beve 1 sorso",
+      "Quel cesso ambulante di {player} beve 1 sorso",
+      "Chi è già stato negli Stati Uniti distribuisce 2 sorsi. Chi è stato in Africa ne distribuisce 3",
+      "Quel barile di smegma di {player} distribuisce 2 sorsi",
+      "{player}, sei uno schifoso cavernicolo bastardo. Distribuisci 2 sorsi",
+      "Chi voleva giocare a Picolo invece di Drewnking Game riceve 4 penalità... Vergogna!",
+      "{player}, ricevi tante penalità quante sono le belle tette nella stanza",
+      "Chi pesa più di 90 kg riceve 2 penalità...Ciccione...",
+      "{player}, se la tua età è un numero pari ricevi 2 penalità, se è dispari ne distribuisci 2",
+      "{player}, se fumi butta nella spazzatura una sigaretta intera oppure ricevi 2 sorsi",
+      "{player}, sei un drogato del cazzo. Bevi tanti sorsi quante canne ti sei fumato nell'ultima settimana",
+      "Chi ha mai tradito il proprio partner riceve 3 sorsi e la vergogna degli altri giocatori",
+      "Ricevi 1 sorso se la tua auto vale meno di 5000€. 2 sorsi se non hai neanche la macchina, poveraccio",
+      "Chi ha mai rubato qualcosa in un negozio distribuisce 3 sorsi da criminale quale è",
+      "Ricevi tanti sorsi quante volte sei stato bocciato a scuola. Se non sei mai stato bocciato distribuisci 2 sorsi, secchione del cazzo",
+      "Chi ha mai baciato qualcuno dello stesso sesso distribuisce 2 sorsi e un sorriso malizioso",
+      "{player}, se hai mai mandato foto di nudo non richieste a qualcuno bevi 3 sorsi, maniaco di merda",
+      "Chi ha mai bestemmiato in chiesa o in un luogo sacro beve 2 sorsi e va all'inferno",
+      "Quel fallito di {player} beve 3 sorsi perché ha dei gusti musicali pessimi",
+      "Chi si è fatto vomitare addosso da qualcuno riceve 2 sorsi per la traumatica esperienza",
+      "{player}, se hai mai pianto guardando un film bevi 1 sorso, femminuccia",
+      "Chi ha il conto in banca in rosso beve 2 sorsi e cerca di farsi prestare i soldi dagli altri giocatori",
+      "Ricevi tanti sorsi quanti followers su Instagram hai in meno rispetto alla media del gruppo",
+      "{player}, se non ti sei mai fatto una sega pensando a qualcuno dei presenti distribuisci 2 sorsi. Altrimenti bevi 3 sorsi, porco",
+      "Ricevi 2 sorsi se hai mai stalkerato qualcuno sui social",
+      "{player}, se vivi ancora coi tuoi genitori dopo i 25 anni bevi 2 sorsi, bamboccione",
+      "Chi non si è mai ubriacato fino a non ricordare la serata riceve 2 sorsi. Tocca rimediare!",
+      "Ricevi tanti sorsi quante volte hai detto 'domani inizio la dieta' nell'ultimo mese",
+      "{player}, se hai mai litigato su Facebook, X o Instagram per più di 3 commenti bevi 2 sorsi, disagiato",
+      "Chi ha un debito con qualcuno dei presenti beve 3 sorsi e lo salda entro fine serata",
+      "Ricevi 2 sorsi se hai mai fatto finta di essere malato per non andare al lavoro o a scuola",
+      "Chi ha fatto più di 2 lavori diversi nell'ultimo anno beve 1 sorso per ogni lavoro",
+      "Ricevi tanti sorsi quante sigarette hai fumato oggi. Se non fumi distribuisci 2 sorsi",
+      "{player}, se hai mai avuto un profilo fake sui social bevi 3 sorsi, viscido",
+      "Chi ha mai fatto la spia da piccolo riceve 2 sorsi da infame",
+      "Ricevi 1 sorso per ogni piercing che hai. 2 sorsi per ogni tatuaggio visibile",
+      "Chi ha la media voti più bassa del gruppo all'università o al liceo beve 3 sorsi da somaro",
+      "Ricevi 2 sorsi se hai mai dato buca a qualcuno per uscire con qualcun altro",
+      "{player}, distribuisci tanti sorsi quante rotture di coglioni hai fatto oggi agli altri giocatori",
+      "{player}, se il tuo peso ideale è almeno 10 kg in meno di quello attuale bevi 2 sorsi e smettila di mangiare",
+      "Chi ha mai baciato qualcuno per scommessa distribuisce 3 sorsi da venduto",
+      "{player}, prometti di andare in uno strip club a fine serata. Se lo fai, distribuisci 15 sorsi",
+      "Tutti i giocatori che hanno avuto almeno una volta un'erezione in palestra bevono 2 sorsi",
+      "Tutti bevono 2 penalità",
+      "A {player} gli piace mettersi i carciofi in culo. Riceve 1 sorso",
+      "Chi ha mai usato un linguaggio di programmazione riceve 1 sorso",
+      "Bevi, Capitan Findus di stocazzo! Il giocatore che va più spesso in barca riceve 2 sorsi",
+      "Chi è già stato in Australia riceve 2 sorsi",
+      "Ricevi 1 sorso se hai mai pisciato nel bagno delle donne",
+      "Ricevi 1 sorso se hai mai pisciato nel bagno dei disabili",
+      "Chi si è già mangiato un edible al THC riceve 2 sorsi. 3 se era fatto in casa",
+      "Chi è già stato in Spagna beve 1 sorso",
+      "Bevi 1 sorso se hai già vomitato durante o dopo un allenamento",
+      "Chi ha già impostato 'password' come password riceve 1 sorso",
+      "Ricevi un sorso se hai usato PowerPoint questa settimana",
+      "Ricevi un sorso se hai usato Microsoft Excel questa settimana",
+      "Ricevi un sorso se hai usato Microsoft Word questa settimana",
+      "{player} si fa mettere gli involtini primavera in culo dai ladyboy. Distribuisce 1 sorso per il coraggio",
+      "Cicileu! (l'ultimo giocatore a rispondere ieu beve!)",
+      "I giocatori che hanno già cagato in un bagno alla turca distribuiscono 1 sorso",
+      "Chi è intollerante al lattosio beve 1 sorso e si mette una mozzarella in culo quando torna a casa",
+      "Il primo giocatore che guarda il telefono beve 3 sorsi",
+      "{player} scucchiaia la cotta tutti i giorni con {player}, che occasionalmente ci abbina anche un po' di trenbolone assunto per via anale. {player}, bevi 1 sorso",
+      "Full!",
+      "{player} mi sta veramente sui coglioni quindi si beve 1 sorso",
+      "{player}, sei un pentito. Beviti un sorso maledetto bastardo",
+      "Chi è già andato a letto con una ragazza con i capelli colorati (blu, verdi ecc.) si fa 3 sorsi e un bell'esame di coscienza",
+      "{player}, se hai mai perso un documento di identità bevi 2 sorsi",
+      "{player}, se spacci o hai mai spacciato bevi 3 sorsi",
+      "{player}, se sei mai stato in Tunisia bevi 3 sorsi",
+      "{player}, se sei mai stato in Marocco bevi 3 sorsi",
+      "{player}, se sei mai stato in Sudafrica bevi 3 sorsi",
+      "{player} si scopa gli asini. Distribuisce 1 sorso",
+      "{player} è un prete omosessuale: beve 1 sorso",
+      "Chi è già andato nel dark web riceve 2 sorsi",
+      "Chi è già stato a casa di {player} riceve un sorso e canta 'Woooo Volevo te, pensavo solo a teeee'",
+      "Distribuisci 1 sorso se hai mai cagato in aereo. 2 se hai vomitato. 5 se ti sei segato",
+      "Distribuisci 1 sorso se hai mai cagato in treno. 2 se hai vomitato. 5 se ti sei segato",
+      "Parenzo buscettone…UUUUUUH. {player}, beviti un sorso va, pagliaccio"
+        ]
+  },
+  "challenge": {
+    "color": "#8B0000",
+    "weight": 25,
+    "phrases": [
+      "{player} e {player}, scambiatevi un indumento. Se lo fate, distribuite 4 sorsi ciascuno, altrimenti ne bevete 3",
+      "{player}, distribuisci tanti sorsi quante fermate della Metro B riesci a nominare",
+      "{player}, distribuisci tanti sorsi quante fermate della Metro A riesci a nominare",
+      "Quante applicazioni avete nel vostro telefono? A turno dite un numero, poi le contate effettivamente. La differenza saranno i sorsi che dovrete bere",
+      "{player} deve fare 10 flessioni o bere 3 sorsi",
+      "{player} deve mostrare l'ultima foto nella galleria o bere",
+      "Tutti devono mostrare l'ultimo messaggio inviato o bere",
+      "{player}, fai un balletto di 30 secondi o bevi 3 sorsi",
+      "{player} deve imitare qualcuno del gruppo, se nessuno indovina bevi tu",
+      "Tutti fate a gara di braccio di ferro, l'ultimo classificato beve 2 sorsi",
+      "{player}, recita una poesia improvvisata o bevi 2 sorsi",
+      "{player} deve fare il verso di un animale, gli altri indovinano quale. Se sbagliano, bevono",
+      "Tutti devono dire una bugia convincente, chi viene scoperto beve",
+      "{player}, canta una canzone per 20 secondi o bevi 3 sorsi",
+      "{player} deve raccontare la cosa più imbarazzante che ha fatto o bere 4 sorsi",
+      "Tutti devono fare un complimento sincero a {player} o bere",
+      "Tipi di drink: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Tipi di droghe: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Pornostar: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Personaggi Brainrot: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Modi per fare serata: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Siti porno: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Discoteche della città/luogo in cui vi trovate attualmente: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Meme di cicciogamer89: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Meme di J0k3r: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Personaggi della zanzara: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Tiktoker famose: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "{player} nomina 3 calciatori come li nominerebbe J0k3r. Se non li sa beve",
+      "{player} nomina almeno 3 elementi della routine di Ashton Hall. Se non li sa beve",
+      "{player} nomina 5 personaggi della zanzara. Se non li sa beve",
+      "{player} nomina 5 personaggi brainrot. Se non li sa beve",
+      "{player} nomina 3 giochi di DrewGames. Se non li sa beve",
+      "{player} deve fare lo spelling di 'è la mia prima volta in Sardegna'. Se sbaglia beve",
+      "A turno ripetete 5 volte 'supercalifragilistichespiralidoso'. Chi sbaglia beve. Inizia il giocatore {player}",
+      "A turno dite un meme, dopo aver ripetuto quello che è stato detto prima. Chi sbaglia beve. Inizia il giocatore {player}",
+      "{player} dice un meme che conosce: i giocatori che non lo conoscono bevono. Se lo conoscono tutti beve {player}",
+      "Nominate una parola a testa per creare una frase di J0k3r. Il primo che dice una parola insensata o non sa più che parola dire beve. Inizia il giocatore {player}",
+      "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita cicciogamer89. Chi indovina distribuisce a 2 giocatori",
+      "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita parenzo. Chi indovina distribuisce a 2 giocatori",
+      "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita il king del vintage. Chi indovina distribuisce a 2 giocatori",
+      "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita ken lee: l'influencer che esegue azioni a velocità supersonica. Chi indovina distribuisce a 2 giocatori",
+      "ATTENZIONE: LEGGERE A MENTE. Mima un personaggio famoso. Il primo giocatore che indovina distribuisce da bere a 2 giocatori",
+      "{player} inizia una frase meme a piacimento, il primo giocatore che la continua correttamente distribuisce 3 sorsi",
+      "Sfida tra {player} e {player}: verranno letti brainrot (Skibidi, Sigma, Rizz, Gyatt, Fanum Tax), create entrambi la vostra top 5. Se almeno 3 elementi coincidono, tutti gli altri bevono, altrimenti bevete voi due",
+      "{player} deve creare la sua top 5 dei seguenti drink (Spritz, Vodka Lemon, Gin Tonic, Mojito, Negroni, Margarita, Whisky Cola, Tequila). Se viene condivisa dalla maggioranza non beve nessuno, altrimenti bevi tu",
+      "Nominate a turno persone mongoloidi di palestra. Chi non ne trova più nessuna beve 2 sorsi. Inizia {player}",
+      "Cantate a turno una frase della canzone: Padolo 4. Chi non ricorda come continua beve 1 sorso. Inizia {player}",
+      "{player}: bestemmia la madonna, se ti rifiuti bestemmia gesù cristo",
+      "Nominate a turno una fissazione di {player}, chi non ne trova più nessuna beve 4 sorsi. Inizia {player}",
+      "Sfida di Militant A: nominate a turno una qualità di birra diversa, chi non ne trova più una beve 4 sorsi. Inizia {player}",
+      "Pub della zona in cui vivete: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
+      "Droghe: il primo che ne ripete una o non ne trova più beve. Inizia il giocatore {player}",
+      "Persone nere famose: il primo che ne ripete una o non ne trova più beve. Non valgono gli sportivi. Inizia {player}",
+      "{player}, imita un gorilla impazzito o bevi 3 sorsi",
+      "Obbligo o verità. {player} e {player} si sfidano uno alla volta",
+      "{player}, fatti dare un pugno sugli addominali dal giocatore {player}. Se lo fai, distribuisci 10 sorsi, altrimenti ne bevi 5",
+      "Marche di birra: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
+      "{player}, nomina un sito pornografico. Se nessuno lo conosce, distribuisci 5 sorsi. Sennò ne bevi 2",
+      "Personaggi della Zanzara: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Tossici e barboni della vostra città: il primo che ne ripete uno o non ne trova più beve. Inizia {player}",
+      "Chi si muove è gay. Il primo a perdere beve 2 sorsi in maniera effeminata",
+      "{player}, distribuisci tante penalità quanti sono i soprannomi di {player} che riesci a dire",
+      "{player}, prova ad indovinare l'ora esatta. Se indovini, penalità massima per tutti gli altri giocatori",
+      "{player}, racconta una barzelletta o bevi due sorsi",
+      "{player}, fai il ballo del robot o bevi due sorsi",
+      "{player}, dì il compleanno di {player}. Se sbagli, deciderà quanti sorsi dovrai bere",
+      "A turno, ogni giocatore nomina un animale che ha visto di persona. I giocatori che non l'hanno mai visto, bevono 1 sorso. Inizia {player}",
+      "A turno, ogni giocatore nomina un videogioco a cui ha giocato. I giocatori che non ci hanno mai giocato, bevono 1 sorso. Inizia {player}",
+      "A turno, ogni giocatore nomina un artista musicale che non gli piace. Se la maggioranza dei presenti è d'accordo si salva, altrimenti beve 2 sorsi. Inizia {player}",
+      "Dittatori: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Canzoni di BelloFigo: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "A turno, ogni giocatore nomina uno stato estero in cui è stato. I giocatori che non ci sono stati bevono 1 sorso. Inizia {player}",
+      "Personaggi e strutture di Clash of Clans: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "{player}, cerca 'droga' nella ricerca delle chat Whatsapp e leggi il primo messaggio che esce",
+      "Chef famosi nel web: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "{player}, leggi l'ultimo messaggio che ti è arrivato",
+      "{player}, fai una domanda di un settore di cui sei esperto. Il giocatore che azzecca per primo distribuisce 5 sorsi",
+      "{player}, fai un complimento esagerato a {player}, altrimenti bevi 2 sorsi",
+      "{player}, di il numero di fratelli e sorelle di {player}. Se azzecchi distribuisci 1 sorso, sennò ne bevi 3",
+      "{player}, nomina un film che hai visto. Chi l'ha già visto distribuisce 2 sorsi",
+      "{player}, fai 45 secondi di plank. Se ci riesci distribuisci 10 sorsi, altrimenti ne bevi 4",
+      "{player}, stai in piedi su una gamba per 30 secondi. Se ci riesci distribuisci 7 sorsi, altrimenti ne bevi 4",
+      "A turno, ogni giocatore sceglie una foto nella sua galleria e la mostra a tutti. I giocatori che ridono bevono 1 sorso. Inizia {player}",
+      "Ci si esprime solo a smorfie e pernacchie fino alla fine del turno. Chi ride è eliminato. L'ultimo a rimanere distribuisce 6 sorsi",
+      "{player}, imita un/una conoscente in comune tra tutti i presenti. Il primo che indovina distribuisce 3 sorsi",
+      "{player}, scegli la bandiera di una nazione a tua scelta e mostra l'immagine da Google ai presenti. Il primo che indovina la nazione distribuisce 2 sorsi",
+      "{player}, scegli un personaggio famoso e mostra l'immagine da Google ai presenti. Il primo che lo indovina distribuisce 2 sorsi",
+      "{player}, scegli un artista musicale famoso e mostra l'immagine da Google ai presenti. Il primo che lo indovina distribuisce 2 sorsi",
+      "{player}, scegli un animale e mostra l'immagine da Google ai presenti. Il primo che indovina il nome dell'animale distribuisce 2 sorsi",
+      "{player}, scegli un personaggio trash e mostra l'immagine da Google ai presenti. Il primo che lo indovina distribuisce 2 sorsi",
+      "{player}, imita un canguro per 15 secondi o bevi 3 sorsi",
+      "{player}, scegli una chat del tuo Whatsapp. {player} scriverà lì un messaggio che gli pare dal tuo telefono. Se ti opponi, bevi 4 sorsi",
+      "Gioco del mimo. Devi far indovinare questa parola: Tirannosauro. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Hitler. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Maranza. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Zingaro. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Elefante. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Goku. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Cinese. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Cocaina. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Omosessuale. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Napoli. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Colonscopia. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Overdose. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Bidè. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Gioco del mimo. Devi far indovinare questa parola: Diarrea. Tu e il vincitore distribuite 1 sorso ciascuno. Se nessuno azzecca ne bevi 2",
+      "Isole d'italia e del mondo: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Strain di marijuana: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "CoffeeShop di Amsterdam: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "{player}, distribuisci tanti sorsi quanti sono i compagni del liceo di {player} che riesci a nominare. Se i due giocatori sono compagni di liceo, il turno è annullato e {player} beve un sorso",
+      "Ossa del corpo umano: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
+      "{player}, fai una videochiamata con {player} e vai a pisciare mantenendo la chiamata attiva e il telefono con te, oppure massima penalità!",
+      "L'ultimo giocatore a toccare la nuca di {player} beve 2 sorsi",
+      "Prendi un qualsiasi oggetto sul tavolo e lancialo verso gli altri giocatori. Il giocatore in possesso dell'oggetto quando sono passati 30 secondi distribuisce 6 sorsi",
+      "GeoGuesser 1 vs 1. A turno, ogni giocatore mostra una foto di una città scelta da lui da Google al giocatore alla sua sinistra. Se il giocatore indovina, distribuisce 3 sorsi. Inizia {player}",
+      "Scambio posto: spostatevi tutti di un posto a destra",
+      "{player}, fai un balletto. {player} lo deve fare per i prossimi 3 turni",
+      "{player}, {player} e {player}. Ricreate l'attentato alle torri gemelle. Il resto dei giocatori vota la rappresentazione teatrale, se la maggioranza approva siete salvi altrimenti bevete 3 sorsi a testa",
+      "{player} e {player}. Ricreate l'uccisione di George Floyd. Il resto dei giocatori vota la rappresentazione teatrale, se la maggioranza approva siete salvi altrimenti bevete 3 sorsi a testa",
+      "Social network apps: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
+      "A turno, ogni giocatore rivela una bugia che ha detto e la rispettiva verità. Altrimenti beve 3 sorsi. Inizia {player}",
+      "Giochi con le carte: il primo che non ne trova più o ne ripete uno beve 1 sorso. Inizia {player}",
+      "{player} deve fare 10 squat e ad ogni ripetizione deve esclamare 'Sono una principessa'. Se si rifiuta beve 10 sorsi",
+      "{player} deve urlare la seguente frase, pena 10 sorsi se si rifiuta: 'Ho la figa nel culo'",
+      "{player}, devi esclamare una frase scelta da {player}. Se ti rifiuti bevi 4 sorsi",
+      "{player}, togli la tua sedia e siediti per terra nella stessa posizione fino a fine partita",
+      "{player} è il musulmano. Deve rimanere in ginocchio per 3 minuti, altrimenti beve 3 sorsi",
+      "{player} è Saddam Hussein. Deve rimanere sdraiato a pancia in su immobile sotto il tavolo per 5 minuti. Se si rifiuta, si deve scolare tutto il bicchiere pieno",
+      "Indovina l'orario. Se azzecchi precisamente che ora è, distribuisci 10 sorsi. Se l'hai mancato di meno di 5 minuti ne distribuisci 2",
+      "{player}, scrolla 5 reel su Instagram (o TikTok). Se {player} azzecca il tema di almeno uno di questi reel, distribuisce 3 sorsi",
+      "A turno, provate ad azzeccare la somma in contanti presente nel portafoglio di {player}. Chi ci si avvicina di più distribuisce 2 sorsi",
+      "{player}, leggi le ultime 10 voci della tua cronologia. Se ti rifiuti, bevi 3 sorsi",
+      "Gioco della slot machine. A ogni turno tutti contemporaneamente dite una parola ciascuno. Al turno dopo, dite una parola correlata a quelle dette nel turno precedente. Continuate così finché almeno 3 persone non dicono la stessa parola. Il rimanente, beve 3 sorsi. Se tutti e 4 dite la stessa parola, nessuno beve",
+      "Menù e prodotti del McDonald's: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Catene di supermercati: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
+      "Cose che puoi ordinare al sushi all you can eat: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
+      "Personaggi di Dragon Ball: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Personaggi di Due Fantagenitori: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "Personaggi di A Tutto Reality L'isola / Il Tour: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
+      "{player} e {player}, fate morra cinese. Chi vince distribuisce 2 sorsi",
+      "Uno alla volta, ogni giocatore fa partire una canzone casuale dalla propria playlist. Il primo che azzecca il titolo, distribuisce 2 sorsi",
+      "{player}, dai una spinta micidiale a un giocatore a tua scelta, che distribuisce 3 sorsi. Se ti rifiuti, ne ricevi 4",
+      "Saltate tutti a piedi uniti. L'ultimo a farlo beve 3 sorsi",
+      "{player}, fai 20 piegamenti. Se ci riesci, distribuisci 7 sorsi",
+      "{player}, prova ad indovinare le ultime 3 chat di whatsapp di {player}. Se le indovini, distribuisci 7 sorsi",
+      "{player}, mostraci i primi 10 reel (o tiktok) che ti escono nel tuo feed social. Prima, i giocatori provano ad indovinare l'argomento dei reel. Distribuiscono tanti sorsi, quanti sono i reel dell'argomento che hanno scelto, tra quei 10",
+      "Discipline delle Olimpiadi. Il giocatore che non ne trova più o ne ripete una beve 2 sorsi",
+      "Uno per volta, avete tre secondi per dire una parola che inizia con le ultime due lettere della parola detta dal giocatore precedente (es. gatto…topo). Il primo giocatore che ripete una parola già detta o impiega più di tre secondi beve 2 sorsi. Parte {player}",
+      "Componete una storia parola per parola. Avete un secondo per dire una parola uno dopo l'altro. Il primo che dice una parola che rende la frase sbagliata beve 1 sorso",
+      "Pornostar. Il giocatore che non ne trova più o ne ripete una beve 2 sorsi",
+      "Compagni/e di scuola in comune tra almeno 2 dei presenti. Il giocatore che non ne trova più o ne ripete uno/a beve 2 sorsi",
+      "Etnie e gruppi sociali discriminati. Il giocatore che non ne trova più o ne ripete uno beve 1 sorso",
+      "{player}, prova ad indovinare cosa ha mangiato a pranzo {player}. Se azzecchi, distribuisci 6 sorsi",
+      "{player} distribuisce tanti sorsi quanti numeri di scarpe dei presenti riesce ad azzeccare",
+      "Fate un complimento a {player} o bevete un sorso",
+      "A turno, ogni giocatore racconta una spesa davvero stupida che ha fatto, altrimenti beve 1 sorso",
+      "A turno, ogni giocatore racconta un episodio esilarante dei tempi del liceo. Se nessuno ride, il narratore beve 2 sorsi",
+      "A turno, ogni giocatore racconta un episodio esilarante di qualsiasi periodo. Se nessuno ride, il narratore beve 2 sorsi",
+      "{player}, fai 1 sorso e canta una canzone con la bocca piena. Il primo che la indovina distribuisce 2 sorsi",
+      "Pictionary: {player} disegna qualcosa e il primo giocatore che lo indovina distribuisce 3 sorsi",
+      "Pictionary: a turno, ogni giocatore disegna qualcosa e il primo giocatore che lo indovina distribuisce 2 sorsi",
+      "{player}, metti una canzone. {player} la deve ballare per intero. Se si rifiuta, massima penalità",
+      "{player}, prendi una foto di un attore da Google. Il primo che indovina nome e cognome dell'attore distribuisce 2 sorsi",
+      "{player}, imita qualcuno. Il giocatore che indovina distribuisce 2 sorsi",
+      "{player}, chiedi la capitale di uno stato a tua scelta a {player}. Se la azzecca, distribuisce 3 sorsi. Se la sbaglia, li distribuisci tu",
+      "{player}, devi dire 10 cose presenti nella camera da letto di {player}. Hai 30 secondi, se ci riesci distribuisci 3 sorsi, altrimenti ne bevi 2",
+      "Scrivete su un foglio le 5 cose che vi portereste per sopravvivere in un'isola deserta. Poi leggetele: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio i vostri 5 superalcolici preferiti. Poi leggeteli: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio 5 paesi del mondo che vorresti visitare almeno una volta. Poi leggeteli: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio 5 film o serie tv che ti sono piaciuti moltissimo. Poi leggeteli: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio i tuoi 5 animali preferiti. Poi leggeteli: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio le 5 cose che fai tutti i giorni. Poi leggetele: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che nessun altro giocatore ha messo",
+      "Scrivete su un foglio le 5 persone più idiote con cui avete mai avuto a che fare. Poi leggetele: ciascun giocatore distribuisce tanti sorsi quante sono le persone nella sua lista che sono presenti anche nelle liste altrui",
+      "Scrivete su un foglio le 5 marche di birra che ti piacciono. Poi leggetele: ciascun giocatore distribuisce tanti sorsi quante sono le cose nella sua lista che sono presenti anche nelle liste altrui",
+      "A turno, ripetete 5 volte 'tre tigri contro tre tigri'. Chi sbaglia riceve 1 sorso, chi ci riesce ne distribuisce 2",
+      "{player} deve fare un obbligo deciso da {player} o beve 4 sorsi",
+      "{player}, di' una cosa su di te o una cosa che ti è successa, vera o falsa. I giocatori indovinano se è vera o falsa. Quelli che indovinano distribuiscono 1 sorso",
+      "A turno, ogni giocatore racconta la sua caduta più imbarazzante e ridicola. I giocatori votano se è divertente. Se la maggioranza dice no, il giocatore beve 2 sorsi",
+      "{player}, scegli una parola. {player} deve cercare quella parola nelle chat WhatsApp e urlare il primo messaggio che compare nella finestra di ricerca, pena 3 sorsi se si rifiuta",
+      "A turno, dite una cosa davvero stupida del giocatore alla vostra destra. Se la maggioranza è d'accordo sull'idiozia della cosa, il giocatore distribuisce 1 sorso",
+      "{player} deve andare ad augurare buon Natale al tavolo accanto, altrimenti beve 3 sorsi",
+      "{player}, distribuisci tanti sorsi quanti oggetti presenti nella tasca di {player} riesci ad indovinare. P.S. {player} è un babbuino",
+      "{player}, spara un numero. Inizia una conta da {player}. A chi tocca il numero scelto beve 1 sorso",
+      "{player}, devi andare da un gruppo di sconosciuti, chiedergli chiaramente 'Avete visto le mie medicine per caso?' e andartene senza dire nient'altro. Se lo fai, penitenza massima per tutti gli altri giocatori, se ti rifiuti, ne bevi 5",
+      "Videogiochi per PlayStation. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 3 sorsi",
+      "{player} e {player}, andate a ordinarvi uno shot e sparatevelo. Distribuite 5 sorsi a testa se lo fate, altrimenti li ricevete. {player}, sei gay",
+      "A turno, nominate un personaggio social che vi sta altamente sul cazzo. Se la maggioranza non è d'accordo, bevete 2 sorsi",
+      "{player}, mima un personaggio a tua scelta, sia famoso che conosciuto solo tra di voi. Tu e chi indovina distribuite 1 sorso a testa",
+      "A turno, nominate un film o serie tv considerato un capolavoro ma che non avete mai visto. Chi lo ha visto beve 1 sorso",
+      "{player}, nomina 3 cibi che ti hanno fatto stare male di stomaco o bevi 2 sorsi",
+      "Posate il telefono sul tavolo. L'ultimo giocatore a farlo beve 2 sorsi (è escluso da questo turno il proprietario del telefono con cui state giocando)",
+      "{player}, prendi i tuoi sticker WhatsApp, e a occhi chiusi scorri 2 secondi e mandane uno random. Se ti rifiuti, bevi 2 sorsi",
+      "Rapper italiani. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "Il giocatore che è andato a pisciare più volte durante la serata beve 1 sorso e esclama 'Sono un piscione merdone coglione', altrimenti ne beve altri 3",
+      "{player}, di' ad alta voce una cosa qualunque. Il primo giocatore che dice una cosa dello stesso colore, distribuisce 3 sorsi (es. carota…arancia)",
+      "{player}, cerca 'ubriac' nelle chat WhatsApp e leggi il primo messaggio che esce. 3 sorsi e un calcio in culo se ti rifiuti",
+      "Formaggi. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "A turno, ogni giocatore deve dire un nome che inizia con la stessa lettera del proprio. ASPETTA A LEGGERE, VOTATE PRIMA. Fino a fine partita, questi saranno i vostri nomi. Chi sbaglia, beve 1 sorso ogni volta. P.S. visto che il giocatore che ha letto questo prompt è stato fortunato, beve 1 sorso",
+      "Giochi di carte. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "{player}, ti senti altamente razzista. Vai ad ordinare un negroni con ghiaccio nella forma abbreviata o bevi 4 sorsi",
+      "{player} e {player} dicono una barzelletta politicamente scorretta. Se alla maggioranza non piace, bevono 2 sorsi",
+      "Vini. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "Cose che si collezionavano alle elementari (carte, giochi ecc.). A turno nominatene una. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "{player} nomina una cosa che collezionava quando andava alle elementari. Distribuisce tanti sorsi quante sono le persone tra i presenti che le collezionavano",
+      "Tutti i giocatori devono alzarsi in piedi e guardarsi in assoluto silenzio per 20 secondi. Chi sbaglia o si rifiuta si fa una massima penalità",
+      "Votate il giocatore più abile a sopravvivere in natura, e poi votate invece la persona che è più l'esatto opposto. ASPETTA A LEGGERE, PRIMA VOTATE. L'eletto naturalista è un gorilla per 5 turni. Deve imitarlo bene, altrimenti riceve una massima penalità. L'altro eletto deve copiarlo",
+      "Nessuno guardi il telefono. Provate ad indovinare la temperatura, poi controllate nell'app Meteo. Il/I giocatore/i che ci vanno più vicini distribuiscono 3 sorsi",
+      "Giocatore {player}, classifica queste birre dalla migliore alla peggiore: Moretti, Heineken, Ichnusa, Peroni, Corona. Se almeno due giocatori sono perfettamente d'accordo con te, sei salvo, altrimenti bevi 2 sorsi",
+      "Votate il giocatore più fissato e appassionato di CiccioGamer. L'eletto può esprimersi solo con frasi di CiccioGamer e Joker. Inoltre l'eletto deve scrivere un messaggio in direct a Ciccio o Joker confessando di essere suo fan sfegatato. Se lo fa, distribuisce 7 sorsi, se si rifiuta ne beve 2",
+      "Inizia il test del cliente maleducato. Il giocatore {player} è Bruno Barbieri. Metti alla prova la pazienza del cameriere / proprietario. Se lo fai, distribuisci 15 sorsi",
+      "Il primo giocatore che urla con potenza 'ho rapito Aldo Moro' distribuisce 5 sorsi",
+      "Culturisti e strongman famosi. A turno nominatene uno. Il giocatore che ne ripete uno o non ne trova più riceve 2 sorsi",
+      "A turno, nominate una figura di merda di {player}. Chi non ne trova più una nuova beve 2 sorsi. Se {player} è quello che non ne trova più, finisce il bicchiere",
+      "{player}, offri uno shot ai tuoi amici. Se lo fai, distribuisci 8 sorsi. Se ti rifiuti, bevi 5 sorsi",
+      "Personaggi della classe del liceo di {player}. A turno nominatene uno. Il giocatore che ne ripete uno o non ne trova più riceve 2 sorsi. I compagni di classe del liceo di {player} sono esclusi da questo turno",
+      "Chi è mai andato in vacanza con {player} distribuisce 1 sorso",
+      "Cose che {player} ha nella sua stanza. A turno nominatene una. Il giocatore che non ne trova più o ne ripete una beve 2 sorsi. {player} è il giudice: non partecipa",
+      "{player}, bevi 1 sorso e lancia qualcosa in faccia a {player}, che distribuisce 2 sorsi se non riesce ad evitarla. {player} invece adora cazzi in abbondanti quantità e distribuisce 1 sorso",
+      "{player}, fai un SIUUUU con tanto di esultanza alla CR7 o bevi 4 sorsi",
+      "{player}, sei Primo Nero. Vai al bancone e cerca di convincere il barista a regalarti da bere, con accento africano. Se ci provi, distribuisci 5 sorsi. Se ci riesci, ne distribuisci 15. Se ti rifiuti, ne bevi 4",
+      "{player}, fai una domanda tecnica sul tuo lavoro. Il primo che la indovina distribuisce 3 sorsi. Se nessuno indovina, ne bevi 2. Se qualcuno indovina, ne distribuisci 1",
+      "{player}, scegli una droga e cercala su Google Immagini. Mostra una foto. Il primo giocatore che la indovina distribuisce 2 sorsi",
+      "{player}, scegli una pornostar e cercala su Google Immagini. Mostra una foto. Il primo giocatore che la indovina distribuisce 2 sorsi",
+      "{player}, scegli una discoteca della vostra città e cercala su Google Immagini. Mostra una foto. Il primo giocatore che la indovina distribuisce 2 sorsi",
+      "{player}, scegli un paese del terzo mondo e cercalo su Google Immagini. Mostra una foto. Il primo giocatore che la indovina distribuisce 2 sorsi",
+      "{player}, scegli un personaggio trash di nicchia e cercalo su Google Immagini. Mostra la foto. Il primo giocatore che la indovina distribuisce 2 sorsi",
+      "Rapper americani o inglesi. A turno nominatene uno. Il giocatore che non ne trova più o ne ripete uno beve 2 sorsi",
+      "Cose che caratterizzano gli afro-americani. A turno nominatene una. Il giocatore che non ne trova più o ne ripete una beve 2 sorsi",
+      "{player}, ripeti a memoria tutte le fermate della linea del treno della tua città. Se ci riesci, distribuisci 5 sorsi",
+      "{player} hai 3 secondi, se guardi il telefono perdi. Che giorno è oggi? Se perdi bevi 2 sorsi",
+      "{player}, sei l'operatore ecologico. Pulisci subito il tavolo e mettilo in ordine, altrimenti bevi 5 sorsi",
+      "Il prossimo giocatore a prendere il telefono beve 2 sorsi e tutti lo devono insultare in maniera omofoba. È escluso dal turno il proprietario del telefono usato per giocare"
+    ]
+  },
+  "vote": {
+    "color": "#228B22",
+    "weight": 17,
+    "phrases": [
+      "Votate il giocatore che fuma più sigarette. Provate tutti a indovinare il numero di sigarette nel suo pacchetto. Il/i giocatore/i che ci va più vicino distribuisce 2 sorsi",
+      "Votate il giocatore più forte in informatica. Cercate una domanda difficilissima di informatica, se risponde correttamente il nerd del cazzo distribuisce 3 sorsi",
+      "Votate il giocatore più forte in geografia. Cercate una bandiera o capitale difficilissima, se risponde correttamente il sapientone faccia di cazzo distribuisce 3 sorsi",
+      "Votate il giocatore più forte in matematica. Cercate una domanda difficilissima di matematica, se risponde correttamente quel disagiato mentale di una calcolatrice umana distribuisce 3 sorsi",
+      "Votate il giocatore più forte in storia. Cercate una data di un evento storico molto di nicchia, se indovina la data, l'Alberto Angela dei poveri distribuisce 3 sorsi",
+      "Votate il giocatore più forte in letteratura. Cercate l'opera minore di un autore noto, se indovina l'autore dell'opera, il letterato sfigato distribuisce 3 sorsi",
+      "Votate il giocatore più esperto di calcio. Cercate un calciatore o il logo di una squadra poco noti, se risponde correttamente distribuisce 3 sorsi",
+      "Votate il giocatore più esperto di droga. Chiedete a ChatGPT una domanda difficile a tema droghe pesanti, se risponde correttamente quel tossico magnato distribuisce 3 sorsi",
+      "Votate il giocatore più esperto di film. Fategli vedere uno screen da uno spezzone di un film, se indovina il film distribuisce 3 sorsi",
+      "Votate il giocatore più esperto di serie tv. Fategli vedere uno screen da uno spezzone di una serie tv, se indovina la serie distribuisce 3 sorsi",
+      "Votate il giocatore più esperto di social. Fategli vedere un personaggio trash di nicchia, se lo conosce distribuisce 3 sorsi",
+      "Votate il giocatore più propenso a lavorare in un circo. L'eletto distribuisce 2 sorsi",
+      "Votate il giocatore più ossessionato dalle MILF. L'eletto beve 2 sorsi e ne distribuisce 1",
+      "{player}, nomina un personaggio vostro conoscente al momento assente. A turno, ogni giocatore deve esprimere un pensiero su di lui/lei. Poi votate il più divertente, il vincitore distribuisce 2 sorsi",
+      "A turno, dite un cibo generalmente apprezzato che a voi non piace. Se la maggioranza è in disaccordo con la tua opinione, bevi 1 sorso",
+      "A turno, ogni giocatore dice una sua unpopular opinion. Gli altri votano. Se la maggioranza è in disaccordo, il giocatore beve 1 sorso",
+      "Votate tutti il giocatore più ossessionato dalla pornografia. L'eletto prende una foto di una pornostar da Google. Il primo giocatore che indovina come si chiama distribuisce 4 sorsi",
+      "Votate il giocatore più ignorante di tutti. L'eletto distribuisce tanti sorsi quanti filosofi famosi riesce a nominare",
+      "Votate il giocatore che capisce meno di calcio. L'eletto deve elencare i nomi di 10 calciatori, altrimenti beve 3 sorsi",
+      "Votate i due giocatori più colti tra i presenti. Si sfidano a 3 domande di qualsiasi argomento scelte dagli altri giocatori. Chi perde beve 3 sorsi",
+      "Votate tutti il giocatore più nerd tra i presenti. L'eletto distribuisce 3 sorsi",
+      "Chi tra voi è più probabile che diventi ricco? Il giocatore meno votato beve 2 sorsi",
+      "Chi tra voi ha la vita più noiosa? Il più votato beve",
+      "Chi tra voi è più probabile che finisca in galera? Il votato beve 2 sorsi",
+      "Chi tra voi è il più tirchio? Il vincitore beve",
+      "Chi tra voi si sposerebbe per primo? Il giocatore più votato beve 2 sorsi",
+      "Chi tra voi ha il peggior gusto musicale? Il più votato beve",
+      "Chi tra voi è più probabile che diventi famoso? Il più votato distribuisce 3 sorsi",
+      "Chi tra voi è il più bugiardo? Il vincitore beve 2 sorsi",
+      "Chi tra voi è più probabile che si addormenti per primo stasera? Il piùvotato beve",
+      "Chi tra voi è il più pettegolo? Il vincitore beve",
+      "Meglio essere il creatore di DrewGames o di Picolo? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Più divertente 'Impostor' oppure 'Wordrace'? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "È più buono lo spritz o vodka redbull? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Meglio avere 6 dita alle mani o 3 dita ai piedi? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Preferisci non poter più utilizzare tiktok o instagram? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Più buono sushi o pizza? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Meglio essere Cruciani o Parenzo? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Meglio Alessia Lanza o Rebecca Parziale? Votate, la minoranza beve. Se è pareggio bevete tutti",
+      "Votate il giocatore più festaiolo. Il votato beve 2 sorsi e distribuisce 3 sorsi",
+      "Votate il giocatore più fattone. Il votato beve 2 sorsi e distribuisce 3 sorsi",
+      "Votate il giocatore più casalingo. Il votato beve 3 sorsi",
+      "Press the button: Sei miliardario ma muoiono tutti i tuoi parenti. Ogni giocatore deve dire se lo farebbe o no. I giocatori in minoranza bevono",
+      "Preferiresti indossare per tutta la vita gli outfit di pantalone insano o fare lo stesso allenamento del merda per sempre? Si vota, chi è in maggioranza beve 3 sorsi",
+      "Meglio i maiali royale o il domatore di prudenzi? Si vota. Chi è in minoranza beve 1 sorso",
+      "È più alto il QI di caracci o di patel? Si vota: chi è in minoranza beve 1 sorso",
+      "È più stupido caracci o rita de crescenzo? Si vota: chi è in minoranza beve 2 sorsi",
+      "Preferiresti essere manolo alien con 1 milione di euro in banca o Dodoria con 100.000? Votate, chi è in minoranza beve 2 sorsi",
+      "Votate tutti il più imbecille tra i presenti: l'eletto distribuisce 5 sorsi",
+      "Meglio bersi 15 birre o 8 negroni? Rispondete in contemporanea, chi è in minoranza beve",
+      "Votate tutti il giocatore più propenso a finire immischiato con il cartello della droga messicano. L'eletto beve 2 sorsi",
+      "Votate il più propenso ad andare a ladyboy in Vietnam. L'eletto beve",
+      "Meglio i piercing o i tatuaggi? Votate, chi è in minoranza beve 2 sorsi",
+      "Scegliete insieme il giocatore più stupido. Bevi coglione!",
+      "Votate se siete a favore della pena di morte o meno. La minoranza beve",
+      "{player}, dici il nome di una canzone. Se a qualcuno non piace bevi 2 sorsi",
+      "Meglio un giorno di sole o di neve? Chi è in minoranza riceve 2 penalità",
+      "Meglio scorreggiare ininterrottamente per tutta la vita o cagarsi addosso ogni volta? Chi è in minoranza riceve 2 penalità",
+      "Meglio vivere un anno a Napoli o tre settimane in India? Votate tutti contemporaneamente, chi è in minoranza beve 2 sorsi",
+      "Meglio mangiare street-food indiano dalle slum di Nuova Delhi o bere da una pozzanghera di una strada di Roma? Votate tutti contemporaneamente, chi è in minoranza beve 2 sorsi",
+      "Vacanza rilassante a Sharm el-Sheikh o viaggio all'avventura in Scozia? Votate tutti contemporaneamente, chi è in minoranza beve 2 sorsi",
+      "Votate tutti il giocatore più solitario e casalingo del gruppo. L'eletto distribuisce 3 sorsi ma viene soprannominato 'Il Casa' fino a fine partita",
+      "Votate tutti il giocatore più ubriacone del gruppo. L'eletto distribuisce 3 sorsi ma viene soprannominato 'Uretra scoppiata' fino a fine partita",
+      "Votate tutti il giocatore più tossico del gruppo. L'eletto distribuisce 3 sorsi ma viene soprannominato 'Lo scucchiaiatore' fino a fine partita",
+      "Votate tutti il giocatore più muscoloso del gruppo. L'eletto distribuisce 3 sorsi ma viene soprannominato 'Dottor Siringa' fino a fine partita",
+      "Votate tutti il peggior masturbatore compulsivo del gruppo. L'eletto distribuisce 6 sorsi ma deve tenersi le due mani appoggiate sui pantaloni all'altezza dello scroto fino alla fine della partita",
+      "Carbonara o Amatriciana? Votate tutti contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Vino o birra? Votate tutti contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Tette o culo? Votate tutti contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Votate il giocatore più bravo in geografia. Riceve 1 sorso. Gli altri giocano: paesi europei. Il primo che non ne trova più o ne ripete uno beve. Inizia {player}. Se era il geografo, inizia {player}",
+      "Votate il giocatore più bravo in letteratura. Riceve 1 sorso. Gli altri giocano: autori di letteratura italiani. Il primo che non ne trova più o ne ripete uno beve. Inizia {player}. Se era il letterato, inizia {player}",
+      "Meglio Dua Lipa o Sydney Sweeney? Votate tutti contemporaneamente, chi è in maggioranza beve",
+      "È peggio farsi rubare il portafoglio o il telefono? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è la città più bella d'Italia?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: chi è il più tossico tra i presenti?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: chi è il più pazzo tra i presenti?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è il miglior cocktail?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è la miglior bevanda alcolica?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: chi è il più tirchio tra i presenti?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è il miglior gusto di gelato?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual era la materia scolastica peggiore?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è il paese che vorresti visitare?",
+      "Rispondete tutti contemporaneamente alla seguente domanda. I giocatori che danno la stessa risposta sono salvi, mentre chi da una risposta diversa da tutte le altre beve 1 sorso: qual è il tuo esercizio preferito in palestra?",
+      "Meglio ripetere 5 anni di liceo o 5 anni di università? Votate contemporaneamente, chi è in minoranza beve 1 sorso e si fa dare una spinta dal giocatore alla sua destra",
+      "Meglio Ferragosto o Halloween? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Discoteca o festino a casa? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Vodka o gin? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Aperol o campari? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Vino rosso o vino bianco? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Patatine o pop corn? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Gin lemon o gin tonic? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Amaro o limoncello? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Una canna d'erba o tre canne di fumo? Votate contemporaneamente, chi è in minoranza beve 1 sorso",
+      "Votate tutti l'outfit peggiore tra i presenti. L'eletto riceve 1 sorso e ne distribuisce 1",
+      "Votate tutti il taglio di capelli peggiore tra i presenti. L'eletto riceve 1 sorso e ne distribuisce 1",
+      "Votate tutti le scarpe peggiori tra i presenti. L'eletto riceve 1 sorso e ne distribuisce 1",
+      "A turno, ogni giocatore mette una canzone casuale dalla propria playlist. I presenti votano pro o contro. Se la maggioranza dei presenti vota contro, bevi 1 sorso",
+      "Classificate da primo a terzo: pizza, sushi, McDonald's. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: carbonara, amatriciana, cacio e pepe. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: vino, birra, cocktails. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: rap, rock, raggaeton. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: caffè, te, cioccolata calda. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: gelato, tiramisù, profitterol. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: serie tv, film, partite. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: Instagram, TikTok, X. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: Barcellona, Praga, Amsterdam. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo queste vacanze: mare, montagna, città. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: negroni, gin tonic, long island. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo questi animali domestici: cani, gatti, pappagalli. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: Pornhub, XNXX, OnlyFans. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo queste materie scolastiche, dalla migliore alla peggiore: matematica, storia, inglese. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo questi esercizi di palestra da preferito a meno preferito: panca piana con bilanciere, trazioni alla sbarra, curl con manubri. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: vodka, gin, rum. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: Peroni, Heineken, Moretti. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo: gocciole, pan di stelle, ringo. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "Classificate da primo a terzo da preferito e meno preferito: leone, tigre, leopardo. I giocatori che danno lo stesso ranking si salvano, chi lo da diverso da tutti beve 1 sorso",
+      "{player}, nomina qualcuno che secondo te è un cretino. Se la maggioranza dei giocatori è d'accordo, distribuisci 3 sorsi",
+      "La regione italiana peggiore. Votate tutti contemporaneamente. Chi ha dato la risposta uguale ad almeno 1 altro giocatore distribuisce 2 sorsi",
+      "Classifica da migliore a peggiore: Milano, Venezia, Firenze, Napoli. I giocatori che hanno dato una classifica identica ad almeno un altro giocatore distribuiscono 3 sorsi",
+      "Classifica da migliore a peggiore: pecore, mucche, capre. I giocatori che hanno dato una classifica identica ad almeno un altro giocatore distribuiscono 3 sorsi",
+      "Votate il giocatore col peggior senso dell'orientamento. L'eletto riceve 1 sorso",
+      "Ristorante di lusso o pizza e birra a casa? Votate, chi è in minoranza beve",
+      "Meglio Safari o Google Chrome? Votate, chi è in minoranza beve",
+      "Classificate da migliore a peggiore questi succhi: pesca, ACE, mela. I giocatori che fanno un ranking identico ad almeno un giocatore si salvano, gli altri bevono 1 sorso",
+      "Classificate caffè nero, caffè latte, cappuccino. I giocatori che fanno un ranking identico ad almeno un giocatore si salvano, gli altri bevono 1 sorso",
+      "Quale giocatore tra i presenti ha questa routine settimanale: Lunedì: Seghe. Martedì: Seghe. Mercoledì: seghe. Giovedì: seghe. Venerdì: seghe. Sabato: seghe. Domenica: riposo (con seghe). Votate, l'eletto beve 2 sorsi e ne distribuisce 2",
+      "Birra rossa o birra bionda? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Heineken o Peroni? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Votate tutti il giocatore che fa più ridere quando balla. Il giocatore eletto deve ballare una canzone scelta da {player}. Tutti i giocatori devono imitarlo. Massima penalità per chi si rifiuta",
+      "Via gli indiani dalle nostre città! I giocatori che non si sono fatti una doccia oggi ricevono 2 sorsi",
+      "Classificate patatine, pop corn, noccioline. I giocatori che fanno un ranking identico ad almeno un giocatore si salvano, gli altri bevono 1 sorso",
+      "Quale è più plausibile: la terra piatta o il falso sbarco sulla luna? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Meglio cash o carta di credito? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Votate tutti un vostro conoscente / amico particolarmente coglionazzo non presente alla serata. NON LEGGERE, PRIMA VOTATE. {player} deve mandargli un messaggio su WhatsApp dicendogli che è un coglionazzo, altrimenti riceve 5 sorsi",
+      "Meglio guidare un quad nel deserto di sabbia dell'Arabia o vedere l'aurora boreale in un campeggio nella foresta norvegese. Votate contemporaneamente, chi è in minoranza beve",
+      "Classificate da migliore a peggiore: Monopoli, Risiko, Cluedo. I giocatori che fanno un ranking identico ad almeno un giocatore si salvano, gli altri bevono 1 sorso",
+      "Votate il giocatore più fissato con la Zanzara. ASPETTA A LEGGERE, PRIMA VOTATE. L'eletto terrà il telefono e leggerà per i prossimi 20 turni, ma deve farlo imitando Giuseppe Cruciani nella Zanzara. Deve farlo bene, perché alla fine dei turni i giocatori voteranno l'imitazione (pena 3 sorsi). Ma non è finita: per tutti questi turni, il giocatore alla sua destra è David Parenzo: deve insultare chiunque apre bocca con accento veneto, beve 1 sorso ad ogni errore",
+      "{player}, dai un'opinione con una più o meno grande componente razzista. Se la maggioranza è in disaccordo, bevi 3 sorsi",
+      "Meglio vivere in un campo ROM o in un villaggio rurale della Costa d'Avorio? Votate tutti contemporaneamente, chi è in minoranza beve"
+    ]
+  },
+  "rule": {
+    "color": "#FFD700",
+    "weight": 13,
+    "rules": [
+      {
+        "start": "Nuova regola per {player}: ogni volta che  dice 'io' deve bere",
+        "end": "La regola 'non dire io' è finita! Chi l'ha infranta beve 2 sorsi di penalità"
+      },
+      {
+        "start": "Nuova regola: vietato dire parolacce, chi sbaglia beve",
+        "end": "La regola 'vietato dire parolacce' è finita! Finalmente potete insultarvi liberamente"
+      },
+      {
+        "start": "{player} non può usare il cellulare, pena 2 sorsi",
+        "end": "La regola 'vietato cellulare' è finita! Chi è stato beccato beve 3 sorsi di penalità"
+      },
+      {
+        "start": "Nuova regola per tutti: vietato dire nomi propri, chi sbaglia beve",
+        "end": "La regola 'vietato dire nomi' è finita! Chi ha sbagliato beve un sorso"
+      },
+      {
+        "start": "Ogni volta che qualcuno beve, si deve fare un brindisi, chi sbaglia beve!",
+        "end": "La regola dei brindisi è finita! Chi si è dimenticato beve 2 sorsi"
+      },
+      {
+        "start": "Regola di gruppo: vietato indicare con le dita, chi sbaglia beve",
+        "end": "La regola 'vietato indicare' è finita! Potete tornare a puntare il dito"
+      },
+      {
+        "start": "{player} può parlare solo facendo domande",
+        "end": "La regola delle domande è finita! Chi ha fatto affermazioni beve"
+      },
+      {
+        "start": "Nuova regola: ogni volta che qualcuno ride, tutti bevono un sorso",
+        "end": "La regola del ridere è finita! Spero abbiate bevuto molto"
+      },
+      {
+        "start": "{player} decide: vietato dire 'sì' o 'no', chi sbaglia beve 2 sorsi",
+        "end": "La regola 'vietato sì/no' è finita! Chi ha sbagliato beve 2 sorsi bonus"
+      },
+      {
+        "start": "Regola di gruppo: prima di bere bisogna toccarsi il naso, chi si dimentica beve il doppio",
+        "end": "La regola del naso è finita! Chi si è dimenticato beve 3 sorsi"
+      },
+      {
+        "start": "{player} deve dire 'la mia prima volta in Sardegna' alla fine di ogni frase che dice, pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'la mia prima volta in Sardegna'"
+      },
+      {
+        "start": "{player} deve dire 'la mia prima volta allo stadio' alla fine di ogni frase che dice, pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'la mia prima volta allo stadio'"
+      },
+      {
+        "start": "{player} deve dire 'centodiciotoooooooooo' alla fine di ogni frase che dice, pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'centodiciotoooooooooo'"
+      },
+      {
+        "start": "{player} deve dire 'SHISH' alla fine di ogni frase che dice",
+        "end": "STOP! {player} non deve più dire 'SHISH'. Se l'ha dimenticato beve 3 sorsi"
+      },
+      {
+        "start": "{player} deve dire 'casereccio' o 'è fatto in casa' in mezzo ad ogni frase che dice, pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'casereccio'."
+      },
+      {
+        "start": "{player} deve dire 'lezzo' in mezzo ad ogni frase che dice , pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'lezzo'.}"
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'Hakuna matata ragazzi', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "{player} non deve più dire 'Hakuna matata ragazzi'."
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'come fossero i giocatori senza denti', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "{player} non deve più dire 'come fossero i giocatori senza denti'."
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'pijatelo pijatelo', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "{player} non deve più dire 'pijatelo pijatelo'."
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'nooooooooo noooooooo la polizia noo', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "STOP! {player} non deve più dire 'nooooooooo la polizia noo'."
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'vincere e vinceremo!', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "STOP! {player} non deve più dire 'vincere e vinceremo!'."
+      },
+      {
+        "start": "Ogni tanto {player} deve dire 'SHISH', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve",
+        "end": "STOP! {player} non deve più dire 'SHISH'."
+      },
+      {
+        "start": "Ogni volta che un giocatore rutta deve dire 'becnabor', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve. Se il giocatore che ha ruttato non dice 'becnabor' beve",
+        "end": "STOP! Non si deve più dire 'becnabor' dopo i rutti."
+      },
+      {
+        "start": "Ogni volta che un giocatore rutta deve dire 'I can't breathe, I can't breathe', tutti gli altri lo devono ripetere, l'ultimo che lo ripete beve.",
+        "end": "STOP! Non si deve più dire 'I can't breathe, I can't breathe' dopo i rutti."
+      },
+      {
+        "start": "Sei Lucio Povero. {player} dì 'uuuuu' alla fine di ogni frase, pena 3 sorsi",
+        "end": "STOP! {player} non devi più dire 'uuuuu' alla fine delle frasi"
+      },
+      {
+        "start": "Sei il Casa: {player} parla come Smegmolo fino a quando non ti capita di smettere",
+        "end": "STOP! {player} non devi più parlare come Smegmolo"
+      },
+      {
+        "start": "{player}: ogni volta che {player} va su un social sei autorizzato a prenderlo a pizzoni in bocca. Inoltre, beve 3 sorsi a volta",
+        "end": "STOP! {player} non può più prendere a pizzoni quando va su un social"
+      },
+      {
+        "start": "Fino a nuovo ordine, {player} deve esclamare 'iiiii' alla fine di ogni frase, pena 3 sorsi",
+        "end": "STOP! {player} non deve più dire 'iiiii' alla fine delle frasi"
+      },
+      {
+        "start": "{player} è il terrone: deve parlare in dialetto napoletano fino a nuovo ordine. Quando sbaglia, gli altri giocatori devono urlare 'E in quale città?' oppure bevono",
+        "end": "STOP! {player} non deve più parlare in dialetto napoletano"
+      },
+      {
+        "start": "{player} deve voltarsi di schiena rispetto agli altri giocatori fino a nuovo ordine, pena 2 sorsi",
+        "end": "STOP! {player} può voltarsi di nuovo verso gli altri"
+      },
+      {
+        "start": "Momento Mirko Oro Uh: fino a nuovo ordine, tutti i giocatori devono esclamare 'UUH' dopo ogni frase, ad ogni errore bevono",
+        "end": "STOP! Non si deve più dire 'UUH' dopo ogni frase"
+      },
+      {
+        "start": "{player} è il 'Pagliacciozzo'. Alla fine di ogni frase deve dire 'popi popi', beve ad ogni errore",
+        "end": "STOP! {player} non deve più dire 'popi popi'"
+      },
+      {
+        "start": "{player} è Germano Mosconi. Deve bestemmiare con accento veneto in ogni frase e beve ad ogni errore",
+        "end": "STOP! {player} non deve più bestemmiare con accento veneto"
+      },
+      {
+        "start": "Gioco dello stronzo! {player} è lo stronzo: ogni volta che ci si rivolge a lui bisogna chiamarlo 'stronzo', pena 2 sorsi",
+        "end": "STOP! {player} non è più lo stronzo, potete chiamarlo normalmente"
+      },
+      {
+        "start": "{player}, scegli una parola che dovrà essere ripetuta alla fine di ogni frase da tutti i giocatori, pena 1 sorso",
+        "end": "STOP! Non si deve più dire la parola scelta alla fine di ogni frase"
+      },
+      {
+        "start": "{player} deve tenere le mani sulla testa fino a nuovo ordine, pena 2 sorsi",
+        "end": "STOP! {player} può abbassare le mani dalla testa"
+      },
+      {
+        "start": "Gioco della TROIA! {player} è la troia: ogni volta che ci si rivolge a lui bisogna chiamarlo 'troia', pena 1 sorso",
+        "end": "STOP! {player} non è più la troia, potete chiamarlo normalmente"
+      },
+      {
+        "start": "{player} è David Goggins. Ogni volta che parla deve terminare la frase esclamando 'They don't know me son', beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più David Goggins"
+      },
+      {
+        "start": "Non si può usare nessuna parola con la lettera 'E' fino a nuovo ordine. 1 sorso ad ogni errore",
+        "end": "STOP! Potete tornare a usare la lettera 'E'"
+      },
+      {
+        "start": "{player} è lo sdentato. Può esprimersi solo con le vocali fino a nuovo ordine. 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più lo sdentato, può parlare normalmente"
+      },
+      {
+        "start": "E in quale scittà? A Bolzano? No! A Bologna? No! Ad Ancona? No!... A Napoli? Si! Tutti i giocatori si esprimono in napoletano fino a nuovo ordine. Bevono 1 sorso ad ogni errore",
+        "end": "STOP! Non dovete più parlare in napoletano"
+      },
+      {
+        "start": "{player} è Ronnie Coleman. All'inizio di ogni frase deve esclamare 'Yeah Buddy', beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Ronnie Coleman"
+      },
+      {
+        "start": "{player} è Stephen Hawking fino a nuovo ordine. Può esprimersi solo usando la dettatura a voce di Google Translate (o Chat GPT ecc.)",
+        "end": "STOP! {player} non è più Stephen Hawking, può parlare normalmente"
+      },
+      {
+        "start": "{player} è Rita de Crescenzo. Fino a nuovo ordine, si può esprimere solo dicendo 'MANUEEE', beve 1 sorso ad ogni errore. Ma ogni volta che lo dice, gli altri devono rispondergli 'Jamm ja', altrimenti bevono 1 sorso",
+        "end": "STOP! {player} non è più Rita de Crescenzo, può parlare normalmente"
+      },
+      {
+        "start": "{player} è il Paguro fino a nuovo ordine. Può comunicare solo dicendo Hakuna Matata. Se sbaglia beve 1 sorso. Tuttavia, ogni volta che lo dice, {player} deve replicare esclamando 'Mussolini'. Stessa penalità se sbaglia",
+        "end": "STOP! {player} non è più il Paguro, può parlare normalmente"
+      },
+      {
+        "start": "{player} deve rispondere 'nel mio culo' alle prossime 10 domande che gli verranno fatte. Se si rifiuta beve 3 sorsi, se lo fa ne distribuisce 4",
+        "end": "STOP! {player} non deve più rispondere 'nel mio culo'"
+      },
+      {
+        "start": "{player} è Il Berlusca. Deve dire 'Fffiga' alla fine di ogni frase, altrimenti beve 1 sorso. Ogni volta che lo dice, {player} deve esclamare 'Siete sempre dei poveri comunisti!', altrimenti beve 1 sorso",
+        "end": "STOP! {player} non è più Il Berlusca"
+      },
+      {
+        "start": "{player} è L'Evasore Fiscale. È esente da sorsi per i prossimi 5 turni",
+        "end": "STOP! {player} non è più L'Evasore Fiscale, deve tornare a bere normalmente"
+      },
+      {
+        "start": "{player} è il bambino speciale. Fino a nuovo ordine, deve applaudire ma senza che le mani si tocchino, ininterrottamente. Se si rifiuta, beve 5 sorsi",
+        "end": "STOP! {player} non è più il bambino speciale, può smettere di applaudire"
+      },
+      {
+        "start": "{player} è Mario Balotelli. Deve tenere la maglietta alzata sopra il collo fino a nuovo ordine. Se vuole, {player} è Francesco Totti e gli può dare un calcio sulla gamba (nel caso però, paga con 2 sorsi)",
+        "end": "STOP! {player} non è più Mario Balotelli, può abbassare la maglietta"
+      },
+      {
+        "start": "{player} è il Cristo Redentore. Deve rimanere in piedi a braccia aperte fino a nuovo ordine, sennò beve 1 sorso",
+        "end": "STOP! {player} non è più il Cristo Redentore, può abbassare le braccia"
+      },
+      {
+        "start": "Ogni volta che {player} rutta, {player} deve dire 'Bomboclat' e gli altri giocatori 'auuug'. Chi sbaglia, riceve 1 sorso",
+        "end": "STOP! Non si deve più dire 'Bomboclat' e 'auuug' dopo i rutti"
+      },
+      {
+        "start": "{player} è lo slovacco. Può esprimersi solo con le consonanti fino a nuovo ordine. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più lo slovacco, può parlare normalmente"
+      },
+      {
+        "start": "{player} non può parlare fino a nuovo ordine. Beve ogni volta che parla",
+        "end": "STOP! {player} può tornare a parlare"
+      },
+      {
+        "start": "{player} è agli arresti domiciliari. Per i prossimi turni deve giocare dalla stanza accanto",
+        "end": "STOP! {player} non è più agli arresti domiciliari, può tornare"
+      },
+      {
+        "start": "{player} metti una base per freestyle rap da youtube. Fino a nuovo ordine, i giocatori possono parlare solo con barre a ritmo della musica. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Potete smettere di rappare"
+      },
+      {
+        "start": "Per i prossimi turni, {player} si può esprimere solo con frasi che rimano. Beve 1 sorso ogni volta che sbaglia",
+        "end": "STOP! {player} non deve più parlare in rima"
+      },
+      {
+        "start": "Ogni volta che {player} rutta, {player} si deve alzare in piedi e {player} deve esclamare 'Kabul'. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Non si deve più reagire ai rutti di {player}"
+      },
+      {
+        "start": "fino a nuovo ordine, {player} deve esclamare 'Sciauk!' ogni 10 secondi. 1 sorso ad ogni errore",
+        "end": "STOP! {player} non deve più dire 'Sciauk!' ogni 10 secondi"
+      },
+      {
+        "start": "Tutti i giocatori che indossano un cappello lo devono indossare sulla faccia per i prossimi turni, altrimenti bevono 7 sorsi",
+        "end": "STOP! Potete togliervi il cappello dalla faccia"
+      },
+      {
+        "start": "Tutti i giocatori che hanno un cappuccio lo devono tirare giù coprendo tutta la faccia per i prossimi turni, altrimenti bevono 5 sorsi",
+        "end": "STOP! Potete togliervi il cappuccio dalla faccia"
+      },
+      {
+        "start": "{player} si alza in piedi e da le spalle al tavolo fino a nuovo ordine",
+        "end": "STOP! {player} può sedersi e voltarsi verso il tavolo"
+      },
+      {
+        "start": "Momento 2012. Fino a nuovo ordine, ogni volta che {player} schiocca le dita, {player} deve ballare il Gangnam Style. 1 sorso ogni volta che si rifiuta",
+        "end": "STOP! Non si deve più ballare il Gangnam Style quando {player} schiocca le dita"
+      },
+      {
+        "start": "{player} sei un ventriloquo. La mano è il tuo pupazzo, userai quella per parlare fino a nuovo ordine. Bevi 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più un ventriloquo, può parlare normalmente"
+      },
+      {
+        "start": "{player} è il sardo. Alla fine di ogni frase deve belare come una pecora. {player} è il pastore, e deve dire 'Ajo' ogni volta che si bela. Bevono ogni volta che sbagliano",
+        "end": "STOP! {player} non è più il sardo e {player} non è più il pastore. Basta belare e dire 'Ajo'"
+      },
+      {
+        "start": "{player} è Pajeet l'indiano. Ogni volta che parla deve dire 'Do not reedem it!' a fine frase con accento indiano. Se sbaglia beve 1 sorso",
+        "end": "STOP! {player} non è più Pajeet l'indiano, può parlare normalmente"
+      },
+      {
+        "start": "{player} è il cinese. Può solo dire 'Chin', 'Chun', o 'Chan' fino a nuovo ordine. Se parla normalmente beve 1 sorso",
+        "end": "STOP! {player} non è più il cinese, può parlare normalmente"
+      },
+      {
+        "start": "Tutti bevono 2 penalità. {player} è John Pork. Può parlare solo per telefono. Se nessun giocatore gli risponde deve rimanere in silenzio, altrimenti beve 1 sorso",
+        "end": "STOP! {player} non è più John Pork, può parlare normalmente"
+      },
+      {
+        "start": "Ogni volta che {player} bestemmia, i giocatori devono alzarsi e esclamare 'aug aug' agitando le braccia. Chi non lo fa, beve 1 sorso ogni volta",
+        "end": "STOP! Non si deve più dire 'aug aug' e agitare le braccia quando {player} bestemmia"
+      },
+      {
+        "start": "{player} è Enrico Papi. Deve dire 'Mooseca!' all'inizio di ogni frase, altrimenti beve 1 sorso",
+        "end": "STOP! {player} non è più Enrico Papi, può parlare normalmente"
+      },
+      {
+        "start": "{player} è un boomer. Ad ogni frase detta dagl'altri giocatori deve controbbatere con 'Ai miei tempi...' altrimenti beve 2 sorsi",
+        "end": "STOP! {player} non è più un boomer"
+      },
+      {
+        "start": "{player} è Giorgio Mastrota. Ogni volta che parla deve cercare di vendere qualcosa presente sul tavolo. Se non lo fa beve 1 sorso",
+        "end": "STOP! {player} non è più Giorgio Mastrota, basta vendere"
+      },
+      {
+        "start": "{player} è Aladin. Deve dire 'Aladin' al posto di si e no. 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Aladin"
+      },
+      {
+        "start": "{player} è Andrew Tate. Deve dire 'What color is your Bugatti?' almeno una volta ogni 3 frasi, altrimenti beve 2 sorsi",
+        "end": "STOP! {player} non è più Andrew Tate"
+      },
+      {
+        "start": "{player} è il Bottom G. Ogni tanto deve cantare e/o ballare 'tourner dans le vide' , altrimenti beve 2 sorsi",
+        "end": "STOP! {player} non è più il Bottom G"
+      },
+      {
+        "start": "{player} è la Regina Elisabetta morta. Non può più parlare fino a nuovo ordine. Se parla beve 3 sorsi",
+        "end": "STOP! {player} è resuscitata, può parlare"
+      },
+      {
+        "start": "Ogni volta che {player} scorreggia, tutti devono alzarsi e urlare 'puzza puzza che puzza!'. L'ultimo che lo fa beve 2 sorsi",
+        "end": "STOP! Non si deve più urlare 'Gas gas gas' alle scorregge"
+      },
+      {
+        "start": "{player} è il prete. Deve benedire ogni giocatore prima che beva dicendo 'In nomine Patris'. Se non lo fa beve 2 sorsi",
+        "end": "STOP! {player} non è più il prete"
+      },
+      {
+        "start": "{player} è Vladimir Putin. Può esprimersi solo in russo o con frasi tipo 'cyka blyat'. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Putin, può parlare italiano"
+      },
+      {
+        "start": "{player} è un Pokemon. Può dire solo il proprio nome (come fanno i Pokemon) fino a nuovo ordine. 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più un Pokemon"
+      },
+      {
+        "start": "{player} è il portoghese. Deve parlare come Cristiano Ronaldo e dire 'Siuuu' alla fine di ogni frase. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più il portoghese"
+      },
+      {
+        "start": "{player} è Valerio Lundini. Può rispondere solo con 'Grazie a te' a qualsiasi cosa gli venga detta. Se risponde diversamente beve 1 sorso",
+        "end": "STOP! {player} non è più Valerio Lundini"
+      },
+      {
+        "start": "{player} è sordo. Tutti devono urlare quando gli parlano, altrimenti bevono 1 sorso. Se {player} risponde senza che abbiano urlato, beve lui 2 sorsi",
+        "end": "STOP! {player} non è più sordo"
+      },
+      {
+        "start": "{player} è Super Mario. Deve dire 'Mamma mia!' all'inizio di ogni frase con accento italiano stereotipato. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Mario"
+      },
+      {
+        "start": "Vietato dire la parola 'bere' o 'sorso' fino a nuovo ordine. Chi sbaglia beve 2 sorsi",
+        "end": "STOP! Potete dire di nuovo 'bere' e 'sorso'"
+      },
+      {
+        "start": "{player} è Gomorra. Deve parlare in napoletano gangster e chiamare tutti 'fra'. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Gomorra"
+      },
+      {
+        "start": "Ogni volta che {player} dice una parolaccia, {player} deve schiaffeggiarlo. Chi si rifiuta beve 2 sorsi",
+        "end": "STOP! {player} non deve più schiaffeggiare {player}"
+      },
+      {
+        "start": "{player} è il Maestro Yoda. Deve parlare con le parole al contrario ('bere devi tu'). Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Yoda, può parlare normale"
+      },
+      {
+        "start": "Vietato ridere fino a nuovo ordine. Chi ride beve 2 sorsi. {player} può ridere e fare di tutto per far ridere gli altri",
+        "end": "STOP! Potete tornare a ridere liberamente"
+      },
+      {
+        "start": "Ogni volta che qualcuno beve, {player} deve urlare 'Salute!' e tutti devono rispondere 'Cin cin!'. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Non si deve più dire 'Salute' e 'Cin cin'"
+      },
+      {
+        "start": "Ogni volta che qualcuno tossisce, anche tutti gli altri giocatori lo devono fare. L'ultimo giocatore a tossire beve 2 sorsi",
+        "end": "STOP! Non si deve più alzare la mano quando qualcuno tossisce"
+      },
+      {
+        "start": "{player} è il dittatore. Può inventare una nuova regola a piacere che vale fino alla fine di questa regola. Chi la infrange beve 2 sorsi",
+        "end": "STOP! {player} non è più il dittatore, la sua regola è cancellata"
+      },
+      {
+        "start": "Vietato pronunciare nomi di città fino a nuovo ordine. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Potete tornare a dire nomi di città"
+      },
+      {
+        "start": "{player} e {player} devono tenersi per mano fino a nuovo ordine. Se si staccano bevono 3 sorsi ciascuno",
+        "end": "STOP! {player} e {player} possono lasciarsi la mano"
+      },
+      {
+        "start": "Vietato guardare il telefono fino a nuovo ordine. Chi lo fa beve 3 sorsi e deve chiamare un amico per farsi prendere in giro, se però non risponde distribuisce 3 sorsi",
+        "end": "STOP! Potete tornare a guardare il telefono"
+      },
+      {
+        "start": "{player} è il maestro delle cerimonie. Ogni sorso deve essere bevuto solo dopo il suo permesso. Chi beve senza permesso beve doppio",
+        "end": "STOP! {player} non è più il maestro delle cerimonie"
+      },
+      {
+        "start": "Prima di parlare bisogna alzare la mano e aspettare che {player} dia il permesso. Chi parla senza permesso beve 1 sorso",
+        "end": "STOP! Non si deve più chiedere permesso a {player} per parlare"
+      },
+      {
+        "start": "{player} deve tenere gli occhi chiusi fino a nuovo ordine. Se li apre beve 2 sorsi",
+        "end": "STOP! {player} può riaprire gli occhi"
+      },
+      {
+        "start": "Ogni frase deve iniziare con 'Secondo me' fino a nuovo ordine. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Non si deve più dire 'Secondo me' all'inizio delle frasi"
+      },
+      {
+        "start": "{player} è il re. Tutti devono eseguire i suoi ordini fino a nuovo ordine, chi si rifiuta beve 3 sorsi",
+        "end": "STOP! {player} non è più il re"
+      },
+      {
+        "start": "Vietato dire parolacce in italiano, solo in inglese o altre lingue. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Potete tornare a bestemmiare e dire parolacce in italiano"
+      },
+      {
+        "start": "{player} è il pappagallo. Deve ripetere l'ultima parola detta dai giocatori ogni volta che parlano. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più il pappagallo, può smettere di ripetere"
+      },
+      {
+        "start": "Ogni volta che gli viene fatta una domanda, {player} deve rispondere 'Io niente, un crecs', fino a nuovo ordine. Beve 1 sorso ogni volta che non lo fa",
+        "end": "STOP! {player} non deve più rispondere 'Io niente, un crecs'"
+      },
+      {
+        "start": "{player} è Nevio lo Stirato. Fino a nuovo ordine, può esprimersi solo proponendo scommesse. Beve 1 sorso ogni volta che non lo fa. Inoltre {player}, ogni volta che Nevio propone una scommessa, deve esclamare: 'Vai cavallo!'. Anche lui beve se sbaglia",
+        "end": "STOP! {player} non è più Nevio lo Stirato e {player} non deve più dire 'Vai cavallo!'"
+      },
+      {
+        "start": "{player} è il romanaccio de osteria. Fino a nuovo ordine, può parlare solo in dialetto romanaccio stretto. Beve 1 sorso ogni volta che parla italiano. Inoltre, ogni volta che {player} dice qualcosa, tutti i giocatori devono rispondere in coro: 'Daje Roma Daje jaja uuuuu'. Chi non lo fa beve 1 sorso",
+        "end": "STOP! {player} non è più il romanaccio de osteria e i giocatori non devono più rispondere 'Daje Roma Daje jaja uuuuu'"
+      },
+      {
+        "start": "Tutti i giocatori devono aggiungere il suffisso '-ozzo' a ogni parola fino a nuovo ordine. Esempio: 'Popozzo Pagliacciozzo'. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Non si deve più aggiungere il suffisso '-ozzo' alle parole"
+      },
+      {
+        "start": "Ogni volta che {player} dice 'Clitoride', il giocatore {player} deve esclamare 'Signora i limoni SIGNORAAAA', altrimenti beve 1 sorso",
+        "end": "STOP! non si deve più rispondere 'Signora i limoni SIGNORAAAA' quando {player} dice 'Clitoride'"
+      },
+      {
+        "start": "{player} è Fausto Letame. Dice un numero: 1 2 o 3. Fino a nuovo ordine può parlare solo del rispettivo argomento: 1) come cagare senza carta igienica. 2) come masturbarsi in un negozio di vestiti 3) come mettere un dito al culo senza sporcarsi. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Fausto Letame e può parlare di argomenti normali"
+      },
+      {
+        "start": "{player}, un bel N-word pass per te. Fino a nuovo ordine puoi usare la parola che inizia con N liberamente. Se non la usi almeno una volta per turno, bevi 1 sorso",
+        "end": "STOP! Il N-word pass di {player} è scaduto"
+      },
+      {
+        "start": "{player} deve esprimersi come il suo ex compagno di classe disabile fino a nuovo ordine. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non deve più imitare il compagno disabile"
+      },
+      {
+        "start": "{player}, sei Vittorio Sgarbi. Fino a fine partita, ogni volta che parli devi essere particolarmente volgare. Inoltre, se qualcuno ti insulta, gli puoi dare 1 sorso e gli devi dire 'Tazza di merda'. Se ti rifiuti, bevi",
+        "end": "STOP! {player} non è più Vittorio Sgarbi"
+      },
+      {
+        "start": "Votate il giocatore più ossessionato da Clash of Clans. ASPETTA A LEGGERE, PRIMA VOTATE. L'eletto deve esprimersi solo come il re barbaro di CoC. Beve 1 sorso ad ogni errore",
+        "end": "STOP! Non si deve più parlare come un barbaro di Clash of Clans"
+      },
+      {
+        "start": "{player} ha fatto uso di fentanyl. Deve rimanere in posizione fentanyl-zombie (piegato a 90°) fino a nuovo ordine. Se si rifiuta, beve 6 sorsi. Beve 1 sorso ogni volta che si raddrizza",
+        "end": "STOP! {player} non è più fentanyl-zombie e può rimettersi dritto"
+      },
+      {
+        "start": "Votate tutti il giocatore più esperto di Masterchef. L'eletto deve parlare imitando Iginio Massari. Inoltre, il giocatore alla sua destra, ogni volta che l'eletto parla, deve rispondere 'This dish is a piece of shit', mentre il giocatore alla sua sinistra deve replicare 'and you, my friend, are an asshole'. 1 sorso per ogni errore",
+        "end": "STOP! Non si deve più imitare Iginio Massari e i giocatori accanto non devono più rispondere"
+      },
+      {
+        "start": "{player} è scimmiali, parla come lui fino a nuovo ordine. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non deve più parlare come scimmiali"
+      },
+      {
+        "start": "{player} è Mike Tyson. Deve rimanere con la guardia alta da boxe fino a nuovo ordine. Beve 1 sorso ogni volta che abbassa la guardia",
+        "end": "STOP! {player} non è più Mike Tyson e può abbassare la guardia"
+      },
+      {
+        "start": "{player} è Sabrina Marchetti. In ogni frase che dice deve inserire un 'APORCODAUS', contorcendosi mentre lo dice. 1 sorso per ogni errore",
+        "end": "STOP! {player} non è più Sabrina Marchetti e non deve più dire 'APORCODAUS'"
+      },
+      {
+        "start": "Per 5 turni, tutti i giocatori devono fare silenzio a parte {player}, pena 1 sorso ogni parola. Il giocatore scelto invece è Fabio Caressa. Deve descrivere tutto quello che i giocatori fanno come se stesse facendo la telecronaca della finale dei mondiali. Se si rifiuta, massima penalità",
+        "end": "STOP! Tutti possono parlare di nuovo e {player} non è più Fabio Caressa"
+      },
+      {
+        "start": "{player} è Lele Adani. Deve parlare in spagnolo pessimo italianizzato fino a nuovo ordine. Beve 1 sorso ad ogni errore",
+        "end": "STOP! {player} non è più Lele Adani e può parlare italiano"
+      },
+      {
+        "start": "{player} deve fare una streak di mewing fino a fine partita. Se si rifiuta, beve 3 sorsi. Beve 1 sorso ogni volta che smette di fare mewing",
+        "end": "STOP! {player} può smettere di fare mewing"
+      },
+      {
+        "start": "parlate tutti in napoletano. Chi sbaglia beve 1 sorso",
+        "end": "STOP! Non si deve più parlare in napoletano"
+      },
+      {
+        "start": "{player}, devi imitare {player}. Se sbagli, bevi 1 sorso",
+        "end": "STOP! {player} non deve più imitare {player}"
+      }
+    ]
+  }
+}

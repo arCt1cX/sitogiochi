@@ -33,6 +33,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: pageFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -106,8 +119,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Password Screen */
@@ -201,8 +221,13 @@ body {
 }
 
 @keyframes markerPulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .player-marker.red {
@@ -345,14 +370,27 @@ body {
 }
 
 @keyframes celebrate {
-    from { box-shadow: 0 0 15px var(--winner-color), inset 0 0 10px var(--winner-color); }
-    to { box-shadow: 0 0 25px var(--winner-color), inset 0 0 15px var(--winner-color); }
+    from {
+        box-shadow: 0 0 15px var(--winner-color), inset 0 0 10px var(--winner-color);
+    }
+
+    to {
+        box-shadow: 0 0 25px var(--winner-color), inset 0 0 15px var(--winner-color);
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Title Selection */
@@ -372,8 +410,15 @@ body {
 }
 
 @keyframes popIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .emoji-selection.hidden {
@@ -518,9 +563,26 @@ body {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translate(-50%, -50%); }
-    10%, 30%, 50%, 70%, 90% { transform: translate(-52%, -50%); }
-    20%, 40%, 60%, 80% { transform: translate(-48%, -50%); }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate(-52%, -50%);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(-48%, -50%);
+    }
 }
 
 /* Winner Info */
@@ -542,11 +604,9 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-        circle at center,
-        rgba(76, 209, 55, 0.1) 0%,
-        transparent 70%
-    );
+    background: radial-gradient(circle at center,
+            rgba(76, 209, 55, 0.1) 0%,
+            transparent 70%);
     animation: pulse 3s infinite;
     pointer-events: none;
 }
@@ -561,8 +621,15 @@ body {
 }
 
 @keyframes winnerPulse {
-    from { transform: scale(1); filter: drop-shadow(0 0 10px var(--winner-color)); }
-    to { transform: scale(1.2); filter: drop-shadow(0 0 20px var(--winner-color)); }
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px var(--winner-color));
+    }
+
+    to {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 20px var(--winner-color));
+    }
 }
 
 .btn {
@@ -590,12 +657,10 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
     transition: all 0.6s ease;
     z-index: -1;
 }
@@ -641,22 +706,23 @@ body {
 
 .new-game-btn {
     margin-bottom: 0.5rem;
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
 }
 
 @media (max-width: 768px) {
     .container {
         padding: 0.5rem;
     }
-    
+
     #game-title h1 {
         font-size: 2.2rem;
     }
-    
+
     .game-screen {
         padding: 1.2rem;
     }
-    
+
     .game-board {
         gap: 8px;
         padding: 12px;
@@ -664,44 +730,44 @@ body {
         grid-template-columns: minmax(85px, 0.8fr) repeat(3, 1.2fr);
         grid-auto-rows: minmax(70px, auto);
     }
-    
+
     .board-cell {
         padding: 5px;
         min-height: 60px;
         font-size: 0.8rem;
     }
-    
+
     .category-cell {
         font-size: 0.75rem;
         line-height: 1.1;
         padding: 4px;
     }
-    
+
     .game-cell {
         min-height: 70px;
     }
-    
+
     .player-turn {
         font-size: 1rem;
     }
-    
+
     .player-marker {
         font-size: 1.4rem;
     }
-    
+
     .option {
         padding: 8px 12px;
     }
-    
+
     .winner-info {
         padding: 1rem;
     }
-    
+
     .category-name {
         font-size: 0.75rem;
         margin-bottom: 3px;
     }
-    
+
     .category-value {
         font-size: 0.7rem;
     }
@@ -711,59 +777,60 @@ body {
     .container {
         padding: 0.3rem;
     }
-    
+
     #game-title h1 {
         font-size: 1.8rem;
     }
-    
+
     .game-screen {
         padding: 1rem;
         border-radius: 10px;
     }
-    
+
     .game-board {
         gap: 5px;
         padding: 10px;
         grid-template-columns: minmax(70px, 0.7fr) repeat(3, 1fr);
         grid-auto-rows: minmax(55px, auto);
     }
-    
+
     .board-cell {
         padding: 3px;
         min-height: 40px;
         border-radius: 4px;
         font-size: 0.7rem;
     }
-    
+
     .game-cell {
         min-height: 55px;
         padding: 2px;
         border-width: 1px;
     }
-    
+
     .category-cell {
         font-size: 0.65rem;
         padding: 2px;
     }
-    
-    .player-marker.red, .player-marker.blue {
+
+    .player-marker.red,
+    .player-marker.blue {
         font-size: 0.65rem;
         padding: 3px;
         max-width: 95%;
         max-height: 95%;
         line-height: 1.1;
     }
-    
+
     .instructions-container {
         padding: 1rem;
         font-size: 0.9rem;
     }
-    
+
     .category-name {
         font-size: 0.65rem;
         margin-bottom: 2px;
     }
-    
+
     .category-value {
         font-size: 0.6rem;
     }
@@ -825,6 +892,7 @@ body {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
@@ -984,13 +1052,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.1) 10px,
-        rgba(0, 0, 0, 0.2) 10px,
-        rgba(0, 0, 0, 0.2) 20px
-    );
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) 10px,
+            rgba(0, 0, 0, 0.2) 10px,
+            rgba(0, 0, 0, 0.2) 20px);
     z-index: 1;
     pointer-events: none;
     border-radius: 12px;
@@ -1054,4 +1120,4 @@ body {
 .change-topic-btn {
     display: none;
     margin-top: 0.5rem;
-} 
+}

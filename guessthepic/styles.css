@@ -27,6 +27,19 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    animation: pageFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -239,7 +252,10 @@ button:active {
     padding: 0 10px;
 }
 
-.score, .progress, .current-player, .timer {
+.score,
+.progress,
+.current-player,
+.timer {
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -443,8 +459,13 @@ button:active {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
@@ -452,6 +473,7 @@ button:active {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -471,38 +493,44 @@ button:active {
     .container {
         padding: 20px;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     .image-container {
         height: 250px;
     }
-    
+
     .game-header {
         flex-direction: column;
         align-items: center;
     }
-    
-    .score, .progress, .current-player, .timer {
+
+    .score,
+    .progress,
+    .current-player,
+    .timer {
         margin-bottom: 10px;
     }
-    
+
     .buttons-row {
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
-    
-    #back-to-menu, #start-game, #play-again, #replay-same-players {
+
+    #back-to-menu,
+    #start-game,
+    #play-again,
+    #replay-same-players {
         width: 100%;
     }
-    
+
     #replay-same-players {
         margin-bottom: 0;
     }
@@ -592,7 +620,7 @@ button:active {
     font-size: 5rem;
     font-weight: 800;
     color: gold;
-    text-shadow: 
+    text-shadow:
         0 0 10px rgba(255, 215, 0, 0.7),
         0 0 20px rgba(255, 215, 0, 0.5),
         0 0 30px rgba(255, 215, 0, 0.3),
@@ -611,18 +639,52 @@ button:active {
 }
 
 @keyframes sweepEffect {
-    0% { opacity: 0; visibility: visible; }
-    20% { opacity: 1; visibility: visible; }
-    80% { opacity: 1; visibility: visible; }
-    100% { opacity: 0; visibility: hidden; }
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    20% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @keyframes sweepTextEffect {
-    0% { transform: scale(0.5); opacity: 0; }
-    30% { transform: scale(1.3); opacity: 1; }
-    50% { transform: scale(1); opacity: 1; }
-    80% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.2); opacity: 0; }
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    30% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
 
 /* Perfect game animation (15/15) */
@@ -640,14 +702,14 @@ button:active {
     z-index: 1500;
     opacity: 0;
     visibility: hidden;
-    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .perfect-game-text {
     font-size: 4rem;
     font-weight: 900;
     color: #ffdf00;
-    text-shadow: 
+    text-shadow:
         0 0 10px rgba(255, 215, 0, 0.8),
         0 0 20px rgba(255, 215, 0, 0.6),
         0 0 30px rgba(255, 215, 0, 0.4),
@@ -665,7 +727,7 @@ button:active {
     font-weight: 900;
     color: #ffdf00;
     margin-top: 0.5rem;
-    text-shadow: 
+    text-shadow:
         0 0 10px rgba(255, 215, 0, 0.8),
         0 0 20px rgba(255, 215, 0, 0.6),
         0 0 30px rgba(255, 215, 0, 0.4),
@@ -690,6 +752,7 @@ button:active {
         transform: translateY(-10px) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(calc(100vh)) rotate(360deg);
         opacity: 0;
@@ -709,26 +772,79 @@ button:active {
 }
 
 @keyframes perfectGameEffect {
-    0% { opacity: 0; visibility: visible; }
-    15% { opacity: 1; visibility: visible; }
-    85% { opacity: 1; visibility: visible; }
-    100% { opacity: 0; visibility: hidden; }
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    15% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    85% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @keyframes perfectGameTextEffect {
-    0% { transform: scale(0.5); opacity: 0; }
-    25% { transform: scale(1.2); opacity: 1; }
-    35% { transform: scale(1); opacity: 1; }
-    85% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.1); opacity: 0; }
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    35% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    85% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
 }
 
 @keyframes perfectGameScoreEffect {
-    0% { transform: scale(0.5); opacity: 0; }
-    25% { transform: scale(1.3); opacity: 1; }
-    45% { transform: scale(1); opacity: 1; }
-    85% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.1); opacity: 0; }
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+
+    45% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    85% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
 }
 
 .tournament-return-button {

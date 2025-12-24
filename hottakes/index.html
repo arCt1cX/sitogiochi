@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Takes - Gioco di opinioni controverse | DrewGames</title>
+    <meta name="description"
+        content="Hot Takes: il gioco dove devi esprimere le tue opinioni più controverse su vari argomenti. Scopri chi ha detto cosa!">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-72Y5QND8E8');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="home-button" onclick="window.location.href='../'">
+        <span class="home-icon">⌂</span> Home
+    </button>
+
+    <div class="container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <div class="game-header">
+                <h1>🔥 Hot Takes 🔥</h1>
+                <p class="subtitle">Esprimi la tua opinione controversa!</p>
+            </div>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label for="player-count">Numero di Giocatori:</label>
+                    <select id="player-count">
+                        <option value="3" selected>3 Giocatori</option>
+                        <option value="4">4 Giocatori</option>
+                        <option value="5">5 Giocatori</option>
+                        <option value="6">6 Giocatori</option>
+                        <option value="7">7 Giocatori</option>
+                        <option value="8">8 Giocatori</option>
+                        <option value="9">9 Giocatori</option>
+                        <option value="10">10 Giocatori</option>
+                    </select>
+                </div>
+
+                <div id="player-names-container">
+                    <!-- Player name inputs will be generated here -->
+                </div>
+
+                <button id="start-game" class="btn primary-btn">Inizia il Gioco! </button>
+            </div>
+        </div>
+
+        <!-- Input Screen -->
+        <div id="input-screen" class="screen">
+            <div class="game-header">
+                <h2>Categoria:</h2>
+                <div class="category-container">
+                    <h1 id="current-category" class="category-display">...</h1>
+                    <button id="reroll-category" class="btn-icon" title="Cambia categoria">🎲</button>
+                </div>
+            </div>
+
+            <div class="player-turn-info">
+                <p>Turno di: <span id="current-player-name" class="highlight-name">Giocatore 1</span></p>
+                <p class="instruction">Passa il telefono a questo giocatore!</p>
+            </div>
+
+            <div id="input-area" class="input-area" style="display: none;">
+                <p class="prompt">Scrivi la tua Hot Take su questo argomento:</p>
+                <textarea id="hot-take-input" placeholder="Es: Secondo me..." rows="4" maxlength="150"></textarea>
+                <button id="submit-take" class="btn primary-btn">Invia </button>
+            </div>
+
+            <button id="reveal-input" class="btn secondary-btn">Sono pronto!</button>
+        </div>
+
+        <!-- Reveal Screen -->
+        <div id="reveal-screen" class="screen">
+            <div class="game-header">
+                <h1>🔥 Hot Take Estratta 🔥</h1>
+                <p class="subtitle">Di chi sarà?</p>
+            </div>
+
+            <div class="hot-take-card">
+                <p id="revealed-take" class="take-text">...</p>
+            </div>
+
+            <div class="reveal-controls">
+                <button id="reveal-author" class="btn secondary-btn">Svela Autore 🕵️</button>
+                <p id="author-display" class="author-display" style="display: none;">È di: <span
+                        id="author-name">...</span></p>
+                <button id="next-round" class="btn primary-btn">Prossimo Round ➜</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

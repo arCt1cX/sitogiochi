@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Apply initial language based on user preference
     applyTranslations();
-    
+
     // Language toggle is now handled in applyTranslations() function in lang.js
-    
+
     // Update page content with current language
     document.getElementById('tagline').textContent = getTranslation('tagline');
     document.getElementById('subtitle').textContent = getTranslation('subtitle');
     document.getElementById('copyright').textContent = getTranslation('copyright');
-    
+
     // Update page title and description
     document.title = getTranslation('pageTitle');
     const metaDesc = document.getElementById('pageDescription');
     if (metaDesc) {
         metaDesc.setAttribute('content', getTranslation('pageDescription'));
     }
-    
+
     // Games array with additional catchphrase information and display names
     const games = [
         {
@@ -508,32 +508,100 @@ document.addEventListener('DOMContentLoaded', () => {
                 <text x="55" y="74" font-size="3" fill="white">Film Topic</text>
                 <path d="M56,65 L56,70" stroke="white" stroke-width="0.5" stroke-dasharray="1 1" />
             </svg>`
-        }
+        },
+        {
+            id: "drewnking",
+            displayName: getTranslation('drewnking', 'title'),
+            catchphrase: getTranslation('drewnking', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <ellipse cx="40" cy="74" rx="25" ry="3" fill="rgba(0,0,0,0.3)" />
+                
+                <!-- Beer mug -->
+                <rect x="25" y="25" width="30" height="35" rx="2" fill="rgba(255,193,7,0.3)" stroke="white" stroke-width="2" />
+                <rect x="26" y="26" width="28" height="33" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                
+                <!-- Beer foam -->
+                <ellipse cx="40" cy="25" rx="15" ry="4" fill="rgba(255,255,255,0.9)" stroke="white" stroke-width="1.5" />
+                <ellipse cx="35" cy="23" rx="6" ry="3" fill="rgba(255,255,255,0.7)" />
+                <ellipse cx="45" cy="23" rx="5" ry="3" fill="rgba(255,255,255,0.7)" />
+                <ellipse cx="40" cy="21" rx="4" ry="2.5" fill="rgba(255,255,255,0.8)" />
+                
+                <!-- Beer level -->
+                <rect x="27" y="35" width="26" height="20" fill="rgba(255,193,7,0.6)" />
+                <path d="M27,40 Q35,38 53,40" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none" />
+                
+                <!-- Bubbles -->
+                <circle cx="32" cy="50" r="1.5" fill="rgba(255,255,255,0.6)" />
+                <circle cx="38" cy="45" r="1" fill="rgba(255,255,255,0.5)" />
+                <circle cx="45" cy="48" r="1.2" fill="rgba(255,255,255,0.6)" />
+                <circle cx="48" cy="52" r="1" fill="rgba(255,255,255,0.5)" />
+                
+                <!-- Mug handle -->
+                <path d="M55,35 Q65,35 65,45 Q65,55 55,55" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" />
+                <path d="M55,37 Q62,37 62,45 Q62,53 55,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none" />
+                
+                <!-- Dice (for drinking game element) -->
+                <rect x="60" y="15" width="12" height="12" rx="2" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5" transform="rotate(15 66 21)" />
+                <circle cx="63" cy="18" r="1" fill="white" />
+                <circle cx="69" cy="18" r="1" fill="white" />
+                <circle cx="63" cy="24" r="1" fill="white" />
+                <circle cx="69" cy="24" r="1" fill="white" />
+                <circle cx="66" cy="21" r="1" fill="white" />
+                
+                <!-- Warning sign -->
+                <circle cx="15" cy="20" r="8" fill="rgba(255,69,0,0.3)" stroke="#FF4500" stroke-width="1.5" />
+                <text x="15" y="25" font-size="10" fill="white" text-anchor="middle" font-weight="bold">18+</text>
+                
+                <!-- Party elements -->
+                <path d="M10,65 L12,60 L14,65" stroke="rgba(255,107,107,0.7)" stroke-width="1" fill="none" />
+                <path d="M68,65 L70,60 L72,65" stroke="rgba(255,107,107,0.7)" stroke-width="1" fill="none" />
+                <circle cx="8" cy="58" r="2" fill="rgba(255,193,7,0.6)" />
+                <circle cx="72" cy="58" r="2" fill="rgba(255,193,7,0.6)" />
+            </svg>`
+        },
+        {
+            id: "hottakes",
+            displayName: getTranslation('hottakes', 'title'),
+            catchphrase: getTranslation('hottakes', 'catchphrase'),
+            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
+                <!-- Shadow -->
+                <ellipse cx="40" cy="74" rx="30" ry="3" fill="rgba(0,0,0,0.3)" />
+                
+                <!-- Flame icon -->
+                <path d="M40,10 C40,10 25,35 25,50 C25,60 32,68 40,68 C48,68 55,60 55,50 C55,35 40,10 40,10 Z" fill="rgba(255, 69, 0, 0.2)" stroke="#ff4500" stroke-width="2" />
+                <path d="M40,20 C40,20 30,40 30,50 C30,56 34,60 40,60 C46,60 50,56 50,50 C50,40 40,20 40,20 Z" fill="rgba(255, 140, 0, 0.4)" stroke="#ff8c00" stroke-width="1.5" />
+                
+                <!-- Chat bubble / Opinion -->
+                <path d="M55,25 L70,25 L70,45 L55,45 L50,50 L55,40 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1.5" />
+                <text x="62" y="38" font-size="12" fill="white" text-anchor="middle" font-weight="bold">!</text>
+            </svg>`
+        },
     ];
-    
+
     // Select the container element
     const gamesContainer = document.getElementById('gamesContainer');
-    
+
     // Function to capitalize first letter and handle formatting
     const formatGameName = (name) => {
         // Convert camelCase or snake_case to space-separated words
         const formatted = name
             .replace(/([A-Z])/g, ' $1') // Handle camelCase
             .replace(/_/g, ' '); // Handle snake_case
-        
+
         // Capitalize the first letter of each word
         return formatted
             .split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
     };
-    
+
     // Gradient classes for variety
     const gradientClasses = [
         'gradient-1', 'gradient-2', 'gradient-3', 'gradient-4',
         'gradient-5', 'gradient-6', 'gradient-7', 'gradient-8'
     ];
-    
+
     // Add CSS for icon styling
     const style = document.createElement('style');
     style.textContent = `
@@ -628,56 +696,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Create and append game cards
     games.forEach((game, index) => {
         // Create card element
         const card = document.createElement('div');
         card.className = `game-card ${gradientClasses[index % gradientClasses.length]}`;
-        
+
         // Create content container
         const contentContainer = document.createElement('div');
         contentContainer.className = 'card-content';
-        
+
         // Create game title using the display name if available, otherwise format the ID
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
-        
+
         // Create catchphrase
         const catchphrase = document.createElement('p');
         catchphrase.className = 'game-catchphrase';
         catchphrase.textContent = game.catchphrase;
-        
+
         // Create play button as a button element
         const playButton = document.createElement('button');
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
-        
+
         // Folder name mapping for case sensitivity issues
         const folderNameMap = {
             'bluffme': 'BluffMe',
             // Add any other case-sensitive folder mappings here if needed
         };
-        
+
         // Add click event for navigation
         playButton.addEventListener('click', () => {
             // Use folder name mapping if available, otherwise use game.id
             const folderName = folderNameMap[game.id] || game.id;
             window.location.href = `${folderName}/index.html`;
         });
-        
+
         // Add title, catchphrase and button to content container
         contentContainer.appendChild(title);
         contentContainer.appendChild(catchphrase);
         contentContainer.appendChild(playButton);
-        
+
         // Create icon container and add SVG
         const iconContainer = document.createElement('div');
         iconContainer.className = 'game-icon-container';
         iconContainer.innerHTML = game.iconSvg;
         const iconElement = iconContainer.querySelector('svg');
         iconElement.classList.add('game-icon');
-        
+
         // Add "Italian only" text for guessthepic game
         if (game.id === "guessthepic") {
             const italianOnlyText = document.createElement('div');
@@ -685,40 +753,40 @@ document.addEventListener('DOMContentLoaded', () => {
             italianOnlyText.textContent = getTranslation('italianOnly');
             iconContainer.appendChild(italianOnlyText);
         }
-        
+
         // Append content and icon containers to card
         card.appendChild(contentContainer);
         card.appendChild(iconContainer);
-        
+
         // Append card to container
         gamesContainer.appendChild(card);
     });
-    
+
     // Add "Coming Soon" card
     const comingSoonCard = document.createElement('div');
     comingSoonCard.className = 'game-card coming-soon-card';
-    
+
     // Create content container
     const comingSoonContentContainer = document.createElement('div');
     comingSoonContentContainer.className = 'card-content';
-    
+
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = getTranslation('comingSoon');
-    
+
     const comingSoonCatchphrase = document.createElement('p');
     comingSoonCatchphrase.className = 'game-catchphrase';
     comingSoonCatchphrase.textContent = getTranslation('newGamesComingSoon');
-    
+
     // Create icon for Coming Soon card
     const comingSoonIconContainer = document.createElement('div');
     comingSoonIconContainer.className = 'game-icon-container';
-    
+
     // Append elements to containers
     comingSoonContentContainer.appendChild(comingSoonTitle);
     comingSoonContentContainer.appendChild(comingSoonCatchphrase);
     comingSoonCard.appendChild(comingSoonContentContainer);
     comingSoonCard.appendChild(comingSoonIconContainer);
-    
+
     // Append Coming Soon card to container
     gamesContainer.appendChild(comingSoonCard);
 
@@ -770,16 +838,16 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     // Update navigation text based on language
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Navigation will be updated when translations are applied
         if (typeof applyTranslations === 'function') {
             const originalApply = applyTranslations;
-            applyTranslations = function() {
+            applyTranslations = function () {
                 originalApply();
                 updateNavigationText();
             };
         }
-        
+
         function updateNavigationText() {
             if (typeof getTranslation === 'function') {
                 document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';

@@ -1,5 +1,5 @@
 // Quizzy Game - Main JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Game state
     const gameState = {
         players: [],
@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         lastRandomCategories: [], // Added for storing random categories
         isShockRound: false, // Flag for shock round
         hardModeActive: false, // Flag for hard mode
-        shownQuestions: {} // Track already shown questions
+        shownQuestions: {}, // Track already shown questions
+        apiKey: localStorage.getItem('quizzy_api_key') || null, // Store API key
+        aiQuestionHistory: [] // Track AI generated questions to avoid repetition
     };
 
     // DOM Elements
@@ -37,40 +39,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize event listeners
     initEventListeners();
-    
+
     // Load questions
     loadQuestions();
 
     function initEventListeners() {
         // Welcome screen
-        document.getElementById('start-setup').addEventListener('click', function() {
+        document.getElementById('start-setup').addEventListener('click', function () {
             showScreen(screens.setup);
         });
-        
+
         // Setup screen
-        document.getElementById('continue-to-players').addEventListener('click', function() {
+        document.getElementById('continue-to-players').addEventListener('click', function () {
             const playerCount = parseInt(document.getElementById('player-count').value);
             if (playerCount >= 2 && playerCount <= 8) {
                 generatePlayerInputs(playerCount);
                 document.getElementById('player-names-container').classList.remove('hidden');
             }
         });
-        
-        document.getElementById('game-mode').addEventListener('change', function() {
+
+        document.getElementById('game-mode').addEventListener('change', function () {
             gameState.gameMode = this.value;
+            const apiKeyContainer = document.getElementById('api-key-container');
+            if (this.value === 'ai' && !gameState.apiKey) {
+                apiKeyContainer.classList.remove('hidden');
+            } else {
+                apiKeyContainer.classList.add('hidden');
+            }
         });
-        
+
+        // Save API Key on input change
+        document.getElementById('api-key-input').addEventListener('change', function () {
+            const key = this.value.trim();
+            if (key) {
+                gameState.apiKey = key;
+                localStorage.setItem('quizzy_api_key', key);
+            }
+        });
+
         document.getElementById('start-game').addEventListener('click', startCategorySelection);
-        
+
         // Category selection
-        document.getElementById('confirm-categories').addEventListener('click', function() {
+        document.getElementById('confirm-categories').addEventListener('click', function () {
             const selectedCategories = document.querySelectorAll('.category-card.selected');
             if (selectedCategories.length > 0) {
                 savePlayerCategories();
-                
+
                 // The flow will continue from the showRandomCategoriesScreen callback
                 // or directly from savePlayerCategories for shared mode
-                
+
                 if (gameState.gameMode === 'shared') {
                     continueAfterCategorySelection();
                 }
@@ -79,28 +96,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert(getGameTranslation('selectAtLeastOne'));
             }
         });
-        
+
         // Game Round screen - difficulty selection
         const difficultyButtons = document.querySelectorAll('.difficulty-btn');
         difficultyButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const difficulty = this.getAttribute('data-difficulty');
                 selectDifficulty(difficulty);
             });
         });
-        
+
         // Game Over screen
-        document.getElementById('play-again').addEventListener('click', function() {
+        document.getElementById('play-again').addEventListener('click', function () {
             resetGame();
             showScreen(screens.welcome);
         });
     }
-    
+
     // Load questions from JSON file
     function loadQuestions() {
         const lang = getUserLanguage();
         const fileName = gameTranslations[lang].questionsFile || 'categorie.json';
-        
+
         fetch(fileName)
             .then(response => response.json())
             .then(data => {
@@ -114,31 +131,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 createPlaceholderQuestions();
             });
     }
-    
+
     // Create placeholder questions if JSON file is not available
     function createPlaceholderQuestions() {
         const categories = [
-            'Storia', 'Geografia', 'Cinema', 'Musica', 
-            'Arte', 'Scienza', 'Sport', 'Letteratura', 
+            'Storia', 'Geografia', 'Cinema', 'Musica',
+            'Arte', 'Scienza', 'Sport', 'Letteratura',
             'Tecnologia', 'Cibo'
         ];
-        
+
         const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
-        
+
         gameState.questions = {};
         gameState.categories = categories;
-        
+
         // Create sample questions for each category and difficulty
         categories.forEach(category => {
             gameState.questions[category] = {};
-            
+
             difficulties.forEach(difficulty => {
                 gameState.questions[category][difficulty] = [];
-                
+
                 // Create 5 sample questions for each difficulty
                 for (let i = 0; i < 5; i++) {
                     const question = {
-                        question: `Sample ${category} question (${difficulty}) #${i+1}`,
+                        question: `Sample ${category} question (${difficulty}) #${i + 1}`,
                         answers: [
                             `Answer option 1 for ${category}`,
                             `Answer option 2 for ${category}`,
@@ -147,118 +164,181 @@ document.addEventListener('DOMContentLoaded', function() {
                         ],
                         correctIndex: Math.floor(Math.random() * 4)
                     };
-                    
+
                     gameState.questions[category][difficulty].push(question);
                 }
             });
         });
-        
+
         console.log('Created placeholder questions');
     }
-    
+
     // Generate player name input fields
     function generatePlayerInputs(count) {
         const container = document.getElementById('player-inputs');
         container.innerHTML = '';
-        
+
         for (let i = 0; i < count; i++) {
             const inputGroup = document.createElement('div');
             inputGroup.className = 'form-group';
-            
+
             const label = document.createElement('label');
-            label.setAttribute('for', `player-${i+1}`);
-            label.textContent = `${getGameTranslation('playerNameLabel')} ${i+1}:`;
-            
+            label.setAttribute('for', `player-${i + 1}`);
+            label.textContent = `${getGameTranslation('playerNameLabel')} ${i + 1}:`;
+
             const input = document.createElement('input');
             input.type = 'text';
-            input.id = `player-${i+1}`;
+            input.id = `player-${i + 1}`;
             input.className = 'player-name-input';
-            input.placeholder = `${getGameTranslation('playerNameLabel')} ${i+1}`;
-            
+            input.placeholder = `${getGameTranslation('playerNameLabel')} ${i + 1}`;
+
             inputGroup.appendChild(label);
             inputGroup.appendChild(input);
             container.appendChild(inputGroup);
         }
     }
-    
+
     // Start the category selection phase
     function startCategorySelection() {
         // Create player objects
         gameState.players = [];
-        const playerInputs = document.querySelectorAll('.player-name-input');
-        
+        const playerInputs = document.querySelectorAll('#player-inputs .player-name-input');
+
         playerInputs.forEach((input, index) => {
-            const name = input.value.trim() || `${getGameTranslation('playerNameLabel')} ${index+1}`;
+            const name = input.value.trim() || `${getGameTranslation('playerNameLabel')} ${index + 1}`;
             gameState.players.push({
                 name: name,
                 score: 0,
                 categories: []
             });
         });
-        
+
         // Reset current player index
         gameState.currentPlayerIndex = 0;
-        
+
         // Set game mode
         gameState.gameMode = document.getElementById('game-mode').value;
-        
+
         // Setup category selection for first player
-        setupCategorySelection();
+        if (gameState.gameMode === 'ai') {
+            setupCustomCategoryInput();
+        } else {
+            setupCategorySelection();
+        }
     }
-    
+
+    // Setup custom category input for AI mode
+    function setupCustomCategoryInput() {
+        if (gameState.currentPlayerIndex >= gameState.players.length) {
+            return;
+        }
+
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        document.getElementById('player-name-display').textContent = currentPlayer.name;
+
+        // Hide standard category cards
+        document.getElementById('category-cards').classList.add('hidden');
+        document.getElementById('selected-categories-list').parentElement.classList.add('hidden');
+
+        // Show custom input container
+        const inputContainer = document.getElementById('custom-category-input-container');
+        inputContainer.classList.remove('hidden');
+
+        // Clear previous inputs
+        document.getElementById('custom-cat-1').value = '';
+        document.getElementById('custom-cat-2').value = '';
+
+        // Update confirm button behavior
+        const confirmBtn = document.getElementById('confirm-categories');
+        confirmBtn.disabled = false;
+
+        // Remove old listener and add new one for AI mode
+        const newBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
+
+        newBtn.addEventListener('click', function () {
+            const cat1 = document.getElementById('custom-cat-1').value.trim();
+            const cat2 = document.getElementById('custom-cat-2').value.trim();
+
+            if (cat1 && cat2) {
+                // Save custom categories
+                currentPlayer.categories = [cat1, cat2];
+
+                // For shared AI mode (logic same as shared standard)
+                gameState.playerCategories[gameState.currentPlayerIndex] = [cat1, cat2];
+
+                // Move to next player
+                gameState.currentPlayerIndex++;
+                if (gameState.currentPlayerIndex < gameState.players.length) {
+                    setupCustomCategoryInput();
+                } else {
+                    // All players ready
+                    // Combine all categories for everyone to play with
+                    combineSharedCategories();
+                    gameState.currentPlayerIndex = 0;
+                    startGame();
+                }
+            } else {
+                alert("Inserisci entrambe le categorie!");
+            }
+        });
+
+        showScreen(screens.categorySelection);
+    }
+
     // Setup the category selection screen for current player
     function setupCategorySelection() {
         if (gameState.currentPlayerIndex >= gameState.players.length) {
             return;
         }
-        
+
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         document.getElementById('player-name-display').textContent = currentPlayer.name;
-        
+
         // Clear selected categories list
         document.getElementById('selected-categories-list').innerHTML = '';
-        
+
         // Generate category cards
         generateCategoryCards();
-        
+
         // Show category selection screen
         showScreen(screens.categorySelection);
-        
+
         // Disable confirm button initially
         document.getElementById('confirm-categories').disabled = true;
     }
-    
+
     // Generate category selection cards
     function generateCategoryCards() {
         const container = document.getElementById('category-cards');
         container.innerHTML = '';
-        
+
         gameState.categories.forEach(category => {
             const card = document.createElement('div');
             card.className = 'category-card';
             card.dataset.category = category;
             card.textContent = getGameTranslation('categories', category) || category;
-            
-            card.addEventListener('click', function() {
+
+            card.addEventListener('click', function () {
                 toggleCategorySelection(this);
             });
-            
+
             container.appendChild(card);
         });
     }
-    
+
     // Toggle category selection on click
     function toggleCategorySelection(categoryCard) {
         const selectedCategories = document.querySelectorAll('.category-card.selected');
         // Limit to 2 categories in both modes now
         const maxCategories = 2;
-        
+
         // Remove any existing error message
         const existingError = document.getElementById('max-categories-error');
         if (existingError) {
             existingError.remove();
         }
-        
+
         if (categoryCard.classList.contains('selected')) {
             // Deselect
             categoryCard.classList.remove('selected');
@@ -272,16 +352,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const errorMsg = document.createElement('div');
             errorMsg.id = 'max-categories-error';
             errorMsg.className = 'error-message';
-            
+
             // Use the correct word for categories based on language
             const lang = getUserLanguage();
             const categoriesText = lang === 'it' ? 'categorie' : 'categories';
             errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${categoriesText}`;
-            
+
             // Insert error after the category grid
             const categoryGrid = document.getElementById('category-cards');
             categoryGrid.parentNode.insertBefore(errorMsg, categoryGrid.nextSibling);
-            
+
             // Auto-hide after 3 seconds
             setTimeout(() => {
                 if (errorMsg.parentNode) {
@@ -289,61 +369,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 3000);
         }
-        
+
         // Enable/disable confirm button based on selection
         document.getElementById('confirm-categories').disabled = selectedCategories.length === 0;
     }
-    
+
     // Update the selected categories list
     function updateSelectedCategoriesList() {
         const selectedCategories = document.querySelectorAll('.category-card.selected');
         const listContainer = document.getElementById('selected-categories-list');
         listContainer.innerHTML = '';
-        
+
         selectedCategories.forEach(card => {
             const category = card.dataset.category;
             const translatedCategory = getGameTranslation('categories', category) || category;
-            
+
             const listItem = document.createElement('li');
             listItem.textContent = translatedCategory;
             listContainer.appendChild(listItem);
         });
     }
-    
+
     // Save the selected categories for the current player
     function savePlayerCategories() {
         const selectedCards = document.querySelectorAll('.category-card.selected');
         const selectedCategories = Array.from(selectedCards).map(card => card.dataset.category);
-        
+
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        
+
         if (gameState.gameMode === 'individual') {
             // In individual mode, add 2 random categories in addition to the 2 selected ones
             const availableCategories = gameState.categories.filter(
                 category => !selectedCategories.includes(category)
             );
-            
+
             // Get 2 random categories
             const randomCategories = getRandomSubset(availableCategories, 2);
-            
+
             // Combine selected and random categories
             currentPlayer.categories = [...selectedCategories, ...randomCategories];
-            
+
             // Store the random categories in gameState for display
             gameState.lastRandomCategories = randomCategories;
-            
+
             // Show the categories screen with both selected and random categories
             showCategoriesScreen(selectedCategories, randomCategories);
         } else {
             // Shared mode - just save the selected categories
             currentPlayer.categories = selectedCategories;
         }
-        
+
         // Store in playerCategories for shared mode
-        gameState.playerCategories[gameState.currentPlayerIndex] = 
+        gameState.playerCategories[gameState.currentPlayerIndex] =
             gameState.gameMode === 'individual' ? currentPlayer.categories : selectedCategories;
     }
-    
+
     // Show a screen with all categories (selected and random) before proceeding
     function showCategoriesScreen(selectedCategories, randomCategories) {
         // Create an overlay screen
@@ -363,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.color = 'white';
         overlay.style.padding = '20px';
         overlay.style.textAlign = 'center';
-        
+
         // Create container
         const container = document.createElement('div');
         container.style.maxWidth = '800px';
@@ -371,32 +451,32 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.borderRadius = '10px';
         container.style.padding = '30px';
         container.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
-        
+
         // Title
         const title = document.createElement('h2');
         title.style.fontSize = '1.8rem';
         title.style.marginBottom = '20px';
         title.style.color = '#ffffff';
-        title.textContent = getUserLanguage() === 'it' ? 
-            'Le Tue Categorie' : 
+        title.textContent = getUserLanguage() === 'it' ?
+            'Le Tue Categorie' :
             'Your Categories';
-        
+
         // Selected categories section
         const selectedTitle = document.createElement('h3');
         selectedTitle.style.fontSize = '1.3rem';
         selectedTitle.style.marginTop = '20px';
         selectedTitle.style.marginBottom = '15px';
-        selectedTitle.textContent = getUserLanguage() === 'it' ? 
-            'Categorie Selezionate:' : 
+        selectedTitle.textContent = getUserLanguage() === 'it' ?
+            'Categorie Selezionate:' :
             'Selected Categories:';
-        
+
         // Selected categories list
         const selectedList = document.createElement('div');
         selectedList.style.display = 'flex';
         selectedList.style.flexDirection = 'column';
         selectedList.style.gap = '10px';
         selectedList.style.marginBottom = '30px';
-        
+
         selectedCategories.forEach(category => {
             const categoryItem = document.createElement('div');
             categoryItem.style.fontSize = '1.6rem';
@@ -407,37 +487,37 @@ document.addEventListener('DOMContentLoaded', function() {
             categoryItem.style.display = 'flex';
             categoryItem.style.alignItems = 'center';
             categoryItem.style.justifyContent = 'center';
-            
+
             // User icon
             const userIcon = document.createElement('span');
             userIcon.innerHTML = '👤 ';
             userIcon.style.marginRight = '10px';
             categoryItem.appendChild(userIcon);
-            
+
             // Category name
             const catName = document.createElement('span');
             catName.textContent = getGameTranslation('categories', category) || category;
             categoryItem.appendChild(catName);
-            
+
             selectedList.appendChild(categoryItem);
         });
-        
+
         // Random categories section
         const randomTitle = document.createElement('h3');
         randomTitle.style.fontSize = '1.3rem';
         randomTitle.style.marginTop = '10px';
         randomTitle.style.marginBottom = '15px';
-        randomTitle.textContent = getUserLanguage() === 'it' ? 
-            'Categorie Aggiunte dal Gioco:' : 
+        randomTitle.textContent = getUserLanguage() === 'it' ?
+            'Categorie Aggiunte dal Gioco:' :
             'Categories Added by the Game:';
-        
+
         // Random categories list
         const randomList = document.createElement('div');
         randomList.style.display = 'flex';
         randomList.style.flexDirection = 'column';
         randomList.style.gap = '10px';
         randomList.style.marginBottom = '40px';
-        
+
         randomCategories.forEach(category => {
             const categoryItem = document.createElement('div');
             categoryItem.style.fontSize = '1.6rem';
@@ -448,21 +528,21 @@ document.addEventListener('DOMContentLoaded', function() {
             categoryItem.style.display = 'flex';
             categoryItem.style.alignItems = 'center';
             categoryItem.style.justifyContent = 'center';
-            
+
             // Random icon
             const randomIcon = document.createElement('span');
             randomIcon.innerHTML = '🎲 ';
             randomIcon.style.marginRight = '10px';
             categoryItem.appendChild(randomIcon);
-            
+
             // Category name
             const catName = document.createElement('span');
             catName.textContent = getGameTranslation('categories', category) || category;
             categoryItem.appendChild(catName);
-            
+
             randomList.appendChild(categoryItem);
         });
-        
+
         // Continue button
         const continueBtn = document.createElement('button');
         continueBtn.className = 'primary-button';
@@ -471,7 +551,7 @@ document.addEventListener('DOMContentLoaded', function() {
         continueBtn.style.margin = '0 auto';
         continueBtn.style.display = 'block';
         continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-        
+
         // Add all elements to the container
         container.appendChild(title);
         container.appendChild(selectedTitle);
@@ -480,20 +560,20 @@ document.addEventListener('DOMContentLoaded', function() {
         container.appendChild(randomList);
         container.appendChild(continueBtn);
         overlay.appendChild(container);
-        
+
         // Append to body
         document.body.appendChild(overlay);
-        
+
         // Add event listener to continue button
-        continueBtn.addEventListener('click', function() {
+        continueBtn.addEventListener('click', function () {
             // Remove the overlay
             document.body.removeChild(overlay);
-            
+
             // Continue with the game flow
             continueAfterCategorySelection();
         });
     }
-    
+
     // Continue after category selection and random categories shown
     function continueAfterCategorySelection() {
         if (gameState.gameMode === 'shared') {
@@ -518,11 +598,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     // Combine categories for shared mode
     function combineSharedCategories() {
         const allCategories = [];
-        
+
         Object.values(gameState.playerCategories).forEach(categories => {
             categories.forEach(category => {
                 if (!allCategories.includes(category)) {
@@ -530,33 +610,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
+
         gameState.sharedCategories = allCategories;
-        
+
         // Assign these categories to all players
         gameState.players.forEach(player => {
             player.categories = [...allCategories];
         });
     }
-    
+
     // Start the main game after category selection
     function startGame() {
         gameState.currentPlayerIndex = 0;
         gameState.roundsCompleted = 0;
-        
+
         // Initialize shock round and skip turn flags for all players
         gameState.players.forEach(player => {
             player.hadShockRound = false;
             player.skipNextTurn = false;
         });
-        
+
         setupGameRound();
     }
-    
+
     // Setup the game round for the current player
     function setupGameRound() {
         console.log("Setting up game round");
-        
+
         try {
             // First ensure that the game round screen exists
             const gameRoundScreen = document.getElementById('game-round-screen');
@@ -564,26 +644,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error("Game round screen not found");
                 return;
             }
-            
+
             // Check if screen content exists
             const screenContent = gameRoundScreen.querySelector('.screen-content');
             if (!screenContent) {
                 console.error("Game round screen content not found");
                 return;
             }
-            
+
             const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-            
+
             // Update player info
             const playerNameEl = document.getElementById('current-player-name');
             const playerScoreEl = document.getElementById('current-player-score');
-            
+
             if (playerNameEl) {
                 // Make the player name bold
                 playerNameEl.innerHTML = `<strong>${currentPlayer.name}</strong>`;
             }
             if (playerScoreEl) playerScoreEl.textContent = currentPlayer.score;
-            
+
             // Clear any previous assigned elements
             const previousAssigned = document.querySelectorAll('.assigned-element');
             previousAssigned.forEach(el => {
@@ -591,32 +671,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     el.parentNode.removeChild(el);
                 }
             });
-            
+
             // Make sure both sections are back to default state
             const categorySection = document.querySelector('.category-section');
             const difficultySection = document.querySelector('.difficulty-section');
-            
+
             // Clear shock round styling first
             document.body.classList.remove('shock-round');
             gameRoundScreen.classList.remove('shock-round');
-            
+
             // Safely remove/add classes
             const safeRemoveClass = (el, className) => {
                 if (el && el.classList) {
                     el.classList.remove(className);
                 }
             };
-            
+
             const safeAddClass = (el, className) => {
                 if (el && el.classList) {
                     el.classList.add(className);
                 }
             };
-            
+
             // Safely use DOM operations
             safeRemoveClass(categorySection, 'hidden');
             safeRemoveClass(difficultySection, 'hidden');
-            
+
             // Add trophy icon if this player is leading
             const leadingPlayerIndex = findLeadingPlayer();
             if (leadingPlayerIndex === gameState.currentPlayerIndex && gameState.players.length > 1 && currentPlayer.score > 0 && playerNameEl) {
@@ -625,28 +705,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 </svg>`;
                 playerNameEl.innerHTML = `<strong>${currentPlayer.name}</strong> ${crownIcon}`;
             }
-            
+
             // Check if this is a shock round
             if (gameState.isShockRound) {
                 setupShockRound(currentPlayer);
                 return;
             }
-            
+
             // Check if player has more than 20 points - automatic difficulty mode
             if (currentPlayer.score > 20) {
                 // Assign both category and difficulty randomly
                 const randomCategoryIndex = Math.floor(Math.random() * currentPlayer.categories.length);
                 gameState.currentCategory = currentPlayer.categories[randomCategoryIndex];
-                
+
                 // Choose a random difficulty
                 const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
                 const randomDifficultyIndex = Math.floor(Math.random() * difficulties.length);
                 gameState.currentDifficulty = difficulties[randomDifficultyIndex];
-                
+
                 // Hide both category and difficulty sections
                 safeAddClass(categorySection, 'hidden');
                 safeAddClass(difficultySection, 'hidden');
-                
+
                 // Show assigned category and difficulty
                 const playerInfoSection = document.querySelector('.player-info');
                 if (playerInfoSection) {
@@ -655,66 +735,66 @@ document.addEventListener('DOMContentLoaded', function() {
                     difficultyModeEl.className = 'assigned-element';
                     difficultyModeEl.style.backgroundColor = 'rgba(255, 152, 0, 0.2)';
                     difficultyModeEl.style.border = '2px solid rgba(255, 152, 0, 0.4)';
-                    
+
                     const lang = getUserLanguage();
-                    const modeText = lang === 'it' ? 
-                        'Modalità Difficile Attivata (>20 punti): Categoria e difficoltà assegnate automaticamente. Tutte le risposte valgono 1 punto!' : 
+                    const modeText = lang === 'it' ?
+                        'Modalità Difficile Attivata (>20 punti): Categoria e difficoltà assegnate automaticamente. Tutte le risposte valgono 1 punto!' :
                         'Hard Mode Activated (>20 points): Category and difficulty automatically assigned. All answers worth 1 point!';
-                    
+
                     difficultyModeEl.innerHTML = `<h3 style="color:#ff9800">${modeText}</h3>`;
                     playerInfoSection.appendChild(difficultyModeEl);
-                    
+
                     // Show assigned category
                     const assignedCategoryEl = document.createElement('div');
                     assignedCategoryEl.className = 'assigned-element';
                     const translatedCategory = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
                     assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
                     playerInfoSection.appendChild(assignedCategoryEl);
-                    
+
                     // Show assigned difficulty
                     const assignedDifficultyEl = document.createElement('div');
                     assignedDifficultyEl.className = 'assigned-element';
                     const translatedDifficulty = getGameTranslation(gameState.currentDifficulty);
                     assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
                     playerInfoSection.appendChild(assignedDifficultyEl);
-                    
+
                     // Add a continue button
                     const continueBtn = document.createElement('button');
                     continueBtn.className = 'primary-button';
                     continueBtn.textContent = lang === 'it' ? 'Continua' : 'Continue';
-                    continueBtn.addEventListener('click', function() {
+                    continueBtn.addEventListener('click', function () {
                         showQuestion();
                     });
                     playerInfoSection.appendChild(continueBtn);
                 }
-                
+
                 // Flag to indicate hard mode is active (for points calculation)
                 gameState.hardModeActive = true;
             } else {
                 // Regular round - continue with normal logic
                 // Reset hard mode flag
                 gameState.hardModeActive = false;
-                
+
                 // Determine if we should assign category or difficulty
                 // Use rounds completed and player index to alternate
                 const shouldAssignCategory = (gameState.roundsCompleted + gameState.currentPlayerIndex) % 2 === 0;
-                
+
                 // Store the current mode in the game state
                 gameState.currentMode = shouldAssignCategory ? 'assignCategory' : 'assignDifficulty';
-                
+
                 if (shouldAssignCategory) {
                     // Assign a random category, let player choose from 2 random difficulties
                     const randomIndex = Math.floor(Math.random() * currentPlayer.categories.length);
                     gameState.currentCategory = currentPlayer.categories[randomIndex];
-                    
+
                     // Select 2 random difficulties (bambino and facile cannot appear together)
                     const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
                     gameState.availableOptions = getRandomDifficulties(allDifficulties, 2);
-                    
+
                     // Hide category section, show difficulty section
                     safeAddClass(categorySection, 'hidden');
                     safeRemoveClass(difficultySection, 'hidden');
-                    
+
                     // Show assigned category
                     const playerInfoSection = document.querySelector('.player-info');
                     if (playerInfoSection) {
@@ -724,11 +804,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         assignedCategoryEl.innerHTML = `<h3>${getGameTranslation('categoryLabel')} ${translatedCategory}</h3>`;
                         playerInfoSection.appendChild(assignedCategoryEl);
                     }
-                    
+
                     // Update instruction text
                     const difficultyTitle = document.getElementById('difficulty-title');
                     if (difficultyTitle) difficultyTitle.textContent = getGameTranslation('difficultyTitle');
-                    
+
                     // Show only the 2 random difficulties
                     updateDifficultyButtons(gameState.availableOptions);
                 } else {
@@ -736,14 +816,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     const difficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
                     const randomIndex = Math.floor(Math.random() * difficulties.length);
                     gameState.currentDifficulty = difficulties[randomIndex];
-                    
+
                     // Select 2 random categories from player's categories
                     gameState.availableOptions = getRandomSubset(currentPlayer.categories, 2);
-                    
+
                     // Hide difficulty section, show category section
                     safeAddClass(difficultySection, 'hidden');
                     safeRemoveClass(categorySection, 'hidden');
-                    
+
                     // Show assigned difficulty
                     const playerInfoSection = document.querySelector('.player-info');
                     if (playerInfoSection) {
@@ -753,60 +833,60 @@ document.addEventListener('DOMContentLoaded', function() {
                         assignedDifficultyEl.innerHTML = `<h3>${getGameTranslation('difficultyLabel')} ${translatedDifficulty}</h3>`;
                         playerInfoSection.appendChild(assignedDifficultyEl);
                     }
-                    
+
                     // Update instruction text
                     const categoryTitle = document.getElementById('category-selection-title');
                     if (categoryTitle) categoryTitle.textContent = getGameTranslation('categorySelectionTitle');
-                    
+
                     // Generate category buttons - only for the 2 random categories
                     generateCategoryButtons(gameState.availableOptions);
                 }
             }
-            
+
             // Show game round screen
             showScreen(screens.gameRound);
         } catch (error) {
             console.error("Error in setupGameRound:", error);
-            
+
             // Try to recover by simply advancing to the next player
             setTimeout(() => {
                 gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
                 console.log("Error recovery: moving to player index:", gameState.currentPlayerIndex);
-                
+
                 // Simple screen transition to welcome screen for recovery
                 showScreen(screens.welcome);
             }, 100);
         }
     }
-    
+
     // Setup a shock round where both category and difficulty are assigned
     function setupShockRound(player) {
         console.log("Setting up shock round for", player.name);
-        
+
         // FIXME: Clear any existing shock round elements first
         document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
             if (el && el.parentNode) {
                 el.parentNode.removeChild(el);
             }
         });
-        
+
         // Remove existing shock buttons
         document.querySelectorAll('.primary-button').forEach(el => {
             if (el && el.textContent && (
-                el.textContent.includes('Inizia Turno Shock') || 
+                el.textContent.includes('Inizia Turno Shock') ||
                 el.textContent.includes('Start Shock Round')
             ) && el.parentNode) {
                 el.parentNode.removeChild(el);
             }
         });
-        
+
         // Apply shock round styling
         document.body.classList.add('shock-round');
         const gameRoundScreen = document.getElementById('game-round-screen');
         if (gameRoundScreen) {
             gameRoundScreen.classList.add('shock-round');
         }
-        
+
         // Create shock round style
         if (!document.getElementById('shock-round-style')) {
             const style = document.createElement('style');
@@ -868,161 +948,167 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             document.head.appendChild(style);
         }
-        
+
         // Add shock round title
         const shockTitle = document.createElement('h2');
         shockTitle.className = 'shock-title';
         shockTitle.textContent = getUserLanguage() === 'it' ? 'TURNO SHOCK!' : 'SHOCK ROUND!';
-        
+
         // Add shock round info
         const shockInfo = document.createElement('div');
         shockInfo.className = 'shock-info';
-        shockInfo.textContent = getUserLanguage() === 'it' ? 
-            'Hai raggiunto 10 punti! In questo turno, sia la categoria che la difficoltà sono assegnate casualmente!' : 
+        shockInfo.textContent = getUserLanguage() === 'it' ?
+            'Hai raggiunto 10 punti! In questo turno, sia la categoria che la difficoltà sono assegnate casualmente!' :
             'You\'ve reached 10 points! In this round, both category and difficulty are randomly assigned!';
-        
+
         // Add penalty info
         const penaltyInfo = document.createElement('p');
         penaltyInfo.className = 'shock-penalty';
-        penaltyInfo.textContent = getUserLanguage() === 'it' ? 
-            'Attenzione: Se rispondi in modo errato, salterai il tuo prossimo turno!' : 
+        penaltyInfo.textContent = getUserLanguage() === 'it' ?
+            'Attenzione: Se rispondi in modo errato, salterai il tuo prossimo turno!' :
             'Warning: If you answer incorrectly, you will skip your next turn!';
         shockInfo.appendChild(penaltyInfo);
-        
+
         // Safety check to ensure player categories exist
         if (!player.categories || player.categories.length === 0) {
             console.error("Player has no categories:", player);
             // Assign default categories if needed
             player.categories = Object.keys(gameState.questions).slice(0, 3);
         }
-        
+
         // Randomly select both category and difficulty
         const allDifficulties = ['bambino', 'facile', 'medio', 'esperto', 'laureato'];
         // With bias towards higher difficulties
         const weightedDifficulties = [...allDifficulties, 'esperto', 'laureato', 'laureato'];
         const randomDifficultyIndex = Math.floor(Math.random() * weightedDifficulties.length);
         gameState.currentDifficulty = weightedDifficulties[randomDifficultyIndex];
-        
+
         const randomCategoryIndex = Math.floor(Math.random() * player.categories.length);
         gameState.currentCategory = player.categories[randomCategoryIndex];
-        
-        console.log("Shock round assigned: Category =", gameState.currentCategory, 
-                    "Difficulty =", gameState.currentDifficulty);
-        
+
+        console.log("Shock round assigned: Category =", gameState.currentCategory,
+            "Difficulty =", gameState.currentDifficulty);
+
         // Create container for the assigned values
         const assignedContainer = document.createElement('div');
         assignedContainer.className = 'shock-assigned';
-        
+
         // Display assigned category 
         const categoryTitle = document.createElement('h3');
         categoryTitle.textContent = getUserLanguage() === 'it' ? 'Categoria:' : 'Category:';
-        
+
         const categoryValue = document.createElement('p');
         categoryValue.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-        
+
         // Display assigned difficulty
         const difficultyTitle = document.createElement('h3');
         difficultyTitle.textContent = getUserLanguage() === 'it' ? 'Difficoltà:' : 'Difficulty:';
-        
+
         const difficultyValue = document.createElement('p');
         difficultyValue.textContent = getGameTranslation(gameState.currentDifficulty) || gameState.currentDifficulty;
-        
+
         // Continue button
         const continueBtn = document.createElement('button');
         continueBtn.className = 'primary-button';
         continueBtn.style.marginTop = '30px';
         continueBtn.textContent = getUserLanguage() === 'it' ? 'Inizia Turno Shock' : 'Start Shock Round';
-        
+
         // Add all elements to the container
         assignedContainer.appendChild(categoryTitle);
         assignedContainer.appendChild(categoryValue);
         assignedContainer.appendChild(difficultyTitle);
         assignedContainer.appendChild(difficultyValue);
-        
+
         // Clear game round screen content and add shock elements
         const screenContent = document.querySelector('#game-round-screen .screen-content');
         if (!screenContent) {
             console.error("Cannot find game round screen content");
             return;
         }
-        
+
         // IMPORTANT: Clear all existing content first
         screenContent.innerHTML = '';
-        
+
         // Preserve player info
         const playerInfo = document.querySelector('.player-info');
         const newPlayerInfo = document.createElement('div');
         newPlayerInfo.className = 'player-info';
-        
+
         if (playerInfo) {
             newPlayerInfo.innerHTML = playerInfo.innerHTML;
         } else {
             newPlayerInfo.innerHTML = `<h2><span id="current-player-name">${player.name}</span> - <span id="current-player-score">${player.score}</span> ${getGameTranslation('points')}</h2>`;
         }
-        
+
         // Add all elements to the screen content
         screenContent.appendChild(newPlayerInfo);
         screenContent.appendChild(shockTitle);
         screenContent.appendChild(shockInfo);
         screenContent.appendChild(assignedContainer);
         screenContent.appendChild(continueBtn);
-        
+
         // Add event listener with a proper error handler
-        continueBtn.addEventListener('click', function() {
+        continueBtn.addEventListener('click', function () {
             console.log("Shock round start button clicked");
-            
+
             try {
                 // Validate we have both category and difficulty before proceeding
                 if (!gameState.currentCategory) {
                     console.error("No category selected for shock round");
                     gameState.currentCategory = Object.keys(gameState.questions)[0];
                 }
-                
+
                 if (!gameState.currentDifficulty) {
                     console.error("No difficulty selected for shock round");
                     gameState.currentDifficulty = 'medio';
                 }
-                
-                console.log("Starting shock round with Category =", gameState.currentCategory, 
-                            "Difficulty =", gameState.currentDifficulty);
-                
+
+                console.log("Starting shock round with Category =", gameState.currentCategory,
+                    "Difficulty =", gameState.currentDifficulty);
+
                 handleShockRoundStart();
             } catch (error) {
                 console.error("Error starting shock round:", error);
-                
+
                 // Try to recover - move to next player
                 gameState.isShockRound = false;
                 gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
                 setupGameRound();
             }
         });
-        
+
         // Show game round screen
         showScreen(screens.gameRound);
     }
-    
+
     // Separate handler for shock round start
     function handleShockRoundStart() {
         console.log("Shock round start button clicked");
-        
+
         // Apply shock styling to question screen
         const questionScreen = document.getElementById('question-screen');
         if (questionScreen) {
             questionScreen.classList.add('shock-round');
         }
-        
+
         // Apply shock styling to result screen
         const resultScreen = document.getElementById('result-screen');
         if (resultScreen) {
             resultScreen.classList.add('shock-round');
         }
-        
+
+        // If AI mode, skip validation and go straight to showQuestion
+        if (gameState.gameMode === 'ai') {
+            showQuestion();
+            return;
+        }
+
         // Check for valid category and difficulty before proceeding
         if (!gameState.currentCategory || !gameState.currentDifficulty) {
-            console.error("Missing category or difficulty:", 
-                        "Category =", gameState.currentCategory, 
-                        "Difficulty =", gameState.currentDifficulty);
-                        
+            console.error("Missing category or difficulty:",
+                "Category =", gameState.currentCategory,
+                "Difficulty =", gameState.currentDifficulty);
+
             // Try a fallback - pick another random difficulty that exists
             if (gameState.questions && gameState.currentCategory && gameState.questions[gameState.currentCategory]) {
                 // Find available difficulties for this category
@@ -1032,7 +1118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log("Using fallback difficulty:", gameState.currentDifficulty);
                 }
             }
-            
+
             // If still no valid category/difficulty, try to find any valid combination
             if (!gameState.currentCategory || !gameState.currentDifficulty) {
                 const allCategories = Object.keys(gameState.questions);
@@ -1041,9 +1127,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory]);
                     if (availableDifficulties.length > 0) {
                         gameState.currentDifficulty = availableDifficulties[0];
-                        console.log("Using emergency fallback:", 
-                                  "Category =", gameState.currentCategory, 
-                                  "Difficulty =", gameState.currentDifficulty);
+                        console.log("Using emergency fallback:",
+                            "Category =", gameState.currentCategory,
+                            "Difficulty =", gameState.currentDifficulty);
                     } else {
                         // Critical error - no valid combination found
                         alert('Error: No valid categories or difficulties available.');
@@ -1060,22 +1146,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-        
+
         // Make sure we have a valid question before proceeding
         const question = getRandomQuestion();
         if (!question) {
             console.error("No question found for category:", gameState.currentCategory, "difficulty:", gameState.currentDifficulty);
-            
+
             // Try to find another difficulty that has questions for this category
             if (gameState.questions && gameState.currentCategory && gameState.questions[gameState.currentCategory]) {
                 const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory])
-                    .filter(diff => gameState.questions[gameState.currentCategory][diff] && 
-                                    gameState.questions[gameState.currentCategory][diff].length > 0);
-                
+                    .filter(diff => gameState.questions[gameState.currentCategory][diff] &&
+                        gameState.questions[gameState.currentCategory][diff].length > 0);
+
                 if (availableDifficulties.length > 0) {
                     gameState.currentDifficulty = availableDifficulties[0];
                     console.log("Trying alternative difficulty:", gameState.currentDifficulty);
-                    
+
                     // Try again with new difficulty
                     const newQuestion = getRandomQuestion();
                     if (newQuestion) {
@@ -1105,41 +1191,41 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             gameState.currentQuestion = question;
         }
-        
+
         // Update question display
         const currentCategoryEl = document.getElementById('current-category');
         const currentDifficultyEl = document.getElementById('current-difficulty');
         const questionTextEl = document.getElementById('question-text');
-        
+
         if (currentCategoryEl) {
             currentCategoryEl.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
         }
-        
+
         if (currentDifficultyEl) {
             currentDifficultyEl.textContent = getGameTranslation(gameState.currentDifficulty);
         }
-        
+
         if (questionTextEl) {
             questionTextEl.textContent = gameState.currentQuestion.question;
         }
-        
+
         // Remove any existing bambino warning
         const existingWarning = document.getElementById('bambino-game-warning');
         if (existingWarning) {
             existingWarning.remove();
         }
-        
+
         // Generate answer buttons
         const answerButtonsContainer = document.getElementById('answer-buttons');
         if (!answerButtonsContainer) {
             console.error("Cannot find answer buttons container");
             return;
         }
-        
+
         answerButtonsContainer.innerHTML = '';
-        
+
         const letters = ['A', 'B', 'C', 'D'];
-        
+
         // Add difficulty warning if bambino
         if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
             const warningDiv = document.createElement('div');
@@ -1147,18 +1233,18 @@ document.addEventListener('DOMContentLoaded', function() {
             warningDiv.style.color = 'red';
             warningDiv.style.fontWeight = 'bold';
             warningDiv.style.marginBottom = '10px';
-            
+
             // Use direct text based on language instead of translation key
             const lang = getUserLanguage();
-            warningDiv.textContent = '⚠️ ' + (lang === 'it' ? 
-                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
+            warningDiv.textContent = '⚠️ ' + (lang === 'it' ?
+                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' :
                 'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
-            
+
             if (answerButtonsContainer.parentNode) {
                 answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
             }
         }
-        
+
         // Add shock round penalty warning
         const shockWarningDiv = document.createElement('div');
         shockWarningDiv.id = 'shock-warning';
@@ -1169,89 +1255,89 @@ document.addEventListener('DOMContentLoaded', function() {
         shockWarningDiv.style.padding = '5px';
         shockWarningDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
         shockWarningDiv.style.borderRadius = '5px';
-        
-        shockWarningDiv.textContent = getUserLanguage() === 'it' ? 
-            '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' : 
+
+        shockWarningDiv.textContent = getUserLanguage() === 'it' ?
+            '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' :
             '⚠️ SHOCK ROUND: Wrong answer = Skip your next turn!';
-        
+
         if (answerButtonsContainer.parentNode) {
             answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
         }
-        
+
         gameState.currentQuestion.answers.forEach((answer, index) => {
             const button = document.createElement('button');
             button.className = 'answer-btn';
             button.dataset.index = index;
-            
+
             const letter = document.createElement('span');
             letter.className = 'answer-letter';
             letter.textContent = letters[index];
-            
+
             const text = document.createElement('span');
             text.className = 'answer-text';
             text.textContent = answer;
-            
+
             button.appendChild(letter);
             button.appendChild(text);
-            
-            button.addEventListener('click', function() {
+
+            button.addEventListener('click', function () {
                 handleAnswer(index);
             });
-            
+
             answerButtonsContainer.appendChild(button);
         });
-        
+
         // Add shock styling to timer
         const timerContainer = document.querySelector('.timer-container');
         if (timerContainer) {
             timerContainer.classList.add('shock');
         }
-        
+
         // Start the timer
         startTimer();
-        
+
         // Show question screen
         showScreen(screens.question);
     }
-    
+
     // Helper function to get a random subset of an array
     function getRandomSubset(array, size) {
         const shuffled = [...array].sort(() => 0.5 - Math.random());
         return shuffled.slice(0, size);
     }
-    
+
     // Helper function to get random difficulties with constraints
     function getRandomDifficulties(difficulties, size) {
         // If we want both bambino and facile to never appear together
         const includesBambino = Math.random() < 0.5;
-        
+
         if (includesBambino) {
             // If we include bambino, we cannot include facile
             const filteredDiffs = difficulties.filter(diff => diff !== 'facile');
             const bambinoIndex = filteredDiffs.indexOf('bambino');
-            
+
             // Generate a random index excluding bambino's index
             let randomIndex;
             do {
                 randomIndex = Math.floor(Math.random() * filteredDiffs.length);
             } while (randomIndex === bambinoIndex);
-            
+
             return ['bambino', filteredDiffs[randomIndex]];
         } else {
             // If we include facile, we cannot include bambino
             const filteredDiffs = difficulties.filter(diff => diff !== 'bambino');
             const facileIndex = filteredDiffs.indexOf('facile');
-            
+
             // We can either include facile or not
             const includeFacile = Math.random() < 0.6; // 60% chance to include facile
-            
+
             if (includeFacile) {
                 // Include facile and one other (not bambino)
                 let randomIndex;
                 do {
                     randomIndex = Math.floor(Math.random() * filteredDiffs.length);
                 } while (randomIndex === facileIndex);
-                
+
                 return ['facile', filteredDiffs[randomIndex]];
             } else {
                 // Just get 2 random difficulties excluding both bambino and facile
@@ -1260,23 +1346,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     // Update difficulty buttons to show only the available options
     function updateDifficultyButtons(availableDifficulties) {
         const difficultyButtons = document.querySelectorAll('.difficulty-btn');
-        
+
         difficultyButtons.forEach(button => {
             const difficulty = button.getAttribute('data-difficulty');
-            
+
             // Remove any existing warning labels
             const existingLabel = button.querySelector('.difficulty-warning');
             if (existingLabel) {
                 existingLabel.remove();
             }
-            
+
             if (availableDifficulties.includes(difficulty)) {
                 button.style.display = 'block';
-                
+
                 // Add warning for bambino difficulty
                 if (difficulty === 'bambino') {
                     // Remove standard point display for bambino
@@ -1284,16 +1370,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (pointsDisplay) {
                         pointsDisplay.style.display = 'none';
                     }
-                    
+
                     const warningLabel = document.createElement('span');
                     warningLabel.className = 'difficulty-warning';
-                    
+
                     // Use direct text based on language instead of translation key
                     const lang = getUserLanguage();
-                    warningLabel.textContent = lang === 'it' ? 
-                        '(1/-2 punti & 5s tempo)' : 
+                    warningLabel.textContent = lang === 'it' ?
+                        '(1/-2 punti & 5s tempo)' :
                         '(1/-2 points & 5s time)';
-                    
+
                     warningLabel.style.fontSize = '0.8em';
                     warningLabel.style.color = 'red';
                     warningLabel.style.display = 'block';
@@ -1310,70 +1396,70 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Find the player with the highest score
     function findLeadingPlayer() {
         if (gameState.players.length === 0) return -1;
-        
+
         let maxScore = -1;
         let leadingPlayerIndex = -1;
-        
+
         gameState.players.forEach((player, index) => {
             if (player.score > maxScore) {
                 maxScore = player.score;
                 leadingPlayerIndex = index;
             }
         });
-        
+
         return leadingPlayerIndex;
     }
-    
+
     // Generate category buttons for the current player
     function generateCategoryButtons(categories) {
         const container = document.getElementById('category-buttons');
         container.innerHTML = '';
-        
+
         categories.forEach(category => {
             const button = document.createElement('button');
             button.className = 'player-category-btn';
             button.dataset.category = category;
             button.textContent = getGameTranslation('categories', category) || category;
-            
-            button.addEventListener('click', function() {
+
+            button.addEventListener('click', function () {
                 selectCategory(category);
             });
-            
+
             container.appendChild(button);
         });
     }
-    
+
     // Handle category selection
     function selectCategory(category) {
         gameState.currentCategory = category;
         showQuestion();
     }
-    
+
     // Handle difficulty selection
     function selectDifficulty(difficulty) {
         console.log("Selected difficulty:", difficulty);
         gameState.currentDifficulty = difficulty;
         showQuestion();
     }
-    
+
     // Get a random question for the current category and difficulty
     function getRandomQuestion() {
         const category = gameState.currentCategory;
         const difficulty = gameState.currentDifficulty;
-        
+
         if (!gameState.questions[category] || !gameState.questions[category][difficulty]) {
             return null;
         }
-        
+
         const questions = gameState.questions[category][difficulty];
         if (!questions || questions.length === 0) {
             return null;
         }
-        
+
         // Initialize tracking for this category and difficulty if needed
         if (!gameState.shownQuestions[category]) {
             gameState.shownQuestions[category] = {};
@@ -1381,16 +1467,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!gameState.shownQuestions[category][difficulty]) {
             gameState.shownQuestions[category][difficulty] = new Set();
         }
-        
+
         // Get set of already shown question indices
         const shownIndices = gameState.shownQuestions[category][difficulty];
-        
+
         // If we've shown all questions in this category/difficulty, reset tracking
         if (shownIndices.size >= questions.length) {
             shownIndices.clear();
             console.log("All questions shown for " + category + "/" + difficulty + " - resetting tracking");
         }
-        
+
         // Find an unshown question
         let availableIndices = [];
         for (let i = 0; i < questions.length; i++) {
@@ -1398,55 +1484,246 @@ document.addEventListener('DOMContentLoaded', function() {
                 availableIndices.push(i);
             }
         }
-        
+
         // Get a random index from available ones
         const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
-        
+
         // Mark this question as shown
         shownIndices.add(randomIndex);
-        
+
         return questions[randomIndex];
     }
-    
+
+    // Show a question to the current player
     // Show a question to the current player
     function showQuestion() {
-        // Get a random question
-        const question = getRandomQuestion();
-        if (!question) {
-            alert('Error: No questions available for this category and difficulty.');
-            return;
+        // Update question display elements initially
+        const currentCategoryEl = document.getElementById('current-category');
+        const currentDifficultyEl = document.getElementById('current-difficulty');
+        const questionTextEl = document.getElementById('question-text');
+        const answerButtons = document.getElementById('answer-buttons');
+        const timerDisplay = document.getElementById('timer-display');
+
+        // Reset state
+        answerButtons.innerHTML = '';
+        questionTextEl.textContent = '';
+        if (timerDisplay) timerDisplay.textContent = gameState.timeLeft;
+
+        if (currentCategoryEl) {
+            currentCategoryEl.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
         }
-        
-        gameState.currentQuestion = question;
-        
-        // Update question display
-        document.getElementById('current-category').textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-        document.getElementById('current-difficulty').textContent = getGameTranslation(gameState.currentDifficulty);
-        document.getElementById('question-text').textContent = question.question;
-        
-        // Remove any existing bambino warning before generating new answer buttons
+
+        if (currentDifficultyEl) {
+            currentDifficultyEl.textContent = getGameTranslation(gameState.currentDifficulty);
+        }
+
+        // Remove any existing bambino warning
         const existingWarning = document.getElementById('bambino-game-warning');
         if (existingWarning) {
             existingWarning.remove();
         }
-        
-        // Generate answer buttons
-        generateAnswerButtons(question);
-        
-        // Start the timer
-        startTimer();
-        
-        // Show question screen
+
+        // Show question screen immediately
         showScreen(screens.question);
+
+        if (gameState.gameMode === 'ai') {
+            generateAIQuestion(gameState.currentCategory, gameState.currentDifficulty)
+                .then(question => {
+                    displayQuestion(question);
+                })
+                .catch(err => {
+                    console.error("AI Error:", err);
+                    alert("Errore AI. Uso domanda di riserva.");
+                    // Fallback to placeholder
+                    const fallback = {
+                        question: "Errore generazione AI. Riprova.",
+                        answers: ["A", "B", "C", "D"],
+                        correctIndex: 0
+                    };
+                    displayQuestion(fallback);
+                });
+        } else {
+            // Standard logic
+            const question = getRandomQuestion();
+            if (!question) {
+                alert('Error: No questions available for this category and difficulty.');
+                return;
+            }
+
+            gameState.currentQuestion = question;
+
+            // Display standard question
+            displayQuestion(question);
+        }
     }
-    
+
+
+
+    function displayQuestion(question) {
+        gameState.currentQuestion = question;
+        const questionText = document.getElementById('question-text');
+        const answerButtons = document.getElementById('answer-buttons');
+
+        questionText.textContent = question.question;
+
+        question.answers.forEach((answer, index) => {
+            const button = document.createElement('div');
+            button.className = 'answer-btn';
+
+            const letterSpan = document.createElement('span');
+            letterSpan.className = 'answer-letter';
+            letterSpan.textContent = String.fromCharCode(65 + index);
+
+            const textSpan = document.createElement('span');
+            textSpan.className = 'answer-text';
+            textSpan.textContent = answer;
+
+            button.appendChild(letterSpan);
+            button.appendChild(textSpan);
+
+            button.addEventListener('click', function () {
+                handleAnswer(index);
+            });
+
+            answerButtons.appendChild(button);
+        });
+
+        startTimer();
+    }
+
+    async function generateAIQuestion(category, difficulty, retryCount = 0) {
+        const loadingEl = document.getElementById('ai-loading');
+        const questionText = document.getElementById('question-text');
+
+        if (retryCount === 0) {
+            loadingEl.classList.remove('hidden');
+            questionText.classList.add('hidden');
+        }
+
+        let difficultyPrompt = "";
+        if (difficulty === 'bambino') {
+            difficultyPrompt = "Livello: BAMBINO (5-6 anni). Usa un linguaggio semplicissimo, domande dirette e ovvie. Niente parole difficili.";
+        } else {
+            difficultyPrompt = `Difficoltà: "${difficulty}" (su scala: bambino, facile, medio, esperto, laureato).`;
+        }
+
+        // Add history to prompt to avoid repetition
+        let historyPrompt = "";
+        if (gameState.aiQuestionHistory && gameState.aiQuestionHistory.length > 0) {
+            // Get last 20 questions for this category to keep prompt size manageable
+            const categoryHistory = gameState.aiQuestionHistory
+                .filter(q => q.category === category)
+                .slice(-20)
+                .map(q => q.question);
+
+            if (categoryHistory.length > 0) {
+                historyPrompt = `NON ripetere nessuna di queste domande già fatte: ${JSON.stringify(categoryHistory)}.`;
+            }
+        }
+
+        const prompt = `Genera una domanda a risposta multipla (4 opzioni) in italiano.
+        Argomento: "${category}".
+        ${difficultyPrompt}
+        ${historyPrompt}
+        
+        REGOLE IMPORTANTI:
+        1. La domanda deve essere BREVE (max 20 parole).
+        2. Le risposte devono essere BREVI (max 10 parole).
+        3. Tutte le 4 risposte devono avere LUNGHEZZA SIMILE. Non fare la risposta corretta molto più lunga delle altre.
+        4. Se l'argomento è specifico, assicurati che la risposta sia corretta.
+        5. CRUCIALE: Le 3 risposte sbagliate devono essere PLAUSIBILI (pertinenti alla categoria) ma SBAGLIATE per la domanda specifica. Esempio: se chiedi "chi attacca ad area" in Clash Royale, metti carte che NON attaccano ad area (es: Arcieri), non mettere "Pikachu" o cose a caso.
+        
+        Rispondi SOLO con un JSON valido in questo formato:
+        {
+            "question": "testo della domanda",
+            "answers": ["opzione A", "opzione B", "opzione C", "opzione D"],
+            "correctIndex": 0 (indice della risposta corretta 0-3)
+        }`;
+
+        try {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${gameState.apiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{ text: prompt }]
+                    }]
+                })
+            });
+
+            if (response.status === 429) {
+                console.warn(`Rate limit hit (429). Retrying... Attempt ${retryCount + 1}`);
+                if (retryCount < 3) {
+                    // Exponential backoff: 2s, 4s, 8s
+                    const waitTime = Math.pow(2, retryCount + 1) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, waitTime));
+                    return generateAIQuestion(category, difficulty, retryCount + 1);
+                } else {
+                    throw new Error("Rate limit exceeded after retries");
+                }
+            }
+
+            if (!response.ok) {
+                throw new Error(`API Error: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+                throw new Error("Invalid API response structure");
+            }
+
+            const text = data.candidates[0].content.parts[0].text;
+
+            // Clean markdown if present
+            const jsonStr = text.replace(/```json/g, '').replace(/```/g, '').trim();
+            const questionData = JSON.parse(jsonStr);
+
+            // Shuffle answers to avoid "A" bias (LLMs tend to put correct answer first)
+            const correctAnswer = questionData.answers[questionData.correctIndex];
+
+            // Fisher-Yates shuffle
+            for (let i = questionData.answers.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questionData.answers[i], questionData.answers[j]] = [questionData.answers[j], questionData.answers[i]];
+            }
+
+            // Update correctIndex to match new position
+            questionData.correctIndex = questionData.answers.indexOf(correctAnswer);
+
+            // Save to history
+            if (!gameState.aiQuestionHistory) gameState.aiQuestionHistory = [];
+            gameState.aiQuestionHistory.push({
+                category: category,
+                question: questionData.question
+            });
+
+            loadingEl.classList.add('hidden');
+            questionText.classList.remove('hidden');
+
+            return questionData;
+
+        } catch (error) {
+            console.error("AI Generation Error:", error);
+
+            // If we've exhausted retries or hit another error, show fallback but clean up UI first
+            if (retryCount === 0) { // Only handle UI cleanup on the initial call stack
+                loadingEl.classList.add('hidden');
+                questionText.classList.remove('hidden');
+            }
+            throw error;
+        }
+    }
+
     // Generate answer buttons for the question
     function generateAnswerButtons(question) {
         const container = document.getElementById('answer-buttons');
         container.innerHTML = '';
-        
+
         const letters = ['A', 'B', 'C', 'D'];
-        
+
         // Add difficulty warning if bambino
         if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
             const warningDiv = document.createElement('div');
@@ -1454,16 +1731,16 @@ document.addEventListener('DOMContentLoaded', function() {
             warningDiv.style.color = 'red';
             warningDiv.style.fontWeight = 'bold';
             warningDiv.style.marginBottom = '10px';
-            
+
             // Use direct text based on language instead of translation key
             const lang = getUserLanguage();
-            warningDiv.textContent = '⚠️ ' + (lang === 'it' ? 
-                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' : 
+            warningDiv.textContent = '⚠️ ' + (lang === 'it' ?
+                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' :
                 'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
-            
+
             container.parentNode.insertBefore(warningDiv, container);
         }
-        
+
         // Create an array of answer objects with their original indexes
         const answerObjects = question.answers.map((answer, index) => {
             return {
@@ -1471,46 +1748,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 isCorrect: index === question.correctIndex
             };
         });
-        
+
         // Shuffle the answers
         const shuffledAnswers = shuffleArray([...answerObjects]);
-        
+
         // Update the current question's correct index
         let newCorrectIndex = -1;
-        
+
         // Generate the answer buttons with the shuffled answers
         shuffledAnswers.forEach((answer, index) => {
             // Track the new index of the correct answer
             if (answer.isCorrect) {
                 newCorrectIndex = index;
             }
-            
+
             const button = document.createElement('button');
             button.className = 'answer-btn';
             button.dataset.index = index;
-            
+
             const letter = document.createElement('span');
             letter.className = 'answer-letter';
             letter.textContent = letters[index];
-            
+
             const text = document.createElement('span');
             text.className = 'answer-text';
             text.textContent = answer.text;
-            
+
             button.appendChild(letter);
             button.appendChild(text);
-            
-            button.addEventListener('click', function() {
+
+            button.addEventListener('click', function () {
                 handleAnswer(index);
             });
-            
+
             container.appendChild(button);
         });
-        
+
         // Update the correct index in the current question
         gameState.currentQuestion.correctIndex = newCorrectIndex;
     }
-    
+
     // Helper function to shuffle an array
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -1519,14 +1796,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return array;
     }
-    
+
     // Start the timer for a question
     function startTimer() {
         // Clear any existing timer
         if (gameState.timer) {
             clearInterval(gameState.timer);
         }
-        
+
         // Set time based on difficulty
         let timeLimit;
         switch (gameState.currentDifficulty) {
@@ -1537,15 +1814,15 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'laureato': timeLimit = 30; break;
             default: timeLimit = 20;
         }
-        
+
         gameState.timeLeft = timeLimit;
         updateTimerDisplay(gameState.timeLeft);
-        
+
         // Start the timer
         gameState.timer = setInterval(() => {
             gameState.timeLeft--;
             updateTimerDisplay(gameState.timeLeft);
-            
+
             if (gameState.timeLeft <= 0) {
                 // Time's up
                 clearInterval(gameState.timer);
@@ -1554,12 +1831,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 1000);
     }
-    
+
     // Update the timer display
     function updateTimerDisplay(timeLeft) {
         document.getElementById('timer-display').textContent = timeLeft;
     }
-    
+
     // Handle when time runs out
     function timeOut() {
         // Stop the timer (additional safety)
@@ -1567,9 +1844,9 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(gameState.timer);
             gameState.timer = null;
         }
-        
+
         console.log("Time's up triggered!");  // Debug log
-        
+
         // Display time's up message
         const answerFeedback = document.getElementById('answer-feedback');
         if (answerFeedback) {
@@ -1578,14 +1855,14 @@ document.addEventListener('DOMContentLoaded', function() {
             answerFeedback.style.fontWeight = "bold";
             answerFeedback.style.fontSize = "1.2em";
         }
-        
+
         // Forcefully disable all answer buttons
         const answerButtons = document.querySelectorAll('.answer-btn');
         answerButtons.forEach(button => {
             // Remove the click event listeners
             const newButton = button.cloneNode(true);
             button.parentNode.replaceChild(newButton, button);
-            
+
             // Style and disable the new button
             newButton.disabled = true;
             newButton.classList.add('disabled-btn');
@@ -1593,27 +1870,27 @@ document.addEventListener('DOMContentLoaded', function() {
             newButton.style.cursor = 'not-allowed';
             newButton.style.pointerEvents = 'none';  // Additional safety
         });
-        
+
         // Show the correct answer
         const correctIndex = gameState.currentQuestion.correctIndex;
         if (answerButtons[correctIndex]) {
             const correctButton = answerButtons[correctIndex];
             correctButton.classList.add('correct-answer-btn');
         }
-        
+
         // If this is a shock round, set flag to skip next turn (same as wrong answer)
         if (gameState.isShockRound) {
             console.log("Shock round timeout - setting skip next turn flag");
             const currentPlayer = gameState.players[gameState.currentPlayerIndex];
             currentPlayer.skipNextTurn = true;
         }
-        
+
         // Wait a moment then show the result screen
         setTimeout(() => {
             showResult(false, 0, true, gameState.isShockRound);
         }, 2000);
     }
-    
+
     // Disable all answer buttons
     function disableAnswerButtons() {
         const answerButtons = document.querySelectorAll('.answer-btn');
@@ -1621,7 +1898,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove the click event listeners
             const newButton = button.cloneNode(true);
             button.parentNode.replaceChild(newButton, button);
-            
+
             // Style and disable the new button
             newButton.disabled = true;
             newButton.classList.add('disabled-btn');
@@ -1630,7 +1907,7 @@ document.addEventListener('DOMContentLoaded', function() {
             newButton.style.pointerEvents = 'none';  // Additional safety
         });
     }
-    
+
     // Handle a player's answer
     function handleAnswer(answerIndex) {
         // Check if timer is done or buttons disabled
@@ -1638,28 +1915,28 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Answer blocked: timer done or buttons disabled");
             return;
         }
-        
+
         // Stop the timer
         clearInterval(gameState.timer);
         gameState.timer = null;
-        
+
         // Rest of function unchanged
         const isCorrect = answerIndex === gameState.currentQuestion.correctIndex;
         let pointsEarned = 0;
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         console.log("Current difficulty:", gameState.currentDifficulty);
         console.log("Player score before:", currentPlayer.score);
-        
+
         // Get all answer buttons
         const answerButtons = document.querySelectorAll('.answer-btn');
         const selectedButton = answerButtons[answerIndex];
         const correctButton = answerButtons[gameState.currentQuestion.correctIndex];
-        
+
         // Apply visual feedback
         if (isCorrect) {
             // Correct answer - highlight in green
             selectedButton.classList.add('correct-answer-btn');
-            
+
             // Check if hard mode is active
             if (gameState.hardModeActive) {
                 // In hard mode, all questions are worth 1 point
@@ -1675,12 +1952,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     default: pointsEarned = 1;
                 }
             }
-            
+
             // Update player's score
             currentPlayer.score += pointsEarned;
             console.log("Correct answer! Points earned:", pointsEarned);
             console.log("Player score after:", currentPlayer.score);
-            
+
             // Wait a moment before showing result screen
             setTimeout(() => {
                 showResult(true, pointsEarned);
@@ -1689,12 +1966,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Wrong answer - highlight selected in red, correct in green
             selectedButton.classList.add('incorrect-answer-btn');
             correctButton.classList.add('correct-answer-btn');
-            
+
             // If this is a shock round, set flag to skip next turn
             if (gameState.isShockRound) {
                 currentPlayer.skipNextTurn = true;
             }
-            
+
             // Apply penalty for bambino difficulty level
             if (gameState.currentDifficulty === 'bambino') {
                 console.log("BAMBINO PENALTY SHOULD APPLY!");
@@ -1712,38 +1989,38 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 console.log("Not bambino difficulty, no penalty applied");
             }
-            
+
             console.log("Wrong answer! Points earned:", pointsEarned);
             console.log("Player score after:", currentPlayer.score);
-            
+
             // Wait a moment before showing result screen
             setTimeout(() => {
                 showResult(false, pointsEarned, false, gameState.isShockRound);
             }, 1500);
         }
-        
+
         // Disable all buttons to prevent multiple answers
         disableAnswerButtons();
     }
-    
+
     // Show the result screen
     function showResult(isCorrect, points, isTimeUp = false, isShockPenalty = false) {
         console.log("Showing result screen");
-        
+
         try {
             const resultMessage = document.getElementById('result-message');
             const pointsEarned = document.getElementById('points-earned');
             const correctAnswerContainer = document.getElementById('correct-answer-container');
             const correctAnswerText = document.getElementById('correct-answer');
-            
+
             // Set result message and class
             if (isTimeUp) {
                 if (resultMessage) {
                     resultMessage.textContent = getGameTranslation('timeUp') || "Tempo scaduto!";
                     resultMessage.className = 'result-message incorrect';
                 }
-                
-                
+
+
                 if (correctAnswerContainer) correctAnswerContainer.classList.remove('hidden');
                 if (correctAnswerText && gameState.currentQuestion && gameState.currentQuestion.answers) {
                     // Store the original answer before shuffling
@@ -1778,23 +2055,23 @@ document.addEventListener('DOMContentLoaded', function() {
                         correctAnswerText.textContent = gameState.currentQuestion.answers[gameState.currentQuestion.correctIndex];
                     }
                 }
-                
+
                 // Add shock round penalty message if needed
                 if (isShockPenalty && resultMessage) {
                     const penaltyEl = document.createElement('p');
                     penaltyEl.style.color = 'red';
                     penaltyEl.style.fontWeight = 'bold';
                     penaltyEl.style.marginTop = '10px';
-                    penaltyEl.textContent = getUserLanguage() === 'it' ? 
-                        '⚠️ Penalità del Turno Shock: Salterai il tuo prossimo turno!' : 
+                    penaltyEl.textContent = getUserLanguage() === 'it' ?
+                        '⚠️ Penalità del Turno Shock: Salterai il tuo prossimo turno!' :
                         '⚠️ Shock Round Penalty: You will skip your next turn!';
                     resultMessage.appendChild(penaltyEl);
                 }
             }
-            
+
             // Set points earned
             if (pointsEarned) pointsEarned.textContent = points;
-            
+
             // Add hard mode message if active and correct answer
             if (gameState.hardModeActive && isCorrect && resultMessage) {
                 const hardModeEl = document.createElement('p');
@@ -1802,99 +2079,99 @@ document.addEventListener('DOMContentLoaded', function() {
                 hardModeEl.style.fontWeight = 'bold';
                 hardModeEl.style.marginTop = '10px';
                 hardModeEl.style.fontSize = '0.9rem';
-                hardModeEl.textContent = getUserLanguage() === 'it' ? 
-                    '(Modalità Difficile: Tutte le risposte valgono solo 1 punto)' : 
+                hardModeEl.textContent = getUserLanguage() === 'it' ?
+                    '(Modalità Difficile: Tutte le risposte valgono solo 1 punto)' :
                     '(Hard Mode: All answers are worth only 1 point)';
                 resultMessage.appendChild(hardModeEl);
             }
-            
+
             // IMPORTANT: Completely replace the continue button with a new one
             const continueButton = document.getElementById('continue-game');
-            
+
             if (!continueButton || !continueButton.parentNode) {
                 console.error("Continue button or its parent node not found");
                 // Try to show welcome screen as fallback
                 showScreen(screens.welcome);
                 return;
             }
-            
+
             const newContinueButton = document.createElement('button');
             newContinueButton.id = 'continue-game';
             newContinueButton.className = continueButton.className;
             newContinueButton.textContent = continueButton.textContent;
-            
+
             // Replace the button completely
             continueButton.parentNode.replaceChild(newContinueButton, continueButton);
-            
+
             // Add a click handler variable to ensure it's only handled once
             let handlerCalled = false;
-            
+
             // Add fresh event listener with console logs
-            newContinueButton.addEventListener('click', function(event) {
+            newContinueButton.addEventListener('click', function (event) {
                 // Prevent multiple clicks
                 if (handlerCalled) {
                     console.log("Handler already called, ignoring additional clicks");
                     return;
                 }
-                
+
                 handlerCalled = true;
                 console.log("CONTINUE button clicked - moving to next turn");
-                
+
                 // Immediately disable the button to prevent multiple clicks
                 newContinueButton.disabled = true;
                 newContinueButton.style.opacity = '0.5';
-                
+
                 // Clear all styling and flags immediately
                 document.body.classList.remove('shock-round');
-                
+
                 Object.values(screens).forEach(screen => {
                     if (screen && screen.classList) {
                         screen.classList.remove('shock-round');
                     }
                 });
-                
+
                 const timerContainer = document.querySelector('.timer-container');
                 if (timerContainer && timerContainer.classList) {
                     timerContainer.classList.remove('shock');
                 }
-                
+
                 // Remove any shock warnings
                 const shockWarning = document.getElementById('shock-warning');
                 if (shockWarning && shockWarning.parentNode) {
                     shockWarning.parentNode.removeChild(shockWarning);
                 }
-                
+
                 console.log("About to call forceNextTurn");
-                
+
                 try {
                     // Call forceNextTurn
                     forceNextTurn();
                 } catch (error) {
                     console.error("Error in forceNextTurn:", error);
-                    
+
                     // Fallback recovery - move to welcome screen
                     gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
                     console.log("Error recovery after continue: moving to player index:", gameState.currentPlayerIndex);
                     showScreen(screens.welcome);
                 }
-                
+
                 console.log("Called forceNextTurn");
             });
-            
+
             // Show result screen
             showScreen(screens.result);
-            
+
         } catch (error) {
             console.error("Error in showResult:", error);
             // Fallback - try to go to welcome screen
             showScreen(screens.welcome);
         }
     }
-    
+
     // Force next turn - completely separate from regular nextTurn to avoid any issues
     function forceNextTurn() {
         console.log("FORCE NEXT TURN STARTED");
-        
+
         try {
             // Check for winner first
             for (let i = 0; i < gameState.players.length; i++) {
@@ -1904,146 +2181,146 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
             }
-            
+
             // CLEAN TRANSITION: Instead of showing welcome screen, just clean up elements directly
             // This avoids the welcome screen flash
-            
+
             // IMPORTANT: Reset the shock round flag
             gameState.isShockRound = false;
-            
+
             // Thoroughly clean up shock round elements and styles
             console.log("Cleaning up shock round elements");
             document.body.classList.remove('shock-round');
-            
+
             Object.values(screens).forEach(screen => {
                 if (screen && screen.classList) {
                     screen.classList.remove('shock-round');
                 }
             });
-            
+
             const timerContainer = document.querySelector('.timer-container');
             if (timerContainer && timerContainer.classList) {
                 timerContainer.classList.remove('shock');
             }
-            
+
             // Remove any shock warnings
             const shockWarning = document.getElementById('shock-warning');
             if (shockWarning && shockWarning.parentNode) {
                 shockWarning.parentNode.removeChild(shockWarning);
             }
-            
+
             // Aggressively remove shock round elements
             document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
                 if (el && el.parentNode) {
                     el.parentNode.removeChild(el);
                 }
             });
-            
+
             // Remove shock buttons
             document.querySelectorAll('.primary-button').forEach(el => {
                 if (el && el.textContent && (
-                    el.textContent.includes('Inizia Turno Shock') || 
+                    el.textContent.includes('Inizia Turno Shock') ||
                     el.textContent.includes('Start Shock Round')
                 ) && el.parentNode) {
                     el.parentNode.removeChild(el);
                 }
             });
-            
+
             // Move to next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
             console.log("Moving to player index:", gameState.currentPlayerIndex);
-            
+
             // Check if this player should skip their turn
             if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
                 console.log("Player should skip turn");
-                
+
                 // Create skip message
                 showForceSkipMessage();
                 return;
             }
-            
+
             // Reset for next round
             gameState.currentCategory = null;
             gameState.currentDifficulty = null;
-            
+
             // Check if we've completed a round
             if (gameState.currentPlayerIndex === 0) {
                 gameState.roundsCompleted++;
                 console.log("Completed round:", gameState.roundsCompleted);
             }
-            
+
             // Check if next player needs a shock round
             const currentPlayer = gameState.players[gameState.currentPlayerIndex];
             const needsShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
             console.log("Next player needs shock round:", needsShockRound);
-            
+
             // Completely rebuild game round screen for next player
             rebuildGameRoundScreen();
-            
+
             // For smoother transition, directly move to the next player's turn
             if (needsShockRound) {
                 console.log("Setting up shock round for player:", currentPlayer.name);
                 currentPlayer.hadShockRound = true;
                 gameState.isShockRound = true;
-                
+
                 // First show the game screen with minimal delay
                 showScreen(screens.gameRound);
-                
+
                 // Then setup the shock round
                 setTimeout(() => {
                     setupShockRound(currentPlayer);
                 }, 50);
             } else {
                 console.log("Setting up regular game round");
-                
+
                 // Show game round screen and setup in one quick step
                 showScreen(screens.gameRound);
                 setupGameRound();
             }
-            
+
             console.log("FORCE NEXT TURN COMPLETED");
         } catch (error) {
             console.error("Error in forceNextTurn:", error);
-            
+
             // Try to recover by going to welcome screen as a last resort
             showScreen(screens.welcome);
         }
     }
-    
+
     // Function to completely rebuild game round screen HTML
     function rebuildGameRoundScreen() {
         console.log("Completely rebuilding game round screen");
-        
+
         // Get the game round screen
         const gameRoundScreen = document.getElementById('game-round-screen');
         if (!gameRoundScreen) {
             console.error("Game round screen not found");
             return;
         }
-        
+
         // DRASTIC MEASURE: Force remove shock round elements by ID
         document.querySelectorAll('.shock-title, .shock-info, .shock-assigned, .shock-penalty').forEach(el => {
             if (el && el.parentNode) {
                 el.parentNode.removeChild(el);
             }
         });
-        
+
         // DRASTIC MEASURE: Force remove any continue buttons from shock rounds
         document.querySelectorAll('.primary-button').forEach(el => {
             if (el && el.textContent && (
-                el.textContent.includes('Inizia Turno Shock') || 
+                el.textContent.includes('Inizia Turno Shock') ||
                 el.textContent.includes('Start Shock Round')
             ) && el.parentNode) {
                 el.parentNode.removeChild(el);
             }
         });
-        
+
         // Store original classes to preserve them
         const originalClasses = gameRoundScreen.className;
-        
+
         // Save the previous player info if it exists
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        
+
         // Completely rebuild the screen from scratch
         gameRoundScreen.innerHTML = `
             <div class="screen-content">
@@ -2083,28 +2360,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-        
+
         // Restore original classes EXCEPT shock-round
         gameRoundScreen.className = originalClasses.replace('shock-round', '');
-        
+
         // Remove shock-round class specifically again to be sure
         gameRoundScreen.classList.remove('shock-round');
-        
+
         // Re-add event listeners for difficulty buttons
         const difficultyButtons = gameRoundScreen.querySelectorAll('.difficulty-btn');
         difficultyButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const difficulty = this.getAttribute('data-difficulty');
                 selectDifficulty(difficulty);
             });
         });
     }
-    
+
     // Forced skip message with clean implementation
     function showForceSkipMessage() {
         // First make sure body is clean
         document.body.className = '';
-        
+
         // Create overlay
         const overlay = document.createElement('div');
         overlay.style.position = 'fixed';
@@ -2117,7 +2394,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.display = 'flex';
         overlay.style.alignItems = 'center';
         overlay.style.justifyContent = 'center';
-        
+
         // Create message container
         const messageBox = document.createElement('div');
         messageBox.style.backgroundColor = '#222';
@@ -2127,58 +2404,58 @@ document.addEventListener('DOMContentLoaded', function() {
         messageBox.style.maxWidth = '500px';
         messageBox.style.textAlign = 'center';
         messageBox.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.5)';
-        
+
         // Title
         const skipTitle = document.createElement('h2');
         skipTitle.style.color = 'red';
         skipTitle.style.marginBottom = '15px';
         skipTitle.textContent = getUserLanguage() === 'it' ? 'Turno Saltato!' : 'Turn Skipped!';
-        
+
         // Player name
         const playerName = document.createElement('p');
         playerName.style.fontSize = '1.2rem';
         playerName.style.marginBottom = '15px';
         playerName.textContent = gameState.players[gameState.currentPlayerIndex].name;
-        
+
         // Reason
         const reason = document.createElement('p');
         reason.style.marginBottom = '25px';
-        reason.textContent = getUserLanguage() === 'it' ? 
-            'Ha sbagliato nel Turno Shock e salta questo turno.' : 
+        reason.textContent = getUserLanguage() === 'it' ?
+            'Ha sbagliato nel Turno Shock e salta questo turno.' :
             'Failed in the Shock Round and skips this turn.';
-        
+
         // Button
         const continueBtn = document.createElement('button');
         continueBtn.className = 'primary-button';
         continueBtn.style.padding = '10px 20px';
         continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-        
+
         // Add elements to container
         messageBox.appendChild(skipTitle);
         messageBox.appendChild(playerName);
         messageBox.appendChild(reason);
         messageBox.appendChild(continueBtn);
         overlay.appendChild(messageBox);
-        
+
         // Add to body
         document.body.appendChild(overlay);
-        
+
         // Store the current player index to clear the flag properly
         const currentSkippingPlayerIndex = gameState.currentPlayerIndex;
-        
+
         // Clear skip flag for the current player immediately
         gameState.players[currentSkippingPlayerIndex].skipNextTurn = false;
-        
+
         // Add event listener
-        continueBtn.addEventListener('click', function() {
+        continueBtn.addEventListener('click', function () {
             // Remove overlay
             document.body.removeChild(overlay);
-            
+
             // Move to next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
-            
+
             // Force next turn with small delay
-            setTimeout(function() {
+            setTimeout(function () {
                 // Check if the NEXT player should skip their turn
                 if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
                     // If the next player also needs to skip, show skip message for them
@@ -2187,7 +2464,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Check for shock round
                     const player = gameState.players[gameState.currentPlayerIndex];
                     gameState.isShockRound = player.score >= 10 && !player.hadShockRound;
-                    
+
                     if (gameState.isShockRound) {
                         player.hadShockRound = true;
                         setupShockRound(player);
@@ -2198,50 +2475,50 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 50);
         });
     }
-    
+
     // Move to the next player's turn
     function nextTurn() {
         console.log("nextTurn called");
-        
+
         // Ensure shock round is cleaned up
         cleanupShockRound();
-        
+
         // Check if any player has reached the winning score
         const winnerIndex = checkForWinner();
-        
+
         if (winnerIndex !== -1) {
             // We have a winner
             showGameOver(winnerIndex);
             return;
         }
-        
+
         // Clean up any warning messages
         const existingWarning = document.getElementById('bambino-game-warning');
         if (existingWarning) {
             existingWarning.remove();
         }
-        
+
         // Move to next player
         gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
         console.log("Moving to player index:", gameState.currentPlayerIndex);
-        
+
         // Check if current player should skip their turn
         if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
             console.log("Player should skip turn");
-            
+
             // Display skipped turn message
             showSkippedTurnMessage();
             return;
         }
-        
+
         // Check if this player needs a shock round
         checkShockRoundAndSetup();
     }
-    
+
     // Show a message that the player's turn is skipped
     function showSkippedTurnMessage() {
         console.log("Showing skipped turn message");
-        
+
         const skipMessage = document.createElement('div');
         skipMessage.style.position = 'fixed';
         skipMessage.style.top = '50%';
@@ -2254,50 +2531,50 @@ document.addEventListener('DOMContentLoaded', function() {
         skipMessage.style.textAlign = 'center';
         skipMessage.style.zIndex = '1000';
         skipMessage.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.5)';
-        
+
         const skipTitle = document.createElement('h2');
         skipTitle.style.color = 'red';
         skipTitle.style.marginBottom = '10px';
-        skipTitle.textContent = getUserLanguage() === 'it' ? 
-            'Turno Saltato!' : 
+        skipTitle.textContent = getUserLanguage() === 'it' ?
+            'Turno Saltato!' :
             'Turn Skipped!';
-        
+
         const playerName = document.createElement('p');
         playerName.style.fontSize = '1.2rem';
         playerName.style.marginBottom = '15px';
         playerName.textContent = gameState.players[gameState.currentPlayerIndex].name;
-        
+
         const skipReason = document.createElement('p');
-        skipReason.textContent = getUserLanguage() === 'it' ? 
-            'Ha sbagliato nel Turno Shock e salta questo turno.' : 
+        skipReason.textContent = getUserLanguage() === 'it' ?
+            'Ha sbagliato nel Turno Shock e salta questo turno.' :
             'Failed in the Shock Round and skips this turn.';
-        
+
         const continueBtn = document.createElement('button');
         continueBtn.className = 'primary-button';
         continueBtn.style.marginTop = '20px';
         continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
-        
+
         skipMessage.appendChild(skipTitle);
         skipMessage.appendChild(playerName);
         skipMessage.appendChild(skipReason);
         skipMessage.appendChild(continueBtn);
-        
+
         document.body.appendChild(skipMessage);
-        
+
         // Store the current player index to clear the flag properly
         const currentSkippingPlayerIndex = gameState.currentPlayerIndex;
-        
+
         // Clear the skip flag so it only happens once
         gameState.players[currentSkippingPlayerIndex].skipNextTurn = false;
-        
+
         // Add event listener to continue button
-        continueBtn.addEventListener('click', function() {
+        continueBtn.addEventListener('click', function () {
             console.log("Skip message continue button clicked");
             document.body.removeChild(skipMessage);
             // Move to the next player
             gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
             console.log("After skip, moving to player:", gameState.currentPlayerIndex);
-            
+
             // Check if the NEXT player should also skip their turn
             if (gameState.players[gameState.currentPlayerIndex].skipNextTurn) {
                 // If the next player also needs to skip, show skip message for them
@@ -2314,39 +2591,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Helper function to check for shock round and setup
     function checkShockRoundAndSetup() {
         console.log("checkShockRoundAndSetup called");
-        
+
         const currentPlayer = gameState.players[gameState.currentPlayerIndex];
         console.log("Current player:", currentPlayer.name, "Score:", currentPlayer.score, "Had shock round:", currentPlayer.hadShockRound);
-        
+
         gameState.isShockRound = currentPlayer.score >= 10 && !currentPlayer.hadShockRound;
         console.log("Is shock round:", gameState.isShockRound);
-        
+
         // Track that player had a shock round so it only happens once
         if (gameState.isShockRound) {
             currentPlayer.hadShockRound = true;
         }
-        
+
         // If we've gone through all players, increment rounds completed
         if (gameState.currentPlayerIndex === 0) {
             gameState.roundsCompleted++;
         }
-        
+
         // Reset game state variables
         gameState.currentCategory = null;
         gameState.currentDifficulty = null;
         gameState.currentQuestion = null; // Also reset current question to prevent stale state
-        
+
         // Only set up game round if it's a shock round
         // For non-shock rounds, setupGameRound will be called from the caller function
         if (gameState.isShockRound) {
             setupGameRound();
         }
     }
-    
+
     // Check if any player has reached the winning score
     function checkForWinner() {
         // Check each player's score
@@ -2358,26 +2635,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-        
+
         return -1;
     }
-    
+
     // Show the game over screen
     function showGameOver(winnerIndex) {
         const winner = gameState.players[winnerIndex];
-        
+
         // Trophy icon SVG
         const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
         </svg>`;
-        
+
         // Update winner info
         document.getElementById('winner-name').innerHTML = `${winner.name} ${crownIcon}`;
         document.getElementById('winner-score').textContent = winner.score;
-        
+
         // Generate final scores list
         generateFinalScoresList();
-        
+
         // Show game over screen
         showScreen(screens.gameOver);
         gameState.gameOver = true;
@@ -2391,7 +2668,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return Math.random() * (max - min) + min;
         }
 
-        const interval = setInterval(function() {
+        const interval = setInterval(function () {
             const timeLeft = animationEnd - Date.now();
 
             if (timeLeft <= 0) {
@@ -2399,7 +2676,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const particleCount = 50 * (timeLeft / duration);
-            
+
             // since particles fall down, start a bit higher than random
             confetti({
                 ...defaults,
@@ -2413,23 +2690,23 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, 250);
     }
-    
+
     // Generate the final scores list
     function generateFinalScoresList() {
         const container = document.getElementById('final-scores-list');
         container.innerHTML = '';
-        
+
         // Sort players by score (highest first)
         const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
-        
+
         // Trophy icon SVG
         const crownIcon = `<svg class="trophy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3,11 L7,3 L12,5 L17,3 L21,11 L3,11 Z M12,13 L12,19 M7,19 L17,19" />
         </svg>`;
-        
+
         sortedPlayers.forEach((player, index) => {
             const listItem = document.createElement('li');
-            
+
             const name = document.createElement('span');
             name.className = 'player-name';
             // Add trophy icon to the winner (first in sorted list)
@@ -2438,17 +2715,17 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 name.textContent = player.name;
             }
-            
+
             const score = document.createElement('span');
             score.className = 'player-score';
             score.textContent = player.score;
-            
+
             listItem.appendChild(name);
             listItem.appendChild(score);
             container.appendChild(listItem);
         });
     }
-    
+
     // Reset the game to start over
     function resetGame() {
         gameState.players = [];
@@ -2461,52 +2738,52 @@ document.addEventListener('DOMContentLoaded', function() {
         gameState.currentCategory = null;
         gameState.roundsCompleted = 0;
         gameState.gameOver = false;
-        
+
         // Clear any active timer
         if (gameState.timer) {
             clearInterval(gameState.timer);
             gameState.timer = null;
         }
-        
+
         // Reset shown questions tracking
         gameState.shownQuestions = {};
     }
-    
+
     // Helper function to show a specific screen
     function showScreen(screen) {
         // Hide all screens
         Object.values(screens).forEach(s => {
             s.classList.remove('active');
         });
-        
+
         // Show the specified screen
         screen.classList.add('active');
     }
-    
+
     // Cleanup shock round styling and elements
     function cleanupShockRound() {
         console.log("Cleaning up shock round");
-        
+
         // Remove shock styling from body
         document.body.classList.remove('shock-round');
-        
+
         // Remove shock styling from all screens
         Object.values(screens).forEach(screen => {
             screen.classList.remove('shock-round');
         });
-        
+
         // Remove shock styling from timer
         const timerContainer = document.querySelector('.timer-container');
         if (timerContainer) {
             timerContainer.classList.remove('shock');
         }
-        
+
         // Remove any shock warnings
         const shockWarning = document.getElementById('shock-warning');
         if (shockWarning) {
             shockWarning.remove();
         }
-        
+
         // Reset shock round flag
         gameState.isShockRound = false;
     }

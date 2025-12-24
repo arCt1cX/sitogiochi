@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>Quizzy - Gioco Quiz a squadre | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a Quizzy: un divertente party game a quiz da fare con gli amici. Scegli categorie, difficoltà e sfida i tuoi amici in questo gioco di cultura generale!">');
-      } else {
-        document.write('<title>Quizzy - Team Quiz Game | DrewGames</title>');
-        document.write('<meta name="description" content="Play Quizzy: a fun quiz party game to play with friends. Choose categories, difficulty levels and challenge your friends in this general knowledge game!">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Quizzy - Gioco Quiz a squadre | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Quizzy: un divertente party game a quiz da fare con gli amici. Scegli categorie, difficoltà e sfida i tuoi amici in questo gioco di cultura generale!">');
+        } else {
+            document.write('<title>Quizzy - Team Quiz Game | DrewGames</title>');
+            document.write('<meta name="description" content="Play Quizzy: a fun quiz party game to play with friends. Choose categories, difficulty levels and challenge your friends in this general knowledge game!">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/quizzy/?lang=en" />
@@ -27,11 +29,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
@@ -39,7 +41,7 @@
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <style>
         .home-button {
             position: fixed;
@@ -56,20 +58,22 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
     </style>
 </head>
+
 <body>
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
-    
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+
     <div id="app" class="app-container">
         <!-- Welcome Screen -->
         <div id="welcome-screen" class="screen active">
@@ -92,7 +96,7 @@
         <div id="setup-screen" class="screen">
             <div class="screen-content">
                 <h2 id="setup-title" class="section-title">Impostazioni del Gioco</h2>
-                
+
                 <div class="form-group">
                     <label for="player-count" id="player-count-label">Numero di Giocatori:</label>
                     <select id="player-count" class="select-input">
@@ -106,22 +110,35 @@
                     </select>
                     <button id="continue-to-players" class="secondary-button">Continua</button>
                 </div>
-                
+
                 <div id="player-names-container" class="section-container hidden">
                     <h3 id="player-names-title" class="section-subtitle">Nomi dei Giocatori</h3>
                     <div id="player-inputs" class="player-inputs-container">
                         <!-- Player name inputs will be generated here -->
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="game-mode" id="game-mode-label">Modalità di Gioco:</label>
                         <select id="game-mode" class="select-input" onchange="updateModeDescription()">
                             <option value="individual">Categorie Individuali</option>
                             <option value="shared">Categorie Condivise</option>
+                            <option value="ai">Modalità AI (Beta)</option>
                         </select>
-                        <p id="mode-description" class="mode-description">Ogni giocatore sceglie le proprie categorie</p>
+                        <p id="mode-description" class="mode-description">Ogni giocatore sceglie le proprie categorie
+                        </p>
                     </div>
-                    
+
+                    <div id="api-key-container" class="form-group hidden">
+                        <label for="api-key-input" id="api-key-label">Google Gemini API Key:</label>
+                        <input type="password" id="api-key-input" class="player-name-input"
+                            placeholder="Incolla qui la tua API Key">
+                        <p class="api-note" style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">
+                            La chiave verrà salvata solo sul tuo dispositivo.
+                            <a href="https://aistudio.google.com/app/apikey" target="_blank"
+                                style="color: #4CAF50;">Ottieni una chiave gratis qui</a>
+                        </p>
+                    </div>
+
                     <button id="start-game" class="primary-button">Inizia Gioco</button>
                 </div>
             </div>
@@ -135,16 +152,27 @@
                     <span id="player-name-display"></span>
                     <span id="choose-text">scegli le tue categorie:</span>
                 </p>
-                
+
                 <div id="category-cards" class="category-grid">
                     <!-- Category cards will be generated here -->
                 </div>
-                
+
+                <div id="custom-category-input-container" class="hidden">
+                    <div class="form-group">
+                        <label for="custom-cat-1">Categoria 1:</label>
+                        <input type="text" id="custom-cat-1" class="player-name-input" placeholder="Es. Storia Romana">
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-cat-2">Categoria 2:</label>
+                        <input type="text" id="custom-cat-2" class="player-name-input" placeholder="Es. Gossip Ufficio">
+                    </div>
+                </div>
+
                 <div class="selected-categories-container">
                     <h3 id="selected-title">Categorie Selezionate:</h3>
                     <ul id="selected-categories-list" class="selected-list"></ul>
                 </div>
-                
+
                 <button id="confirm-categories" class="primary-button">Conferma Categorie</button>
             </div>
         </div>
@@ -158,7 +186,7 @@
                         <span id="score-text">Punteggio:</span> <span id="current-player-score">0</span>
                     </div>
                 </div>
-                
+
                 <div class="difficulty-section">
                     <h3 id="difficulty-title">Scegli Difficoltà:</h3>
                     <div class="difficulty-buttons">
@@ -184,7 +212,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="category-section">
                     <h3 id="category-selection-title">Scegli Categoria:</h3>
                     <div id="category-buttons" class="category-buttons">
@@ -199,23 +227,29 @@
             <div class="screen-content">
                 <div class="question-info">
                     <div class="category-info">
-                        <span id="category-label">Categoria:</span> 
+                        <span id="category-label">Categoria:</span>
                         <span id="current-category"></span>
                     </div>
                     <div class="difficulty-info">
-                        <span id="difficulty-label">Difficoltà:</span> 
+                        <span id="difficulty-label">Difficoltà:</span>
                         <span id="current-difficulty"></span>
                     </div>
                     <div class="timer-container">
-                        <span id="timer-text">Tempo:</span> 
+                        <span id="timer-text">Tempo:</span>
                         <span id="timer-display">30</span>
                     </div>
                 </div>
-                
+
                 <div class="question-container">
+                    <div id="ai-loading" class="hidden" style="text-align: center; margin-bottom: 20px;">
+                        <div class="spinner"
+                            style="border: 4px solid rgba(255,255,255,0.3); border-radius: 50%; border-top: 4px solid #4CAF50; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 10px;">
+                        </div>
+                        <p>L'IA sta generando la domanda...</p>
+                    </div>
                     <h3 id="question-text" class="question-text"></h3>
                 </div>
-                
+
                 <div id="answer-buttons" class="answer-buttons">
                     <!-- Answer buttons will be generated here -->
                 </div>
@@ -232,7 +266,7 @@
                     <p id="correct-answer" class="correct-answer"></p>
                 </div>
                 <div class="points-earned">
-                    <span id="points-earned-text">Punti Guadagnati:</span> 
+                    <span id="points-earned-text">Punti Guadagnati:</span>
                     <span id="points-earned">0</span>
                 </div>
                 <button id="continue-game" class="primary-button">Continua</button>
@@ -247,25 +281,26 @@
                     <p><span id="winner-text">Il vincitore è</span> <span id="winner-name"></span></p>
                     <p><span id="final-score-text">Punteggio finale:</span> <span id="winner-score"></span></p>
                 </div>
-                
+
                 <div class="final-scores">
                     <h3 id="all-scores-title">Punteggi Finali</h3>
                     <ul id="final-scores-list" class="scores-list">
                         <!-- Final scores will be generated here -->
                     </ul>
                 </div>
-                
+
                 <button id="play-again" class="primary-button">Gioca Ancora</button>
             </div>
         </div>
     </div>
-    
+
     <!-- Language utilities -->
     <script src="../lang.js"></script>
     <!-- Game translations -->
     <script src="translations.js"></script>
     <!-- Game logic -->
-    <script src="scripts.js"></script>
+    <script src="scripts.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
-</html> 
+
+</html>

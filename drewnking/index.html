@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drewnking Game - Gioco alcolico per feste | DrewGames</title>
+    <meta name="description"
+        content="Drewnking Game: il gioco alcolico definitivo per feste con amici! Sfide, votazioni e regole pazze. Da giocare responsabilmente!">
+
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/drewnking/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/drewnking/" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-72Y5QND8E8');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/drewnking/">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="home-button" onclick="window.location.href='../'">
+        <span class="home-icon">⌂</span> Home
+    </button>
+
+    <div class="container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <div class="game-header">
+                <h1>🍺 Drewnking Game 🍺</h1>
+                <p class="warning">⚠️ Bevi irresponsabilmente! Solo per maggiorenni ⚠️</p>
+            </div>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label for="player-count">Numero di Giocatori:</label>
+                    <select id="player-count">
+                        <option value="2">2 Giocatori</option>
+                        <option value="3" selected>3 Giocatori</option>
+                        <option value="4">4 Giocatori</option>
+                        <option value="5">5 Giocatori</option>
+                        <option value="6">6 Giocatori</option>
+                        <option value="7">7 Giocatori</option>
+                        <option value="8">8 Giocatori</option>
+                        <option value="9">9 Giocatori</option>
+                        <option value="10">10 Giocatori</option>
+                    </select>
+                </div>
+
+                <div id="player-names-container">
+                    <!-- Player name inputs will be generated here -->
+                </div>
+
+                <div class="form-group">
+                    <label for="rounds-count">Numero di Turni:</label>
+                    <select id="rounds-count">
+                        <option value="15">15 Turni</option>
+                        <option value="20">20 Turni</option>
+                        <option value="25">25 Turni</option>
+                        <option value="30" selected>30 Turni</option>
+                        <option value="40">40 Turni</option>
+                        <option value="50">50 Turni</option>
+                    </select>
+                </div>
+
+                <div class="form-group custom-percentages-container">
+                    <div class="toggle-container">
+                        <label class="toggle-label">
+                            <span>Personalizza Percentuali Categorie</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="custom-percentages-toggle">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div id="percentages-controls" class="percentages-controls" style="display: none;">
+                        <p class="percentages-info">Imposta le percentuali per ogni categoria (totale deve essere 100%)
+                        </p>
+
+                        <div class="percentage-group">
+                            <label for="normal-percentage">
+                                <span class="category-dot" style="background-color: #9b59b6;"></span>
+                                Normali:
+                            </label>
+                            <input type="number" id="normal-percentage" min="0" max="100" value="35">
+                            <span class="percentage-symbol">%</span>
+                        </div>
+
+                        <div class="percentage-group">
+                            <label for="challenge-percentage">
+                                <span class="category-dot" style="background-color: #e74c3c;"></span>
+                                Sfide:
+                            </label>
+                            <input type="number" id="challenge-percentage" min="0" max="100" value="25">
+                            <span class="percentage-symbol">%</span>
+                        </div>
+
+                        <div class="percentage-group">
+                            <label for="vote-percentage">
+                                <span class="category-dot" style="background-color: #228B22;"></span>
+                                Votazioni:
+                            </label>
+                            <input type="number" id="vote-percentage" min="0" max="100" value="20">
+                            <span class="percentage-symbol">%</span>
+                        </div>
+
+                        <div class="percentage-group">
+                            <label for="rule-percentage">
+                                <span class="category-dot" style="background-color: #FFD700;"></span>
+                                Regole:
+                            </label>
+                            <input type="number" id="rule-percentage" min="0" max="100" value="20">
+                            <span class="percentage-symbol">%</span>
+                        </div>
+
+                        <div class="percentage-total">
+                            Totale: <span id="percentage-total">100</span>%
+                            <span id="percentage-warning" class="percentage-warning" style="display: none;">⚠️ Deve
+                                essere 100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Challenge Settings -->
+                <div class="setting-group">
+                    <div class="custom-option">
+                        <label class="toggle-label">
+                            <input type="checkbox" id="ai-challenge-toggle">
+                            <span>Sfida AI 🤖</span>
+                        </label>
+                    </div>
+                    <div id="ai-settings" class="ai-settings" style="display: none;">
+                        <div class="form-group">
+                            <label for="ai-api-key">Gemini API Key:</label>
+                            <input type="text" id="ai-api-key" placeholder="Inserisci la tua API key">
+                        </div>
+                        <p class="ai-info">
+                            💡 <a href="https://aistudio.google.com/app/apikey" target="_blank">Ottieni una chiave API
+                                gratuita</a>
+                        </p>
+                    </div>
+                </div>
+
+                <button id="start-game" class="btn primary-btn">Inizia il Gioco! 🎉</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <!-- Rules Badge -->
+            <div id="rules-badge" class="rules-badge" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18.5c-4.28-1.04-7-5.4-7-9.5V8.3l7-3.11 7 3.11V11c0 4.1-2.72 8.46-7 9.5z" />
+                    <path d="M10.5 13l-2.5-2.5 1.41-1.41L10.5 10.17l3.59-3.58L15.5 8l-5 5z" />
+                </svg>
+                <span id="rules-count" class="rules-badge-count">0</span>
+            </div>
+
+            <!-- Rules Panel -->
+            <div id="rules-panel" class="rules-panel">
+                <div class="rules-panel-header">
+                    <h3>Regole Attive</h3>
+                    <button id="close-rules-panel" class="close-panel-btn">✕</button>
+                </div>
+                <div id="rules-list" class="rules-list">
+                    <!-- Active rules will be listed here -->
+                </div>
+            </div>
+
+            <div class="round-counter">
+                <span>Turno <span id="current-round">1</span> di <span id="total-rounds">20</span></span>
+            </div>
+
+            <!-- AI Selection Loading Overlay -->
+            <div id="ai-loading-overlay" class="ai-loading-overlay" style="display: none;">
+                <div class="ai-loading-content">
+                    <div class="ai-loading-spinner">🤖</div>
+                    <p>L'IA sta analizzando le carte...</p>
+                </div>
+            </div>
+
+            <div id="phrase-container" class="phrase-container">
+                <div class="phrase-type-label" id="phrase-type-label"></div>
+                <p id="phrase-text"></p>
+            </div>
+
+            <!-- AI Challenge Container -->
+            <div id="ai-challenge-container" class="ai-challenge-container" style="display: none;">
+                <div class="ai-header">
+                    <span class="ai-icon">🤖</span>
+                    <h3>SFIDA IA: L'Appello</h3>
+                </div>
+                <div class="ai-content">
+                    <p id="ai-challenge-text">Caricamento sfida...</p>
+
+                    <div id="ai-actions" class="ai-actions">
+                        <button id="ai-accept-btn" class="btn ai-btn-accept">Accetta Sfida</button>
+                        <button id="ai-refuse-btn" class="btn ai-btn-refuse">Rifiuta</button>
+                    </div>
+
+                    <div id="ai-input-area" class="ai-input-area" style="display: none;">
+                        <textarea id="ai-defense-input" placeholder="Scrivi la tua difesa qui... (Sii convincente!)"
+                            rows="4"></textarea>
+                        <button id="ai-submit-btn" class="btn ai-btn-submit">Invia Difesa</button>
+                    </div>
+
+                    <div id="ai-verdict-area" class="ai-verdict-area" style="display: none;">
+                        <h4 id="ai-verdict-title">VERDETTO</h4>
+                        <p id="ai-verdict-text"></p>
+                        <p id="ai-penalty-text"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button id="next-phrase" class="btn next-btn">Prossima Frase ➜</button>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="screen">
+            <div class="game-header">
+                <h1>🎊 Fine del Gioco! 🎊</h1>
+                <p class="end-message">Spero vi siate divertiti! 🍻</p>
+                <p class="reminder">Ricordati di bere acqua e di tornare a casa in sicurezza! </p>
+            </div>
+
+            <button id="play-again" class="btn primary-btn">Gioca Ancora 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

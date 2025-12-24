@@ -13,7 +13,7 @@ const availableGames = {
 function startTournament() {
     const numPlayers = parseInt(document.getElementById('playerCount').value);
     const numGames = parseInt(document.getElementById('gameCount').value);
-    
+
     tournament = {
         players: [],
         scores: {},
@@ -27,14 +27,14 @@ function startTournament() {
 
 function selectRandomGame() {
     const numPlayers = tournament.players.length;
-    
+
     // Filter games based on player count and special rules
     const validGames = Object.entries(availableGames).filter(([game, config]) => {
         if (game === 'chainreaction') {
             // Chain Reaction special rule: only for 3 or 6 players
-            return (numPlayers === 3 || numPlayers === 6) && 
-                   numPlayers >= config.minPlayers && 
-                   numPlayers <= config.maxPlayers;
+            return (numPlayers === 3 || numPlayers === 6) &&
+                numPlayers >= config.minPlayers &&
+                numPlayers <= config.maxPlayers;
         }
         return numPlayers >= config.minPlayers && numPlayers <= config.maxPlayers;
     });
@@ -60,12 +60,12 @@ function updateGameDisplay() {
 function nextGame() {
     // Ensure we don't lose totalGames when advancing
     tournament.currentGame++;
-    
+
     if (tournament.currentGame > tournament.totalGames) {
         showFinalResults();
         return;
     }
-    
+
     updateGameDisplay();
     selectRandomGame();
 }

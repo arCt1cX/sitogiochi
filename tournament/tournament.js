@@ -36,7 +36,7 @@ function showScreen(screenId) {
         screen.classList.remove('active');
     });
     document.getElementById(screenId).classList.add('active');
-    
+
     // If showing score entry screen, generate player buttons
     if (screenId === 'score-entry') {
         const scoreInputs = document.getElementById('scoreInputs');
@@ -68,11 +68,11 @@ function setupNextGame() {
 
     // Calculate total weight
     const totalWeight = Object.values(tournamentState.gameWeights).reduce((a, b) => a + b, 0);
-    
+
     // Generate random value between 0 and total weight
     let random = Math.random() * totalWeight;
     let selectedGame = tournamentState.availableGames[0]; // Default fallback
-    
+
     // Select game based on weights
     for (const game of tournamentState.availableGames) {
         random -= tournamentState.gameWeights[game];
@@ -89,16 +89,16 @@ function setupNextGame() {
     );
 
     tournamentState.usedGames.push(selectedGame); // Keep for history
-    
+
     document.getElementById('currentGame').textContent = tournamentState.currentGame + 1;
     // Ensure total games label stays in sync with saved state
     document.getElementById('totalGames').textContent = tournamentState.totalGames;
     document.getElementById('selectedGame').textContent = selectedGame;
-    
+
     localStorage.setItem('tournamentState', JSON.stringify(tournamentState));
-    
+
     showScreen('game-select');
-    
+
     // Setup play button
     document.getElementById('playGame').onclick = () => {
         localStorage.setItem('tournamentState', JSON.stringify(tournamentState));
@@ -109,7 +109,7 @@ function setupNextGame() {
 function startTournament() {
     const playerInputs = document.querySelectorAll('.player-input input');
     const playerCount = playerInputs.length;
-    
+
     // Update available games based on player count
     tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame'];
     // Only add Chain Reaction if player count is 3 or 6
@@ -157,36 +157,36 @@ function startTournament() {
             }
         }
     }
-    
+
     setupNextGame();
 }
 
 function handleScoreSubmission() {
-	const scoreInputs = document.querySelectorAll('.score-input');
+    const scoreInputs = document.querySelectorAll('.score-input');
 
-	// Determine if this round is a double-points round
-	const currentRoundNumber = tournamentState.currentGame + 1; // currentGame is completed games
-	const isDoublePointsRound = tournamentState.doublePointsGames.includes(currentRoundNumber);
+    // Determine if this round is a double-points round
+    const currentRoundNumber = tournamentState.currentGame + 1; // currentGame is completed games
+    const isDoublePointsRound = tournamentState.doublePointsGames.includes(currentRoundNumber);
 
-	// Apply scores (2 points if double round, else 1)
-	scoreInputs.forEach(input => {
-		const playerName = input.getAttribute('data-player');
-		const hasPoint = input.classList.contains('selected');
-		const pointsToAdd = hasPoint ? (isDoublePointsRound ? 2 : 1) : 0;
-		tournamentState.scores[playerName] += pointsToAdd;
-	});
+    // Apply scores (2 points if double round, else 1)
+    scoreInputs.forEach(input => {
+        const playerName = input.getAttribute('data-player');
+        const hasPoint = input.classList.contains('selected');
+        const pointsToAdd = hasPoint ? (isDoublePointsRound ? 2 : 1) : 0;
+        tournamentState.scores[playerName] += pointsToAdd;
+    });
 
-	// Flag for rankings banner
-	tournamentState.lastGameWasDouble = isDoublePointsRound;
+    // Flag for rankings banner
+    tournamentState.lastGameWasDouble = isDoublePointsRound;
 
-	tournamentState.currentGame++;
-	updateRankings();
-	
-	if (tournamentState.currentGame >= tournamentState.totalGames) {
-		showFinalResults();
-	} else {
-		showScreen('rankings');
-	}
+    tournamentState.currentGame++;
+    updateRankings();
+
+    if (tournamentState.currentGame >= tournamentState.totalGames) {
+        showFinalResults();
+    } else {
+        showScreen('rankings');
+    }
 }
 
 function updateRankings() {
@@ -242,7 +242,7 @@ function resetTournament() {
         totalGames: 5,
         currentGame: 0,
         scores: {},
-        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame'],
+        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'drewnking', 'hottakes'],
         gameWeights: {},
         usedGames: [],
         doublePointsGames: [],
@@ -256,14 +256,14 @@ function resetTournament() {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize translations
     applyTranslations();
-    
+
     document.getElementById('playerCount').addEventListener('change', generatePlayerInputs);
     document.getElementById('gamesCount').addEventListener('change', updateGameCount);
     document.getElementById('startTournament').addEventListener('click', startTournament);
     document.getElementById('submitScores').addEventListener('click', handleScoreSubmission);
     document.getElementById('nextGame').addEventListener('click', setupNextGame);
     document.getElementById('newTournament').addEventListener('click', resetTournament);
-    
+
     generatePlayerInputs();
 
     // Handle return from game FIRST to avoid resetting totals to 5
