@@ -1,34 +1,34 @@
-Pizza|Focaccia|Everyday life
-Ice Cream|Sorbet|Everyday life
-Pasta|Rice|Everyday life
-Coffee|Tea|Everyday life
+Pizza|Focaccia|Food and drinks
+Ice Cream|Sorbet|Food and drinks
+Pasta|Rice|Food and drinks
+Coffee|Tea|Food and drinks
 Dog|Cat|Animals and nature
 Sea|Lake|Animals and nature
 Mountain|Hill|Animals and nature
 New York|Los Angeles|World and places
-Ferrari|Lamborghini|Brands
+Ferrari|Lamborghini|Famous brands
 Soccer|Basketball|Sports
 Guitar|Piano|Music
-Beer|Wine|Everyday life
-Christmas|New Year|Everyday life
-Summer|Spring|Animals and nature
+Beer|Wine|Food and drinks
+Christmas|New Year|Times of year
+Summer|Spring|Times of year
 Sun|Moon|Animals and nature
 Airplane|Helicopter|Transport
 Train|Subway|Transport
 Bicycle|Scooter|Transport
-Apple|Pear|Everyday life
-Banana|Pineapple|Everyday life
-Tomato|Pepper|Everyday life
-Bread|Breadsticks|Everyday life
-Cheese|Mozzarella|Everyday life
-Ham|Salami|Everyday life
-Chocolate|Candy|Everyday life
-Cake|Cookie|Everyday life
-Milk|Yogurt|Everyday life
-Water|Juice|Everyday life
-Book|Magazine|School
-Movie|TV Show|Film and TV
-Music|Podcast|Music
+Apple|Pear|Food and drinks
+Banana|Pineapple|Food and drinks
+Tomato|Pepper|Food and drinks
+Bread|Breadsticks|Food and drinks
+Cheese|Mozzarella|Food and drinks
+Ham|Salami|Food and drinks
+Chocolate|Candy|Food and drinks
+Cake|Cookie|Food and drinks
+Milk|Yogurt|Food and drinks
+Water|Juice|Food and drinks
+Book|Magazine|Entertainment
+Movie|TV Show|Entertainment
+Music|Podcast|Entertainment
 Phone|Tablet|Technology
 Computer|Laptop|Technology
 Shoes|Sandals|Fashion and clothing
@@ -41,16 +41,16 @@ Watch|Bracelet|Fashion and clothing
 Ring|Necklace|Fashion and clothing
 Bag|Backpack|Fashion and clothing
 Wallet|Purse|Fashion and clothing
-Umbrella|Raincoat|Everyday life
-Chair|Armchair|Everyday life
-Table|Desk|Everyday life
-Bed|Sofa|Everyday life
-Wardrobe|Dresser|Everyday life
-Lamp|Candle|Everyday life
-Mirror|Painting|Everyday life
-Window|Door|Everyday life
-Wall|Floor|Everyday life
-Garden|Balcony|Everyday life
+Umbrella|Raincoat|Useful objects
+Chair|Armchair|Furniture and home
+Table|Desk|Furniture and home
+Bed|Sofa|Furniture and home
+Wardrobe|Dresser|Furniture and home
+Lamp|Candle|Furniture and home
+Mirror|Painting|Furniture and home
+Window|Door|Furniture and home
+Wall|Floor|Furniture and home
+Garden|Balcony|Furniture and home
 Tree|Bush|Animals and nature
 Flower|Plant|Animals and nature
 Grass|Leaf|Animals and nature
@@ -77,39 +77,39 @@ Penguin|Seal|Animals and nature
 Bear|Panda|Animals and nature
 Wolf|Fox|Animals and nature
 Deer|Reindeer|Animals and nature
-Dinosaur|Dragon|Fantasy
-Unicorn|Pegasus|Fantasy
-Mermaid|Merman|Fantasy
-Vampire|Werewolf|Fantasy
-Ghost|Zombie|Fantasy
-Witch|Wizard|Fantasy
-Fairy|Elf|Fantasy
-King|Queen|Fantasy
-Prince|Princess|Fantasy
-Knight|Samurai|Fantasy
-Pirate|Ninja|Fantasy
-Astronaut|Alien|Fantasy
-Robot|Android|Technology
+Dragon|Dinosaur|Fantasy and mythical creatures
+Unicorn|Pegasus|Fantasy and mythical creatures
+Mermaid|Merman|Fantasy and mythical creatures
+Vampire|Werewolf|Fantasy and mythical creatures
+Ghost|Zombie|Fantasy and mythical creatures
+Witch|Wizard|Fantasy and mythical creatures
+Fairy|Elf|Fantasy and mythical creatures
+King|Queen|Story characters
+Prince|Princess|Story characters
+Knight|Samurai|Story characters
+Pirate|Ninja|Story characters
+Astronaut|Alien|Space and technology
+Robot|Android|Space and technology
 Superhero|Supervillain|Film and TV
 Spiderman|Batman|Film and TV
 Superman|Captain America|Film and TV
 Ironman|Thor|Film and TV
 Hulk|Thanos|Film and TV
-Mario|Luigi|Games
-Sonic|Pikachu|Games
-Minecraft|Fortnite|Games
-PlayStation|Xbox|Games
+Mario|Luigi|Board games and video games
+Sonic|Pikachu|Board games and video games
+Minecraft|Fortnite|Board games and video games
+PlayStation|Xbox|Board games and video games
 Netflix|Disney+|Film and TV
 Instagram|TikTok|Technology
 WhatsApp|Telegram|Technology
-Google|Facebook|Brands
-Amazon|eBay|Brands
-Apple|Samsung|Brands
-McDonald's|Burger King|Brands
-Coca-Cola|Pepsi|Brands
-Nike|Adidas|Brands
-IKEA|Target|Brands
-Ford|Chevrolet|Brands
+Google|Facebook|Technology
+Amazon|eBay|Technology
+Apple|Samsung|Technology
+McDonald's|Burger King|Famous brands
+Coca-Cola|Pepsi|Famous brands
+Nike|Adidas|Famous brands
+IKEA|Target|Famous brands
+Ford|Chevrolet|Famous brands
 Yankees|Red Sox|Sports
 Lakers|Celtics|Sports
 Real Madrid|Barcelona|Sports
@@ -124,45 +124,54 @@ Boxing|Karate|Sports
 Yoga|Pilates|Body and health
 Gym|Pool|Sports
 Stadium|Arena|Sports
-Theater|Cinema|Film and TV
-Museum|Gallery|World and places
-Library|Bookstore|School
-School|University|School
+Cinema|Theater|Film and TV
+Museum|Gallery|Services and places
+Library|Bookstore|Services and places
+School|University|Services and places
 Hospital|Clinic|Body and health
 Pharmacy|Health Store|Body and health
-Bank|Post Office|Everyday life
-Supermarket|Market|Everyday life
-Restaurant|Diner|Everyday life
-Bar|Pub|Everyday life
-Club|Lounge|Music
-Hotel|B&B|World and places
-Beach|Pool|Summer
-Park|Public Garden|World and places
-Zoo|Aquarium|World and places
-Amusement Park|Circus|Everyday life
+Bank|Post Office|Services and places
+Supermarket|Market|Services and places
+Restaurant|Diner|Services and places
+Bar|Pub|Services and places
+Club|Lounge|Services and places
+Hotel|B&B|Services and places
+Beach|Pool|Services and places
+Park|Public Garden|Services and places
+Zoo|Aquarium|Services and places
+Amusement Park|Circus|Services and places
 Concert|Festival|Music
-Wedding|Baptism|Everyday life
-Birthday|Anniversary|Everyday life
-Halloween|Carnival|Everyday life
-Easter|Fourth of July|Everyday life
-Valentine's Day|Mother's Day|Everyday life
-Sunday|Saturday|Everyday life
-January|February|Everyday life
-Spring|Fall|Animals and nature
-Morning|Afternoon|Everyday life
-Breakfast|Lunch|Everyday life
-Dinner|Happy Hour|Everyday life
-Appetizer|First Course|Everyday life
-Main Course|Side Dish|Everyday life
-Dessert|Fruit|Everyday life
-Espresso|Cappuccino|Everyday life
-Orange|Tangerine|Everyday life
-Purple|Lavender|Everyday life
-Light Blue|Sky Blue|Everyday life
-Red|Burgundy|Everyday life
-Green|Emerald|Everyday life
-Yellow|Gold|Everyday life
-Black|Gray|Everyday life
-White|Ivory|Everyday life
-Pink|Fuchsia|Everyday life
-Brown|Beige|Everyday life
+Wedding|Baptism|Holidays and celebrations
+Birthday|Anniversary|Holidays and celebrations
+Halloween|Carnival|Holidays and celebrations
+Easter|Fourth of July|Holidays and celebrations
+Valentine's Day|Mother's Day|Holidays and celebrations
+Sunday|Saturday|Time and seasons
+January|February|Time and seasons
+Spring|Fall|Time and seasons
+Morning|Afternoon|Time and seasons
+Breakfast|Lunch|Food and drinks
+Dinner|Happy Hour|Food and drinks
+Appetizer|First Course|Food and drinks
+Main Course|Side Dish|Food and drinks
+Dessert|Fruit|Food and drinks
+Espresso|Cappuccino|Food and drinks
+Purple|Lavender|Colors
+Light Blue|Sky Blue|Colors
+Red|Burgundy|Colors
+Green|Emerald|Colors
+Yellow|Gold|Colors
+Black|Gray|Colors
+White|Ivory|Colors
+Pink|Fuchsia|Colors
+Brown|Beige|Colors
+Doctor|Nurse|Jobs and professions
+Lawyer|Judge|Jobs and professions
+Firefighter|Police Officer|Jobs and professions
+Chef|Waiter|Jobs and professions
+Whale|Shark|Animals and nature
+Tiger|Leopard|Animals and nature
+Sushi|Ramen|Food and drinks
+Hamburger|Hot Dog|Food and drinks
+Paris|London|World and places
+Tokyo|Beijing|World and places
