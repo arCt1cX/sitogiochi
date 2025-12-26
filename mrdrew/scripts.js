@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         hasUndercover: false,
         civilWord: '',
         undercoverWord: '',
+        theme: '',
+        startingPlayer: 1,
         allWordPairs: []
     };
 
@@ -57,10 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Split by new line and filter out empty lines
             const lines = text.split('\n').filter(line => line.trim().length > 0);
 
-            // Parse each line into a word pair
+            // Parse each line into a word pair with theme
             gameState.allWordPairs = lines.map(line => {
-                const [civilWord, undercoverWord] = line.split('|').map(word => word.trim());
-                return { civilWord, undercoverWord };
+                const parts = line.split('|').map(word => word.trim());
+                return {
+                    civilWord: parts[0] || '',
+                    undercoverWord: parts[1] || '',
+                    theme: parts[2] || ''
+                };
             });
 
             console.log(`Loaded ${gameState.allWordPairs.length} word pairs`);
@@ -130,6 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedPair = gameState.allWordPairs[randomPairIndex];
         gameState.civilWord = selectedPair.civilWord;
         gameState.undercoverWord = selectedPair.undercoverWord;
+        gameState.theme = selectedPair.theme || '';
+
+        // Select random starting player
+        gameState.startingPlayer = Math.floor(Math.random() * gameState.playerCount) + 1;
 
         console.log(`Game started with ${gameState.playerCount} players`);
         console.log(`Mr. Drew is player: ${gameState.mrdrewIndex + 1}`);
@@ -138,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         console.log(`Civil word: ${gameState.civilWord}`);
         console.log(`Undercover word: ${gameState.undercoverWord}`);
+        console.log(`Theme: ${gameState.theme}`);
+        console.log(`Starting player: ${gameState.startingPlayer}`);
 
         // Update UI for first player
         updatePlayerTurnUI();
@@ -198,6 +210,17 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePlayerTurnUI();
         } else {
             // All players have seen their word, move to playing screen
+            // Update starting player and theme display
+            const startingPlayerNum = document.getElementById('starting-player-num');
+            const themeDisplay = document.getElementById('theme-display');
+
+            if (startingPlayerNum) {
+                startingPlayerNum.textContent = gameState.startingPlayer;
+            }
+            if (themeDisplay) {
+                themeDisplay.textContent = gameState.theme || '???';
+            }
+
             showScreen(playingScreen);
         }
     }

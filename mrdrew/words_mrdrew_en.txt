@@ -1,168 +1,168 @@
-Pizza|Focaccia
-Ice Cream|Sorbet
-Pasta|Rice
-Coffee|Tea
-Dog|Cat
-Sea|Lake
-Mountain|Hill
-New York|Los Angeles
-Ferrari|Lamborghini
-Soccer|Basketball
-Guitar|Piano
-Beer|Wine
-Christmas|New Year
-Summer|Spring
-Sun|Moon
-Airplane|Helicopter
-Train|Subway
-Bicycle|Scooter
-Apple|Pear
-Banana|Pineapple
-Tomato|Pepper
-Bread|Breadsticks
-Cheese|Mozzarella
-Ham|Salami
-Chocolate|Candy
-Cake|Cookie
-Milk|Yogurt
-Water|Juice
-Book|Magazine
-Movie|TV Show
-Music|Podcast
-Phone|Tablet
-Computer|Laptop
-Shoes|Sandals
-Jeans|Pants
-T-shirt|Shirt
-Jacket|Coat
-Hat|Cap
-Glasses|Contact Lenses
-Watch|Bracelet
-Ring|Necklace
-Bag|Backpack
-Wallet|Purse
-Umbrella|Raincoat
-Chair|Armchair
-Table|Desk
-Bed|Sofa
-Wardrobe|Dresser
-Lamp|Candle
-Mirror|Painting
-Window|Door
-Wall|Floor
-Garden|Balcony
-Tree|Bush
-Flower|Plant
-Grass|Leaf
-Bird|Butterfly
-Fish|Dolphin
-Lion|Tiger
-Elephant|Rhino
-Monkey|Gorilla
-Snake|Lizard
-Spider|Ant
-Bee|Wasp
-Fly|Mosquito
-Rabbit|Hamster
-Horse|Donkey
-Cow|Bull
-Pig|Boar
-Sheep|Goat
-Chicken|Turkey
-Duck|Goose
-Eagle|Falcon
-Owl|Barn Owl
-Parrot|Canary
-Penguin|Seal
-Bear|Panda
-Wolf|Fox
-Deer|Reindeer
-Dinosaur|Dragon
-Unicorn|Pegasus
-Mermaid|Merman
-Vampire|Werewolf
-Ghost|Zombie
-Witch|Wizard
-Fairy|Elf
-King|Queen
-Prince|Princess
-Knight|Samurai
-Pirate|Ninja
-Astronaut|Alien
-Robot|Android
-Superhero|Supervillain
-Spiderman|Batman
-Superman|Captain America
-Ironman|Thor
-Hulk|Thanos
-Mario|Luigi
-Sonic|Pikachu
-Minecraft|Fortnite
-PlayStation|Xbox
-Netflix|Disney+
-Instagram|TikTok
-WhatsApp|Telegram
-Google|Facebook
-Amazon|eBay
-Apple|Samsung
-McDonald's|Burger King
-Coca-Cola|Pepsi
-Nike|Adidas
-IKEA|Target
-Ford|Chevrolet
-Yankees|Red Sox
-Lakers|Celtics
-Real Madrid|Barcelona
-Messi|Ronaldo
-Tennis|Ping Pong
-Swimming|Water Polo
-Skiing|Snowboarding
-Volleyball|Beach Volleyball
-Rugby|American Football
-Golf|Bowling
-Boxing|Karate
-Yoga|Pilates
-Gym|Pool
-Stadium|Arena
-Theater|Cinema
-Museum|Gallery
-Library|Bookstore
-School|University
-Hospital|Clinic
-Pharmacy|Health Store
-Bank|Post Office
-Supermarket|Market
-Restaurant|Diner
-Bar|Pub
-Club|Lounge
-Hotel|B&B
-Beach|Pool
-Park|Public Garden
-Zoo|Aquarium
-Amusement Park|Circus
-Concert|Festival
-Wedding|Baptism
-Birthday|Anniversary
-Halloween|Carnival
-Easter|Fourth of July
-Valentine's Day|Mother's Day
-Sunday|Saturday
-January|February
-Spring|Fall
-Morning|Afternoon
-Breakfast|Lunch
-Dinner|Happy Hour
-Appetizer|First Course
-Main Course|Side Dish
-Dessert|Fruit
-Espresso|Cappuccino
-Orange|Tangerine
-Purple|Lavender
-Light Blue|Sky Blue
-Red|Burgundy
-Green|Emerald
-Yellow|Gold
-Black|Gray
-White|Ivory
-Pink|Fuchsia
-Brown|Beige
+Pizza|Focaccia|Italian food
+Ice Cream|Sorbet|Frozen desserts
+Pasta|Rice|Carbohydrates
+Coffee|Tea|Hot drinks
+Dog|Cat|Pets
+Sea|Lake|Water bodies
+Mountain|Hill|Natural landscapes
+New York|Los Angeles|American cities
+Ferrari|Lamborghini|Sports cars
+Soccer|Basketball|Ball sports
+Guitar|Piano|Musical instruments
+Beer|Wine|Alcoholic drinks
+Christmas|New Year|Winter holidays
+Summer|Spring|Seasons
+Sun|Moon|Celestial bodies
+Airplane|Helicopter|Flying vehicles
+Train|Subway|Rail transport
+Bicycle|Scooter|Two-wheeled vehicles
+Apple|Pear|Fruit
+Banana|Pineapple|Tropical fruit
+Tomato|Pepper|Vegetables
+Bread|Breadsticks|Baked goods
+Cheese|Mozzarella|Dairy products
+Ham|Salami|Cured meats
+Chocolate|Candy|Sweets
+Cake|Cookie|Baked desserts
+Milk|Yogurt|Dairy
+Water|Juice|Beverages
+Book|Magazine|Reading materials
+Movie|TV Show|Video entertainment
+Music|Podcast|Audio content
+Phone|Tablet|Electronic devices
+Computer|Laptop|Technology
+Shoes|Sandals|Footwear
+Jeans|Pants|Clothing
+T-shirt|Shirt|Clothing
+Jacket|Coat|Outerwear
+Hat|Cap|Head accessories
+Glasses|Contact Lenses|Vision correction
+Watch|Bracelet|Wrist accessories
+Ring|Necklace|Jewelry
+Bag|Backpack|Bags
+Wallet|Purse|Accessories
+Umbrella|Raincoat|Rain protection
+Chair|Armchair|Seating furniture
+Table|Desk|Flat furniture
+Bed|Sofa|Resting furniture
+Wardrobe|Dresser|Storage furniture
+Lamp|Candle|Lighting
+Mirror|Painting|Wall decorations
+Window|Door|House openings
+Wall|Floor|House structure
+Garden|Balcony|Outdoor spaces
+Tree|Bush|Garden plants
+Flower|Plant|Vegetation
+Grass|Leaf|Plant parts
+Bird|Butterfly|Flying creatures
+Fish|Dolphin|Aquatic animals
+Lion|Tiger|Big cats
+Elephant|Rhino|Large mammals
+Monkey|Gorilla|Primates
+Snake|Lizard|Reptiles
+Spider|Ant|Insects
+Bee|Wasp|Flying insects
+Fly|Mosquito|Annoying insects
+Rabbit|Hamster|Small animals
+Horse|Donkey|Equines
+Cow|Bull|Cattle
+Pig|Boar|Swine
+Sheep|Goat|Farm animals
+Chicken|Turkey|Poultry
+Duck|Goose|Waterfowl
+Eagle|Falcon|Birds of prey
+Owl|Barn Owl|Nocturnal birds
+Parrot|Canary|Colorful birds
+Penguin|Seal|Polar animals
+Bear|Panda|Large animals
+Wolf|Fox|Wild canines
+Deer|Reindeer|Deer family
+Dinosaur|Dragon|Giant creatures
+Unicorn|Pegasus|Mythological creatures
+Mermaid|Merman|Magical sea creatures
+Vampire|Werewolf|Classic monsters
+Ghost|Zombie|Undead
+Witch|Wizard|Magical characters
+Fairy|Elf|Fairy tale creatures
+King|Queen|Monarchs
+Prince|Princess|Royal family
+Knight|Samurai|Historical warriors
+Pirate|Ninja|Adventurous characters
+Astronaut|Alien|Space
+Robot|Android|Intelligent machines
+Superhero|Supervillain|Comic book characters
+Spiderman|Batman|Superheroes
+Superman|Captain America|Superheroes
+Ironman|Thor|Marvel characters
+Hulk|Thanos|Marvel characters
+Mario|Luigi|Video game characters
+Sonic|Pikachu|Video game characters
+Minecraft|Fortnite|Video games
+PlayStation|Xbox|Gaming consoles
+Netflix|Disney+|Streaming platforms
+Instagram|TikTok|Social media
+WhatsApp|Telegram|Messaging apps
+Google|Facebook|Tech companies
+Amazon|eBay|Online stores
+Apple|Samsung|Tech brands
+McDonald's|Burger King|Fast food
+Coca-Cola|Pepsi|Soft drinks
+Nike|Adidas|Sports brands
+IKEA|Target|Furniture stores
+Ford|Chevrolet|Car manufacturers
+Yankees|Red Sox|Baseball teams
+Lakers|Celtics|Basketball teams
+Real Madrid|Barcelona|Soccer teams
+Messi|Ronaldo|Famous soccer players
+Tennis|Ping Pong|Racket sports
+Swimming|Water Polo|Water sports
+Skiing|Snowboarding|Winter sports
+Volleyball|Beach Volleyball|Net sports
+Rugby|American Football|Oval ball sports
+Golf|Bowling|Precision sports
+Boxing|Karate|Martial arts
+Yoga|Pilates|Wellness activities
+Gym|Pool|Workout places
+Stadium|Arena|Event venues
+Theater|Cinema|Entertainment venues
+Museum|Gallery|Cultural places
+Library|Bookstore|Places with books
+School|University|Educational institutions
+Hospital|Clinic|Healthcare facilities
+Pharmacy|Health Store|Health product stores
+Bank|Post Office|Financial services
+Supermarket|Market|Food shopping places
+Restaurant|Diner|Dining places
+Bar|Pub|Drinking establishments
+Club|Lounge|Nightlife venues
+Hotel|B&B|Accommodations
+Beach|Pool|Swimming places
+Park|Public Garden|Green spaces
+Zoo|Aquarium|Animal attractions
+Amusement Park|Circus|Entertainment
+Concert|Festival|Music events
+Wedding|Baptism|Ceremonies
+Birthday|Anniversary|Personal celebrations
+Halloween|Carnival|Costume holidays
+Easter|Fourth of July|Spring/Summer holidays
+Valentine's Day|Mother's Day|Dedicated holidays
+Sunday|Saturday|Weekend days
+January|February|Winter months
+Spring|Fall|Intermediate seasons
+Morning|Afternoon|Times of day
+Breakfast|Lunch|Meals
+Dinner|Happy Hour|Evening meals
+Appetizer|First Course|Courses
+Main Course|Side Dish|Courses
+Dessert|Fruit|End of meal
+Espresso|Cappuccino|Coffee drinks
+Orange|Tangerine|Shades of orange
+Purple|Lavender|Shades of purple
+Light Blue|Sky Blue|Shades of blue
+Red|Burgundy|Shades of red
+Green|Emerald|Shades of green
+Yellow|Gold|Shades of yellow
+Black|Gray|Dark colors
+White|Ivory|Light colors
+Pink|Fuchsia|Shades of pink
+Brown|Beige|Neutral colors

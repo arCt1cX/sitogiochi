@@ -18,6 +18,8 @@ const gameTranslations = {
         'showWordText': 'Scopri la tua Parola',
         'seenItText': 'Ho Visto',
         'playingTitle': 'Giocate!',
+        'startingPlayerText': 'Inizia il giocatore:',
+        'themeText': 'Tema:',
         'playingInstructionsText': 'Tutti i giocatori hanno visto la loro parola. Ora giocate a voce: a turno, ogni giocatore dice UNA parola che descrive il proprio termine.',
         'playingTipText': 'Consiglio: I Civili devono farsi riconoscere senza dare troppi indizi a Mr. Drew!',
         'discussInstructionsText': 'Discutete e votate chi pensate sia Mr. Drew. Quando siete pronti, rivelate i ruoli!',
@@ -57,6 +59,8 @@ const gameTranslations = {
         'showWordText': 'Reveal your Word',
         'seenItText': "I've Seen It",
         'playingTitle': 'Play!',
+        'startingPlayerText': 'Starting player:',
+        'themeText': 'Theme:',
         'playingInstructionsText': 'All players have seen their word. Now play vocally: each player takes turns saying ONE word that describes their term.',
         'playingTipText': 'Tip: Civilians must recognize each other without giving too many clues to Mr. Drew!',
         'discussInstructionsText': 'Discuss and vote on who you think is Mr. Drew. When ready, reveal the roles!',
@@ -124,6 +128,13 @@ function applyGameTranslations() {
     document.getElementById('showWordText').textContent = translations.showWordText;
     document.getElementById('seenItText').textContent = translations.seenItText;
     document.getElementById('playingTitle').textContent = translations.playingTitle;
+
+    // Update starting player and theme texts
+    const startingPlayerText = document.getElementById('startingPlayerText');
+    if (startingPlayerText) startingPlayerText.textContent = translations.startingPlayerText;
+    const themeText = document.getElementById('themeText');
+    if (themeText) themeText.textContent = translations.themeText;
+
     document.getElementById('playingInstructionsText').textContent = translations.playingInstructionsText;
     document.getElementById('playingTipText').innerHTML = '<strong>' + (lang === 'it' ? 'Consiglio:' : 'Tip:') + '</strong> ' + translations.playingTipText.replace(/^(Consiglio:|Tip:)\s*/, '');
     document.getElementById('discussInstructionsText').textContent = translations.discussInstructionsText;
