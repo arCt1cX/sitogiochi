@@ -1,168 +1,168 @@
-Pizza|Focaccia|Italian food
-Ice Cream|Sorbet|Frozen desserts
-Pasta|Rice|Carbohydrates
-Coffee|Tea|Hot drinks
-Dog|Cat|Pets
-Sea|Lake|Water bodies
-Mountain|Hill|Natural landscapes
-New York|Los Angeles|American cities
-Ferrari|Lamborghini|Sports cars
-Soccer|Basketball|Ball sports
-Guitar|Piano|Musical instruments
-Beer|Wine|Alcoholic drinks
-Christmas|New Year|Winter holidays
-Summer|Spring|Seasons
-Sun|Moon|Celestial bodies
-Airplane|Helicopter|Flying vehicles
-Train|Subway|Rail transport
-Bicycle|Scooter|Two-wheeled vehicles
-Apple|Pear|Fruit
-Banana|Pineapple|Tropical fruit
-Tomato|Pepper|Vegetables
-Bread|Breadsticks|Baked goods
-Cheese|Mozzarella|Dairy products
-Ham|Salami|Cured meats
-Chocolate|Candy|Sweets
-Cake|Cookie|Baked desserts
-Milk|Yogurt|Dairy
-Water|Juice|Beverages
-Book|Magazine|Reading materials
-Movie|TV Show|Video entertainment
-Music|Podcast|Audio content
-Phone|Tablet|Electronic devices
+Pizza|Focaccia|Everyday life
+Ice Cream|Sorbet|Everyday life
+Pasta|Rice|Everyday life
+Coffee|Tea|Everyday life
+Dog|Cat|Animals and nature
+Sea|Lake|Animals and nature
+Mountain|Hill|Animals and nature
+New York|Los Angeles|World and places
+Ferrari|Lamborghini|Brands
+Soccer|Basketball|Sports
+Guitar|Piano|Music
+Beer|Wine|Everyday life
+Christmas|New Year|Everyday life
+Summer|Spring|Animals and nature
+Sun|Moon|Animals and nature
+Airplane|Helicopter|Transport
+Train|Subway|Transport
+Bicycle|Scooter|Transport
+Apple|Pear|Everyday life
+Banana|Pineapple|Everyday life
+Tomato|Pepper|Everyday life
+Bread|Breadsticks|Everyday life
+Cheese|Mozzarella|Everyday life
+Ham|Salami|Everyday life
+Chocolate|Candy|Everyday life
+Cake|Cookie|Everyday life
+Milk|Yogurt|Everyday life
+Water|Juice|Everyday life
+Book|Magazine|School
+Movie|TV Show|Film and TV
+Music|Podcast|Music
+Phone|Tablet|Technology
 Computer|Laptop|Technology
-Shoes|Sandals|Footwear
-Jeans|Pants|Clothing
-T-shirt|Shirt|Clothing
-Jacket|Coat|Outerwear
-Hat|Cap|Head accessories
-Glasses|Contact Lenses|Vision correction
-Watch|Bracelet|Wrist accessories
-Ring|Necklace|Jewelry
-Bag|Backpack|Bags
-Wallet|Purse|Accessories
-Umbrella|Raincoat|Rain protection
-Chair|Armchair|Seating furniture
-Table|Desk|Flat furniture
-Bed|Sofa|Resting furniture
-Wardrobe|Dresser|Storage furniture
-Lamp|Candle|Lighting
-Mirror|Painting|Wall decorations
-Window|Door|House openings
-Wall|Floor|House structure
-Garden|Balcony|Outdoor spaces
-Tree|Bush|Garden plants
-Flower|Plant|Vegetation
-Grass|Leaf|Plant parts
-Bird|Butterfly|Flying creatures
-Fish|Dolphin|Aquatic animals
-Lion|Tiger|Big cats
-Elephant|Rhino|Large mammals
-Monkey|Gorilla|Primates
-Snake|Lizard|Reptiles
-Spider|Ant|Insects
-Bee|Wasp|Flying insects
-Fly|Mosquito|Annoying insects
-Rabbit|Hamster|Small animals
-Horse|Donkey|Equines
-Cow|Bull|Cattle
-Pig|Boar|Swine
-Sheep|Goat|Farm animals
-Chicken|Turkey|Poultry
-Duck|Goose|Waterfowl
-Eagle|Falcon|Birds of prey
-Owl|Barn Owl|Nocturnal birds
-Parrot|Canary|Colorful birds
-Penguin|Seal|Polar animals
-Bear|Panda|Large animals
-Wolf|Fox|Wild canines
-Deer|Reindeer|Deer family
-Dinosaur|Dragon|Giant creatures
-Unicorn|Pegasus|Mythological creatures
-Mermaid|Merman|Magical sea creatures
-Vampire|Werewolf|Classic monsters
-Ghost|Zombie|Undead
-Witch|Wizard|Magical characters
-Fairy|Elf|Fairy tale creatures
-King|Queen|Monarchs
-Prince|Princess|Royal family
-Knight|Samurai|Historical warriors
-Pirate|Ninja|Adventurous characters
-Astronaut|Alien|Space
-Robot|Android|Intelligent machines
-Superhero|Supervillain|Comic book characters
-Spiderman|Batman|Superheroes
-Superman|Captain America|Superheroes
-Ironman|Thor|Marvel characters
-Hulk|Thanos|Marvel characters
-Mario|Luigi|Video game characters
-Sonic|Pikachu|Video game characters
-Minecraft|Fortnite|Video games
-PlayStation|Xbox|Gaming consoles
-Netflix|Disney+|Streaming platforms
-Instagram|TikTok|Social media
-WhatsApp|Telegram|Messaging apps
-Google|Facebook|Tech companies
-Amazon|eBay|Online stores
-Apple|Samsung|Tech brands
-McDonald's|Burger King|Fast food
-Coca-Cola|Pepsi|Soft drinks
-Nike|Adidas|Sports brands
-IKEA|Target|Furniture stores
-Ford|Chevrolet|Car manufacturers
-Yankees|Red Sox|Baseball teams
-Lakers|Celtics|Basketball teams
-Real Madrid|Barcelona|Soccer teams
-Messi|Ronaldo|Famous soccer players
-Tennis|Ping Pong|Racket sports
-Swimming|Water Polo|Water sports
-Skiing|Snowboarding|Winter sports
-Volleyball|Beach Volleyball|Net sports
-Rugby|American Football|Oval ball sports
-Golf|Bowling|Precision sports
-Boxing|Karate|Martial arts
-Yoga|Pilates|Wellness activities
-Gym|Pool|Workout places
-Stadium|Arena|Event venues
-Theater|Cinema|Entertainment venues
-Museum|Gallery|Cultural places
-Library|Bookstore|Places with books
-School|University|Educational institutions
-Hospital|Clinic|Healthcare facilities
-Pharmacy|Health Store|Health product stores
-Bank|Post Office|Financial services
-Supermarket|Market|Food shopping places
-Restaurant|Diner|Dining places
-Bar|Pub|Drinking establishments
-Club|Lounge|Nightlife venues
-Hotel|B&B|Accommodations
-Beach|Pool|Swimming places
-Park|Public Garden|Green spaces
-Zoo|Aquarium|Animal attractions
-Amusement Park|Circus|Entertainment
-Concert|Festival|Music events
-Wedding|Baptism|Ceremonies
-Birthday|Anniversary|Personal celebrations
-Halloween|Carnival|Costume holidays
-Easter|Fourth of July|Spring/Summer holidays
-Valentine's Day|Mother's Day|Dedicated holidays
-Sunday|Saturday|Weekend days
-January|February|Winter months
-Spring|Fall|Intermediate seasons
-Morning|Afternoon|Times of day
-Breakfast|Lunch|Meals
-Dinner|Happy Hour|Evening meals
-Appetizer|First Course|Courses
-Main Course|Side Dish|Courses
-Dessert|Fruit|End of meal
-Espresso|Cappuccino|Coffee drinks
-Orange|Tangerine|Shades of orange
-Purple|Lavender|Shades of purple
-Light Blue|Sky Blue|Shades of blue
-Red|Burgundy|Shades of red
-Green|Emerald|Shades of green
-Yellow|Gold|Shades of yellow
-Black|Gray|Dark colors
-White|Ivory|Light colors
-Pink|Fuchsia|Shades of pink
-Brown|Beige|Neutral colors
+Shoes|Sandals|Fashion and clothing
+Jeans|Pants|Fashion and clothing
+T-shirt|Shirt|Fashion and clothing
+Jacket|Coat|Fashion and clothing
+Hat|Cap|Fashion and clothing
+Glasses|Contact Lenses|Fashion and clothing
+Watch|Bracelet|Fashion and clothing
+Ring|Necklace|Fashion and clothing
+Bag|Backpack|Fashion and clothing
+Wallet|Purse|Fashion and clothing
+Umbrella|Raincoat|Everyday life
+Chair|Armchair|Everyday life
+Table|Desk|Everyday life
+Bed|Sofa|Everyday life
+Wardrobe|Dresser|Everyday life
+Lamp|Candle|Everyday life
+Mirror|Painting|Everyday life
+Window|Door|Everyday life
+Wall|Floor|Everyday life
+Garden|Balcony|Everyday life
+Tree|Bush|Animals and nature
+Flower|Plant|Animals and nature
+Grass|Leaf|Animals and nature
+Bird|Butterfly|Animals and nature
+Fish|Dolphin|Animals and nature
+Lion|Tiger|Animals and nature
+Elephant|Rhino|Animals and nature
+Monkey|Gorilla|Animals and nature
+Snake|Lizard|Animals and nature
+Spider|Ant|Animals and nature
+Bee|Wasp|Animals and nature
+Fly|Mosquito|Animals and nature
+Rabbit|Hamster|Animals and nature
+Horse|Donkey|Animals and nature
+Cow|Bull|Animals and nature
+Pig|Boar|Animals and nature
+Sheep|Goat|Animals and nature
+Chicken|Turkey|Animals and nature
+Duck|Goose|Animals and nature
+Eagle|Falcon|Animals and nature
+Owl|Barn Owl|Animals and nature
+Parrot|Canary|Animals and nature
+Penguin|Seal|Animals and nature
+Bear|Panda|Animals and nature
+Wolf|Fox|Animals and nature
+Deer|Reindeer|Animals and nature
+Dinosaur|Dragon|Fantasy
+Unicorn|Pegasus|Fantasy
+Mermaid|Merman|Fantasy
+Vampire|Werewolf|Fantasy
+Ghost|Zombie|Fantasy
+Witch|Wizard|Fantasy
+Fairy|Elf|Fantasy
+King|Queen|Fantasy
+Prince|Princess|Fantasy
+Knight|Samurai|Fantasy
+Pirate|Ninja|Fantasy
+Astronaut|Alien|Fantasy
+Robot|Android|Technology
+Superhero|Supervillain|Film and TV
+Spiderman|Batman|Film and TV
+Superman|Captain America|Film and TV
+Ironman|Thor|Film and TV
+Hulk|Thanos|Film and TV
+Mario|Luigi|Games
+Sonic|Pikachu|Games
+Minecraft|Fortnite|Games
+PlayStation|Xbox|Games
+Netflix|Disney+|Film and TV
+Instagram|TikTok|Technology
+WhatsApp|Telegram|Technology
+Google|Facebook|Brands
+Amazon|eBay|Brands
+Apple|Samsung|Brands
+McDonald's|Burger King|Brands
+Coca-Cola|Pepsi|Brands
+Nike|Adidas|Brands
+IKEA|Target|Brands
+Ford|Chevrolet|Brands
+Yankees|Red Sox|Sports
+Lakers|Celtics|Sports
+Real Madrid|Barcelona|Sports
+Messi|Ronaldo|Famous people
+Tennis|Ping Pong|Sports
+Swimming|Water Polo|Sports
+Skiing|Snowboarding|Sports
+Volleyball|Beach Volleyball|Sports
+Rugby|American Football|Sports
+Golf|Bowling|Sports
+Boxing|Karate|Sports
+Yoga|Pilates|Body and health
+Gym|Pool|Sports
+Stadium|Arena|Sports
+Theater|Cinema|Film and TV
+Museum|Gallery|World and places
+Library|Bookstore|School
+School|University|School
+Hospital|Clinic|Body and health
+Pharmacy|Health Store|Body and health
+Bank|Post Office|Everyday life
+Supermarket|Market|Everyday life
+Restaurant|Diner|Everyday life
+Bar|Pub|Everyday life
+Club|Lounge|Music
+Hotel|B&B|World and places
+Beach|Pool|Summer
+Park|Public Garden|World and places
+Zoo|Aquarium|World and places
+Amusement Park|Circus|Everyday life
+Concert|Festival|Music
+Wedding|Baptism|Everyday life
+Birthday|Anniversary|Everyday life
+Halloween|Carnival|Everyday life
+Easter|Fourth of July|Everyday life
+Valentine's Day|Mother's Day|Everyday life
+Sunday|Saturday|Everyday life
+January|February|Everyday life
+Spring|Fall|Animals and nature
+Morning|Afternoon|Everyday life
+Breakfast|Lunch|Everyday life
+Dinner|Happy Hour|Everyday life
+Appetizer|First Course|Everyday life
+Main Course|Side Dish|Everyday life
+Dessert|Fruit|Everyday life
+Espresso|Cappuccino|Everyday life
+Orange|Tangerine|Everyday life
+Purple|Lavender|Everyday life
+Light Blue|Sky Blue|Everyday life
+Red|Burgundy|Everyday life
+Green|Emerald|Everyday life
+Yellow|Gold|Everyday life
+Black|Gray|Everyday life
+White|Ivory|Everyday life
+Pink|Fuchsia|Everyday life
+Brown|Beige|Everyday life

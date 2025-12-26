@@ -1,168 +1,168 @@
-Pizza|Focaccia|Cibo italiano
-Gelato|Sorbetto|Dolci freddi
-Pasta|Riso|Carboidrati
-Caffè|Tè|Bevande calde
-Cane|Gatto|Animali domestici
-Mare|Lago|Acqua
-Montagna|Collina|Paesaggi naturali
-Roma|Milano|Città italiane
-Ferrari|Lamborghini|Auto sportive
-Calcio|Basket|Sport con palla
-Chitarra|Pianoforte|Strumenti musicali
-Birra|Vino|Bevande alcoliche
-Natale|Capodanno|Feste invernali
-Estate|Primavera|Stagioni
-Sole|Luna|Corpi celesti
-Aereo|Elicottero|Veicoli volanti
-Treno|Metro|Trasporti su rotaie
-Bicicletta|Monopattino|Veicoli a due ruote
-Mela|Pera|Frutta
-Banana|Ananas|Frutta tropicale
-Pomodoro|Peperone|Verdure
-Pane|Grissini|Prodotti da forno
-Formaggio|Mozzarella|Latticini
-Prosciutto|Salame|Salumi
-Cioccolato|Caramella|Dolciumi
-Torta|Biscotto|Dolci da forno
-Latte|Yogurt|Latticini
-Acqua|Succo|Bevande
-Libro|Rivista|Lettura
-Film|Serie TV|Intrattenimento video
-Musica|Podcast|Audio
-Telefono|Tablet|Dispositivi elettronici
+Pizza|Focaccia|Vita quotidiana
+Gelato|Sorbetto|Vita quotidiana
+Pasta|Riso|Vita quotidiana
+Caffè|Tè|Vita quotidiana
+Cane|Gatto|Animali e natura
+Mare|Lago|Animali e natura
+Montagna|Collina|Animali e natura
+Roma|Milano|Mondo e luoghi
+Ferrari|Lamborghini|Marche
+Calcio|Basket|Sport
+Chitarra|Pianoforte|Musica
+Birra|Vino|Vita quotidiana
+Natale|Capodanno|Vita quotidiana
+Estate|Primavera|Animali e natura
+Sole|Luna|Animali e natura
+Aereo|Elicottero|Trasporti
+Treno|Metro|Trasporti
+Bicicletta|Monopattino|Trasporti
+Mela|Pera|Vita quotidiana
+Banana|Ananas|Vita quotidiana
+Pomodoro|Peperone|Vita quotidiana
+Pane|Grissini|Vita quotidiana
+Formaggio|Mozzarella|Vita quotidiana
+Prosciutto|Salame|Vita quotidiana
+Cioccolato|Caramella|Vita quotidiana
+Torta|Biscotto|Vita quotidiana
+Latte|Yogurt|Vita quotidiana
+Acqua|Succo|Vita quotidiana
+Libro|Rivista|Scuola
+Film|Serie TV|Film e TV
+Musica|Podcast|Musica
+Telefono|Tablet|Tecnologia
 Computer|Laptop|Tecnologia
-Scarpe|Sandali|Calzature
-Jeans|Pantaloni|Abbigliamento
-Maglietta|Camicia|Abbigliamento
-Giacca|Cappotto|Capispalla
-Cappello|Berretto|Accessori per la testa
-Occhiali|Lenti a contatto|Vista
-Orologio|Bracciale|Accessori da polso
-Anello|Collana|Gioielli
-Borsa|Zaino|Borse
-Portafoglio|Borsellino|Accessori
-Ombrello|Impermeabile|Protezione dalla pioggia
-Sedia|Poltrona|Mobili per sedersi
-Tavolo|Scrivania|Mobili piani
-Letto|Divano|Mobili per riposare
-Armadio|Cassettiera|Mobili contenitori
-Lampada|Candela|Illuminazione
-Specchio|Quadro|Decorazioni da parete
-Finestra|Porta|Aperture della casa
-Muro|Pavimento|Struttura della casa
-Giardino|Balcone|Spazi esterni
-Albero|Cespuglio|Piante da giardino
-Fiore|Pianta|Vegetazione
-Erba|Foglia|Parti delle piante
-Uccello|Farfalla|Animali che volano
-Pesce|Delfino|Animali acquatici
-Leone|Tigre|Felini
-Elefante|Rinoceronte|Grandi mammiferi
-Scimmia|Gorilla|Primati
-Serpente|Lucertola|Rettili
-Ragno|Formica|Insetti
-Ape|Vespa|Insetti volanti
-Mosca|Zanzara|Insetti fastidiosi
-Coniglio|Criceto|Piccoli animali
-Cavallo|Asino|Equini
-Mucca|Toro|Bovini
-Maiale|Cinghiale|Suini
-Pecora|Capra|Animali da fattoria
-Pollo|Tacchino|Pollame
-Anatra|Oca|Uccelli acquatici
-Aquila|Falco|Rapaci
-Gufo|Civetta|Uccelli notturni
-Pappagallo|Canarino|Uccelli colorati
-Pinguino|Foca|Animali polari
-Orso|Panda|Grandi animali
-Lupo|Volpe|Canidi selvatici
-Cervo|Renna|Cervidi
-Dinosauro|Drago|Creature gigantesche
-Unicorno|Pegaso|Creature mitologiche
-Sirena|Tritone|Creature marine magiche
-Vampiro|Lupo mannaro|Mostri classici
-Fantasma|Zombie|Non morti
-Strega|Mago|Personaggi magici
-Fata|Elfo|Creature fatate
-Re|Regina|Monarchi
-Principe|Principessa|Membri della famiglia reale
-Cavaliere|Samurai|Guerrieri storici
-Pirata|Ninja|Personaggi avventurosi
-Astronauta|Alieno|Spazio
-Robot|Androide|Macchine intelligenti
-Supereroe|Supercattivo|Personaggi dei fumetti
-Spiderman|Batman|Supereroi
-Superman|Capitan America|Supereroi
-Ironman|Thor|Personaggi Marvel
-Hulk|Thanos|Personaggi Marvel
-Mario|Luigi|Personaggi di videogiochi
-Sonic|Pikachu|Personaggi di videogiochi
-Minecraft|Fortnite|Videogiochi
-PlayStation|Xbox|Console
-Netflix|Disney+|Piattaforme streaming
-Instagram|TikTok|Social media
-WhatsApp|Telegram|App di messaggistica
-Google|Facebook|Aziende tech
-Amazon|eBay|Negozi online
-Apple|Samsung|Marchi tecnologia
-McDonald's|Burger King|Fast food
-Coca-Cola|Pepsi|Bibite
-Nike|Adidas|Marchi sportivi
-IKEA|Mondo Convenienza|Negozi di arredamento
-Fiat|Volkswagen|Case automobilistiche
-Juventus|Inter|Squadre di calcio
-Milan|Napoli|Squadre di calcio
-Real Madrid|Barcellona|Squadre di calcio
-Messi|Ronaldo|Calciatori famosi
-Tennis|Ping Pong|Sport con racchetta
-Nuoto|Pallanuoto|Sport acquatici
-Sci|Snowboard|Sport invernali
-Pallavolo|Beach Volley|Sport con la rete
-Rugby|Football Americano|Sport con palla ovale
-Golf|Bowling|Sport di precisione
-Boxe|Karate|Arti marziali
-Yoga|Pilates|Attività di benessere
-Palestra|Piscina|Luoghi per allenarsi
-Stadio|Arena|Luoghi per eventi
-Teatro|Cinema|Luoghi di spettacolo
-Museo|Galleria|Luoghi culturali
-Biblioteca|Libreria|Luoghi con libri
-Scuola|Università|Istituti educativi
-Ospedale|Clinica|Strutture sanitarie
-Farmacia|Erboristeria|Vendita prodotti salute
-Banca|Posta|Servizi finanziari
-Supermercato|Mercato|Luoghi per comprare cibo
-Ristorante|Trattoria|Luoghi dove mangiare
-Bar|Pub|Locali per bere
-Discoteca|Lounge|Locali notturni
-Hotel|B&B|Alloggi
-Spiaggia|Piscina|Luoghi per nuotare
-Parco|Giardino pubblico|Spazi verdi
-Zoo|Acquario|Luoghi con animali
-Luna Park|Circo|Intrattenimento
-Concerto|Festival|Eventi musicali
-Matrimonio|Battesimo|Cerimonie
-Compleanno|Anniversario|Ricorrenze personali
-Halloween|Carnevale|Feste in maschera
-Pasqua|Ferragosto|Feste primaverili/estive
-San Valentino|Festa della mamma|Feste dedicate
-Domenica|Sabato|Giorni del weekend
-Gennaio|Febbraio|Mesi invernali
-Primavera|Autunno|Stagioni intermedie
-Mattina|Pomeriggio|Momenti della giornata
-Colazione|Pranzo|Pasti
-Cena|Aperitivo|Pasti serali
-Antipasto|Primo|Portate
-Secondo|Contorno|Portate
-Dolce|Frutta|Fine pasto
-Espresso|Cappuccino|Caffè
-Arancione|Arancio|Tonalità di arancione
-Viola|Lilla|Tonalità di viola
-Azzurro|Celeste|Tonalità di blu
-Rosso|Bordeaux|Tonalità di rosso
-Verde|Smeraldo|Tonalità di verde
-Giallo|Oro|Tonalità di giallo
-Nero|Grigio|Colori scuri
-Bianco|Avorio|Colori chiari
-Rosa|Fucsia|Tonalità di rosa
-Marrone|Beige|Colori neutri
+Scarpe|Sandali|Moda e abbigliamento
+Jeans|Pantaloni|Moda e abbigliamento
+Maglietta|Camicia|Moda e abbigliamento
+Giacca|Cappotto|Moda e abbigliamento
+Cappello|Berretto|Moda e abbigliamento
+Occhiali|Lenti a contatto|Moda e abbigliamento
+Orologio|Bracciale|Moda e abbigliamento
+Anello|Collana|Moda e abbigliamento
+Borsa|Zaino|Moda e abbigliamento
+Portafoglio|Borsellino|Moda e abbigliamento
+Ombrello|Impermeabile|Vita quotidiana
+Sedia|Poltrona|Vita quotidiana
+Tavolo|Scrivania|Vita quotidiana
+Letto|Divano|Vita quotidiana
+Armadio|Cassettiera|Vita quotidiana
+Lampada|Candela|Vita quotidiana
+Specchio|Quadro|Vita quotidiana
+Finestra|Porta|Vita quotidiana
+Muro|Pavimento|Vita quotidiana
+Giardino|Balcone|Vita quotidiana
+Albero|Cespuglio|Animali e natura
+Fiore|Pianta|Animali e natura
+Erba|Foglia|Animali e natura
+Uccello|Farfalla|Animali e natura
+Pesce|Delfino|Animali e natura
+Leone|Tigre|Animali e natura
+Elefante|Rinoceronte|Animali e natura
+Scimmia|Gorilla|Animali e natura
+Serpente|Lucertola|Animali e natura
+Ragno|Formica|Animali e natura
+Ape|Vespa|Animali e natura
+Mosca|Zanzara|Animali e natura
+Coniglio|Criceto|Animali e natura
+Cavallo|Asino|Animali e natura
+Mucca|Toro|Animali e natura
+Maiale|Cinghiale|Animali e natura
+Pecora|Capra|Animali e natura
+Pollo|Tacchino|Animali e natura
+Anatra|Oca|Animali e natura
+Aquila|Falco|Animali e natura
+Gufo|Civetta|Animali e natura
+Pappagallo|Canarino|Animali e natura
+Pinguino|Foca|Animali e natura
+Orso|Panda|Animali e natura
+Lupo|Volpe|Animali e natura
+Cervo|Renna|Animali e natura
+Dinosauro|Drago|Fantasia
+Unicorno|Pegaso|Fantasia
+Sirena|Tritone|Fantasia
+Vampiro|Lupo mannaro|Fantasia
+Fantasma|Zombie|Fantasia
+Strega|Mago|Fantasia
+Fata|Elfo|Fantasia
+Re|Regina|Fantasia
+Principe|Principessa|Fantasia
+Cavaliere|Samurai|Fantasia
+Pirata|Ninja|Fantasia
+Astronauta|Alieno|Fantasia
+Robot|Androide|Tecnologia
+Supereroe|Supercattivo|Film e TV
+Spiderman|Batman|Film e TV
+Superman|Capitan America|Film e TV
+Ironman|Thor|Film e TV
+Hulk|Thanos|Film e TV
+Mario|Luigi|Giochi
+Sonic|Pikachu|Giochi
+Minecraft|Fortnite|Giochi
+PlayStation|Xbox|Giochi
+Netflix|Disney+|Film e TV
+Instagram|TikTok|Tecnologia
+WhatsApp|Telegram|Tecnologia
+Google|Facebook|Marche
+Amazon|eBay|Marche
+Apple|Samsung|Marche
+McDonald's|Burger King|Marche
+Coca-Cola|Pepsi|Marche
+Nike|Adidas|Marche
+IKEA|Mondo Convenienza|Marche
+Fiat|Volkswagen|Marche
+Juventus|Inter|Sport
+Milan|Napoli|Sport
+Real Madrid|Barcellona|Sport
+Messi|Ronaldo|Personaggi famosi
+Tennis|Ping Pong|Sport
+Nuoto|Pallanuoto|Sport
+Sci|Snowboard|Sport
+Pallavolo|Beach Volley|Sport
+Rugby|Football Americano|Sport
+Golf|Bowling|Sport
+Boxe|Karate|Sport
+Yoga|Pilates|Corpo e salute
+Palestra|Piscina|Sport
+Stadio|Arena|Sport
+Teatro|Cinema|Film e TV
+Museo|Galleria|Mondo e luoghi
+Biblioteca|Libreria|Scuola
+Scuola|Università|Scuola
+Ospedale|Clinica|Corpo e salute
+Farmacia|Erboristeria|Corpo e salute
+Banca|Posta|Vita quotidiana
+Supermercato|Mercato|Vita quotidiana
+Ristorante|Trattoria|Vita quotidiana
+Bar|Pub|Vita quotidiana
+Discoteca|Lounge|Musica
+Hotel|B&B|Mondo e luoghi
+Spiaggia|Piscina|Estate
+Parco|Giardino pubblico|Mondo e luoghi
+Zoo|Acquario|Mondo e luoghi
+Luna Park|Circo|Vita quotidiana
+Concerto|Festival|Musica
+Matrimonio|Battesimo|Vita quotidiana
+Compleanno|Anniversario|Vita quotidiana
+Halloween|Carnevale|Vita quotidiana
+Pasqua|Ferragosto|Vita quotidiana
+San Valentino|Festa della mamma|Vita quotidiana
+Domenica|Sabato|Vita quotidiana
+Gennaio|Febbraio|Vita quotidiana
+Primavera|Autunno|Animali e natura
+Mattina|Pomeriggio|Vita quotidiana
+Colazione|Pranzo|Vita quotidiana
+Cena|Aperitivo|Vita quotidiana
+Antipasto|Primo|Vita quotidiana
+Secondo|Contorno|Vita quotidiana
+Dolce|Frutta|Vita quotidiana
+Espresso|Cappuccino|Vita quotidiana
+Arancione|Arancio|Vita quotidiana
+Viola|Lilla|Vita quotidiana
+Azzurro|Celeste|Vita quotidiana
+Rosso|Bordeaux|Vita quotidiana
+Verde|Smeraldo|Vita quotidiana
+Giallo|Oro|Vita quotidiana
+Nero|Grigio|Vita quotidiana
+Bianco|Avorio|Vita quotidiana
+Rosa|Fucsia|Vita quotidiana
+Marrone|Beige|Vita quotidiana
