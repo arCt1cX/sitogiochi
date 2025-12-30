@@ -97,6 +97,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Helper function to select a unique phrase pair index using localStorage
+    function selectUniquePhrasePairIndex() {
+        const STORAGE_KEY = 'impostor_used_phrases';
+        let usedIndices = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+        // Filter out indices that are out of bounds (in case file changed)
+        usedIndices = usedIndices.filter(idx => idx < gameState.allPhrasePairs.length);
+
+        // Find available indices
+        const allIndices = Array.from({ length: gameState.allPhrasePairs.length }, (_, i) => i);
+        const availableIndices = allIndices.filter(idx => !usedIndices.includes(idx));
+
+        // If no prompts are available (all used), reset the history
+        if (availableIndices.length === 0) {
+            console.log("All prompts used! Resetting history.");
+            usedIndices = [];
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(usedIndices));
+            // All indices are available again
+            return Math.floor(Math.random() * gameState.allPhrasePairs.length);
+        }
+
+        // Pick a random index from available ones
+        const randomIndex = Math.floor(Math.random() * availableIndices.length);
+        const selectedOriginalIndex = availableIndices[randomIndex];
+
+        // Add to used list and save
+        usedIndices.push(selectedOriginalIndex);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(usedIndices));
+
+        console.log(`Selected prompt index: ${selectedOriginalIndex}. Used ${usedIndices.length}/${gameState.allPhrasePairs.length}`);
+
+        return selectedOriginalIndex;
+    }
+
     // Initialize the game
     function initGame() {
         // Set player count from input
@@ -138,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gameState.impostorIndices = [];
             gameState.hasImpostor = false;
             // Select a group prompt
-            const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
+            const randomPairIndex = selectUniquePhrasePairIndex();
             const selectedPair = gameState.allPhrasePairs[randomPairIndex];
             gameState.groupPrompt = selectedPair.groupPhrase;
             gameState.currentPlayer = 1;
@@ -154,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
 
                 // Randomly select a phrase pair for this round
-                const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
+                const randomPairIndex = selectUniquePhrasePairIndex();
                 const selectedPair = gameState.allPhrasePairs[randomPairIndex];
 
                 // Always use first phrase for group, second phrase for impostor
@@ -180,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameState.impostorIndices = [];
 
                 // Select just a group prompt
-                const randomPairIndex = Math.floor(Math.random() * gameState.allPhrasePairs.length);
+                const randomPairIndex = selectUniquePhrasePairIndex();
                 const selectedPair = gameState.allPhrasePairs[randomPairIndex];
 
                 // Always use the first (left) phrase for the group

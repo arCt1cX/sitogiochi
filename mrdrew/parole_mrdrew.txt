@@ -29,8 +29,8 @@ Acqua|Succo|Cibo e bevande
 Libro|Rivista|Intrattenimento
 Film|Serie TV|Intrattenimento
 Musica|Podcast|Intrattenimento
-Telefono|Tablet|Tecnologia
-Computer|Laptop|Tecnologia
+Telefono|Tablet|Spazio e tecnologia
+Computer|Laptop|Spazio e tecnologia
 Scarpe|Sandali|Moda e abbigliamento
 Jeans|Pantaloni|Moda e abbigliamento
 Maglietta|Camicia|Moda e abbigliamento
@@ -100,11 +100,11 @@ Sonic|Pikachu|Giochi da tavolo e videogiochi
 Minecraft|Fortnite|Giochi da tavolo e videogiochi
 PlayStation|Xbox|Giochi da tavolo e videogiochi
 Netflix|Disney+|Film e TV
-Instagram|TikTok|Tecnologia
-WhatsApp|Telegram|Tecnologia
-Google|Facebook|Tecnologia
-Amazon|eBay|Tecnologia
-Apple|Samsung|Tecnologia
+Instagram|TikTok|Spazio e tecnologia
+WhatsApp|Telegram|Spazio e tecnologia
+Google|Facebook|Spazio e tecnologia
+Amazon|eBay|Spazio e tecnologia
+Apple|Samsung|Spazio e tecnologia
 McDonald's|Burger King|Marche famose
 Coca-Cola|Pepsi|Marche famose
 Nike|Adidas|Marche famose

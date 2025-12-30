@@ -1,183 +1,87 @@
-Il piatto che rappresenta meglio l’Italia | Il piatto italiano più buono
-Il regalo perfetto | Il regalo che faresti a tua madre
-Il miglior modo di passare un sabato sera | Il modo in cui passi solitamente il sabato sera
-La miglior pizza | La pizza più strana ma buona
-La vacanza ideale | L'ultima vacanza che hai fatto
-Il personaggio dei cartoni animati migliore | Il personaggio dei cartoni animati più irritante
-Il miglior hobby | Il passatempo più inutile
+Qual è il miglior modo di passare un sabato sera? | In che modo passi solitamente il sabato sera?
+Qual è una pizza che ti piace molto ma non prendi spesso? | Qual è la tua pizza preferita?
 Il miglior frutto | Il frutto che mangi piu spesso
 Il superpotere che vorresti di più | Il superpotere più utile per rapinare una banca
-Il modo migliore per rilassarsi | Il modo che usi per rilassarti solitamente
-Il miglior tipo di vacanza | Scrivi mare o montagna
-Il lavoro dei sogni | Il lavoro più stressante
-Il miglior libro che hai letto | Il miglior libro importante che ti hanno fatto leggere a scuola
-La foto perfetta da mettere sui social | La foto meno adatta da mettere sui social
-Il programma TV migliore | Il programma TV più trash che però ti piace
-La bevanda estiva perfetta | La bevanda estiva piu sopravvalutata
-Il miglior tipo di gelato | Il gusto di gelato alla frutta che prendi piu spesso
-Il miglior cibo da mangiare durante una serata a casa con amici | Il miglior cibo da mangiare durante un aperitivo
-La lingua più affascinante | La lingua più difficile da imparare
-L'animale più incredibile che hai visto allo zoo | Nomina un animale tipico dell'Africa
-Il posto perfetto per vivere | Il posto dove vivi
-Il regalo di compleanno perfetto | Il regalo di compleanno migliore che ti hanno fatto
-La colazione perfetta | Lo spuntino di mezzanotte perfetto
-Il mezzo di trasporto più utile | Il mezzo di trasporto più scomodo
-Il miglior sport da praticare | Lo sport che pratichi
-Il miglior film d’animazione | Il primo film d'animazione che hai visto
-Il luogo ideale per una vacanza invernale | Un luogo in cui si va a sciare
-Il miglior profumo naturale | Un cibo di cui ti piace il profumo
-La bevanda perfetta | La bevanda che bevi al mattino
-Il miglior cartone animato della tua infanzia | Il cartone più dimenticabile della tua infanzia
-Il miglior modo per passare il tempo in treno | Il miglior modo per passare il tempo in autobus
-Il dessert perfetto | Il dessert che piace a tutti ma a te no
-Il miglior strumento musicale | Lo strumento musicale più difficile
-Il miglior artista musicale italiano | L’artista musicale italiano più sopravvalutato
-Il miglior supereroe | Il supereroe più debole
-La vacanza da sogno | La prossima vacanza che vorresti fare
-Il miglior attore internazionale | L’attore internazionale più sopravvalutato
-Il miglior snack salato | Il miglior snack da mangiare davanti la tv
-La miglior app per smartphone | Il gioco da telefono a cui giochi piu spesso
-Il modo migliore per affrontare un lunedì | La prima cosa che fai appena sveglio
+Qual è il miglior tipo di vacanza? | Rispondi uno tra "mare" o "montagna"
+Se dovessi fare un lavoro che non c'entra nulla con quello che fai attualmente, quale sceglieresti? | Qual è il mestiere più stressante secondo te?
+Il miglior libro che hai letto | Quale libro ti hanno costretto a leggere a scuola?
+Qual è il tuo film preferito di sempre? | Qual è il film che hai visto più volte in tutta la tua vita?
+Qual è il tuo programma TV preferito di sempre? | Qual è programma TV che hai visto più volte in tutta la tua vita?
+Qual è bevanda estiva più sopravvalutata? |  Qual è la tua bevanda estiva perfetta?
+Qual è il miglior gusto di gelato? | Qual è il gusto di gelato alla frutta che prendi più spesso?
+Qual è la lingua più affascinante? | Qual è la lingua più difficile da imparare?
+Qual è l'animale più incredibile che hai visto allo zoo? | Nomina un animale tipico dell'Africa
+Qual è la colazione perfetta? | Qual è il tuo spuntino di mezzanotte perfetto?
+Qual è mezzo di trasporto più utile? | Qual è il mezzo di trasporto più scomodo?
+Qual è lo sport più divertente che hai praticato? | Quale sport pratichi?
+Qual è miglior film d’animazione? | Quale film di animazione hai visto più di una volta?
+Qual è la bevanda perfetta? | Che bevanda bevi al mattino?
+Il miglior modo per passare il tempo in treno? | Il miglior modo per passare il tempo in autobus?
+Il dessert che piace a tutti ma a te no | Un dessert che ti piace moltissimo
+Qual è lo strumento musicale che saresti completamente negato a suonare? | Se potessi imparare a suonare uno strumento musicale, quale sceglieresti?
+Il miglior artista musicale italiano? | L’artista musicale italiano più sopravvalutato?
+Qual è il supereroe che ha i migliori film? | Qual è il supereroe con il miglior attore nei film?
+Qual app del telefono vorresti smettere di usare ma non riesci a disinstallare? | Il gioco da telefono a cui giochi piu spesso
+Qual è il modo migliore per affrontare un lunedì? | La prima cosa che fai appena sveglio.
 Il modo perfetto per passare il Capodanno | Il modo perfetto per passare un sabato sera
-Il film più spaventoso | Il film horror meno spaventoso che hai visto
 Il miglior mezzo per viaggiare | Il mezzo con cui vorresti metterti alla guida adesso
-Il lavoro ideale | Il lavoro che volevi fare da bambino
-Il miglior tipo di pane per un panino | Il miglior tipo di pane per fare la scarpetta
-Il miglior regalo ricevuto | Il regalo che vorresti per Natale
-La cosa più utile da avere sempre con sé | Un oggetto che hai in tasca
-La cosa più interessante da collezionare | La collezione più inutile
-Un cibo sano | Un cibo con cui hai cenato
-Il miglior passatempo durante la pioggia | Un passatempo da fare in casa
-Il miglior attore comico | L’attore comico meno divertente
-Il miglior tipo di vacanza con amici | Il miglior tipo di vacanza in famiglia
-Il miglior giorno della settimana | Un giorno della settimana
-Il miglior sport di squadra | Lo sport di squadra più difficile
-Il miglior cibo per un picnic | Il cibo da portare per una gita con la scuola
-Il miglior luogo per un primo appuntamento | Il luogo in cui usciresti con tua madre
-Il miglior mezzo per esplorare una città | Il mezzo che usi per andare a lavoro
-Il miglior film comico | Un film comico che ti ha fatto schifo
-La cosa più importante da portare in montagna | La cosa più importante in campeggio
+Qual è il lavoro che volevi fare da bambino? | Qual è il tuo mestiere ideale?
+Qual è il miglior tipo di pane per un panino | Qual è il miglior tipo di pane per fare la scarpetta?
+Un cibo molto sano | Nomina il cibo con cui hai cenato
+Qual è il miglior giorno della settimana? | Nomina un giorno della settimana.
+Qual è il miglior cibo per un picnic? | Cosa mangiavi come merenda a ricreazione a scuola?
+Qual è il miglior mezzo di trasporto per esplorare una città? | Che mezzo di trasporto usi per andare a lavoro / scuola / università?
 Il tuo personaggio/creatura mitologico/a preferito/a | Scrivi un personaggio/creatura mitologico/a
-Il miglior tipo di film | Il genere dell'ultimo film che hai visto
-L'età media in cui si va a vivere da soli | età in cui una persona inizia a lavorare
-Il numero di scarpe che una persona media possiede | il numero di scarpe che possiede
-Il numero ideale di ore di sonno a notte | numero reale di ore che dormi ogni notte
+Se dovessi indovinare il numero di scarpe della persona alla tua destra, quale spareresti? | Spara un numero da 35 a 45.
 Quante tazze di caffè si bevono in media al giorno | Spara un numero da 0 a 7
 Una serie tv che hai visto più di una volta | Una serie tv famosa che hai visto per intero ma non ti ha entusiasmato
 Età media in cui si prende la patente | Scrivi un numero da 10 a 30
-Numero medio di amici stretti | Numero di amici con cui ti senti ogni settimana
 Quante volte controlli il telefono al giorno | Quante volte guardi l'ora al giorno
 Numero di ore passate sui social ogni settimana | Numero di ore passate su DrewGames ogni settimana
-Quanti esami hai passato al primo colpo | In quanti esami sei stato bocciato o hai rifiutato il voto
-Quanti film si guardano in un mese | Quante volte al mese vai in palestra
-Quanti messaggi si mandano al giorno | Quanti messaggi ricevi in un giorno
-età in cui si ha il primo lavoro retribuito | età in cui si capisce quanto vale il proprio tempo
-numero medio di password usate | numero di password ricordate a memoria
-numero di paesi che si vorrebbe visitare | numero di paesi visitati finora
-quanti regali si fanno a Natale | quanti regali si ricevono a Natale
-numero di sport provati nella vita | numero di sport praticati per 3+ anni
-quante app si hanno installate | quante app si usano davvero ogni giorno
-quanti account social si posseggono | quanti account social si usano regolarmente
-Un cibo che odiavi da piccolo | Un cibo che hai sempre amato da bambino
-Una serie TV da binge-watchare | Una serie TV che richiede riflessione
-Un personaggio famoso che stimi | Un personaggio famoso che non ti convince
-Una lingua che vorresti imparare | Una lingua che ti incuriosisce ma non studieresti mai
-Una cosa che porteresti su un'isola deserta | La prima cosa che desidereresti su un isola deserta
-Un’attività sportiva divertente | Un’attività sportiva faticosa ma soddisfacente
-Un piatto tipico italiano | Un piatto tipico della tua regione
-Un momento imbarazzante in pubblico | Un momento in cui eri ubriaco
-Un oggetto da tenere sulla scrivania | Un oggetto che sparisce sempre quando serve
-Un animale marino affascinante | Un animale marino di cui avresti paura
-Una festività che ami | Una festività che ti mette nostalgia
-Un cibo da strada delizioso | un cibo da strada sopravvalutato
-Una cosa che odi dimenticare a casa | Una cosa che dimentichi sempre a casa
-Un locale perfetto per una serata tranquilla | Un locale in cui ti piace andare la sera
-Un errore che ti ha insegnato qualcosa | Un successo che ti ha sorpreso
-Un animale che vorresti come compagno d’avventura | Un animale che sarebbe difficile da gestire come compagno
-Un'app indispensabile | Un'app che usi troppo spesso
-Un gioco da fare in compagnia | Un gioco che ti prende anche da solo
-Un'app che tutti usano | Un'app che usi tutto il giorno
-Un oggetto che conservi da anni | Un oggetto che cambi spesso
-Un'attività da fare al mattino | Un'attività che dovresti fare al mattino ma non fai
-Un'abitudine quotidiana | Un'abitudine che vuoi perdere
-Una frase che ti ripeti spesso | Una frase che odi sentirti dire
+Quanti esami hai passato al primo colpo? | In quanti esami sei stato bocciato o hai rifiutato il voto?
+Quanti film o puntate di serie tv guardi al mese, in media? | Quante volte al mese vai in palestra, in media?
+Quanti sport hai praticato regolarmente (minimo qualche mese) nella tua vita? | Spara un numero da 0 a 10
+Qual è il mese peggiore dell'anno? | In quale mese dell'anno sei solitamente più impegnato/a?
+Un cibo che odiavi da piccolo | Una verdura che da piccolo hai sempre mangiato senza lamentarti
+Qual è una serie tv che non tutti hanno visto ma che consigli assolutamente? | Nomina una serie tv animata.
+Se potessi scegliere solo 3 oggetti per sopravvivere su un'isola deserta, quali sarebbero? | Nomina tre oggetti fondamentali per un campeggio. 
+Se potessi trasformarti per un giorno in un animale marino, quale sceglieresti? | Un animale marino che ti fa paura.
+Qual è il locale della tua città in cui ti piace (o ti piaceva) di più andare? | Qual è la discoteca della tua città più affollata in cui sei stato/a?
+Nomina un tuo successo passato che sul momento ti ha sorpreso | Un momento della tua vita in cui ha esultato molto
+Un animale che vorresti per difenderti da 5 leoni che ti inseguono | Qual è l'animale più grosso che hai visto dal vivo?
+Qual è il miglior gioco di carte? | Qual è il gioco di carte a cui hai giocato più spesso?
+Qual oggetto possiedi da quando sei piccolo/a? | Nomina un oggetto della tua casa che non credi sia presenti in una nessun'altra delle case dei presenti.
+Una tua abitudine quotidiana | Una tuo vizio che vorresti assolutamente perdere
+Qual è una frase o parola che odi sentirti dire? | Qual è una frase che ripeti spesso a te stesso?
 Un colore che mette allegria | Un colore che trasmette calma
-Un segreto buffo che puoi dire | Un dettaglio di te che nessuno sa
-Una tua stranezza | Una tua abitudine comune
-Un film che tutti dovrebbero vedere almeno una volta | L'ultimo film che hai visto
+Qual è un film che secondo te tutti dovrebbero vedere almeno una volta? | L'ultimo film che hai visto
 Un capo d’abbigliamento che non metti mai | Un capo d'abbigliamento che proprio non ti piace
-Un luogo dove hai riso tanto | Un luogo dove ti diverti
-Un’attività creativa | Un tipo di arte
-Un hobby rilassante | Un hobby che proprio non ti piace
-Una cosa che ti rilassa a fine giornata | Una cosa che fai tornato a casa dopo scuola
-Un evento che aspetti ogni anno | Il giorno che salva l’anno
-Un gusto di gelato preferito | Un gusto di gelato che piace a tutti ma a te no
-Un oggetto vintage che vorresti avere | Un oggetto vintage che ancora utilizzi
-Il tuo animale preferito | Un animale che ti rappresenta personalmente
-Il Bolt del regno animale | Un animale veloce
-Una vacanza che sogni da tempo | La città più bella del mondo
-Una parola poco utilizzata | Una parola difficile da pronunciare
-Una città da visitare in autunno | Una città dove vorresti passare una giornata
-Un gesto romantico | Un regalo da fare a san Valentino
-Un regalo perfetto per un amico | Un regalo speciale per la tua dolce metà
-Un’attività da fare con amici | Un’attività da fare da soli
-Un gadget tecnologico che usi spesso | Un gadget tecnologico che vorresti comprare
-Un’attività tipica del weekend | Un’attività che fai nei momenti liberi in settimana
-Un capo d’abbigliamento comodo | Un capo d’abbigliamento che indossi spesso
-Un lavoro che faresti per passione | Un lavoro che faresti per i soldi
-Una cosa da portare in campeggio | Una cosa da portare in montagna
-Un piatto perfetto per un primo appuntamento | Un primo piatto
-Una competenza che vuoi imparare | Una competenza che stai imparando
-Un luogo ideale per leggere un libro | Il luogo dove leggi solitamente
-Un artista che ti piace | Un artista che secondo te è sopravvalutato
-Un’attività che ti faceva paura | Un'attività che non faresti mai
-Un film da vedere con la famiglia | Un film da vedere da soli
-Una persona che ammiri | Una persona in cui non vorresti mai ritrovarti
-Un colore per una stanza | Un colore per un accessorio
-Una serie animata indimenticabile | Una serie animata che non tutti conoscono
-Un oggetto che porti sempre con te | Un oggetto che non usi mai ma non riesci a buttare
-Un ricordo lontano che sembra recente | Un ricordo che sembra lontanissimo
-Un personaggio storico affascinante | Un personaggio storico controverso
-Un dolce per una festa | Un dolce che mangeresti senza mai stancarti
-Il miglior cibo per un brunch | Il miglior piatto per una colazione
-Una canzone che mette subito di buon umore | Una canzone di cui conosci tutto il testo
-Una pubblicità che ti ha sempre fatto ridere | Una pubblicità molto strana
-Un film che tutti amano | Un film che pochi conoscono ma che ti ha colpito
-Un colore che indossi spesso | Il tuo colore preferito
-Una citazione che ti ispira | Inventa una citazione
-Un’esperienza che consiglieresti | Un'esperienza che faresti con un amico
+Se potessi eliminare un animale dalla faccia della Terra, quale sceglieresti? | Qual è l'animale che vedi più spesso nella tua città?
+Nomina una parola o una cosa che secondo te nessuno dei presenti conosce | Nomina una parola stranissima che senti davvero raramente
+Qual è una città da visitare ideale da visitare d'inverno? | Qual è una città in cui passeresti volentieri 2 giorni, ma non di più?
+Qual artista musicale è, secondo te, particolarmente sopravvalutato/a? | Qual artista musicale è, secondo te, il più ascoltato/a al mondo negli ultimi 5 anni?
+Qual è il cartone animato (film esclusi) migliore di tutti i tempi? | Rispondi uno solo tra: Pokemon, Dragon Ball, Winx, Simpson
+Un personaggio storico che trovi affascinante | Un personaggio storico decisamente controverso
+Qual è la tua torta ideale per il tuo compleanno? | Quale torta non ti dispiace ma ti stufa dopo una fetta?
+Quale alimento non manca mai nella tua colazione? | Qual è il biscotto industriale (es. gocciole, abbracci...) più diffuso in Italia secondo te? 
+Un colore che indossi spesso anche se non è il tuo preferito | Qual è il tuo colore preferito?
 Una meta per un viaggio on the road | Una meta per un viaggio di relax totale
-Un cibo da mangiare d’estate | Un cibo che ami anche fuori stagione
-Una bevanda da spiaggia | Una bevanda da serata estiva
-Un animale domestico che vorresti | Un animale domestico particolare
-Un oggetto tecnologico utile | Un oggetto tecnologico superfluo ma divertente
-Una cosa che odi fare | Una cosa che ami anche se è faticosa
-Un film d’azione memorabile | Un film thriller che ti è piaciuto
-Un film comico che non ti fa ridere | Un film che ti ha fatto ridere a crepapelle
-Il miglior condimento per la pizza | La miglior farcitura per un panino
+Quale animale domestico vorresti? | Nomina animale domestico molto poco comune.
+Qual è la miglior farcitura per un panino? | Qual è il tuo condimento della pizza che ti piace di più?
 Il numero perfetto di persone per una vacanza insieme | Il numero ideale di invitati per una cena a casa
-Un colore che indossi spesso | Un colore che vorresti indossare di più
-Un piatto che ti cucini da solo | Un piatto che ordini spesso ma che ti piacerebbe saper fare
 Il miglior momento per allenarsi | Il momento della giornata in cui ti senti più attivo
 Un film da vedere in compagnia | Un film che ami riguardare
-Il numero di ore ideali per dormire | Il numero di ore che dormi
+Qual è il tuo numero di ore di sonno ideale? | Spara un numero da 4 a 10.
 Un’app che usi ogni giorno | Un sito che visiti ogni giorno (+100 punti se è partygamesdrew.com!)
 Una cosa che fai appena sveglio | Una cosa che fai prima di dormire
-Un’attività rilassante | Un’attività che ti fa staccare dal telefono
 Un posto dove ti concentri bene | La stanza che ami di più della tua casa
-Una vacanza che sogni da tempo | Una vacanza che ti ha cambiato
-Una serie TV che hai amato | Una serie TV che consigli spesso
 Un cartone che guardavi da piccolo | Un cartone che guardi/guarderesti anche da adulto
-Una bevanda da spiaggia | Una bevanda da festa
-Un film da vedere in compagnia | Un film che ami riguardare
-Quante password usi | Quante password ricordi a memoria
-Quante ore passi al computer ogni giorno | Quante ore passi davanti al telefono ogni giorno
-Quanti paesi vuoi visitare nella vita | Quanti paesi hai già visitato
-Quante volte al mese vai in palestra | Quante volte al mese salti la palestra
-Quante foto hai nella galleria del telefono | Quante ne cancelleresti subito
-Quante lingue ti piacerebbe parlare | Quante lingue parli effettivamente
-Quante volte mangi fuori a settimana | Quante volte ordini da mangiare a casa
-Quanti televisori hai a casa | quanti telefoni cellulari hai
+Qual è il miglior alcolico da comprare per una festa? | Qual è un superalcolico che ti ha mandato completamente ubriaco/a?
+Cosa hai bevuto la prima volta che ti sei ubriacato così tanto da vomitare? | Qual è il superalcolico che hai bevuto di più in assoluto?
+Quante ore passi al computer ogni giorno? | Spara un numero da 0 a 7
+Immagina di non poter più andare in un paese in cui sei già stato/a, quale scegli? | Nomina un paese estero in cui sei stato e pensi che almeno un altro dei presenti ci sia stato.
+Quante foto hai nella galleria del telefono? | Rispondi uno tra: mille, duemila, diecimila, ventimila
+Quante lingue parli? | Spara un numero da 0 a 5
 L'età migliore per sposarsi | Un numero compreso tra 15 e 40
 A che età i tuoi genitori ti hanno dato il primo telefono | A che età i tuoi genitori ti hanno comprato per la prima volta un videogioco
 A che età dovresti smettere di andare a bere con gli amici | Un numero compreso tra 21 e 90, oppure rispondi "mai"
@@ -200,10 +104,8 @@ L'altezza ideale per te | Quale altezza dovrebbe avere il tuo ragazzo/la tua rag
 Da 1 a 10 quanto ti ritieni bello | Da 1 a 10 quanto è bella la serie tv peaky blinders? Se non l'hai vista, rispondi con un numero da 1 a 10
 L' età che vorresti avere per il resto della tua vita | Un numero tra 5 e 40
 Quale animale vorresti a fianco a te durante un apocalisse zombie | quale animale ti fa più paura
-Quanto tempo rimani a letto prima di alzarti la mattina | quanto tempo ci metti ad addormentarti la sera
-Quale celebrità porteresti con te in un isola deserta | La celebrità che ti sta più antipatica
-Miglior orario per andare ad allenarsi | Il miglior orario per uscire con gli amici
-Canzone che canteresti al karaoke | Una canzone triste
+Quanto tempo rimani a letto prima di alzarti la mattina | Quanto tempo ci metti ad addormentarti dopo esserti messo a letto?
+Qual è il miglior orario per andare ad allenarsi? | Qual è il miglior orario per fare merenda?
 In quale film vorresti vivere | Un film da vedere col proprio partner
 Quale parte del corpo ti piace di più | quale parte del tuo corpo cambieresti
 Cantante preferito | Cantante sopravvalutato
@@ -370,7 +272,7 @@ Sei più un cavaliere, un pirata, un cowboy o un samurai? | Rispondi: pirata
 Se fossi un calciatore, quale trofeo vorresti vincere di più? | Quale trofeo vorresti che la tua squadra del cuore vinca?
 Nomina un stio web che tu usi e sei sicuro che nessun altro dei presenti usi | Nomina un sito pornografico o di scommesse che non tutti conoscono
 Un personaggio secondario di Due Fantagenitori che ti piaceva | Un personaggio secondario di Due Fantagenitori che secondo te non tutti i tuoi amici ricordano
-Un personaggio trash italiano che non sopporti | Un personaggio trash italiano che sarebbe ottimo amico di uno dei presenti
+Un personaggio trash che sarebbe ottimo amico di uno dei presenti | Un personaggio trash che non sopporti
 Se dovessi partecipare alle olimpiadi, in quale disciplina faresti meno peggio? | In quale disciplina olimpica pensi di poter battere tutti i presenti?
 Se potessi ricevere 1 milione per ogni km di corsa che fai di fila, quanto pensi che riusciresti a fare? | Spara un numero da 0 a 100
 Un edificio della tua città che raderesti al suolo domani | Nomina la casa di un tuo amico (es. casa di...) 
@@ -406,9 +308,9 @@ Se dovessi scambiare il tuo lavoro con quello di uno dei presenti, chi scegliere
 Quale bevanda alcolica che hai bevuto più volte da solo? | Qual è la bevanda alcolica che ordini più spesso al ristorante
 Come lo prendi il caffè al bar (es. nero, macchiato, lungo, cappuccino)? | Rispondi "nero" oppure "corretto"
 A che età ti sei ubriacato per la prima volta? | A che età ti sei innamorato per la prima volta?
-La montagna più alta di cui hai salito la vetta | Spara una montagna italiana qualsiasi
-Se dovessi cambiare università frequentata con un'altra sede italiana, quale sceglieresti? | Nomina una città capolougo di regione conosciuta
-Che applicazione usi per ascoltare la musica? |  Che applicazione non usi mai per ascoltare la musica?
+La montagna più alta di cui hai salito la vetta | Spara una montagna italiana qualsiasi in cui sei stato
+Se dovessi cambiare università frequentata con un'altra sede italiana, quale sceglieresti? | Nomina una città italiana conosciuta
+Che applicazione usi per ascoltare la musica? |  Rispondi uno tra: Apple Music, Spotify, Soundcloud
 Il tuo gelato confezionato preferito | Il gelato confezionato più sopravvalutato 
 Una persona che manderesti in galera all'istante | Chi tra i presenti è il più morto di figa?
 Chi dei vostri amici non coinvolgeresti ma in un viaggio in Thailandia? | Chi tra i vostri amici è il più propenso a entrare nel cast di Una Notte da Leoni
@@ -465,7 +367,64 @@ Chi è una persona che è l'idolo del giocatore alla tua sinistra, ma lui non lo
 Se dovessi rinascere in un altro paese, quale sarebbe? | Qual è il paese estero in cui sei stato ma non torneresti? 
 Se dovessi giocare una partita in Serie A, quanti minuti pensi che dureresti? | Range: da 2 a 90 minuti
 Se potessi andare in vacanza in un solo paese in tutta la tua vita, quale sceglieresti? | Quale paese, se lo visiterai, vorresti esplorare almeno per qualche settimana? 
-
-
-
-
+Qual è stato l'obbligo più difficile che hai dovuto fare per scommessa o obbligo/verità? | Inventati un obbligo particolarmente imbarazzante che hai dovuto fare giocando a obbligo/verità
+A che età hai scoperto che Babbo Natale non esiste? | Spara un numero da 3 a 14
+Quale programma TV che vedevi da piccolo è secondo te molto sottovalutato? | Nomina un programma TV che vedevi quando avevi dai 10 ai 14 anni
+Secondo te è accettabile pisciare nella doccia? | Secondo te bisognerebbe lavarsi le mani ogni volta che si va al bagno?
+Qual è stato il voto più basso che hai preso a scuola? | Spara un numero da 0 a 5.
+Qual è una cosa che è spesso presente in bagno ma non è presente in quello di casa tua? | Qual è un prodotto di igiene / cosmetica che non usi quasi mai?
+Qual è una caduta o scivolata più esilarante che ti è capitata (a te)? | Inventati una storia esilaranti in cui sei caduto / scivolato malamente.
+Se dovessi trasferirti in un paese del Terzo Mondo, quale sceglieresti? | Rispondi uno tra: Egitto, Messico, Kenya, India
+Cosa non può mancare al cenone di Natale? | Qual è il cibo natalizio più sopravvalutato?
+Qual è la cosa peggiore che ti è successa durante una vacanza? | Inventati una sventura terrificante che ti è accaduta durante una vacanza
+Qual è la cosa migliore che ti hanno rubato, tanto che ti si disperato per il furto subito? | Qual è un oggetto senza il quale non puoi proprio uscire di casa?
+Quanti minuti dura in media una tua doccia? | Spara un numero da 1 a 15
+Quanto durava il tragitto da casa tua alla tua scuola superiore? | Spara un tempo: da 5 minuti a 1 ora (es. 20 minuti, mezz'ora...)
+Approssimativamente, quanti euro costa la maglietta che indossi?  | Approssimativamente, quante applicazioni hai nel tuo telefono?
+Di quanti giocatori, fra i presenti, metteresti gli abiti che indossano, per uscire la sera, senza problemi? | Spara un numero da 0 a 3
+Quale è un prodotto che secondo te costa davvero troppo al supermercato? | Qual è un ingrediente che non manca mai nel tuo pranzo?
+Qual è il miglior drink da prendere quando sei in discoteca? | Un drink molto semplice, ma che ti piace.
+Se potessi comprare una sola birra al supermercato, quale sceglieresti? | Qual è, secondo te, la birra commerciale più sottovalutata in assoluto?
+Qual è la bevanda alcolica più devastante che hai mai bevuto? | Rispondi: "la grappa di mio nonno"
+Qual è stato il numero massimo di ore che hai dormito di fila? | Spara un numero da 7 a 15
+Se potessi trasformati in un animale volatile per un giorno, quale sceglieresti? | Ti senti più un'aquila, un corvo o un gufo? 
+Se potessi far atterrare un razzo in qualsiasi posizione del mondo, dove lo scaglieresti? | Rispondi: "a casa di..." e nomina uno dei presenti (es. a casa di Marco)
+Qual è il piatto peggiore che ti è stato servito a pranzo/cena da ospite? | Qual è una combinazione di ingredienti che molti mangiano ma tu trovi disgustosa?
+Meglio vivere in un castello, in una villa ad Hollywood o in uno chalet in montagna? | Rispondi: castello
+Qual è la cucina tradizionale (es. cinese, indiana) che ti piace ma è immangiabile in Italia?| Se potessi mangiare solo una cucina tradizionale (es. cinese, indiana) oltre a quella italiana, quale sceglieresti? 
+Qual è un dolce che a molti non piace ma a te si? | Qual è un dolce che vedi sempre nei menu ma non ordini mai
+Quale artista musicale da il suo meglio nella featuring rispetto alle canzoni da solista? | Qual è un rapper di cui ti piacciono solo 2-3 canzoni e basta?
+Qual è un album musicale la cui copertina è più bella dell'album stesso? | Qual è l'album musicale peggiore del tuo artista preferito (o di uno dei tuoi preferiti, se non ne hai uno solo)?
+Chi è una persona con cui hai dovuto collaborare almeno una volta, ma con cui non sopporteresti lavorare di nuovo? | Nomina un tuo collega, compagno di scuola superiore / università qualunque
+Se dovessi scambiare una stanza con la stessa presente nella casa del giocatore alla tua sinistra, quale sceglieresti? | Qual è, secondo te, la stanza più brutta della tua casa?
+Se potessi ricevere 1 milione di € per ogni km consecutivo che riesci a correre, quanti milioni pensi di ottenere? | Spara un numero da 0 a 40
+Quante mail mandi al giorno, al momento? | Spara un numero da 0 a 5
+Quanti messaggi Whatsapp mandi al giorno, in media | Quanti anni ha il giocatore alla tua destra?
+Secondo te, quanto riusciresti a fare al massimo di salto in lungo in centimetri? | Se il giocatore alla tua destra raddoppiasse in altezza, quanto sarebbe alto in centimetri? 
+Se dovessi lavorare in qualsiasi corpo di forze dell'ordine / sicurezza, quale sarebbe? | Qual è il corpo di forze dell'ordine che, secondo te, è oggettivamente il più utile per il paese?
+Qual è un genere musicale che ti spacca i timpani? | Quale genere musicale è perfetto per una discoteca?
+Se dovessi trasferirti in un'altra regione italiana, quale preferiresti? | Qual è la regione italiana più sottovalutata per una vacanza?
+Se potessi mangiare un solo piatto di pesce per il resto della tua vita, quale sceglieresti? | Qual è il piatto di pesce più costoso che hai mai mangiato?
+Chi fra i presenti è il più propenso a contrarre l'ebola? | Chi fra i presenti si ammala più spesso?
+Approssimativamente, quanti scalini devi fare per arrivare a piedi al tuo appartamento? | Rispondi uno tra: 0, 50, 100, 500
+Che voto credi che abbia preso alla maturità il giocatore alla tua destra? | Spara un numero da 70 a 100
+Se dovessi trasferirti in una città degli Stati Uniti, quale sceglieresti? | Qual è una città americana che ti incuriosisce, ma in cui non vivresti mai?
+Se dovessi descrivere la persona alla tua destra con una parola, quale sarebbe? | Nomina una cosa con cui il giocatore alla tua destra è ossessionato
+Qual è un animale poco noto che ti piacerebbe un sacco vedere dal vivo? | Rispondi uno tra: tasso del miele, panda rosso, gallo cedrone
+Qual è un esercizio di palestra o di cardio che è poco comune ma a te piace fare? | Qual è un esercizio strano che vedi spesso fare in palestra ma di cui non capisci il senso?
+Qual è il tuo calciatore preferito di quando eri piccolo? | Rispondi: Lionel Messi
+Se potessi viaggiare in un'isola a tua scelta, in quale andresti? | Nomina una qualunque isola dei Caraibi o del Pacifico 
+Qual è la competenza più di nicchia presente nel tuo curriculum? | Qual è una competenza nel tuo curriculum che saresti tentato di eliminare?
+Chi tra i presenti fa più frequentemente uso di sostanze stupefacenti? | Chi tra i presenti è il più propenso a rapinare una banca?
+Qual era la tua bevanda gassata preferita da piccolo? | Qual è la bevanda gassata più sopravvalutata?
+Qual è il tuo cibo ideale per la fame chimica? | Qual è il tuo cibo preferito da mangiare guardando un film?
+Se potessi vivere un giorno in un popolo antico, quale sceglieresti? | Qual è, secondo te, il popolo antico più spietato in guerra?
+Secondo te, in quale materia scolastica era negato il giocatore alla tua sinistra? | In quale materia scolastica eri totalmente negato? 
+Chi l'amico più clown che hai mai avuto? | Chi era il tuo compagno di banco alle superiori?
+Alzati in piedi se ti sei mai cagato addosso da adulto | Alzati in piedi
+Alzati in piedi se ti è capitato di scivolare su una banana | Alzati in piedi
+Sei mai andato a trans? | Rispondi Si o No
+Quale è una materia / tematica di cui, secondo te, sei l'unico esperto tra i presenti? | In che settore lavori? (se non lavori, qual è l'esame universitario in cui sei andato meglio?)
+Come bevi il caffé (es. nero, macchiato ecc.) | Rispondi: nero
+Se dovessi andare in un programma TV, chi vorresti che fosse il presentatore? | Chi è il presentatore del tuo quiz show / programma tv preferito?
+Qual è il formaggio più buono? | Qual è il formaggio che mangi più spesso?
