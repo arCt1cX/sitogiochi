@@ -31,7 +31,7 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0 1rem 0;
 }
 
 .logo-container {
@@ -87,7 +87,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     max-width: 1200px;
     margin: 0 auto;
 }
