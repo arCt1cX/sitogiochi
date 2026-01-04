@@ -665,7 +665,7 @@ document.addEventListener('DOMContentLoaded', () => {
             padding: 1rem;
             position: relative;
             overflow: hidden;
-            min-height: 220px; /* Further reduced height */
+            min-height: 250px; /* Slightly increased to fit larger image */
             cursor: pointer; /* Whole card is clickable */
             
             /* Custom Border Style: Purple - Black - Purple */
@@ -726,8 +726,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .game-icon {
-            width: 80%;
-            height: 120px; /* Fixed height for consistency */
+            width: auto;
+            height: 170px; /* Increased height for bigger images */
+            max-width: 100%;
             object-fit: contain;
             filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.4));
             transition: transform 0.3s ease;
@@ -740,14 +741,14 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Mobile responsiveness */
         @media (max-width: 480px) {
             .game-card {
-                min-height: 200px;
+                min-height: 220px;
             }
             .game-card h3 {
                 font-size: 1rem;
                 padding: 4px 10px;
             }
             .game-icon {
-                height: 100px;
+                height: 140px; /* Bigger on mobile too */
             }
         }
     `;
