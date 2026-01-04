@@ -12,8 +12,8 @@ const translations = {
         'newGamesComingSoon': 'Nuovi giochi in arrivo...',
         'copyright': '© 2025 partygamesdrew.com - Tutti i diritti riservati',
         'toggleLanguage': 'IT',
-        'tagline': 'Illumina la mente, scatena la serata',
-        'subtitle': 'Giochi da fare con gli amici offline 🎉',
+        'tagline': 'giochi da fare con i tuoi amici rimasti per svoltare la serata 🍺🍁',
+        'subtitle': '',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Solo Italiano',
 
@@ -335,8 +335,8 @@ const translations = {
         'newGamesComingSoon': 'New games coming soon...',
         'copyright': '© 2025 partygamesdrew.com - All rights reserved',
         'toggleLanguage': 'EN',
-        'tagline': 'Enlighten minds, ignite the night',
-        'subtitle': 'Games to play with friends offline 🎉',
+        'tagline': 'games to play with your remaining friends to liven up the night 🍺🍁',
+        'subtitle': '',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Italian Only',
 

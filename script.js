@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update page content with current language
     document.getElementById('tagline').textContent = getTranslation('tagline');
-    document.getElementById('subtitle').textContent = getTranslation('subtitle');
+    const subtitleElem = document.getElementById('subtitle');
+    if (subtitleElem) subtitleElem.textContent = getTranslation('subtitle');
     document.getElementById('copyright').textContent = getTranslation('copyright');
 
     // Update page title and description
