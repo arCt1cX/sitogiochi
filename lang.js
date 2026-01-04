@@ -335,7 +335,7 @@ const translations = {
         'newGamesComingSoon': 'New games coming soon...',
         'copyright': '© 2025 partygamesdrew.com - All rights reserved',
         'toggleLanguage': 'EN',
-        'tagline': 'Games to play with your remaining friends to liven up the night 🍺🍁',
+        'tagline': 'Liven up the night with those "fried" friends of yours 🍺🍁',
         'subtitle': '',
         'buyMeCoffee': 'Buy me a coffee',
         'italianOnly': 'Italian Only',
