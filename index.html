@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!-- The lang attribute will be set dynamically by JavaScript -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +10,49 @@
     <meta name="theme-color" content="#000000">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>');
-        document.write('<meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">');
-      } else {
-        document.write('<title>DrewGames - Games to play with friends offline</title>');
-        document.write('<meta id="pageDescription" name="description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>');
+            document.write('<meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">');
+        } else {
+            document.write('<title>DrewGames - Games to play with friends offline</title>');
+            document.write('<meta id="pageDescription" name="description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">');
+        }
     </script>
-    
+
     <!-- Favicon and Apple Touch Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-mrdrew.jpg">
     <link rel="manifest" href="site.webmanifest">
-    
+
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.partygamesdrew.com/">
     <meta property="og:title" content="DrewGames - Games to play with friends offline">
-    <meta property="og:description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
-    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
-    
+    <meta property="og:description"
+        content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.partygamesdrew.com/">
     <meta name="twitter:title" content="DrewGames - Games to play with friends offline">
-    <meta name="twitter:description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
-    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
-    
+    <meta name="twitter:description"
+        content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
+
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/" />
     <script>
         // Set language as early as possible
-        (function() {
+        (function () {
             function getInitialLang() {
                 // Check URL parameter first
                 const urlParams = new URLSearchParams(window.location.search);
@@ -57,23 +60,23 @@
                 if (urlLang === 'en' || urlLang === 'it') {
                     return urlLang;
                 }
-                
+
                 // Check localStorage
                 const storedLang = localStorage.getItem('lang');
                 if (storedLang) {
                     return storedLang;
                 }
-                
+
                 // Check browser language
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
                 if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
                     return 'it';
                 }
-                
+
                 // Default to English
                 return 'en';
             }
-            
+
             // Set the lang attribute
             document.documentElement.lang = getInitialLang();
         })();
@@ -81,15 +84,15 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,7 +101,7 @@
     <link rel="canonical" href="https://www.partygamesdrew.com/">
     <meta name="keywords" content="party games, offline games, browser games, multiplayer games, social games">
     <meta name="author" content="DrewGames">
-    
+
     <!-- JSON-LD structured data for better search results -->
     <script type="application/ld+json">
     {
@@ -112,11 +115,11 @@
         "query-input": "required name=search_term_string"
       },
       "description": "A collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!",
-      "logo": "https://www.partygamesdrew.com/logo.jpg",
-      "image": "https://www.partygamesdrew.com/logo.jpg"
+      "logo": "https://www.partygamesdrew.com/logo-mrdrew.jpg",
+      "image": "https://www.partygamesdrew.com/logo-mrdrew.jpg"
     }
     </script>
-    
+
     <style>
         /* Sidebar Navigation Styles */
         .sidenav {
@@ -133,7 +136,7 @@
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
         }
-        
+
         .sidenav a {
             padding: 15px 25px;
             text-decoration: none;
@@ -144,13 +147,13 @@
             white-space: nowrap;
             border-left: 3px solid transparent;
         }
-        
+
         .sidenav a:hover {
             color: #7b68ee;
             background-color: rgba(255, 255, 255, 0.1);
             border-left: 3px solid #7b68ee;
         }
-        
+
         .sidenav .closebtn {
             position: absolute;
             top: 0;
@@ -160,18 +163,18 @@
             border-left: none;
             padding: 8px 16px;
         }
-        
+
         .sidenav .closebtn:hover {
             background-color: transparent;
             border-left: none;
         }
-        
+
         .sidenav-section {
             margin-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 15px;
         }
-        
+
         .sidenav-header {
             color: #aaa;
             font-size: 14px;
@@ -180,7 +183,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .hamburger-menu {
             position: absolute;
             top: 15px;
@@ -195,7 +198,7 @@
             padding: 5px;
             gap: 5px;
         }
-        
+
         .hamburger-menu div {
             width: 100%;
             height: 3.5px;
@@ -204,7 +207,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
         }
-        
+
         .hamburger-menu div:last-child {
             margin-bottom: 0;
         }
@@ -223,17 +226,22 @@
             visibility: hidden;
             transition: opacity 0.2s ease;
         }
-        
+
         /* Main content shift */
         #main {
             /* Removed: transition: margin-left 0.3s; */
         }
-        
+
         @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 16px;}
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 16px;
+            }
         }
-        
+
         .tagline {
             position: relative;
             font-size: 1.5rem;
@@ -241,11 +249,11 @@
             margin-bottom: 1.2rem;
             text-align: center;
             font-style: italic;
-            background: linear-gradient(90deg, 
-                #473c8b, 
-                #614dc2, 
-                #7b68ee, 
-                #473c8b);
+            background: linear-gradient(90deg,
+                    #473c8b,
+                    #614dc2,
+                    #7b68ee,
+                    #473c8b);
             background-size: 300% auto;
             -webkit-background-clip: text;
             background-clip: text;
@@ -254,78 +262,79 @@
             filter: drop-shadow(0 0 2px rgba(71, 60, 139, 0.7));
             text-shadow: 0 0 15px rgba(71, 60, 139, 0.5);
         }
-        
+
         @keyframes shine {
             0% {
                 background-position: 0% center;
             }
+
             100% {
                 background-position: 300% center;
             }
         }
-        
+
         h2 {
             font-size: 1rem;
             font-weight: 500;
             color: #aaa;
             margin-bottom: 2rem;
         }
-        
+
         @media (max-width: 768px) {
             .tagline {
                 font-size: 1.3rem;
             }
-            
+
             h2 {
                 font-size: 0.9rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             .tagline {
                 font-size: 1.1rem;
             }
-            
+
             h2 {
                 font-size: 0.8rem;
             }
         }
-        
+
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
         }
-        
+
         .support-container {
             margin-top: 10px;
         }
-        
+
         .bmc-button-fallback {
             display: inline-block;
             line-height: 0;
             text-decoration: none;
-            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
             transition: all 0.3s ease;
         }
-        
+
         .bmc-button-fallback:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .bmc-button-fallback:active {
             transform: translateY(-1px);
         }
-        
+
         @media (max-width: 480px) {
             .footer-content {
                 gap: 15px;
             }
         }
-        
+
         .language-toggle {
             position: absolute;
             top: 15px;
@@ -348,20 +357,20 @@
             width: 40px;
             height: 28px;
         }
-        
+
         .language-toggle:hover {
             background-color: rgba(71, 60, 139, 0.95);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        
+
         .flag-icon {
             width: 24px;
             height: 16px;
             border-radius: 2px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* Social media icons styling */
         .social-media-container {
             display: flex;
@@ -369,7 +378,7 @@
             gap: 20px;
             margin-bottom: 15px;
         }
-        
+
         .social-icon {
             display: flex;
             align-items: center;
@@ -382,19 +391,20 @@
             transition: all 0.3s ease;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
         }
-        
+
         .social-icon:hover {
             transform: translateY(-3px);
             background-color: rgba(71, 60, 139, 0.95);
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .social-icon svg {
             width: 24px;
             height: 24px;
         }
     </style>
 </head>
+
 <body>
     <!-- Hamburger Menu Button -->
     <div class="hamburger-menu" onclick="openNav()" role="button" aria-label="Open navigation menu">
@@ -410,7 +420,7 @@
         <a href="games.html" id="nav-games">Games</a>
         <a href="tournament/index.html" id="nav-tournament">Tournament Mode</a>
         <a href="about.html" id="nav-about">About Us</a>
-        
+
         <div class="sidenav-section">
             <div class="sidenav-header" id="legal-header">Legal</div>
             <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
@@ -429,10 +439,10 @@
                 <!-- The country flag SVG will be inserted here by JavaScript -->
             </svg>
         </button>
-        
+
         <header>
             <div class="logo-container">
-                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+                <img src="logo-mrdrew.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
             </div>
             <h1>Drew Games</h1>
             <div id="tagline" class="tagline">Illumina la mente, scatena la serata</div>
@@ -448,25 +458,42 @@
         <footer>
             <div class="footer-content">
                 <div class="social-media-container">
-                    <a href="https://www.instagram.com/partygamesdrew?igsh=MXNjZXM0b2Z2MTA0Mw==" target="_blank" class="social-icon" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <a href="https://www.instagram.com/partygamesdrew?igsh=MXNjZXM0b2Z2MTA0Mw==" target="_blank"
+                        class="social-icon" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
                     </a>
-                    <a href="https://youtube.com/@drewgames-x5e?si=24OZlWz0AlbBFRCB" target="_blank" class="social-icon" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    <a href="https://youtube.com/@drewgames-x5e?si=24OZlWz0AlbBFRCB" target="_blank" class="social-icon"
+                        aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
                     </a>
-                    <a href="https://www.tiktok.com/@partygamesdrew?_t=ZN-8w8IirJpb2E&_r=1" target="_blank" class="social-icon" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    <a href="https://www.tiktok.com/@partygamesdrew?_t=ZN-8w8IirJpb2E&_r=1" target="_blank"
+                        class="social-icon" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
                     </a>
                 </div>
                 <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
                 <div class="support-container">
                     <!-- Mobile-friendly BMC button implementation -->
-                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
-                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank"
+                        class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee"
+                            style="height: 60px; width: 217px;">
                     </a>
                     <script>
                         // Load the official BMC script
-                        (function() {
+                        (function () {
                             const script = document.createElement('script');
                             script.type = 'text/javascript';
                             script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
@@ -479,23 +506,23 @@
                             script.setAttribute('data-outline-color', '#000000');
                             script.setAttribute('data-font-color', '#ffffff');
                             script.setAttribute('data-coffee-color', '#FFDD00');
-                            
+
                             // On script load, hide our fallback if the official button rendered properly
-                            script.onload = function() {
-                                setTimeout(function() {
+                            script.onload = function () {
+                                setTimeout(function () {
                                     const bmcButton = document.querySelector('.bmc-btn');
                                     if (bmcButton) {
                                         // If the official button is present, hide our fallback
                                         document.getElementById('bmc-link').style.display = 'none';
-                                        
+
                                         // Add touchend event listener for mobile devices
-                                        bmcButton.addEventListener('touchend', function(e) {
+                                        bmcButton.addEventListener('touchend', function (e) {
                                             window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
                                         });
                                     }
                                 }, 1000); // Wait a second for the button to render
                             };
-                            
+
                             document.body.appendChild(script);
                         })();
                     </script>
@@ -506,7 +533,7 @@
 
     <script src="script.js" defer></script>
     <script src="lang.js" defer></script>
-    
+
     <!-- JavaScript for Sidebar Navigation -->
     <script>
         function openNav() {
@@ -514,24 +541,24 @@
             document.getElementById("myOverlay").style.opacity = "1";
             document.getElementById("myOverlay").style.visibility = "visible";
         }
-        
+
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("myOverlay").style.opacity = "0";
             document.getElementById("myOverlay").style.visibility = "hidden";
         }
-        
+
         // Update navigation text based on language
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Navigation will be updated when translations are applied
             if (typeof applyTranslations === 'function') {
                 const originalApply = applyTranslations;
-                applyTranslations = function() {
+                applyTranslations = function () {
                     originalApply();
                     updateNavigationText();
                 };
             }
-            
+
             function updateNavigationText() {
                 if (typeof getTranslation === 'function') {
                     document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
@@ -546,4 +573,5 @@
         });
     </script>
 </body>
+
 </html>

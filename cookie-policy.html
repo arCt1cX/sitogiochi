@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,49 @@
     <meta name="theme-color" content="#000000">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>Cookie Policy | DrewGames</title>');
-        document.write('<meta name="description" content="Politica sui cookie di DrewGames: Scopri come utilizziamo i cookie e altre tecnologie di tracciamento sul nostro sito e nei nostri giochi.">');
-      } else {
-        document.write('<title>Cookie Policy | DrewGames</title>');
-        document.write('<meta name="description" content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Cookie Policy | DrewGames</title>');
+            document.write('<meta name="description" content="Politica sui cookie di DrewGames: Scopri come utilizziamo i cookie e altre tecnologie di tracciamento sul nostro sito e nei nostri giochi.">');
+        } else {
+            document.write('<title>Cookie Policy | DrewGames</title>');
+            document.write('<meta name="description" content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">');
+        }
     </script>
-    
+
     <!-- Favicon and Apple Touch Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-mrdrew.jpg">
     <link rel="manifest" href="site.webmanifest">
-    
+
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.partygamesdrew.com/cookie-policy.html">
     <meta property="og:title" content="Cookie Policy | DrewGames">
-    <meta property="og:description" content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">
-    <meta property="og:image" content="https://www.partygamesdrew.com/logo.jpg">
-    
+    <meta property="og:description"
+        content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">
+    <meta property="og:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.partygamesdrew.com/cookie-policy.html">
     <meta name="twitter:title" content="Cookie Policy | DrewGames">
-    <meta name="twitter:description" content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">
-    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo.jpg">
-    
+    <meta name="twitter:description"
+        content="DrewGames Cookie Policy: Learn about how we use cookies and other tracking technologies on our site and in our games.">
+    <meta name="twitter:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
+
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/cookie-policy.html?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/cookie-policy.html?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/cookie-policy.html" />
     <script>
         // Set language as early as possible
-        (function() {
+        (function () {
             function getInitialLang() {
                 // Check URL parameter first
                 const urlParams = new URLSearchParams(window.location.search);
@@ -56,23 +59,23 @@
                 if (urlLang === 'en' || urlLang === 'it') {
                     return urlLang;
                 }
-                
+
                 // Check localStorage
                 const storedLang = localStorage.getItem('lang');
                 if (storedLang) {
                     return storedLang;
                 }
-                
+
                 // Check browser language
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
                 if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
                     return 'it';
                 }
-                
+
                 // Default to English
                 return 'en';
             }
-            
+
             // Set the lang attribute
             document.documentElement.lang = getInitialLang();
         })();
@@ -80,22 +83,22 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.partygamesdrew.com/cookie-policy.html">
-    
+
     <style>
         /* Sidebar Navigation Styles */
         .sidenav {
@@ -112,7 +115,7 @@
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
         }
-        
+
         .sidenav a {
             padding: 15px 25px;
             text-decoration: none;
@@ -123,13 +126,13 @@
             white-space: nowrap;
             border-left: 3px solid transparent;
         }
-        
+
         .sidenav a:hover {
             color: #7b68ee;
             background-color: rgba(255, 255, 255, 0.1);
             border-left: 3px solid #7b68ee;
         }
-        
+
         .sidenav .closebtn {
             position: absolute;
             top: 0;
@@ -139,18 +142,18 @@
             border-left: none;
             padding: 8px 16px;
         }
-        
+
         .sidenav .closebtn:hover {
             background-color: transparent;
             border-left: none;
         }
-        
+
         .sidenav-section {
             margin-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 15px;
         }
-        
+
         .sidenav-header {
             color: #aaa;
             font-size: 14px;
@@ -159,7 +162,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .hamburger-menu {
             position: absolute;
             top: 15px;
@@ -174,7 +177,7 @@
             padding: 5px;
             gap: 5px;
         }
-        
+
         .hamburger-menu div {
             width: 100%;
             height: 3.5px;
@@ -183,7 +186,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
         }
-        
+
         .hamburger-menu div:last-child {
             margin-bottom: 0;
         }
@@ -202,12 +205,12 @@
             visibility: hidden;
             transition: opacity 0.2s ease;
         }
-        
+
         /* Main content shift */
         #main {
             /* Removed: transition: margin-left 0.3s; */
         }
-        
+
         /* Cookie Policy Specific Styles */
         .cookie-container {
             max-width: 900px;
@@ -215,7 +218,7 @@
             padding: 20px;
             color: #f1f1f1;
         }
-        
+
         .cookie-section {
             background-color: rgba(35, 30, 65, 0.6);
             border-radius: 10px;
@@ -224,7 +227,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(123, 104, 238, 0.3);
         }
-        
+
         .cookie-section h2 {
             color: #7b68ee;
             font-size: 1.8rem;
@@ -238,23 +241,24 @@
             font-size: 1.3rem;
             margin: 20px 0 15px 0;
         }
-        
+
         .cookie-section p {
             line-height: 1.7;
             margin-bottom: 15px;
             font-size: 1.05rem;
         }
-        
-        .cookie-section ul, .cookie-section ol {
+
+        .cookie-section ul,
+        .cookie-section ol {
             padding-left: 20px;
             margin-bottom: 15px;
         }
-        
+
         .cookie-section li {
             margin-bottom: 10px;
             line-height: 1.6;
         }
-        
+
         .cookie-table {
             width: 100%;
             border-collapse: collapse;
@@ -263,43 +267,45 @@
             border-radius: 8px;
             overflow: hidden;
         }
-        
-        .cookie-table th, .cookie-table td {
+
+        .cookie-table th,
+        .cookie-table td {
             padding: 12px 15px;
             border: 1px solid rgba(123, 104, 238, 0.3);
             text-align: left;
         }
-        
+
         .cookie-table th {
             background-color: rgba(123, 104, 238, 0.3);
             color: #ffffff;
             font-weight: 600;
         }
-        
+
         .cookie-table tr:nth-child(even) {
             background-color: rgba(60, 55, 90, 0.5);
         }
-        
+
         @media (max-width: 768px) {
             .cookie-section h2 {
                 font-size: 1.5rem;
             }
-            
+
             .cookie-section h3 {
                 font-size: 1.2rem;
             }
-            
-            .cookie-section p, 
+
+            .cookie-section p,
             .cookie-section li {
                 font-size: 1rem;
             }
-            
-            .cookie-table th, .cookie-table td {
+
+            .cookie-table th,
+            .cookie-table td {
                 padding: 8px 10px;
                 font-size: 0.9rem;
             }
         }
-        
+
         .language-toggle {
             position: fixed;
             top: 15px;
@@ -322,20 +328,20 @@
             width: 40px;
             height: 28px;
         }
-        
+
         .language-toggle:hover {
             background-color: rgba(71, 60, 139, 0.95);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        
+
         .flag-icon {
             width: 24px;
             height: 16px;
             border-radius: 2px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-        
+
         .last-updated {
             font-style: italic;
             color: #aaa;
@@ -344,6 +350,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Hamburger Menu Button -->
     <div class="hamburger-menu" onclick="openNav()">
@@ -358,7 +365,7 @@
         <a href="index.html" id="nav-home">Home</a>
         <a href="games.html" id="nav-games">Games</a>
         <a href="about.html" id="nav-about">About Us</a>
-        
+
         <div class="sidenav-section">
             <div class="sidenav-header" id="legal-header">Legal</div>
             <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
@@ -377,10 +384,10 @@
                 <!-- The country flag SVG will be inserted here by JavaScript -->
             </svg>
         </button>
-        
+
         <header>
             <div class="logo-container">
-                <img src="logo.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
+                <img src="logo-mrdrew.jpg" alt="DrewGames Logo - Giochi per amici offline" class="logo">
             </div>
             <h1>Drew Games</h1>
             <div id="cookie-title" class="tagline">Cookie Policy</div>
@@ -390,25 +397,45 @@
             <div class="cookie-container">
                 <div class="cookie-section">
                     <p id="last-updated" class="last-updated">Last Updated: May 4, 2025</p>
-                    
-                    <p id="cookie-intro">This Cookie Policy explains how DrewGames ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website at partygamesdrew.com ("Site"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
-                    
+
+                    <p id="cookie-intro">This Cookie Policy explains how DrewGames ("we", "us", or "our") uses cookies
+                        and similar technologies to recognize you when you visit our website at partygamesdrew.com
+                        ("Site"). It explains what these technologies are and why we use them, as well as your rights to
+                        control our use of them.</p>
+
                     <h2 id="what-are-cookies-title">1. What Are Cookies?</h2>
-                    <p id="what-are-cookies-p1">Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
-                    <p id="what-are-cookies-p2">Cookies set by the website owner (in this case, DrewGames) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics). The parties that set these third-party cookies can recognize your computer both when it visits the website in question and also when it visits certain other websites.</p>
-                    
+                    <p id="what-are-cookies-p1">Cookies are small data files that are placed on your computer or mobile
+                        device when you visit a website. Cookies are widely used by website owners to make their
+                        websites work, or to work more efficiently, as well as to provide reporting information.</p>
+                    <p id="what-are-cookies-p2">Cookies set by the website owner (in this case, DrewGames) are called
+                        "first-party cookies". Cookies set by parties other than the website owner are called
+                        "third-party cookies". Third-party cookies enable third-party features or functionality to be
+                        provided on or through the website (e.g., advertising, interactive content, and analytics). The
+                        parties that set these third-party cookies can recognize your computer both when it visits the
+                        website in question and also when it visits certain other websites.</p>
+
                     <h2 id="why-we-use-cookies-title">2. Why Do We Use Cookies?</h2>
-                    <p id="why-we-use-cookies-p1">We use first-party and third-party cookies for several reasons. Some cookies are required for technical reasons in order for our Site to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our Site. Third parties serve cookies through our Site for advertising, analytics, and other purposes.</p>
-                    
+                    <p id="why-we-use-cookies-p1">We use first-party and third-party cookies for several reasons. Some
+                        cookies are required for technical reasons in order for our Site to operate, and we refer to
+                        these as "essential" or "strictly necessary" cookies. Other cookies also enable us to track and
+                        target the interests of our users to enhance the experience on our Site. Third parties serve
+                        cookies through our Site for advertising, analytics, and other purposes.</p>
+
                     <h2 id="cookies-we-use-title">3. The Cookies We Use</h2>
-                    <p id="cookies-we-use-p1">The specific types of first and third-party cookies served through our Site and the purposes they perform are described below:</p>
-                    
+                    <p id="cookies-we-use-p1">The specific types of first and third-party cookies served through our
+                        Site and the purposes they perform are described below:</p>
+
                     <h3 id="essential-cookies-title">Essential Cookies</h3>
-                    <p id="essential-cookies-p1">These cookies are strictly necessary to provide you with services available through our Site and to use some of its features, such as access to secure areas. Because these cookies are strictly necessary to deliver the Site, you cannot refuse them without impacting how our Site functions.</p>
-                    
+                    <p id="essential-cookies-p1">These cookies are strictly necessary to provide you with services
+                        available through our Site and to use some of its features, such as access to secure areas.
+                        Because these cookies are strictly necessary to deliver the Site, you cannot refuse them without
+                        impacting how our Site functions.</p>
+
                     <h3 id="performance-cookies-title">Performance and Functionality Cookies</h3>
-                    <p id="performance-cookies-p1">These cookies are used to enhance the performance and functionality of our Site but are non-essential to their use. However, without these cookies, certain functionality may become unavailable.</p>
-                    
+                    <p id="performance-cookies-p1">These cookies are used to enhance the performance and functionality
+                        of our Site but are non-essential to their use. However, without these cookies, certain
+                        functionality may become unavailable.</p>
+
                     <table class="cookie-table">
                         <thead>
                             <tr>
@@ -425,10 +452,12 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <h3 id="analytics-cookies-title">Analytics and Customization Cookies</h3>
-                    <p id="analytics-cookies-p1">These cookies collect information that is used either in aggregate form to help us understand how our Site is being used or how effective our marketing campaigns are, or to help us customize our Site for you.</p>
-                    
+                    <p id="analytics-cookies-p1">These cookies collect information that is used either in aggregate form
+                        to help us understand how our Site is being used or how effective our marketing campaigns are,
+                        or to help us customize our Site for you.</p>
+
                     <table class="cookie-table">
                         <thead>
                             <tr>
@@ -455,10 +484,13 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <h3 id="advertising-cookies-title">Advertising Cookies</h3>
-                    <p id="advertising-cookies-p1">These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed for advertisers, and in some cases selecting advertisements that are based on your interests.</p>
-                    
+                    <p id="advertising-cookies-p1">These cookies are used to make advertising messages more relevant to
+                        you. They perform functions like preventing the same ad from continuously reappearing, ensuring
+                        that ads are properly displayed for advertisers, and in some cases selecting advertisements that
+                        are based on your interests.</p>
+
                     <table class="cookie-table">
                         <thead>
                             <tr>
@@ -475,21 +507,39 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <h3 id="social-media-cookies-title">Social Media Cookies</h3>
-                    <p id="social-media-cookies-p1">These cookies are used to enable you to share pages and content that you find interesting on our Site through third-party social networking and other websites. These cookies may also be used for advertising purposes.</p>
-                    
+                    <p id="social-media-cookies-p1">These cookies are used to enable you to share pages and content that
+                        you find interesting on our Site through third-party social networking and other websites. These
+                        cookies may also be used for advertising purposes.</p>
+
                     <h2 id="control-cookies-title">4. How Can You Control Cookies?</h2>
-                    <p id="control-cookies-p1">You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the appropriate opt-out links provided in the cookie table above.</p>
-                    <p id="control-cookies-p2">You can also set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our Site though your access to some functionality and areas of our Site may be restricted. As the means by which you can refuse cookies through your web browser controls vary from browser to browser, you should visit your browser's help menu for more information.</p>
-                    <p id="control-cookies-p3">In addition, most advertising networks offer you a way to opt out of targeted advertising. If you would like to find out more information, please visit <a href="http://www.aboutads.info/choices/" target="_blank">http://www.aboutads.info/choices/</a> or <a href="http://www.youronlinechoices.com" target="_blank">http://www.youronlinechoices.com</a>.</p>
-                    
+                    <p id="control-cookies-p1">You have the right to decide whether to accept or reject cookies. You can
+                        exercise your cookie preferences by clicking on the appropriate opt-out links provided in the
+                        cookie table above.</p>
+                    <p id="control-cookies-p2">You can also set or amend your web browser controls to accept or refuse
+                        cookies. If you choose to reject cookies, you may still use our Site though your access to some
+                        functionality and areas of our Site may be restricted. As the means by which you can refuse
+                        cookies through your web browser controls vary from browser to browser, you should visit your
+                        browser's help menu for more information.</p>
+                    <p id="control-cookies-p3">In addition, most advertising networks offer you a way to opt out of
+                        targeted advertising. If you would like to find out more information, please visit <a
+                            href="http://www.aboutads.info/choices/"
+                            target="_blank">http://www.aboutads.info/choices/</a> or <a
+                            href="http://www.youronlinechoices.com"
+                            target="_blank">http://www.youronlinechoices.com</a>.</p>
+
                     <h2 id="update-policy-title">5. How Often Will We Update This Cookie Policy?</h2>
-                    <p id="update-policy-p1">We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore revisit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.</p>
-                    <p id="update-policy-p2">The date at the top of this Cookie Policy indicates when it was last updated.</p>
-                    
+                    <p id="update-policy-p1">We may update this Cookie Policy from time to time in order to reflect, for
+                        example, changes to the cookies we use or for other operational, legal, or regulatory reasons.
+                        Please therefore revisit this Cookie Policy regularly to stay informed about our use of cookies
+                        and related technologies.</p>
+                    <p id="update-policy-p2">The date at the top of this Cookie Policy indicates when it was last
+                        updated.</p>
+
                     <h2 id="questions-title">6. Where Can You Get Further Information?</h2>
-                    <p id="questions-p1">If you have any questions about our use of cookies or other technologies, please email us at <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a>.</p>
+                    <p id="questions-p1">If you have any questions about our use of cookies or other technologies,
+                        please email us at <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a>.</p>
                 </div>
             </div>
         </main>
@@ -498,8 +548,10 @@
             <div class="footer-content">
                 <p id="copyright">&copy; 2025 partygamesdrew.com - All rights reserved</p>
                 <div class="support-container">
-                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank" class="bmc-button-fallback">
-                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px; width: 217px;">
+                    <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank"
+                        class="bmc-button-fallback">
+                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee"
+                            style="height: 60px; width: 217px;">
                     </a>
                 </div>
             </div>
@@ -507,7 +559,7 @@
     </div>
 
     <script src="lang.js"></script>
-    
+
     <!-- JavaScript for Sidebar Navigation -->
     <script>
         function openNav() {
@@ -515,13 +567,13 @@
             document.getElementById("myOverlay").style.opacity = "1";
             document.getElementById("myOverlay").style.visibility = "visible";
         }
-        
+
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("myOverlay").style.opacity = "0";
             document.getElementById("myOverlay").style.visibility = "hidden";
         }
-        
+
         // Set the flag icon based on current language
         function setFlagIcon() {
             const currentLang = getUserLanguage();
@@ -529,11 +581,11 @@
             document.getElementById('currentFlag').innerHTML = flagSvg;
             document.getElementById('languageToggle').setAttribute('aria-label', `Switch to ${currentLang === 'en' ? 'Italian' : 'English'}`);
         }
-        
+
         // Update UI elements based on language
         function updateUIForLanguage() {
             const currentLang = getUserLanguage();
-            
+
             // Update navigation text
             document.getElementById('nav-home').textContent = translations[currentLang]['navHome'] || 'Home';
             document.getElementById('nav-games').textContent = translations[currentLang]['navGames'] || 'Games';
@@ -542,44 +594,44 @@
             document.getElementById('nav-privacy').textContent = translations[currentLang]['navPrivacy'] || 'Privacy Policy';
             document.getElementById('nav-terms').textContent = translations[currentLang]['navTerms'] || 'Terms of Service';
             document.getElementById('nav-cookies').textContent = translations[currentLang]['navCookies'] || 'Cookie Policy';
-            
+
             // Update copyright text
-            document.getElementById('copyright').textContent = currentLang === 'it' ? 
-                '© 2025 partygamesdrew.com - Tutti i diritti riservati' : 
+            document.getElementById('copyright').textContent = currentLang === 'it' ?
+                '© 2025 partygamesdrew.com - Tutti i diritti riservati' :
                 '© 2025 partygamesdrew.com - All rights reserved';
-            
+
             // Update cookie policy content for Italian
             if (currentLang === 'it') {
                 document.getElementById('cookie-title').textContent = 'Cookie Policy';
                 document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 4 Maggio 2025';
-                
+
                 document.getElementById('cookie-intro').textContent = 'Questa Cookie Policy spiega come DrewGames ("noi", "ci" o "nostro") utilizza i cookie e tecnologie simili per riconoscerti quando visiti il nostro sito web partygamesdrew.com ("Sito"). Spiega cosa sono queste tecnologie e perché le utilizziamo, oltre ai tuoi diritti di controllare il nostro utilizzo di esse.';
-                
+
                 document.getElementById('what-are-cookies-title').textContent = '1. Cosa Sono i Cookie?';
                 document.getElementById('what-are-cookies-p1').textContent = 'I cookie sono piccoli file di dati che vengono posizionati sul tuo computer o dispositivo mobile quando visiti un sito web. I cookie sono ampiamente utilizzati dai proprietari di siti web per far funzionare i loro siti web, o per farli funzionare in modo più efficiente, oltre che per fornire informazioni di reporting.';
                 document.getElementById('what-are-cookies-p2').textContent = 'I cookie impostati dal proprietario del sito web (in questo caso, DrewGames) sono chiamati "cookie di prima parte". I cookie impostati da parti diverse dal proprietario del sito web sono chiamati "cookie di terze parti". I cookie di terze parti consentono di fornire funzionalità o funzioni di terze parti sul o attraverso il sito web (ad es. pubblicità, contenuti interattivi e analisi). Le parti che impostano questi cookie di terze parti possono riconoscere il tuo computer sia quando visita il sito web in questione sia quando visita alcuni altri siti web.';
-                
+
                 document.getElementById('why-we-use-cookies-title').textContent = '2. Perché Utilizziamo i Cookie?';
                 document.getElementById('why-we-use-cookies-p1').textContent = 'Utilizziamo cookie di prima parte e di terze parti per diversi motivi. Alcuni cookie sono necessari per motivi tecnici affinché il nostro Sito funzioni, e li chiamiamo cookie "essenziali" o "strettamente necessari". Altri cookie ci permettono anche di tracciare e indirizzare gli interessi dei nostri utenti per migliorare l\'esperienza sul nostro Sito. Terze parti servono cookie attraverso il nostro Sito per pubblicità, analisi e altri scopi.';
-                
+
                 document.getElementById('cookies-we-use-title').textContent = '3. I Cookie che Utilizziamo';
                 document.getElementById('cookies-we-use-p1').textContent = 'I tipi specifici di cookie di prima e terza parte serviti attraverso il nostro Sito e gli scopi che svolgono sono descritti di seguito:';
-                
+
                 document.getElementById('essential-cookies-title').textContent = 'Cookie Essenziali';
                 document.getElementById('essential-cookies-p1').textContent = 'Questi cookie sono strettamente necessari per fornirti i servizi disponibili attraverso il nostro Sito e per utilizzare alcune delle sue funzionalità, come l\'accesso ad aree sicure. Poiché questi cookie sono strettamente necessari per fornire il Sito, non puoi rifiutarli senza influire sul funzionamento del nostro Sito.';
-                
+
                 document.getElementById('performance-cookies-title').textContent = 'Cookie di Prestazione e Funzionalità';
                 document.getElementById('performance-cookies-p1').textContent = 'Questi cookie vengono utilizzati per migliorare le prestazioni e la funzionalità del nostro Sito ma non sono essenziali per il loro utilizzo. Tuttavia, senza questi cookie, determinate funzionalità potrebbero diventare non disponibili.';
-                
+
                 document.getElementById('cookie-name-header').textContent = 'Nome Cookie';
                 document.getElementById('purpose-header').textContent = 'Scopo';
                 document.getElementById('duration-header').textContent = 'Durata';
                 document.getElementById('lang-purpose').textContent = 'Memorizza la tua preferenza di lingua';
                 document.getElementById('lang-duration').textContent = '1 anno';
-                
+
                 document.getElementById('analytics-cookies-title').textContent = 'Cookie di Analisi e Personalizzazione';
                 document.getElementById('analytics-cookies-p1').textContent = 'Questi cookie raccolgono informazioni che vengono utilizzate in forma aggregata per aiutarci a capire come viene utilizzato il nostro Sito o quanto sono efficaci le nostre campagne di marketing, o per aiutarci a personalizzare il nostro Sito per te.';
-                
+
                 document.getElementById('cookie-name-header2').textContent = 'Nome Cookie';
                 document.getElementById('purpose-header2').textContent = 'Scopo';
                 document.getElementById('duration-header2').textContent = 'Durata';
@@ -589,43 +641,43 @@
                 document.getElementById('gid-duration').textContent = '24 ore';
                 document.getElementById('gat-purpose').textContent = 'Utilizzato da Google Analytics per limitare la frequenza delle richieste';
                 document.getElementById('gat-duration').textContent = '1 minuto';
-                
+
                 document.getElementById('advertising-cookies-title').textContent = 'Cookie Pubblicitari';
                 document.getElementById('advertising-cookies-p1').textContent = 'Questi cookie vengono utilizzati per rendere i messaggi pubblicitari più rilevanti per te. Svolgono funzioni come impedire che lo stesso annuncio riappaia continuamente, garantire che gli annunci vengano visualizzati correttamente per gli inserzionisti e, in alcuni casi, selezionare pubblicità basate sui tuoi interessi.';
-                
+
                 document.getElementById('cookie-name-header3').textContent = 'Nome Cookie';
                 document.getElementById('purpose-header3').textContent = 'Scopo';
                 document.getElementById('duration-header3').textContent = 'Durata';
                 document.getElementById('gads-purpose').textContent = 'Utilizzato da Google AdSense per il targeting delle pubblicità';
                 document.getElementById('gads-duration').textContent = '13 mesi';
-                
+
                 document.getElementById('social-media-cookies-title').textContent = 'Cookie dei Social Media';
                 document.getElementById('social-media-cookies-p1').textContent = 'Questi cookie vengono utilizzati per consentirti di condividere pagine e contenuti che trovi interessanti sul nostro Sito attraverso reti sociali di terze parti e altri siti web. Questi cookie possono essere utilizzati anche per scopi pubblicitari.';
-                
+
                 document.getElementById('control-cookies-title').textContent = '4. Come Puoi Controllare i Cookie?';
                 document.getElementById('control-cookies-p1').textContent = 'Hai il diritto di decidere se accettare o rifiutare i cookie. Puoi esercitare le tue preferenze sui cookie facendo clic sui collegamenti di opt-out appropriati forniti nella tabella dei cookie sopra.';
                 document.getElementById('control-cookies-p2').textContent = 'Puoi anche impostare o modificare i controlli del tuo browser web per accettare o rifiutare i cookie. Se scegli di rifiutare i cookie, puoi comunque utilizzare il nostro Sito anche se il tuo accesso ad alcune funzionalità e aree del nostro Sito potrebbe essere limitato. Poiché i mezzi con cui puoi rifiutare i cookie attraverso i controlli del tuo browser web variano da browser a browser, dovresti visitare il menu di aiuto del tuo browser per ulteriori informazioni.';
                 document.getElementById('control-cookies-p3').innerHTML = 'Inoltre, la maggior parte delle reti pubblicitarie ti offre un modo per optare per la pubblicità mirata. Se desideri ricevere ulteriori informazioni, visita <a href="http://www.aboutads.info/choices/" target="_blank">http://www.aboutads.info/choices/</a> o <a href="http://www.youronlinechoices.com" target="_blank">http://www.youronlinechoices.com</a>.';
-                
+
                 document.getElementById('update-policy-title').textContent = '5. Con Quale Frequenza Aggiorneremo Questa Cookie Policy?';
                 document.getElementById('update-policy-p1').textContent = 'Potremmo aggiornare questa Cookie Policy di tanto in tanto per riflettere, ad esempio, cambiamenti nei cookie che utilizziamo o per altri motivi operativi, legali o normativi. Ti invitiamo pertanto a rivisitare regolarmente questa Cookie Policy per restare informato sul nostro utilizzo di cookie e tecnologie correlate.';
                 document.getElementById('update-policy-p2').textContent = 'La data all\'inizio di questa Cookie Policy indica quando è stata aggiornata l\'ultima volta.';
-                
+
                 document.getElementById('questions-title').textContent = '6. Dove Puoi Ottenere Ulteriori Informazioni?';
                 document.getElementById('questions-p1').innerHTML = 'Se hai domande sul nostro utilizzo di cookie o altre tecnologie, inviaci un\'email a <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a>.';
             }
         }
-        
-        document.addEventListener('DOMContentLoaded', function() {
+
+        document.addEventListener('DOMContentLoaded', function () {
             setFlagIcon();
             updateUIForLanguage();
         });
-        
+
         function toggleLanguage() {
             const currentLang = getUserLanguage();
             const newLang = currentLang === 'it' ? 'en' : 'it';
             setUserLanguage(newLang);
-            
+
             // Update URL if needed
             const url = new URL(window.location.href);
             url.searchParams.set('lang', newLang);
@@ -633,4 +685,5 @@
         }
     </script>
 </body>
-</html> 
+
+</html>
