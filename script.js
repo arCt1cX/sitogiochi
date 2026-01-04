@@ -657,93 +657,83 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add CSS for icon styling
     const style = document.createElement('style');
     style.textContent = `
-        /* Create a flexbox layout for content and icon */
+        /* New Vertical Card Layout */
         .game-card {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center; /* Center everything horizontally */
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
+            min-height: 350px; /* Slightly taller */
+            
+            /* Custom Border Style: Purple - Black - Purple */
+            /* Using CSS Border + Box Shadow + Outline trick might be cleanest */
+            border: 3px solid #000000;
+            box-shadow: 0 0 0 4px #7b68ee, inset 0 0 0 4px #7b68ee;
+            border-radius: 20px;
+        }
+
+        /* Adjust hover effect */
+        .game-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            /* Enhance shadow on hover */
+             box-shadow: 0 0 0 4px #7b68ee, inset 0 0 0 4px #7b68ee, 0 10px 20px rgba(0,0,0,0.5);
         }
         
-        /* Content container for title, catchphrase and button */
+        /* Content container for title and button (and image in between) */
         .card-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-right: 15px;
+            align-items: center;
+            width: 100%;
             z-index: 2;
         }
+
+        /* Title Style */
+        .game-card h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 5px;
+            text-shadow: 2px 2px 0px #000; /* Improve readability on gradient */
+        }
         
-        /* Icon container styles */
+        /* Image Container */
         .game-icon-container {
+            flex-grow: 1;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            width: 100%;
+            margin: 1rem 0;
             z-index: 1;
-            position: relative;
         }
         
         .game-icon {
-            width: 110px;
-            height: 110px;
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
-            transition: transform 0.3s ease, filter 0.3s ease;
-            margin-bottom: 8px;
+            width: 85%; /* Big and prominent */
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.4));
+            transition: transform 0.3s ease;
         }
         
-        .game-card:hover .game-icon {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
-        }
-        
-        /* Adjust title margins */
-        .game-card h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Special case for coming soon card */
-        .coming-soon-card {
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .coming-soon-card .card-content {
-            text-align: center;
-            margin-right: 0;
-        }
-        
-        .coming-soon-card .game-icon-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.2;
-        }
-        
-        .coming-soon-card .game-icon {
-            width: 150px;
-            height: 150px;
-        }
-        
-        /* Make sure the play button stays at the bottom */
+        /* Play button at the bottom */
         .play-button {
-            margin-top: 1rem;
+            margin-top: auto; /* Push to bottom */
+            width: 80%; /* Wider button looks better in vertical layout */
+            border: 2px solid #000; /* Stick with the border theme */
         }
         
         /* Mobile responsiveness */
         @media (max-width: 480px) {
-            .game-icon {
-                width: 90px;
-                height: 90px;
-                margin-bottom: 6px;
+            .game-card {
+                min-height: 300px;
             }
-            
-            .card-content {
-                margin-right: 10px;
+            .game-card h3 {
+                font-size: 1.4rem;
             }
         }
     `;
@@ -755,20 +745,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = `game-card ${gradientClasses[index % gradientClasses.length]}`;
 
-        // Create content container
-        const contentContainer = document.createElement('div');
-        contentContainer.className = 'card-content';
-
-        // Create game title using the display name if available, otherwise format the ID
+        // Create title
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
 
-        // Create catchphrase
-        const catchphrase = document.createElement('p');
-        catchphrase.className = 'game-catchphrase';
-        catchphrase.textContent = game.catchphrase;
+        // Create icon container and add PNG Image
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'game-icon-container';
 
-        // Create play button as a button element
+        const img = document.createElement('img');
+        img.src = 'chainReaction.png'; // Placeholder for all games as requested
+        img.alt = `${game.displayName} Icon`;
+        img.className = 'game-icon';
+
+        iconContainer.appendChild(img);
+
+        // Create play button
         const playButton = document.createElement('button');
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
@@ -781,34 +773,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add click event for navigation
         playButton.addEventListener('click', () => {
-            // Use folder name mapping if available, otherwise use game.id
             const folderName = folderNameMap[game.id] || game.id;
             window.location.href = `${folderName}/index.html`;
         });
 
-        // Add title, catchphrase and button to content container
-        contentContainer.appendChild(title);
-        contentContainer.appendChild(catchphrase);
-        contentContainer.appendChild(playButton);
-
-        // Create icon container and add SVG
-        const iconContainer = document.createElement('div');
-        iconContainer.className = 'game-icon-container';
-        iconContainer.innerHTML = game.iconSvg;
-        const iconElement = iconContainer.querySelector('svg');
-        iconElement.classList.add('game-icon');
-
-        // Add "Italian only" text for guessthepic game
-        if (game.id === "guessthepic") {
-            const italianOnlyText = document.createElement('div');
-            italianOnlyText.className = 'italian-only-text';
-            italianOnlyText.textContent = getTranslation('italianOnly');
-            iconContainer.appendChild(italianOnlyText);
-        }
-
-        // Append content and icon containers to card
-        card.appendChild(contentContainer);
+        // Append elements to card in order: Title -> Image -> Button
+        card.appendChild(title);
         card.appendChild(iconContainer);
+        card.appendChild(playButton);
+
+        // Add "Italian only" text for guessthepic game logic is simplified/removed as it might overlay image
+        // If needed, we can overlay it on the image or add a small badge. 
+        // For now, clean layout is priority.
 
         // Append card to container
         gamesContainer.appendChild(card);
@@ -818,28 +794,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const comingSoonCard = document.createElement('div');
     comingSoonCard.className = 'game-card coming-soon-card';
 
-    // Create content container
-    const comingSoonContentContainer = document.createElement('div');
-    comingSoonContentContainer.className = 'card-content';
-
+    // Title
     const comingSoonTitle = document.createElement('h3');
     comingSoonTitle.textContent = getTranslation('comingSoon');
 
-    const comingSoonCatchphrase = document.createElement('p');
-    comingSoonCatchphrase.className = 'game-catchphrase';
-    comingSoonCatchphrase.textContent = getTranslation('newGamesComingSoon');
-
-    // Create icon for Coming Soon card
+    // Icon Container with PNG
     const comingSoonIconContainer = document.createElement('div');
     comingSoonIconContainer.className = 'game-icon-container';
 
-    // Append elements to containers
-    comingSoonContentContainer.appendChild(comingSoonTitle);
-    comingSoonContentContainer.appendChild(comingSoonCatchphrase);
-    comingSoonCard.appendChild(comingSoonContentContainer);
-    comingSoonCard.appendChild(comingSoonIconContainer);
+    const comingSoonImg = document.createElement('img');
+    comingSoonImg.src = 'chainReaction.png';
+    comingSoonImg.alt = 'Coming Soon Icon';
+    comingSoonImg.className = 'game-icon';
+    comingSoonImg.style.opacity = '0.5';
+    comingSoonImg.style.filter = 'grayscale(100%)';
 
-    // Append Coming Soon card to container
+    comingSoonIconContainer.appendChild(comingSoonImg);
+
+    // Placeholder text/button
+    const comingSoonText = document.createElement('div');
+    comingSoonText.textContent = '...';
+    comingSoonText.style.fontSize = '2rem';
+    comingSoonText.style.color = 'white';
+    comingSoonText.style.marginTop = 'auto';
+
+    comingSoonCard.appendChild(comingSoonTitle);
+    comingSoonCard.appendChild(comingSoonIconContainer);
+    comingSoonCard.appendChild(comingSoonText);
+
     gamesContainer.appendChild(comingSoonCard);
 
     // Add CSS for Italian only text
