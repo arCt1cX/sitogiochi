@@ -17,618 +17,81 @@ document.addEventListener('DOMContentLoaded', () => {
         metaDesc.setAttribute('content', getTranslation('pageDescription'));
     }
 
-    // Games array with additional catchphrase information and display names
+    // Games array - Reordered and SVGs removed
+    // Per cambiare immagine: sostituisci 'chainReaction.png' con il nome del tuo file (es. 'impostor.png')
     const games = [
+        {
+            id: "drewnking",
+            displayName: getTranslation('drewnking', 'title'),
+            catchphrase: getTranslation('drewnking', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
         {
             id: "impostor",
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                               <!-- Shadow element -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
-
-                                <!-- Group of silhouettes -->
-                <!-- Left character (suspicious) -->
-                <g class="suspicious-character">
-
-                    <!-- Body with connected head -->
-                                        <path d="M16,65 C16,50 20,45 24,45 C28,45 32,50 32,65" stroke="white" stroke-linecap="round" />
-                    <path d="M18.5,39 C18,36 19,33 24,33 C29,33 30,36 29.5,39 C29,42 28,45 24,45 C20,45 19,42 18.5,39Z" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="24" cy="25" r="9" fill="rgba(255,0,0,0.2)" stroke="white" stroke-width="1.2" />
-
-                                        <!-- Suspicious elements -->
-                    <path d="M21,24 L23,22 M25,22 L27,24" stroke="white" stroke-width="1.2" />
-                    <path d="M24,31 C22,29 26,29 24,31" stroke="white" stroke-width="1" />
-                    <path d="M22,55 L26,55" stroke="rgba(255,0,0,0.5)" stroke-width="1.2" stroke-dasharray="1 1" />
-
-                </g>
-                
-                                <!-- Middle character -->
-
-                <g>
-                    <!-- Body with connected head -->
-                                      <path d="M33,65 C33,50 37,45 40,45 C43,45 47,50 47,65" stroke="white" stroke-linecap="round" />
-                    <path d="M35.5,38 C35,35 36,32 40,32 C44,32 45,35 44.5,38 C44,41 43,45 40,45 C37,45 36,41 35.5,38Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="40" cy="22" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-
-                    <path d="M37,21 L39,21 M41,21 L43,21" stroke="white" stroke-width="1.2" />
-                    <path d="M40,27 C38,25 42,25 40,27" stroke="white" stroke-width="1" />
-                </g>
-                
-                <!-- Right character -->
-                <g>
-                    <!-- Body with connected head -->
-                    <path d="M49,65 C49,50 53,45 56,45 C59,45 63,50 63,65" stroke="white" stroke-linecap="round" />
-                    <path d="M51.5,39 C51,36 52,33 56,33 C60,33 61,36 60.5,39 C60,42 59,45 56,45 C53,45 52,42 51.5,39Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="56" cy="25" r="8" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.2" />
-                    
-                    <path d="M53,24 L55,24 M57,24 L59,24" stroke="white" stroke-width="1.2" />
-                    <path d="M56,30 C54,28 58,28 56,30" stroke="white" stroke-width="1" />
-                </g>
-                
-                <!-- Investigation elements -->
-                <circle cx="24" cy="25" r="14" fill="none" stroke="rgba(255,0,0,0.3)" stroke-width="1" stroke-dasharray="2 2" />
-                <path d="M12,33 L14,33.5 L13,35" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
-                <path d="M36,12 L34,15 L38,14" stroke="rgba(255,0,0,0.6)" stroke-width="1" />
-                
-                <!-- Connection lines suggesting discussion -->
-                <path d="M32,25 L37,23" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
-                <path d="M48,24 L54,24" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-dasharray="1 1" />
-                
-                <!-- Question mark hovering over the group -->
-                <text x="40" y="12" font-size="14" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
-                <circle cx="40" cy="10" r="8" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="1 2" />
-                
-                <!-- Pointing gesture -->
-                <path d="M60,35 C63,38 65,40 63,35" stroke="white" stroke-width="1" />
-                <path d="M63,35 L55,30" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <path d="M45,38 C42,42 39,39 40,36" stroke="white" stroke-width="1" />
-                <path d="M40,36 L32,28" stroke="white" stroke-width="1" stroke-linecap="round" />
-            </svg>`
-        },
-        {
-            id: "colorgrid",
-            displayName: getTranslation('colorgrid', 'title'),
-            catchphrase: getTranslation('colorgrid', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
-                <!-- Grid shadow -->
-                <rect x="17" y="17" width="50" height="50" rx="4" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Main grid -->
-                <rect x="15" y="15" width="50" height="50" rx="4" stroke-width="1.5" />
-                
-                <!-- Grid cells with improved colors and inner details -->
-                <rect x="15" y="15" width="16.6" height="16.6" fill="rgba(255,0,0,0.7)" stroke="white" />
-                <rect x="16.5" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <rect x="31.6" y="15" width="16.6" height="16.6" fill="rgba(0,255,0,0.7)" stroke="white" />
-                <rect x="33.1" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                <path d="M39.9,21 L39.9,25 M37.9,23 L41.9,23" stroke="rgba(255,255,255,0.7)" stroke-width="0.8" />
-                
-                <rect x="48.2" y="15" width="16.6" height="16.6" fill="rgba(255,255,0,0.7)" stroke="white" />
-                <rect x="49.7" y="16.5" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <rect x="15" y="31.6" width="16.6" height="16.6" fill="rgba(0,0,255,0.7)" stroke="white" />
-                <rect x="16.5" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <!-- Highlighted cell with special effects -->
-                <rect x="31.6" y="31.6" width="16.6" height="16.6" fill="rgba(255,0,255,0.7)" stroke="white" stroke-width="3" />
-                <rect x="33.1" y="33.1" width="13.6" height="13.6" fill="none" stroke="white" stroke-width="0.5" />
-                <circle cx="39.9" cy="39.9" r="5" fill="none" stroke="white" stroke-width="1" />
-                <path d="M35.9,35.9 L43.9,43.9 M43.9,35.9 L35.9,43.9" stroke="white" stroke-width="0.5" />
-                
-                <rect x="48.2" y="31.6" width="16.6" height="16.6" fill="rgba(0,255,255,0.7)" stroke="white" />
-                <rect x="49.7" y="33.1" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <rect x="15" y="48.2" width="16.6" height="16.6" fill="rgba(255,165,0,0.7)" stroke="white" />
-                <rect x="16.5" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <rect x="31.6" y="48.2" width="16.6" height="16.6" fill="rgba(128,0,128,0.7)" stroke="white" />
-                <rect x="33.1" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <rect x="48.2" y="48.2" width="16.6" height="16.6" fill="rgba(0,128,0,0.7)" stroke="white" />
-                <rect x="49.7" y="49.7" width="13.6" height="13.6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <!-- Selection cursor -->
-                <path d="M31.6,31.6 L28,28" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <path d="M26,26 L22,22" stroke="white" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2" />
-                <circle cx="20" cy="20" r="3" stroke="white" fill="none" />
-                <path d="M22,18 L18,22 M18,18 L22,22" stroke="white" stroke-width="0.8" />
-            </svg>`
-        },
-        {
-            id: "chainreaction",
-            displayName: getTranslation('chainreaction', 'title'),
-            catchphrase: getTranslation('chainreaction', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Two clue givers and guesser -->
-                <!-- Left clue giver -->
-                <g>
-                    <circle cx="25" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
-                    <circle cx="22" cy="28" r="1.5" fill="white" />
-                    <circle cx="28" cy="28" r="1.5" fill="white" />
-                    <path d="M22,35 C24,37 26,37 28,35" stroke="white" stroke-width="1" fill="none" />
-                    <path d="M21,45 C21,40 20,38 25,38 C30,38 29,40 29,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                </g>
-                
-                <!-- Right clue giver -->
-                <g>
-                    <circle cx="55" cy="30" r="10" fill="rgba(123,104,238,0.3)" stroke="white" stroke-width="1.5" />
-                    <circle cx="52" cy="28" r="1.5" fill="white" />
-                    <circle cx="58" cy="28" r="1.5" fill="white" />
-                    <path d="M52,35 C54,37 56,37 58,35" stroke="white" stroke-width="1" fill="none" />
-                    <path d="M51,45 C51,40 50,38 55,38 C60,38 59,40 59,45" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                </g>
-                
-                <!-- The word -->
-                <rect x="30" y="15" width="20" height="10" rx="2" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1" />
-                <path d="M33,20 L47,20" stroke="white" stroke-width="1" stroke-dasharray="1 1" />
-                
-                <!-- Guesser (blindfolded) -->
-                <g>
-                    <circle cx="40" cy="55" r="12" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.5" />
-                    <path d="M34,52 L46,52" stroke="white" stroke-width="1.5" />
-                    <path d="M34,52 C34,48 46,48 46,52" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.2)" />
-                    <path d="M35,60 C37,62 43,62 45,60" stroke="white" stroke-width="1" stroke-linecap="round" />
-                </g>
-                
-                <!-- Speech bubbles connecting people -->
-                <path d="M30,25 L35,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M50,25 L45,20" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M37,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                <path d="M43,40 L40,49" stroke="white" stroke-width="0.8" stroke-dasharray="2 1" />
-                
-                <!-- Timer -->
-                <circle cx="65" cy="55" r="6" fill="none" stroke="white" stroke-width="1" />
-                <path d="M65,52 L65,55 L68,55" stroke="white" stroke-width="1" />
-                
-                <!-- Game controls -->
-                <path d="M15,55 L20,50 L25,55 L20,60 Z" fill="rgba(76,175,80,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M18,55 L22,55 M20,53 L20,57" stroke="white" stroke-width="0.8" />
-                
-                <path d="M15,65 L20,60 L25,65 L20,70 Z" fill="rgba(244,67,54,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M18,65 L22,65" stroke="white" stroke-width="0.8" />
-                
-                <path d="M60,65 C60,62 70,62 70,65 C70,68 60,68 60,65 Z" fill="rgba(255,152,0,0.5)" stroke="white" stroke-width="0.8" />
-                <path d="M62,65 C62,64 68,64 68,65" stroke="white" stroke-width="0.8" />
-                <path d="M62,65 C62,66 68,66 68,65" stroke="white" stroke-width="0.8" />
-            </svg>`
-        },
-        {
-            id: "timergame",
-            displayName: getTranslation('timergame', 'title'),
-            catchphrase: getTranslation('timergame', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="45" rx="28" ry="5" fill="rgba(0,0,0,0.15)" />
-                
-                <!-- Clock body with enhanced details -->
-                <circle cx="40" cy="40" r="25" fill="rgba(255,255,255,0.05)" />
-                <circle cx="40" cy="40" r="24" fill="none" stroke="white" stroke-width="1.5" />
-                <circle cx="40" cy="40" r="22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                
-                <!-- Clock face details -->
-                <circle cx="40" cy="40" r="2" fill="white" />
-                <circle cx="40" cy="40" r="1" fill="rgba(0,0,0,0.3)" />
-                
-                <!-- Hour markers -->
-                <line x1="40" y1="18" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="40" y1="60" x2="40" y2="62" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="18" y1="40" x2="20" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="60" y1="40" x2="62" y2="40" stroke="white" stroke-width="2" stroke-linecap="round" />
-                
-                <!-- Secondary hour markers -->
-                <line x1="29" y1="20" x2="30" y2="22" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="20" y1="29" x2="22" y2="30" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="29" y1="60" x2="30" y2="58" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="20" y1="51" x2="22" y2="50" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="51" y1="20" x2="50" y2="22" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="60" y1="29" x2="58" y2="30" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="51" y1="60" x2="50" y2="58" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <line x1="60" y1="51" x2="58" y2="50" stroke="white" stroke-width="1" stroke-linecap="round" />
-                
-                <!-- Clock hands with detailed styling -->
-                <line x1="40" y1="40" x2="40" y2="22" stroke="white" stroke-width="2.5" stroke-linecap="round" />
-                <line x1="40" y1="40" x2="52" y2="52" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <path d="M40,40 L33,30" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-linecap="round" stroke-dasharray="1 1" />
-                
-                <!-- Clock top -->
-                <path d="M36,15 A1,1 0 0,1 44,15" stroke="white" stroke-width="1.5" fill="none" />
-                <rect x="39" y="14" width="2" height="3" fill="white" />
-                
-                <!-- Word bubbles for racing concept -->
-                <path d="M15,20 A10,8 0 0,1 10,12 A10,8 0 0,1 20,8 A10,8 0 0,1 25,12 L22,18 L15,20Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="0.8" />
-                <path d="M65,27 A7,5 0 0,0 70,22 A7,5 0 0,0 63,18 A7,5 0 0,0 60,22 L61,25 L65,27Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="0.8" />
-                
-                <!-- Small text representing words -->
-                <path d="M14,12 L18,12 M12,14 L17,14" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
-                <path d="M64,20 L69,20 M66,23 L68,23" stroke="rgba(255,255,255,0.9)" stroke-width="0.8" stroke-linecap="round" />
-                
-                <!-- Increment button -->
-                <circle cx="65" cy="52" r="8" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="1.2" />
-                <line x1="65" y1="48" x2="65" y2="56" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                <line x1="61" y1="52" x2="69" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                
-                <!-- Players -->
-                <circle cx="25" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
-                <text x="25" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P1</text>
-                
-                <circle cx="15" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
-                <text x="15" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P2</text>
-                
-                <!-- Speech bubble -->
-                <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
-                <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
-            </svg>`
-        },
-        {
-            id: "alphabetgame",
-            displayName: getTranslation('alphabetgame', 'title'),
-            catchphrase: getTranslation('alphabetgame', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <rect x="10" y="69" width="60" height="4" rx="2" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Letter blocks with enhanced 3D effect -->
-                <g transform="rotate(-5, 15, 15)">
-                    <rect x="11" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.25)" stroke="white" />
-                    <rect x="12" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="18.5" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">A</text>
-                </g>
-                
-                <g transform="rotate(3, 32.5, 15)">
-                    <rect x="28.5" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.3)" stroke="white" />
-                    <rect x="29.5" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="36" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">B</text>
-                </g>
-                
-                <g transform="rotate(-2, 50, 15)">
-                    <rect x="46" y="12" width="15" height="15" rx="2" fill="rgba(255,255,255,0.35)" stroke="white" />
-                    <rect x="47" y="13" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="53.5" y="24" font-size="13" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">C</text>
-                </g>
-                
-                <g transform="rotate(4, 15, 32.5)">
-                    <rect x="11" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.4)" stroke="white" />
-                    <rect x="12" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="18.5" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">X</text>
-                </g>
-                
-                <g transform="rotate(-3, 32.5, 32.5)">
-                    <rect x="28.5" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.45)" stroke="white" />
-                    <rect x="29.5" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="36" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Y</text>
-                </g>
-                
-                <g transform="rotate(5, 50, 32.5)">
-                    <rect x="46" y="29.5" width="15" height="15" rx="2" fill="rgba(255,255,255,0.5)" stroke="white" />
-                    <rect x="47" y="30.5" width="13" height="13" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                    <text x="53.5" y="41.5" font-size="12" fill="white" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Z</text>
-                </g>
-                
-                <!-- Category connection elements -->
-                <path d="M25,65 L55,65" stroke="white" stroke-linecap="round" stroke-width="3" stroke-dasharray="2 4" />
-                
-                <!-- Word connections to letters -->
-                <path d="M18.5,27 C18.5,47 25,50 20,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                <path d="M36,27 C36,37 40,45 40,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                <path d="M53.5,27 C53.5,47 45,50 50,60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                <path d="M18.5,44.5 C18.5,52 25,55 25,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                <path d="M36,44.5 C36,55 40,60 40,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                <path d="M53.5,44.5 C53.5,52 45,55 45,65" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" stroke-dasharray="2 1" />
-                
-                <!-- Category label -->
-                <path d="M30,57 L50,57" stroke="rgba(255,255,255,0.8)" stroke-width="0.8" stroke-linecap="round" />
-                <text x="40" y="55" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
-            </svg>`
-        },
-        {
-            id: "bluffme",
-            displayName: getTranslation('bluffme', 'title'),
-            catchphrase: getTranslation('bluffme', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Clock/timer for time element -->
-                <circle cx="15" cy="30" r="10" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1.5" />
-                <circle cx="15" cy="30" r="8" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
-                <line x1="15" y1="30" x2="15" y2="23" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-                <line x1="15" y1="30" x2="19" y2="32" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-                
-                <!-- Main category card -->
-                <rect x="25" y="15" width="40" height="25" rx="2" fill="rgba(106, 90, 205, 0.2)" stroke="white" stroke-width="1.5" />
-                <line x1="30" y1="25" x2="60" y2="25" stroke="white" stroke-width="0.8" stroke-dasharray="1 1" />
-                <text x="45" y="22" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
-                <text x="45" y="32" font-size="7" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Animali</text>
-                
-                <!-- Counter box -->
-                <rect x="35" y="45" width="25" height="15" rx="2" fill="rgba(78, 216, 224, 0.2)" stroke="white" stroke-width="1.5" />
-                <text x="48" y="55" font-size="10" fill="white" text-anchor="middle" font-family="Arial, sans-serif">12</text>
-                
-                <!-- Increment button -->
-                <circle cx="65" cy="52" r="8" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="1.2" />
-                <line x1="65" y1="48" x2="65" y2="56" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                <line x1="61" y1="52" x2="69" y2="52" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-                
-                <!-- Players -->
-                <circle cx="25" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
-                <text x="25" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P1</text>
-                
-                <circle cx="15" cy="55" r="5" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="1" />
-                <text x="15" y="57" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">P2</text>
-                
-                <!-- Speech bubble -->
-                <path d="M21,45 C17,44 18,38 22,38 C26,38 27,44 23,45 L22,49 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="0.8" />
-                <text x="22" y="42" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">Dubito!</text>
-            </svg>`
-        },
-        {
-            id: "quizzy",
-            displayName: getTranslation('quizzy', 'title'),
-            catchphrase: getTranslation('quizzy', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="72" rx="30" ry="3" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Quiz card main background -->
-                <rect x="15" y="15" width="50" height="35" rx="3" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.2" />
-                <rect x="17" y="17" width="46" height="31" rx="2" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
-                
-                <!-- Question area -->
-                <rect x="20" y="20" width="40" height="12" rx="2" fill="rgba(106, 90, 205, 0.2)" stroke="white" stroke-width="0.8" />
-                <text x="40" y="28" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">DOMANDA</text>
-                
-                <!-- Answer options -->
-                <rect x="20" y="36" width="18" height="8" rx="2" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="0.8" />
-                <text x="29" y="41" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">A</text>
-                
-                <rect x="42" y="36" width="18" height="8" rx="2" fill="rgba(105, 177, 110, 0.3)" stroke="white" stroke-width="0.8" />
-                <text x="51" y="41" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">B</text>
-                
-                <!-- Timer circle -->
-                <circle cx="65" cy="25" r="8" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" />
-                <path d="M65,20 L65,25 L68,27" stroke="white" stroke-width="1" stroke-linecap="round" />
-                <circle cx="65" cy="25" r="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
-                
-                <!-- Category element -->
-                <rect x="20" y="55" width="30" height="10" rx="2" fill="rgba(78, 216, 224, 0.2)" stroke="white" stroke-width="1" />
-                <text x="35" y="61" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">CATEGORIA</text>
-                
-                <!-- Score display -->
-                <rect x="55" y="55" width="15" height="10" rx="2" fill="rgba(255, 193, 7, 0.3)" stroke="white" stroke-width="1" />
-                <text x="62.5" y="61.5" font-size="6" fill="white" text-anchor="middle" font-family="Arial, sans-serif">10</text>
-                
-                <!-- Players indicator -->
-                <circle cx="15" cy="60" r="4" fill="rgba(255, 107, 136, 0.3)" stroke="white" stroke-width="0.8" />
-                <text x="15" y="62" font-size="5" fill="white" text-anchor="middle" font-family="Arial, sans-serif">1</text>
-                
-                <!-- Question mark decorative elements -->
-                <text x="68" cy="45" y="45" font-size="10" fill="rgba(255,255,255,0.2)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
-                <text x="75" cy="55" y="55" font-size="8" fill="rgba(255,255,255,0.15)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
-                <text x="60" cy="52" y="52" font-size="12" fill="rgba(255,255,255,0.1)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
-            </svg>`
-        },
-        {
-            id: "guessthepic",
-            displayName: getTranslation('guessthepic', 'title'),
-            catchphrase: getTranslation('guessthepic', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <rect x="17" y="17" width="38" height="38" rx="2" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Photo frame -->
-                <rect x="15" y="15" width="38" height="38" rx="2" fill="rgba(255,255,255,0.15)" />
-                <rect x="17" y="17" width="34" height="34" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
-                
-                <!-- Photos stack effect -->
-                <path d="M53,19 L58,19 L58,53 L19,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="2 1" />
-                <path d="M55,17 L60,17 L60,51 L21,51" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="1 1" />
-                
-                <!-- Photo content -->
-                <path d="M20,42 L30,32 L40,42" stroke="white" stroke-linecap="round" />
-                <path d="M27,47 L37,38 L45,46" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" />
-                <circle cx="24" cy="25" r="3" fill="rgba(255,255,255,0.5)" />
-                <circle cx="24" cy="25" r="1.5" fill="rgba(255,255,255,0.8)" />
-                
-                <!-- Magnifying glass with detailed handle -->
-                <circle cx="57" cy="50" r="8" fill="rgba(0,0,0,0.1)" stroke="white" stroke-width="2" />
-                <circle cx="57" cy="50" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" />
-                <line x1="63" y1="56" x2="68" y2="61" stroke="white" stroke-width="3" stroke-linecap="round" />
-                <line x1="63" y1="56" x2="68" y2="61" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" />
-                <path d="M69,62 C70,63 72,65 74,63 C76,61 74,60 73,61" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
-                
-                <!-- Question marks to represent mystery -->
-                <text x="33" y="32" font-size="8" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
-                <text x="28" y="38" font-size="5" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
-                <text x="39" y="28" font-size="6" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="Arial, sans-serif">?</text>
-            </svg>`
-        },
-        {
-            id: "tictactopics",
-            displayName: getTranslation('tictactopics', 'title'),
-            catchphrase: getTranslation('tictactopics', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
-                <!-- Light background glow -->
-                <circle cx="40" cy="40" r="30" fill="rgba(123,104,238,0.1)" />
-                
-                <!-- Game board with topics -->
-                <rect x="15" y="15" width="50" height="50" rx="3" fill="none" stroke="white" stroke-width="1.5" />
-                
-                <!-- Grid lines -->
-                <line x1="32" y1="15" x2="32" y2="65" stroke="white" stroke-width="1" />
-                <line x1="48" y1="15" x2="48" y2="65" stroke="white" stroke-width="1" />
-                <line x1="15" y1="32" x2="65" y2="32" stroke="white" stroke-width="1" />
-                <line x1="15" y1="48" x2="65" y2="48" stroke="white" stroke-width="1" />
-                
-                <!-- Category labels for rows and columns -->
-                <circle cx="10" cy="24" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="26" font-size="4" text-anchor="middle" fill="white">A</text>
-                
-                <circle cx="10" cy="40" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="42" font-size="4" text-anchor="middle" fill="white">B</text>
-                
-                <circle cx="10" cy="56" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="10" y="58" font-size="4" text-anchor="middle" fill="white">C</text>
-                
-                <circle cx="24" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="24" y="12" font-size="4" text-anchor="middle" fill="white">X</text>
-                
-                <circle cx="40" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="40" y="12" font-size="4" text-anchor="middle" fill="white">Y</text>
-                
-                <circle cx="56" cy="10" r="3" fill="none" stroke="white" stroke-width="0.8" />
-                <text x="56" y="12" font-size="4" text-anchor="middle" fill="white">Z</text>
-                
-                <!-- Player tokens and topics -->
-                <circle cx="24" cy="24" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
-                <text x="24" y="26" font-size="4" text-anchor="middle" fill="white">Movie1</text>
-                
-                <circle cx="40" cy="24" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
-                <text x="40" y="26" font-size="4" text-anchor="middle" fill="white">TV Show</text>
-                
-                <circle cx="56" cy="40" r="6" fill="none" stroke="rgba(255,0,0,0.7)" stroke-width="2" />
-                <text x="56" y="42" font-size="4" text-anchor="middle" fill="white">Book</text>
-                
-                <circle cx="40" cy="56" r="6" fill="none" stroke="rgba(0,0,255,0.7)" stroke-width="2" />
-                <text x="40" y="58" font-size="4" text-anchor="middle" fill="white">Game</text>
-                
-                <!-- Diagonal win line -->
-                <line x1="18" y1="18" x2="62" y2="62" stroke="rgba(255,215,0,0.6)" stroke-width="2" stroke-dasharray="3 2" />
-                
-                <!-- Selection area at empty spot -->
-                <rect x="48" y="48" width="16" height="16" fill="rgba(255,255,255,0.1)" stroke="white" stroke-dasharray="2 1" />
-                <circle cx="56" cy="56" r="2" fill="rgba(255,255,255,0.5)" />
-                <path d="M54,54 L58,58 M58,54 L54,58" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
-                
-                <!-- Topic selection popup -->
-                <rect x="50" y="70" width="20" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="0.8" />
-                <text x="55" y="74" font-size="3" fill="white">Film Topic</text>
-                <path d="M56,65 L56,70" stroke="white" stroke-width="0.5" stroke-dasharray="1 1" />
-            </svg>`
+            image: "chainReaction.png" // CAMBIA QUI
         },
         {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="1.5">
-                <!-- Shadow element -->
-                <ellipse cx="40" cy="72" rx="25" ry="3" fill="rgba(0,0,0,0.2)" />
-                
-                <!-- Mr. Drew mysterious silhouette (center, highlighted) -->
-                <g class="mrdrew-character">
-                    <path d="M33,68 C33,52 37,47 40,47 C43,47 47,52 47,68" stroke="#cf6679" stroke-width="2" stroke-linecap="round" fill="rgba(207,102,121,0.15)" />
-                    <path d="M35.5,40 C35,37 36,34 40,34 C44,34 45,37 44.5,40 C44,43 43,47 40,47 C37,47 36,43 35.5,40Z" fill="rgba(207,102,121,0.2)" stroke="#cf6679" stroke-width="1.5" />
-                    <circle cx="40" cy="24" r="10" fill="rgba(207,102,121,0.2)" stroke="#cf6679" stroke-width="1.5" />
-                    
-                    <!-- Question mark face -->
-                    <text x="40" y="28" font-size="12" fill="#cf6679" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">?</text>
-                </g>
-                
-                <!-- Left civilian -->
-                <g class="civilian">
-                    <path d="M12,68 C12,55 15,50 18,50 C21,50 24,55 24,68" stroke="white" stroke-linecap="round" />
-                    <path d="M14,44 C13.5,42 14.5,39 18,39 C21.5,39 22.5,42 22,44 C21.5,46 20.5,50 18,50 C15.5,50 14.5,46 14,44Z" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="18" cy="30" r="7" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
-                    <path d="M16,29 L17,29 M19,29 L20,29" stroke="white" stroke-width="1" />
-                    <path d="M18,34 C16.5,32.5 19.5,32.5 18,34" stroke="white" stroke-width="0.8" />
-                </g>
-                
-                <!-- Right civilian -->
-                <g class="civilian">
-                    <path d="M56,68 C56,55 59,50 62,50 C65,50 68,55 68,68" stroke="white" stroke-linecap="round" />
-                    <path d="M58,44 C57.5,42 58.5,39 62,39 C65.5,39 66.5,42 66,44 C65.5,46 64.5,50 62,50 C59.5,50 58.5,46 58,44Z" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
-                    <circle cx="62" cy="30" r="7" fill="rgba(3,218,198,0.2)" stroke="white" stroke-width="1.2" />
-                    <path d="M60,29 L61,29 M63,29 L64,29" stroke="white" stroke-width="1" />
-                    <path d="M62,34 C60.5,32.5 63.5,32.5 62,34" stroke="white" stroke-width="0.8" />
-                </g>
-                
-                <!-- Speech bubbles suggesting word description -->
-                <ellipse cx="10" cy="20" rx="6" ry="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" />
-                <text x="10" y="21" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">...</text>
-                
-                <ellipse cx="70" cy="20" rx="6" ry="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" />
-                <text x="70" y="21" font-size="4" fill="white" text-anchor="middle" font-family="Arial, sans-serif">...</text>
-                
-                <!-- Connecting lines (discussion) -->
-                <path d="M24,35 L33,38" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="2 2" />
-                <path d="M56,35 L47,38" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-dasharray="2 2" />
-                
-                <!-- Mystery aura around Mr. Drew -->
-                <circle cx="40" cy="40" r="22" fill="none" stroke="rgba(207,102,121,0.3)" stroke-width="1" stroke-dasharray="3 3" />
-            </svg>`
-        },
-        {
-            id: "drewnking",
-            displayName: getTranslation('drewnking', 'title'),
-            catchphrase: getTranslation('drewnking', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="74" rx="25" ry="3" fill="rgba(0,0,0,0.3)" />
-                
-                <!-- Beer mug -->
-                <rect x="25" y="25" width="30" height="35" rx="2" fill="rgba(255,193,7,0.3)" stroke="white" stroke-width="2" />
-                <rect x="26" y="26" width="28" height="33" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
-                
-                <!-- Beer foam -->
-                <ellipse cx="40" cy="25" rx="15" ry="4" fill="rgba(255,255,255,0.9)" stroke="white" stroke-width="1.5" />
-                <ellipse cx="35" cy="23" rx="6" ry="3" fill="rgba(255,255,255,0.7)" />
-                <ellipse cx="45" cy="23" rx="5" ry="3" fill="rgba(255,255,255,0.7)" />
-                <ellipse cx="40" cy="21" rx="4" ry="2.5" fill="rgba(255,255,255,0.8)" />
-                
-                <!-- Beer level -->
-                <rect x="27" y="35" width="26" height="20" fill="rgba(255,193,7,0.6)" />
-                <path d="M27,40 Q35,38 53,40" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none" />
-                
-                <!-- Bubbles -->
-                <circle cx="32" cy="50" r="1.5" fill="rgba(255,255,255,0.6)" />
-                <circle cx="38" cy="45" r="1" fill="rgba(255,255,255,0.5)" />
-                <circle cx="45" cy="48" r="1.2" fill="rgba(255,255,255,0.6)" />
-                <circle cx="48" cy="52" r="1" fill="rgba(255,255,255,0.5)" />
-                
-                <!-- Mug handle -->
-                <path d="M55,35 Q65,35 65,45 Q65,55 55,55" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" />
-                <path d="M55,37 Q62,37 62,45 Q62,53 55,53" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none" />
-                
-                <!-- Dice (for drinking game element) -->
-                <rect x="60" y="15" width="12" height="12" rx="2" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5" transform="rotate(15 66 21)" />
-                <circle cx="63" cy="18" r="1" fill="white" />
-                <circle cx="69" cy="18" r="1" fill="white" />
-                <circle cx="63" cy="24" r="1" fill="white" />
-                <circle cx="69" cy="24" r="1" fill="white" />
-                <circle cx="66" cy="21" r="1" fill="white" />
-                
-                <!-- Warning sign -->
-                <circle cx="15" cy="20" r="8" fill="rgba(255,69,0,0.3)" stroke="#FF4500" stroke-width="1.5" />
-                <text x="15" y="25" font-size="10" fill="white" text-anchor="middle" font-weight="bold">18+</text>
-                
-                <!-- Party elements -->
-                <path d="M10,65 L12,60 L14,65" stroke="rgba(255,107,107,0.7)" stroke-width="1" fill="none" />
-                <path d="M68,65 L70,60 L72,65" stroke="rgba(255,107,107,0.7)" stroke-width="1" fill="none" />
-                <circle cx="8" cy="58" r="2" fill="rgba(255,193,7,0.6)" />
-                <circle cx="72" cy="58" r="2" fill="rgba(255,193,7,0.6)" />
-            </svg>`
+            image: "chainReaction.png" // CAMBIA QUI
         },
         {
             id: "hottakes",
             displayName: getTranslation('hottakes', 'title'),
             catchphrase: getTranslation('hottakes', 'catchphrase'),
-            iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" stroke="white" stroke-width="2">
-                <!-- Shadow -->
-                <ellipse cx="40" cy="74" rx="30" ry="3" fill="rgba(0,0,0,0.3)" />
-                
-                <!-- Flame icon -->
-                <path d="M40,10 C40,10 25,35 25,50 C25,60 32,68 40,68 C48,68 55,60 55,50 C55,35 40,10 40,10 Z" fill="rgba(255, 69, 0, 0.2)" stroke="#ff4500" stroke-width="2" />
-                <path d="M40,20 C40,20 30,40 30,50 C30,56 34,60 40,60 C46,60 50,56 50,50 C50,40 40,20 40,20 Z" fill="rgba(255, 140, 0, 0.4)" stroke="#ff8c00" stroke-width="1.5" />
-                
-                <!-- Chat bubble / Opinion -->
-                <path d="M55,25 L70,25 L70,45 L55,45 L50,50 L55,40 Z" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1.5" />
-                <text x="62" y="38" font-size="12" fill="white" text-anchor="middle" font-weight="bold">!</text>
-            </svg>`
+            image: "chainReaction.png" // CAMBIA QUI
         },
+        {
+            id: "quizzy",
+            displayName: getTranslation('quizzy', 'title'),
+            catchphrase: getTranslation('quizzy', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "guessthepic",
+            displayName: getTranslation('guessthepic', 'title'),
+            catchphrase: getTranslation('guessthepic', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "chainreaction",
+            displayName: getTranslation('chainreaction', 'title'),
+            catchphrase: getTranslation('chainreaction', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "bluffme",
+            displayName: getTranslation('bluffme', 'title'),
+            catchphrase: getTranslation('bluffme', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "alphabetgame",
+            displayName: getTranslation('alphabetgame', 'title'),
+            catchphrase: getTranslation('alphabetgame', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "colorgrid",
+            displayName: getTranslation('colorgrid', 'title'),
+            catchphrase: getTranslation('colorgrid', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "timergame",
+            displayName: getTranslation('timergame', 'title'),
+            catchphrase: getTranslation('timergame', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "tictactopics",
+            displayName: getTranslation('tictactopics', 'title'),
+            catchphrase: getTranslation('tictactopics', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
+        }
     ];
 
     // Select the container element
@@ -790,14 +253,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('h3');
         title.textContent = game.displayName || formatGameName(game.id);
 
-        // Create icon container and add PNG Image
+        // Create icon container and update to use GAME SPECIFIC PROPERTY
         const iconContainer = document.createElement('div');
         iconContainer.className = 'game-icon-container';
 
         const img = document.createElement('img');
-        img.src = 'chainReaction.png'; // Placeholder for all games as requested
+        img.src = game.image; // Use the property from the object
         img.alt = `${game.displayName} Icon`;
         img.className = 'game-icon';
+
+        // Add fallback only if needed to avoid broken images during setup
+        img.onerror = function () {
+            this.src = 'chainReaction.png';
+            console.log('Image not found for', game.id, 'using placeholder');
+        };
 
         iconContainer.appendChild(img);
 
@@ -859,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     comingSoonCard.appendChild(comingSoonTitle);
     comingSoonCard.appendChild(comingSoonIconContainer);
-    comingSoonCard.appendChild(comingSoonText);
     comingSoonCard.appendChild(comingSoonText);
 
     gamesContainer.appendChild(comingSoonCard);
@@ -934,4 +402,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-}); 
+});
