@@ -741,14 +741,16 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Mobile responsiveness */
         @media (max-width: 480px) {
             .game-card {
-                min-height: 220px;
+                min-height: 280px; /* Increased height for mobile */
             }
             .game-card h3 {
-                font-size: 1rem;
-                padding: 4px 10px;
+                font-size: 1.1rem;
+                padding: 4px 12px;
             }
             .game-icon {
-                height: 140px; /* Bigger on mobile too */
+                height: 200px; /* Much bigger on mobile! */
+                width: auto;
+                max-width: 95%;
             }
         }
     `;
