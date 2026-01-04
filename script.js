@@ -661,12 +661,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .game-card {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center everything horizontally */
+            align-items: center; /* Center content horizontally */
             padding: 1rem;
             position: relative;
             overflow: hidden;
-            min-height: 250px; /* Slightly increased to fit larger image */
-            cursor: pointer; /* Whole card is clickable */
+            min-height: 340px; /* Increased height for button */
             
             /* Custom Border Style: Purple - Black - Purple */
             border: 3px solid #000000;
@@ -681,10 +680,6 @@ document.addEventListener('DOMContentLoaded', () => {
             box-shadow: 0 0 0 4px #7b68ee, inset 0 0 0 4px #7b68ee, 0 10px 20px rgba(0,0,0,0.5);
         }
         
-        .game-card:active {
-            transform: scale(0.98);
-        }
-        
         /* Content container */
         .card-content {
             flex: 1;
@@ -695,14 +690,15 @@ document.addEventListener('DOMContentLoaded', () => {
             z-index: 2;
         }
 
-        /* Title Style - Made to look like the button */
+        /* Title Style - Left Aligned */
         .game-card h3 {
             margin-bottom: 0.5rem;
-            text-align: center;
+            align-self: flex-start; /* Align to left */
+            margin-left: 5px;
             font-size: 1.2rem;
             margin-top: 5px;
-            /* Button styling */
-            background-color: rgba(0, 0, 0, 0.4); /* Transparent black for "darker" effect */
+            /* Button styling look background */
+            background-color: rgba(0, 0, 0, 0.4); 
             color: white;
             padding: 5px 15px;
             border-radius: 12px;
@@ -711,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text-transform: uppercase;
             letter-spacing: 0.5px;
             width: fit-content;
-            backdrop-filter: blur(2px); /* Slight blur for better readability */
+            backdrop-filter: blur(2px);
         }
         
         /* Image Container */
@@ -727,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         .game-icon {
             width: auto;
-            height: 170px; /* Increased height for bigger images */
+            height: 170px; /* Kept large */
             max-width: 100%;
             object-fit: contain;
             filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.4));
@@ -735,20 +731,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .game-card:hover .game-icon {
-            transform: scale(1.1) rotate(2deg);
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        /* Simple Play Button */
+        .play-button {
+            margin-top: auto;
+            background-color: #7b68ee; /* Purple */
+            color: white;
+            border: 2px solid #000;
+            padding: 8px 0;
+            width: 90%;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .play-button:hover {
+            background-color: #9385ff;
+            transform: translateY(-2px);
+            box-shadow: 2px 4px 0px rgba(0,0,0,0.5);
+        }
+        
+        .play-button:active {
+            transform: translateY(1px);
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.5);
         }
         
         /* Mobile responsiveness */
         @media (max-width: 480px) {
             .game-card {
-                min-height: 280px; /* Increased height for mobile */
+                min-height: 380px; /* Tall enough for big image + button */
             }
             .game-card h3 {
                 font-size: 1.1rem;
                 padding: 4px 12px;
             }
             .game-icon {
-                height: 200px; /* Much bigger on mobile! */
+                height: 200px; /* Big on mobile */
                 width: auto;
                 max-width: 95%;
             }
@@ -777,20 +801,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         iconContainer.appendChild(img);
 
+        // Create play button
+        const playButton = document.createElement('button');
+        playButton.className = 'play-button';
+        playButton.textContent = getTranslation('play');
+
         // Folder name mapping for case sensitivity issues
         const folderNameMap = {
             'bluffme': 'BluffMe',
         };
 
-        // Add specific event listener for 'bluffme' and other games
-        card.addEventListener('click', () => {
+        // Add specific event listener to the BUTTON only
+        playButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Safe practice even if container has no listener
             const folderName = folderNameMap[game.id] || game.id;
             window.location.href = `${folderName}/index.html`;
         });
 
-        // Append elements to card in order: Title -> Image
+        // Append elements to card in order: Title -> Image -> Button
         card.appendChild(title);
         card.appendChild(iconContainer);
+        card.appendChild(playButton);
 
         // Append card to container
         gamesContainer.appendChild(card);
