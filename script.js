@@ -662,10 +662,10 @@ document.addEventListener('DOMContentLoaded', () => {
             display: flex;
             flex-direction: column;
             align-items: center; /* Center everything horizontally */
-            padding: 1.5rem;
+            padding: 1rem;
             position: relative;
             overflow: hidden;
-            min-height: 350px; /* Slightly taller */
+            min-height: 260px; /* Reduced specific height */
             
             /* Custom Border Style: Purple - Black - Purple */
             /* Using CSS Border + Box Shadow + Outline trick might be cleanest */
@@ -694,9 +694,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /* Title Style */
         .game-card h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             text-align: center;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             margin-top: 5px;
             text-shadow: 2px 2px 0px #000; /* Improve readability on gradient */
         }
@@ -708,7 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: 1rem 0;
+            margin: 0.5rem 0;
             z-index: 1;
         }
         
