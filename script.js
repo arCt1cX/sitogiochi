@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             padding: 1rem;
             position: relative;
             overflow: hidden;
-            min-height: 340px; /* Increased height for button */
+            min-height: 290px; /* Reduced specific height for more compact look */
             
             /* Custom Border Style: Purple - Black - Purple */
             border: 3px solid #000000;
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Mobile responsiveness */
         @media (max-width: 480px) {
             .game-card {
-                min-height: 380px; /* Tall enough for big image + button */
+                min-height: 330px; /* Reduced for trimmed images */
             }
             .game-card h3 {
                 font-size: 1.1rem;
