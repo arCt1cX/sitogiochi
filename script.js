@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "impostor",
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "drewnking.png" // CAMBIA QUI
         },
         {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "drewnking2.png" // CAMBIA QUI
         },
         {
             id: "hottakes",
