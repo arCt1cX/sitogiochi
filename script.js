@@ -252,13 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
         iconContainer.className = 'game-icon-container';
 
         const img = document.createElement('img');
-        img.src = game.image; // Use the property from the object
+        // Use path relative to 'icone per giochi' folder
+        img.src = `icone%20per%20giochi/${game.image}`;
         img.alt = `${game.displayName} Icon`;
         img.className = 'game-icon';
 
         // Add fallback only if needed to avoid broken images during setup
         img.onerror = function () {
-            this.src = 'chainReaction.png';
+            this.src = 'icone%20per%20giochi/chainReaction.png';
             console.log('Image not found for', game.id, 'using placeholder');
         };
 
