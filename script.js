@@ -125,10 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
             display: flex;
             flex-direction: column;
             align-items: center; /* Center content horizontally */
-            padding: 1rem;
+            padding: 0.8rem; /* Slightly reduced padding */
             position: relative;
             overflow: hidden;
-            min-height: 290px; /* Reduced specific height for more compact look */
+            min-height: 270px; /* Further reduced height */
             
             /* Custom Border Style: Purple - Black - Purple */
             border: 3px solid #000000;
@@ -153,24 +153,18 @@ document.addEventListener('DOMContentLoaded', () => {
             z-index: 2;
         }
 
-        /* Title Style - Left Aligned */
+        /* Title Style - Centered and Clean */
         .game-card h3 {
-            margin-bottom: 0.5rem;
-            align-self: flex-start; /* Align to left */
-            margin-left: 5px;
-            font-size: 1.2rem;
+            margin-bottom: 0px;
+            align-self: center; /* Center */
+            text-align: center;
+            font-size: 1.3rem;
             margin-top: 5px;
-            /* Button styling look background */
-            background-color: rgba(0, 0, 0, 0.4); 
             color: white;
-            padding: 5px 15px;
-            border-radius: 12px;
-            border: 2px solid #000;
-            box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 0px #000; /* Shadow for legibility */
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            width: fit-content;
-            backdrop-filter: blur(2px);
+            letter-spacing: 1px;
+            /* No background or border */
         }
         
         /* Image Container */
@@ -228,11 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Mobile responsiveness */
         @media (max-width: 480px) {
             .game-card {
-                min-height: 330px; /* Reduced for trimmed images */
+                min-height: 300px; /* Significant reduction for mobile */
             }
             .game-card h3 {
                 font-size: 1.1rem;
-                padding: 4px 12px;
+                padding: 0;
             }
             .game-icon {
                 height: 200px; /* Big on mobile */
