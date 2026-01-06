@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "drewnking",
             displayName: getTranslation('drewnking', 'title'),
             catchphrase: getTranslation('drewnking', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "picolo.png" // CAMBIA QUI
         },
         {
             id: "impostor",
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),
-            image: "drewnking2.png" // CAMBIA QUI
+            image: "drewnking.png" // CAMBIA QUI
         },
         {
             id: "hottakes",
