@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "timergame",
             displayName: getTranslation('timergame', 'title'),
             catchphrase: getTranslation('timergame', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "wordrace.png" // CAMBIA QUI
         },
         {
             id: "tictactopics",
