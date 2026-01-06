@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "alphabetgame",
             displayName: getTranslation('alphabetgame', 'title'),
             catchphrase: getTranslation('alphabetgame', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "alphabet.png" // CAMBIA QUI
         },
         {
             id: "colorgrid",
             displayName: getTranslation('colorgrid', 'title'),
             catchphrase: getTranslation('colorgrid', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "colorgrid.png" // CAMBIA QUI
         },
         {
             id: "timergame",
