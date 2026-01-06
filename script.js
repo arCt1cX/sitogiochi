@@ -155,16 +155,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /* Title Style - Centered and Clean */
         .game-card h3 {
-            margin-bottom: 0px;
+            margin-bottom: 2px;
             align-self: center; /* Center */
             text-align: center;
             font-size: 1.3rem;
-            margin-top: 5px;
+            margin-top: 2px;
             color: white;
             text-shadow: 2px 2px 0px #000; /* Shadow for legibility */
             text-transform: uppercase;
             letter-spacing: 1px;
             /* No background or border */
+        }
+        
+        /* Catchphrase Style */
+        .game-catchphrase {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-align: center;
+            margin-bottom: 5px;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            padding: 0 8px;
+            line-height: 1.2;
+            max-width: 100%;
         }
         
         /* Image Container */
@@ -228,6 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 font-size: 1.1rem;
                 padding: 0;
             }
+            .game-catchphrase {
+                font-size: 0.7rem;
+            }
             .game-icon {
                 height: 200px; /* Big on mobile */
                 width: auto;
@@ -282,8 +298,14 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `${folderName}/index.html`;
         });
 
-        // Append elements to card in order: Title -> Image -> Button
+        // Create catchphrase element
+        const catchphrase = document.createElement('p');
+        catchphrase.className = 'game-catchphrase';
+        catchphrase.textContent = game.catchphrase || '';
+
+        // Append elements to card in order: Title -> Catchphrase -> Image -> Button
         card.appendChild(title);
+        card.appendChild(catchphrase);
         card.appendChild(iconContainer);
         card.appendChild(playButton);
 
