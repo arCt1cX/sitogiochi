@@ -34,21 +34,12 @@ header {
     padding: 1.5rem 0 1rem 0;
 }
 
-.logo-container {
-    margin-bottom: 1rem;
-}
 
-.logo {
-    max-width: 120px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
-}
 
 
 .main-title-image {
     max-width: 95%;
-    width: 800px;
+    width: 1100px;
     height: auto;
     margin-bottom: 0.5rem;
     display: block;
