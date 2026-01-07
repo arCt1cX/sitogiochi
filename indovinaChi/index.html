@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Indovina Chi - Indovina la parola con le domande | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Indovina Chi: fai domande agli amici per indovinare la parola segreta! Un perfetto party game da fare con gli amici.">');
+        } else {
+            document.write('<title>Guess Who - Guess the word by asking questions | DrewGames</title>');
+            document.write('<meta name="description" content="Play Guess Who: ask your friends questions to guess the secret word! A perfect party game to play with friends.">');
+        }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/indovinaChi/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/indovinaChi/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/indovinaChi/" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-72Y5QND8E8');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/indovinaChi/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Indovina Chi</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
+                <select id="player-count">
+                    <option value="2">2 <span class="players-text">Giocatori</span></option>
+                    <option value="3">3 <span class="players-text">Giocatori</span></option>
+                    <option value="4" selected>4 <span class="players-text">Giocatori</span></option>
+                    <option value="5">5 <span class="players-text">Giocatori</span></option>
+                    <option value="6">6 <span class="players-text">Giocatori</span></option>
+                    <option value="7">7 <span class="players-text">Giocatori</span></option>
+                    <option value="8">8 <span class="players-text">Giocatori</span></option>
+                    <option value="9">9 <span class="players-text">Giocatori</span></option>
+                    <option value="10">10 <span class="players-text">Giocatori</span></option>
+                </select>
+            </div>
+            <button id="start-game" class="btn primary-btn"><span id="startGameText">Inizia Gioco</span></button>
+        </div>
+
+        <!-- Mode Selection Screen -->
+        <div id="mode-screen" class="game-screen">
+            <h2 id="modeTitle">Scegli la Modalità</h2>
+            <div class="mode-buttons">
+                <button id="mode-chosen" class="btn mode-btn">
+                    <span class="mode-icon">📋</span>
+                    <span id="modeChosenText">Categorie Scelte</span>
+                    <span id="modeChosenDesc" class="mode-desc">Ogni giocatore sceglie la categoria</span>
+                </button>
+                <button id="mode-random" class="btn mode-btn">
+                    <span class="mode-icon">🎲</span>
+                    <span id="modeRandomText">Categorie Casuali</span>
+                    <span id="modeRandomDesc" class="mode-desc">Parola e categoria casuali</span>
+                </button>
+                <button id="mode-custom" class="btn mode-btn">
+                    <span class="mode-icon">✏️</span>
+                    <span id="modeCustomText">Parole Personalizzate</span>
+                    <span id="modeCustomDesc" class="mode-desc">Gli altri giocatori scrivono la parola</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Selection Screen -->
+        <div id="category-screen" class="game-screen">
+            <h2 id="categoryTitle">Scegli una Categoria</h2>
+            <p id="categoryPlayerText">Giocatore <span id="category-player-num">1</span>, scegli la categoria per gli
+                altri:</p>
+            <div id="category-list" class="category-list">
+                <!-- Categories will be dynamically populated -->
+            </div>
+        </div>
+
+        <!-- Custom Word Screen -->
+        <div id="custom-word-screen" class="game-screen">
+            <h2 id="customWordTitle">Scrivi una Parola</h2>
+            <p id="customWordPlayerText">Il Giocatore <span id="custom-player-num">1</span> non deve guardare!</p>
+            <p id="customWordInstructions">Gli altri giocatori scrivono una parola da far indovinare:</p>
+            <div class="form-group">
+                <input type="text" id="custom-word-input" placeholder="Scrivi la parola..." maxlength="100"
+                    autocomplete="off">
+            </div>
+            <button id="submit-custom-word" class="btn primary-btn"><span id="submitWordText">Conferma
+                    Parola</span></button>
+        </div>
+
+        <!-- Pass Phone Screen -->
+        <div id="pass-phone-screen" class="game-screen">
+            <h2 id="passPhoneTitle">Passa il Telefono</h2>
+            <p id="passPhoneText">Passa il telefono al Giocatore <span id="pass-player-num">1</span></p>
+            <p id="passPhoneInstructions">Quando è pronto, tocca per vedere la parola da indovinare</p>
+            <button id="show-word-btn" class="btn primary-btn pulse-btn"><span id="showWordText">Mostra
+                    Parola</span></button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-play-screen" class="game-screen">
+            <div class="game-info">
+                <p id="currentPlayerLabel">Giocatore <span id="game-player-num">1</span></p>
+                <p id="categoryLabel" class="category-label"></p>
+            </div>
+            <div class="word-container">
+                <p id="wordToGuessLabel">La parola da indovinare è:</p>
+                <p id="word-display" class="word-display"></p>
+            </div>
+            <div class="question-counter">
+                <p id="questionsLabel">Domande fatte:</p>
+                <div class="counter-controls">
+                    <button id="decrement-btn" class="btn counter-btn">−</button>
+                    <span id="question-count" class="question-count">0</span>
+                    <button id="increment-btn" class="btn counter-btn">+</button>
+                </div>
+            </div>
+            <button id="guessed-btn" class="btn primary-btn glow-btn"><span id="guessedText">Ho Indovinato!
+                    🎉</span></button>
+        </div>
+
+        <!-- End Game Screen -->
+        <div id="end-screen" class="game-screen">
+            <h2 id="endTitle">Fine del Gioco!</h2>
+            <div id="results-container" class="results-container">
+                <!-- Results will be dynamically populated -->
+            </div>
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
