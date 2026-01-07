@@ -91,6 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
             displayName: getTranslation('tictactopics', 'title'),
             catchphrase: getTranslation('tictactopics', 'catchphrase'),
             image: "chainReaction.png" // CAMBIA QUI
+        },
+        {
+            id: "indovinaChi",
+            displayName: getTranslation('indovinachi', 'title'),
+            catchphrase: getTranslation('indovinachi', 'catchphrase'),
+            image: "chainReaction.png" // CAMBIA QUI
         }
     ];
 

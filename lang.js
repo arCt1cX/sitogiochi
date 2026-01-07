@@ -303,6 +303,28 @@ const translations = {
                 'Si discute e si ride!'
             ]
         },
+        'indovinachi': {
+            'title': 'Indovina Chi',
+            'catchphrase': 'Indovina la parola facendo domande!',
+            'description': 'Indovina Chi è un gioco di domande dove devi indovinare una parola segreta facendo domande ai tuoi amici. Meno domande fai, più punti guadagni!',
+            'players': '2-10 giocatori',
+            'time': '10-20 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Tre modalità di gioco: categorie scelte, casuali o personalizzate',
+                'Centinaia di parole in diverse categorie',
+                'Contatore domande integrato',
+                'Classifica finale con punteggi'
+            ],
+            'instructions': [
+                'Scegli il numero di giocatori e la modalità',
+                'In modalità "scelte", ogni giocatore sceglie la categoria per gli altri',
+                'In modalità "casuali", una parola random viene estratta automaticamente',
+                'In modalità "personalizzate", gli altri giocatori scrivono la parola',
+                'Fai domande per indovinare la parola, il contatore tiene traccia',
+                'Vince chi indovina con meno domande!'
+            ]
+        },
         'tournamentTitle': 'Modalità Torneo',
         'numberOfGames': 'Numero di Partite',
         'players': 'Giocatori',
@@ -624,6 +646,28 @@ const translations = {
                 'The game randomly picks one',
                 'Others must guess who wrote it',
                 'Discuss and laugh!'
+            ]
+        },
+        'indovinachi': {
+            'title': 'Guess Who',
+            'catchphrase': 'Guess the word by asking questions!',
+            'description': 'Guess Who is a question game where you must guess a secret word by asking your friends questions. The fewer questions you ask, the more points you earn!',
+            'players': '2-10 players',
+            'time': '10-20 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Three game modes: chosen, random or custom categories',
+                'Hundreds of words in different categories',
+                'Built-in question counter',
+                'Final leaderboard with scores'
+            ],
+            'instructions': [
+                'Choose the number of players and game mode',
+                'In "chosen" mode, each player picks the category for others',
+                'In "random" mode, a random word is automatically selected',
+                'In "custom" mode, other players write the word',
+                'Ask questions to guess the word, the counter keeps track',
+                'The one who guesses with fewer questions wins!'
             ]
         },
         'tournamentTitle': 'Tournament Mode',
