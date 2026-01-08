@@ -1,116 +1,121 @@
-Videogiochi
-Cibo
-Film
-Serie TV
-Musica
-Viaggi
-Tecnologia
-Lavoro
-Natale
-Intelligenza Artificiale
-Alieni
-Teorie del complotto
-Smart working
-DAD
-Scuola
-Esami
-Cyberbullismo
-FIFA
-Pokemon
-Festival di Sanremo
-Film
-Serie TV
-Videogiochi
-Musica italiana
-Musica americana
-Musica
-Cucina
-Materie scolastiche
-Compagni di scuola
-Cucine straniere
+Abitudini quotidiane
+Amici del gruppo
+Animali
+Animali domestici
+Animali selvatici e dinosauri
+Anni storici ('80, 90', 2000' ecc..)
+Applicazioni e softwares
+Arte
+Attività da fare il sabato sera
+Attori
+Avvenimenti storici
+Basket
+Bevande
 Bevande alcoliche
 Birre
-Frutta
-Giochi per telefono / tablet
-Bevande
-Ristoranti
-Cucina romana
-Animali
-Sport
 Calcio
-Basket
-Social network
-Colazione
-Fast food
-Pizza
-Gelato (gusti o preconfezionati)
-Marche di vestiti
 Capelli e barba
-Scarpe
-Vestiti e outfit
-Esercizi in palestra
-Amici del gruppo
-Cose inutili che la gente ama
-Politica e leggi
-Youtubers
-Meme sopravvalutati o sottovalutati
-Attori
-Fumetti
-Facoltà universitarie
-Licei e Istituti italiani
-Cocktail
-Mezzi di trasporto
-Attività da fare il sabato sera
-Dolci e dessert
-Lavori e mestieri
-Snack
-Influencer
-Paesi
+Cartoni animati
+Cibo
 Città
 Città italiane
-Negozi e marche
-Stagioni
-Vacanze e festività
-Cartoni animati
-Succhi di frutta
-Conoscenti in comune tra i giocatori
-Tipi di vacanza
-Luoghi della vostra città
-Topic libera
-Topic libera
-Topic libera
-Topic libera
-Topic libera
-Topic libera
-Arte
-Letteratura
+Cocktail
+Colazione
 Collezionismo
-Animali domestici
-Abitudini quotidiane
-Abitudini quotidiane
-Applicazioni e softwares
-Giochi (da tavolo, carte ecc.)
-Università
-Scuola
-Stile di vita
-Fumare (sigarette, canne, sig. elettroniche ecc.)
-Regioni italiane
-Rappers
-Verdure
-Razzismo
-Pasta (condimenti, marche, formati…)
-Merendine e biscotti
-Cibo (qualsiasi)
-Lingue
-Cose da fare in vacanza
-Pornostar e siti porno
-Film, serie tv o programmi tv
 Colori
-Dispositivi elettronici (laptop, tablet, telefoni ecc.)
-Macchine e moto
-Droga
-Animali selvatici e dinosauri
+Compagni di scuola
+Compleanno
+Comunicazione (messaggi, telefonate, videochiamate, dal vivo ecc..)
+Conoscenti in comune tra i giocatori
+Cose da fare in vacanza
+Cose inutili che la gente ama
 Cose sulle persone presenti
+Cucina
+Cucina romana
+Cucine straniere
+Cose della casa (oggetti, stanze, faccende)
+DAD
+Dispositivi elettronici (laptop, tablet, telefoni ecc.)
+Dolci e dessert
+Droga e alcol
+Esami (maturità, laurea, patente ecc..)
+Esercizi in palestra
+Età e fasi della vita umana
+Facoltà universitarie
+Fast food
+Festival di Sanremo
+Festività
+Film e serie tv
+Frutta e verdura
+Fumare (sigarette, canne, sig. elettroniche ecc.)
+Fumetti
+Gelato
+Giochi (da tavolo, carte ecc.)
+Giochi per telefono / tablet
+Hobby
+Influencer
+Intelligenza Artificiale
+Invenzioni e scoperte che hanno cambiato l'umanità
+Lavori e mestieri
+Letteratura
+Licei e Istituti italiani
+Lingue
+Luoghi della vostra città
+Macchine e moto
+Marche di vestiti
+Materie scolastiche
+Meme sopravvalutati o sottovalutati
+Merendine e biscotti
+Meteo e stagioni
+Metodi di aproccio ad una ragazza/ragazzo
+Mezzi di trasporto
+Musica
+Musica americana
+Musica italiana
+Natale
+Negozi e marche
+Paesaggi e attrazioni naturali
+Paesi
+Pasta (condimenti, marche, formati…)
+Pizza
+Pokemon
+Politica e leggi
+
+Programmi tv
+Rap
+Razzismo
+Regioni italiane
+Religioni 
+Ristoranti
+Scarpe
+Scuola
+Smart working
+Snack
+Social network
+Sport
+Status e situazioni sentimentali
+Stile di vita
+Succhi di frutta
+Tecnologia
+Teorie del complotto
+Tipi di vacanza
 Topic libera
 Topic libera
 Topic libera
+Topic libera
+Topic libera
+Topic libera
+Topic libera
+Topic libera
+Topic libera
+Topic libera
+Topic libera
+Università 
+Usanze dei vari paesi
+Vacanze
+Verdure
+Vestiti e outfit
+Viaggi
+Videogiochi
+Vizi e abitudini
+Youtubers
