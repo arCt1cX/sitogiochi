@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "impostor",
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
-            image: "drewnking.png" // CAMBIA QUI
+            image: "impostor.png" // CAMBIA QUI
         },
         {
             id: "mrdrew",
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "tictactopics",
             displayName: getTranslation('tictactopics', 'title'),
             catchphrase: getTranslation('tictactopics', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "tictactopics.png" // CAMBIA QUI
         },
         {
             id: "indovinaChi",
