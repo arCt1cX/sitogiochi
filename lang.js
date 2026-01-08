@@ -14,7 +14,7 @@ const translations = {
         'toggleLanguage': 'IT',
         'tagline': 'Svolta la serata con quei rimasti dei tuoi amici 🍺🍁',
         'subtitle': '',
-        'buyMeCoffee': 'Buy me a coffee',
+        'buyMeCoffee': 'Offrice una birra',
         'italianOnly': 'Solo Italiano',
 
         // Navigation Items
@@ -359,7 +359,7 @@ const translations = {
         'toggleLanguage': 'EN',
         'tagline': 'Liven up the night with those "fried" friends of yours 🍺🍁',
         'subtitle': '',
-        'buyMeCoffee': 'Buy me a coffee',
+        'buyMeCoffee': 'Offrice una birra',
         'italianOnly': 'Italian Only',
 
         // Navigation Items
