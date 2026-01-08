@@ -175,3 +175,126 @@ Sushi|Ramen|Cibo e bevande
 Hamburger|Hot Dog|Cibo e bevande
 Parigi|Londra|Mondo e luoghi
 Tokyo|Pechino|Mondo e luoghi
+Ingegnere|Architetto|Lavori e mestieri
+Idraulico|Elettricista|Lavori e mestieri
+Meccanico|Gommista|Lavori e mestieri
+Attore|Regista|Lavori e mestieri
+Cantante|Musicista|Lavori e mestieri
+Taxi|Autobus|Trasporti
+Nave|Traghetto|Trasporti
+Camion|Furgone|Trasporti
+Moto|Scooter|Trasporti
+Tram|Filobus|Trasporti
+Skateboard|Pattini|Trasporti
+Barca a vela|Motoscafo|Trasporti
+Frigorifero|Congelatore|Elettrodomestici
+Lavatrice|Asciugatrice|Elettrodomestici
+Forno|Microonde|Elettrodomestici
+Ventilatore|Condizionatore|Elettrodomestici
+Aspirapolvere|Robot pulitore|Elettrodomestici
+Dentifricio|Spazzolino|Igiene personale
+Sapone|Bagnoschiuma|Igiene personale
+Shampoo|Balsamo|Igiene personale
+Deodorante|Profumo|Igiene personale
+Rasoio|Lametta|Igiene personale
+Matematica|Fisica|Materie scolastiche e universitarie
+Storia|Geografia|Materie scolastiche e universitarie
+Italiano|Inglese|Materie scolastiche e universitarie
+Chimica|Biologia|Materie scolastiche e universitarie
+Arte|Musica|Materie scolastiche e universitarie
+Violino|Violoncello|Musica
+Batteria|Tamburo|Musica
+Flauto|Clarinetto|Musica
+Tromba|Sassofono|Musica
+Rock|Pop|Generi musicali
+Jazz|Blues|Generi musicali
+Rap|Trap|Generi musicali
+Horror|Thriller|Generi cinematografici
+Commedia|Drammatico|Generi cinematografici
+Fantascienza|Fantasy|Generi cinematografici
+Scacchi|Dama|Giochi da tavolo e videogiochi
+Monopoli|Risiko|Giochi da tavolo e videogiochi
+Poker|Blackjack|Giochi da tavolo e videogiochi
+Calzini|Collant|Moda e abbigliamento
+Sciarpa|Guanti|Moda e abbigliamento
+Cintura|Bretelle|Moda e abbigliamento
+Cravatta|Papillon|Moda e abbigliamento
+Pantofole|Ciabatte|Moda e abbigliamento
+Filosofia|Psicologia|Materie scolastiche e universitarie
+Sociologia|Antropologia|Materie scolastiche e universitarie
+Economia|Giurisprudenza|Materie scolastiche e universitarie
+Medicina|Infermieristica|Materie scolastiche e universitarie
+Latino|Greco|Materie scolastiche e universitarie
+Educazione Fisica|Scienze Motorie|Materie scolastiche e universitarie
+Architettura|Design|Materie scolastiche e universitarie
+Classica|Opera|Generi musicali
+Reggae|Ska|Generi musicali
+Techno|House|Generi musicali
+Country|Folk|Generi musicali
+Metal|Punk|Generi musicali
+R&B|Soul|Generi musicali
+Disco|Funk|Generi musicali
+Indie|Alternative|Generi musicali
+Cluedo|Indovina Chi|Giochi da tavolo e videogiochi
+Taboo|Pictionary|Giochi da tavolo e videogiochi
+Trivial Pursuit|Cranium|Giochi da tavolo e videogiochi
+Call of Duty|Battlefield|Giochi da tavolo e videogiochi
+League of Legends|Dota 2|Giochi da tavolo e videogiochi
+Zelda|Final Fantasy|Giochi da tavolo e videogiochi
+The Sims|Animal Crossing|Giochi da tavolo e videogiochi
+Tetris|Candy Crush|Giochi da tavolo e videogiochi
+Pac-Man|Space Invaders|Giochi da tavolo e videogiochi
+GTA|Red Dead Redemption|Giochi da tavolo e videogiochi
+Cuore|Cervello|Corpo umano
+Mano|Piede|Corpo umano
+Occhio|Orecchio|Corpo umano
+Naso|Bocca|Corpo umano
+Gomito|Ginocchio|Corpo umano
+Pioggia|Neve|Meteo e fenomeni atmosferici
+Tuono|Lampo|Meteo e fenomeni atmosferici
+Uragano|Tornado|Meteo e fenomeni atmosferici
+Nebbia|Grandine|Meteo e fenomeni atmosferici
+Arcobaleno|Aurora Boreale|Meteo e fenomeni atmosferici
+Oro|Argento|Pietre preziose e metalli
+Diamante|Rubino|Pietre preziose e metalli
+Smeraldo|Zaffiro|Pietre preziose e metalli
+Bronzo|Rame|Pietre preziose e metalli
+Perla|Corallo|Pietre preziose e metalli
+Pesca|Caccia|Hobby e passatempi
+Giardinaggio|Fai da te|Hobby e passatempi
+Fotografia|Pittura|Hobby e passatempi
+Cucito|Uncinetto|Hobby e passatempi
+Scrittura|Lettura|Hobby e passatempi
+Tiramisù|Panna cotta|Dolci e dessert
+Cannolo|Babà|Dolci e dessert
+Crepes|Pancake|Dolci e dessert
+Muffin|Cupcake|Dolci e dessert
+Budino|Gelatina|Dolci e dessert
+Whisky|Rum|Bevande alcoliche
+Vodka|Gin|Bevande alcoliche
+Tequila|Mezcal|Bevande alcoliche
+Champagne|Prosecco|Bevande alcoliche
+Spritz|Mojito|Bevande alcoliche
+Rosa|Tulipano|Fiori
+Girasole|Margherita|Fiori
+Orchidea|Giglio|Fiori
+Viola|Mimosa|Fiori
+Papavero|Lavanda|Fiori
+Mouse|Tastiera|Accessori Tech
+Stampante|Scanner|Accessori Tech
+Hard Disk|Chiavetta USB|Accessori Tech
+Router|Modem|Accessori Tech
+Monitor|Proiettore|Accessori Tech
+Ambulanza|Auto della Polizia|Mezzi di soccorso
+Camion dei Pompieri|Elicottero di salvataggio|Mezzi di soccorso
+Napoleone|Giulio Cesare|Personaggi Storici
+Einstein|Newton|Personaggi Storici
+Leonardo da Vinci|Michelangelo|Personaggi Storici
+Cleopatra|Nefertiti|Personaggi Storici
+Colombo|Magellano|Personaggi Storici
+Tom|Jerry|Cartoni Animati
+Titti|Silvestro|Cartoni Animati
+Pippo|Pluto|Cartoni Animati
+Homer|Marge|Cartoni Animati
+SpongeBob|Patrick|Cartoni Animati
+Bugs Bunny|Daffy Duck|Cartoni Animati

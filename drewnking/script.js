@@ -762,6 +762,7 @@ document.addEventListener('click', (e) => {
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     loadPhraseHistory(); // Load historical data from localStorage
+    generatePlayerInputs(); // Generate initial player inputs
 
 
 
