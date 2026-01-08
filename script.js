@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "hottakes",
             displayName: getTranslation('hottakes', 'title'),
             catchphrase: getTranslation('hottakes', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "hottakes.png" // CAMBIA QUI
         },
         {
             id: "quizzy",
             displayName: getTranslation('quizzy', 'title'),
             catchphrase: getTranslation('quizzy', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "quizzy.png" // CAMBIA QUI
         },
         {
             id: "guessthepic",
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "indovinaChi",
             displayName: getTranslation('indovinachi', 'title'),
             catchphrase: getTranslation('indovinachi', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "indovinachi.png" // CAMBIA QUI
         }
     ];
 
