@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         lastRandomCategories: [], // Added for storing random categories
         isShockRound: false, // Flag for shock round
         hardModeActive: false, // Flag for hard mode
-        shownQuestions: {} // Track already shown questions
+        shownQuestions: {}, // Track already shown questions
+        apiKey: localStorage.getItem('quizzy_api_key') || null, // Store API key
+        aiQuestionHistory: [] // Track AI generated questions to avoid repetition
     };
 
     // DOM Elements
@@ -44,13 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initEventListeners() {
         // Welcome screen
         document.getElementById('start-setup').addEventListener('click', function () {
-            console.log('Start setup clicked');
-            console.log('Setup screen element:', screens.setup);
-            if (screens.setup) {
-                showScreen(screens.setup);
-            } else {
-                console.error('Setup screen not found!');
-            }
+            showScreen(screens.setup);
         });
 
         // Setup screen
@@ -64,6 +60,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('game-mode').addEventListener('change', function () {
             gameState.gameMode = this.value;
+            const apiKeyContainer = document.getElementById('api-key-container');
+            if (this.value === 'ai' && !gameState.apiKey) {
+                apiKeyContainer.classList.remove('hidden');
+            } else {
+                apiKeyContainer.classList.add('hidden');
+            }
+        });
+
+        // Save API Key on input change
+        document.getElementById('api-key-input').addEventListener('change', function () {
+            const key = this.value.trim();
+            if (key) {
+                gameState.apiKey = key;
+                localStorage.setItem('quizzy_api_key', key);
+            }
         });
 
         document.getElementById('start-game').addEventListener('click', startCategorySelection);
@@ -209,10 +220,71 @@ document.addEventListener('DOMContentLoaded', function () {
         gameState.gameMode = document.getElementById('game-mode').value;
 
         // Setup category selection for first player
-        setupCategorySelection();
+        if (gameState.gameMode === 'ai') {
+            setupCustomCategoryInput();
+        } else {
+            setupCategorySelection();
+        }
     }
 
+    // Setup custom category input for AI mode
+    function setupCustomCategoryInput() {
+        if (gameState.currentPlayerIndex >= gameState.players.length) {
+            return;
+        }
 
+        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
+        document.getElementById('player-name-display').textContent = currentPlayer.name;
+
+        // Hide standard category cards
+        document.getElementById('category-cards').classList.add('hidden');
+        document.getElementById('selected-categories-list').parentElement.classList.add('hidden');
+
+        // Show custom input container
+        const inputContainer = document.getElementById('custom-category-input-container');
+        inputContainer.classList.remove('hidden');
+
+        // Clear previous inputs
+        document.getElementById('custom-cat-1').value = '';
+        document.getElementById('custom-cat-2').value = '';
+
+        // Update confirm button behavior
+        const confirmBtn = document.getElementById('confirm-categories');
+        confirmBtn.disabled = false;
+
+        // Remove old listener and add new one for AI mode
+        const newBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
+
+        newBtn.addEventListener('click', function () {
+            const cat1 = document.getElementById('custom-cat-1').value.trim();
+            const cat2 = document.getElementById('custom-cat-2').value.trim();
+
+            if (cat1 && cat2) {
+                // Save custom categories
+                currentPlayer.categories = [cat1, cat2];
+
+                // For shared AI mode (logic same as shared standard)
+                gameState.playerCategories[gameState.currentPlayerIndex] = [cat1, cat2];
+
+                // Move to next player
+                gameState.currentPlayerIndex++;
+                if (gameState.currentPlayerIndex < gameState.players.length) {
+                    setupCustomCategoryInput();
+                } else {
+                    // All players ready
+                    // Combine all categories for everyone to play with
+                    combineSharedCategories();
+                    gameState.currentPlayerIndex = 0;
+                    startGame();
+                }
+            } else {
+                alert("Inserisci entrambe le categorie!");
+            }
+        });
+
+        showScreen(screens.categorySelection);
+    }
 
     // Setup the category selection screen for current player
     function setupCategorySelection() {
@@ -234,12 +306,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Disable confirm button initially
         document.getElementById('confirm-categories').disabled = true;
-
-        // Reset visual state of all cards (crucial fix)
-        // We do this AFTER showing the screen to ensure DOM is ready
-        setTimeout(() => {
-            document.querySelectorAll('.category-card').forEach(card => card.classList.remove('selected'));
-        }, 10);
     }
 
     // Generate category selection cards
@@ -252,9 +318,6 @@ document.addEventListener('DOMContentLoaded', function () {
             card.className = 'category-card';
             card.dataset.category = category;
             card.textContent = getGameTranslation('categories', category) || category;
-
-            // PREVENT selection during generation to avoid ghosts
-            card.classList.remove('selected');
 
             card.addEventListener('click', function () {
                 toggleCategorySelection(this);
@@ -280,44 +343,35 @@ document.addEventListener('DOMContentLoaded', function () {
             // Deselect
             categoryCard.classList.remove('selected');
             updateSelectedCategoriesList();
+        } else if (selectedCategories.length < maxCategories) {
+            // Select if under max limit
+            categoryCard.classList.add('selected');
+            updateSelectedCategoriesList();
         } else {
-            // Check count BEFORE adding class
-            const currentlySelected = document.querySelectorAll('.category-card.selected');
-            if (currentlySelected.length < maxCategories) {
-                // Remove selected class from all non-selected cards just to be safe (fix ghosting)
-                // NO, don't do that, it breaks multi-select.
-                // Just add the class.
-                categoryCard.classList.add('selected');
-                updateSelectedCategoriesList();
-            } else {
-                // Max limit reached - show custom error message
-                const errorMsg = document.createElement('div');
-                errorMsg.id = 'max-categories-error';
-                errorMsg.className = 'error-message';
+            // Max limit reached - show custom error message
+            const errorMsg = document.createElement('div');
+            errorMsg.id = 'max-categories-error';
+            errorMsg.className = 'error-message';
 
-                // Use the correct word for categories based on language
-                const lang = getUserLanguage();
-                const categoriesText = lang === 'it' ? 'categorie' : 'categories';
-                errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${categoriesText}`;
+            // Use the correct word for categories based on language
+            const lang = getUserLanguage();
+            const categoriesText = lang === 'it' ? 'categorie' : 'categories';
+            errorMsg.textContent = `${getGameTranslation('maxCategories')} ${maxCategories} ${categoriesText}`;
 
-                // Insert error after the category grid
-                const categoryGrid = document.getElementById('category-cards');
-                categoryGrid.parentNode.insertBefore(errorMsg, categoryGrid.nextSibling);
+            // Insert error after the category grid
+            const categoryGrid = document.getElementById('category-cards');
+            categoryGrid.parentNode.insertBefore(errorMsg, categoryGrid.nextSibling);
 
-                // Auto-hide after 3 seconds
-                setTimeout(() => {
-                    if (errorMsg.parentNode) {
-                        errorMsg.remove();
-                    }
-                }, 3000);
-            }
-
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                if (errorMsg.parentNode) {
+                    errorMsg.remove();
+                }
+            }, 3000);
         }
 
-        // Re-query to get actual count
-        const finalSelected = document.querySelectorAll('.category-card.selected');
-        // Enable/disable confirm button based on exact selection count
-        document.getElementById('confirm-categories').disabled = finalSelected.length !== 2;
+        // Enable/disable confirm button based on selection
+        document.getElementById('confirm-categories').disabled = selectedCategories.length === 0;
     }
 
     // Update the selected categories list
@@ -392,15 +446,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Create container
         const container = document.createElement('div');
-        container.style.maxWidth = '600px';
-        container.style.width = '90%';
-        container.style.backgroundColor = '#1e1e1e';
-        container.style.borderRadius = '16px';
-        container.style.padding = '20px';
-        container.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.8)';
-        container.style.border = '2px solid #333';
-        container.style.maxHeight = '90vh';
-        container.style.overflowY = 'auto';
+        container.style.maxWidth = '800px';
+        container.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        container.style.borderRadius = '10px';
+        container.style.padding = '30px';
+        container.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
 
         // Title
         const title = document.createElement('h2');
@@ -423,26 +473,25 @@ document.addEventListener('DOMContentLoaded', function () {
         // Selected categories list
         const selectedList = document.createElement('div');
         selectedList.style.display = 'flex';
-        selectedList.style.flexWrap = 'wrap';
-        selectedList.style.gap = '8px';
-        selectedList.style.justifyContent = 'center';
-        selectedList.style.marginBottom = '20px';
+        selectedList.style.flexDirection = 'column';
+        selectedList.style.gap = '10px';
+        selectedList.style.marginBottom = '30px';
 
         selectedCategories.forEach(category => {
             const categoryItem = document.createElement('div');
-            categoryItem.style.fontSize = '1rem';
+            categoryItem.style.fontSize = '1.6rem';
             categoryItem.style.fontWeight = 'bold';
-            categoryItem.style.padding = '8px 15px';
+            categoryItem.style.padding = '10px 20px';
             categoryItem.style.backgroundColor = 'rgba(76, 175, 80, 0.6)'; // Green for selected
-            categoryItem.style.borderRadius = '20px';
+            categoryItem.style.borderRadius = '8px';
             categoryItem.style.display = 'flex';
             categoryItem.style.alignItems = 'center';
-            categoryItem.style.border = '1px solid #4CAF50';
+            categoryItem.style.justifyContent = 'center';
 
             // User icon
             const userIcon = document.createElement('span');
             userIcon.innerHTML = '👤 ';
-            userIcon.style.marginRight = '5px';
+            userIcon.style.marginRight = '10px';
             categoryItem.appendChild(userIcon);
 
             // Category name
@@ -455,10 +504,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Random categories section
         const randomTitle = document.createElement('h3');
-        randomTitle.style.fontSize = '1.1rem';
-        randomTitle.style.color = '#bb86fc';
-        randomTitle.style.marginTop = '0';
-        randomTitle.style.marginBottom = '10px';
+        randomTitle.style.fontSize = '1.3rem';
+        randomTitle.style.marginTop = '10px';
+        randomTitle.style.marginBottom = '15px';
         randomTitle.textContent = getUserLanguage() === 'it' ?
             'Categorie Aggiunte dal Gioco:' :
             'Categories Added by the Game:';
@@ -466,26 +514,25 @@ document.addEventListener('DOMContentLoaded', function () {
         // Random categories list
         const randomList = document.createElement('div');
         randomList.style.display = 'flex';
-        randomList.style.flexWrap = 'wrap';
-        randomList.style.gap = '8px';
-        randomList.style.justifyContent = 'center';
-        randomList.style.marginBottom = '25px';
+        randomList.style.flexDirection = 'column';
+        randomList.style.gap = '10px';
+        randomList.style.marginBottom = '40px';
 
         randomCategories.forEach(category => {
             const categoryItem = document.createElement('div');
-            categoryItem.style.fontSize = '1rem';
+            categoryItem.style.fontSize = '1.6rem';
             categoryItem.style.fontWeight = 'bold';
-            categoryItem.style.padding = '8px 15px';
+            categoryItem.style.padding = '10px 20px';
             categoryItem.style.backgroundColor = 'rgba(138, 80, 143, 0.6)'; // Purple for random
-            categoryItem.style.borderRadius = '20px';
+            categoryItem.style.borderRadius = '8px';
             categoryItem.style.display = 'flex';
             categoryItem.style.alignItems = 'center';
-            categoryItem.style.border = '1px solid #9c27b0';
+            categoryItem.style.justifyContent = 'center';
 
             // Random icon
             const randomIcon = document.createElement('span');
             randomIcon.innerHTML = '🎲 ';
-            randomIcon.style.marginRight = '5px';
+            randomIcon.style.marginRight = '10px';
             categoryItem.appendChild(randomIcon);
 
             // Category name
@@ -1050,6 +1097,12 @@ document.addEventListener('DOMContentLoaded', function () {
             resultScreen.classList.add('shock-round');
         }
 
+        // If AI mode, skip validation and go straight to showQuestion
+        if (gameState.gameMode === 'ai') {
+            showQuestion();
+            return;
+        }
+
         // Check for valid category and difficulty before proceeding
         if (!gameState.currentCategory || !gameState.currentDifficulty) {
             console.error("Missing category or difficulty:",
@@ -1442,6 +1495,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Show a question to the current player
+    // Show a question to the current player
     function showQuestion() {
         // Update question display elements initially
         const currentCategoryEl = document.getElementById('current-category');
@@ -1472,17 +1526,35 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show question screen immediately
         showScreen(screens.question);
 
-        // Standard logic
-        const question = getRandomQuestion();
-        if (!question) {
-            alert('Error: No questions available for this category and difficulty.');
-            return;
+        if (gameState.gameMode === 'ai') {
+            generateAIQuestion(gameState.currentCategory, gameState.currentDifficulty)
+                .then(question => {
+                    displayQuestion(question);
+                })
+                .catch(err => {
+                    console.error("AI Error:", err);
+                    alert("Errore AI. Uso domanda di riserva.");
+                    // Fallback to placeholder
+                    const fallback = {
+                        question: "Errore generazione AI. Riprova.",
+                        answers: ["A", "B", "C", "D"],
+                        correctIndex: 0
+                    };
+                    displayQuestion(fallback);
+                });
+        } else {
+            // Standard logic
+            const question = getRandomQuestion();
+            if (!question) {
+                alert('Error: No questions available for this category and difficulty.');
+                return;
+            }
+
+            gameState.currentQuestion = question;
+
+            // Display standard question
+            displayQuestion(question);
         }
-
-        gameState.currentQuestion = question;
-
-        // Display standard question
-        displayQuestion(question);
     }
 
 
@@ -1519,7 +1591,131 @@ document.addEventListener('DOMContentLoaded', function () {
         startTimer();
     }
 
+    async function generateAIQuestion(category, difficulty, retryCount = 0) {
+        const loadingEl = document.getElementById('ai-loading');
+        const questionText = document.getElementById('question-text');
 
+        if (retryCount === 0) {
+            loadingEl.classList.remove('hidden');
+            questionText.classList.add('hidden');
+        }
+
+        let difficultyPrompt = "";
+        if (difficulty === 'bambino') {
+            difficultyPrompt = "Livello: BAMBINO (5-6 anni). Usa un linguaggio semplicissimo, domande dirette e ovvie. Niente parole difficili.";
+        } else {
+            difficultyPrompt = `Difficoltà: "${difficulty}" (su scala: bambino, facile, medio, esperto, laureato).`;
+        }
+
+        // Add history to prompt to avoid repetition
+        let historyPrompt = "";
+        if (gameState.aiQuestionHistory && gameState.aiQuestionHistory.length > 0) {
+            // Get last 20 questions for this category to keep prompt size manageable
+            const categoryHistory = gameState.aiQuestionHistory
+                .filter(q => q.category === category)
+                .slice(-20)
+                .map(q => q.question);
+
+            if (categoryHistory.length > 0) {
+                historyPrompt = `NON ripetere nessuna di queste domande già fatte: ${JSON.stringify(categoryHistory)}.`;
+            }
+        }
+
+        const prompt = `Genera una domanda a risposta multipla (4 opzioni) in italiano.
+        Argomento: "${category}".
+        ${difficultyPrompt}
+        ${historyPrompt}
+        
+        REGOLE IMPORTANTI:
+        1. La domanda deve essere BREVE (max 20 parole).
+        2. Le risposte devono essere BREVI (max 10 parole).
+        3. Tutte le 4 risposte devono avere LUNGHEZZA SIMILE. Non fare la risposta corretta molto più lunga delle altre.
+        4. Se l'argomento è specifico, assicurati che la risposta sia corretta.
+        5. CRUCIALE: Le 3 risposte sbagliate devono essere PLAUSIBILI (pertinenti alla categoria) ma SBAGLIATE per la domanda specifica. Esempio: se chiedi "chi attacca ad area" in Clash Royale, metti carte che NON attaccano ad area (es: Arcieri), non mettere "Pikachu" o cose a caso.
+        
+        Rispondi SOLO con un JSON valido in questo formato:
+        {
+            "question": "testo della domanda",
+            "answers": ["opzione A", "opzione B", "opzione C", "opzione D"],
+            "correctIndex": 0 (indice della risposta corretta 0-3)
+        }`;
+
+        try {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${gameState.apiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{ text: prompt }]
+                    }]
+                })
+            });
+
+            if (response.status === 429) {
+                console.warn(`Rate limit hit (429). Retrying... Attempt ${retryCount + 1}`);
+                if (retryCount < 3) {
+                    // Exponential backoff: 2s, 4s, 8s
+                    const waitTime = Math.pow(2, retryCount + 1) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, waitTime));
+                    return generateAIQuestion(category, difficulty, retryCount + 1);
+                } else {
+                    throw new Error("Rate limit exceeded after retries");
+                }
+            }
+
+            if (!response.ok) {
+                throw new Error(`API Error: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+                throw new Error("Invalid API response structure");
+            }
+
+            const text = data.candidates[0].content.parts[0].text;
+
+            // Clean markdown if present
+            const jsonStr = text.replace(/```json/g, '').replace(/```/g, '').trim();
+            const questionData = JSON.parse(jsonStr);
+
+            // Shuffle answers to avoid "A" bias (LLMs tend to put correct answer first)
+            const correctAnswer = questionData.answers[questionData.correctIndex];
+
+            // Fisher-Yates shuffle
+            for (let i = questionData.answers.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questionData.answers[i], questionData.answers[j]] = [questionData.answers[j], questionData.answers[i]];
+            }
+
+            // Update correctIndex to match new position
+            questionData.correctIndex = questionData.answers.indexOf(correctAnswer);
+
+            // Save to history
+            if (!gameState.aiQuestionHistory) gameState.aiQuestionHistory = [];
+            gameState.aiQuestionHistory.push({
+                category: category,
+                question: questionData.question
+            });
+
+            loadingEl.classList.add('hidden');
+            questionText.classList.remove('hidden');
+
+            return questionData;
+
+        } catch (error) {
+            console.error("AI Generation Error:", error);
+
+            // If we've exhausted retries or hit another error, show fallback but clean up UI first
+            if (retryCount === 0) { // Only handle UI cleanup on the initial call stack
+                loadingEl.classList.add('hidden');
+                questionText.classList.remove('hidden');
+            }
+            throw error;
+        }
+    }
 
     // Generate answer buttons for the question
     function generateAnswerButtons(question) {
