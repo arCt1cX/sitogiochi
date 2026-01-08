@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "guessthepic",
             displayName: getTranslation('guessthepic', 'title'),
             catchphrase: getTranslation('guessthepic', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "guessrush.png" // CAMBIA QUI
         },
         {
             id: "chainreaction",
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "bluffme",
             displayName: getTranslation('bluffme', 'title'),
             catchphrase: getTranslation('bluffme', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "bluffme.png" // CAMBIA QUI
         },
         {
             id: "alphabetgame",
