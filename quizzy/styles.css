@@ -1,4 +1,43 @@
 /* Quizzy Game Styles - Impostor Theme */
+/* iOS Safe Area Support */
+@supports (padding-top: env(safe-area-inset-top)) {
+    body {
+        padding-top: max(20px, env(safe-area-inset-top));
+    }
+}
+
+/* Home Button - Fixed Position Safe Area */
+.home-button {
+    position: fixed;
+    top: max(15px, env(safe-area-inset-top) + 15px);
+    /* Push down below notch/clock */
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(2px);
+}
+
+.home-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -39,13 +78,24 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     min-height: 80vh;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
 }
 
 .screen-content {
-    padding: 10px;
+    padding: 20px;
+    /* Increased padding */
     text-align: center;
     max-width: 100%;
     margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 /* Headings */
@@ -82,6 +132,7 @@ h3 {
 
 .screen {
     display: none;
+    width: 100%;
 }
 
 .screen.active {
@@ -290,13 +341,17 @@ select:focus {
     background-color: #2d2d2d;
     border: 2px solid #3d3d3d;
     border-radius: 12px;
-    padding: 15px 20px;
+    padding: 20px 25px;
+    /* Larger padding */
     color: #e1e1e1;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    /* Bolder */
+    font-size: 1.1rem;
+    /* Larger font */
     transition: all 0.2s ease;
-    min-width: 140px;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,14 +399,19 @@ select:focus {
     background-color: #2d2d2d;
     border: 2px solid #3d3d3d;
     color: #e1e1e1;
-    padding: 15px 20px;
-    border-radius: 12px;
-    margin: 10px;
+    padding: 20px 30px;
+    /* Larger padding */
+    border-radius: 16px;
+    margin: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    /* Bolder */
+    font-size: 1.2rem;
+    /* Larger font */
     cursor: pointer;
     transition: all 0.2s ease;
-    min-width: 180px;
+    min-width: 200px;
+    /* Wider */
 }
 
 .player-category-btn:hover {
