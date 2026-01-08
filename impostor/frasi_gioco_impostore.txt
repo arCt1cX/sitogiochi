@@ -428,3 +428,33 @@ Quale è una materia / tematica di cui, secondo te, sei l'unico esperto tra i pr
 Come bevi il caffé (es. nero, macchiato ecc.) | Rispondi: nero
 Se dovessi andare in un programma TV, chi vorresti che fosse il presentatore? | Chi è il presentatore del tuo quiz show / programma tv preferito?
 Qual è il formaggio più buono? | Qual è il formaggio che mangi più spesso?
+Quale gioco da tavola piace a tutti ma a te fa cascare i coglioni? | Quale gioco da tavola hai giocato più volte in assoluto?
+Qual è l'alcolico perfetto per una serata invernale con temperatura di 0 gradi? | Qual è l'alcolico che bevi più spesso?
+Se potessi ricevere 1.000.000€ per ogni piegamento sulle braccia che riesci a fare di fila, con quanti milioni esci? | A quanti anni d'età ti vorresti sposare?
+Chi tra i presenti è il più nerd? | Chi tra i presenti passa più tempo a casa?
+Se dovessi battere tutti i presenti in uno sport per salvare la tua vita, quale sceglieresti? | Quale sport ti piace, ma nessuno dei presenti guarda?
+Qual è la portata più disgustosa che hai mai mangiato al sushi all you can eat? | Qual è una portata del sushi all you can eat che a te piace ma a quasi tutti fa schifo?
+Qual è la tua cucina preferita dopo quella italiana? | Quale cucina straniera è buona ma non ti piace così tanto come a tutti?
+Qual è il tuo cocktail rinfrescante perfetto per una serata estiva? | Qual è il cocktail a due ingredienti (es. gin tonic) che preferisci in assoluto?
+Quale marche di sigarette compri o hai comprato più volte? | Rispondi una marca di sigarette comune a tua scelta
+Chi tra i presenti sarebbe il peggior insegnato di scuola elementare? | Chi tra i presenti si fa più canne?
+Qual è il posto peggiore in cui sei stato in vacanza in Italia? | Qual è la città peggiore in cui trovarsi in Italia?
+Qual è un'artista musicale donna che ti piace? | Qual è l'artista musicale donna più famosa del momento?
+Se il giocatore alla tua destra dovesse mai essere arrestato, quale sarebbe il motivo più plausibile? | Se dovessi mai essere arrestato, quale sarebbe il motivo più plausibile? 
+Se fossi costretto a ripetere adesso un anno del liceo, quale sceglieresti? | Qual è l'anno del liceo in cui hai avuto più successo con le donne (o con gli uomini)?
+A che età sei andato per la prima volta a scuola da solo? | A che età ti sei fatto masturbato/a per la prima volta?
+Qual è lo strumento digitale che usi di più, escluso il telefono? | Rispondi uno tra: tablet, portatile, televisore
+Se potessi rubare un cibo / piatto tipico di una cucina straniera e renderlo italiano, quale sceglieresti? | Qual è il tuo ordine preferito al sushi all you can eat?
+Qual è un argomento di una materia scolastica in cui sei stato distrutto all'interrogazione? | Rispondi uno tra: Gli Integrali, Mitosi e meiosi, I Promessi Sposi
+Quale sport hai fatto da bambino ma per poco? | Quale sport avresti voluto fare da bambino ma non hai potuto?
+Che personaggio sottovalutato usavi sempre su MarioKart? | Quale era il personaggio di Mario Kart che ti stava più antipatico?
+Qual è una pagina Instagram che segui ma che pochi dei presenti secondo te seguono? | Qual è la pagina più sgravata che hai mai seguito su Instagram?
+Quante volte hai fatto a botte in vita tua? | Spara un numero da 0 a 3
+Qual è un oggetto che secondo te diventerà obsoleto tra 5 anni? | Qual è uno strumento elettronico che non più da tempo?
+Quanti messaggi manderai al giorno in media? | Spara un numero da 0 a 100 (consiglio: arrotondalo a una cifra tonda)
+Di quale artista hai comprato un CD o vinile almeno una volta? | Di qual artista era il miglior concerto in cui sei stato?
+Quante applicazioni del telefono usi effettivamente tutti i giorni? | Spara un numero da 0 a 10
+Qual è un alcolico a cui dici di no anche se te lo offrono? | Qual è un alcolico che ti ha fatto vomitare la prima volta che lo hai bevuto?
+Se dovessi partecipare a un reality show, quale sarebbe? | Di quale reality show senti sempre parlare ma non hai mai visto?
+Se dovessi eliminare tutti i tuoi hobby e tenerne solo uno, quale sarebbe? | Quale sport pratichi attualmente?
+
