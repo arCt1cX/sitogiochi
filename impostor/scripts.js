@@ -143,16 +143,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Set impostor count from input
-        gameState.impostorCount = parseInt(impostorCountInput.value) || 1;
+        if (impostorCountInput.value === 'random') {
+            // Random mode logic:
+            // 80% - 1 impostor
+            // 10% - 2 impostors
+            // 5% - 0 impostors
+            // 5% - All impostors
+            const rand = Math.random() * 100;
+            if (rand < 5) {
+                // 5% chance: No impostors
+                gameState.impostorCount = 0;
+                gameState.hasImpostor = false;
+                console.log("Random mode: 0 impostors selected");
+            } else if (rand < 10) {
+                // 5% chance: All impostors
+                gameState.impostorCount = gameState.playerCount;
+                gameState.hasImpostor = true;
+                console.log("Random mode: ALL impostors selected");
+            } else if (rand < 20) {
+                // 10% chance: 2 impostors (if possible)
+                gameState.impostorCount = Math.min(2, maxImpostors);
+                if (gameState.impostorCount < 2) {
+                    // Fallback to 1 if not enough players for 2
+                    gameState.impostorCount = 1;
+                }
+                gameState.hasImpostor = true;
+                console.log(`Random mode: ${gameState.impostorCount} impostors selected`);
+            } else {
+                // 80% chance: 1 impostor
+                gameState.impostorCount = 1;
+                gameState.hasImpostor = true;
+                console.log("Random mode: 1 impostor selected");
+            }
+        } else {
+            gameState.impostorCount = parseInt(impostorCountInput.value) || 1;
 
-        // Ensure impostor count is valid (min 1, max half of players rounded down)
-        const maxImpostors = Math.floor(gameState.playerCount / 2);
-        if (gameState.impostorCount < 1) {
-            gameState.impostorCount = 1;
-            impostorCountInput.value = 1;
-        } else if (gameState.impostorCount > maxImpostors) {
-            gameState.impostorCount = maxImpostors;
-            impostorCountInput.value = maxImpostors;
+            // Ensure impostor count is valid (min 1, max half of players rounded down)
+            if (gameState.impostorCount < 1) {
+                gameState.impostorCount = 1;
+                impostorCountInput.value = 1;
+            } else if (gameState.impostorCount > maxImpostors) {
+                gameState.impostorCount = maxImpostors;
+                impostorCountInput.value = maxImpostors;
+            }
+            // Determine if this game will have impostors (standard 1/50 chance of no impostor)
+            gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
         }
 
         selectedMode = modeSelect ? modeSelect.value : 'classic';
@@ -163,8 +198,11 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.prompts = [];
         gameState.impostorIndices = [];
 
-        // Determine if this game will have impostors (1/50 chance of no impostor)
-        gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
+        // If it's NOT random mode, apply the standard small chance of no impostor
+        // If it WAS random mode, hasImpostor is already set correctly
+        if (impostorCountInput.value !== 'random') {
+            gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
+        }
 
         if (selectedMode === 'reverse') {
             // Only use group prompt, no impostors
@@ -524,7 +562,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const maxImpostors = Math.floor(playerCount / 2);
 
         // Save the current selection if possible
-        const currentImpostorCount = parseInt(impostorCountInput.value);
+        // Save the current selection if possible
+        const currentImpostorCount = impostorCountInput.value;
 
         // Get translations for the current language
         const lang = getUserLanguage();
@@ -546,7 +585,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             impostorCountInput.appendChild(option);
+            impostorCountInput.appendChild(option);
         }
+
+        // Add Random Option
+        const randomOption = document.createElement('option');
+        randomOption.value = 'random';
+        randomOption.textContent = translations.random;
+        // Maintain selection if it was random
+        if (currentImpostorCount === 'random' || impostorCountInput.dataset.lastValue === 'random') {
+            randomOption.selected = true;
+        }
+        impostorCountInput.appendChild(randomOption);
 
         // If no option was selected, select the first one
         if (impostorCountInput.selectedIndex === -1 && impostorCountInput.options.length > 0) {
@@ -582,4 +632,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         impostorCountInput.appendChild(option);
     }
+
+    // Add Random Option
+    const randomOption = document.createElement('option');
+    randomOption.value = 'random';
+    randomOption.textContent = translations.random;
+    impostorCountInput.appendChild(randomOption);
 }); 

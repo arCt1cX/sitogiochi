@@ -12,6 +12,7 @@ const gameTranslations = {
         'impostorCountLabel': 'Numero di Impostori:',
         'impostor': 'Impostore',
         'impostors': 'Impostori',
+        'random': 'Casuale',
         'startGame': 'Inizia Gioco',
         'playerTurnText': 'Turno del Giocatore',
         'passPhoneText': 'Passa il telefono al giocatore',
@@ -55,6 +56,7 @@ const gameTranslations = {
         'impostorCountLabel': 'Number of Impostors:',
         'impostor': 'Impostor',
         'impostors': 'Impostors',
+        'random': 'Random',
         'startGame': 'Start Game',
         'playerTurnText': 'Player Turn',
         'passPhoneText': 'Pass the phone to player',
@@ -92,27 +94,27 @@ const gameTranslations = {
 function applyGameTranslations() {
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
-    
+
     // Update page title and meta description
     document.title = translations.pageTitleDesc;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', translations.metaDescription);
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update the language toggle button
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
         // Hide language toggle on game pages as requested
         languageToggle.style.display = 'none';
     }
-    
+
     // Update home button text
     document.getElementById('homeText').textContent = translations.home;
-    
+
     // Update all text elements
     document.getElementById('gameTitle').textContent = translations.gameTitle;
     document.getElementById('setupTitle').textContent = translations.setupTitle;
@@ -136,22 +138,26 @@ function applyGameTranslations() {
     document.getElementById('playerText').textContent = translations.playerText;
     document.getElementById('theirPromptWasText').textContent = translations.theirPromptWasText;
     document.getElementById('playAgainText').textContent = translations.playAgainText;
-    
+
     // Update dropdown texts
     const playersTextElements = document.querySelectorAll('.players-text');
     playersTextElements.forEach(el => {
         el.textContent = translations.players;
     });
-    
+
     const impostorTextElements = document.querySelectorAll('.impostor-text');
     const impostorSelect = document.getElementById('impostor-count');
     const options = impostorSelect.querySelectorAll('option');
     options.forEach(option => {
-        const value = parseInt(option.value);
-        const text = value === 1 ? translations.impostor : translations.impostors;
-        option.textContent = `${value} ${text}`;
+        if (option.value === 'random') {
+            option.textContent = translations.random;
+        } else {
+            const value = parseInt(option.value);
+            const text = value === 1 ? translations.impostor : translations.impostors;
+            option.textContent = `${value} ${text}`;
+        }
     });
-    
+
     const playerSelect = document.getElementById('player-count');
     const playerOptions = playerSelect.querySelectorAll('option');
     playerOptions.forEach(option => {

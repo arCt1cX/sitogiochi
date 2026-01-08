@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
     comingSoonIconContainer.className = 'game-icon-container';
 
     const comingSoonImg = document.createElement('img');
-    comingSoonImg.src = 'chainReaction.png';
+    comingSoonImg.src = 'icone%20per%20giochi/comingsoon.png';
     comingSoonImg.alt = 'Coming Soon Icon';
     comingSoonImg.className = 'game-icon';
     comingSoonImg.style.opacity = '0.3';
