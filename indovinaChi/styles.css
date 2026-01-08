@@ -159,6 +159,26 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.danger-btn {
+    background-color: #cf6679;
+    color: #121212;
+    font-weight: bold;
+}
+
+.danger-btn:hover,
+.danger-btn:focus {
+    background-color: #ff8a9d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(207, 102, 121, 0.4);
+}
+
+.game-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
 /* Mode buttons */
 .mode-buttons {
     display: flex;

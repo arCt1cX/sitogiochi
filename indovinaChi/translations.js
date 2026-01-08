@@ -34,7 +34,14 @@ const gameTranslations = {
         'guessedText': 'Ho Indovinato! 🎉',
         'endTitle': 'Fine del Gioco!',
         'playAgainText': 'Gioca di Nuovo',
-        'questionsUnit': 'domande'
+        'questionsUnit': 'domande',
+        'changeWordText': 'Cambia Parola',
+        'giveUpText': 'Arrenditi',
+        'wordChangedAlert': 'Parola cambiata! La nuova parola è stata selezionata.',
+        'noMoreChangesAlert': 'Hai già cambiato parola una volta!',
+        'gaveUpAlert': 'Ti sei arreso!',
+        'arreso': 'Arreso (Non Indovinata)',
+        'theWordWas': 'La parola era:'
     },
     'en': {
         'gameTitle': 'Guess Who',
@@ -70,7 +77,14 @@ const gameTranslations = {
         'guessedText': 'I Guessed It! 🎉',
         'endTitle': 'Game Over!',
         'playAgainText': 'Play Again',
-        'questionsUnit': 'questions'
+        'questionsUnit': 'questions',
+        'changeWordText': 'Change Word',
+        'giveUpText': 'Give Up',
+        'wordChangedAlert': 'Word changed! A new word has been selected.',
+        'noMoreChangesAlert': 'You have already changed your word once!',
+        'gaveUpAlert': 'You gave up!',
+        'arreso': 'Gave Up (Not Guessed)',
+        'theWordWas': 'The word was:'
     }
 };
 
@@ -123,7 +137,9 @@ function applyGameTranslations() {
         'questionsLabel': 'questionsLabel',
         'guessedText': 'guessedText',
         'endTitle': 'endTitle',
-        'playAgainText': 'playAgainText'
+        'playAgainText': 'playAgainText',
+        'changeWordBtn': 'changeWordText',
+        'giveUpBtn': 'giveUpText'
     };
 
     for (const [id, key] of Object.entries(elements)) {

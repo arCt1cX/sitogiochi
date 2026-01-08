@@ -7,7 +7,8 @@ let gameState = {
     scores: [], // Array of { player: number, questions: number, word: string, category: string }
     currentQuestions: 0,
     currentWord: '',
-    currentCategory: ''
+    currentCategory: '',
+    turnHasChangedWord: false
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -184,6 +185,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.currentQuestions = 0;
         questionCount.textContent = '0';
 
+        // Reset change word state
+        gameState.turnHasChangedWord = false;
+        const changeBtn = document.getElementById('change-word-btn');
+        changeBtn.style.opacity = '1';
+        changeBtn.style.cursor = 'pointer';
+
         showScreen(gamePlayScreen);
     }
 
@@ -249,12 +256,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerLabel = translations.player || 'Giocatore';
             const questionsLabel = translations.questionsUnit || 'domande';
 
+            let questionsText = `${score.questions} ${questionsLabel}`;
+            if (score.gaveUp) {
+                questionsText = `<span style="color: #cf6679">${translations.arreso || 'Arreso'}</span>`;
+            }
+
             resultItem.innerHTML = `
                 <div>
                     <div class="result-player">${medal}${playerLabel} ${score.player}</div>
                     <div class="result-word">${score.word} (${score.category})</div>
                 </div>
-                <div class="result-score">${score.questions} ${questionsLabel}</div>
+                <div class="result-score">${questionsText}</div>
             `;
 
             resultsContainer.appendChild(resultItem);
@@ -280,12 +292,100 @@ document.addEventListener('DOMContentLoaded', () => {
     guessedBtn.addEventListener('click', playerGuessed);
     playAgainBtn.addEventListener('click', playAgain);
 
+    // New buttons
+    document.getElementById('change-word-btn').addEventListener('click', changeWord);
+    document.getElementById('give-up-btn').addEventListener('click', giveUp);
+
     // Enter key for custom word input
     customWordInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             submitCustomWord();
         }
     });
+
+    // Change Word functionality
+    function changeWord() {
+        if (gameState.turnHasChangedWord) {
+            const lang = getUserLanguage();
+            const translations = gameTranslations[lang] || gameTranslations['en'];
+            alert(translations.noMoreChangesAlert);
+            return;
+        }
+
+        let newWord = '';
+        let newCategory = '';
+
+        // Determine how to pick new word based on mode
+        if (gameState.mode === 'chosen') {
+            // Find current category object
+            const categoryObj = gameState.categories.find(c => c.nome === gameState.currentCategory);
+            if (categoryObj) {
+                const randomIndex = Math.floor(Math.random() * categoryObj.parole.length);
+                newWord = categoryObj.parole[randomIndex];
+                newCategory = categoryObj.nome;
+            }
+        }
+
+        // If random mode OR custom mode OR if chosen mode failed to find category
+        if (!newWord) {
+            const randomCategoryIndex = Math.floor(Math.random() * gameState.categories.length);
+            const categoryObj = gameState.categories[randomCategoryIndex];
+            const randomIndex = Math.floor(Math.random() * categoryObj.parole.length);
+            newWord = categoryObj.parole[randomIndex];
+            newCategory = categoryObj.nome;
+        }
+
+        // Update state
+        gameState.currentWord = newWord;
+        gameState.currentCategory = newCategory;
+        gameState.turnHasChangedWord = true;
+
+        // Update UI
+        document.getElementById('word-display').textContent = gameState.currentWord;
+        document.getElementById('categoryLabel').textContent = gameState.currentCategory;
+
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+        alert(translations.wordChangedAlert);
+
+        // Disable button visually
+        document.getElementById('change-word-btn').style.opacity = '0.5';
+        document.getElementById('change-word-btn').style.cursor = 'not-allowed';
+    }
+
+    // Give Up functionality
+    function giveUp() {
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+
+        if (confirm(translations.giveUpText + '?')) {
+            // Save score as "Gave Up" (high question count + flag)
+            gameState.scores.push({
+                player: gameState.currentPlayer,
+                questions: 100, // Penality
+                word: gameState.currentWord,
+                category: gameState.currentCategory,
+                gaveUp: true
+            });
+
+            alert(`${translations.gaveUpAlert} ${translations.theWordWas} ${gameState.currentWord}`);
+
+            // Move to next player
+            if (gameState.currentPlayer < gameState.playerCount) {
+                gameState.currentPlayer++;
+                if (gameState.mode === 'chosen') {
+                    showCategorySelection();
+                } else if (gameState.mode === 'random') {
+                    selectRandomWord();
+                    showPassPhoneScreen();
+                } else if (gameState.mode === 'custom') {
+                    showCustomWordScreen();
+                }
+            } else {
+                showResults();
+            }
+        }
+    }
 
     // Load categories on page load
     loadCategories();
