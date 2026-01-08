@@ -165,25 +165,7 @@
                     </div>
                 </div>
 
-                <!-- AI Challenge Settings -->
-                <div class="setting-group">
-                    <div class="custom-option">
-                        <label class="toggle-label">
-                            <input type="checkbox" id="ai-challenge-toggle">
-                            <span>Sfida AI 🤖</span>
-                        </label>
-                    </div>
-                    <div id="ai-settings" class="ai-settings" style="display: none;">
-                        <div class="form-group">
-                            <label for="ai-api-key">Gemini API Key:</label>
-                            <input type="text" id="ai-api-key" placeholder="Inserisci la tua API key">
-                        </div>
-                        <p class="ai-info">
-                            💡 <a href="https://aistudio.google.com/app/apikey" target="_blank">Ottieni una chiave API
-                                gratuita</a>
-                        </p>
-                    </div>
-                </div>
+
 
                 <button id="start-game" class="btn primary-btn">Inizia il Gioco! 🎉</button>
             </div>
@@ -216,46 +198,14 @@
                 <span>Turno <span id="current-round">1</span> di <span id="total-rounds">20</span></span>
             </div>
 
-            <!-- AI Selection Loading Overlay -->
-            <div id="ai-loading-overlay" class="ai-loading-overlay" style="display: none;">
-                <div class="ai-loading-content">
-                    <div class="ai-loading-spinner">🤖</div>
-                    <p>L'IA sta analizzando le carte...</p>
-                </div>
-            </div>
+
 
             <div id="phrase-container" class="phrase-container">
                 <div class="phrase-type-label" id="phrase-type-label"></div>
                 <p id="phrase-text"></p>
             </div>
 
-            <!-- AI Challenge Container -->
-            <div id="ai-challenge-container" class="ai-challenge-container" style="display: none;">
-                <div class="ai-header">
-                    <span class="ai-icon">🤖</span>
-                    <h3>SFIDA IA: L'Appello</h3>
-                </div>
-                <div class="ai-content">
-                    <p id="ai-challenge-text">Caricamento sfida...</p>
 
-                    <div id="ai-actions" class="ai-actions">
-                        <button id="ai-accept-btn" class="btn ai-btn-accept">Accetta Sfida</button>
-                        <button id="ai-refuse-btn" class="btn ai-btn-refuse">Rifiuta</button>
-                    </div>
-
-                    <div id="ai-input-area" class="ai-input-area" style="display: none;">
-                        <textarea id="ai-defense-input" placeholder="Scrivi la tua difesa qui... (Sii convincente!)"
-                            rows="4"></textarea>
-                        <button id="ai-submit-btn" class="btn ai-btn-submit">Invia Difesa</button>
-                    </div>
-
-                    <div id="ai-verdict-area" class="ai-verdict-area" style="display: none;">
-                        <h4 id="ai-verdict-title">VERDETTO</h4>
-                        <p id="ai-verdict-text"></p>
-                        <p id="ai-penalty-text"></p>
-                    </div>
-                </div>
-            </div>
 
 
             <button id="next-phrase" class="btn next-btn">Prossima Frase ➜</button>

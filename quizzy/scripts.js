@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         lastRandomCategories: [], // Added for storing random categories
         isShockRound: false, // Flag for shock round
         hardModeActive: false, // Flag for hard mode
-        shownQuestions: {}, // Track already shown questions
-        apiKey: localStorage.getItem('quizzy_api_key') || null, // Store API key
-        aiQuestionHistory: [] // Track AI generated questions to avoid repetition
+        shownQuestions: {} // Track already shown questions
     };
 
     // DOM Elements
@@ -60,21 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('game-mode').addEventListener('change', function () {
             gameState.gameMode = this.value;
-            const apiKeyContainer = document.getElementById('api-key-container');
-            if (this.value === 'ai' && !gameState.apiKey) {
-                apiKeyContainer.classList.remove('hidden');
-            } else {
-                apiKeyContainer.classList.add('hidden');
-            }
-        });
-
-        // Save API Key on input change
-        document.getElementById('api-key-input').addEventListener('change', function () {
-            const key = this.value.trim();
-            if (key) {
-                gameState.apiKey = key;
-                localStorage.setItem('quizzy_api_key', key);
-            }
         });
 
         document.getElementById('start-game').addEventListener('click', startCategorySelection);
@@ -220,71 +203,10 @@ document.addEventListener('DOMContentLoaded', function () {
         gameState.gameMode = document.getElementById('game-mode').value;
 
         // Setup category selection for first player
-        if (gameState.gameMode === 'ai') {
-            setupCustomCategoryInput();
-        } else {
-            setupCategorySelection();
-        }
+        setupCategorySelection();
     }
 
-    // Setup custom category input for AI mode
-    function setupCustomCategoryInput() {
-        if (gameState.currentPlayerIndex >= gameState.players.length) {
-            return;
-        }
 
-        const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-        document.getElementById('player-name-display').textContent = currentPlayer.name;
-
-        // Hide standard category cards
-        document.getElementById('category-cards').classList.add('hidden');
-        document.getElementById('selected-categories-list').parentElement.classList.add('hidden');
-
-        // Show custom input container
-        const inputContainer = document.getElementById('custom-category-input-container');
-        inputContainer.classList.remove('hidden');
-
-        // Clear previous inputs
-        document.getElementById('custom-cat-1').value = '';
-        document.getElementById('custom-cat-2').value = '';
-
-        // Update confirm button behavior
-        const confirmBtn = document.getElementById('confirm-categories');
-        confirmBtn.disabled = false;
-
-        // Remove old listener and add new one for AI mode
-        const newBtn = confirmBtn.cloneNode(true);
-        confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
-
-        newBtn.addEventListener('click', function () {
-            const cat1 = document.getElementById('custom-cat-1').value.trim();
-            const cat2 = document.getElementById('custom-cat-2').value.trim();
-
-            if (cat1 && cat2) {
-                // Save custom categories
-                currentPlayer.categories = [cat1, cat2];
-
-                // For shared AI mode (logic same as shared standard)
-                gameState.playerCategories[gameState.currentPlayerIndex] = [cat1, cat2];
-
-                // Move to next player
-                gameState.currentPlayerIndex++;
-                if (gameState.currentPlayerIndex < gameState.players.length) {
-                    setupCustomCategoryInput();
-                } else {
-                    // All players ready
-                    // Combine all categories for everyone to play with
-                    combineSharedCategories();
-                    gameState.currentPlayerIndex = 0;
-                    startGame();
-                }
-            } else {
-                alert("Inserisci entrambe le categorie!");
-            }
-        });
-
-        showScreen(screens.categorySelection);
-    }
 
     // Setup the category selection screen for current player
     function setupCategorySelection() {
@@ -1097,12 +1019,6 @@ document.addEventListener('DOMContentLoaded', function () {
             resultScreen.classList.add('shock-round');
         }
 
-        // If AI mode, skip validation and go straight to showQuestion
-        if (gameState.gameMode === 'ai') {
-            showQuestion();
-            return;
-        }
-
         // Check for valid category and difficulty before proceeding
         if (!gameState.currentCategory || !gameState.currentDifficulty) {
             console.error("Missing category or difficulty:",
@@ -1495,7 +1411,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Show a question to the current player
-    // Show a question to the current player
     function showQuestion() {
         // Update question display elements initially
         const currentCategoryEl = document.getElementById('current-category');
@@ -1526,35 +1441,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show question screen immediately
         showScreen(screens.question);
 
-        if (gameState.gameMode === 'ai') {
-            generateAIQuestion(gameState.currentCategory, gameState.currentDifficulty)
-                .then(question => {
-                    displayQuestion(question);
-                })
-                .catch(err => {
-                    console.error("AI Error:", err);
-                    alert("Errore AI. Uso domanda di riserva.");
-                    // Fallback to placeholder
-                    const fallback = {
-                        question: "Errore generazione AI. Riprova.",
-                        answers: ["A", "B", "C", "D"],
-                        correctIndex: 0
-                    };
-                    displayQuestion(fallback);
-                });
-        } else {
-            // Standard logic
-            const question = getRandomQuestion();
-            if (!question) {
-                alert('Error: No questions available for this category and difficulty.');
-                return;
-            }
-
-            gameState.currentQuestion = question;
-
-            // Display standard question
-            displayQuestion(question);
+        // Standard logic
+        const question = getRandomQuestion();
+        if (!question) {
+            alert('Error: No questions available for this category and difficulty.');
+            return;
         }
+
+        gameState.currentQuestion = question;
+
+        // Display standard question
+        displayQuestion(question);
     }
 
 
@@ -1591,131 +1488,7 @@ document.addEventListener('DOMContentLoaded', function () {
         startTimer();
     }
 
-    async function generateAIQuestion(category, difficulty, retryCount = 0) {
-        const loadingEl = document.getElementById('ai-loading');
-        const questionText = document.getElementById('question-text');
 
-        if (retryCount === 0) {
-            loadingEl.classList.remove('hidden');
-            questionText.classList.add('hidden');
-        }
-
-        let difficultyPrompt = "";
-        if (difficulty === 'bambino') {
-            difficultyPrompt = "Livello: BAMBINO (5-6 anni). Usa un linguaggio semplicissimo, domande dirette e ovvie. Niente parole difficili.";
-        } else {
-            difficultyPrompt = `Difficoltà: "${difficulty}" (su scala: bambino, facile, medio, esperto, laureato).`;
-        }
-
-        // Add history to prompt to avoid repetition
-        let historyPrompt = "";
-        if (gameState.aiQuestionHistory && gameState.aiQuestionHistory.length > 0) {
-            // Get last 20 questions for this category to keep prompt size manageable
-            const categoryHistory = gameState.aiQuestionHistory
-                .filter(q => q.category === category)
-                .slice(-20)
-                .map(q => q.question);
-
-            if (categoryHistory.length > 0) {
-                historyPrompt = `NON ripetere nessuna di queste domande già fatte: ${JSON.stringify(categoryHistory)}.`;
-            }
-        }
-
-        const prompt = `Genera una domanda a risposta multipla (4 opzioni) in italiano.
-        Argomento: "${category}".
-        ${difficultyPrompt}
-        ${historyPrompt}
-        
-        REGOLE IMPORTANTI:
-        1. La domanda deve essere BREVE (max 20 parole).
-        2. Le risposte devono essere BREVI (max 10 parole).
-        3. Tutte le 4 risposte devono avere LUNGHEZZA SIMILE. Non fare la risposta corretta molto più lunga delle altre.
-        4. Se l'argomento è specifico, assicurati che la risposta sia corretta.
-        5. CRUCIALE: Le 3 risposte sbagliate devono essere PLAUSIBILI (pertinenti alla categoria) ma SBAGLIATE per la domanda specifica. Esempio: se chiedi "chi attacca ad area" in Clash Royale, metti carte che NON attaccano ad area (es: Arcieri), non mettere "Pikachu" o cose a caso.
-        
-        Rispondi SOLO con un JSON valido in questo formato:
-        {
-            "question": "testo della domanda",
-            "answers": ["opzione A", "opzione B", "opzione C", "opzione D"],
-            "correctIndex": 0 (indice della risposta corretta 0-3)
-        }`;
-
-        try {
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${gameState.apiKey}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    contents: [{
-                        parts: [{ text: prompt }]
-                    }]
-                })
-            });
-
-            if (response.status === 429) {
-                console.warn(`Rate limit hit (429). Retrying... Attempt ${retryCount + 1}`);
-                if (retryCount < 3) {
-                    // Exponential backoff: 2s, 4s, 8s
-                    const waitTime = Math.pow(2, retryCount + 1) * 1000;
-                    await new Promise(resolve => setTimeout(resolve, waitTime));
-                    return generateAIQuestion(category, difficulty, retryCount + 1);
-                } else {
-                    throw new Error("Rate limit exceeded after retries");
-                }
-            }
-
-            if (!response.ok) {
-                throw new Error(`API Error: ${response.status}`);
-            }
-
-            const data = await response.json();
-
-            if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
-                throw new Error("Invalid API response structure");
-            }
-
-            const text = data.candidates[0].content.parts[0].text;
-
-            // Clean markdown if present
-            const jsonStr = text.replace(/```json/g, '').replace(/```/g, '').trim();
-            const questionData = JSON.parse(jsonStr);
-
-            // Shuffle answers to avoid "A" bias (LLMs tend to put correct answer first)
-            const correctAnswer = questionData.answers[questionData.correctIndex];
-
-            // Fisher-Yates shuffle
-            for (let i = questionData.answers.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [questionData.answers[i], questionData.answers[j]] = [questionData.answers[j], questionData.answers[i]];
-            }
-
-            // Update correctIndex to match new position
-            questionData.correctIndex = questionData.answers.indexOf(correctAnswer);
-
-            // Save to history
-            if (!gameState.aiQuestionHistory) gameState.aiQuestionHistory = [];
-            gameState.aiQuestionHistory.push({
-                category: category,
-                question: questionData.question
-            });
-
-            loadingEl.classList.add('hidden');
-            questionText.classList.remove('hidden');
-
-            return questionData;
-
-        } catch (error) {
-            console.error("AI Generation Error:", error);
-
-            // If we've exhausted retries or hit another error, show fallback but clean up UI first
-            if (retryCount === 0) { // Only handle UI cleanup on the initial call stack
-                loadingEl.classList.add('hidden');
-                questionText.classList.remove('hidden');
-            }
-            throw error;
-        }
-    }
 
     // Generate answer buttons for the question
     function generateAnswerButtons(question) {
