@@ -18,7 +18,7 @@
       "Chi ha mai spiato il telefono di qualcuno beve",
       "{player} deve bere se ha mai fatto pipì in piscina",
       "Bevi se hai mai rubato qualcosa ai tuoi genitori",
-      "{player} beve se ha mai fatto un autogol a calcio", 
+      "{player} beve se ha mai fatto un autogol a calcio",
       "Chi utilizza Spotify craccato beve",
       "Chi non è mai stato ad un concerto beve",
       "Chi non ha mai viaggiato fuori dall'Europa beve",
@@ -226,8 +226,32 @@
       "Chi è già stato a casa di {player} riceve un sorso e canta 'Woooo Volevo te, pensavo solo a teeee'",
       "Distribuisci 1 sorso se hai mai cagato in aereo. 2 se hai vomitato. 5 se ti sei segato",
       "Distribuisci 1 sorso se hai mai cagato in treno. 2 se hai vomitato. 5 se ti sei segato",
-      "Parenzo buscettone…UUUUUUH. {player}, beviti un sorso va, pagliaccio"
-        ]
+      "Parenzo buscettone…UUUUUUH. {player}, beviti un sorso va, pagliaccio",
+      "{player}, distribuisci 2 sorsi se hai mai litigato furiosamente con un anziano",
+      "{player} si fa un sorso.",
+      "{player}, racconta una tua figura di merda. Se la maggioranza dei giocatori la ritiene divertente, distribuisci 2 sorsi",
+      "{player}, se hai mai comprato delle cryptovalute bevi 1 sorso. Bevi altri 3 sorsi se sei andato in perdita, fuffa guru.",
+      "Chi stasera ha esordito dicendo: “io non bevo” o cazzate simili beve due sorsi, o può andare anche a fanculo. Non c’è posto per le pussy qui.",
+      "{player}: se hai mai iniziato una frase con “io non sono razzista ma…” bevi 2 sorsi. Bevine 4 se sei razzista davvero.",
+      "I giocatori che vivono da soli in appartamento o monolocale bevono 2 sorsi.",
+      "{player}, distribuisci 2 penalità a un giocatore più alto di te, se ci sta. In caso contrario bevi 2 sorsi.",
+      "{player}, distribuisci 2 penalità a un giocatore più basso di te, se ci sta. In caso contrario bevi 2 sorsi nano di merda.",
+      "Coloro che hanno vissuto in più di 2 città bevono 2 sorsi.",
+      "Tutti i giocatori arrivati in ritardo alla serata bevono 3 sorsi.",
+      "Tutti i giocatori che non hanno ancora seguito DrewGames su Instagram ricevono 3 sorsi.",
+      "Niente cioccolato per l’handicappato. I giocatori che hanno la 104 bevono 4 sorsi.",
+      "I giocatori che hanno usufruito almeno una volta del reddito di cittadinanza bevono 3 sorsi.",
+      "L’ultimo giocatore a essere andato ad un concerto beve 2 sorsi. Se qualcuno degli altri giocatori reputa l’artista orribile, beve un sorso aggiuntivo.",
+      "{player} e {player}: postate una storia su Instagram della serata taggando Drewgames. Se lo fate, distribuite 10 sorsi a testa.",
+      "I giocatori che russando la notte hanno disturbato almeno una volta un altro giocatore bevono 3 sorsi.",
+      "{player}, se hai mai scopato con qualcuno dei presenti bevi 3 sorsi.",
+      "{player}, se sei mai andato alle Maldive bevi 2 sorsi.",
+      "L’inclusività è una tematica importante. Tutti i giocatori di origine africana bevono 5 sorsi.",
+      "{player}, se hai mai pensato che gli NFT fossero una buona idea, bevi 3 sorsi. Se ne possiedi ancora uno… condoglianze e altri 2. Si vede che sei uno sveglio.",
+      "I giocatori obesi che pesano più di 100kg bevono 2 sorsi. Ma un po’ di palestra?",
+      "I giocatori partenopei o originari della zona adiacente a Napoli bevono 5 sorsi. Uagliò.",
+      "Chi è mai andato a puttane distribuisce 2 sorsi e la sifilide ad un altro giocatore"
+    ]
   },
   "challenge": {
     "color": "#8B0000",
@@ -464,7 +488,15 @@
       "{player}, ripeti a memoria tutte le fermate della linea del treno della tua città. Se ci riesci, distribuisci 5 sorsi",
       "{player} hai 3 secondi, se guardi il telefono perdi. Che giorno è oggi? Se perdi bevi 2 sorsi",
       "{player}, sei l'operatore ecologico. Pulisci subito il tavolo e mettilo in ordine, altrimenti bevi 5 sorsi",
-      "Il prossimo giocatore a prendere il telefono beve 2 sorsi e tutti lo devono insultare in maniera omofoba. È escluso dal turno il proprietario del telefono usato per giocare"
+      "Il prossimo giocatore a prendere il telefono beve 2 sorsi e tutti lo devono insultare in maniera omofoba. È escluso dal turno il proprietario del telefono usato per giocare",
+      "Auto di lusso. Nominate a turno un brand, chi ne ripete uno o non ne trova più uno beve 2 sorsi.",
+      "Il giocatore più giovane e quello più anziano si sfidano a sasso carta o forbice. 3 turni, chi perde beve 2 sorsi.",
+      "The floor is lava. L’ultimo giocatore a mettersi in salvo beve 2 sorsi.",
+      "Film di Aldo, Giovanni e Giacomo. Nominatene uno a turno, chi ne ripete uno o non ne trova più beve 3 sorsi. Radiamo al suolo questa merda di casa.",
+      "Rimasti di TikTok. Nominatene uno a turno, chi ne ripete uno o non ne trova più beve 3 sorsi.",
+      "Pianeti del sistema solare. Nominatene uno a turno, chi ne ripete uno o non ne trova più beve 2 sorsi.",
+      "{player}, scegli un alleato e 2 nemici. Sfidatevi in un 2vs2 a Clash Royale, la squadra perdente beve mezzo bicchiere.",
+      "{player}, sfida un giocatore tua scelta in una battle di freestyle. {player} sceglie un beat, tutti gli altri votano il vincitore. Il perdente beve 8 sorsi."
     ]
   },
   "vote": {
@@ -609,7 +641,22 @@
       "Classificate da migliore a peggiore: Monopoli, Risiko, Cluedo. I giocatori che fanno un ranking identico ad almeno un giocatore si salvano, gli altri bevono 1 sorso",
       "Votate il giocatore più fissato con la Zanzara. ASPETTA A LEGGERE, PRIMA VOTATE. L'eletto terrà il telefono e leggerà per i prossimi 20 turni, ma deve farlo imitando Giuseppe Cruciani nella Zanzara. Deve farlo bene, perché alla fine dei turni i giocatori voteranno l'imitazione (pena 3 sorsi). Ma non è finita: per tutti questi turni, il giocatore alla sua destra è David Parenzo: deve insultare chiunque apre bocca con accento veneto, beve 1 sorso ad ogni errore",
       "{player}, dai un'opinione con una più o meno grande componente razzista. Se la maggioranza è in disaccordo, bevi 3 sorsi",
-      "Meglio vivere in un campo ROM o in un villaggio rurale della Costa d'Avorio? Votate tutti contemporaneamente, chi è in minoranza beve"
+      "Meglio vivere in un campo ROM o in un villaggio rurale della Costa d'Avorio? Votate tutti contemporaneamente, chi è in minoranza beve",
+      "Meglio avere 2 canne d’erba o 5 di fumo? Votate tutti contemporaneamente, chi è in minoranza beve.",
+      "Meglio fare un provino del Grande Fratello con Alfonso Signorini o mettersi il puntale dell’albero di Natale in culo? Votate tutti contemporaneamente, chi è in minoranza beve.",
+      "Votate il giocatore vestito peggio. Il barbone impresentabile beve 1 sorso.",
+      "Votate il giocatore con i gusti alcolici peggiori. Il perdente beve 2 sorsi di un alcolico scelto dagli altri giocatori.",
+      "Votate il giocatore che stasera sta rovinando l’atmosfera. Non spiegate perché, beve 2 sorsi e basta.",
+      "Votate il giocatore che ha l’ex peggiore. Il perdente beve 1 sorso.",
+      "Votate il giocatore migliore a fare rap in freestyle. Il Lil Wayne dei poveri beve 2 sorsi.",
+      "Votate il giocatore più ludopatico. Beve 2 sorsi, e fermatelo prima che si betta anche sua madre.",
+      "Votate il giocatore con la macchina più brutta. L’autista della cesso-mobile beve 2 sorsi.",
+      "Votate il miglior film di Checco Zalone. I giocatori in minoranza bevono 2 sorsi.",
+      "PlayStation o Xbox? Votate, chi è in minoranza beve 2 sorsi.",
+      "Martina Smeraldi o Malena la Pugliese? Votate, chi è in minoranza beve 1 sorso.",
+      "Votate il prossimo giocatore più probabile a sboccare. Il prescelto beve 3 sorsi per far avverare la profezia.",
+      "Votate il giocatore più comunista. Quella zecca beve 2 sorsi e torna nel suo centro sociale.",
+      "Votate il giocatore più sobrio al momento che rimedia subito bevendo 4 sorsi."
     ]
   },
   "rule": {
@@ -1103,6 +1150,26 @@
       {
         "start": "{player}, devi imitare {player}. Se sbagli, bevi 1 sorso",
         "end": "STOP! {player} non deve più imitare {player}"
+      },
+      {
+        "start": "{player} è Stevie Wonder. Non può aprire gli occhi fino a nuovo ordine, beve quando li apre. {player}, sei gay.",
+        "end": "STOP! {player} non è più Stevie Wonder, può riaprire gli occhi."
+      },
+      {
+        "start": "{player} è Luca Laurenti. Deve parlare come lui per i prossimi turni. {player} è Paolo Bonolis e deve insultarlo continuamente.",
+        "end": "STOP! {player} non è più Luca Laurenti e {player} non è più Paolo Bonolis."
+      },
+      {
+        "start": "{player} è Gianluca. Deve parlare come lui per i prossimi turni. {player} è Ruggero De Ceglie e deve insultarlo continuamente.",
+        "end": "STOP! {player} non è più Gianluca e {player} non è più Ruggero De Ceglie."
+      },
+      {
+        "start": "{player} è Kim Jong-un. Deve parlare con accento coreano fino a nuova indicazione, inoltre può condannare a morte un giocatore a sua scelta, che beve mezzo bicchiere.",
+        "end": "STOP! {player} non è più Kim Jong-un."
+      },
+      {
+        "start": "{player} è Marco Giordano di Masterchef. Parla come lui fino a nuovo ordine e mette una canzone di Gigi Finizio.",
+        "end": "STOP! {player} non è più Marco Giordano."
       }
     ]
   }
