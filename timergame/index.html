@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>Wordrace - Sfida di parole a tempo | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!">');
-      } else {
-        document.write('<title>Wordrace - Timed word challenge | DrewGames</title>');
-        document.write('<meta name="description" content="Play Wordrace: a timed word challenge for 2-4 players. Race against time in this fun verbal challenge, perfect for evenings with friends!">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Wordrace - Sfida di parole a tempo | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!">');
+        } else {
+            document.write('<title>Wordrace - Timed word challenge | DrewGames</title>');
+            document.write('<meta name="description" content="Play Wordrace: a timed word challenge for 2-4 players. Race against time in this fun verbal challenge, perfect for evenings with friends!">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/timergame/?lang=en" />
@@ -24,19 +25,19 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <link rel="stylesheet" href="styles.css">
-     <script src="../js/tournament-button.js" defer></script>
+    <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/timergame/">
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <style>
         .home-button {
             position: fixed;
@@ -53,16 +54,16 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
-        
+
         .language-toggle {
             position: fixed;
             top: 10px;
@@ -78,7 +79,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
-        
+
         .language-toggle:hover {
             background-color: rgba(71, 60, 139, 0.95);
             transform: translateY(-2px);
@@ -86,15 +87,17 @@
         }
     </style>
 </head>
+
 <body>
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
-    
+
     <div id="app">
         <!-- Start Menu -->
         <div id="startMenu" class="screen active">
             <h1 id="gameTitle">Wordrace</h1>
-            
+
             <div class="menu-option">
                 <h2 id="playerModeTitle">Modalità Giocatori</h2>
                 <div class="option-buttons">
@@ -103,7 +106,7 @@
                     <button data-players="4"><span id="players4Text">4 Giocatori</span></button>
                 </div>
             </div>
-            
+
             <div class="menu-option">
                 <h2 id="gameModeTitle">Modalità Gioco</h2>
                 <div class="option-buttons">
@@ -111,7 +114,7 @@
                     <button data-mode="category"><span id="categoryModeText">Con Categorie</span></button>
                 </div>
             </div>
-            
+
             <div class="menu-option">
                 <h2 id="initialTimeTitle">Tempo Iniziale</h2>
                 <div class="option-buttons">
@@ -121,35 +124,37 @@
                     <button data-time="300"><span id="minutes5Text">5 Minuti</span></button>
                 </div>
             </div>
-            
+
             <button id="startButton" class="start-button"><span id="startGameText">Inizia Gioco</span></button>
-            
+
             <div class="game-instructions">
                 <h2 id="howToPlayTitle">Come Giocare</h2>
                 <p id="challengeDescription">Una sfida verbale veloce per giocatori:</p>
-                
+
                 <div class="mode-instructions mode-2p">
                     <h3 id="mode2pTitle">Modalità 2 Giocatori:</h3>
                     <ul>
                         <li id="mode2p1">Ogni giocatore ha il proprio timer.</li>
                         <li id="mode2p2">Quando è il tuo turno, il tuo timer diminuisce.</li>
-                        <li id="mode2p3">Premi il pulsante quando finisci il turno per passare al giocatore successivo.</li>
+                        <li id="mode2p3">Premi il pulsante quando finisci il turno per passare al giocatore successivo.
+                        </li>
                         <li id="mode2p4">Il gioco termina quando il timer di un giocatore raggiunge zero.</li>
                     </ul>
                 </div>
-                
+
                 <div class="mode-instructions mode-3p">
                     <h3 id="mode3pTitle">Modalità 3 Giocatori:</h3>
                     <ul>
                         <li id="mode3p1">Quando un giocatore preme il pulsante:</li>
                         <li id="mode3p2">- Il suo timer inizia ad aumentare (guadagnando tempo)</li>
                         <li id="mode3p3">- I timer degli altri due giocatori iniziano a diminuire</li>
-                        <li id="mode3p4">- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo turno</li>
+                        <li id="mode3p4">- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo
+                            turno</li>
                         <li id="mode3p5">I giocatori vengono eliminati quando il loro timer raggiunge zero</li>
                         <li id="mode3p6">L'ultimo giocatore rimasto vince!</li>
                     </ul>
                 </div>
-                
+
                 <div class="mode-instructions mode-4p">
                     <h3 id="mode4pTitle">Modalità 4 Giocatori:</h3>
                     <ul>
@@ -157,14 +162,16 @@
                         <li id="mode4p2">Quando un giocatore preme il pulsante:</li>
                         <li id="mode4p3">- Il suo timer inizia ad aumentare (guadagnando tempo)</li>
                         <li id="mode4p4">- I timer degli altri tre giocatori iniziano a diminuire</li>
-                        <li id="mode4p5">- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo turno</li>
+                        <li id="mode4p5">- Qualsiasi giocatore con un timer in diminuzione può premere per il prossimo
+                            turno</li>
                         <li id="mode4p6">I giocatori vengono eliminati quando il loro timer raggiunge zero</li>
                         <li id="mode4p7">L'ultimo giocatore rimasto vince!</li>
                     </ul>
                 </div>
-                
+
                 <div class="tip">
-                    <span id="tipText">Consiglio: Premi il pulsante quando dici una parola per guadagnare tempo o cambiare turno!</span>
+                    <span id="tipText">Consiglio: Premi il pulsante quando dici una parola per guadagnare tempo o
+                        cambiare turno!</span>
                 </div>
             </div>
         </div>
@@ -175,7 +182,7 @@
                 <h2>Categoria:</h2>
                 <p id="category2p"></p>
             </div>
-            
+
             <div class="timer-container">
                 <div id="player1" class="player-section">
                     <div class="time-display">
@@ -187,11 +194,11 @@
                     </div>
                     <div id="status1" class="status-display"></div>
                 </div>
-                
+
                 <div class="divider">
                     <button id="menuButton2p" class="menu-button">Menu</button>
                 </div>
-                
+
                 <div id="player2" class="player-section rotated">
                     <div class="time-display">
                         <span id="time2">01:00</span>
@@ -203,10 +210,10 @@
                     <div id="status2" class="status-display"></div>
                 </div>
             </div>
-            
+
             <button id="resetButton2p" class="reset-button hidden">Ricomincia</button>
             <button id="mainMenuButton2p" class="main-menu-button hidden">Menu Principale</button>
-            
+
             <!-- Game Over Overlays - One for each player -->
             <div id="gameOverPlayer1" class="player-result hidden">HAI VINTO!</div>
             <div id="gameOverPlayer2" class="player-result rotated hidden">HAI VINTO!</div>
@@ -218,7 +225,7 @@
                 <h2>Categoria:</h2>
                 <p id="category3p"></p>
             </div>
-            
+
             <div class="timer-container3p">
                 <!-- Player 1 - Left -->
                 <div id="player1_3p" class="player-section3p player-left">
@@ -232,7 +239,7 @@
                     <div id="status1_3p" class="status-display"></div>
                     <div id="placement1_3p" class="placement-display">1° POSTO</div>
                 </div>
-                
+
                 <!-- Player 2 - Right -->
                 <div id="player2_3p" class="player-section3p player-right">
                     <div class="time-display">
@@ -245,7 +252,7 @@
                     <div id="status2_3p" class="status-display"></div>
                     <div id="placement2_3p" class="placement-display">2° POSTO</div>
                 </div>
-                
+
                 <!-- Player 3 - Bottom -->
                 <div id="player3_3p" class="player-section3p player-bottom">
                     <div class="time-display">
@@ -258,29 +265,29 @@
                     <div id="status3_3p" class="status-display"></div>
                     <div id="placement3_3p" class="placement-display">3° POSTO</div>
                 </div>
-                
+
                 <!-- Center menu button -->
                 <div class="center-controls">
                     <button id="menuButton3p" class="menu-button">Menu</button>
                 </div>
             </div>
-            
+
             <button id="resetButton3p" class="reset-button hidden">Ricomincia</button>
             <button id="mainMenuButton3p" class="main-menu-button hidden">Menu Principale</button>
-            
+
             <!-- Game Over Overlays - One for each player in 3p mode -->
             <div id="gameOverPlayer1_3p" class="player-result3p player-left hidden">1° POSTO</div>
             <div id="gameOverPlayer2_3p" class="player-result3p player-right hidden">2° POSTO</div>
             <div id="gameOverPlayer3_3p" class="player-result3p player-bottom hidden">3° POSTO</div>
         </div>
-        
+
         <!-- Game Screen - 4 Players -->
         <div id="gameScreen4p" class="game-screen screen">
             <div id="categoryDisplay4p" class="category-container hidden">
                 <h2>Categoria:</h2>
                 <p id="category4p"></p>
             </div>
-            
+
             <div class="timer-container4p">
                 <!-- Player 1 - Top Left -->
                 <div id="player1_4p" class="player-section4p player-top-left">
@@ -294,7 +301,7 @@
                     <div id="status1_4p" class="status-display"></div>
                     <div id="placement1_4p" class="placement-display">1° POSTO</div>
                 </div>
-                
+
                 <!-- Player 2 - Top Right -->
                 <div id="player2_4p" class="player-section4p player-top-right">
                     <div class="time-display">
@@ -307,7 +314,7 @@
                     <div id="status2_4p" class="status-display"></div>
                     <div id="placement2_4p" class="placement-display">2° POSTO</div>
                 </div>
-                
+
                 <!-- Player 3 - Bottom Left -->
                 <div id="player3_4p" class="player-section4p player-bottom-left">
                     <div class="time-display">
@@ -320,7 +327,7 @@
                     <div id="status3_4p" class="status-display"></div>
                     <div id="placement3_4p" class="placement-display">3° POSTO</div>
                 </div>
-                
+
                 <!-- Player 4 - Bottom Right -->
                 <div id="player4_4p" class="player-section4p player-bottom-right">
                     <div class="time-display">
@@ -328,30 +335,31 @@
                     </div>
                     <div class="button-container">
                         <div id="indicator4_4p" class="turn-indicator">PREMI ORA</div>
-                        <button id="button4_4p" class="player-button" tabindex="0" aria-label="Player 4 button" onkeydown="handleKeyPress(event, 4)">
-    Premi
-</button>
+                        <button id="button4_4p" class="player-button" tabindex="0" aria-label="Player 4 button"
+                            onkeydown="handleKeyPress(event, 4)">
+                            Premi
+                        </button>
                     </div>
                     <div id="status4_4p" class="status-display"></div>
                     <div id="placement4_4p" class="placement-display">4° POSTO</div>
                 </div>
-                
+
                 <!-- Center menu button -->
                 <div class="center-controls">
                     <button id="menuButton4p" class="menu-button">Menu</button>
                 </div>
             </div>
-            
+
             <button id="resetButton4p" class="reset-button hidden">Ricomincia</button>
             <button id="mainMenuButton4p" class="main-menu-button hidden">Menu Principale</button>
-            
+
             <!-- Game Over Overlays - One for each player in 4p mode -->
             <div id="gameOverPlayer1_4p" class="player-result4p player-top-left hidden">1° POSTO</div>
             <div id="gameOverPlayer2_4p" class="player-result4p player-top-right hidden">2° POSTO</div>
             <div id="gameOverPlayer3_4p" class="player-result4p player-bottom-left hidden">3° POSTO</div>
             <div id="gameOverPlayer4_4p" class="player-result4p player-bottom-right hidden">4° POSTO</div>
         </div>
-        
+
         <!-- Confirmation Dialog -->
         <div id="confirmDialog" class="dialog hidden">
             <div class="dialog-content">
@@ -367,4 +375,5 @@
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

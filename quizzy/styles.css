@@ -1,4 +1,8 @@
 /* Quizzy Game Styles */
+html {
+    background-color: #1a2a6c;
+}
+
 * {
     margin: 0;
     padding: 0;
