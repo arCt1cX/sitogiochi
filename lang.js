@@ -58,11 +58,11 @@ const translations = {
                 'Interfaccia semplice e intuitiva'
             ],
             'instructions': [
-                'Un giocatore sarà scelto casualmente come impostore',
-                'A tutti gli altri giocatori viene mostrato un argomento segreto',
-                'A turno, ogni giocatore deve dire una parola relativa all\'argomento',
-                'Dopo alcuni turni, tutti votano per chi pensano sia l\'impostore',
-                'L\'impostore vince se non viene individuato o se indovina l\'argomento'
+                'A tutti i giocatori viene mostrata una domanda segreta',
+                'Un giocatore sarà scelto casualmente come impostore ed avrà una domanda simile a quella degli altri giocatori',
+                'Dopo che tutti i giocatori hanno letto la domanda, si dice contemporaneamente la risposta',
+                'I giocatori, dalle varie risposte, devono cercare di capire chi è l\'impostore e poi votare',
+                'L\'impostore vince se non viene individuato o se indovina la domanda, altrimenti vince il gruppo'
             ]
         },
         'colorgrid': {
@@ -80,17 +80,17 @@ const translations = {
             ],
             'instructions': [
                 'Scegli la dimensione della griglia',
-                'Una cella colorata viene nascosta casualmente',
-                'I giocatori fanno a turno per indovinare',
-                'Dopo ogni tentativo, viene mostrato quanto sei vicino',
-                'Vince chi trova la cella con meno tentativi'
+                'Un giocatore scelto casualmente vedrà una cella colorata e dovrà scrivere una parola relativa al colore per far indovinare gli altri giocatori',
+                'Gli altri giocatori fanno a turno per indovinare',
+                'Chi indovina o ci va vicino prende punti',
+                'Vince chi ha più punti alla fine'
             ]
         },
         'guessthepic': {
             'title': 'Guess Rush',
             'catchphrase': 'Indovina cosa mostrano le 5 immagini e accumula più punti!',
-            'description': 'Guess Rush è un gioco veloce dove dovrai indovinare cosa rappresentano le cinque immagini mostrate sullo schermo. Più velocemente indovini, più punti guadagni! Perfetto per mettere alla prova la tua capacità di osservazione e la tua conoscenza generale.',
-            'players': '2-8 giocatori',
+            'description': 'Guess Rush è un gioco veloce dove dovrai indovinare cosa rappresentano le cinque immagini mostrate sullo schermo. Più immagini indovini, più punti guadagni! Perfetto per mettere alla prova la tua capacità di osservazione e la tua conoscenza generale.',
+            'players': '1-10 giocatori',
             'time': '5-10 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -101,17 +101,17 @@ const translations = {
             ],
             'instructions': [
                 'Viene mostrata una serie di 5 immagini sullo schermo',
-                'I giocatori devono indovinare cosa rappresentano le immagini',
+                'A turno, i giocatori devono indovinare cosa rappresentano le immagini',
                 'Scrivi la tua risposta il più velocemente possibile',
-                'Guadagni punti in base alla velocità con cui indovini',
+                'Guadagni punti in base a quante immagini indovini',
                 'Vince il giocatore con più punti alla fine'
             ]
         },
         'timergame': {
             'title': 'Wordrace',
             'catchphrase': 'Corri contro il tempo in questa sfida di parole!',
-            'description': 'Wordrace è un gioco frenetico dove dovrai trovare parole che iniziano con una lettera specifica prima che il tempo finisca. Un ottimo modo per migliorare il tuo vocabolario e la velocità di pensiero sotto pressione!',
-            'players': '2-10 giocatori',
+            'description': 'Wordrace è un gioco frenetico dove dovrai trovare parole di una categoria specifica prima che il tempo finisca. Un ottimo modo per migliorare il tuo vocabolario e la velocità di pensiero sotto pressione!',
+            'players': '2-4 giocatori',
             'time': '10-15 minuti',
             'difficulty': 'Intermedio',
             'features': [
@@ -121,9 +121,9 @@ const translations = {
                 'Sistema di punteggio integrato'
             ],
             'instructions': [
-                'Una lettera casuale viene estratta all\'inizio di ogni round',
+                'Una categoria casuale viene estratta all\'inizio di ogni round',
                 'Il timer parte immediatamente',
-                'Ogni giocatore deve dire una parola che inizia con quella lettera',
+                'Ogni giocatore deve dire una parola che appartiene a quella categoria e premere il suo pulsante, cosi da diminuire il tempo degli altri giocatori e aumentare il proprio',
                 'Non si possono ripetere parole già dette',
                 'Se un giocatore non trova una parola entro il tempo limite, viene eliminato',
                 'L\'ultimo giocatore rimasto vince'
@@ -143,12 +143,17 @@ const translations = {
                 'Timer opzionale per aumentare la difficoltà'
             ],
             'instructions': [
-                'I giocatori si dividono in squadre',
-                'Viene scelta una parola iniziale',
-                'A turno, ogni giocatore deve dire una parola associata a quella detta precedentemente',
-                'Se un giocatore non trova un\'associazione entro il tempo, la catena si interrompe',
-                'La squadra guadagna punti in base alla lunghezza della catena creata',
-                'Vince la squadra che accumula più punti'
+                'I giocatori si dividono in squadre da 3 persone',
+                'In ogni squadra: 1 giocatore indovina e 2 aiutano',
+                'All’inizio del turno viene generata una parola segreta',
+                'A turno, i due giocatori che aiutano dicono una sola parola ciascuno',
+                'Le parole devono servire a costruire una domanda per aiutare il terzo giocatore a indovinare',
+                'La domanda deve iniziare obbligatoriamente con: Chi, Cosa, Come, Quando, Quale o Perché',
+                'Il giocatore che indovina deve rispondere entro il tempo limite',
+                'Se la risposta è corretta, la squadra guadagna 1 punto',
+                'Se la risposta è sbagliata o il tempo scade, la squadra perde 1 punto',
+                'È vietato dire sinonimi della parola da indovinare o dire più di una parola per turno',
+                'Vince la squadra che totalizza più punti alla fine della partita'
             ]
         },
         'alphabetgame': {
@@ -166,11 +171,10 @@ const translations = {
             ],
             'instructions': [
                 'Viene scelta una categoria (es. animali, città, cibo)',
-                'Viene estratta una lettera casuale',
-                'I giocatori a turno devono dire una parola che inizia con quella lettera e appartiene alla categoria',
-                'Non si possono ripetere parole già dette',
+                'I giocatori a turno devono dire una parola che inizia con una lettera dell\'alfabeto e premere la lettera corrispondente',
+                'La lettera diventerà grigia e non si potrà più usare',
                 'Se un giocatore non trova una parola entro il tempo, perde un punto',
-                'Dopo più round, vince chi ha più punti'
+                'Dopo più round, vince chi ha più punti!'
             ]
         },
         'bluffme': {
@@ -188,9 +192,10 @@ const translations = {
             ],
             'instructions': [
                 'Viene scelta una categoria (es. "animali con la coda")',
-                'A turno, ogni giocatore dice un numero (es. "7") e un elemento della categoria (es. "gatto")',
+                'A turno, ogni giocatore dice un numero (es. "7")',
                 'Il numero deve essere maggiore di quello detto dal giocatore precedente',
-                'Gli altri giocatori possono accettare o dubitare',
+                'il giocatore seguente può accettare o dubitare, accettando si continua a dire il numero, dubitando costringe il giocatore precedente ad elencare elementi di quella categoria, quanto era il numero che aveva detto',
+                'Chi accetta e risponde correttamente nel tempo prestabilito guadagna punti, chi sbaglia ne perde',
                 'Chi dubita correttamente guadagna punti, chi sbaglia ne perde',
                 'Vince chi raggiunge per primo il punteggio stabilito'
             ]
@@ -209,12 +214,11 @@ const translations = {
                 'Modalità a squadre opzionale'
             ],
             'instructions': [
-                'Scegli le categorie e la difficoltà del quiz',
-                'Viene mostrata una domanda a tutti i giocatori',
+                'Scegliete le categorie del quiz',
+                'A turno, viene mostrata una domanda ai giocatori, che devono scegliere la difficolta o la categoria',
                 'Rispondi il più velocemente possibile selezionando l\'opzione corretta',
-                'Guadagni punti per ogni risposta corretta, con bonus per la velocità',
-                'Possono esserci domande a risposta multipla o vero/falso',
-                'Vince il giocatore con più punti alla fine'
+                'Guadagni punti per ogni risposta corretta',
+                'Vince il giocatore che per primo raggiunge i 25 punti'
             ]
         },
         'tictactopics': {
@@ -233,7 +237,7 @@ const translations = {
             'instructions': [
                 'La griglia 3x3 contiene un argomento diverso in ogni casella',
                 'A turno, i giocatori scelgono una casella da conquistare',
-                'Per conquistare la casella, devi rispondere a una domanda sull\'argomento',
+                'Per conquistare la casella, devi trovare una risposta che soddisfa l\'argomento della riga e della colonna',
                 'Se rispondi correttamente, conquisti la casella con il tuo simbolo (X o O)',
                 'Se sbagli, la casella rimane libera',
                 'Vince chi forma per primo una linea di tre simboli'
@@ -247,7 +251,7 @@ const translations = {
             'time': '10-15 minuti',
             'difficulty': 'Principiante',
             'features': [
-                'Ruoli dinamici: Civili, Undercover (6+ giocatori) e Mr. Drew',
+                'Ruoli dinamici: Civili, Undercover e Mr. Drew',
                 'Centinaia di coppie di parole',
                 'Meccanica vocale senza scrittura',
                 'Interfaccia semplice e intuitiva'
@@ -255,8 +259,8 @@ const translations = {
             'instructions': [
                 'Scegli il numero di giocatori (3-10)',
                 'Ogni giocatore guarda la propria parola in segreto',
-                'Mr. Drew vede "???" perché non conosce la parola',
-                'A turno, ogni giocatore dice UNA parola che descrive il proprio termine',
+                'Mr. Drew vede "???" perché non conosce la parola, l\'undercover ha una parola simile a quella del gruppo',
+                'A turno, ogni giocatore dice UNA parola che descrive o ha a che fare in qualche modo il proprio termine',
                 'Discutete e votate chi pensate sia Mr. Drew',
                 'Se Mr. Drew viene scoperto, può provare a indovinare la parola per vincere!'
             ]
@@ -279,7 +283,7 @@ const translations = {
                 'Ogni turno apparirà una frase sullo schermo',
                 'Le frasi possono essere sfide, votazioni, regole o semplici domande',
                 'Seguite le istruzioni della frase e divertitevi!',
-                'Solo per maggiorenni - bevete responsabilmente!'
+                'Solo per maggiorenni - bevete responsabilmente! (si come no!)'
             ]
         },
         'hottakes': {
@@ -318,9 +322,7 @@ const translations = {
             ],
             'instructions': [
                 'Scegli il numero di giocatori e la modalità',
-                'In modalità "scelte", ogni giocatore sceglie la categoria per gli altri',
-                'In modalità "casuali", una parola random viene estratta automaticamente',
-                'In modalità "personalizzate", gli altri giocatori scrivono la parola',
+                'In modalità "scelte", ogni giocatore sceglie la propria categoria, in modalità "casuali", una parola random viene estratta automaticamente, in modalità "personalizzate", gli altri giocatori scrivono la parola',
                 'Fai domande per indovinare la parola, il contatore tiene traccia',
                 'Vince chi indovina con meno domande!'
             ]

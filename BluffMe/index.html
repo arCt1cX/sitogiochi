@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>BluffMe - Gioco di categorie e bluff | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.">');
-      } else {
-        document.write('<title>BluffMe - Category and bluff game | DrewGames</title>');
-        document.write('<meta name="description" content="Play BluffMe: a fun category game where players bet on how many responses they can give! Perfect for evenings with friends and parties.">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>BluffMe - Gioco di categorie e bluff | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.">');
+        } else {
+            document.write('<title>BluffMe - Category and bluff game | DrewGames</title>');
+            document.write('<meta name="description" content="Play BluffMe: a fun category game where players bet on how many responses they can give! Perfect for evenings with friends and parties.">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/BluffMe/?lang=en" />
@@ -24,11 +25,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72Y5QND8E8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-72Y5QND8E8');
+        gtag('config', 'G-72Y5QND8E8');
     </script>
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
@@ -50,11 +51,11 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
@@ -62,43 +63,44 @@
     </style>
     <script>
         // Update metadata based on language
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             updateMetadata();
-            
+
             // Listen for storage changes to detect language changes from other tabs
-            window.addEventListener('storage', function(e) {
+            window.addEventListener('storage', function (e) {
                 if (e.key === 'lang') {
                     updateMetadata();
                 }
             });
         });
-        
+
         function updateMetadata() {
             let currentLang = localStorage.getItem('lang') || 'it';
-            
+
             if (currentLang === 'en') {
                 document.title = 'BluffMe - Category and bluff game | DrewGames';
-                document.querySelector('meta[name="description"]').setAttribute('content', 
+                document.querySelector('meta[name="description"]').setAttribute('content',
                     'Play BluffMe: a fun category game where players bet on how many responses they can give! Perfect for evenings with friends and parties.');
             } else {
                 document.title = 'BluffMe - Gioco di categorie e bluff | DrewGames';
-                document.querySelector('meta[name="description"]').setAttribute('content', 
+                document.querySelector('meta[name="description"]').setAttribute('content',
                     'Gioca a BluffMe: un divertente gioco di categorie dove i giocatori scommettono su quante risposte riescono a dare! Ideale per serate con amici e feste.');
             }
         }
     </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
-    
+
     <div id="app">
         <!-- Start Screen -->
         <div id="startScreen" class="screen active">
             <h1>BluffMe</h1>
-            
+
             <div class="game-instructions">
                 <h2>Come Giocare</h2>
                 <ul>
@@ -111,7 +113,7 @@
                     <li>Premere "Prossimo Round" per una nuova categoria</li>
                 </ul>
             </div>
-            
+
             <div class="players-config">
                 <h2>Configura Giocatori</h2>
                 <div class="player-count-container">
@@ -124,7 +126,7 @@
                         <option value="6">6</option>
                     </select>
                 </div>
-                
+
                 <div id="playerNamesContainer" class="player-names-container">
                     <div class="player-name-input">
                         <label for="player1Name">Giocatore 1:</label>
@@ -136,15 +138,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <button id="beginButton" class="button primary-button">
                 <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5V19L19 12L8 5Z" fill="white"/>
+                    <path d="M8 5V19L19 12L8 5Z" fill="white" />
                 </svg>
                 Inizia Gioco
             </button>
         </div>
-        
+
         <!-- Game Screen -->
         <div id="gameScreen" class="screen">
             <div id="playersScoreContainer" class="players-score">
@@ -153,13 +155,13 @@
                     <div class="score-controls">
                         <button id="player1Minus" class="score-button">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 13H5V11H19V13Z" fill="white"/>
+                                <path d="M19 13H5V11H19V13Z" fill="white" />
                             </svg>
                         </button>
                         <div id="player1Score" class="player-score-value">0</div>
                         <button id="player1Plus" class="score-button">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white"/>
+                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white" />
                             </svg>
                         </button>
                     </div>
@@ -169,63 +171,66 @@
                     <div class="score-controls">
                         <button id="player2Minus" class="score-button">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 13H5V11H19V13Z" fill="white"/>
+                                <path d="M19 13H5V11H19V13Z" fill="white" />
                             </svg>
                         </button>
                         <div id="player2Score" class="player-score-value">0</div>
                         <button id="player2Plus" class="score-button">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white"/>
+                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white" />
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="category-container">
                 <div class="category-label">Categoria:</div>
                 <div id="categoryDisplay" class="category-name">Attendi...</div>
             </div>
-            
+
             <div class="timer-container">
                 <div class="time-label">Tempo:</div>
                 <div id="timerDisplay" class="timer-value">--</div>
             </div>
-            
+
             <div class="count-container">
                 <div class="count-label">Risposte:</div>
                 <div id="countDisplay" class="count-value">0</div>
             </div>
-            
+
             <div class="controls-container">
                 <button id="startButton" class="control-button start-button">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                        <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
                     </svg>
                     <span>Inizia</span>
                 </button>
-                
+
                 <button id="incrementButton" class="control-button increment-button" disabled>
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <text x="4" y="17" fill="currentColor" font-size="14" font-weight="bold">+1</text>
                     </svg>
                 </button>
-                
+
                 <button id="nextRoundButton" class="control-button next-button">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="currentColor"/>
+                        <path
+                            d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+                            fill="currentColor" />
                     </svg>
                     <span>Prossimo Round</span>
                 </button>
             </div>
-            
+
             <!-- Time's Up Overlay -->
             <div id="timeUpOverlay" class="time-up-overlay">
                 <div class="time-up-message">Tempo Scaduto!</div>
             </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
