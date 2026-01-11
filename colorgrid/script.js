@@ -3,62 +3,37 @@ function getLanguage() {
     return getUserLanguage(); // Use the main language utility function
 }
 
-// Theme definitions
-const themes = [];
-let currentTheme = null;
-
-// Helper to create classic spectral themes (Hue varies by column)
-function createClassicTheme(startHue) {
-    return {
-        type: 'classic',
-        h: { start: startHue, end: startHue + 120, axis: 'col' },
-        s: { start: 75, end: 100, axis: 'row' },
-        l: { start: 75, end: 35, axis: 'row' }
-    };
-}
-
-// 1. Classic Spectral Themes (Original 12)
-const classicStartHues = [0, 30, 50, 80, 120, 160, 200, 220, 260, 280, 320, 350];
-classicStartHues.forEach(hue => themes.push(createClassicTheme(hue)));
-
-// 2. New Special Themes (Mixed Colors)
-themes.push(
-    // Orange -> Brown (Hue ~30. Sat decreases across cols. Light decreases across rows)
-    {
-        type: 'special',
-        h: { start: 25, end: 35, axis: 'row' },
-        s: { start: 95, end: 40, axis: 'col' },
-        l: { start: 65, end: 25, axis: 'row' }
-    },
-    // Blue -> Gray (Hue ~220. Sat drops to 0 across cols)
-    {
-        type: 'special',
-        h: { start: 220, end: 210, axis: 'col' },
-        s: { start: 95, end: 0, axis: 'col' },
-        l: { start: 60, end: 50, axis: 'row' }
-    },
-    // White -> Red (Sat increases row-wise. Light decreases col-wise)
-    {
-        type: 'special',
-        h: { start: 0, end: 0, axis: 'col' },
-        s: { start: 0, end: 100, axis: 'row' },
-        l: { start: 98, end: 50, axis: 'col' }
-    },
-    // Lime -> Dark Forest (Green hue. Sat drops, Light drops deeply)
-    {
-        type: 'special',
-        h: { start: 90, end: 120, axis: 'row' },
-        s: { start: 90, end: 50, axis: 'col' },
-        l: { start: 70, end: 15, axis: 'row' }
-    },
-    // Purple -> Black (Purple hue. Light drops to near 0)
-    {
-        type: 'special',
-        h: { start: 270, end: 290, axis: 'col' },
-        s: { start: 90, end: 30, axis: 'row' },
-        l: { start: 60, end: 20, axis: 'col' }
-    }
-);
+// Color translations
+const colorTranslations = {
+    en: [
+        { hue: 0, name: "Red" },
+        { hue: 30, name: "Orange" },
+        { hue: 50, name: "Yellow" },
+        { hue: 80, name: "Lime" },
+        { hue: 120, name: "Green" },
+        { hue: 160, name: "Teal" },
+        { hue: 200, name: "Sky Blue" },
+        { hue: 220, name: "Blue" },
+        { hue: 260, name: "Purple" },
+        { hue: 280, name: "Magenta" },
+        { hue: 320, name: "Pink" },
+        { hue: 350, name: "Rose" }
+    ],
+    it: [
+        { hue: 0, name: "Rosso" },
+        { hue: 30, name: "Arancione" },
+        { hue: 50, name: "Giallo" },
+        { hue: 80, name: "Lime" },
+        { hue: 120, name: "Verde" },
+        { hue: 160, name: "Turchese" },
+        { hue: 200, name: "Azzurro" },
+        { hue: 220, name: "Blu" },
+        { hue: 260, name: "Viola" },
+        { hue: 280, name: "Magenta" },
+        { hue: 320, name: "Rosa" },
+        { hue: 350, name: "Fucsia" }
+    ]
+};
 
 // Track current language
 let currentLanguage = getLanguage();
@@ -68,6 +43,8 @@ let GRID_SIZE = 5; // Default grid size
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let targetCell = null;
 let players = [];
+let startingHue = 0; // Randomized for each game
+const HUE_RANGE = 120; // Further increased range for more distinct colors
 let colorWord = ''; // Store the word describing the color
 
 // DOM Elements
@@ -210,9 +187,13 @@ function updateGridLabels() {
 
 // Start the game
 function startGame() {
-    // Pick a random theme
-    const randomThemeIndex = Math.floor(Math.random() * themes.length);
-    currentTheme = themes[randomThemeIndex];
+    // Use the color bases for current language
+    const lang = getCurrentLanguage();
+    const colorBases = colorTranslations[lang] || colorTranslations['en'];
+
+    // Pick a random natural color base
+    const randomBaseIndex = Math.floor(Math.random() * colorBases.length);
+    startingHue = colorBases[randomBaseIndex].hue;
 
     // Generate target cell (random row and column)
     const row = Math.floor(Math.random() * GRID_SIZE);
@@ -294,38 +275,24 @@ function generateColorGrid(gridElement) {
     }
 }
 
-// Helper: Linear Interpolation
-function lerp(start, end, t) {
-    return start + (end - start) * t;
-}
-
-// Get color for a specific cell position using the current theme
+// Get color for a specific cell position using natural colors
 function getColorForCell(row, col) {
-    if (!currentTheme) return 'black';
+    // For 10x10 grid, adjust the hue range to ensure more distinct colors
+    const effectiveHueRange = GRID_SIZE === 10 ? 180 : HUE_RANGE;
 
-    const max = GRID_SIZE - 1;
+    // Calculate hue with appropriate range for grid size
+    const hueStep = effectiveHueRange / (GRID_SIZE - 1);
+    const hue = (startingHue + col * hueStep) % 360;
 
-    // Helper to calculate a component value based on its axis definition
-    const getComponentValue = (compDef) => {
-        let t = 0;
-        if (compDef.axis === 'col') t = col / max;
-        else if (compDef.axis === 'row') t = row / max;
-        // else axis is undefined or different, allow t=0
+    // Adjust saturation steps based on grid size
+    // From 60% to 95% with appropriate steps
+    const saturation = 60 + (35 * row / (GRID_SIZE - 1));
 
-        // Handle "Classic" 10x10 stretching for Hue
-        let end = compDef.end;
-        if (currentTheme.type === 'classic' && compDef === currentTheme.h && GRID_SIZE === 10) {
-            end = compDef.start + 180; // Extend hue range for 10x10 in classic mode
-        }
+    // Adjust lightness steps based on grid size
+    // From 85% down to 35% with appropriate steps
+    const lightness = 85 - (50 * row / (GRID_SIZE - 1));
 
-        return lerp(compDef.start, end, t);
-    };
-
-    const h = getComponentValue(currentTheme.h) % 360;
-    const s = getComponentValue(currentTheme.s);
-    const l = getComponentValue(currentTheme.l);
-
-    return `hsl(${h}, ${s}%, ${l}%)`;
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
 // Add a new player input
