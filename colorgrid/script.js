@@ -56,7 +56,7 @@ themes.push(
         type: 'special',
         h: { start: 270, end: 290, axis: 'col' },
         s: { start: 90, end: 30, axis: 'row' },
-        l: { start: 60, end: 5, axis: 'col' }
+        l: { start: 60, end: 20, axis: 'col' }
     }
 );
 
