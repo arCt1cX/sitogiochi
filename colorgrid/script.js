@@ -3,37 +3,62 @@ function getLanguage() {
     return getUserLanguage(); // Use the main language utility function
 }
 
-// Color translations
-const colorTranslations = {
-    en: [
-        { hue: 0, name: "Red" },
-        { hue: 30, name: "Orange" },
-        { hue: 50, name: "Yellow" },
-        { hue: 80, name: "Lime" },
-        { hue: 120, name: "Green" },
-        { hue: 160, name: "Teal" },
-        { hue: 200, name: "Sky Blue" },
-        { hue: 220, name: "Blue" },
-        { hue: 260, name: "Purple" },
-        { hue: 280, name: "Magenta" },
-        { hue: 320, name: "Pink" },
-        { hue: 350, name: "Rose" }
-    ],
-    it: [
-        { hue: 0, name: "Rosso" },
-        { hue: 30, name: "Arancione" },
-        { hue: 50, name: "Giallo" },
-        { hue: 80, name: "Lime" },
-        { hue: 120, name: "Verde" },
-        { hue: 160, name: "Turchese" },
-        { hue: 200, name: "Azzurro" },
-        { hue: 220, name: "Blu" },
-        { hue: 260, name: "Viola" },
-        { hue: 280, name: "Magenta" },
-        { hue: 320, name: "Rosa" },
-        { hue: 350, name: "Fucsia" }
-    ]
-};
+// Theme definitions
+const themes = [];
+let currentTheme = null;
+
+// Helper to create classic spectral themes (Hue varies by column)
+function createClassicTheme(startHue) {
+    return {
+        type: 'classic',
+        h: { start: startHue, end: startHue + 120, axis: 'col' },
+        s: { start: 60, end: 95, axis: 'row' },
+        l: { start: 85, end: 35, axis: 'row' }
+    };
+}
+
+// 1. Classic Spectral Themes (Original 12)
+const classicStartHues = [0, 30, 50, 80, 120, 160, 200, 220, 260, 280, 320, 350];
+classicStartHues.forEach(hue => themes.push(createClassicTheme(hue)));
+
+// 2. New Special Themes (Mixed Colors)
+themes.push(
+    // Orange -> Brown (Hue ~30. Sat decreases across cols. Light decreases across rows)
+    {
+        type: 'special',
+        h: { start: 25, end: 35, axis: 'row' },
+        s: { start: 95, end: 40, axis: 'col' },
+        l: { start: 65, end: 25, axis: 'row' }
+    },
+    // Blue -> Gray (Hue ~220. Sat drops to 0 across cols)
+    {
+        type: 'special',
+        h: { start: 220, end: 210, axis: 'col' },
+        s: { start: 95, end: 0, axis: 'col' },
+        l: { start: 60, end: 50, axis: 'row' }
+    },
+    // White -> Red (Sat increases row-wise. Light decreases col-wise)
+    {
+        type: 'special',
+        h: { start: 0, end: 0, axis: 'col' },
+        s: { start: 0, end: 100, axis: 'row' },
+        l: { start: 98, end: 50, axis: 'col' }
+    },
+    // Lime -> Dark Forest (Green hue. Sat drops, Light drops deeply)
+    {
+        type: 'special',
+        h: { start: 90, end: 120, axis: 'row' },
+        s: { start: 90, end: 50, axis: 'col' },
+        l: { start: 70, end: 15, axis: 'row' }
+    },
+    // Purple -> Black (Purple hue. Light drops to near 0)
+    {
+        type: 'special',
+        h: { start: 270, end: 290, axis: 'col' },
+        s: { start: 90, end: 30, axis: 'row' },
+        l: { start: 60, end: 5, axis: 'col' }
+    }
+);
 
 // Track current language
 let currentLanguage = getLanguage();
@@ -43,8 +68,6 @@ let GRID_SIZE = 5; // Default grid size
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let targetCell = null;
 let players = [];
-let startingHue = 0; // Randomized for each game
-const HUE_RANGE = 120; // Further increased range for more distinct colors
 let colorWord = ''; // Store the word describing the color
 
 // DOM Elements
@@ -82,7 +105,7 @@ function getCurrentLanguage() {
 function updatePlayerLabels() {
     const lang = getCurrentLanguage();
     const t = gameTranslations[lang] || gameTranslations['en'];
-    
+
     // Update existing player labels
     const playerInputs = document.querySelectorAll('.player-input label');
     playerInputs.forEach((label, index) => {
@@ -94,18 +117,18 @@ function updatePlayerLabels() {
 function selectGameMode(size) {
     // Update GRID_SIZE
     GRID_SIZE = size;
-    
+
     // Update CSS variable
     document.documentElement.style.setProperty('--grid-size', GRID_SIZE);
-    
+
     // Update grid labels
     updateGridLabels();
-    
+
     // Update UI for selected mode
     if (size === 5) {
         mode5x5Button.classList.add('mode-selected');
         mode10x10Button.classList.remove('mode-selected');
-        
+
         // Remove 10x10 grid class if exists
         document.querySelectorAll('.grid-container').forEach(container => {
             container.classList.remove('grid-size-10');
@@ -113,7 +136,7 @@ function selectGameMode(size) {
     } else {
         mode10x10Button.classList.add('mode-selected');
         mode5x5Button.classList.remove('mode-selected');
-        
+
         // Add 10x10 grid class for styling
         document.querySelectorAll('.grid-container').forEach(container => {
             container.classList.add('grid-size-10');
@@ -125,7 +148,7 @@ function selectGameMode(size) {
 function init() {
     // Set default game mode (5x5)
     selectGameMode(5);
-    
+
     // Check for language changes
     setInterval(() => {
         const newLanguage = getLanguage();
@@ -135,21 +158,21 @@ function init() {
             updatePlayerLabels(); // Update player labels if they exist
         }
     }, 1000);
-    
+
     // Add event listeners for mode selection
     mode5x5Button.addEventListener('click', () => selectGameMode(5));
     mode10x10Button.addEventListener('click', () => selectGameMode(10));
-    
+
     // Add event listener for the color word input
     colorWordInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             handleGotIt();
         }
     });
-    
+
     // Update the got-it button click handler
     gotItButton.addEventListener('click', handleGotIt);
-    
+
     resetGame();
 }
 
@@ -161,7 +184,7 @@ function updateGridLabels() {
         const emptyCorner = container.querySelector('.empty-corner');
         container.innerHTML = '';
         container.appendChild(emptyCorner);
-        
+
         // Add column labels
         for (let i = 0; i < GRID_SIZE; i++) {
             const label = document.createElement('div');
@@ -170,11 +193,11 @@ function updateGridLabels() {
             container.appendChild(label);
         }
     });
-    
+
     // Update row labels (1, 2, 3, ...)
     gridLabelsCols.forEach(container => {
         container.innerHTML = '';
-        
+
         // Add row labels
         for (let i = 0; i < GRID_SIZE; i++) {
             const label = document.createElement('div');
@@ -187,19 +210,15 @@ function updateGridLabels() {
 
 // Start the game
 function startGame() {
-    // Use the color bases for current language
-    const lang = getCurrentLanguage();
-    const colorBases = colorTranslations[lang] || colorTranslations['en'];
-    
-    // Pick a random natural color base
-    const randomBaseIndex = Math.floor(Math.random() * colorBases.length);
-    startingHue = colorBases[randomBaseIndex].hue;
-    
+    // Pick a random theme
+    const randomThemeIndex = Math.floor(Math.random() * themes.length);
+    currentTheme = themes[randomThemeIndex];
+
     // Generate target cell (random row and column)
     const row = Math.floor(Math.random() * GRID_SIZE);
     const col = Math.floor(Math.random() * GRID_SIZE);
     targetCell = { row, col };
-    
+
     // Show target reveal to first player
     showTargetReveal();
 }
@@ -209,11 +228,11 @@ function showTargetReveal() {
     // Update the target reveal screen
     const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
     targetCoordsDisplay.textContent = cellCoords;
-    
+
     // Set the target cell color
     const cellColor = getColorForCell(targetCell.row, targetCell.col);
     targetCellDisplay.style.backgroundColor = cellColor;
-    
+
     // Set the input placeholder based on language
     const lang = getCurrentLanguage();
     if (lang === 'it') {
@@ -221,7 +240,7 @@ function showTargetReveal() {
     } else {
         colorWordInput.placeholder = "Type a word to describe this color...";
     }
-    
+
     // Hide setup screen, show target reveal
     gameSetupSection.classList.add('hidden');
     targetRevealSection.classList.remove('hidden');
@@ -232,17 +251,17 @@ function showGamePlay() {
     // Hide target reveal, show game play
     targetRevealSection.classList.add('hidden');
     gamePlaySection.classList.remove('hidden');
-    
+
     // Clear any previous players
     players = [];
     playerInputsArea.innerHTML = '';
-    
+
     // Generate the full color grid
     generateColorGrid(colorGrid);
-    
+
     // Display the color word over the grid
     displayColorWord();
-    
+
     // Add two players by default
     addPlayer();
     addPlayer();
@@ -251,17 +270,17 @@ function showGamePlay() {
 // Generate the color grid
 function generateColorGrid(gridElement) {
     gridElement.innerHTML = '';
-    
+
     // Create cells
     for (let row = 0; row < GRID_SIZE; row++) {
         for (let col = 0; col < GRID_SIZE; col++) {
             const cell = document.createElement('div');
             cell.classList.add('grid-cell');
-            
+
             // Get color for this cell position
             const cellColor = getColorForCell(row, col);
             cell.style.backgroundColor = cellColor;
-            
+
             // Add coordinates label for the results grid only
             if (gridElement === resultGrid) {
                 // Highlight the target cell in the results grid
@@ -269,65 +288,79 @@ function generateColorGrid(gridElement) {
                     cell.classList.add('target');
                 }
             }
-            
+
             gridElement.appendChild(cell);
         }
     }
 }
 
-// Get color for a specific cell position using natural colors
+// Helper: Linear Interpolation
+function lerp(start, end, t) {
+    return start + (end - start) * t;
+}
+
+// Get color for a specific cell position using the current theme
 function getColorForCell(row, col) {
-    // For 10x10 grid, adjust the hue range to ensure more distinct colors
-    const effectiveHueRange = GRID_SIZE === 10 ? 180 : HUE_RANGE;
-    
-    // Calculate hue with appropriate range for grid size
-    const hueStep = effectiveHueRange / (GRID_SIZE - 1);
-    const hue = (startingHue + col * hueStep) % 360;
-    
-    // Adjust saturation steps based on grid size
-    // From 60% to 95% with appropriate steps
-    const saturation = 60 + (35 * row / (GRID_SIZE - 1));
-    
-    // Adjust lightness steps based on grid size
-    // From 85% down to 35% with appropriate steps
-    const lightness = 85 - (50 * row / (GRID_SIZE - 1));
-    
-    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    if (!currentTheme) return 'black';
+
+    const max = GRID_SIZE - 1;
+
+    // Helper to calculate a component value based on its axis definition
+    const getComponentValue = (compDef) => {
+        let t = 0;
+        if (compDef.axis === 'col') t = col / max;
+        else if (compDef.axis === 'row') t = row / max;
+        // else axis is undefined or different, allow t=0
+
+        // Handle "Classic" 10x10 stretching for Hue
+        let end = compDef.end;
+        if (currentTheme.type === 'classic' && compDef === currentTheme.h && GRID_SIZE === 10) {
+            end = compDef.start + 180; // Extend hue range for 10x10 in classic mode
+        }
+
+        return lerp(compDef.start, end, t);
+    };
+
+    const h = getComponentValue(currentTheme.h) % 360;
+    const s = getComponentValue(currentTheme.s);
+    const l = getComponentValue(currentTheme.l);
+
+    return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
 // Add a new player input
 function addPlayer() {
     const lang = getCurrentLanguage();
     const t = gameTranslations[lang] || gameTranslations['en'];
-    
+
     const playerCount = players.length + 1;
-    
+
     // Create a player object
     players.push({
         name: `${t.player} ${playerCount}`,
         guess: null
     });
-    
+
     const playerDiv = document.createElement('div');
     playerDiv.classList.add('player-input');
-    
+
     const playerLabel = document.createElement('label');
     playerLabel.textContent = `${t.player} ${playerCount}: `;
-    
+
     const playerInput = document.createElement('input');
     playerInput.type = 'text';
     playerInput.maxLength = GRID_SIZE < 10 ? 2 : 3; // Allow for coordinates like "J10"
     playerInput.placeholder = 'A1';
     playerInput.dataset.playerIndex = players.length - 1;
-    
+
     playerInput.addEventListener('input', (e) => {
         const index = parseInt(e.target.dataset.playerIndex);
         players[index].guess = e.target.value.toUpperCase();
     });
-    
+
     playerDiv.appendChild(playerLabel);
     playerDiv.appendChild(playerInput);
-    
+
     playerInputsArea.appendChild(playerDiv);
 }
 
@@ -335,20 +368,20 @@ function addPlayer() {
 function revealAnswer() {
     const lang = getCurrentLanguage();
     const t = gameTranslations[lang] || gameTranslations['en'];
-    
+
     generateColorGrid(resultGrid);
-    
+
     // Clear previous results
     resultsList.innerHTML = '';
-    
+
     // Parse all guesses
     players.forEach(player => {
         const resultItem = document.createElement('div');
         resultItem.classList.add('result-item');
-        
+
         // Get the correct cell coordinates
         const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-        
+
         if (!player.guess) {
             resultItem.textContent = `${player.name}: ${t.invalidGuess}`;
             resultItem.classList.add('invalid');
@@ -361,10 +394,10 @@ function revealAnswer() {
             resultItem.textContent = `${player.name}: ${player.guess} - ${t.incorrectGuess} ${correctCoords}`;
             resultItem.classList.add('incorrect');
         }
-        
+
         resultsList.appendChild(resultItem);
     });
-    
+
     // Show result screen
     gamePlaySection.classList.add('hidden');
     gameResultSection.classList.remove('hidden');
@@ -374,10 +407,10 @@ function revealAnswer() {
 function displayColorWord() {
     // Get the container for the displayed word
     const wordContainer = document.getElementById('displayed-word-container');
-    
+
     // Clear any existing content
     wordContainer.innerHTML = '';
-    
+
     // Create and display the new word
     const wordDisplay = document.createElement('div');
     wordDisplay.classList.add('displayed-word');
@@ -389,7 +422,7 @@ function displayColorWord() {
 function handleGotIt() {
     // Get the word from the input
     colorWord = colorWordInput.value.trim();
-    
+
     // If no word was entered, use a default message based on language
     if (!colorWord) {
         const lang = getCurrentLanguage();
@@ -399,7 +432,7 @@ function handleGotIt() {
             colorWord = "Secret Color";
         }
     }
-    
+
     // Show the game play screen
     showGamePlay();
 }
@@ -409,13 +442,13 @@ function resetGame() {
     // Clear the color word
     colorWord = '';
     colorWordInput.value = '';
-    
+
     // Remove any displayed word
     const displayedWord = document.querySelector('.displayed-word');
     if (displayedWord) {
         displayedWord.remove();
     }
-    
+
     // Clear all sections
     targetCellDisplay.style.backgroundColor = '';
     targetCoordsDisplay.textContent = '';
@@ -423,11 +456,11 @@ function resetGame() {
     resultGrid.innerHTML = '';
     playerInputsArea.innerHTML = '';
     resultsList.innerHTML = '';
-    
+
     // Reset variables
     targetCell = null;
     players = [];
-    
+
     // Show setup screen
     gameSetupSection.classList.remove('hidden');
     targetRevealSection.classList.add('hidden');
