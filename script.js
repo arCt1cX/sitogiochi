@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "hottakes.png" // CAMBIA QUI
         },
         {
+            id: "indovinaChi",
+            displayName: getTranslation('indovinachi', 'title'),
+            catchphrase: getTranslation('indovinachi', 'catchphrase'),
+            image: "indovinachi.png" // CAMBIA QUI
+        },
+        {
             id: "quizzy",
             displayName: getTranslation('quizzy', 'title'),
             catchphrase: getTranslation('quizzy', 'catchphrase'),
@@ -75,28 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "alphabet.png" // CAMBIA QUI
         },
         {
-            id: "colorgrid",
-            displayName: getTranslation('colorgrid', 'title'),
-            catchphrase: getTranslation('colorgrid', 'catchphrase'),
-            image: "colorgrid.png" // CAMBIA QUI
-        },
-        {
             id: "timergame",
             displayName: getTranslation('timergame', 'title'),
             catchphrase: getTranslation('timergame', 'catchphrase'),
             image: "wordrace.png" // CAMBIA QUI
         },
         {
+            id: "colorgrid",
+            displayName: getTranslation('colorgrid', 'title'),
+            catchphrase: getTranslation('colorgrid', 'catchphrase'),
+            image: "colorgrid.png" // CAMBIA QUI
+        },
+        {
             id: "tictactopics",
             displayName: getTranslation('tictactopics', 'title'),
             catchphrase: getTranslation('tictactopics', 'catchphrase'),
             image: "tictactopics.png" // CAMBIA QUI
-        },
-        {
-            id: "indovinaChi",
-            displayName: getTranslation('indovinachi', 'title'),
-            catchphrase: getTranslation('indovinachi', 'catchphrase'),
-            image: "indovinachi.png" // CAMBIA QUI
         }
     ];
 
