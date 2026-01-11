@@ -8,7 +8,10 @@ let gameState = {
     currentQuestions: 0,
     currentWord: '',
     currentCategory: '',
-    turnHasChangedWord: false
+    changeWordCount: 0,
+    giveUpConfirmationPending: false,
+    tournamentMode: false,
+    tournamentPlayers: []
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,8 +41,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainBtn = document.getElementById('play-again');
 
     // Apply translations
-    if (typeof applyGameTranslations === 'function') {
-        applyGameTranslations();
+    applyGameTranslations();
+
+    // Helper to get player name
+    function getPlayerName(index) {
+        if (gameState.tournamentMode && gameState.tournamentPlayers[index - 1]) {
+            return gameState.tournamentPlayers[index - 1].name;
+        }
+        return `${index}`; // Just the number, the "Player"/"Giocatore" prefix is in the UI text usually
+    }
+
+    // Check for tournament mode
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('mode') === 'tournament') {
+        gameState.tournamentMode = true;
+        const savedState = localStorage.getItem('tournamentState');
+        if (savedState) {
+            const tournamentState = JSON.parse(savedState);
+            gameState.tournamentPlayers = tournamentState.players;
+            gameState.playerCount = tournamentState.players.length;
+
+            // Skip setup screen and go to mode selection
+            // We need to wait for translations/other init potentially, but startGame essentially just changes screen
+            // However, we want to let the user choose the Mode (Chosen/Random/Custom) even in tournament? Yes.
+            // But we skip the player count selection.
+            setTimeout(() => {
+                startGame();
+            }, 100);
+        }
     }
 
     // Load categories from JSON
@@ -104,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
-        document.getElementById('category-player-num').textContent = gameState.currentPlayer;
+        document.getElementById('category-player-num').textContent = getPlayerName(gameState.currentPlayer);
 
         // Clear and populate category list
         categoryList.innerHTML = '';
@@ -144,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
-        document.getElementById('custom-player-num').textContent = gameState.currentPlayer;
+        document.getElementById('custom-player-num').textContent = getPlayerName(gameState.currentPlayer);
         customWordInput.value = '';
         gameState.currentCategory = translations.customCategory || 'Personalizzata';
 
@@ -169,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show pass phone screen
     function showPassPhoneScreen() {
-        document.getElementById('pass-player-num').textContent = gameState.currentPlayer;
+        document.getElementById('pass-player-num').textContent = getPlayerName(gameState.currentPlayer);
         showScreen(passPhoneScreen);
     }
 
@@ -178,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
-        document.getElementById('game-player-num').textContent = gameState.currentPlayer;
+        document.getElementById('game-player-num').textContent = getPlayerName(gameState.currentPlayer);
         document.getElementById('word-display').textContent = gameState.currentWord;
         document.getElementById('categoryLabel').textContent = gameState.currentCategory;
 
@@ -186,10 +215,17 @@ document.addEventListener('DOMContentLoaded', () => {
         questionCount.textContent = '0';
 
         // Reset change word state
-        gameState.turnHasChangedWord = false;
+        gameState.changeWordCount = 0;
         const changeBtn = document.getElementById('change-word-btn');
         changeBtn.style.opacity = '1';
         changeBtn.style.cursor = 'pointer';
+
+        // Reset give up button
+        gameState.giveUpConfirmationPending = false;
+        const giveUpBtn = document.getElementById('give-up-btn');
+        // Update button text immediately to default
+        const giveUpSpan = document.getElementById('giveUpBtn');
+        if (giveUpSpan) giveUpSpan.textContent = translations.giveUpText;
 
         showScreen(gamePlayScreen);
     }
@@ -256,6 +292,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerLabel = translations.player || 'Giocatore';
             const questionsLabel = translations.questionsUnit || 'domande';
 
+            // Use getPlayerName for the result display too
+            let playerNameDisplay = score.player;
+            if (gameState.tournamentMode) {
+                // If it's tournament mode, score.player is the index.
+                playerNameDisplay = getPlayerName(score.player);
+            } else {
+                playerNameDisplay = `${playerLabel} ${score.player}`;
+            }
+
             let questionsText = `${score.questions} ${questionsLabel}`;
             if (score.gaveUp) {
                 questionsText = `<span style="color: #cf6679">${translations.arreso || 'Arreso'}</span>`;
@@ -263,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             resultItem.innerHTML = `
                 <div>
-                    <div class="result-player">${medal}${playerLabel} ${score.player}</div>
+                    <div class="result-player">${medal}${playerNameDisplay}</div>
                     <div class="result-word">${score.word} (${score.category})</div>
                 </div>
                 <div class="result-score">${questionsText}</div>
@@ -271,6 +316,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             resultsContainer.appendChild(resultItem);
         });
+
+        if (gameState.tournamentMode) {
+            const existingReturnBtn = document.getElementById('return-tournament-btn');
+            if (!existingReturnBtn) {
+                const returnBtn = document.createElement('button');
+                returnBtn.id = 'return-tournament-btn';
+                returnBtn.className = 'btn primary-btn';
+                returnBtn.textContent = '🏆 Torna al Torneo';
+                returnBtn.style.marginTop = '10px';
+                returnBtn.style.background = 'linear-gradient(45deg, #FFD700, #FFA500)';
+                returnBtn.onclick = () => {
+                    window.location.href = '../tournament/index.html?return=true';
+                };
+                resultsContainer.parentElement.appendChild(returnBtn);
+                // Hide play again button in tournament mode to avoid confusion? 
+                // Or keep it? Usually better to guide them back.
+                playAgainBtn.style.display = 'none';
+            }
+        }
 
         showScreen(endScreen);
     }
@@ -305,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Change Word functionality
     function changeWord() {
-        if (gameState.turnHasChangedWord) {
+        if (gameState.changeWordCount >= 3) {
             const lang = getUserLanguage();
             const translations = gameTranslations[lang] || gameTranslations['en'];
             alert(translations.noMoreChangesAlert);
@@ -338,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update state
         gameState.currentWord = newWord;
         gameState.currentCategory = newCategory;
-        gameState.turnHasChangedWord = true;
+        gameState.changeWordCount++;
 
         // Update UI
         document.getElementById('word-display').textContent = gameState.currentWord;
@@ -346,44 +410,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
-        alert(translations.wordChangedAlert);
 
-        // Disable button visually
-        document.getElementById('change-word-btn').style.opacity = '0.5';
-        document.getElementById('change-word-btn').style.cursor = 'not-allowed';
+        let changesLeft = 3 - gameState.changeWordCount;
+        alert(`${translations.wordChangedAlert} (${changesLeft} ${translations.changesLeft || 'remaining'})`);
+
+        // Disable button visually if limit reached
+        if (gameState.changeWordCount >= 3) {
+            document.getElementById('change-word-btn').style.opacity = '0.5';
+            document.getElementById('change-word-btn').style.cursor = 'not-allowed';
+        }
     }
 
     // Give Up functionality
     function giveUp() {
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
+        const giveUpSpan = document.getElementById('giveUpBtn');
 
-        if (confirm(translations.giveUpText + '?')) {
-            // Save score as "Gave Up" (high question count + flag)
-            gameState.scores.push({
-                player: gameState.currentPlayer,
-                questions: 100, // Penality
-                word: gameState.currentWord,
-                category: gameState.currentCategory,
-                gaveUp: true
-            });
+        if (!gameState.giveUpConfirmationPending) {
+            // First click - ask for confirmation
+            gameState.giveUpConfirmationPending = true;
+            giveUpSpan.textContent = translations.areYouSure || 'Sicuro?';
+            return;
+        }
 
-            alert(`${translations.gaveUpAlert} ${translations.theWordWas} ${gameState.currentWord}`);
+        // Second click - confirm give up
+        // Save score as "Gave Up" (high question count + flag)
+        gameState.scores.push({
+            player: gameState.currentPlayer,
+            questions: 100, // Penality
+            word: gameState.currentWord,
+            category: gameState.currentCategory,
+            gaveUp: true
+        });
 
-            // Move to next player
-            if (gameState.currentPlayer < gameState.playerCount) {
-                gameState.currentPlayer++;
-                if (gameState.mode === 'chosen') {
-                    showCategorySelection();
-                } else if (gameState.mode === 'random') {
-                    selectRandomWord();
-                    showPassPhoneScreen();
-                } else if (gameState.mode === 'custom') {
-                    showCustomWordScreen();
-                }
-            } else {
-                showResults();
+        // Move to next player
+        if (gameState.currentPlayer < gameState.playerCount) {
+            gameState.currentPlayer++;
+            if (gameState.mode === 'chosen') {
+                showCategorySelection();
+            } else if (gameState.mode === 'random') {
+                selectRandomWord();
+                showPassPhoneScreen();
+            } else if (gameState.mode === 'custom') {
+                showCustomWordScreen();
             }
+        } else {
+            showResults();
         }
     }
 

@@ -3,7 +3,7 @@ let tournamentState = {
     totalGames: 5,
     currentGame: 0,
     scores: {},
-    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame'],
+    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi'],
     gameWeights: {},  // New property to track game weights
     usedGames: [],     // Keep this to track history but not for filtering
     doublePointsGames: [],
@@ -111,7 +111,7 @@ function startTournament() {
     const playerCount = playerInputs.length;
 
     // Update available games based on player count
-    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame'];
+    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi'];
     // Only add Chain Reaction if player count is 3 or 6
     if (playerCount === 6) {
         tournamentState.availableGames.push('chainreaction');
@@ -242,7 +242,7 @@ function resetTournament() {
         totalGames: 5,
         currentGame: 0,
         scores: {},
-        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'drewnking', 'hottakes'],
+        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'drewnking', 'hottakes', 'indovinaChi'],
         gameWeights: {},
         usedGames: [],
         doublePointsGames: [],
