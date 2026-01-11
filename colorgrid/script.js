@@ -12,8 +12,8 @@ function createClassicTheme(startHue) {
     return {
         type: 'classic',
         h: { start: startHue, end: startHue + 120, axis: 'col' },
-        s: { start: 60, end: 95, axis: 'row' },
-        l: { start: 85, end: 35, axis: 'row' }
+        s: { start: 75, end: 100, axis: 'row' },
+        l: { start: 75, end: 35, axis: 'row' }
     };
 }
 
