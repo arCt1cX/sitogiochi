@@ -560,16 +560,16 @@
             console.log('splashScreen element:', splashScreen);
             if (splashScreen) {
                 console.log('✅ Splash screen found, waiting for animation...');
-                // Wait for animation (1.5s) + small delay then fade out
+                // Wait for animation (2.5s) then fade out immediately
                 setTimeout(function() {
                     console.log('⏱️ Timer finished, fading out...');
                     splashScreen.classList.add('fade-out');
-                    // After fade out transition (0.5s), hide completely
+                    // After fade out transition (0.3s), hide completely
                     setTimeout(function() {
                         splashScreen.classList.add('hidden');
                         console.log('✅ Splash screen hidden');
-                    }, 500);
-                }, 1800);
+                    }, 300);
+                }, 2550);
             } else {
                 console.log('❌ Splash screen element NOT found!');
             }

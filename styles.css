@@ -18,7 +18,7 @@
     align-items: center;
     z-index: 9999;
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.2s ease-out;
     /* PWA optimizations */
     will-change: opacity;
     -webkit-transform: translateZ(0);
@@ -41,7 +41,7 @@
     background-size: 1000px 200px; /* 5 frames x 200px = 1000px total width */
     background-position: 0 0;
     background-repeat: no-repeat;
-    animation: spriteAnimation 1.5s steps(5) forwards;
+    animation: spriteAnimation 2.5s steps(5) forwards;
     /* PWA optimizations */
     will-change: background-position;
     -webkit-transform: translateZ(0);
