@@ -587,16 +587,26 @@
 
             // Method 1: On window load
             window.addEventListener('load', function () {
-                console.log('🎬 Site fully loaded. Triggering animation...');
+                console.log('🎬 Site fully loaded. Preparing animation...');
 
-                // Trigger the animation now that assets are ready
                 const animElement = document.querySelector('.splash-animation');
-                if (animElement) {
-                    animElement.classList.add('active');
-                }
+                if (!animElement) return;
 
-                // Hide after animation finishes (2s) + small buffer
-                setTimeout(hideSplashScreen, 2500);
+                // Create an image to force decode the sprite sheet
+                const spriteImg = new Image();
+                spriteImg.src = 'animazione-iniziale.png';
+
+                // Wait for decode before starting animation
+                spriteImg.decode().then(function () {
+                    console.log('✅ Sprite decoded. Starting animation.');
+                    animElement.classList.add('active');
+                    setTimeout(hideSplashScreen, 2500);
+                }).catch(function (err) {
+                    // Fallback if decode fails (old browsers)
+                    console.warn('⚠️ Decode failed, starting anyway:', err);
+                    animElement.classList.add('active');
+                    setTimeout(hideSplashScreen, 2500);
+                });
             });
 
             // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
