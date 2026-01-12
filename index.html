@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="app-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    
+
     <!-- Preload splash animation for PWA -->
     <link rel="preload" href="animazione-iniziale.png" as="image" type="image/png">
 
@@ -85,11 +85,14 @@
         })();
     </script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
@@ -411,8 +414,8 @@
     </div>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Hamburger Menu Button -->
     <div class="hamburger-menu" onclick="openNav()" role="button" aria-label="Open navigation menu">
@@ -553,14 +556,28 @@
             document.getElementById("myOverlay").style.visibility = "hidden";
         }
 
-        // Splash screen animation - robust version for mobile
-        (function() {
+        // Splash screen animation - robust version with sessionStorage
+        (function () {
+            // Check if splash has already been shown in this session
+            if (sessionStorage.getItem('splashShown')) {
+                // If shown, hide immediately and do nothing else
+                const splashScreen = document.getElementById('splashScreen');
+                if (splashScreen) {
+                    splashScreen.style.display = 'none';
+                    splashScreen.classList.add('hidden');
+                }
+                return;
+            }
+
+            // If not shown, mark as shown for next time
+            sessionStorage.setItem('splashShown', 'true');
+
             function hideSplashScreen() {
                 const splashScreen = document.getElementById('splashScreen');
                 if (splashScreen && !splashScreen.classList.contains('hidden')) {
                     console.log('⏱️ Hiding splash screen...');
                     splashScreen.classList.add('fade-out');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         splashScreen.classList.add('hidden');
                         splashScreen.style.display = 'none'; // Force hide as backup
                         console.log('✅ Splash screen hidden');
@@ -569,19 +586,19 @@
             }
 
             // Method 1: On window load
-            window.addEventListener('load', function() {
+            window.addEventListener('load', function () {
                 console.log('🎬 Splash screen animation started (load event)');
                 setTimeout(hideSplashScreen, 2550);
             });
 
             // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
-            setTimeout(function() {
+            setTimeout(function () {
                 console.log('⚠️ Fallback timer triggered');
                 hideSplashScreen();
             }, 4000);
 
             // Method 3: On page visibility change (for PWA resume)
-            document.addEventListener('visibilitychange', function() {
+            document.addEventListener('visibilitychange', function () {
                 if (document.visibilityState === 'visible') {
                     const splashScreen = document.getElementById('splashScreen');
                     if (splashScreen && !splashScreen.classList.contains('hidden')) {
