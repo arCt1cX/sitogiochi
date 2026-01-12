@@ -36,14 +36,15 @@
     background-image: url('animazione-iniziale.png');
     background-size: 1000px 200px; /* 5 frames x 200px = 1000px total width */
     background-position: 0 0;
-    animation: spriteAnimation 1s steps(5) forwards;
+    background-repeat: no-repeat;
+    animation: spriteAnimation 0.8s steps(5) forwards;
 }
 
 @keyframes spriteAnimation {
-    from {
+    0% {
         background-position: 0 0;
     }
-    to {
+    100% {
         background-position: -1000px 0;
     }
 }
@@ -56,7 +57,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    animation: pageFadeIn 0.6s ease-out forwards;
 }
 
 @keyframes pageFadeIn {
