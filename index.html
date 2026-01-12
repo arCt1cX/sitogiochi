@@ -29,6 +29,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="app-icon.png">
     <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Preload splash animation for PWA -->
+    <link rel="preload" href="animazione-iniziale.png" as="image" type="image/png">
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -557,7 +560,7 @@
             console.log('splashScreen element:', splashScreen);
             if (splashScreen) {
                 console.log('✅ Splash screen found, waiting for animation...');
-                // Wait for animation (~0.8s) + small delay then fade out
+                // Wait for animation (1.5s) + small delay then fade out
                 setTimeout(function() {
                     console.log('⏱️ Timer finished, fading out...');
                     splashScreen.classList.add('fade-out');
@@ -566,7 +569,7 @@
                         splashScreen.classList.add('hidden');
                         console.log('✅ Splash screen hidden');
                     }, 500);
-                }, 1200);
+                }, 1800);
             } else {
                 console.log('❌ Splash screen element NOT found!');
             }
