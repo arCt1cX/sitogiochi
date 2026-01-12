@@ -587,8 +587,16 @@
 
             // Method 1: On window load
             window.addEventListener('load', function () {
-                console.log('🎬 Splash screen animation started (load event)');
-                setTimeout(hideSplashScreen, 2550);
+                console.log('🎬 Site fully loaded. Triggering animation...');
+
+                // Trigger the animation now that assets are ready
+                const animElement = document.querySelector('.splash-animation');
+                if (animElement) {
+                    animElement.classList.add('active');
+                }
+
+                // Hide after animation finishes (2s) + small buffer
+                setTimeout(hideSplashScreen, 2500);
             });
 
             // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway

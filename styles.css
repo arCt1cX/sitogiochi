@@ -44,13 +44,18 @@
     /* 5 frames x 200px = 1000px total width */
     background-position: 0 0;
     background-repeat: no-repeat;
-    animation: spriteAnimation 2s steps(5) forwards;
+    background-repeat: no-repeat;
+    /* Animation removed here, added via class active */
     /* PWA optimizations */
     will-change: background-position;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.splash-animation.active {
+    animation: spriteAnimation 2s steps(5) forwards;
 }
 
 @keyframes spriteAnimation {
