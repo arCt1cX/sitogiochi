@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dynamic meta tags based on site language toggle -->
     <script>
-      // Get language from URL, localStorage, or browser preference
-      function getLanguage() {
-          // First check URL parameter (highest priority)
-          const urlParams = new URLSearchParams(window.location.search);
-          const urlLang = urlParams.get('lang');
-          if (urlLang === 'en' || urlLang === 'it') {
-              return urlLang === 'it';
-          }
-          
-          // Then check localStorage (second priority)
-          const storedLang = localStorage.getItem('lang');
-          if (storedLang === 'en' || storedLang === 'it') {
-              return storedLang === 'it';
-          }
-          
-          // Finally fallback to browser language
-          const browserLang = navigator.language || navigator.userLanguage || '';
-          return browserLang.toLowerCase().startsWith('it');
-      }
-      
-      // Set the language based on site's language toggle
-      const isItalian = getLanguage();
-      
-      // Set HTML lang attribute
-      document.documentElement.lang = isItalian ? 'it' : 'en';
-      
-      if (isItalian) {
-        document.write('<title>GuessThePic - Indovina cosa mostrano le immagini | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a GuessThePic: il gioco dove devi indovinare cosa mostrano le 5 immagini di diverse categorie. Sfida i tuoi amici e accumula più punti!">');
-      } else {
-        document.write('<title>GuessThePic - Guess what the images show | DrewGames</title>');
-        document.write('<meta name="description" content="Play GuessThePic: the game where you have to guess what the 5 images from different categories show. Challenge your friends and earn more points!">');
-      }
+        // Get language from URL, localStorage, or browser preference
+        function getLanguage() {
+            // First check URL parameter (highest priority)
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang === 'en' || urlLang === 'it') {
+                return urlLang === 'it';
+            }
+
+            // Then check localStorage (second priority)
+            const storedLang = localStorage.getItem('lang');
+            if (storedLang === 'en' || storedLang === 'it') {
+                return storedLang === 'it';
+            }
+
+            // Finally fallback to browser language
+            const browserLang = navigator.language || navigator.userLanguage || '';
+            return browserLang.toLowerCase().startsWith('it');
+        }
+
+        // Set the language based on site's language toggle
+        const isItalian = getLanguage();
+
+        // Set HTML lang attribute
+        document.documentElement.lang = isItalian ? 'it' : 'en';
+
+        if (isItalian) {
+            document.write('<title>GuessThePic - Indovina cosa mostrano le immagini | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a GuessThePic: il gioco dove devi indovinare cosa mostrano le 5 immagini di diverse categorie. Sfida i tuoi amici e accumula più punti!">');
+        } else {
+            document.write('<title>GuessThePic - Guess what the images show | DrewGames</title>');
+            document.write('<meta name="description" content="Play GuessThePic: the game where you have to guess what the 5 images from different categories show. Challenge your friends and earn more points!">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/guessthepic/?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/guessthepic/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/guessthepic/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <meta name="robots" content="index, follow">
@@ -73,29 +77,62 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
     </style>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
-    
+
     <div class="container">
         <div id="start-screen" class="screen">
             <h1 id="game-title">Indovina l'Immagine</h1>
             <p id="game-description">Prova a indovinare cosa c'è nelle immagini!</p>
             <button id="open-player-setup">Inizia Gioco</button>
+        </div>
+
+        <div id="mode-selection-screen" class="screen hidden">
+            <h2 id="mode-title">Scegli Modalità</h2>
+            <p id="mode-description">Come vuoi giocare?</p>
+            <div class="mode-buttons">
+                <button id="all-categories-btn" class="mode-button">
+                    <span class="mode-icon">🎲</span>
+                    <span id="all-categories-text">Tutte le Categorie</span>
+                    <small id="all-categories-desc">Immagini da tutte le categorie disponibili</small>
+                </button>
+                <button id="custom-categories-btn" class="mode-button">
+                    <span class="mode-icon">✏️</span>
+                    <span id="custom-categories-text">Categorie Personalizzate</span>
+                    <small id="custom-categories-desc">Scegli 5 categorie su cui giocare</small>
+                </button>
+            </div>
+        </div>
+
+        <div id="category-selection-screen" class="screen hidden">
+            <h2 id="category-selection-title">Seleziona 5 Categorie</h2>
+            <p id="category-selection-desc">Scegli le categorie su cui vuoi giocare</p>
+            <div class="category-counter">
+                <span id="selected-count">0</span>/5 <span id="selected-text">selezionate</span>
+            </div>
+            <div id="category-grid" class="category-grid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+            <div class="buttons-row">
+                <button id="back-to-mode" class="secondary-button">Indietro</button>
+                <button id="confirm-categories" disabled>Conferma</button>
+            </div>
         </div>
 
         <div id="player-setup-screen" class="screen hidden">
@@ -106,14 +143,14 @@
                     <!-- Options will be populated by JavaScript with proper translations -->
                 </select>
             </div>
-            
+
             <div id="player-names-container" class="player-names-container">
                 <div class="player-input">
                     <label for="player1-name" id="player1-label">Giocatore 1:</label>
                     <input type="text" id="player1-name" placeholder="Giocatore 1">
                 </div>
             </div>
-            
+
             <div class="buttons-row">
                 <button id="start-game" class="full-width-button">Inizia Partita</button>
             </div>
@@ -131,7 +168,8 @@
         <div id="game-screen" class="screen hidden">
             <div class="game-header">
                 <div class="score"><span id="score-text">Punteggio:</span> <span id="score">0</span>/5</div>
-                <div class="current-player"><span id="player-text">Giocatore:</span> <span id="current-player-name">Giocatore 1</span></div>
+                <div class="current-player"><span id="player-text">Giocatore:</span> <span
+                        id="current-player-name">Giocatore 1</span></div>
                 <div class="timer"><span id="time-text">Tempo:</span> <span id="time-remaining">60</span>s</div>
             </div>
 
@@ -145,22 +183,26 @@
 
             <div class="navigation-controls">
                 <button id="prev-image" class="nav-button">&lt; Precedente</button>
-                <div class="progress"><span id="question-text">Domanda</span> <span id="current-question">1</span> <span id="of-text">di</span> 5</div>
+                <div class="progress"><span id="question-text">Domanda</span> <span id="current-question">1</span> <span
+                        id="of-text">di</span> 5</div>
                 <button id="next-image" class="nav-button">Prossima &gt;</button>
             </div>
 
             <div class="guess-container">
                 <input type="text" id="guess-input" placeholder="Inserisci la tua risposta...">
                 <button id="submit-guess">
-                    <svg width="16" height="16" viewBox="0 0 24 24" style="margin-right: 5px; vertical-align: text-bottom;">
-                        <path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"></path>
+                    <svg width="16" height="16" viewBox="0 0 24 24"
+                        style="margin-right: 5px; vertical-align: text-bottom;">
+                        <path fill="currentColor"
+                            d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z">
+                        </path>
                     </svg>
                     Invia
                 </button>
             </div>
 
             <div id="feedback" class="feedback hidden"></div>
-            
+
             <div class="indicator-circles">
                 <div class="circle" data-index="0"></div>
                 <div class="circle" data-index="1"></div>
@@ -193,51 +235,67 @@
     </div>
 
     <script>
-    // Initialize language-specific text when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-        updateUILanguage();
-        
-        // Update language when URL changes (history navigation)
-        window.addEventListener('popstate', updateUILanguage);
-        
-        function updateUILanguage() {
-            const isItalian = getLanguage();
-            
-            // Update game title and description
-            document.getElementById('game-title').textContent = isItalian ? 'Indovina l\'Immagine' : 'Guess the Picture';
-            document.getElementById('game-description').textContent = isItalian ? 'Prova a indovinare cosa c\'è nelle immagini!' : 'Try to guess what\'s in the pictures!';
-            
-            // Update buttons
-            document.getElementById('open-player-setup').textContent = isItalian ? 'Inizia Gioco' : 'Start Game';
-            document.getElementById('start-game').textContent = isItalian ? 'Inizia Partita' : 'Start Match';
-            document.getElementById('start-player-turn').textContent = isItalian ? 'Sono Pronto!' : 'I\'m Ready!';
-            document.getElementById('submit-guess').textContent = isItalian ? 'Invia' : 'Submit';
-            document.getElementById('prev-image').textContent = isItalian ? '< Precedente' : '< Previous';
-            document.getElementById('next-image').textContent = isItalian ? 'Prossima >' : 'Next >';
-            
-            // Update setup screen
-            document.getElementById('setup-title').textContent = isItalian ? 'Configura Giocatori' : 'Configure Players';
-            document.getElementById('player-count-label').textContent = isItalian ? 'Numero di Giocatori:' : 'Number of Players:';
-            
-            // Update transition screen
-            document.getElementById('transition-title').textContent = isItalian ? 'Preparati!' : 'Get Ready!';
-            document.getElementById('next-player-text').textContent = isItalian ? 'Turno di' : 'Turn of';
-            document.getElementById('pass-device-text').textContent = isItalian ? 'Passa il dispositivo al prossimo giocatore' : 'Pass the device to the next player';
-            
-            // Update game screen
-            document.getElementById('score-text').textContent = isItalian ? 'Punteggio:' : 'Score:';
-            document.getElementById('player-text').textContent = isItalian ? 'Giocatore:' : 'Player:';
-            document.getElementById('time-text').textContent = isItalian ? 'Tempo:' : 'Time:';
-            document.getElementById('category-text').textContent = isItalian ? 'Categoria:' : 'Category:';
-            document.getElementById('question-text').textContent = isItalian ? 'Domanda' : 'Question';
-            document.getElementById('of-text').textContent = isItalian ? 'di' : 'of';
-            
-            // Update input placeholder
-            document.getElementById('guess-input').placeholder = isItalian ? 'Inserisci la tua risposta...' : 'Enter your answer...';
-        }
-    });
+        // Initialize language-specific text when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            updateUILanguage();
+
+            // Update language when URL changes (history navigation)
+            window.addEventListener('popstate', updateUILanguage);
+
+            function updateUILanguage() {
+                const isItalian = getLanguage();
+
+                // Update game title and description
+                document.getElementById('game-title').textContent = isItalian ? 'Indovina l\'Immagine' : 'Guess the Picture';
+                document.getElementById('game-description').textContent = isItalian ? 'Prova a indovinare cosa c\'è nelle immagini!' : 'Try to guess what\'s in the pictures!';
+
+                // Update buttons
+                document.getElementById('open-player-setup').textContent = isItalian ? 'Inizia Gioco' : 'Start Game';
+                document.getElementById('start-game').textContent = isItalian ? 'Inizia Partita' : 'Start Match';
+                document.getElementById('start-player-turn').textContent = isItalian ? 'Sono Pronto!' : 'I\'m Ready!';
+                document.getElementById('submit-guess').textContent = isItalian ? 'Invia' : 'Submit';
+                document.getElementById('prev-image').textContent = isItalian ? '< Precedente' : '< Previous';
+                document.getElementById('next-image').textContent = isItalian ? 'Prossima >' : 'Next >';
+
+                // Update setup screen
+                document.getElementById('setup-title').textContent = isItalian ? 'Configura Giocatori' : 'Configure Players';
+                document.getElementById('player-count-label').textContent = isItalian ? 'Numero di Giocatori:' : 'Number of Players:';
+
+                // Update transition screen
+                document.getElementById('transition-title').textContent = isItalian ? 'Preparati!' : 'Get Ready!';
+                document.getElementById('next-player-text').textContent = isItalian ? 'Turno di' : 'Turn of';
+                document.getElementById('pass-device-text').textContent = isItalian ? 'Passa il dispositivo al prossimo giocatore' : 'Pass the device to the next player';
+
+                // Update game screen
+                document.getElementById('score-text').textContent = isItalian ? 'Punteggio:' : 'Score:';
+                document.getElementById('player-text').textContent = isItalian ? 'Giocatore:' : 'Player:';
+                document.getElementById('time-text').textContent = isItalian ? 'Tempo:' : 'Time:';
+                document.getElementById('category-text').textContent = isItalian ? 'Categoria:' : 'Category:';
+                document.getElementById('question-text').textContent = isItalian ? 'Domanda' : 'Question';
+                document.getElementById('of-text').textContent = isItalian ? 'di' : 'of';
+
+                // Update input placeholder
+                document.getElementById('guess-input').placeholder = isItalian ? 'Inserisci la tua risposta...' : 'Enter your answer...';
+
+                // Update mode selection screen
+                document.getElementById('mode-title').textContent = isItalian ? 'Scegli Modalità' : 'Choose Mode';
+                document.getElementById('mode-description').textContent = isItalian ? 'Come vuoi giocare?' : 'How do you want to play?';
+                document.getElementById('all-categories-text').textContent = isItalian ? 'Tutte le Categorie' : 'All Categories';
+                document.getElementById('all-categories-desc').textContent = isItalian ? 'Immagini da tutte le categorie disponibili' : 'Images from all available categories';
+                document.getElementById('custom-categories-text').textContent = isItalian ? 'Categorie Personalizzate' : 'Custom Categories';
+                document.getElementById('custom-categories-desc').textContent = isItalian ? 'Scegli 5 categorie su cui giocare' : 'Choose 5 categories to play with';
+
+                // Update category selection screen
+                document.getElementById('category-selection-title').textContent = isItalian ? 'Seleziona 5 Categorie' : 'Select 5 Categories';
+                document.getElementById('category-selection-desc').textContent = isItalian ? 'Scegli le categorie su cui vuoi giocare' : 'Choose the categories you want to play with';
+                document.getElementById('selected-text').textContent = isItalian ? 'selezionate' : 'selected';
+                document.getElementById('back-to-mode').textContent = isItalian ? 'Indietro' : 'Back';
+                document.getElementById('confirm-categories').textContent = isItalian ? 'Conferma' : 'Confirm';
+            }
+        });
     </script>
 
     <script src="game.js"></script>
 </body>
-</html> 
+
+</html>

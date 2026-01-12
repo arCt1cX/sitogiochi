@@ -140,6 +140,110 @@ button:active {
     cursor: pointer;
 }
 
+/* Mode Selection Styles */
+.mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 20px;
+}
+
+.mode-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(142, 68, 173, 0.1);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mode-button:hover {
+    background-color: rgba(142, 68, 173, 0.2);
+    border-color: var(--primary-purple);
+    transform: translateY(-2px);
+}
+
+.mode-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.mode-button span:not(.mode-icon) {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 5px;
+}
+
+.mode-button small {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+/* Category Selection Styles */
+.category-counter {
+    background-color: var(--primary-purple);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 25px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.category-item {
+    padding: 12px 8px;
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.category-item:hover {
+    border-color: rgba(142, 68, 173, 0.5);
+}
+
+.category-item.selected {
+    background-color: var(--primary-purple);
+    border-color: white;
+    color: white;
+}
+
+.secondary-button {
+    background-color: #5f6769;
+}
+
+.secondary-button:hover {
+    background-color: #4a5052;
+}
+
 .player-names-container {
     width: 100%;
     max-width: 400px;

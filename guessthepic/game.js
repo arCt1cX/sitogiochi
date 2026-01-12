@@ -3,14 +3,14 @@
  * A browser-based guessing game that works completely offline
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Game elements
     const startScreen = document.getElementById('start-screen');
     const playerSetupScreen = document.getElementById('player-setup-screen');
     const playerTransitionScreen = document.getElementById('player-transition-screen');
     const gameScreen = document.getElementById('game-screen');
     const resultScreen = document.getElementById('result-screen');
-    
+
     const openPlayerSetupButton = document.getElementById('open-player-setup');
     const startButton = document.getElementById('start-game');
     const playAgainButton = document.getElementById('play-again');
@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevImageButton = document.getElementById('prev-image');
     const nextImageButton = document.getElementById('next-image');
     const startPlayerTurnButton = document.getElementById('start-player-turn');
-    
+
     const playerCountSelect = document.getElementById('player-count');
     const playerNamesContainer = document.getElementById('player-names-container');
-    
+
     const guessInput = document.getElementById('guess-input');
     const gameImage = document.getElementById('game-image');
     const feedbackDiv = document.getElementById('feedback');
@@ -36,8 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const indicatorCircles = document.querySelectorAll('.circle');
     const currentCategoryElement = document.getElementById('current-category');
 
+    // New game elements
+    const modeSelectionScreen = document.getElementById('mode-selection-screen');
+    const categorySelectionScreen = document.getElementById('category-selection-screen');
+    const categoryGrid = document.getElementById('category-grid');
+    const selectedCountElement = document.getElementById('selected-count');
+    const confirmCategoriesButton = document.getElementById('confirm-categories');
+    const backToModeButton = document.getElementById('back-to-mode');
+    const allCategoriesButton = document.getElementById('all-categories-btn');
+    const customCategoriesButton = document.getElementById('custom-categories-btn');
+
     // Game state
     let categories = [];
+    let selectedCategories = []; // Categories chosen in custom mode
+    let customCategoryMode = false;
     let allPlayers = []; // Store players for the whole game
     let playerRounds = []; // Array to store each player's round images
     let currentQuestionIndex = 0;
@@ -49,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timer = null;
     let timeRemaining = 60;
     let questionStatuses = []; // Array to track the status of each image: null, 'correct', 'incorrect', or 'pending'
-    
+
     // Sound effects (optional)
     const correctSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAqAABHnwAFBwkMDhATFRcaHB8hJCYpKy4wMzU4Ojs+QUNGSEtNUFJVV1pcX2FkZ2lsbnFzdnl7foGDhoiLjZCSlZeanZ+ipKeprK6xtLa5vL7BxMbJy87R09bY293g4uXn6uzu8fP2+fv+AAAATGF2YzU4LjU0AAAAAAAAAAAAAAAAJAXaAAAAAAAAR5+fSpwoAAAAAAAAAAAAAAAAAAD/+0DEAAP7uuzoYwkAJ3VNOt7Pg3B7QwdgAsK6WTEsxoiWpnrJmDNDIwRtCY+g8BBIiDtHcMjAcMTCYAwCAmDkNzBIBuVP/1QLJcHgBmBYDAQMwNhmAK10MCQCzAzAcGA4AIHBMLTJm0MFgBwYBGCAHA2DphR+kDgCwSAYwFAGDgdHYZ+k14qigAYJgJAQCAAHgKHgRB/+NUB4gFwUAIwHAcS+VQj9rn//1QygNB3C//tAxAcAEn7s8f5iAAp8ZqH/sOAFLVBJ0iNTTy1DIMzIJPLTO3/xAAJDqIvGp9C5wJeJh3+LuH/5EAKjABG2aLu69F3C7sTzAEOwHBUJUNw6gdF36t80QmDIcCCFWXDtF3dF3d4O4nGQXB4MXSKlRuIgouIl3+r/yrVbiyUMDBBwfJcFYuAGTjXqP/7NKtQw2d8qsP/7QMQDARKq0uz+HgCKGFXh/5hQCbgzOYuIcUWkBIKQh/KqgxarILDEoJiYUZSfJjTaZMYU1FMy45OS41VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=');
     const incorrectSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAsAAAZyAAICgoNDQ8PEhIUFBcXGRkcHB4eISEjIyYmKCgrKy0tMDA0NDY2OTk7Oz4+QUFDRUhIS0tOTlFRU1NWVllZXFxfX2JiZWVnZ2pqbW1vb3JydXV3d3p6fX2AgIKChYWIiIqKjY2Pj5KSlZWXl5qanJyfn6KipKSnp6qqrKyvr7KytbW3t7q6vLy/v8LCxcXHx8rKzMzPz9LS1dXX19ra3d3f3+Li5eXn5+rq7e3v7/Ly9fX39/r6/f0AAAA5TEFNRTMuMTAwBLQAAAAAAAAAABUgJAjpTQABzAABmchOO7KBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//tAxAADwlwm9k5xAAhaV17dyKABECEVdjggAAkRFkcAABURc3K3K3KwICAgFQMDAwMDAwMYJ0CAoCAgFQoCpytytwICA3NzAwMDAwMD/K3AgCpwICAgIEaP/////+VuVuVg3Nzc3NzcqoHR0f/////KqoCAzNzc3Nzf///////++gICAgKqp0dHR0f/////+VUDp//6HAwMBAQEBGRkZGRnKqoCA3P//6qB0dH//tAxFuAE1J139vYbopP3rb7OqABqlVVf9+qodHR/wdOjAa+jt3a///70DoGB0dHR0dH//////6wPHDh////////kVERGPEDBP////////hgQEBR41SsrKysrK////////yqqqqsrKysr/////////////yssrP///////////6f/////////////////////////////////////////////////////7QMRFg9LaotbiMzxKIFrQsARAH////////////9JWWWXlf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////tAxF0AEiAAvYAQAAAAAA0gAAAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7QMRLAAAAAaQAAAAAAAAA0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==');
@@ -58,8 +70,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let imageCache = {};
 
     // Event listeners for game navigation
-    openPlayerSetupButton.addEventListener('click', openPlayerSetup);
+    openPlayerSetupButton.addEventListener('click', openModeSelection);
     startButton.addEventListener('click', startGame);
+
+    // Mode Selection Listeners
+    allCategoriesButton.addEventListener('click', startAllCategoriesMode);
+    customCategoriesButton.addEventListener('click', openCategorySelection);
+    backToModeButton.addEventListener('click', openModeSelection);
+    confirmCategoriesButton.addEventListener('click', openPlayerSetup);
+
     playAgainButton.addEventListener('click', () => {
         // Start a new round or go back to player setup if all rounds are finished
         if (currentRoundNumber < totalRounds) {
@@ -74,48 +93,48 @@ document.addEventListener('DOMContentLoaded', function() {
     prevImageButton.addEventListener('click', navigateToPreviousImage);
     nextImageButton.addEventListener('click', navigateToNextImage);
     startPlayerTurnButton.addEventListener('click', startCurrentPlayerTurn);
-    
+
     // Add click listeners to indicator circles for navigation
     indicatorCircles.forEach((circle, index) => {
         circle.addEventListener('click', () => navigateToImage(index));
     });
-    
+
     // Player count selection changes the input fields
     playerCountSelect.addEventListener('change', updatePlayerInputs);
-    
+
     // Update player count dropdown options with translated text
     function updatePlayerCountOptions() {
         const isItalian = getLanguage();
         const playerSingular = isItalian ? 'Giocatore' : 'Player';
         const playerPlural = isItalian ? 'Giocatori' : 'Players';
-        
+
         // Clear existing options
         playerCountSelect.innerHTML = '';
-        
+
         // Add new options with translated text
         for (let i = 1; i <= 10; i++) {
             const option = document.createElement('option');
             option.value = i;
-            option.textContent = i === 1 ? 
-                `1 ${playerSingular}` : 
+            option.textContent = i === 1 ?
+                `1 ${playerSingular}` :
                 `${i} ${playerPlural}`;
             playerCountSelect.appendChild(option);
         }
     }
-    
+
     // Run immediately to set initial options
     updatePlayerCountOptions();
-    
+
     // Also call this when language changes or when the game initializes (for browsers that block initial script execution)
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         updatePlayerCountOptions();
-        
+
         // Update when language changes (triggered by main site's language toggle)
         window.addEventListener('popstate', updatePlayerCountOptions);
     });
-    
+
     // Handle Enter key press
-    guessInput.addEventListener('keyup', function(e) {
+    guessInput.addEventListener('keyup', function (e) {
         if (e.key === 'Enter' && !submitButton.disabled) {
             // Only check answer if the submit button is not disabled
             // and there's text in the input
@@ -124,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Show message requiring input
                 const isItalian = getLanguage();
-                feedbackDiv.textContent = isItalian ? 
-                    "Inserisci una risposta prima di inviare!" : 
+                feedbackDiv.textContent = isItalian ?
+                    "Inserisci una risposta prima di inviare!" :
                     "Enter an answer before submitting!";
                 feedbackDiv.className = "feedback incorrect";
                 feedbackDiv.classList.remove("hidden");
@@ -133,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Initialize the game
     initGame();
 
@@ -148,13 +167,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (urlLang === 'en' || urlLang === 'it') {
             return urlLang === 'it';
         }
-        
+
         // Then check localStorage (second priority)
         const storedLang = localStorage.getItem('lang');
         if (storedLang === 'en' || storedLang === 'it') {
             return storedLang === 'it';
         }
-        
+
         // Finally fallback to browser language
         return (navigator.language || navigator.userLanguage || '').toLowerCase().startsWith('it');
     }
@@ -166,14 +185,14 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Try to load categories from the file system
             const response = await fetch('categories.json');
-            
+
             if (response.ok) {
                 const data = await response.json();
                 categories = data;
                 console.log("Successfully loaded categories from categories.json");
                 console.log(`Loaded ${categories.length} categories with a total of ${categories.reduce((sum, cat) => sum + cat.items.length, 0)} items`);
                 console.log("Categories:", categories.map(cat => `${cat.name} (${cat.items.length} items)`));
-                
+
                 // Pre-check if any image directories exist
                 console.log("Checking image directories for each category...");
                 for (const category of categories) {
@@ -183,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             const sampleItem = category.items[0];
                             const samplePath = `img/${category.name}/${sampleItem.replace(/ /g, '_').toLowerCase()}.jpg`;
                             console.log(`Testing path for ${category.name}: ${samplePath}`);
-                            
+
                             // Try to load the sample image
                             const exists = await checkImageExists(samplePath);
                             console.log(`${category.name} directory test: ${exists ? 'SUCCESS' : 'FAILED'}`);
@@ -208,34 +227,126 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
+     * Show the mode selection screen
+     */
+    function openModeSelection() {
+        startScreen.classList.add('hidden');
+        modeSelectionScreen.classList.remove('hidden');
+        categorySelectionScreen.classList.add('hidden');
+        playerSetupScreen.classList.add('hidden');
+        resultScreen.classList.add('hidden');
+    }
+
+    /**
+     * Start the game with all categories available
+     */
+    function startAllCategoriesMode() {
+        customCategoryMode = false;
+        selectedCategories = [];
+        openPlayerSetup();
+    }
+
+    /**
+     * Show the category selection screen
+     */
+    function openCategorySelection() {
+        customCategoryMode = true;
+        selectedCategories = [];
+
+        modeSelectionScreen.classList.add('hidden');
+        categorySelectionScreen.classList.remove('hidden');
+
+        populateCategoryGrid();
+        updateCategoryCounter();
+    }
+
+    /**
+     * Populate the category grid with all available categories
+     */
+    function populateCategoryGrid() {
+        categoryGrid.innerHTML = '';
+
+        // Use all categories that have items or our scanned fallback categories
+        const availableCategories = categories.length > 0 ? categories : [
+            { name: 'actors' }, { name: 'monuments and locations' }, { name: 'singers' },
+            { name: 'politicians' }, { name: 'cartoon characters' }, { name: 'football teams' },
+            { name: 'tv series - movies' }, { name: 'food' }, { name: 'comic characters' },
+            { name: 'animals' }, { name: 'flags' }, { name: 'historical figures' },
+            { name: 'athletes' }, { name: 'logo without name' }, { name: 'web stars and influencers' },
+            { name: 'maps' }
+        ];
+
+        availableCategories.forEach(category => {
+            const item = document.createElement('div');
+            item.className = 'category-item';
+            item.textContent = category.name;
+            item.dataset.name = category.name;
+
+            item.addEventListener('click', () => toggleCategory(category.name, item));
+            categoryGrid.appendChild(item);
+        });
+    }
+
+    /**
+     * Toggle a category's selection status
+     */
+    function toggleCategory(categoryName, element) {
+        const index = selectedCategories.indexOf(categoryName);
+
+        if (index > -1) {
+            // Deselect
+            selectedCategories.splice(index, 1);
+            element.classList.remove('selected');
+        } else {
+            // Select (max 5)
+            if (selectedCategories.length < 5) {
+                selectedCategories.push(categoryName);
+                element.classList.add('selected');
+            }
+        }
+
+        updateCategoryCounter();
+    }
+
+    /**
+     * Update the category counter and confirm button state
+     */
+    function updateCategoryCounter() {
+        selectedCountElement.textContent = selectedCategories.length;
+        confirmCategoriesButton.disabled = selectedCategories.length !== 5;
+    }
+
+    /**
      * Open the player setup screen
      */
     function openPlayerSetup() {
         startScreen.classList.add('hidden');
+        modeSelectionScreen.classList.add('hidden');
+        categorySelectionScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         playerTransitionScreen.classList.add('hidden');
         playerSetupScreen.classList.remove('hidden');
-        
+
         // Reset round number
         currentRoundNumber = 1;
-        
+
         // Reset player count to 1 and update inputs
         playerCountSelect.value = "1";
         updatePlayerInputs();
     }
-    
+
     /**
      * Show the player transition screen
      */
     function showPlayerTransition(playerIndex) {
         // Update next player name
         nextPlayerNameElement.textContent = players[playerIndex].name;
-        
+
         // Hide game screen and show transition screen
         gameScreen.classList.add('hidden');
         playerTransitionScreen.classList.remove('hidden');
     }
-    
+
     /**
      * Start the current player's turn after transition
      */
@@ -243,37 +354,37 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide transition screen and show game screen
         playerTransitionScreen.classList.add('hidden');
         gameScreen.classList.remove('hidden');
-        
+
         // Begin the round for the current player
         startRound();
     }
-    
+
     /**
      * Update player input fields based on selected player count
      */
     function updatePlayerInputs() {
         const playerCount = parseInt(playerCountSelect.value);
         playerNamesContainer.innerHTML = '';
-        
+
         const isItalian = getLanguage();
         const playerLabel = isItalian ? 'Giocatore' : 'Player';
-        
+
         for (let i = 1; i <= playerCount; i++) {
             const playerInput = document.createElement('div');
             playerInput.className = 'player-input';
-            
+
             const label = document.createElement('label');
             label.setAttribute('for', `player${i}-name`);
             label.textContent = `${playerLabel} ${i}:`;
-            
+
             const input = document.createElement('input');
             input.setAttribute('type', 'text');
             input.setAttribute('id', `player${i}-name`);
             input.setAttribute('placeholder', `${playerLabel} ${i}`);
-            
+
             // Don't prefill the name, just use placeholder
             input.value = '';
-            
+
             playerInput.appendChild(label);
             playerInput.appendChild(input);
             playerNamesContainer.appendChild(playerInput);
@@ -300,70 +411,70 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'athletes', items: [] },
             { name: 'influencers', items: [] }
         ];
-        
+
         // For each category, try to populate items by checking the img directory
         for (const category of categories) {
             // In a web environment, we can't read directories directly
             // So we'll use a fallback approach:
             // Try to load a few common items that are likely to exist
-            
+
             // We'll manually add some common items for each category
-            switch(category.name) {
+            switch (category.name) {
                 case 'actors':
-                    category.items = ['Tom Hanks', 'Brad Pitt', 'Leonardo DiCaprio', 'Keanu Reeves', 
-                                      'Scarlett Johansson', 'Robert Downey Jr', 'Meryl Streep'];
+                    category.items = ['Tom Hanks', 'Brad Pitt', 'Leonardo DiCaprio', 'Keanu Reeves',
+                        'Scarlett Johansson', 'Robert Downey Jr', 'Meryl Streep'];
                     break;
                 case 'monuments':
                     category.items = ['Eiffel Tower', 'Statue of Liberty', 'Colosseum', 'Taj Mahal',
-                                      'Great Wall of China', 'Big Ben', 'Stonehenge'];
+                        'Great Wall of China', 'Big Ben', 'Stonehenge'];
                     break;
                 case 'singers':
-                    category.items = ['Lady Gaga', 'Beyoncé', 'Ed Sheeran', 'Taylor Swift', 
-                                     'Adele', 'Bruno Mars', 'Billie Eilish'];
+                    category.items = ['Lady Gaga', 'Beyoncé', 'Ed Sheeran', 'Taylor Swift',
+                        'Adele', 'Bruno Mars', 'Billie Eilish'];
                     break;
                 case 'politicians':
                     category.items = ['Joe Biden', 'Donald Trump', 'Barack Obama', 'Vladimir Putin',
-                                     'Angela Merkel', 'Justin Trudeau', 'Boris Johnson'];
+                        'Angela Merkel', 'Justin Trudeau', 'Boris Johnson'];
                     break;
                 case 'cartoons':
                     category.items = ['Mickey Mouse', 'Homer Simpson', 'SpongeBob SquarePants', 'Bugs Bunny',
-                                     'Scooby-Doo', 'Tom and Jerry', 'Shrek'];
+                        'Scooby-Doo', 'Tom and Jerry', 'Shrek'];
                     break;
                 case 'football teams':
                     category.items = ['Juventus', 'FC Barcelona', 'Real Madrid CF', 'Manchester United FC',
-                                     'Liverpool', 'Bayern Munich', 'Paris Saint-Germain FC'];
+                        'Liverpool', 'Bayern Munich', 'Paris Saint-Germain FC'];
                     break;
                 case 'capitals':
                     category.items = ['Roma', 'Parigi', 'Londra', 'Berlino', 'Madrid',
-                                     'Washington D.C.', 'Tokyo'];
+                        'Washington D.C.', 'Tokyo'];
                     break;
                 case 'superheroes':
                     category.items = ['Superman', 'Batman', 'Spider-Man', 'Iron Man', 'Wonder Woman',
-                                     'Captain America', 'Hulk'];
+                        'Captain America', 'Hulk'];
                     break;
                 case 'animals':
                     category.items = ['Leone', 'Tigre', 'Elefante', 'Giraffa', 'Zebra',
-                                     'Orso', 'Lupo'];
+                        'Orso', 'Lupo'];
                     break;
                 case 'flags':
                     category.items = ['Italia', 'Francia', 'Germania', 'Spagna', 'Regno Unito',
-                                     'Stati Uniti', 'Giappone'];
+                        'Stati Uniti', 'Giappone'];
                     break;
                 case 'historical figures':
-                    category.items = ['Giulio Cesare', 'Alessandro Magno', 'Napoleone Bonaparte', 
-                                     'Leonardo da Vinci', 'Albert Einstein', 'Winston Churchill', 'Abraham Lincoln'];
+                    category.items = ['Giulio Cesare', 'Alessandro Magno', 'Napoleone Bonaparte',
+                        'Leonardo da Vinci', 'Albert Einstein', 'Winston Churchill', 'Abraham Lincoln'];
                     break;
                 case 'athletes':
                     category.items = ['Cristiano Ronaldo', 'Lionel Messi', 'LeBron James', 'Serena Williams',
-                                     'Usain Bolt', 'Roger Federer', 'Michael Jordan'];
+                        'Usain Bolt', 'Roger Federer', 'Michael Jordan'];
                     break;
                 case 'influencers':
                     category.items = ['Cristiano Ronaldo', 'Selena Gomez', 'Kylie Jenner', 'Kim Kardashian',
-                                     'Dwayne Johnson', 'Taylor Swift', 'Justin Bieber'];
+                        'Dwayne Johnson', 'Taylor Swift', 'Justin Bieber'];
                     break;
             }
         }
-        
+
         console.log("Scanned categories:", categories);
     }
 
@@ -387,44 +498,44 @@ document.addEventListener('DOMContentLoaded', function() {
         const canvas = document.createElement('canvas');
         canvas.width = 600;  // Increased from 400
         canvas.height = 450; // Increased from 300
-        
+
         // Get the context
         const ctx = canvas.getContext('2d');
-        
+
         // Fill the background with a light color
         ctx.fillStyle = '#f0f0f0';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
+
         // Add a border
         ctx.strokeStyle = '#ccc';
         ctx.lineWidth = 8;  // Increased from 5
         ctx.strokeRect(15, 15, canvas.width - 30, canvas.height - 30);
-        
+
         // Write the category
         ctx.fillStyle = '#555';
         ctx.font = 'bold 28px Arial';  // Increased from 20px
         ctx.textAlign = 'center';
         ctx.fillText(category.toUpperCase(), canvas.width / 2, 60);  // Adjusted position
-        
+
         // Write the item name
         ctx.fillStyle = '#333';
         ctx.font = 'bold 42px Arial';  // Increased from 30px
         ctx.textAlign = 'center';
-        
+
         // Handle long names by splitting them if needed
         const words = name.split(' ');
         if (words.length > 3) {
             // For very long names, split into multiple lines
             const firstLine = words.slice(0, Math.ceil(words.length / 2)).join(' ');
             const secondLine = words.slice(Math.ceil(words.length / 2)).join(' ');
-            
+
             ctx.fillText(firstLine, canvas.width / 2, canvas.height / 2 - 20);
             ctx.fillText(secondLine, canvas.width / 2, canvas.height / 2 + 40);
         } else {
             // For shorter names, just center them
             ctx.fillText(name, canvas.width / 2, canvas.height / 2);
         }
-        
+
         return canvas.toDataURL();
     }
 
@@ -435,22 +546,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const playerCount = parseInt(playerCountSelect.value);
         players = [];
         allPlayers = []; // Reset the stored players
-        
+
         for (let i = 1; i <= playerCount; i++) {
             const nameInput = document.getElementById(`player${i}-name`);
             // Use the placeholder text as default if no name is provided
             const playerName = nameInput.value.trim() || `Player ${i}`;
-            
+
             const player = {
                 name: playerName,
                 score: 0,
                 roundScores: [0, 0, 0] // Scores for each round
             };
-            
+
             players.push(player);
             allPlayers.push(player); // Store in our persistent array
         }
-        
+
         console.log("Players setup:", players);
     }
 
@@ -459,25 +570,25 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function startGame() {
         console.log("Starting a new game for round 1...");
-        
+
         // Setup players from input fields
         setupPlayers();
-        
+
         // Reset game state
         currentQuestionIndex = 0;
         currentPlayerIndex = 0;
         roundResults = [];
         playerRounds = []; // Reset player rounds
         currentRoundNumber = 1;
-        
+
         // Show game screen
         playerSetupScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         gameScreen.classList.remove('hidden');
-        
+
         // Generate all player rounds for the current round
         generatePlayerRounds();
-        
+
         // Start first round
         startRound();
     }
@@ -487,17 +598,17 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function generatePlayerRounds() {
         playerRounds = []; // Clear existing rounds
-        
+
         // For each player, generate a unique set of questions
         for (let i = 0; i < players.length; i++) {
             if (!categories || categories.length === 0 || categories.every(cat => !cat.items || cat.items.length === 0)) {
-                console.error("No category data available for player " + (i+1) + ". Using fallback data.");
+                console.error("No category data available for player " + (i + 1) + ". Using fallback data.");
                 playerRounds.push(generateFallbackItems());
             } else {
                 playerRounds.push(generateRandomItems());
             }
         }
-        
+
         console.log("Generated rounds for all players:", playerRounds);
     }
 
@@ -506,18 +617,18 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function startNextRound() {
         console.log(`Starting round ${currentRoundNumber}...`);
-        
+
         // Reset state for the new round
         currentQuestionIndex = 0;
         currentPlayerIndex = 0;
-        
+
         // Generate new rounds for all players
         generatePlayerRounds();
-        
+
         // Hide result screen and show game screen
         resultScreen.classList.add('hidden');
         gameScreen.classList.remove('hidden');
-        
+
         // Start the round
         startRound();
     }
@@ -527,35 +638,35 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function startRound() {
         console.log(`Round ${currentRoundNumber}: Player ${currentPlayerIndex + 1} (${players[currentPlayerIndex].name})`);
-        
+
         // Current player's round is already set in playerRounds[currentPlayerIndex]
-        
+
         // Reset question statuses for this player's turn
         questionStatuses = [null, null, null, null, null];
-        
+
         // Reset UI
         scoreElement.textContent = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
         currentPlayerNameElement.textContent = players[currentPlayerIndex].name;
         currentQuestionIndex = 0;
-        
+
         // Enable navigation buttons
         prevImageButton.disabled = true; // Disabled at first question
         nextImageButton.disabled = false;
         submitButton.disabled = false;
         guessInput.disabled = false;
-        
+
         // Update question number
         currentQuestionElement.textContent = currentQuestionIndex + 1;
-        
+
         // Clear feedback
         feedbackDiv.classList.add('hidden');
-        
+
         // Start the timer
         startTimer();
-        
+
         // Update circle indicators
         updateCircleIndicators();
-        
+
         // Load the first question
         loadQuestion(false); // Don't restart timer as we just started it
     }
@@ -565,73 +676,79 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function generateRandomItems() {
         const playerRound = [];
-        
+
         // Get all categories that have items
-        const validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
-        
+        let validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
+
+        // If in custom mode, further filter by user selection
+        if (customCategoryMode && selectedCategories.length > 0) {
+            console.log("Filtering categories based on user selection:", selectedCategories);
+            validCategories = validCategories.filter(cat => selectedCategories.includes(cat.name));
+        }
+
         if (validCategories.length === 0) {
             console.error("No valid categories with items found.");
             return generateFallbackItems();
         }
-        
+
         console.log("Valid categories for selection:", validCategories.map(c => `${c.name} (${c.items.length} items)`));
-        
+
         // Shuffle the categories to ensure random selection
         const shuffledCategories = [...validCategories];
         shuffleArray(shuffledCategories);
         console.log("Shuffled categories for selection:", shuffledCategories.map(c => c.name));
-        
+
         // Try to select one item from the first 5 shuffled categories
         // This ensures we get a good mix of categories
         const categoriesToUse = shuffledCategories.slice(0, Math.min(5, shuffledCategories.length));
         console.log("Categories selected for this round:", categoriesToUse.map(c => c.name));
-        
+
         // Select one item from each selected category
         for (const category of categoriesToUse) {
             const randomIndex = Math.floor(Math.random() * category.items.length);
             const item = category.items[randomIndex];
-            
+
             // Create the file path
             const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
             console.log(`Adding item from ${category.name}: ${item} (${imagePath})`);
-            
+
             playerRound.push({
                 category: category.name,
                 item: item,
                 imagePath: imagePath
             });
         }
-        
+
         // If we don't have 5 items yet (because there weren't enough valid categories),
         // add more from the available categories
         if (playerRound.length < 5) {
             console.log(`Only have ${playerRound.length} items, need to add more...`);
-            
+
             // Keep track of items we've already chosen
             const chosenItems = playerRound.map(item => `${item.category}-${item.item}`);
-            
+
             // Continue adding items until we have 5 or run out of unique items
             let attempts = 0;
             while (playerRound.length < 5 && attempts < 100) { // Add an attempts limit to prevent infinite loops
                 attempts++;
-                
+
                 // Randomly select a category
                 const categoryIndex = Math.floor(Math.random() * validCategories.length);
                 const category = validCategories[categoryIndex];
-                
+
                 // Randomly select an item from that category
                 const itemIndex = Math.floor(Math.random() * category.items.length);
                 const item = category.items[itemIndex];
-                
+
                 // Check if this item is already in our round
                 const itemKey = `${category.name}-${item}`;
                 if (!chosenItems.includes(itemKey)) {
                     chosenItems.push(itemKey);
-                    
+
                     // Create the file path
                     const imagePath = `img/${category.name}/${item.replace(/ /g, '_').toLowerCase()}.jpg`;
                     console.log(`Adding additional item from ${category.name}: ${item} (${imagePath})`);
-                    
+
                     playerRound.push({
                         category: category.name,
                         item: item,
@@ -639,10 +756,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             }
-            
+
             if (playerRound.length < 5) {
                 console.warn(`Could not find enough unique items, only have ${playerRound.length}`);
-                
+
                 // Fill remaining slots with fallback items if needed
                 const fallbackItems = generateFallbackItems();
                 while (playerRound.length < 5 && fallbackItems.length > 0) {
@@ -650,7 +767,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-        
+
         // Shuffle the round
         const shuffledRound = [...playerRound]; // Create a copy to shuffle
         shuffleArray(shuffledRound);
@@ -663,7 +780,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function generateFallbackItems() {
         console.log("Using fallback items for a player's round");
-        
+
         // Create a larger pool of fallback items from all categories
         const fallbackPool = [
             {
@@ -732,11 +849,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 imagePath: 'img/influencers/dwayne_johnson.jpg'
             }
         ];
-        
+
         // Randomly select 5 different items from the pool
         const shuffledPool = [...fallbackPool]; // Create a copy to shuffle
         shuffleArray(shuffledPool);
-        
+
         // Take the first 5 items
         return shuffledPool.slice(0, 5);
     }
@@ -747,54 +864,54 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkAnswer() {
         // Get the current player's round items
         const currentPlayerRound = playerRounds[currentPlayerIndex];
-        
+
         // Safety check
         if (currentQuestionIndex >= 5 || !currentPlayerRound || !currentPlayerRound[currentQuestionIndex]) {
             console.error("Invalid question index or missing question data");
             return;
         }
-        
+
         // If this question was already answered or timer is up, don't allow submission
-        if (questionStatuses[currentQuestionIndex] === 'correct' || 
-            questionStatuses[currentQuestionIndex] === 'incorrect' || 
+        if (questionStatuses[currentQuestionIndex] === 'correct' ||
+            questionStatuses[currentQuestionIndex] === 'incorrect' ||
             timeRemaining <= 0) {
             return;
         }
-        
+
         // Disable the submit button to prevent multiple submissions
         submitButton.disabled = true;
         submitButton.style.opacity = "0.5";
         submitButton.style.cursor = "not-allowed";
-        
+
         const currentQuestion = currentPlayerRound[currentQuestionIndex];
         const userAnswer = guessInput.value.trim().toLowerCase();
-        
+
         // Require the user to type something before submitting
         if (!userAnswer) {
             // Alert the user they need to enter a guess
             const isItalian = getLanguage();
-            feedbackDiv.textContent = isItalian ? 
-                "Inserisci una risposta prima di inviare!" : 
+            feedbackDiv.textContent = isItalian ?
+                "Inserisci una risposta prima di inviare!" :
                 "Enter an answer before submitting!";
             feedbackDiv.className = "feedback incorrect";
             feedbackDiv.classList.remove("hidden");
-            
+
             // Focus on the input field
             guessInput.focus();
-            
+
             // Re-enable the submit button
             submitButton.disabled = false;
             submitButton.style.opacity = "1";
             submitButton.style.cursor = "pointer";
-            
+
             return;
         }
-        
+
         const correctAnswer = currentQuestion.item.toLowerCase();
         const currentPlayer = players[currentPlayerIndex];
-        
+
         console.log(`Checking answer from ${currentPlayer.name}: "${userAnswer}" against "${correctAnswer}"`);
-        
+
         // Function to normalize accented characters
         function normalizeString(str) {
             return str
@@ -802,41 +919,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
                 .replace(/[^a-z0-9]/gi, ''); // Remove non-alphanumeric chars
         }
-        
+
         // Enhanced string normalization for comparison
         const normalizedUserAnswer = normalizeString(userAnswer);
         const normalizedCorrectAnswer = normalizeString(correctAnswer);
-        
+
         // Check if the answer is correct (allowing for some flexibility)
-        const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer || 
-                         normalizeString(correctAnswer).includes(normalizeString(userAnswer)) || 
-                         normalizedCorrectAnswer.includes(normalizedUserAnswer) || 
-                         (normalizedUserAnswer.length > 3 && normalizedCorrectAnswer.includes(normalizedUserAnswer));
-        
+        const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer ||
+            normalizeString(correctAnswer).includes(normalizeString(userAnswer)) ||
+            normalizedCorrectAnswer.includes(normalizedUserAnswer) ||
+            (normalizedUserAnswer.length > 3 && normalizedCorrectAnswer.includes(normalizedUserAnswer));
+
         console.log(`Answer is ${isCorrect ? 'correct' : 'incorrect'}`);
-        
+
         // Update question status
         questionStatuses[currentQuestionIndex] = isCorrect ? 'correct' : 'incorrect';
-        
+
         // Update circle indicators
         updateCircleIndicators();
-        
+
         // Show feedback
         const isItalian = getLanguage();
-        feedbackDiv.textContent = isCorrect 
-            ? (isItalian ? `Corretto! È ${currentQuestion.item}` : `Correct! It's ${currentQuestion.item}`) 
+        feedbackDiv.textContent = isCorrect
+            ? (isItalian ? `Corretto! È ${currentQuestion.item}` : `Correct! It's ${currentQuestion.item}`)
             : (isItalian ? `Sbagliato. Era ${currentQuestion.item}` : `Wrong. It was ${currentQuestion.item}`);
-        
+
         feedbackDiv.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
         feedbackDiv.classList.remove('hidden');
-        
+
         // Play sound if available
         if (isCorrect) {
             correctSound.play().catch(e => console.log('Sound play error:', e));
         } else {
             incorrectSound.play().catch(e => console.log('Sound play error:', e));
         }
-        
+
         // Update score if correct
         if (isCorrect) {
             // Update the score for the current round
@@ -846,7 +963,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update display
             scoreElement.textContent = currentPlayer.roundScores[currentRoundNumber - 1];
         }
-        
+
         // Save the result for the summary
         roundResults.push({
             round: currentRoundNumber,
@@ -857,22 +974,22 @@ document.addEventListener('DOMContentLoaded', function() {
             isCorrect: isCorrect,
             player: currentPlayer.name
         });
-        
+
         // Check if all questions have been answered
-        const allAnswered = questionStatuses.every(status => 
+        const allAnswered = questionStatuses.every(status =>
             status === 'correct' || status === 'incorrect');
-        
+
         if (allAnswered) {
             // Stop the timer
             stopTimer();
-            
+
             // Check if player got a perfect score
             const currentPlayerScore = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
             if (currentPlayerScore === 5) {
                 // Show "SWEEP!" animation
                 showSweepAnimation();
             }
-            
+
             // Move to the next player or end the round after a delay
             setTimeout(() => {
                 if (currentPlayerIndex < players.length - 1) {
@@ -896,7 +1013,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1500);
         }
     }
-    
+
     /**
      * Find the next unanswered question
      */
@@ -907,18 +1024,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 return i;
             }
         }
-        
+
         // Then look for pending questions
         for (let i = 0; i < questionStatuses.length; i++) {
             if (questionStatuses[i] === 'pending') {
                 return i;
             }
         }
-        
+
         // No unanswered questions found
         return -1;
     }
-    
+
     /**
      * Load the current question
      */
@@ -927,73 +1044,73 @@ document.addEventListener('DOMContentLoaded', function() {
         if (resetTimer) {
             startTimer();
         }
-        
+
         // Reset submit button state
         submitButton.disabled = false;
         submitButton.style.opacity = "1";
         submitButton.style.cursor = "pointer";
-        
+
         // Update circle indicators
         updateCircleIndicators();
-        
+
         // Update navigation buttons
         prevImageButton.disabled = currentQuestionIndex === 0;
         nextImageButton.disabled = currentQuestionIndex === 4;
-        
+
         // Get the current player's round items
         const currentPlayerRound = playerRounds[currentPlayerIndex];
-        
+
         // Double check we have valid items
         if (!currentPlayerRound || currentPlayerRound.length === 0) {
             console.error("No items found for the current player's round");
             return;
         }
-        
+
         // Get current question for the current player
         const currentQuestion = currentPlayerRound[currentQuestionIndex];
-        
+
         if (!currentQuestion) {
             console.error("Question not found at index", currentQuestionIndex);
             return;
         }
-        
+
         console.log(`Loading question ${currentQuestionIndex + 1} for ${players[currentPlayerIndex].name}: ${currentQuestion.item} (${currentQuestion.category})`);
         console.log(`Image path: ${currentQuestion.imagePath}`);
-        
+
         // Clear previous feedback if loading a new question
         if (questionStatuses[currentQuestionIndex] === null || questionStatuses[currentQuestionIndex] === 'pending') {
             feedbackDiv.classList.add('hidden');
         } else {
             // Show the previous feedback for already answered questions
             const isCorrect = questionStatuses[currentQuestionIndex] === 'correct';
-            feedbackDiv.textContent = isCorrect 
-                ? `Corretto! È ${currentQuestion.item}` 
+            feedbackDiv.textContent = isCorrect
+                ? `Corretto! È ${currentQuestion.item}`
                 : `Sbagliato. Era ${currentQuestion.item}`;
-            
+
             feedbackDiv.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
             feedbackDiv.classList.remove('hidden');
         }
-        
+
         // Update question number and current player
         currentQuestionElement.textContent = currentQuestionIndex + 1;
         currentPlayerNameElement.textContent = players[currentPlayerIndex].name;
         scoreElement.textContent = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
-        
+
         // Enable/disable submit button based on if the question was already answered
-        const alreadyAnswered = questionStatuses[currentQuestionIndex] === 'correct' || 
-                               questionStatuses[currentQuestionIndex] === 'incorrect';
+        const alreadyAnswered = questionStatuses[currentQuestionIndex] === 'correct' ||
+            questionStatuses[currentQuestionIndex] === 'incorrect';
         submitButton.disabled = alreadyAnswered;
         guessInput.disabled = alreadyAnswered;
-        
+
         // Load image with fade effect
         gameImage.style.opacity = 0;
-        
+
         try {
             // Try to load from cache first
             if (imageCache[currentQuestion.imagePath]) {
                 console.log("Loading image from cache");
                 gameImage.src = imageCache[currentQuestion.imagePath];
-                
+
                 // Make sure we wait for the fade-in to complete
                 setTimeout(() => {
                     gameImage.style.opacity = 1;
@@ -1001,13 +1118,13 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Check if the image exists
                 const exists = await checkImageExists(currentQuestion.imagePath);
-                
+
                 if (exists) {
                     console.log("Image exists, loading it");
                     gameImage.src = currentQuestion.imagePath;
-                    
+
                     // Cache the image for future use
-                    gameImage.onload = function() {
+                    gameImage.onload = function () {
                         imageCache[currentQuestion.imagePath] = currentQuestion.imagePath;
                         setTimeout(() => {
                             gameImage.style.opacity = 1;
@@ -1016,17 +1133,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     console.warn(`Image not found: ${currentQuestion.imagePath}`);
                     console.log("Generating placeholder image");
-                    
+
                     // Generate placeholder image
                     const placeholderDataUrl = generatePlaceholderImage(
-                        currentQuestion.item, 
+                        currentQuestion.item,
                         currentQuestion.category
                     );
-                    
+
                     // Use the placeholder
                     gameImage.src = placeholderDataUrl;
                     imageCache[currentQuestion.imagePath] = placeholderDataUrl;
-                    
+
                     setTimeout(() => {
                         gameImage.style.opacity = 1;
                     }, 50);
@@ -1036,28 +1153,28 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("Error loading image:", error);
             // Create a placeholder as fallback
             const placeholderDataUrl = generatePlaceholderImage(
-                currentQuestion.item, 
+                currentQuestion.item,
                 currentQuestion.category
             );
-            
+
             gameImage.src = placeholderDataUrl;
-            
+
             setTimeout(() => {
                 gameImage.style.opacity = 1;
             }, 50);
         }
-        
+
         // If it's a new or pending question, clear input
         if (questionStatuses[currentQuestionIndex] === null || questionStatuses[currentQuestionIndex] === 'pending') {
             guessInput.value = '';
-            
+
             // Only focus if this is a brand new question (not from navigation)
             // This prevents keyboard from opening on mobile when navigating
             if (questionStatuses[currentQuestionIndex] === null && resetTimer) {
                 guessInput.focus();
             }
         }
-        
+
         // Update category display
         if (currentQuestion && currentQuestion.category) {
             currentCategoryElement.textContent = currentQuestion.category;
@@ -1072,14 +1189,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function showRoundResults() {
         // Stop the timer if it's still running
         stopTimer();
-        
+
         // Hide game screen, show result screen
         gameScreen.classList.add('hidden');
         resultScreen.classList.remove('hidden');
-        
+
         // Determine language based on site's language setting
         const isItalian = getLanguage();
-        
+
         // Update title based on round number
         const resultTitle = document.querySelector('#result-screen h2');
         if (currentRoundNumber < totalRounds) {
@@ -1091,18 +1208,18 @@ document.addEventListener('DOMContentLoaded', function() {
             playAgainButton.textContent = isItalian ? `Menu` : `Main Menu`;
             replaySamePlayersButton.textContent = isItalian ? `Rigioca con stessi giocatori` : `Play again with same players`;
             replaySamePlayersButton.classList.remove('hidden');
-            
+
             // Check for perfect game (15/15) after the final round
             checkForPerfectGame();
         }
-        
+
         // Sort players by score for the current round
         const playerRoundScores = players.map(player => ({
             name: player.name,
             roundScore: player.roundScores[currentRoundNumber - 1],
             totalScore: player.score
         }));
-        
+
         const sortedPlayersByRound = [...playerRoundScores].sort((a, b) => {
             // First sort by round score (descending)
             if (b.roundScore !== a.roundScore) {
@@ -1111,13 +1228,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // If round scores are tied, sort by total score (descending)
             return b.totalScore - a.totalScore;
         });
-        
+
         // Get the highest round score
         const highestRoundScore = sortedPlayersByRound[0].roundScore;
-        
+
         // Display player scores
         playerScoresElement.innerHTML = '';
-        
+
         // Add round header
         const roundHeader = document.createElement('div');
         roundHeader.className = 'round-header';
@@ -1126,19 +1243,19 @@ document.addEventListener('DOMContentLoaded', function() {
             ${currentRoundNumber === totalRounds ? '<h3>Punteggi Totali</h3>' : ''}
         `;
         playerScoresElement.appendChild(roundHeader);
-        
+
         // Add player scores
         sortedPlayersByRound.forEach((player) => {
             const scoreItem = document.createElement('div');
             scoreItem.className = `player-score-item ${player.roundScore === highestRoundScore ? 'winner' : ''}`;
-            
+
             const playerName = document.createElement('div');
             playerName.className = 'player-name';
             playerName.textContent = player.name;
-            
+
             const scoreInfo = document.createElement('div');
             scoreInfo.className = 'score-info';
-            
+
             // Show both round score and total if final round
             if (currentRoundNumber === totalRounds) {
                 scoreInfo.innerHTML = `
@@ -1148,49 +1265,49 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 scoreInfo.textContent = `${player.roundScore}/5`;
             }
-            
+
             scoreItem.appendChild(playerName);
             scoreItem.appendChild(scoreInfo);
             playerScoresElement.appendChild(scoreItem);
         });
-        
+
         // Filter results for current round
         const currentRoundResults = roundResults.filter(result => result.round === currentRoundNumber);
-        
+
         // Clear previous results
         resultDetailsElement.innerHTML = '';
-        
+
         // Add details section header
         const detailsHeader = document.createElement('h3');
         detailsHeader.textContent = 'Dettagli Domande';
         detailsHeader.style.marginBottom = '10px';
         resultDetailsElement.appendChild(detailsHeader);
-        
+
         // With many players, group results by question rather than showing all individually
         if (players.length > 4) {
             // Create an array of unique questions
             const questions = [...new Set(currentRoundResults.map(result => result.item))];
-            
+
             // For each question, show a summary of player responses
             questions.forEach((item, questionIndex) => {
                 // Get all results for this question
                 const questionResults = currentRoundResults.filter(result => result.item === item);
                 const category = questionResults[0].category;
-                
+
                 // Create a container for this question
                 const questionContainer = document.createElement('div');
                 questionContainer.className = 'result-item';
-                
+
                 // Calculate how many players got it right
                 const correctCount = questionResults.filter(result => result.isCorrect).length;
-                
+
                 // Set background color based on whether most players got it right
                 if (correctCount > players.length / 2) {
                     questionContainer.classList.add('correct');
                 } else {
                     questionContainer.classList.add('incorrect');
                 }
-                
+
                 // Create question header
                 const questionHeader = document.createElement('div');
                 questionHeader.className = 'question-header';
@@ -1198,7 +1315,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <strong>Domanda ${questionIndex + 1}:</strong> ${item} (${category})<br>
                     <small>${correctCount} su ${players.length} giocatori corretti</small>
                 `;
-                
+
                 questionContainer.appendChild(questionHeader);
                 resultDetailsElement.appendChild(questionContainer);
             });
@@ -1207,17 +1324,17 @@ document.addEventListener('DOMContentLoaded', function() {
             currentRoundResults.forEach((result, index) => {
                 const resultItem = document.createElement('div');
                 resultItem.className = `result-item ${result.isCorrect ? 'correct' : 'incorrect'}`;
-                
+
                 const icon = document.createElement('span');
                 icon.className = 'result-icon';
                 icon.textContent = result.isCorrect ? '✓' : '✗';
-                
+
                 const details = document.createElement('div');
                 details.innerHTML = `
                     <strong>Domanda ${index % 5 + 1}:</strong> ${result.item} (${result.category})<br>
                     <small>${result.player}: ${result.userAnswer || '(nessuna risposta)'}</small>
                 `;
-                
+
                 resultItem.appendChild(icon);
                 resultItem.appendChild(details);
                 resultDetailsElement.appendChild(resultItem);
@@ -1240,7 +1357,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     /**
      * Show the perfect game animation for a 15/15 score
      */
@@ -1248,47 +1365,47 @@ document.addEventListener('DOMContentLoaded', function() {
         const perfectGameContainer = document.querySelector('.perfect-game-container');
         const perfectGameText = document.querySelector('.perfect-game-text');
         const perfectGameScore = document.querySelector('.perfect-game-score');
-        
+
         // Reset animations by removing and re-adding classes
         perfectGameContainer.classList.remove('perfect-game-animation');
         perfectGameText.classList.remove('perfect-game-text-animation');
         perfectGameScore.classList.remove('perfect-game-score-animation');
-        
+
         // Force reflow to restart animations
         void perfectGameContainer.offsetWidth;
         void perfectGameText.offsetWidth;
         void perfectGameScore.offsetWidth;
-        
+
         // Add animation classes
         perfectGameContainer.classList.add('perfect-game-animation');
         perfectGameText.classList.add('perfect-game-text-animation');
         perfectGameScore.classList.add('perfect-game-score-animation');
-        
+
         // Create confetti animation
         createConfetti();
     }
-    
+
     /**
      * Create confetti particles for the perfect game celebration
      */
     function createConfetti() {
         // Remove any existing confetti
         document.querySelectorAll('.confetti').forEach(el => el.remove());
-        
+
         // Create 100 confetti particles
         const colors = ['#ffdf00', '#ff9933', '#ff5050', '#ff66b3', '#cc66ff', '#9999ff', '#66ccff', '#99ff99'];
-        
+
         for (let i = 0; i < 100; i++) {
             const confetti = document.createElement('div');
             confetti.className = 'confetti';
-            
+
             // Random position, size, color, and animation duration
             const size = Math.floor(Math.random() * 10) + 5; // 5-15px
             const color = colors[Math.floor(Math.random() * colors.length)];
             const left = Math.random() * 100; // 0-100% of viewport width
             const animationDuration = (Math.random() * 3) + 2; // 2-5s duration
             const delay = Math.random() * 1.5; // 0-1.5s delay
-            
+
             // Apply styles
             confetti.style.width = `${size}px`;
             confetti.style.height = `${size}px`;
@@ -1297,17 +1414,17 @@ document.addEventListener('DOMContentLoaded', function() {
             confetti.style.top = '0';
             confetti.style.animationDuration = `${animationDuration}s`;
             confetti.style.animationDelay = `${delay}s`;
-            
+
             // Different shapes for variety
             if (Math.random() > 0.5) {
                 confetti.style.borderRadius = '50%'; // Circle
             } else if (Math.random() > 0.5) {
                 confetti.style.transform = 'rotate(45deg)'; // Diamond
             }
-            
+
             // Add to document
             document.body.appendChild(confetti);
-            
+
             // Remove after animation completes
             setTimeout(() => {
                 confetti.remove();
@@ -1332,16 +1449,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentQuestionIndex > 0) {
             // Blur input field to prevent keyboard from opening on mobile
             guessInput.blur();
-            
+
             // Mark current question as pending if not already answered
             if (questionStatuses[currentQuestionIndex] === null) {
                 questionStatuses[currentQuestionIndex] = 'pending';
                 updateCircleIndicators();
             }
-            
+
             // Find the previous unanswered question
             let prevIndex = findPreviousUnansweredQuestion(currentQuestionIndex);
-            
+
             // If found, go to that question
             if (prevIndex !== -1) {
                 currentQuestionIndex = prevIndex;
@@ -1353,7 +1470,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     /**
      * Navigate to next image that hasn't been answered yet
      */
@@ -1361,16 +1478,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentQuestionIndex < 4) {
             // Blur input field to prevent keyboard from opening on mobile
             guessInput.blur();
-            
+
             // Mark current question as pending if not already answered
             if (questionStatuses[currentQuestionIndex] === null) {
                 questionStatuses[currentQuestionIndex] = 'pending';
                 updateCircleIndicators();
             }
-            
+
             // Find the next unanswered question
             let nextIndex = findNextUnansweredQuestionFrom(currentQuestionIndex);
-            
+
             // If found, go to that question
             if (nextIndex !== -1) {
                 currentQuestionIndex = nextIndex;
@@ -1382,7 +1499,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     /**
      * Find the previous unanswered question before the given index
      */
@@ -1393,11 +1510,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return i;
             }
         }
-        
+
         // No unanswered questions found before the current one
         return -1;
     }
-    
+
     /**
      * Find the next unanswered question after the given index
      */
@@ -1408,11 +1525,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return i;
             }
         }
-        
+
         // No unanswered questions found after the current one
         return -1;
     }
-    
+
     /**
      * Navigate to a specific image by index, but prefer unanswered questions if clicked on an already answered one
      */
@@ -1420,12 +1537,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (index >= 0 && index < 5 && index !== currentQuestionIndex) {
             // Blur input field to prevent keyboard from opening on mobile
             guessInput.blur();
-            
+
             // Mark current question as pending if not already answered
             if (questionStatuses[currentQuestionIndex] === null) {
                 questionStatuses[currentQuestionIndex] = 'pending';
             }
-            
+
             // If clicked on an already answered question, try to find unanswered ones
             if (questionStatuses[index] === 'correct' || questionStatuses[index] === 'incorrect') {
                 // First try to find unanswered questions after the clicked index
@@ -1435,7 +1552,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadQuestion(false); // Don't reset the timer
                     return;
                 }
-                
+
                 // If not found after, look before the clicked index
                 let prevUnanswered = findPreviousUnansweredQuestion(index);
                 if (prevUnanswered !== -1) {
@@ -1444,30 +1561,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
             }
-            
+
             // Either the clicked question is unanswered or all questions are answered,
             // so go to the selected image
             currentQuestionIndex = index;
             loadQuestion(false); // Don't reset the timer
         }
     }
-    
+
     /**
      * Start the round timer
      */
     function startTimer() {
         // Clear any existing timer
         clearInterval(timer);
-        
+
         // Reset time remaining
         timeRemaining = 60;
         timeRemainingElement.textContent = timeRemaining;
-        
+
         // Start a new timer
         timer = setInterval(() => {
             timeRemaining--;
             timeRemainingElement.textContent = timeRemaining;
-            
+
             // Time's up
             if (timeRemaining <= 0) {
                 clearInterval(timer);
@@ -1475,26 +1592,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 1000);
     }
-    
+
     /**
      * Stop the timer
      */
     function stopTimer() {
         clearInterval(timer);
     }
-    
+
     /**
      * End the current player's turn when time runs out or all questions are answered
      */
     function endPlayerTurn() {
         // Stop the timer
         stopTimer();
-        
+
         // Mark any unanswered questions as incorrect
         questionStatuses.forEach((status, index) => {
             if (status === null || status === 'pending') {
                 questionStatuses[index] = 'incorrect';
-                
+
                 // Add to results
                 const currentPlayerRound = playerRounds[currentPlayerIndex];
                 if (currentPlayerRound && currentPlayerRound[index]) {
@@ -1510,29 +1627,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-        
+
         // Update circles
         updateCircleIndicators();
-        
+
         // Show time's up message
         const isItalian = getLanguage();
         feedbackDiv.textContent = isItalian ? "Tempo scaduto!" : "Time's up!";
         feedbackDiv.className = "feedback incorrect";
         feedbackDiv.classList.remove("hidden");
-        
+
         // Disable inputs
         submitButton.disabled = true;
         guessInput.disabled = true;
         prevImageButton.disabled = true;
         nextImageButton.disabled = true;
-        
+
         // Check if player got a perfect score
         const currentPlayerScore = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
         if (currentPlayerScore === 5) {
             // Show "SWEEP!" animation
             showSweepAnimation();
         }
-        
+
         // Move to the next player or end the round after a delay
         setTimeout(() => {
             if (currentPlayerIndex < players.length - 1) {
@@ -1546,27 +1663,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 2000);
     }
-    
+
     /**
      * Show a "SWEEP!" animation for perfect scores
      */
     function showSweepAnimation() {
         const sweepContainer = document.querySelector('.sweep-container');
         const sweepText = document.querySelector('.sweep-text');
-        
+
         // Reset animations by removing and re-adding classes
         sweepContainer.classList.remove('sweep-animation');
         sweepText.classList.remove('sweep-text-animation');
-        
+
         // Force reflow to restart animations
         void sweepContainer.offsetWidth;
         void sweepText.offsetWidth;
-        
+
         // Add animation classes
         sweepContainer.classList.add('sweep-animation');
         sweepText.classList.add('sweep-text-animation');
     }
-    
+
     /**
      * Update the indicator circles based on question statuses
      */
@@ -1574,12 +1691,12 @@ document.addEventListener('DOMContentLoaded', function() {
         indicatorCircles.forEach((circle, index) => {
             // Clear existing classes
             circle.className = 'circle';
-            
+
             // Add status class
             if (index === currentQuestionIndex) {
                 circle.classList.add('current');
             }
-            
+
             if (questionStatuses[index]) {
                 circle.classList.add(questionStatuses[index]);
             }
@@ -1591,27 +1708,27 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function replaySamePlayers() {
         console.log("Replaying game with the same players");
-        
+
         // Reset game state while keeping the same players
         currentQuestionIndex = 0;
         currentPlayerIndex = 0;
         roundResults = [];
         playerRounds = []; // Reset player rounds
         currentRoundNumber = 1;
-        
+
         // Reset each player's score
         players.forEach(player => {
             player.score = 0;
             player.roundScores = [0, 0, 0]; // Reset scores for each round
         });
-        
+
         // Hide result screen and show game screen
         resultScreen.classList.add('hidden');
         gameScreen.classList.remove('hidden');
-        
+
         // Generate all player rounds for the new game
         generatePlayerRounds();
-        
+
         // Start first round
         startRound();
     }
