@@ -402,6 +402,11 @@
 </head>
 
 <body>
+    <!-- Splash Screen Animation -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-animation"></div>
+    </div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -544,6 +549,21 @@
             document.getElementById("myOverlay").style.opacity = "0";
             document.getElementById("myOverlay").style.visibility = "hidden";
         }
+
+        // Splash screen animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.getElementById('splashScreen');
+            if (splashScreen) {
+                // Wait for animation to complete (1s) + small delay
+                setTimeout(function() {
+                    splashScreen.classList.add('fade-out');
+                    // After fade out transition (0.5s), hide completely
+                    setTimeout(function() {
+                        splashScreen.classList.add('hidden');
+                    }, 500);
+                }, 1200);
+            }
+        });
 
         // Update navigation text based on language
         document.addEventListener('DOMContentLoaded', function () {

@@ -5,6 +5,49 @@
     box-sizing: border-box;
 }
 
+/* Splash Screen Animation */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-screen.hidden {
+    display: none;
+}
+
+.splash-animation {
+    width: 200px;
+    height: 200px;
+    background-image: url('animazione-iniziale.png');
+    background-size: 1000px 200px; /* 5 frames x 200px = 1000px total width */
+    background-position: 0 0;
+    animation: spriteAnimation 1s steps(5) forwards;
+}
+
+@keyframes spriteAnimation {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
