@@ -1,6 +1,6 @@
 Qual è il miglior modo di passare un sabato sera? | In che modo passi solitamente il sabato sera?
 Qual è una pizza che ti piace molto ma non prendi spesso? | Qual è la tua pizza preferita?
-Il miglior frutto | Il frutto che mangi piu spesso
+Il miglior frutto | Il frutto che mangi più spesso
 Il superpotere che vorresti di più | Il superpotere più utile per rapinare una banca
 Qual è il miglior tipo di vacanza? | Rispondi uno tra "mare" o "montagna"
 Se dovessi fare un lavoro che non c'entra nulla con quello che fai attualmente, quale sceglieresti? | Qual è il mestiere più stressante secondo te?
@@ -254,7 +254,7 @@ Cos'è la cosa più piacevole da fumare? | Nomina una qualsiasi cosa che si fuma
 Chi tra i presenti ha la grafia peggiore da leggere? | Chi è il più ignorante tra i presenti?
 Quante volte vai a defecare (smerdare) al giorno? | Spara un numero da 0 a 5
 In un giorno, vai a cagare più volte di quanto ti masturbi? Si o no? | Si o no?
-Chi di voi è più probabile che finisca come ospite alla Zanzara? | Chi tra voi è una persona particolarmente rumorosa? 
+Chi di voi è più probabile che finisca come ospite alla Zanzara? Chi tra voi è una persona particolarmente rumorosa? 
 Se potessi eliminare per sempre un social network, quale sceglieresti? | Il social network più sopravvalutato secondo te
 Il miglior formato di pasta per la pasta al ragù | Il miglior formato di pasta per la pasta al pesto
 Se dovessi consigliare un libro o un film al giocatore alla tua sinistra, quale sceglieresti? | Un libro o film che ti è piaciuto davvero tanto e ti ha colpito
@@ -457,3 +457,44 @@ Quante applicazioni del telefono usi effettivamente tutti i giorni? | Spara un n
 Qual è un alcolico a cui dici di no anche se te lo offrono? | Qual è un alcolico che ti ha fatto vomitare la prima volta che lo hai bevuto?
 Se dovessi partecipare a un reality show, quale sarebbe? | Di quale reality show senti sempre parlare ma non hai mai visto?
 Se dovessi eliminare tutti i tuoi hobby e tenerne solo uno, quale sarebbe? | Quale sport pratichi attualmente?
+Qual è la parte del corpo in cui ti sei fatto il peggior infortunio della tua vita? | Qual è la parte del corpo che ti fa male più spesso?
+Qual è la città coi peggiori mezzi di trasporto in cui sei mai stato? | Qual è la città più sporca in cui sei stato?
+Se potessi assumere il controllo di un social network per un giorno, quale sceglieresti? | Qual è un social network che molti hanno ma tu elimineresti senza problemi?
+In quale regione italiana hai trovato la spiaggia più brutta di tutte? | In quale regione italiana hai mangiato peggio?
+Qual è una occasione o cerimonia che secondo te in Italia viene festeggiata in maniera esagerata? | Rispondi una tra: matrimonio, prima comunione, diciottesimo
+In media, quante volte vai dal parrucchiere / barbiere ogni anno? | In media, quante volte al mese ti alleni o fai sport?
+Di dove è originaria la tua nonna materna? | Di dove è originaria la tua nonna paterna?
+Quanti caffè bevi al giorno? | Quanti bagni ci sono a casa tua?
+Qual è il paese straniero in cui hai mangiato peggio? | Qual è il paese straniero in cui hai avuto il peggiore hotel / appartamento durante la vacanza?
+Secondo te, quale dovrebbe essere il prezzo onesto di un cocktail in Italia? | Spara un numero da 0 a 10
+Se dovessi darti un voto da 0 a 10 per l'aspetto fisico, quanto ti daresti? | Dai un voto da 0 a 10 al film "Harry Potter e la Pietra Filosofale"
+Dai un voto il più oggettivo possibile da 0 a 10 al tuo outfit | Dai un voto da 0 a 10 a questo piatto: bucatini all'amatriciana
+Qual è la migliore stagione per andare in montagna? | Qual è la stagione peggiore per correre all'aperto?
+Quale sport / hobby ti sarebbe piaciuto fare, ma sei totalmente negato? | Qual è uno sport in cui tutti prima o poi si fanno male?
+Qual è uno stato europeo poco gettonato in cui vorresti andare in vacanza? | Rispondi uno tra Estonia, Lettonia o Lituania
+Se fossi a capo dall'Italia, quale cibo renderesti illegale? | Qual è un cibo che ti ha fatto stare malissimo di stomaco?
+Ti offrono 1.000.000€ se finisci l'intero menù di un ristorante, quale ristorante scegli? | Qual è il ristorante fast food in cui sei andato più volte?
+Qual è una dipendenza che secondo te è spesso normalizzata nella società attuale? | Qual è una droga comune che proveresti una sola volta?
+Se potessi assegnare "un proposito per l'anno nuovo" a uno dei giocatori presenti (e lui è costretto a rispettarlo), quale proposito sceglieresti? | Qual è una abitudine che ti riprometti spesso di iniziare a fare, ma che poi continui a non fare o rimandare?
+Qual è un aspetto importante del tuo lavoro in cui sei oggettivamente molto scarso/a, al momento? | Qual è la parte del tuo mestiere in cui sei più bravo rispetto alla media?
+Qual è un oggetto che tutti portano in spiaggia ma a cui tu puoi fare a meno senza problemi?| Se potessi portare un solo oggetto da mare quando vai in spiaggia, quale sceglieresti?
+Ti lasciano in una foresta gelida nel nord del Canada con solo un cappotto e un accendino, quanto tempo sopravvivi? | Range: da 0 a 5 giorni  (esempio di risposta: 2 giorni!)
+Qual è la puntura o morso di un animale che ti ha fatto più male? | Qual è secondo te la puntura di insetto più dolorosa che si può rischiare di prendere in Italia?
+Tra i presenti, chi è il/la miglior ballerino/a da discoteca?| Tra i presenti, chi è il più bravo a cantare?
+Qual è una compagnia aerea che tutti criticano ma che a te non ha mai dato problemi? | Qual è la peggior compagnia aerea con cui viaggiare
+Qual è la migliore compagnia aerea con cui hai viaggiato? | Qual è la compagnia aerea che ti ha fatto pagare di più per un biglietto?
+Quante multe hai preso quest'anno? | Quante volte all'anno vai dentista?
+Quante paia di scarpe possiedi? | Quante paia di jeans possiedi? 
+Quante volte ti è successo di rimanere bloccato in un ascensore? | Spara un numero da 0 a 5
+In media, quante volte mangi la pasta a settimana? | In media, quante volte mangi la carne a settimana?
+In quale anno sei stato alla festa di Halloween più devastante della tua vita? | In che anno hai fatto la vacanza con gli amici più devastante della tua vita?
+Di che marchio è il benzinaio da cui vai più spesso? | Qual è un marchio di benzina che eviti sempre quando devi fare rifornimento? 
+Qual è un meme o fenomeno social che è stato popolarissimo ma a te non faceva minimamente ridere? | Qual è un meme che ormai è passato di moda ma a te faceva molto ridere?
+Qual è la marca di acqua minerale che è più spesso presente a casa tua? | Qual è una marca di acqua minerale che proprio non ti piace?
+Se ti offrissero 1 milione di € per ogni anno consecutivo vissuto in Antartide, con quanti milioni pensi che usciresti? | Spara un numero da 0 a 10
+A che percentuale il cioccolato fondente diventa per te immangiabile? | Spara un numero da 50 a 100 (consiglio: arrotondalo allo 0 o 5).
+Quali sono le tre applicazioni che usi di più sul tuo telefono? | Quali sono i tre social / app di messaggistica che usi di più in assoluto?
+Qual è stata la tua prestazione migliore nello sport che praticavi da più giovane? | Inventati una prestazione ottima che hai fatto nello sport che praticavi da più giovane
+In che catena di supermercati fai più spesso la spesa? | Di che catena di supermercati è il supermercato più vicino a casa tua?
+Se dovessi spendere dei soldi su un solo gioco d'azzardo, quale sceglieresti? | Qual è il gioco d'azzardo più insensato secondo te?
+Quale è il miglior colore per un abito completo da uomo? | Qual è il miglior colore per un paio di jeans?
