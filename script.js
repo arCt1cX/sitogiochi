@@ -262,19 +262,18 @@ document.addEventListener('DOMContentLoaded', () => {
         /* ============================================ */
         .game-info-overlay {
             position: fixed !important;
-            inset: 0 !important;
-            top: 0 !important;
+            /* Bleed into the top area to handle PWA status bar gaps */
+            top: -10vh !important;
             left: 0 !important;
             right: 0 !important;
             bottom: 0 !important;
             width: 100vw !important;
-            width: 100dvw !important;
-            height: 100vh !important;
-            height: 100dvh !important;
-            max-width: 100% !important;
-            max-height: 100% !important;
+            /* Height covers viewport + the bleed area */
+            height: 120vh !important;
+            height: 120dvh !important;
+            background-color: #0f0f23 !important;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
-            z-index: 999999 !important;
+            z-index: 2147483647 !important;
             display: flex;
             flex-direction: column;
             opacity: 0;
@@ -284,11 +283,11 @@ document.addEventListener('DOMContentLoaded', () => {
             overflow-x: hidden;
             margin: 0 !important;
             padding: 0 !important;
+            /* Safe area padding added to the container to push content back into view */
+            padding-top: calc(10vh + env(safe-area-inset-top, 0px)) !important;
             -webkit-overflow-scrolling: touch;
+            overscroll-behavior: none;
             transform: none !important;
-            /* PWA specific - ensure it covers status bar area */
-            -webkit-transform: translateZ(0);
-            backface-visibility: hidden;
         }
         
         .game-info-overlay.active {
@@ -330,10 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 1.5rem 2rem;
-            padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
-            padding-left: calc(2rem + env(safe-area-inset-left, 0px));
-            padding-right: calc(2rem + env(safe-area-inset-right, 0px));
+            padding: 1rem 1.5rem;
+            padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
+            padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
             background: linear-gradient(180deg, rgba(123, 104, 238, 0.3) 0%, transparent 100%);
             flex-shrink: 0;
         }
@@ -341,55 +339,55 @@ document.addEventListener('DOMContentLoaded', () => {
         .overlay-title-section {
             flex: 1;
             min-width: 0;
-            padding-right: 1rem;
+            padding-right: 10px;
         }
         
         .overlay-title {
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: clamp(1.4rem, 5vw, 2.2rem);
+            font-weight: 800;
             color: white;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            margin: 0 0 0.5rem 0;
-            background: linear-gradient(90deg, #8a7ced, #614dc2);
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0 0 0.2rem 0;
+            background: linear-gradient(90deg, #ffffff, #a79cff);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.15;
-            word-wrap: break-word;
+            line-height: 1.1;
+            word-break: break-word;
             overflow-wrap: break-word;
-            hyphens: auto;
         }
         
         .overlay-catchphrase {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            color: rgba(255, 255, 255, 0.7);
             font-style: italic;
             margin: 0;
+            line-height: 1.2;
         }
         
         .overlay-players-badge {
             background: linear-gradient(135deg, #7b68ee 0%, #6a5acd 100%);
-            padding: 0.8rem 1.2rem;
-            border-radius: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 15px rgba(123, 104, 238, 0.4);
+            padding: 0.6rem 1rem;
+            border-radius: 12px;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(123, 104, 238, 0.4);
             text-align: center;
-            min-width: 120px;
+            min-width: 100px;
         }
         
         .players-label {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
             letter-spacing: 1px;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         
         .players-count {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: white;
             display: block;
@@ -511,72 +509,37 @@ document.addEventListener('DOMContentLoaded', () => {
         @media (max-width: 768px) {
             .overlay-header {
                 flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 1.5rem;
+                gap: 0.8rem;
+                padding: 1rem 1.2rem;
                 padding-top: calc(1rem + env(safe-area-inset-top, 0px));
-                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
-                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
-            }
-            
-            .overlay-title {
-                font-size: 1.8rem;
-            }
-            
-            .overlay-catchphrase {
-                font-size: 0.95rem;
+                padding-left: calc(1.2rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.2rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-players-badge {
                 align-self: flex-start;
+                padding: 0.6rem 1rem;
+                min-width: 100px;
             }
             
             .overlay-content {
-                padding: 1rem 1.5rem;
-                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
-                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
-            }
-            
-            .overlay-section {
-                padding: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.1rem;
-            }
-            
-            .instructions-list li {
-                font-size: 0.9rem;
-                padding-left: 2rem;
-            }
-            
-            .instructions-list li::before {
-                width: 1.5rem;
-                height: 1.5rem;
-                font-size: 0.75rem;
+                padding: 1rem 1.2rem;
+                padding-left: calc(1.2rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.2rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-buttons {
                 flex-direction: column;
-                padding: 1rem 1.5rem;
+                padding: 1rem 1.2rem;
                 padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
-                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
+                padding-left: calc(1.2rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.2rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-btn {
                 width: 100%;
-                padding: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .overlay-title {
-                font-size: 1.5rem;
-                letter-spacing: 0.5px;
-            }
-            
-            .overlay-catchphrase {
-                font-size: 0.85rem;
+                padding: 0.8rem;
+                font-size: 1rem;
             }
         }
     `;

@@ -68,13 +68,23 @@
     }
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
     color: #fff;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+#main {
     padding: 0 20px;
 }
 
