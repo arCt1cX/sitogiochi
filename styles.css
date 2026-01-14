@@ -479,7 +479,7 @@ footer {
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height for mobile browsers */
     min-height: -webkit-fill-available;
-    background: linear-gradient(135deg, #000000 0%, #1a0a2e 50%, #000000 100%);
+    background: #000000;
     z-index: 10000; /* Above everything */
     display: flex;
     flex-direction: column;
@@ -503,19 +503,7 @@ footer {
 
 /* Animated background gradient */
 .game-info-overlay::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, 
-        rgba(111, 42, 192, 0.2) 0%, 
-        rgba(111, 42, 192, 0.1) 50%, 
-        rgba(111, 42, 192, 0.2) 100%);
-    background-size: 400% 400%;
-    animation: overlayGradient 8s ease infinite;
-    pointer-events: none;
+    display: none;
 }
 
 @keyframes overlayGradient {
