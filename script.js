@@ -266,23 +266,21 @@ document.addEventListener('DOMContentLoaded', () => {
             left: 0;
             right: 0;
             bottom: 0;
-            width: 100%;
-            height: 100%;
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
-            z-index: 9999;
+            z-index: 10000;
             display: flex;
             flex-direction: column;
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.4s ease, visibility 0.4s ease;
             overflow-y: auto;
-            /* iOS safe area support */
-            padding-top: env(safe-area-inset-top);
-            padding-bottom: env(safe-area-inset-bottom);
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            -webkit-overflow-scrolling: touch;
         }
         
         .game-info-overlay.active {
@@ -325,26 +323,35 @@ document.addEventListener('DOMContentLoaded', () => {
             justify-content: space-between;
             align-items: flex-start;
             padding: 1.5rem 2rem;
+            padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+            padding-left: calc(2rem + env(safe-area-inset-left, 0px));
+            padding-right: calc(2rem + env(safe-area-inset-right, 0px));
             background: linear-gradient(180deg, rgba(123, 104, 238, 0.3) 0%, transparent 100%);
+            flex-shrink: 0;
         }
         
         .overlay-title-section {
             flex: 1;
+            min-width: 0;
+            padding-right: 1rem;
         }
         
         .overlay-title {
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: white;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
             margin: 0 0 0.5rem 0;
             background: linear-gradient(90deg, #8a7ced, #614dc2);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.1;
+            line-height: 1.15;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
         
         .overlay-catchphrase {
@@ -498,10 +505,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 flex-direction: column;
                 gap: 1rem;
                 padding: 1rem 1.5rem;
+                padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
             
             .overlay-catchphrase {
@@ -514,6 +524,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             .overlay-content {
                 padding: 1rem 1.5rem;
+                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-section {
@@ -537,7 +549,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             .overlay-buttons {
                 flex-direction: column;
-                padding: 1rem 1.5rem 1.5rem;
+                padding: 1rem 1.5rem;
+                padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+                padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
+                padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
             }
             
             .overlay-btn {
@@ -548,7 +563,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         @media (max-width: 480px) {
             .overlay-title {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
+                letter-spacing: 0.5px;
             }
             
             .overlay-catchphrase {
