@@ -264,8 +264,12 @@ document.addEventListener('DOMContentLoaded', () => {
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
             width: 100%;
             height: 100%;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
             z-index: 9999;
             display: flex;
@@ -274,6 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
             visibility: hidden;
             transition: opacity 0.4s ease, visibility 0.4s ease;
             overflow-y: auto;
+            /* iOS safe area support */
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
         
         .game-info-overlay.active {
@@ -324,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .overlay-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: white;
             text-transform: uppercase;
@@ -335,6 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1.1;
         }
         
         .overlay-catchphrase {
@@ -491,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             .overlay-title {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
             
             .overlay-catchphrase {
@@ -538,7 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         @media (max-width: 480px) {
             .overlay-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             
             .overlay-catchphrase {
@@ -610,8 +620,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <div class="overlay-buttons">
-                <button class="overlay-btn overlay-btn-back" id="overlayBackBtn">${backText}</button>
                 <button class="overlay-btn overlay-btn-play" id="overlayPlayBtn">${playText}</button>
+                <button class="overlay-btn overlay-btn-back" id="overlayBackBtn">${backText}</button>
             </div>
         `;
 
