@@ -619,10 +619,10 @@ function updateGameInfoContent(game) {
     if (featLabel) featLabel.textContent = getTranslation('features') || 'Caratteristiche';
 
     const backBtn = document.getElementById('backBtnText');
-    if (backBtn) backBtn.textContent = getUserLanguage() === 'it' ? '← Indietro' : '← Back';
+    if (backBtn) backBtn.textContent = getUserLanguage() === 'it' ? 'Indietro' : 'Back';
 
     const playBtn = document.getElementById('playBtnText');
-    if (playBtn) playBtn.textContent = getUserLanguage() === 'it' ? 'Gioca 🎮' : 'Play 🎮';
+    if (playBtn) playBtn.textContent = getUserLanguage() === 'it' ? 'Gioca' : 'Play';
 
     // Setup play button to navigate to game
     const playBtnEl = document.getElementById('gameInfoPlayBtn');

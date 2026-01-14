@@ -638,6 +638,13 @@ footer {
     gap: 8px;
 }
 
+.game-info-description h4 .section-icon {
+    width: 20px;
+    height: 20px;
+    fill: #b794f6;
+    flex-shrink: 0;
+}
+
 .game-info-description p {
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
@@ -659,6 +666,13 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.game-info-instructions h4 .section-icon {
+    width: 20px;
+    height: 20px;
+    fill: #b794f6;
+    flex-shrink: 0;
 }
 
 .game-info-instructions ol {
@@ -713,6 +727,13 @@ footer {
     gap: 8px;
 }
 
+.game-info-features h4 .section-icon {
+    width: 20px;
+    height: 20px;
+    fill: #b794f6;
+    flex-shrink: 0;
+}
+
 .game-info-features ul {
     padding-left: 0;
     margin: 0;
@@ -765,6 +786,13 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.game-info-btn .btn-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    flex-shrink: 0;
 }
 
 .game-info-btn-back {
