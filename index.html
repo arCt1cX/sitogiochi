@@ -188,6 +188,11 @@
             letter-spacing: 1px;
         }
 
+        .contact-icon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
         .hamburger-menu {
             position: absolute;
             top: 15px;
@@ -437,6 +442,19 @@
             <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
             <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
             <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+        </div>
+
+        <div class="sidenav-section">
+            <div class="sidenav-header" id="contacts-header">Contatti</div>
+            <a href="mailto:partygamesdrew@gmail.com" id="nav-email">
+                <span class="contact-icon">✉</span> partygamesdrew@gmail.com
+            </a>
+            <a href="https://instagram.com/partygamesdrew" target="_blank" id="nav-instagram">
+                <span class="contact-icon">📷</span> @partygamesdrew
+            </a>
+            <a href="https://tiktok.com/@partygamesdrew" target="_blank" id="nav-tiktok">
+                <span class="contact-icon">🎵</span> @partygamesdrew
+            </a>
         </div>
     </div>
 
@@ -707,6 +725,7 @@
                     document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
                     document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';
                     document.getElementById('nav-cookies').textContent = getTranslation('navCookies') || 'Cookie Policy';
+                    document.getElementById('contacts-header').textContent = getTranslation('navContactsHeader') || 'Contacts';
                 }
             }
         });

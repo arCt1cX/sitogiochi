@@ -26,6 +26,7 @@ const translations = {
         'navTerms': 'Termini di Servizio',
         'navCookies': 'Cookie Policy',
         'navTournament': 'Modalità Torneo',
+        'navContactsHeader': 'Contatti',
 
         // Games Catalog Page
         'gamesPageTitle': 'La Collezione Completa dei Giochi',
@@ -373,6 +374,7 @@ const translations = {
         'navTerms': 'Terms of Service',
         'navCookies': 'Cookie Policy',
         'navTournament': 'Tournament Mode',
+        'navContactsHeader': 'Contacts',
 
         // Games Catalog Page
         'gamesPageTitle': 'The Complete Collection of Games',
