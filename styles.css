@@ -479,7 +479,7 @@ footer {
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height for mobile browsers */
     min-height: -webkit-fill-available;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a0a2e 50%, #000000 100%);
     z-index: 10000; /* Above everything */
     display: flex;
     flex-direction: column;
@@ -510,9 +510,9 @@ footer {
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, 
-        rgba(106, 17, 203, 0.15) 0%, 
-        rgba(37, 117, 252, 0.15) 50%, 
-        rgba(123, 104, 238, 0.15) 100%);
+        rgba(111, 42, 192, 0.2) 0%, 
+        rgba(111, 42, 192, 0.1) 50%, 
+        rgba(111, 42, 192, 0.2) 100%);
     background-size: 400% 400%;
     animation: overlayGradient 8s ease infinite;
     pointer-events: none;
@@ -527,7 +527,7 @@ footer {
 /* Header with player count */
 .game-info-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 15px 20px;
     position: relative;
@@ -551,8 +551,8 @@ footer {
 }
 
 .game-info-back-btn:hover {
-    background: rgba(123, 104, 238, 0.5);
-    border-color: #7b68ee;
+    background: rgba(111, 42, 192, 0.5);
+    border-color: #6F2AC0;
     transform: scale(1.1);
 }
 
@@ -560,8 +560,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(123, 104, 238, 0.3);
-    border: 2px solid rgba(123, 104, 238, 0.6);
+    background: rgba(111, 42, 192, 0.3);
+    border: 2px solid rgba(111, 42, 192, 0.6);
     padding: 10px 18px;
     border-radius: 25px;
     color: white;
@@ -572,7 +572,7 @@ footer {
 .game-info-players svg {
     width: 22px;
     height: 22px;
-    fill: #7b68ee;
+    fill: #6F2AC0;
 }
 
 /* Main content area - scrollable */
@@ -606,7 +606,7 @@ footer {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 8px;
-    background: linear-gradient(90deg, #8a7ced, #b794f6);
+    background: linear-gradient(90deg, #6F2AC0, #9B4DCA);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -630,7 +630,7 @@ footer {
 }
 
 .game-info-description h4 {
-    color: #b794f6;
+    color: #9B4DCA;
     font-size: 1.1rem;
     margin-bottom: 12px;
     display: flex;
@@ -641,7 +641,7 @@ footer {
 .game-info-description h4 .section-icon {
     width: 20px;
     height: 20px;
-    fill: #b794f6;
+    fill: #6F2AC0;
     flex-shrink: 0;
 }
 
@@ -660,7 +660,7 @@ footer {
 }
 
 .game-info-instructions h4 {
-    color: #b794f6;
+    color: #9B4DCA;
     font-size: 1.1rem;
     margin-bottom: 15px;
     display: flex;
@@ -671,7 +671,7 @@ footer {
 .game-info-instructions h4 .section-icon {
     width: 20px;
     height: 20px;
-    fill: #b794f6;
+    fill: #6F2AC0;
     flex-shrink: 0;
 }
 
@@ -699,7 +699,7 @@ footer {
     top: 0;
     width: 24px;
     height: 24px;
-    background: linear-gradient(135deg, #7b68ee, #9370db);
+    background: linear-gradient(135deg, #6F2AC0, #9B4DCA);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -719,7 +719,7 @@ footer {
 }
 
 .game-info-features h4 {
-    color: #b794f6;
+    color: #9B4DCA;
     font-size: 1.1rem;
     margin-bottom: 15px;
     display: flex;
@@ -730,7 +730,7 @@ footer {
 .game-info-features h4 .section-icon {
     width: 20px;
     height: 20px;
-    fill: #b794f6;
+    fill: #6F2AC0;
     flex-shrink: 0;
 }
 
@@ -753,7 +753,7 @@ footer {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #7b68ee;
+    color: #6F2AC0;
     font-weight: bold;
 }
 
@@ -808,16 +808,16 @@ footer {
 }
 
 .game-info-btn-play {
-    background: linear-gradient(135deg, #7b68ee 0%, #9370db 100%);
+    background: linear-gradient(135deg, #6F2AC0 0%, #9B4DCA 100%);
     border: none;
     color: white;
-    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.4);
+    box-shadow: 0 4px 15px rgba(111, 42, 192, 0.4);
 }
 
 .game-info-btn-play:hover {
-    background: linear-gradient(135deg, #8b7cf9 0%, #a580e6 100%);
+    background: linear-gradient(135deg, #8035D9 0%, #A85FD4 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(123, 104, 238, 0.6);
+    box-shadow: 0 6px 20px rgba(111, 42, 192, 0.6);
 }
 
 .game-info-btn-play:active,
@@ -849,7 +849,7 @@ footer {
 .game-info-badge svg {
     width: 16px;
     height: 16px;
-    fill: #7b68ee;
+    fill: #6F2AC0;
 }
 
 /* Responsive adjustments */
