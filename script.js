@@ -256,8 +256,407 @@ document.addEventListener('DOMContentLoaded', () => {
                 max-width: 95%;
             }
         }
+        
+        /* ============================================ */
+        /* Game Info Overlay Styles */
+        /* ============================================ */
+        .game-info-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            overflow-y: auto;
+        }
+        
+        .game-info-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .game-info-overlay.animating {
+            animation: overlayExpand 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .game-info-overlay.closing {
+            animation: overlayCollapse 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        @keyframes overlayExpand {
+            0% {
+                clip-path: circle(0% at var(--origin-x, 50%) var(--origin-y, 50%));
+                opacity: 0;
+            }
+            100% {
+                clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+                opacity: 1;
+            }
+        }
+        
+        @keyframes overlayCollapse {
+            0% {
+                clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+                opacity: 1;
+            }
+            100% {
+                clip-path: circle(0% at var(--origin-x, 50%) var(--origin-y, 50%));
+                opacity: 0;
+            }
+        }
+        
+        .overlay-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(180deg, rgba(123, 104, 238, 0.3) 0%, transparent 100%);
+        }
+        
+        .overlay-title-section {
+            flex: 1;
+        }
+        
+        .overlay-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(90deg, #8a7ced, #614dc2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .overlay-catchphrase {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            margin: 0;
+        }
+        
+        .overlay-players-badge {
+            background: linear-gradient(135deg, #7b68ee 0%, #6a5acd 100%);
+            padding: 0.8rem 1.2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(123, 104, 238, 0.4);
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .players-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .players-count {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+        }
+        
+        .overlay-content {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .overlay-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #d1c7ff;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-title::before {
+            content: '🎮';
+        }
+        
+        .instructions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: instructions;
+        }
+        
+        .instructions-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            counter-increment: instructions;
+        }
+        
+        .instructions-list li::before {
+            content: counter(instructions);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: linear-gradient(135deg, #7b68ee 0%, #6a5acd 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: white;
+        }
+        
+        .instructions-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .overlay-buttons {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem 2rem 2rem;
+            justify-content: center;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+        }
+        
+        .overlay-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            min-width: 150px;
+        }
+        
+        .overlay-btn-play {
+            background: linear-gradient(135deg, #7b68ee 0%, #6a5acd 100%);
+            color: white;
+            box-shadow: 0 4px 20px rgba(123, 104, 238, 0.5);
+        }
+        
+        .overlay-btn-play:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(123, 104, 238, 0.7);
+            background: linear-gradient(135deg, #8a7ced 0%, #7b68ee 100%);
+        }
+        
+        .overlay-btn-back {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .overlay-btn-back:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile responsiveness for overlay */
+        @media (max-width: 768px) {
+            .overlay-header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 1.5rem;
+            }
+            
+            .overlay-title {
+                font-size: 1.8rem;
+            }
+            
+            .overlay-catchphrase {
+                font-size: 0.95rem;
+            }
+            
+            .overlay-players-badge {
+                align-self: flex-start;
+            }
+            
+            .overlay-content {
+                padding: 1rem 1.5rem;
+            }
+            
+            .overlay-section {
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.1rem;
+            }
+            
+            .instructions-list li {
+                font-size: 0.9rem;
+                padding-left: 2rem;
+            }
+            
+            .instructions-list li::before {
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 0.75rem;
+            }
+            
+            .overlay-buttons {
+                flex-direction: column;
+                padding: 1rem 1.5rem 1.5rem;
+            }
+            
+            .overlay-btn {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .overlay-title {
+                font-size: 1.5rem;
+            }
+            
+            .overlay-catchphrase {
+                font-size: 0.85rem;
+            }
+        }
     `;
     document.head.appendChild(style);
+
+    // Folder name mapping for case sensitivity issues
+    const folderNameMap = {
+        'bluffme': 'BluffMe',
+    };
+
+    // Create the overlay element (once, reused for all games)
+    const overlay = document.createElement('div');
+    overlay.className = 'game-info-overlay';
+    overlay.id = 'gameInfoOverlay';
+    document.body.appendChild(overlay);
+
+    // Function to open game info overlay
+    function openGameInfoOverlay(game, buttonElement) {
+        // Get button position for animation origin
+        const rect = buttonElement.getBoundingClientRect();
+        const originX = ((rect.left + rect.width / 2) / window.innerWidth) * 100;
+        const originY = ((rect.top + rect.height / 2) / window.innerHeight) * 100;
+
+        // Set CSS custom properties for animation origin
+        overlay.style.setProperty('--origin-x', `${originX}%`);
+        overlay.style.setProperty('--origin-y', `${originY}%`);
+
+        // Get game info from translations
+        const gameId = game.id.toLowerCase();
+        const title = game.displayName || getTranslation(gameId, 'title');
+        const catchphrase = game.catchphrase || getTranslation(gameId, 'catchphrase');
+        const players = getTranslation(gameId, 'players') || '2+ giocatori';
+        const instructions = getTranslation(gameId, 'instructions') || [];
+        const playersLabel = getTranslation('playersNeeded') || 'Giocatori';
+        const howToPlayTitle = getTranslation('howToPlay') || 'Come Giocare';
+        const playText = getTranslation('play') || 'Gioca';
+        const backText = getTranslation('back') || 'Indietro';
+
+        // Build instructions HTML
+        let instructionsHTML = '';
+        if (Array.isArray(instructions) && instructions.length > 0) {
+            instructionsHTML = instructions.map(instr => `<li>${instr}</li>`).join('');
+        } else {
+            instructionsHTML = '<li>Segui le istruzioni nel gioco</li>';
+        }
+
+        // Build overlay HTML
+        overlay.innerHTML = `
+            <div class="overlay-header">
+                <div class="overlay-title-section">
+                    <h1 class="overlay-title">${title}</h1>
+                    <p class="overlay-catchphrase">${catchphrase}</p>
+                </div>
+                <div class="overlay-players-badge">
+                    <span class="players-label">${playersLabel}</span>
+                    <span class="players-count">${players}</span>
+                </div>
+            </div>
+            <div class="overlay-content">
+                <div class="overlay-section">
+                    <h2 class="section-title">${howToPlayTitle}</h2>
+                    <ol class="instructions-list">
+                        ${instructionsHTML}
+                    </ol>
+                </div>
+            </div>
+            <div class="overlay-buttons">
+                <button class="overlay-btn overlay-btn-back" id="overlayBackBtn">${backText}</button>
+                <button class="overlay-btn overlay-btn-play" id="overlayPlayBtn">${playText}</button>
+            </div>
+        `;
+
+        // Show overlay with animation
+        overlay.classList.add('active', 'animating');
+        document.body.style.overflow = 'hidden'; // Prevent body scroll
+
+        // Remove animating class after animation completes
+        setTimeout(() => {
+            overlay.classList.remove('animating');
+        }, 500);
+
+        // Get folder name for the game
+        const folderName = folderNameMap[game.id] || game.id;
+
+        // Add event listeners for buttons
+        document.getElementById('overlayPlayBtn').addEventListener('click', () => {
+            window.location.href = `${folderName}/index.html`;
+        });
+
+        document.getElementById('overlayBackBtn').addEventListener('click', () => {
+            closeGameInfoOverlay();
+        });
+
+        // Close on escape key
+        const escHandler = (e) => {
+            if (e.key === 'Escape') {
+                closeGameInfoOverlay();
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
+    }
+
+    // Function to close game info overlay
+    function closeGameInfoOverlay() {
+        overlay.classList.add('closing');
+        overlay.classList.remove('active');
+
+        setTimeout(() => {
+            overlay.classList.remove('closing');
+            overlay.innerHTML = '';
+            document.body.style.overflow = ''; // Restore body scroll
+        }, 400);
+    }
 
     // Create and append game cards
     games.forEach((game, index) => {
@@ -292,16 +691,10 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
 
-        // Folder name mapping for case sensitivity issues
-        const folderNameMap = {
-            'bluffme': 'BluffMe',
-        };
-
-        // Add specific event listener to the BUTTON only
+        // Add specific event listener to the BUTTON only - now opens overlay
         playButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Safe practice even if container has no listener
-            const folderName = folderNameMap[game.id] || game.id;
-            window.location.href = `${folderName}/index.html`;
+            e.stopPropagation();
+            openGameInfoOverlay(game, playButton);
         });
 
         // Create catchphrase element
@@ -318,6 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Append card to container
         gamesContainer.appendChild(card);
     });
+
 
     // Add "Coming Soon" card
     const comingSoonCard = document.createElement('div');

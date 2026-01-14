@@ -16,6 +16,7 @@ const translations = {
         'subtitle': '',
         'buyMeCoffee': 'Offrice una birra',
         'italianOnly': 'Solo Italiano',
+        'back': 'Indietro',
 
         // Navigation Items
         'navHome': 'Home',
@@ -363,6 +364,7 @@ const translations = {
         'subtitle': '',
         'buyMeCoffee': 'Offrice una birra',
         'italianOnly': 'Italian Only',
+        'back': 'Back',
 
         // Navigation Items
         'navHome': 'Home',
