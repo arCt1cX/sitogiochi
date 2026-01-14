@@ -263,15 +263,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .game-info-overlay {
             position: fixed !important;
             /* Bleed into the top area to handle PWA status bar gaps */
-            top: -10vh !important;
+            top: -100px !important;
             left: 0 !important;
             right: 0 !important;
             bottom: 0 !important;
             width: 100vw !important;
-            /* Height covers viewport + the bleed area */
-            height: 120vh !important;
-            height: 120dvh !important;
-            background-color: #0f0f23 !important;
+            background-color: #0d0d1f !important; /* Solid base */
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
             z-index: 2147483647 !important;
             display: flex;
@@ -283,8 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
             overflow-x: hidden;
             margin: 0 !important;
             padding: 0 !important;
-            /* Safe area padding added to the container to push content back into view */
-            padding-top: calc(10vh + env(safe-area-inset-top, 0px)) !important;
+            /* Compensate for the top bleed */
+            padding-top: calc(100px + env(safe-area-inset-top, 0px)) !important;
             -webkit-overflow-scrolling: touch;
             overscroll-behavior: none;
             transform: none !important;
@@ -465,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gap: 1rem;
             padding: 1.5rem 2rem 2rem;
             justify-content: center;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+            background: transparent;
         }
         
         .overlay-btn {
