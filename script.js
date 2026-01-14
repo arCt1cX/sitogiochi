@@ -262,13 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
         /* ============================================ */
         .game-info-overlay {
             position: fixed !important;
-            /* Bleed into the top area to handle PWA status bar gaps */
-            top: -100px !important;
+            top: 0 !important;
             left: 0 !important;
             right: 0 !important;
             bottom: 0 !important;
             width: 100vw !important;
-            background-color: #0d0d1f !important; /* Solid base */
+            height: 100vh !important;
+            height: 100dvh !important;
+            background-color: #1a1a2e !important;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
             z-index: 2147483647 !important;
             display: flex;
@@ -280,11 +281,32 @@ document.addEventListener('DOMContentLoaded', () => {
             overflow-x: hidden;
             margin: 0 !important;
             padding: 0 !important;
-            /* Compensate for the top bleed */
-            padding-top: calc(100px + env(safe-area-inset-top, 0px)) !important;
             -webkit-overflow-scrolling: touch;
             overscroll-behavior: none;
             transform: none !important;
+        }
+
+        /* Double bleed to cover gaps on both ends in PWA */
+        .game-info-overlay::before {
+            content: "";
+            position: absolute;
+            top: -200px;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: #1a1a2e; /* Match top of gradient */
+            z-index: -1;
+        }
+        
+        .game-info-overlay::after {
+            content: "";
+            position: absolute;
+            bottom: -200px;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: #0f0f23; /* Match bottom of gradient */
+            z-index: -1;
         }
         
         .game-info-overlay.active {
@@ -306,14 +328,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 opacity: 0;
             }
             100% {
-                clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+                clip-path: circle(200% at var(--origin-x, 50%) var(--origin-y, 50%));
                 opacity: 1;
             }
         }
         
         @keyframes overlayCollapse {
             0% {
-                clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+                clip-path: circle(200% at var(--origin-x, 50%) var(--origin-y, 50%));
                 opacity: 1;
             }
             100% {
@@ -326,9 +348,10 @@ document.addEventListener('DOMContentLoaded', () => {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 1rem 1.5rem;
-            padding-left: calc(1.5rem + env(safe-area-inset-left, 0px));
-            padding-right: calc(1.5rem + env(safe-area-inset-right, 0px));
+            padding: 1.5rem 2rem;
+            padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+            padding-left: calc(2rem + env(safe-area-inset-left, 0px));
+            padding-right: calc(2rem + env(safe-area-inset-right, 0px));
             background: linear-gradient(180deg, rgba(123, 104, 238, 0.3) 0%, transparent 100%);
             flex-shrink: 0;
         }
@@ -460,7 +483,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .overlay-buttons {
             display: flex;
             gap: 1rem;
-            padding: 1.5rem 2rem 2rem;
+            padding: 1.5rem 2rem;
+            padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
             justify-content: center;
             background: transparent;
         }
@@ -612,9 +636,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show overlay with animation
         overlay.classList.add('active', 'animating');
-        // Prevent body and html scroll for PWA
+        // Prevent body and html scroll for PWA and sync background color
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
+        document.body.style.backgroundColor = '#0f0f23';
+        document.documentElement.style.backgroundColor = '#1a1a2e';
 
         // Remove animating class after animation completes
         setTimeout(() => {
@@ -651,9 +677,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             overlay.classList.remove('closing');
             overlay.innerHTML = '';
-            // Restore body and html scroll
+            // Restore body and html scroll and background
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
+            document.body.style.backgroundColor = '';
+            document.documentElement.style.backgroundColor = '';
         }, 400);
     }
 
