@@ -103,38 +103,6 @@
             <button id="open-player-setup">Inizia Gioco</button>
         </div>
 
-        <div id="mode-selection-screen" class="screen hidden">
-            <h2 id="mode-title">Scegli Modalità</h2>
-            <p id="mode-description">Come vuoi giocare?</p>
-            <div class="mode-buttons">
-                <button id="all-categories-btn" class="mode-button">
-                    <span class="mode-icon">🎲</span>
-                    <span id="all-categories-text">Tutte le Categorie</span>
-                    <small id="all-categories-desc">Immagini da tutte le categorie disponibili</small>
-                </button>
-                <button id="custom-categories-btn" class="mode-button">
-                    <span class="mode-icon">✏️</span>
-                    <span id="custom-categories-text">Categorie Personalizzate</span>
-                    <small id="custom-categories-desc">Scegli 5 categorie su cui giocare</small>
-                </button>
-            </div>
-        </div>
-
-        <div id="category-selection-screen" class="screen hidden">
-            <h2 id="category-selection-title">Seleziona 5 Categorie</h2>
-            <p id="category-selection-desc">Scegli le categorie su cui vuoi giocare</p>
-            <div class="category-counter">
-                <span id="selected-count">0</span>/5 <span id="selected-text">selezionate</span>
-            </div>
-            <div id="category-grid" class="category-grid">
-                <!-- Categories will be populated by JavaScript -->
-            </div>
-            <div class="buttons-row">
-                <button id="back-to-mode" class="secondary-button">Indietro</button>
-                <button id="confirm-categories" disabled>Conferma</button>
-            </div>
-        </div>
-
         <div id="player-setup-screen" class="screen hidden">
             <h2 id="setup-title">Configura Giocatori</h2>
             <div class="player-setup-controls">
@@ -276,21 +244,6 @@
 
                 // Update input placeholder
                 document.getElementById('guess-input').placeholder = isItalian ? 'Inserisci la tua risposta...' : 'Enter your answer...';
-
-                // Update mode selection screen
-                document.getElementById('mode-title').textContent = isItalian ? 'Scegli Modalità' : 'Choose Mode';
-                document.getElementById('mode-description').textContent = isItalian ? 'Come vuoi giocare?' : 'How do you want to play?';
-                document.getElementById('all-categories-text').textContent = isItalian ? 'Tutte le Categorie' : 'All Categories';
-                document.getElementById('all-categories-desc').textContent = isItalian ? 'Immagini da tutte le categorie disponibili' : 'Images from all available categories';
-                document.getElementById('custom-categories-text').textContent = isItalian ? 'Categorie Personalizzate' : 'Custom Categories';
-                document.getElementById('custom-categories-desc').textContent = isItalian ? 'Scegli 5 categorie su cui giocare' : 'Choose 5 categories to play with';
-
-                // Update category selection screen
-                document.getElementById('category-selection-title').textContent = isItalian ? 'Seleziona 5 Categorie' : 'Select 5 Categories';
-                document.getElementById('category-selection-desc').textContent = isItalian ? 'Scegli le categorie su cui vuoi giocare' : 'Choose the categories you want to play with';
-                document.getElementById('selected-text').textContent = isItalian ? 'selezionate' : 'selected';
-                document.getElementById('back-to-mode').textContent = isItalian ? 'Indietro' : 'Back';
-                document.getElementById('confirm-categories').textContent = isItalian ? 'Conferma' : 'Confirm';
             }
         });
     </script>

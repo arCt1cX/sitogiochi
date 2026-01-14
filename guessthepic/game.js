@@ -36,20 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicatorCircles = document.querySelectorAll('.circle');
     const currentCategoryElement = document.getElementById('current-category');
 
-    // New game elements
-    const modeSelectionScreen = document.getElementById('mode-selection-screen');
-    const categorySelectionScreen = document.getElementById('category-selection-screen');
-    const categoryGrid = document.getElementById('category-grid');
-    const selectedCountElement = document.getElementById('selected-count');
-    const confirmCategoriesButton = document.getElementById('confirm-categories');
-    const backToModeButton = document.getElementById('back-to-mode');
-    const allCategoriesButton = document.getElementById('all-categories-btn');
-    const customCategoriesButton = document.getElementById('custom-categories-btn');
-
     // Game state
     let categories = [];
-    let selectedCategories = []; // Categories chosen in custom mode
-    let customCategoryMode = false;
     let allPlayers = []; // Store players for the whole game
     let playerRounds = []; // Array to store each player's round images
     let currentQuestionIndex = 0;
@@ -70,15 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let imageCache = {};
 
     // Event listeners for game navigation
-    openPlayerSetupButton.addEventListener('click', openModeSelection);
+    openPlayerSetupButton.addEventListener('click', openPlayerSetup);
     startButton.addEventListener('click', startGame);
-
-    // Mode Selection Listeners
-    allCategoriesButton.addEventListener('click', startAllCategoriesMode);
-    customCategoriesButton.addEventListener('click', openCategorySelection);
-    backToModeButton.addEventListener('click', openModeSelection);
-    confirmCategoriesButton.addEventListener('click', openPlayerSetup);
-
     playAgainButton.addEventListener('click', () => {
         // Start a new round or go back to player setup if all rounds are finished
         if (currentRoundNumber < totalRounds) {
@@ -227,102 +208,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
-     * Show the mode selection screen
-     */
-    function openModeSelection() {
-        startScreen.classList.add('hidden');
-        modeSelectionScreen.classList.remove('hidden');
-        categorySelectionScreen.classList.add('hidden');
-        playerSetupScreen.classList.add('hidden');
-        resultScreen.classList.add('hidden');
-    }
-
-    /**
-     * Start the game with all categories available
-     */
-    function startAllCategoriesMode() {
-        customCategoryMode = false;
-        selectedCategories = [];
-        openPlayerSetup();
-    }
-
-    /**
-     * Show the category selection screen
-     */
-    function openCategorySelection() {
-        customCategoryMode = true;
-        selectedCategories = [];
-
-        modeSelectionScreen.classList.add('hidden');
-        categorySelectionScreen.classList.remove('hidden');
-
-        populateCategoryGrid();
-        updateCategoryCounter();
-    }
-
-    /**
-     * Populate the category grid with all available categories
-     */
-    function populateCategoryGrid() {
-        categoryGrid.innerHTML = '';
-
-        // Use all categories that have items or our scanned fallback categories
-        const availableCategories = categories.length > 0 ? categories : [
-            { name: 'actors' }, { name: 'monuments and locations' }, { name: 'singers' },
-            { name: 'politicians' }, { name: 'cartoon characters' }, { name: 'football teams' },
-            { name: 'tv series - movies' }, { name: 'food' }, { name: 'comic characters' },
-            { name: 'animals' }, { name: 'flags' }, { name: 'historical figures' },
-            { name: 'athletes' }, { name: 'logo without name' }, { name: 'web stars and influencers' },
-            { name: 'maps' }
-        ];
-
-        availableCategories.forEach(category => {
-            const item = document.createElement('div');
-            item.className = 'category-item';
-            item.textContent = category.name;
-            item.dataset.name = category.name;
-
-            item.addEventListener('click', () => toggleCategory(category.name, item));
-            categoryGrid.appendChild(item);
-        });
-    }
-
-    /**
-     * Toggle a category's selection status
-     */
-    function toggleCategory(categoryName, element) {
-        const index = selectedCategories.indexOf(categoryName);
-
-        if (index > -1) {
-            // Deselect
-            selectedCategories.splice(index, 1);
-            element.classList.remove('selected');
-        } else {
-            // Select (max 5)
-            if (selectedCategories.length < 5) {
-                selectedCategories.push(categoryName);
-                element.classList.add('selected');
-            }
-        }
-
-        updateCategoryCounter();
-    }
-
-    /**
-     * Update the category counter and confirm button state
-     */
-    function updateCategoryCounter() {
-        selectedCountElement.textContent = selectedCategories.length;
-        confirmCategoriesButton.disabled = selectedCategories.length !== 5;
-    }
-
-    /**
      * Open the player setup screen
      */
     function openPlayerSetup() {
         startScreen.classList.add('hidden');
-        modeSelectionScreen.classList.add('hidden');
-        categorySelectionScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         playerTransitionScreen.classList.add('hidden');
         playerSetupScreen.classList.remove('hidden');
@@ -678,13 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const playerRound = [];
 
         // Get all categories that have items
-        let validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
-
-        // If in custom mode, further filter by user selection
-        if (customCategoryMode && selectedCategories.length > 0) {
-            console.log("Filtering categories based on user selection:", selectedCategories);
-            validCategories = validCategories.filter(cat => selectedCategories.includes(cat.name));
-        }
+        const validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
 
         if (validCategories.length === 0) {
             console.error("No valid categories with items found.");
