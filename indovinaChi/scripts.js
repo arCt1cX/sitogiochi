@@ -214,11 +214,21 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.currentQuestions = 0;
         questionCount.textContent = '0';
 
-        // Reset change word state
+        // Reset change word state based on mode
         gameState.changeWordCount = 0;
         const changeBtn = document.getElementById('change-word-btn');
-        changeBtn.style.opacity = '1';
-        changeBtn.style.cursor = 'pointer';
+        
+        if (gameState.mode === 'custom') {
+            // Hide change word button for custom mode
+            changeBtn.style.display = 'none';
+        } else {
+            changeBtn.style.display = '';
+            changeBtn.style.opacity = '1';
+            changeBtn.style.cursor = 'pointer';
+            // Set max changes: 5 for random, 3 for chosen
+            const maxChanges = gameState.mode === 'random' ? 5 : 3;
+            document.getElementById('changeWordCount').textContent = maxChanges;
+        }
 
         // Reset give up button
         gameState.giveUpConfirmationPending = false;
@@ -369,10 +379,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Change Word functionality
     function changeWord() {
-        if (gameState.changeWordCount >= 3) {
-            const lang = getUserLanguage();
-            const translations = gameTranslations[lang] || gameTranslations['en'];
-            alert(translations.noMoreChangesAlert);
+        // Get max changes based on mode: 5 for random, 3 for chosen, 0 for custom
+        const maxChanges = gameState.mode === 'random' ? 5 : (gameState.mode === 'chosen' ? 3 : 0);
+        
+        if (gameState.changeWordCount >= maxChanges) {
             return;
         }
 
@@ -408,14 +418,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('word-display').textContent = gameState.currentWord;
         document.getElementById('categoryLabel').textContent = gameState.currentCategory;
 
-        const lang = getUserLanguage();
-        const translations = gameTranslations[lang] || gameTranslations['en'];
-
-        let changesLeft = 3 - gameState.changeWordCount;
-        alert(`${translations.wordChangedAlert} (${changesLeft} ${translations.changesLeft || 'remaining'})`);
+        // Update button counter
+        let changesLeft = maxChanges - gameState.changeWordCount;
+        document.getElementById('changeWordCount').textContent = changesLeft;
 
         // Disable button visually if limit reached
-        if (gameState.changeWordCount >= 3) {
+        if (gameState.changeWordCount >= maxChanges) {
             document.getElementById('change-word-btn').style.opacity = '0.5';
             document.getElementById('change-word-btn').style.cursor = 'not-allowed';
         }
