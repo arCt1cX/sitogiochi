@@ -261,16 +261,20 @@ document.addEventListener('DOMContentLoaded', () => {
         /* Game Info Overlay Styles */
         /* ============================================ */
         .game-info-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100vw;
-            height: 100vh;
-            height: 100dvh;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
-            z-index: 10000;
+            position: fixed !important;
+            inset: 0 !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            width: 100dvw !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+            z-index: 999999 !important;
             display: flex;
             flex-direction: column;
             opacity: 0;
@@ -278,9 +282,13 @@ document.addEventListener('DOMContentLoaded', () => {
             transition: opacity 0.4s ease, visibility 0.4s ease;
             overflow-y: auto;
             overflow-x: hidden;
-            margin: 0;
-            padding: 0;
+            margin: 0 !important;
+            padding: 0 !important;
             -webkit-overflow-scrolling: touch;
+            transform: none !important;
+            /* PWA specific - ensure it covers status bar area */
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
         }
         
         .game-info-overlay.active {
@@ -580,10 +588,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Create the overlay element (once, reused for all games)
+    // Append to html element (not body) for PWA to ensure full screen coverage
     const overlay = document.createElement('div');
     overlay.className = 'game-info-overlay';
     overlay.id = 'gameInfoOverlay';
-    document.body.appendChild(overlay);
+    document.documentElement.appendChild(overlay);
 
     // Function to open game info overlay
     function openGameInfoOverlay(game, buttonElement) {
@@ -643,7 +652,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show overlay with animation
         overlay.classList.add('active', 'animating');
-        document.body.style.overflow = 'hidden'; // Prevent body scroll
+        // Prevent body and html scroll for PWA
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
 
         // Remove animating class after animation completes
         setTimeout(() => {
@@ -680,7 +691,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             overlay.classList.remove('closing');
             overlay.innerHTML = '';
-            document.body.style.overflow = ''; // Restore body scroll
+            // Restore body and html scroll
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
         }, 400);
     }
 
