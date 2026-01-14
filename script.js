@@ -24,81 +24,169 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "drewnking",
             displayName: getTranslation('drewnking', 'title'),
             catchphrase: getTranslation('drewnking', 'catchphrase'),
-            image: "picolo.png" // CAMBIA QUI
+            image: "picolo.png",
+            players: getTranslation('drewnking', 'players'),
+            time: getTranslation('drewnking', 'time'),
+            difficulty: getTranslation('drewnking', 'difficulty'),
+            description: getTranslation('drewnking', 'description'),
+            features: getTranslation('drewnking', 'features'),
+            instructions: getTranslation('drewnking', 'instructions')
         },
         {
             id: "impostor",
             displayName: getTranslation('impostor', 'title'),
             catchphrase: getTranslation('impostor', 'catchphrase'),
-            image: "impostor.png" // CAMBIA QUI
+            image: "impostor.png",
+            players: getTranslation('impostor', 'players'),
+            time: getTranslation('impostor', 'time'),
+            difficulty: getTranslation('impostor', 'difficulty'),
+            description: getTranslation('impostor', 'description'),
+            features: getTranslation('impostor', 'features'),
+            instructions: getTranslation('impostor', 'instructions')
         },
         {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),
-            image: "mrdrew.png" // CAMBIA QUI
+            image: "mrdrew.png",
+            players: getTranslation('mrdrew', 'players'),
+            time: getTranslation('mrdrew', 'time'),
+            difficulty: getTranslation('mrdrew', 'difficulty'),
+            description: getTranslation('mrdrew', 'description'),
+            features: getTranslation('mrdrew', 'features'),
+            instructions: getTranslation('mrdrew', 'instructions')
         },
         {
             id: "hottakes",
             displayName: getTranslation('hottakes', 'title'),
             catchphrase: getTranslation('hottakes', 'catchphrase'),
-            image: "hottakes.png" // CAMBIA QUI
+            image: "hottakes.png",
+            players: getTranslation('hottakes', 'players'),
+            time: getTranslation('hottakes', 'time'),
+            difficulty: getTranslation('hottakes', 'difficulty'),
+            description: getTranslation('hottakes', 'description'),
+            features: getTranslation('hottakes', 'features'),
+            instructions: getTranslation('hottakes', 'instructions')
         },
         {
             id: "indovinaChi",
             displayName: getTranslation('indovinachi', 'title'),
             catchphrase: getTranslation('indovinachi', 'catchphrase'),
-            image: "indovinachi.png" // CAMBIA QUI
+            image: "indovinachi.png",
+            players: getTranslation('indovinachi', 'players'),
+            time: getTranslation('indovinachi', 'time'),
+            difficulty: getTranslation('indovinachi', 'difficulty'),
+            description: getTranslation('indovinachi', 'description'),
+            features: getTranslation('indovinachi', 'features'),
+            instructions: getTranslation('indovinachi', 'instructions')
         },
         {
             id: "quizzy",
             displayName: getTranslation('quizzy', 'title'),
             catchphrase: getTranslation('quizzy', 'catchphrase'),
-            image: "quizzy.png" // CAMBIA QUI
+            image: "quizzy.png",
+            players: getTranslation('quizzy', 'players'),
+            time: getTranslation('quizzy', 'time'),
+            difficulty: getTranslation('quizzy', 'difficulty'),
+            description: getTranslation('quizzy', 'description'),
+            features: getTranslation('quizzy', 'features'),
+            instructions: getTranslation('quizzy', 'instructions')
         },
         {
             id: "guessthepic",
             displayName: getTranslation('guessthepic', 'title'),
             catchphrase: getTranslation('guessthepic', 'catchphrase'),
-            image: "guessrush.png" // CAMBIA QUI
+            image: "guessrush.png",
+            players: getTranslation('guessthepic', 'players'),
+            time: getTranslation('guessthepic', 'time'),
+            difficulty: getTranslation('guessthepic', 'difficulty'),
+            description: getTranslation('guessthepic', 'description'),
+            features: getTranslation('guessthepic', 'features'),
+            instructions: getTranslation('guessthepic', 'instructions')
         },
         {
             id: "chainreaction",
             displayName: getTranslation('chainreaction', 'title'),
             catchphrase: getTranslation('chainreaction', 'catchphrase'),
-            image: "chainReaction.png" // CAMBIA QUI
+            image: "chainReaction.png",
+            players: getTranslation('chainreaction', 'players'),
+            time: getTranslation('chainreaction', 'time'),
+            difficulty: getTranslation('chainreaction', 'difficulty'),
+            description: getTranslation('chainreaction', 'description'),
+            features: getTranslation('chainreaction', 'features'),
+            instructions: getTranslation('chainreaction', 'instructions')
         },
         {
             id: "bluffme",
             displayName: getTranslation('bluffme', 'title'),
             catchphrase: getTranslation('bluffme', 'catchphrase'),
-            image: "bluffme.png" // CAMBIA QUI
+            image: "bluffme.png",
+            players: getTranslation('bluffme', 'players'),
+            time: getTranslation('bluffme', 'time'),
+            difficulty: getTranslation('bluffme', 'difficulty'),
+            description: getTranslation('bluffme', 'description'),
+            features: getTranslation('bluffme', 'features'),
+            instructions: getTranslation('bluffme', 'instructions')
         },
         {
             id: "alphabetgame",
             displayName: getTranslation('alphabetgame', 'title'),
             catchphrase: getTranslation('alphabetgame', 'catchphrase'),
-            image: "alphabet.png" // CAMBIA QUI
+            image: "alphabet.png",
+            players: getTranslation('alphabetgame', 'players'),
+            time: getTranslation('alphabetgame', 'time'),
+            difficulty: getTranslation('alphabetgame', 'difficulty'),
+            description: getTranslation('alphabetgame', 'description'),
+            features: getTranslation('alphabetgame', 'features'),
+            instructions: getTranslation('alphabetgame', 'instructions')
         },
         {
             id: "timergame",
             displayName: getTranslation('timergame', 'title'),
             catchphrase: getTranslation('timergame', 'catchphrase'),
-            image: "wordrace.png" // CAMBIA QUI
+            image: "wordrace.png",
+            players: getTranslation('timergame', 'players'),
+            time: getTranslation('timergame', 'time'),
+            difficulty: getTranslation('timergame', 'difficulty'),
+            description: getTranslation('timergame', 'description'),
+            features: getTranslation('timergame', 'features'),
+            instructions: getTranslation('timergame', 'instructions')
         },
         {
             id: "colorgrid",
             displayName: getTranslation('colorgrid', 'title'),
             catchphrase: getTranslation('colorgrid', 'catchphrase'),
-            image: "colorgrid.png" // CAMBIA QUI
+            image: "colorgrid.png",
+            players: getTranslation('colorgrid', 'players'),
+            time: getTranslation('colorgrid', 'time'),
+            difficulty: getTranslation('colorgrid', 'difficulty'),
+            description: getTranslation('colorgrid', 'description'),
+            features: getTranslation('colorgrid', 'features'),
+            instructions: getTranslation('colorgrid', 'instructions')
         },
         {
             id: "tictactopics",
             displayName: getTranslation('tictactopics', 'title'),
             catchphrase: getTranslation('tictactopics', 'catchphrase'),
-            image: "tictactopics.png" // CAMBIA QUI
+            image: "tictactopics.png",
+            players: getTranslation('tictactopics', 'players'),
+            time: getTranslation('tictactopics', 'time'),
+            difficulty: getTranslation('tictactopics', 'difficulty'),
+            description: getTranslation('tictactopics', 'description'),
+            features: getTranslation('tictactopics', 'features'),
+            instructions: getTranslation('tictactopics', 'instructions')
         }
     ];
+
+    // Store games globally for overlay access
+    window.gamesData = games;
+
+    // Folder name mapping for case sensitivity issues
+    const folderNameMap = {
+        'bluffme': 'BluffMe',
+        'indovinaChi': 'indovinaChi'
+    };
+    window.folderNameMap = folderNameMap;
 
     // Select the container element
     const gamesContainer = document.getElementById('gamesContainer');
@@ -292,16 +380,10 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
 
-        // Folder name mapping for case sensitivity issues
-        const folderNameMap = {
-            'bluffme': 'BluffMe',
-        };
-
-        // Add specific event listener to the BUTTON only
+        // Add event listener to open game info overlay instead of navigating directly
         playButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Safe practice even if container has no listener
-            const folderName = folderNameMap[game.id] || game.id;
-            window.location.href = `${folderName}/index.html`;
+            e.stopPropagation();
+            openGameInfo(game);
         });
 
         // Create catchphrase element
@@ -425,4 +507,152 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+});
+
+// ============================================
+// GAME INFO OVERLAY FUNCTIONS
+// ============================================
+
+// Current game being displayed
+let currentGameData = null;
+
+// Open the game info overlay
+function openGameInfo(game) {
+    currentGameData = game;
+    const overlay = document.getElementById('gameInfoOverlay');
+    if (!overlay) return;
+
+    // Update overlay content
+    updateGameInfoContent(game);
+
+    // Show overlay with animation
+    overlay.classList.add('active');
+    
+    // Prevent body scroll
+    document.body.classList.add('overlay-open');
+    
+    // Store scroll position for iOS
+    window.overlayScrollY = window.scrollY;
+}
+
+// Close the game info overlay
+function closeGameInfo() {
+    const overlay = document.getElementById('gameInfoOverlay');
+    if (!overlay) return;
+
+    // Hide overlay
+    overlay.classList.remove('active');
+    
+    // Restore body scroll
+    document.body.classList.remove('overlay-open');
+    
+    // Restore scroll position for iOS
+    if (window.overlayScrollY !== undefined) {
+        window.scrollTo(0, window.overlayScrollY);
+    }
+    
+    currentGameData = null;
+}
+
+// Update the overlay content with game data
+function updateGameInfoContent(game) {
+    // Update icon
+    const iconEl = document.getElementById('gameInfoIcon');
+    if (iconEl) {
+        iconEl.src = `icone%20per%20giochi/${game.image}`;
+        iconEl.alt = `${game.displayName} Icon`;
+    }
+
+    // Update title and catchphrase
+    const titleEl = document.getElementById('gameInfoTitle');
+    if (titleEl) titleEl.textContent = game.displayName;
+
+    const catchphraseEl = document.getElementById('gameInfoCatchphrase');
+    if (catchphraseEl) catchphraseEl.textContent = game.catchphrase;
+
+    // Update players
+    const playersEl = document.getElementById('gameInfoPlayersText');
+    if (playersEl) playersEl.textContent = game.players || '2-10 giocatori';
+
+    // Update time
+    const timeEl = document.getElementById('gameInfoTime');
+    if (timeEl) timeEl.textContent = game.time || '10-15 min';
+
+    // Update difficulty
+    const difficultyEl = document.getElementById('gameInfoDifficulty');
+    if (difficultyEl) difficultyEl.textContent = game.difficulty || 'Principiante';
+
+    // Update description
+    const descEl = document.getElementById('gameInfoDesc');
+    if (descEl) descEl.textContent = game.description || '';
+
+    // Update instructions
+    const instructionsEl = document.getElementById('gameInfoInstructions');
+    if (instructionsEl && Array.isArray(game.instructions)) {
+        instructionsEl.innerHTML = '';
+        game.instructions.forEach(instruction => {
+            const li = document.createElement('li');
+            li.textContent = instruction;
+            instructionsEl.appendChild(li);
+        });
+    }
+
+    // Update features
+    const featuresEl = document.getElementById('gameInfoFeatures');
+    if (featuresEl && Array.isArray(game.features)) {
+        featuresEl.innerHTML = '';
+        game.features.forEach(feature => {
+            const li = document.createElement('li');
+            li.textContent = feature;
+            featuresEl.appendChild(li);
+        });
+    }
+
+    // Update labels based on language
+    const descLabel = document.getElementById('descriptionLabel');
+    if (descLabel) descLabel.textContent = getUserLanguage() === 'it' ? 'Descrizione' : 'Description';
+
+    const instrLabel = document.getElementById('instructionsLabel');
+    if (instrLabel) instrLabel.textContent = getTranslation('howToPlay') || 'Come Giocare';
+
+    const featLabel = document.getElementById('featuresLabel');
+    if (featLabel) featLabel.textContent = getTranslation('features') || 'Caratteristiche';
+
+    const backBtn = document.getElementById('backBtnText');
+    if (backBtn) backBtn.textContent = getUserLanguage() === 'it' ? '← Indietro' : '← Back';
+
+    const playBtn = document.getElementById('playBtnText');
+    if (playBtn) playBtn.textContent = getUserLanguage() === 'it' ? 'Gioca 🎮' : 'Play 🎮';
+
+    // Setup play button to navigate to game
+    const playBtnEl = document.getElementById('gameInfoPlayBtn');
+    if (playBtnEl) {
+        // Remove old listeners by cloning
+        const newPlayBtn = playBtnEl.cloneNode(true);
+        playBtnEl.parentNode.replaceChild(newPlayBtn, playBtnEl);
+        
+        newPlayBtn.addEventListener('click', () => {
+            const folderName = window.folderNameMap[game.id] || game.id;
+            window.location.href = `${folderName}/index.html`;
+        });
+    }
+}
+
+// Close overlay when pressing Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const overlay = document.getElementById('gameInfoOverlay');
+        if (overlay && overlay.classList.contains('active')) {
+            closeGameInfo();
+        }
+    }
+});
+
+// Handle back button on mobile (for PWA)
+window.addEventListener('popstate', function(e) {
+    const overlay = document.getElementById('gameInfoOverlay');
+    if (overlay && overlay.classList.contains('active')) {
+        e.preventDefault();
+        closeGameInfo();
+    }
 });

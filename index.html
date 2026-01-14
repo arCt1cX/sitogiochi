@@ -443,6 +443,72 @@
     <!-- Overlay for when sidebar is open -->
     <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
 
+    <!-- Game Info Overlay - Fullscreen Modal -->
+    <div id="gameInfoOverlay" class="game-info-overlay">
+        <div class="game-info-header">
+            <button class="game-info-back-btn" onclick="closeGameInfo()" aria-label="Close">
+                ←
+            </button>
+            <div class="game-info-players" id="gameInfoPlayers">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span id="gameInfoPlayersText">3-10 giocatori</span>
+            </div>
+        </div>
+        
+        <div class="game-info-content">
+            <div class="game-info-title-section">
+                <img id="gameInfoIcon" class="game-info-icon" src="" alt="Game Icon">
+                <h2 id="gameInfoTitle" class="game-info-title">Game Title</h2>
+                <p id="gameInfoCatchphrase" class="game-info-catchphrase">Catchphrase here</p>
+            </div>
+            
+            <div class="game-info-badges" id="gameInfoBadges">
+                <div class="game-info-badge">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                    <span id="gameInfoTime">10-15 min</span>
+                </div>
+                <div class="game-info-badge">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span id="gameInfoDifficulty">Principiante</span>
+                </div>
+            </div>
+            
+            <div class="game-info-description">
+                <h4>📖 <span id="descriptionLabel">Descrizione</span></h4>
+                <p id="gameInfoDesc">Game description here...</p>
+            </div>
+            
+            <div class="game-info-instructions">
+                <h4>🎮 <span id="instructionsLabel">Come Giocare</span></h4>
+                <ol id="gameInfoInstructions">
+                    <!-- Instructions will be inserted here -->
+                </ol>
+            </div>
+            
+            <div class="game-info-features">
+                <h4>✨ <span id="featuresLabel">Caratteristiche</span></h4>
+                <ul id="gameInfoFeatures">
+                    <!-- Features will be inserted here -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="game-info-footer">
+            <button class="game-info-btn game-info-btn-back" onclick="closeGameInfo()">
+                <span id="backBtnText">← Indietro</span>
+            </button>
+            <button class="game-info-btn game-info-btn-play" id="gameInfoPlayBtn">
+                <span id="playBtnText">Gioca 🎮</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Main Content Wrapper -->
     <div id="main">
         <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
