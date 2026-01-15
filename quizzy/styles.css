@@ -111,6 +111,10 @@ h1 {
     animation: shine 3s linear infinite;
 }
 
+.setup-game-title {
+    margin-bottom: 1.5rem;
+}
+
 @keyframes shine {
     0% {
         background-position: 0% center;

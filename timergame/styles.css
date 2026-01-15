@@ -88,65 +88,6 @@ h1 {
     color: var(--purple-primary);
 }
 
-/* Game Instructions */
-.game-instructions {
-    background-color: rgba(50, 50, 50, 0.7);
-    border-radius: 10px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: left;
-    box-shadow: 0 0 15px rgba(108, 92, 231, 0.2);
-    border: 1px solid var(--purple-primary);
-}
-
-.game-instructions p {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: var(--purple-secondary);
-    text-align: center;
-    font-weight: bold;
-}
-
-.mode-instructions {
-    margin: 10px 0 15px 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
-}
-
-.mode-instructions:last-of-type {
-    border-bottom: none;
-}
-
-.mode-instructions h3 {
-    font-size: 1.1rem;
-    color: var(--purple-secondary);
-    margin-bottom: 8px;
-}
-
-.game-instructions ul {
-    padding-left: 25px;
-}
-
-.game-instructions li {
-    margin-bottom: 8px;
-    line-height: 1.4;
-    color: var(--text-color);
-    font-size: 0.95rem;
-}
-
-.game-instructions .tip {
-    background-color: rgba(76, 209, 55, 0.15);
-    border-left: 4px solid var(--active-green);
-    padding: 10px 15px;
-    margin-top: 15px;
-    border-radius: 0 6px 6px 0;
-    font-style: italic;
-    color: var(--active-green);
-    font-size: 1rem;
-    text-align: left;
-}
-
 .menu-option {
     width: 100%;
     margin-bottom: 20px;

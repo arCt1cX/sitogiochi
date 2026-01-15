@@ -118,6 +118,13 @@ const gameTranslations = {
 function applyGameTranslations() {
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
+
+    const setText = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = value;
+        }
+    };
     
     // Update page title and meta description
     document.title = translations.pageTitleDesc;
@@ -137,48 +144,48 @@ function applyGameTranslations() {
     }
     
     // Update home button text
-    document.getElementById('homeText').textContent = translations.home;
+    setText('homeText', translations.home);
     
     // Update all start menu elements
-    document.getElementById('gameTitle').textContent = translations.gameTitle;
-    document.getElementById('playerModeTitle').textContent = translations.playerModeTitle;
-    document.getElementById('players2Text').textContent = translations.players2Text;
-    document.getElementById('players3Text').textContent = translations.players3Text;
-    document.getElementById('players4Text').textContent = translations.players4Text;
-    document.getElementById('gameModeTitle').textContent = translations.gameModeTitle;
-    document.getElementById('timerModeText').textContent = translations.timerModeText;
-    document.getElementById('categoryModeText').textContent = translations.categoryModeText;
-    document.getElementById('initialTimeTitle').textContent = translations.initialTimeTitle;
-    document.getElementById('seconds30Text').textContent = translations.seconds30Text;
-    document.getElementById('minute1Text').textContent = translations.minute1Text;
-    document.getElementById('minutes2Text').textContent = translations.minutes2Text;
-    document.getElementById('minutes5Text').textContent = translations.minutes5Text;
-    document.getElementById('startGameText').textContent = translations.startGameText;
+    setText('gameTitle', translations.gameTitle);
+    setText('playerModeTitle', translations.playerModeTitle);
+    setText('players2Text', translations.players2Text);
+    setText('players3Text', translations.players3Text);
+    setText('players4Text', translations.players4Text);
+    setText('gameModeTitle', translations.gameModeTitle);
+    setText('timerModeText', translations.timerModeText);
+    setText('categoryModeText', translations.categoryModeText);
+    setText('initialTimeTitle', translations.initialTimeTitle);
+    setText('seconds30Text', translations.seconds30Text);
+    setText('minute1Text', translations.minute1Text);
+    setText('minutes2Text', translations.minutes2Text);
+    setText('minutes5Text', translations.minutes5Text);
+    setText('startGameText', translations.startGameText);
     
     // Update how to play section
-    document.getElementById('howToPlayTitle').textContent = translations.howToPlayTitle;
-    document.getElementById('challengeDescription').textContent = translations.challengeDescription;
-    document.getElementById('mode2pTitle').textContent = translations.mode2pTitle;
-    document.getElementById('mode2p1').textContent = translations.mode2p1;
-    document.getElementById('mode2p2').textContent = translations.mode2p2;
-    document.getElementById('mode2p3').textContent = translations.mode2p3;
-    document.getElementById('mode2p4').textContent = translations.mode2p4;
-    document.getElementById('mode3pTitle').textContent = translations.mode3pTitle;
-    document.getElementById('mode3p1').textContent = translations.mode3p1;
-    document.getElementById('mode3p2').textContent = translations.mode3p2;
-    document.getElementById('mode3p3').textContent = translations.mode3p3;
-    document.getElementById('mode3p4').textContent = translations.mode3p4;
-    document.getElementById('mode3p5').textContent = translations.mode3p5;
-    document.getElementById('mode3p6').textContent = translations.mode3p6;
-    document.getElementById('mode4pTitle').textContent = translations.mode4pTitle;
-    document.getElementById('mode4p1').textContent = translations.mode4p1;
-    document.getElementById('mode4p2').textContent = translations.mode4p2;
-    document.getElementById('mode4p3').textContent = translations.mode4p3;
-    document.getElementById('mode4p4').textContent = translations.mode4p4;
-    document.getElementById('mode4p5').textContent = translations.mode4p5;
-    document.getElementById('mode4p6').textContent = translations.mode4p6;
-    document.getElementById('mode4p7').textContent = translations.mode4p7;
-    document.getElementById('tipText').textContent = translations.tipText;
+    setText('howToPlayTitle', translations.howToPlayTitle);
+    setText('challengeDescription', translations.challengeDescription);
+    setText('mode2pTitle', translations.mode2pTitle);
+    setText('mode2p1', translations.mode2p1);
+    setText('mode2p2', translations.mode2p2);
+    setText('mode2p3', translations.mode2p3);
+    setText('mode2p4', translations.mode2p4);
+    setText('mode3pTitle', translations.mode3pTitle);
+    setText('mode3p1', translations.mode3p1);
+    setText('mode3p2', translations.mode3p2);
+    setText('mode3p3', translations.mode3p3);
+    setText('mode3p4', translations.mode3p4);
+    setText('mode3p5', translations.mode3p5);
+    setText('mode3p6', translations.mode3p6);
+    setText('mode4pTitle', translations.mode4pTitle);
+    setText('mode4p1', translations.mode4p1);
+    setText('mode4p2', translations.mode4p2);
+    setText('mode4p3', translations.mode4p3);
+    setText('mode4p4', translations.mode4p4);
+    setText('mode4p5', translations.mode4p5);
+    setText('mode4p6', translations.mode4p6);
+    setText('mode4p7', translations.mode4p7);
+    setText('tipText', translations.tipText);
     
     // Update game UI elements
     // Since some of these might be dynamically generated, we'll update them all

@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Game Over screen
         document.getElementById('play-again').addEventListener('click', function () {
             resetGame();
-            showScreen(screens.welcome);
+            showScreen(screens.setup);
         });
     }
 
@@ -854,7 +854,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("Error recovery: moving to player index:", gameState.currentPlayerIndex);
 
                 // Simple screen transition to welcome screen for recovery
-                showScreen(screens.welcome);
+                showScreen(screens.setup);
             }, 100);
         }
     }
@@ -1134,14 +1134,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Critical error - no valid combination found
                         alert('Error: No valid categories or difficulties available.');
                         resetGame();
-                        showScreen(screens.welcome);
+                        showScreen(screens.setup);
                         return;
                     }
                 } else {
                     // Critical error - no valid categories
                     alert('Error: No categories available.');
                     resetGame();
-                    showScreen(screens.welcome);
+                    showScreen(screens.setup);
                     return;
                 }
             }
@@ -2091,7 +2091,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!continueButton || !continueButton.parentNode) {
                 console.error("Continue button or its parent node not found");
                 // Try to show welcome screen as fallback
-                showScreen(screens.welcome);
+                showScreen(screens.setup);
                 return;
             }
 
@@ -2152,7 +2152,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Fallback recovery - move to welcome screen
                     gameState.currentPlayerIndex = (gameState.currentPlayerIndex + 1) % gameState.players.length;
                     console.log("Error recovery after continue: moving to player index:", gameState.currentPlayerIndex);
-                    showScreen(screens.welcome);
+                    showScreen(screens.setup);
                 }
 
                 console.log("Called forceNextTurn");
@@ -2164,7 +2164,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {
             console.error("Error in showResult:", error);
             // Fallback - try to go to welcome screen
-            showScreen(screens.welcome);
+            showScreen(screens.setup);
         }
     }
 
@@ -2283,7 +2283,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error in forceNextTurn:", error);
 
             // Try to recover by going to welcome screen as a last resort
-            showScreen(screens.welcome);
+            showScreen(screens.setup);
         }
     }
 

@@ -156,26 +156,6 @@ h2 {
     background: linear-gradient(135deg, #3d3d55, #4d4d65);
 }
 
-/* Start Screen */
-.game-instructions {
-    background-color: var(--card-bg-color);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    width: 100%;
-}
-
-.game-instructions ul {
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
-
-.game-instructions li {
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
 /* Game Screen */
 .game-header {
     display: flex;

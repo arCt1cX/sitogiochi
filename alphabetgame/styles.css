@@ -95,33 +95,6 @@ h2 {
     letter-spacing: 0.5px;
 }
 
-/* Start Screen */
-.instructions.info-card {
-    background-color: #2a2a2a;
-    padding: 22px;
-    border-radius: 12px;
-    margin: 15px 0 30px 0;
-    border-left: 4px solid #bb86fc;
-    width: 100%;
-    max-width: 600px;
-}
-
-.instructions h2 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    text-align: left;
-    color: #f1f1f1;
-}
-
-.instructions ol {
-    padding-left: 1.5rem;
-    color: #d0d0d0;
-}
-
-.instructions li {
-    margin-bottom: 10px;
-}
-
 /* Timer */
 #timer-container {
     text-align: center;

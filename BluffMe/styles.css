@@ -142,26 +142,6 @@ h2 {
     background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
 }
 
-/* Start Screen */
-.game-instructions {
-    background-color: var(--card-bg-color);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    width: 100%;
-}
-
-.game-instructions ul {
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
-
-.game-instructions li {
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
 /* Player Configuration */
 .players-config {
     background-color: var(--card-bg-color);
