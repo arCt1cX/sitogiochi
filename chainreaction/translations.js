@@ -3,6 +3,7 @@ const gameTranslations = {
     'it': {
         'pageTitle': 'Chain Reaction - Gioco di parole a squadre | DrewGames',
         'metaDescription': 'Gioca a Chain Reaction: un emozionante gioco di parole a squadre. I due suggeritori forniscono indizi, mentre una persona deve indovinare la parola misteriosa. Ideale per serate con amici!',
+        'gameDescription': 'Indovina la parola misteriosa con l\'aiuto dei tuoi compagni!',
         'home': 'Home',
         'gameTitle': 'Chain Reaction',
         'howToPlay': 'Come Giocare',
@@ -36,6 +37,7 @@ const gameTranslations = {
     'en': {
         'pageTitle': 'Chain Reaction - Team Word Game | DrewGames',
         'metaDescription': 'Play Chain Reaction: an exciting team word game. Two hint-givers provide clues, while one person must guess the mystery word. Perfect for evenings with friends!',
+        'gameDescription': 'Guess the mystery word with your teammates\' help!',
         'home': 'Home',
         'gameTitle': 'Chain Reaction',
         'howToPlay': 'How to Play',
@@ -72,28 +74,36 @@ const gameTranslations = {
 function applyGameTranslations() {
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
-    
+
     // Update page title and meta description
     document.title = translations.pageTitle;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', translations.metaDescription);
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update the home button text
     const homeText = document.querySelector('.home-button');
     if (homeText) {
         homeText.innerHTML = `<span class="home-icon">⌂</span> ${translations.home}`;
     }
-    
+
     // Update all text elements - Start Screen
     document.querySelector('#startScreen h1').textContent = translations.gameTitle;
-    document.querySelector('#startScreen h2').textContent = translations.howToPlay;
-    
-    // Update instructions list
+
+    const descriptionElement = document.querySelector('#game-description');
+    if (descriptionElement) {
+        descriptionElement.textContent = translations.gameDescription;
+    }
+
+    // Legacy support or if elements actally existed:
+    const h2 = document.querySelector('#startScreen h2');
+    if (h2) h2.textContent = translations.howToPlay;
+
+    // Update instructions list if it exists
     const instructionsList = document.querySelector('#startScreen ul');
     if (instructionsList) {
         instructionsList.innerHTML = '';
@@ -103,7 +113,7 @@ function applyGameTranslations() {
             instructionsList.appendChild(li);
         });
     }
-    
+
     // Update button texts
     document.querySelector('#startButton span:not(.btn-icon)').textContent = translations.startGame;
     document.querySelector('#pauseResumeButton span').textContent = translations.pause;
@@ -114,12 +124,12 @@ function applyGameTranslations() {
     document.querySelector('#resetButton span:not(.btn-icon)').textContent = translations.restart;
     document.querySelector('#playAgainButton span:not(.btn-icon)').textContent = translations.playAgain;
     document.querySelector('#mainMenuButton span:not(.btn-icon)').textContent = translations.mainMenu;
-    
+
     // Update game screen elements
     document.querySelector('.timer-label').textContent = translations.seconds;
     document.querySelector('.score-label').textContent = translations.score;
     document.querySelector('.passes-label').textContent = translations.passesRemaining;
-    
+
     // Update game over screen
     document.querySelector('#gameOverScreen h2').textContent = translations.timeUp;
     document.querySelector('.final-score-label').textContent = translations.finalScore;

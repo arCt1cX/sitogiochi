@@ -143,12 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Set impostor count from input
+        const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
+
         if (impostorCountInput.value === 'random') {
             // Random mode logic:
-            // 80% - 1 impostor
-            // 10% - 2 impostors
             // 5% - 0 impostors
             // 5% - All impostors
+            // 90% - Random number of impostors between 1 and approx 1/3 of players (min 1, max varies)
+
             const rand = Math.random() * 100;
             if (rand < 5) {
                 // 5% chance: No impostors
@@ -160,20 +162,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameState.impostorCount = gameState.playerCount;
                 gameState.hasImpostor = true;
                 console.log("Random mode: ALL impostors selected");
-            } else if (rand < 20) {
-                // 10% chance: 2 impostors (if possible)
-                gameState.impostorCount = Math.min(2, maxImpostors);
-                if (gameState.impostorCount < 2) {
-                    // Fallback to 1 if not enough players for 2
-                    gameState.impostorCount = 1;
-                }
-                gameState.hasImpostor = true;
-                console.log(`Random mode: ${gameState.impostorCount} impostors selected`);
             } else {
-                // 80% chance: 1 impostor
-                gameState.impostorCount = 1;
+                // 90% chance: Normal range of impostors
+                // We want to allow more impostors for larger groups
+                // Scale: Random between 1 and Max(2, floor(playerCount/3))
+                // Examples: 
+                // 4-5 players -> 1-1 (Max 1) -> Actually let's ensure at least 2 is possible if players >= 6?
+                // Let's us a simple scalable max:
+                const dynamicMax = Math.max(1, Math.floor(gameState.playerCount / 3));
+                // But specifically for small groups (4-5), we usually want 1. 
+                // For 6-8, maybe 1 or 2.
+                // For 9-12, maybe 1, 2, 3, or 4?
+
+                // Let's use a slightly more generous max for "random fun":
+                // Max random impostors = floor(playerCount / 2.5)
+                // 4 players -> max 1
+                // 5 players -> max 2
+                // 6 players -> max 2
+                // 9 players -> max 3
+                // 12 players -> max 4
+
+                const randomMax = Math.max(1, Math.floor(gameState.playerCount / 2.5));
+                gameState.impostorCount = Math.floor(Math.random() * randomMax) + 1;
+
+                // Final safety check against hard limit
+                gameState.impostorCount = Math.min(gameState.impostorCount, maxImpostors);
+
                 gameState.hasImpostor = true;
-                console.log("Random mode: 1 impostor selected");
+                console.log(`Random mode: ${gameState.impostorCount} impostors selected (Max possible was ${randomMax})`);
             }
         } else {
             gameState.impostorCount = parseInt(impostorCountInput.value) || 1;

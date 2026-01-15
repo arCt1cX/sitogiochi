@@ -1,5 +1,4 @@
 Meme
-Brainrot
 Paesi
 Città
 Film
@@ -51,7 +50,7 @@ Feste e celebrazioni
 Programmi TV
 Giochi da tavolo
 Emozioni
-Tipi di pesci
+Pesci
 Attività estive
 Attività invernali
 Stati USA
@@ -134,14 +133,12 @@ Stati africani
 Artisti reggaeton
 Marche di sigarette
 Superalcolici
-Cose da non fare in ospedale
 Formaggi italiani
 Salumi italiani
 Film fantasy
 Film di fantascienza
 Film horror
 Panini e prodotti del McDonald's
-Succhi di frutta
 Compagni di scuola in comune tra i giocatori
 Criminali noti
 Social network
@@ -150,12 +147,10 @@ Squadre di calcio inglesi
 Squadre di calcio spagnole
 Nuotatori e tuffatori
 Serpenti
-Cose da non fare al cinema
 Etnie spesso discriminate
 Gaffe di CiccioGamer e Joker
 Videogames per la PS4
 Oceani e mari
-Cose da non fare durante l'esame di maturità
 Reati
 Tipi di cocktail/drink
 Razze di gatti
@@ -184,8 +179,6 @@ Pezzi di un'automobile
 Ristoranti della città
 Calciatori tedeschi
 Calciatori africani
-Cose da non fare ad Amsterdam
-Cose da non fare in Corea del Nord
 Poesie famose
 Marche di borse
 Female rappers
@@ -219,7 +212,7 @@ Cose da vedere a Parigi o Londra
 Personaggi di A Tutto Reality
 Personaggi di Dragon Ball
 Personaggi di Due Fantagenitori
-Pokemon 
+Pokemon
 Personaggi Looney Tunes
 Strutture e truppe di Clash of Clans
 Giochi per smartphone
@@ -232,35 +225,28 @@ Giochi di carte famosi
 Giochi di società
 Tipi di imbarcazione
 Ministeri italiani
-Politici italiani 
+Politici italiani
 Pornostar
-Cose da non fare in un bordello
 Re e imperatori romani
 Figure geometriche
 Marche di pasta
-Cose da non fare in una sinagoga
-Cose da non fare in una moschea
 Mestieri in cui si ha una divisa
 Animali d'acqua dolce
 Band musicali
 Cose che si trovano nello spazio
 Applicazioni per PC
-Cose da non fare al cenone di Natale
 Alimenti proteici
 Caratteri tipografici Word
-Cose da non dire al padre della tua ragazza/o
 Tipi e marche di caramelle
 Parolacce italiane
 Quadri famosi
 Statue famose
 Animali da fattoria
-Cose da non fare in India
-Isole 
+Isole
 Nazioni asiatiche
-Cose da non fare 
 Medicinali
 Attività per fare cardio
-Località marittime 
+Località marittime
 Animali marini
 Mammiferi
 Luoghi dove è meglio non trovarsi di notte
@@ -270,7 +256,6 @@ Personaggi e alieni di Ben10
 Calciatori dell'Atalanta
 Derby calcistici
 Università italiane
-Cose da non fare a un gay pride
 Autori di versioni latino/greco
 Stili di capelli
 Tipi di gioielli
@@ -298,7 +283,7 @@ Strumenti da giardinaggio
 Catene di supermercati italiane
 Animali notturni
 Cose rotonde
-Vie e Piazze della vostra città 
+Vie e Piazze della vostra città
 Personaggi di Harry Potter
 Muscoli
 Organi interni del corpo umano

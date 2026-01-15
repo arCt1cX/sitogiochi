@@ -17,7 +17,7 @@ Qual è lo sport più divertente che hai praticato? | Quale sport pratichi?
 Qual è miglior film d’animazione? | Quale film di animazione hai visto più di una volta?
 Qual è la bevanda perfetta? | Che bevanda bevi al mattino?
 Il miglior modo per passare il tempo in treno? | Il miglior modo per passare il tempo in autobus?
-Il dessert che piace a tutti ma a te no | Un dessert che ti piace moltissimo
+Quale dessert piace a tutti ma a te no? | Nomina dessert che ti piace moltissimo
 Qual è lo strumento musicale che saresti completamente negato a suonare? | Se potessi imparare a suonare uno strumento musicale, quale sceglieresti?
 Il miglior artista musicale italiano? | L’artista musicale italiano più sopravvalutato?
 Qual è il supereroe che ha i migliori film? | Qual è il supereroe con il miglior attore nei film?
@@ -498,3 +498,13 @@ Qual è stata la tua prestazione migliore nello sport che praticavi da più giov
 In che catena di supermercati fai più spesso la spesa? | Di che catena di supermercati è il supermercato più vicino a casa tua?
 Se dovessi spendere dei soldi su un solo gioco d'azzardo, quale sceglieresti? | Qual è il gioco d'azzardo più insensato secondo te?
 Quale è il miglior colore per un abito completo da uomo? | Qual è il miglior colore per un paio di jeans?
+Qual è la mano più alta che ti sia mai uscita a poker? | Qual è la mano più alta che hai visto uscire in una partita a poker in cui eri giocatore?
+Qual è una frase terribile da dire a un colloquio di lavoro? | Qual è una frase terribile da dire a un primo appuntamento?
+Qual è una frase terribile da dire a un funerale? | Qual è una frase terribile da dire a un matrimonio?
+Qual è una frase terribile da dire in una chiesa? | Qual è una frase terribile da dire a una sinagoga?
+Qual è una frase terribile da urlare in aereo? | Qual è una frase terribile da dire a un poliziotto?
+Qual è una frase terribile da esclamare durante il cenone di Natale? | Qual è una frase terribile da esclamare in metropolitana?
+Se potessi essere un fantasma per un giorno, a casa di chi andresti per terrorizzarlo? | Chi è il tuo amico più tirchio?
+Qual è un film che alla maggior parte delle persone piace ma a te fa cagare? | Qual è l'ultimo film che hai visto al cinema?
+Quanti telefoni hai rotto? | Quante volte ti sei rotto un osso?
+Se potessi indossare un solo modello di scarpe per il resto della tua vita, quale sceglieresti? | Qual è un modello di scarpe che ti metti solo in occasioni particolari?

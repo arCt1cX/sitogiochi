@@ -49,7 +49,7 @@ const translations = {
             'title': 'Impostor',
             'catchphrase': 'Scopri chi mente nel gruppo!',
             'description': 'Impostor è un gioco di deduzione sociale dove un giocatore è l\'impostore che non conosce l\'argomento. Gli altri giocatori devono scoprire chi è l\'impostore, mentre l\'impostore cerca di mimetizzarsi e identificare l\'argomento segreto.',
-            'players': '4-10 giocatori',
+            'players': '4-12 giocatori',
             'time': '10-15 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -134,7 +134,7 @@ const translations = {
             'title': 'Chain Reaction',
             'catchphrase': 'Crea concatenazioni di parole in questa sfida a squadre!',
             'description': 'Chain Reaction è un gioco di associazioni di parole a squadre. Ogni giocatore deve dire una parola associata alla precedente, creando una catena che si sviluppa in direzioni inaspettate. Un gioco che stimola la creatività e il pensiero laterale!',
-            'players': '4-12 giocatori',
+            'players': 'Qualsiasi numero (gruppi di 3)',
             'time': '15-20 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -248,7 +248,7 @@ const translations = {
             'title': 'Mr. Drew',
             'catchphrase': 'Scopri chi non conosce la parola segreta!',
             'description': 'Mr. Drew è un gioco di deduzione sociale ispirato a "Mr. White". Un giocatore è Mr. Drew e non conosce la parola segreta, mentre i Civili (e l\'Undercover con più giocatori) devono scoprire chi è. I giocatori descrivono la loro parola a turno, cercando di identificare chi non la conosce!',
-            'players': '3-10 giocatori',
+            'players': '3-12 giocatori',
             'time': '10-15 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -270,7 +270,7 @@ const translations = {
             'title': 'Drewnking Game',
             'catchphrase': 'Il gioco alcolico definitivo per feste! 🍻',
             'description': 'Drewnking Game è il party game perfetto per serate pazze con gli amici! Sfide imbarazzanti, votazioni esilaranti e regole folli che renderanno la vostra festa indimenticabile. Da giocare responsabilmente!',
-            'players': '2-10 giocatori',
+            'players': '2-15 giocatori',
             'time': '20-30 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -312,7 +312,7 @@ const translations = {
             'title': 'Indovina Chi',
             'catchphrase': 'Indovina la parola facendo domande!',
             'description': 'Indovina Chi è un gioco di domande dove devi indovinare una parola segreta facendo domande ai tuoi amici. Meno domande fai, più punti guadagni!',
-            'players': '2-10 giocatori',
+            'players': '2-12 giocatori',
             'time': '10-20 minuti',
             'difficulty': 'Principiante',
             'features': [
@@ -397,7 +397,7 @@ const translations = {
             'title': 'Impostor',
             'catchphrase': 'Find out who is lying in the group!',
             'description': 'Impostor is a social deduction game where one player is the impostor who doesn\'t know the topic. The other players must figure out who the impostor is, while the impostor tries to blend in and identify the secret topic.',
-            'players': '4-10 players',
+            'players': '4-12 players',
             'time': '10-15 minutes',
             'difficulty': 'Beginner',
             'features': [
@@ -482,7 +482,7 @@ const translations = {
             'title': 'Chain Reaction',
             'catchphrase': 'Create word chains in this team challenge!',
             'description': 'Chain Reaction is a team word association game. Each player must say a word associated with the previous one, creating a chain that develops in unexpected directions. A game that stimulates creativity and lateral thinking!',
-            'players': '4-12 players',
+            'players': 'Any number (groups of 3)',
             'time': '15-20 minutes',
             'difficulty': 'Beginner',
             'features': [
@@ -592,7 +592,7 @@ const translations = {
             'title': 'Mr. Drew',
             'catchphrase': 'Find out who doesn\'t know the secret word!',
             'description': 'Mr. Drew is a social deduction game inspired by "Mr. White". One player is Mr. Drew and doesn\'t know the secret word, while Civilians (and the Undercover with more players) must find out who it is. Players describe their word in turns, trying to identify who doesn\'t know it!',
-            'players': '3-10 players',
+            'players': '3-12 players',
             'time': '10-15 minutes',
             'difficulty': 'Beginner',
             'features': [
@@ -614,7 +614,7 @@ const translations = {
             'title': 'Drewnking Game',
             'catchphrase': 'The ultimate drinking game for parties! 🍻',
             'description': 'Drewnking Game is the perfect party game for crazy nights with friends! Embarrassing challenges, hilarious votes and wild rules that will make your party unforgettable. Play responsibly!',
-            'players': '2-10 players',
+            'players': '2-15 players',
             'time': '20-30 minutes',
             'difficulty': 'Beginner',
             'features': [
@@ -656,7 +656,7 @@ const translations = {
             'title': 'Guess Who',
             'catchphrase': 'Guess the word by asking questions!',
             'description': 'Guess Who is a question game where you must guess a secret word by asking your friends questions. The fewer questions you ask, the more points you earn!',
-            'players': '2-10 players',
+            'players': '2-12 players',
             'time': '10-20 minutes',
             'difficulty': 'Beginner',
             'features': [
