@@ -165,6 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
             instructions: getTranslation('colorgrid', 'instructions')
         },
         {
+            id: "nonhomai",
+            displayName: getTranslation('nonhomai', 'title'),
+            catchphrase: getTranslation('nonhomai', 'catchphrase'),
+            image: "impostor.png", // Reusing impostor icon for now as requested/style
+            players: getTranslation('nonhomai', 'players'),
+            time: getTranslation('nonhomai', 'time'),
+            difficulty: getTranslation('nonhomai', 'difficulty'),
+            description: getTranslation('nonhomai', 'description'),
+            features: getTranslation('nonhomai', 'features'),
+            instructions: getTranslation('nonhomai', 'instructions')
+        },
+        {
             id: "tictactopics",
             displayName: getTranslation('tictactopics', 'title'),
             catchphrase: getTranslation('tictactopics', 'catchphrase'),
@@ -527,10 +539,10 @@ function openGameInfo(game) {
 
     // Show overlay with animation
     overlay.classList.add('active');
-    
+
     // Prevent body scroll
     document.body.classList.add('overlay-open');
-    
+
     // Store scroll position for iOS
     window.overlayScrollY = window.scrollY;
 }
@@ -542,15 +554,15 @@ function closeGameInfo() {
 
     // Hide overlay
     overlay.classList.remove('active');
-    
+
     // Restore body scroll
     document.body.classList.remove('overlay-open');
-    
+
     // Restore scroll position for iOS
     if (window.overlayScrollY !== undefined) {
         window.scrollTo(0, window.overlayScrollY);
     }
-    
+
     currentGameData = null;
 }
 
@@ -630,7 +642,7 @@ function updateGameInfoContent(game) {
         // Remove old listeners by cloning
         const newPlayBtn = playBtnEl.cloneNode(true);
         playBtnEl.parentNode.replaceChild(newPlayBtn, playBtnEl);
-        
+
         newPlayBtn.addEventListener('click', () => {
             const folderName = window.folderNameMap[game.id] || game.id;
             window.location.href = `${folderName}/index.html`;
@@ -639,7 +651,7 @@ function updateGameInfoContent(game) {
 }
 
 // Close overlay when pressing Escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         const overlay = document.getElementById('gameInfoOverlay');
         if (overlay && overlay.classList.contains('active')) {
@@ -649,7 +661,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Handle back button on mobile (for PWA)
-window.addEventListener('popstate', function(e) {
+window.addEventListener('popstate', function (e) {
     const overlay = document.getElementById('gameInfoOverlay');
     if (overlay && overlay.classList.contains('active')) {
         e.preventDefault();

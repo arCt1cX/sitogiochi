@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Non ho mai - Il classico gioco alcolico | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Non ho mai: il classico gioco per bere con gli amici! Scopri i segreti dei tuoi amici con centinaia di domande.">');
+        } else {
+            document.write('<title>Never Have I Ever - The classic drinking game | DrewGames</title>');
+            document.write('<meta name="description" content="Play Never Have I Ever: the classic drinking game with friends! Discover your friends\' secrets with hundreds of questions.">');
+        }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/nonhomai/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/nonhomai/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/nonhomai/" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/nonhomai/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .question-card {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin: 20px 0;
+            border: 2px solid #8a2be2;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .question-text {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .question-counter {
+            color: #b0b0b0;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Non ho mai...</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2 id="setupTitle">Impostazioni Partita</h2>
+            <div class="form-group">
+                <label for="question-count" id="questionCountLabel">Numero di frasi:</label>
+                <select id="question-count">
+                    <option value="15">15 <span class="questions-text">Frasi</span></option>
+                    <option value="20" selected>20 <span class="questions-text">Frasi</span></option>
+                    <option value="30">30 <span class="questions-text">Frasi</span></option>
+                    <option value="50">50 <span class="questions-text">Frasi</span></option>
+                </select>
+            </div>
+            <button id="start-game" class="btn primary-btn"><span id="startGameText">Inizia Gioco</span></button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="game-screen">
+            <div class="question-counter">
+                <span id="current-question">1</span> / <span id="total-questions">20</span>
+            </div>
+
+            <div class="question-card">
+                <p id="question-display" class="question-text"></p>
+            </div>
+
+            <button id="next-question" class="btn primary-btn"><span id="nextText">Prossima</span></button>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="game-screen">
+            <h2 id="gameOverTitle">Partita Finita!</h2>
+            <div class="info-card">
+                <p id="gameOverText">Speriamo vi siate divertiti (e abbiate bevuto abbastanza)!</p>
+            </div>
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
+            <button id="home-btn" class="btn secondary-btn" onclick="window.location.href='../'"><span
+                    id="backToHomeText">Torna alla Home</span></button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

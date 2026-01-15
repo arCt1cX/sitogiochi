@@ -45,6 +45,26 @@ const translations = {
         'players': 'giocatori',
 
         // Game titles and descriptions
+        'nonhomai': {
+            'title': 'Non ho mai...',
+            'catchphrase': 'Il classico gioco alcolico delle confessioni!',
+            'description': 'Non ho mai è il gioco perfetto per scoprire i segreti dei tuoi amici. Una frase appare sullo schermo: se l\'hai fatto, devi bere! Scegli quante frasi giocare e preparati a ridere (e bere).',
+            'players': '2+ giocatori',
+            'time': '10-20 minuti',
+            'difficulty': 'Facile',
+            'features': [
+                'Centinaia di domande divertenti',
+                'Modalità veloce o lunga',
+                'Perfetto per rompere il ghiaccio',
+                'Interfaccia stile Impostor'
+            ],
+            'instructions': [
+                'Scegli il numero di frasi per la partita.',
+                'Leggi la frase ad alta voce: "Non ho mai..."',
+                'Se hai fatto quello che c\'è scritto, BEVI!',
+                'Continua fino alla fine delle domande.'
+            ]
+        },
         'impostor': {
             'title': 'Impostor',
             'catchphrase': 'Scopri chi mente nel gruppo!',
@@ -393,6 +413,26 @@ const translations = {
         'players': 'players',
 
         // Game titles and descriptions
+        'nonhomai': {
+            'title': 'Never Have I Ever',
+            'catchphrase': 'The classic drinking game of confessions!',
+            'description': 'Never Have I Ever is the perfect game to discover your friends\' secrets. A statement appears on screen: if you\'ve done it, take a drink! Choose how many statements to play and get ready to laugh (and drink).',
+            'players': '2+ players',
+            'time': '10-20 minutes',
+            'difficulty': 'Easy',
+            'features': [
+                'Hundreds of fun questions',
+                'Short or long game modes',
+                'Perfect icebreaker',
+                'Impostor-style interface'
+            ],
+            'instructions': [
+                'Choose the number of statements for the game.',
+                'Read the statement aloud: "Never have I ever..."',
+                'If you have done it, DRINK!',
+                'Continue until the end of the questions.'
+            ]
+        },
         'impostor': {
             'title': 'Impostor',
             'catchphrase': 'Find out who is lying in the group!',
