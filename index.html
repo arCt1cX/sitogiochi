@@ -442,7 +442,7 @@
 <body>
     <!-- Splash Screen Animation -->
     <div id="splashScreen" class="splash-screen">
-        <video class="splash-video" id="splashVideo" autoplay muted playsinline preload="auto">
+        <video class="splash-video" id="splashVideo" muted playsinline preload="auto">
             <source src="splash-video.mp4" type="video/mp4">
         </video>
     </div>
@@ -720,16 +720,29 @@
                     hideSplashScreen();
                 });
 
-                // Try to play (in case autoplay didn't work)
-                var playPromise = videoElement.play();
-                if (playPromise !== undefined) {
-                    playPromise.then(function() {
-                        console.log('✅ Video playing');
-                    }).catch(function(err) {
-                        console.warn('⚠️ Video autoplay blocked:', err);
-                        // Fallback: hide after 2 seconds anyway
-                        setTimeout(hideSplashScreen, 2000);
-                    });
+                // Wait for video to be ready, then play
+                function playVideo() {
+                    videoElement.currentTime = 0; // Reset to start
+                    var playPromise = videoElement.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(function() {
+                            console.log('✅ Video playing');
+                        }).catch(function(err) {
+                            console.warn('⚠️ Video autoplay blocked:', err);
+                            setTimeout(hideSplashScreen, 2000);
+                        });
+                    }
+                }
+
+                // Check if video is ready
+                if (videoElement.readyState >= 3) {
+                    // Video is ready, play immediately
+                    playVideo();
+                } else {
+                    // Wait for video to be ready
+                    videoElement.addEventListener('canplaythrough', function() {
+                        playVideo();
+                    }, { once: true });
                 }
             });
 
