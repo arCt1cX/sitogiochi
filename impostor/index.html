@@ -140,99 +140,89 @@
                     <option value="classic" id="classicMode">Classic</option>
                     <option value="reverse" id="reverseMode">Reverse Impostor</option>
                 </select>
-
-
-                <div id="player-names-container" class="player-names-container">
-                    <!-- Player inputs will be generated here -->
-                </div>
-                <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
             </div>
+            <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
+        </div>
 
-            <!-- Player Turn Screen (add answer input for reverse mode) -->
-            <div id="player-turn-screen" class="game-screen">
-                <h2><span id="playerTurnText">Player Turn</span> <span id="current-player-num">1</span></h2>
-                <p><span id="passPhoneText">Pass the phone to player</span> <span id="current-player-num-text">1</span>
-                </p>
-                <button id="show-prompt" class="btn primary-btn pulse-btn"><span id="showPromptText">Show my
-                        Prompt</span></button>
+        <!-- Player Turn Screen (add answer input for reverse mode) -->
+        <div id="player-turn-screen" class="game-screen">
+            <h2><span id="playerTurnText">Player Turn</span> <span id="current-player-num">1</span></h2>
+            <p><span id="passPhoneText">Pass the phone to player</span> <span id="current-player-num-text">1</span></p>
+            <button id="show-prompt" class="btn primary-btn pulse-btn"><span id="showPromptText">Show my
+                    Prompt</span></button>
 
-                <div id="prompt-container" class="hidden">
-                    <p class="prompt-text" id="player-prompt"></p>
-                    <!-- Answer input for reverse mode -->
-                    <div id="reverse-answer-container" class="hidden">
-                        <label for="reverse-answer-input" id="typeYourAnswer">Type your answer:</label>
-                        <textarea id="reverse-answer-input" maxlength="200" autocomplete="off" rows="3"
-                            style="resize:vertical;"></textarea>
-                        <button id="submit-reverse-answer" class="btn secondary-btn"><span id="submitAnswer">Submit
-                                Answer</span></button>
-                    </div>
-                    <button id="hide-prompt" class="btn secondary-btn"><span id="seenItText">I've Seen
-                            It</span></button>
+            <div id="prompt-container" class="hidden">
+                <p class="prompt-text" id="player-prompt"></p>
+                <!-- Answer input for reverse mode -->
+                <div id="reverse-answer-container" class="hidden">
+                    <label for="reverse-answer-input" id="typeYourAnswer">Type your answer:</label>
+                    <textarea id="reverse-answer-input" maxlength="200" autocomplete="off" rows="3"
+                        style="resize:vertical;"></textarea>
+                    <button id="submit-reverse-answer" class="btn secondary-btn"><span id="submitAnswer">Submit
+                            Answer</span></button>
                 </div>
-            </div>
-
-            <!-- Writing Answers Screen -->
-            <div id="writing-screen" class="game-screen">
-                <h2 id="writeAnswersTitle">Scrivete le Vostre Risposte</h2>
-                <div class="info-card">
-                    <p id="allPlayersSeenText">Tutti i giocatori hanno visto il loro prompt.</p>
-                    <p id="writeAnswersText">Ora scrivete le vostre risposte su carta.</p>
-                    <p id="clickButtonText">Quando tutti hanno finito, cliccate sul pulsante per rivelare il prompt del
-                        gruppo.</p>
-                </div>
-                <button id="show-group-prompt" class="btn primary-btn glow-btn"><span id="revealGroupPromptText">Rivela
-                        il
-                        Prompt del Gruppo</span></button>
-            </div>
-
-            <!-- Group Discussion Screen -->
-            <div id="discussion-screen" class="game-screen">
-                <h2 id="discussionTitle">Discussione di Gruppo</h2>
-                <div class="shared-prompt-container">
-                    <p id="groupPromptIsText">Il prompt del gruppo è:</p>
-                    <p id="shared-prompt" class="prompt-text"></p>
-                </div>
-                <p class="instructions" id="discussInstructionsText">Discutete tra di voi e cercate di scoprire chi è
-                    l'impostore!</p>
-                <button id="reveal-impostor" class="btn primary-btn glow-btn"><span id="revealImpostorText">Rivela
-                        l'Impostore</span></button>
-            </div>
-
-            <!-- Reveal Screen -->
-            <div id="reveal-screen" class="game-screen">
-                <div class="reveal-header">
-                    <h2 id="impostorIsText">L'Impostore è...</h2>
-                    <p class="impostor-reveal"><span id="playerText">Il giocatore</span> <span
-                            id="impostor-num">X</span>!
-                    </p>
-                </div>
-                <div class="impostor-prompt-container">
-                    <p id="theirPromptWasText">Il suo prompt era:</p>
-                    <p id="impostor-prompt" class="prompt-text impostor-text"></p>
-                </div>
-                <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
-            </div>
-
-            <!-- Anonymous Answer Reveal Screen for Reverse Mode -->
-            <div id="reverse-reveal-screen" class="game-screen">
-                <h2 id="revealAnonymousAnswer">Reveal Anonymous Answer</h2>
-                <div class="info-card">
-                    <p id="anonymousAnswerIs">The anonymous answer is:</p>
-                    <p id="reverse-anonymous-answer" class="prompt-text"></p>
-                    <p id="reverse-answer-author" style="font-weight:bold; display:none;"></p>
-                    <button id="reveal-author-btn" class="btn secondary-btn" style="margin-top:10px;">Mostra Autore /
-                        Reveal
-                        Author</button>
-                </div>
-                <p id="guessWhoText">Who do you think wrote this answer? Discuss among yourselves!</p>
-                <button id="play-again-reverse" class="btn primary-btn"><span id="playAgainText">Play
-                        Again</span></button>
+                <button id="hide-prompt" class="btn secondary-btn"><span id="seenItText">I've Seen It</span></button>
             </div>
         </div>
 
-        <script src="../lang.js"></script>
-        <script src="translations.js"></script>
-        <script src="scripts.js"></script>
+        <!-- Writing Answers Screen -->
+        <div id="writing-screen" class="game-screen">
+            <h2 id="writeAnswersTitle">Scrivete le Vostre Risposte</h2>
+            <div class="info-card">
+                <p id="allPlayersSeenText">Tutti i giocatori hanno visto il loro prompt.</p>
+                <p id="writeAnswersText">Ora scrivete le vostre risposte su carta.</p>
+                <p id="clickButtonText">Quando tutti hanno finito, cliccate sul pulsante per rivelare il prompt del
+                    gruppo.</p>
+            </div>
+            <button id="show-group-prompt" class="btn primary-btn glow-btn"><span id="revealGroupPromptText">Rivela il
+                    Prompt del Gruppo</span></button>
+        </div>
+
+        <!-- Group Discussion Screen -->
+        <div id="discussion-screen" class="game-screen">
+            <h2 id="discussionTitle">Discussione di Gruppo</h2>
+            <div class="shared-prompt-container">
+                <p id="groupPromptIsText">Il prompt del gruppo è:</p>
+                <p id="shared-prompt" class="prompt-text"></p>
+            </div>
+            <p class="instructions" id="discussInstructionsText">Discutete tra di voi e cercate di scoprire chi è
+                l'impostore!</p>
+            <button id="reveal-impostor" class="btn primary-btn glow-btn"><span id="revealImpostorText">Rivela
+                    l'Impostore</span></button>
+        </div>
+
+        <!-- Reveal Screen -->
+        <div id="reveal-screen" class="game-screen">
+            <div class="reveal-header">
+                <h2 id="impostorIsText">L'Impostore è...</h2>
+                <p class="impostor-reveal"><span id="playerText">Il giocatore</span> <span id="impostor-num">X</span>!
+                </p>
+            </div>
+            <div class="impostor-prompt-container">
+                <p id="theirPromptWasText">Il suo prompt era:</p>
+                <p id="impostor-prompt" class="prompt-text impostor-text"></p>
+            </div>
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
+        </div>
+
+        <!-- Anonymous Answer Reveal Screen for Reverse Mode -->
+        <div id="reverse-reveal-screen" class="game-screen">
+            <h2 id="revealAnonymousAnswer">Reveal Anonymous Answer</h2>
+            <div class="info-card">
+                <p id="anonymousAnswerIs">The anonymous answer is:</p>
+                <p id="reverse-anonymous-answer" class="prompt-text"></p>
+                <p id="reverse-answer-author" style="font-weight:bold; display:none;"></p>
+                <button id="reveal-author-btn" class="btn secondary-btn" style="margin-top:10px;">Mostra Autore / Reveal
+                    Author</button>
+            </div>
+            <p id="guessWhoText">Who do you think wrote this answer? Discuss among yourselves!</p>
+            <button id="play-again-reverse" class="btn primary-btn"><span id="playAgainText">Play Again</span></button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

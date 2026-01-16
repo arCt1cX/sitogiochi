@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainReverseBtn = document.getElementById('play-again-reverse');
     const reverseAnswerAuthor = document.getElementById('reverse-answer-author');
     const revealAuthorBtn = document.getElementById('reveal-author-btn');
-    const playerNamesContainer = document.getElementById('player-names-container');
 
     // Apply game translations
     if (typeof applyGameTranslations === 'function') {
@@ -61,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         groupPrompt: '',
         impostorPrompt: '',
         allPhrasePairs: [],
-        hasImpostor: true, // New property to track if there's an impostor
-        playerNames: [] // Array to store player names
+        hasImpostor: true // New property to track if there's an impostor
     };
 
     let reverseAnswers = [];
@@ -133,206 +131,159 @@ document.addEventListener('DOMContentLoaded', () => {
         return selectedOriginalIndex;
     }
 
-    // Generate player name inputs
-    function generatePlayerNameInputs(count) {
-        if (!playerNamesContainer) return;
-
-        // Save existing values if any
-        const existingValues = [];
-        const existingInputs = playerNamesContainer.querySelectorAll('input');
-        existingInputs.forEach(input => existingValues.push(input.value));
-
-        playerNamesContainer.innerHTML = '';
-        const lang = getUserLanguage();
-        const translations = gameTranslations[lang] || gameTranslations['en'];
-        const playerText = lang === 'it' ? 'Giocatore' : 'Player';
-
-        for (let i = 1; i <= count; i++) {
-            const inputGroup = document.createElement('div');
-            inputGroup.className = 'player-input';
-
-            const label = document.createElement('label');
-            label.textContent = `${playerText} ${i}:`;
-            label.setAttribute('for', `player-name-${i}`);
-
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.id = `player-name-${i}`;
-            input.placeholder = `${playerText} ${i}`;
-            input.autocomplete = "off";
-
-            // Restore value if available, otherwise leave empty
-            if (i <= existingValues.length && existingValues[i - 1]) {
-                input.value = existingValues[i - 1];
-            }
-
-            inputGroup.appendChild(label);
-            inputGroup.appendChild(input);
-            playerNamesContainer.appendChild(inputGroup);
-        }
-    }
-
     // Initialize the game
     function initGame() {
-        try {
-            // Set player count from input
-            gameState.playerCount = parseInt(playerCountInput.value) || 4;
+        // Set player count from input
+        gameState.playerCount = parseInt(playerCountInput.value) || 4;
 
-            // Ensure minimum 3 players
-            if (gameState.playerCount < 3) {
-                gameState.playerCount = 3;
-                playerCountInput.value = 3;
-            }
+        // Ensure minimum 3 players
+        if (gameState.playerCount < 3) {
+            gameState.playerCount = 3;
+            playerCountInput.value = 3;
+        }
 
-            // Capture player names
-            gameState.playerNames = [];
-            const nameInputs = playerNamesContainer.querySelectorAll('input');
+        // Set impostor count from input
+        const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
 
-            // If inputs are missing/mismatched for some reason, regenerate them or handle gracefully
-            if (nameInputs.length !== gameState.playerCount) {
-                console.warn(`Mismatch between player count (${gameState.playerCount}) and inputs (${nameInputs.length}). using defaults.`);
-                // We will populate based on count, using inputs if available
-            }
+        if (impostorCountInput.value === 'random') {
+            // Random mode logic:
+            // 5% - 0 impostors
+            // 5% - All impostors
+            // 90% - Random number of impostors between 1 and approx 1/3 of players (min 1, max varies)
 
-            for (let i = 0; i < gameState.playerCount; i++) {
-                const defaultName = (getUserLanguage() === 'it' ? 'Giocatore ' : 'Player ') + (i + 1);
-                // Use input value if it exists, otherwise default
-                if (nameInputs[i]) {
-                    gameState.playerNames.push(nameInputs[i].value.trim() || defaultName);
-                } else {
-                    gameState.playerNames.push(defaultName);
-                }
-            }
-
-            // Set impostor count from input
-            const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
-
-            if (impostorCountInput.value === 'random') {
-                // Random mode logic:
-                // 5% - 0 impostors
-                // 5% - All impostors
-                // 90% - Random number of impostors between 1 and approx 1/3 of players (min 1, max varies)
-
-                const rand = Math.random() * 100;
-                if (rand < 5) {
-                    // 5% chance: No impostors
-                    gameState.impostorCount = 0;
-                    gameState.hasImpostor = false;
-                    console.log("Random mode: 0 impostors selected");
-                } else if (rand < 10) {
-                    // 5% chance: All impostors
-                    gameState.impostorCount = gameState.playerCount;
-                    gameState.hasImpostor = true;
-                    console.log("Random mode: ALL impostors selected");
-                } else {
-                    // 90% chance: Normal range of impostors
-                    const dynamicMax = Math.max(1, Math.floor(gameState.playerCount / 3));
-                    const randomMax = Math.max(1, Math.floor(gameState.playerCount / 2.5));
-                    gameState.impostorCount = Math.floor(Math.random() * randomMax) + 1;
-
-                    // Final safety check against hard limit
-                    gameState.impostorCount = Math.min(gameState.impostorCount, maxImpostors);
-
-                    gameState.hasImpostor = true;
-                    console.log(`Random mode: ${gameState.impostorCount} impostors selected (Max possible was ${randomMax})`);
-                }
-            } else {
-                gameState.impostorCount = parseInt(impostorCountInput.value) || 1;
-
-                // Ensure impostor count is valid (min 1, max half of players rounded down)
-                if (gameState.impostorCount < 1) {
-                    gameState.impostorCount = 1;
-                    impostorCountInput.value = 1;
-                } else if (gameState.impostorCount > maxImpostors) {
-                    gameState.impostorCount = maxImpostors;
-                    impostorCountInput.value = maxImpostors;
-                }
-                // Determine if this game will have impostors (standard 1/50 chance of no impostor)
-                gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
-            }
-
-            selectedMode = modeSelect ? modeSelect.value : 'classic';
-            reverseAnswers = [];
-
-            // Reset game state
-            gameState.currentPlayer = 1;
-            gameState.prompts = [];
-            gameState.impostorIndices = [];
-
-            // If it's NOT random mode, apply the standard small chance of no impostor
-            // If it WAS random mode, hasImpostor is already set correctly
-            if (impostorCountInput.value !== 'random') {
-                gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
-            }
-
-            if (selectedMode === 'reverse') {
-                // Only use group prompt, no impostors
+            const rand = Math.random() * 100;
+            if (rand < 5) {
+                // 5% chance: No impostors
                 gameState.impostorCount = 0;
-                gameState.impostorIndices = [];
                 gameState.hasImpostor = false;
-                // Select a group prompt
+                console.log("Random mode: 0 impostors selected");
+            } else if (rand < 10) {
+                // 5% chance: All impostors
+                gameState.impostorCount = gameState.playerCount;
+                gameState.hasImpostor = true;
+                console.log("Random mode: ALL impostors selected");
+            } else {
+                // 90% chance: Normal range of impostors
+                // We want to allow more impostors for larger groups
+                // Scale: Random between 1 and Max(2, floor(playerCount/3))
+                // Examples: 
+                // 4-5 players -> 1-1 (Max 1) -> Actually let's ensure at least 2 is possible if players >= 6?
+                // Let's us a simple scalable max:
+                const dynamicMax = Math.max(1, Math.floor(gameState.playerCount / 3));
+                // But specifically for small groups (4-5), we usually want 1. 
+                // For 6-8, maybe 1 or 2.
+                // For 9-12, maybe 1, 2, 3, or 4?
+
+                // Let's use a slightly more generous max for "random fun":
+                // Max random impostors = floor(playerCount / 2.5)
+                // 4 players -> max 1
+                // 5 players -> max 2
+                // 6 players -> max 2
+                // 9 players -> max 3
+                // 12 players -> max 4
+
+                const randomMax = Math.max(1, Math.floor(gameState.playerCount / 2.5));
+                gameState.impostorCount = Math.floor(Math.random() * randomMax) + 1;
+
+                // Final safety check against hard limit
+                gameState.impostorCount = Math.min(gameState.impostorCount, maxImpostors);
+
+                gameState.hasImpostor = true;
+                console.log(`Random mode: ${gameState.impostorCount} impostors selected (Max possible was ${randomMax})`);
+            }
+        } else {
+            gameState.impostorCount = parseInt(impostorCountInput.value) || 1;
+
+            // Ensure impostor count is valid (min 1, max half of players rounded down)
+            if (gameState.impostorCount < 1) {
+                gameState.impostorCount = 1;
+                impostorCountInput.value = 1;
+            } else if (gameState.impostorCount > maxImpostors) {
+                gameState.impostorCount = maxImpostors;
+                impostorCountInput.value = maxImpostors;
+            }
+            // Determine if this game will have impostors (standard 1/50 chance of no impostor)
+            gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
+        }
+
+        selectedMode = modeSelect ? modeSelect.value : 'classic';
+        reverseAnswers = [];
+
+        // Reset game state
+        gameState.currentPlayer = 1;
+        gameState.prompts = [];
+        gameState.impostorIndices = [];
+
+        // If it's NOT random mode, apply the standard small chance of no impostor
+        // If it WAS random mode, hasImpostor is already set correctly
+        if (impostorCountInput.value !== 'random') {
+            gameState.hasImpostor = Math.random() > 0.05; // 95% chance to have impostors
+        }
+
+        if (selectedMode === 'reverse') {
+            // Only use group prompt, no impostors
+            gameState.impostorCount = 0;
+            gameState.impostorIndices = [];
+            gameState.hasImpostor = false;
+            // Select a group prompt
+            const randomPairIndex = selectUniquePhrasePairIndex();
+            const selectedPair = gameState.allPhrasePairs[randomPairIndex];
+            gameState.groupPrompt = selectedPair.groupPhrase;
+            gameState.currentPlayer = 1;
+            updatePlayerTurnUI();
+            showScreen(playerTurnScreen);
+        } else {
+            if (gameState.hasImpostor) {
+                // Use the weighted random selection for impostors instead of completely random
+                gameState.impostorIndices = selectWeightedRandomImpostors(
+                    gameState.playerCount,
+                    gameState.impostorCount,
+                    previousImpostors
+                );
+
+                // Randomly select a phrase pair for this round
                 const randomPairIndex = selectUniquePhrasePairIndex();
                 const selectedPair = gameState.allPhrasePairs[randomPairIndex];
+
+                // Always use first phrase for group, second phrase for impostor
                 gameState.groupPrompt = selectedPair.groupPhrase;
-                gameState.currentPlayer = 1;
-                updatePlayerTurnUI();
-                showScreen(playerTurnScreen);
-            } else {
-                if (gameState.hasImpostor) {
-                    // Use the weighted random selection for impostors instead of completely random
-                    gameState.impostorIndices = selectWeightedRandomImpostors(
-                        gameState.playerCount,
-                        gameState.impostorCount,
-                        previousImpostors
-                    );
+                gameState.impostorPrompt = selectedPair.impostorPhrase;
 
-                    // Randomly select a phrase pair for this round
-                    const randomPairIndex = selectUniquePhrasePairIndex();
-                    const selectedPair = gameState.allPhrasePairs[randomPairIndex];
+                console.log(`Game started with ${gameState.playerCount} players, ${gameState.impostorCount} impostors`);
+                console.log(`Impostors are players: ${gameState.impostorIndices.map(idx => idx + 1).join(', ')}`);
+                console.log(`Group prompt: ${gameState.groupPrompt}`);
+                console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
 
-                    // Always use first phrase for group, second phrase for impostor
-                    gameState.groupPrompt = selectedPair.groupPhrase;
-                    gameState.impostorPrompt = selectedPair.impostorPhrase;
-
-                    console.log(`Game started with ${gameState.playerCount} players, ${gameState.impostorCount} impostors`);
-                    console.log(`Impostors are: ${gameState.impostorIndices.map(idx => gameState.playerNames[idx]).join(', ')}`);
-                    console.log(`Group prompt: ${gameState.groupPrompt}`);
-                    console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
-
-                    // Save the current impostors to the history
-                    // Add the current impostors to the beginning of the history array
-                    previousImpostors = [...gameState.impostorIndices, ...previousImpostors];
-                    // Trim the history to keep only the last 3 games' worth of impostors
-                    const maxHistoryLength = gameState.playerCount * 3;
-                    if (previousImpostors.length > maxHistoryLength) {
-                        previousImpostors = previousImpostors.slice(0, maxHistoryLength);
-                    }
-                    console.log("Updated impostor history:", previousImpostors);
-                } else {
-                    // No impostor game!
-                    gameState.impostorIndices = [];
-
-                    // Select just a group prompt
-                    const randomPairIndex = selectUniquePhrasePairIndex();
-                    const selectedPair = gameState.allPhrasePairs[randomPairIndex];
-
-                    // Always use the first (left) phrase for the group
-                    gameState.groupPrompt = selectedPair.groupPhrase;
-                    gameState.impostorPrompt = ""; // Not used in this game
-
-                    console.log("Special game: No impostor!");
-                    console.log(`Group prompt for everyone: ${gameState.groupPrompt}`);
+                // Save the current impostors to the history
+                // Add the current impostors to the beginning of the history array
+                previousImpostors = [...gameState.impostorIndices, ...previousImpostors];
+                // Trim the history to keep only the last 3 games' worth of impostors
+                const maxHistoryLength = gameState.playerCount * 3;
+                if (previousImpostors.length > maxHistoryLength) {
+                    previousImpostors = previousImpostors.slice(0, maxHistoryLength);
                 }
+                console.log("Updated impostor history:", previousImpostors);
+            } else {
+                // No impostor game!
+                gameState.impostorIndices = [];
 
-                // Update UI for first player
-                updatePlayerTurnUI();
+                // Select just a group prompt
+                const randomPairIndex = selectUniquePhrasePairIndex();
+                const selectedPair = gameState.allPhrasePairs[randomPairIndex];
 
-                // Switch screen
-                showScreen(playerTurnScreen);
+                // Always use the first (left) phrase for the group
+                gameState.groupPrompt = selectedPair.groupPhrase;
+                gameState.impostorPrompt = ""; // Not used in this game
+
+                console.log("Special game: No impostor!");
+                console.log(`Group prompt for everyone: ${gameState.groupPrompt}`);
             }
-        } catch (e) {
-            console.error("Error starting game:", e);
-            alert("Error starting game: " + e.message);
+
+            // Update UI for first player
+            updatePlayerTurnUI();
+
+            // Switch screen
+            showScreen(playerTurnScreen);
         }
     }
 
@@ -412,9 +363,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update player turn UI
     function updatePlayerTurnUI() {
-        const playerName = gameState.playerNames[gameState.currentPlayer - 1]; // Current player Index is 1-based in logic, but array 0-based
-        currentPlayerNum.textContent = playerName; // Use name instead of number
-        currentPlayerNumText.textContent = playerName; // Use name instead of number
+        currentPlayerNum.textContent = gameState.currentPlayer;
+        currentPlayerNumText.textContent = gameState.currentPlayer;
 
         // Hide prompt container initially
         promptContainer.classList.add('hidden');
@@ -490,14 +440,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (gameState.impostorIndices.length === 1) {
                 // Single impostor
                 document.getElementById('impostorIsText').textContent = translations.impostorIsText;
-                const impName = gameState.playerNames[gameState.impostorIndices[0]];
-                impostorRevealElement.innerHTML = `<span id="impostor-num">${impName}</span>!`;
+                impostorRevealElement.innerHTML = `${translations.playerText} <span id="impostor-num">${gameState.impostorIndices[0] + 1}</span>!`;
             } else {
                 // Multiple impostors
                 document.getElementById('impostorIsText').textContent =
                     lang === 'it' ? "Gli Impostori sono..." : "The Impostors are...";
-                const impostorNames = gameState.impostorIndices.map(idx => `<span class="impostor-num">${gameState.playerNames[idx]}</span>`).join(', ');
-                impostorRevealElement.innerHTML = impostorNames + "!";
+                const impostorNumbers = gameState.impostorIndices.map(idx => `<span class="impostor-num">${idx + 1}</span>`).join(', ');
+                impostorRevealElement.innerHTML =
+                    lang === 'it' ? `I giocatori ${impostorNumbers}!` : `Players ${impostorNumbers}!`;
             }
 
             document.getElementById('theirPromptWasText').textContent =
@@ -530,28 +480,14 @@ document.addEventListener('DOMContentLoaded', () => {
         reverseAnonymousAnswer.textContent = answers[randomIndex];
         // Find the author (player index + 1)
         let authorIndex = reverseAnswers.findIndex(a => a === answers[randomIndex]);
-        const authorName = gameState.playerNames[authorIndex];
-
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
         document.getElementById('revealAnonymousAnswer').textContent = translations.revealAnonymousAnswer;
         document.getElementById('anonymousAnswerIs').textContent = translations.anonymousAnswerIs;
         document.getElementById('guessWhoText').textContent = translations.guessWhoText;
         playAgainReverseBtn.textContent = translations.playAgainText;
-
-        // Update author text
-        const authorTextTemplate = translations.reverseAuthorText;
-        // Basic replace {n} with name, but logic might vary if translation expects "Player X"
-        // Let's assume current translation is "It was Player {n}"
-        // We will construct new string
-        if (lang === 'it') {
-            reverseAnswerAuthor.textContent = `È stato ${authorName}!`;
-        } else {
-            reverseAnswerAuthor.textContent = `It was ${authorName}!`;
-        }
-
+        reverseAnswerAuthor.textContent = translations.reverseAuthorText.replace('{n}', authorIndex + 1);
         reverseAnswerAuthor.style.display = 'none';
-
         if (revealAuthorBtn) {
             revealAuthorBtn.textContent = translations.revealAuthorBtn;
             revealAuthorBtn.style.display = '';
@@ -636,14 +572,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add impostor count validation and player inputs generation
+    // Add impostor count validation
     playerCountInput.addEventListener('change', () => {
         const playerCount = parseInt(playerCountInput.value);
         const maxImpostors = Math.floor(playerCount / 2);
 
-        // Generate player name inputs
-        generatePlayerNameInputs(playerCount);
-
+        // Save the current selection if possible
         // Save the current selection if possible
         const currentImpostorCount = impostorCountInput.value;
 
@@ -666,6 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 option.selected = true;
             }
 
+            impostorCountInput.appendChild(option);
             impostorCountInput.appendChild(option);
         }
 
@@ -695,9 +630,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get translations for the current language
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
-
-    // Generate initial inputs
-    generatePlayerNameInputs(playerCount);
 
     // Clear current options
     impostorCountInput.innerHTML = '';
