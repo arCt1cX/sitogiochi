@@ -442,7 +442,7 @@
 <body>
     <!-- Splash Screen Animation -->
     <div id="splashScreen" class="splash-screen">
-        <video class="splash-video" id="splashVideo" muted playsinline>
+        <video class="splash-video" id="splashVideo" autoplay muted playsinline preload="auto">
             <source src="spriterocks-animation.mp4" type="video/mp4">
         </video>
     </div>
@@ -714,19 +714,23 @@
                 const videoElement = document.getElementById('splashVideo');
                 if (!videoElement) return;
 
-                // Play the video
-                videoElement.play().then(function() {
-                    console.log('✅ Video playing');
-                    // Hide splash when video ends
-                    videoElement.addEventListener('ended', function() {
-                        console.log('🎬 Video ended');
+                // Set up ended listener first
+                videoElement.addEventListener('ended', function() {
+                    console.log('🎬 Video ended');
+                    hideSplashScreen();
+                });
+
+                // Try to play the video (in case autoplay didn't work)
+                var playPromise = videoElement.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(function() {
+                        console.log('✅ Video playing');
+                    }).catch(function(err) {
+                        // Autoplay was prevented, hide splash immediately
+                        console.warn('⚠️ Video autoplay blocked:', err);
                         hideSplashScreen();
                     });
-                }).catch(function(err) {
-                    // Fallback if video fails to play
-                    console.warn('⚠️ Video play failed:', err);
-                    setTimeout(hideSplashScreen, 500);
-                });
+                }
             });
 
             // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
