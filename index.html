@@ -754,27 +754,6 @@
                     hideSplashScreen();
                 }
             }, 8000);
-
-            // Method 3: On page visibility change (for PWA resume)
-            document.addEventListener('visibilitychange', function () {
-                if (document.visibilityState === 'visible') {
-                    const splashScreen = document.getElementById('splashScreen');
-                    if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                        console.log('👁️ Page became visible, checking splash...');
-                        setTimeout(hideSplashScreen, 500);
-                    }
-                }
-            });
-
-            // Method 4: Touch/click anywhere to dismiss (emergency fallback)
-            document.addEventListener('touchstart', function emergencyDismiss() {
-                const splashScreen = document.getElementById('splashScreen');
-                if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                    console.log('👆 Touch detected, forcing hide...');
-                    hideSplashScreen();
-                    document.removeEventListener('touchstart', emergencyDismiss);
-                }
-            }, { passive: true });
         })();
 
         // Update navigation text based on language
