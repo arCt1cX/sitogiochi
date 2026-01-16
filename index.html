@@ -31,7 +31,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Preload splash animation for PWA -->
-    <link rel="preload" href="splash-animation.gif" as="image" type="image/gif">
+    <link rel="preload" href="splash-video.mp4" as="video" type="video/mp4">
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -442,7 +442,9 @@
 <body>
     <!-- Splash Screen Animation -->
     <div id="splashScreen" class="splash-screen">
-        <img class="splash-gif" id="splashGif" src="splash-animation.gif" alt="Loading...">
+        <video class="splash-video" id="splashVideo" autoplay muted playsinline preload="auto">
+            <source src="splash-video.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!-- Google Tag Manager (noscript) -->
@@ -705,18 +707,30 @@
                 }
             }
 
-            // Method 1: On window load - show GIF for 2 seconds then hide
+            // Method 1: On window load - play video and hide when ended
             window.addEventListener('load', function () {
-                console.log('🎬 Site fully loaded. Showing splash animation...');
+                console.log('🎬 Site fully loaded. Starting video animation...');
 
-                const gifElement = document.getElementById('splashGif');
-                if (!gifElement) return;
+                const videoElement = document.getElementById('splashVideo');
+                if (!videoElement) return;
 
-                // GIF plays automatically, just wait and hide
-                setTimeout(function() {
-                    console.log('🎬 Animation complete');
+                // Hide splash when video ends
+                videoElement.addEventListener('ended', function() {
+                    console.log('🎬 Video ended');
                     hideSplashScreen();
-                }, 2000);
+                });
+
+                // Try to play (in case autoplay didn't work)
+                var playPromise = videoElement.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(function() {
+                        console.log('✅ Video playing');
+                    }).catch(function(err) {
+                        console.warn('⚠️ Video autoplay blocked:', err);
+                        // Fallback: hide after 2 seconds anyway
+                        setTimeout(hideSplashScreen, 2000);
+                    });
+                }
             });
 
             // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
