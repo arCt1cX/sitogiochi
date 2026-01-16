@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainReverseBtn = document.getElementById('play-again-reverse');
     const reverseAnswerAuthor = document.getElementById('reverse-answer-author');
     const revealAuthorBtn = document.getElementById('reveal-author-btn');
+    const playerNamesContainer = document.getElementById('player-names-container');
 
     // Apply game translations
     if (typeof applyGameTranslations === 'function') {
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         impostorPrompt: '',
         allPhrasePairs: [],
         hasImpostor: true, // New property to track if there's an impostor
-        playerNames: [] // Store player names
+        playerNames: [] // Array to store player names
     };
 
     let reverseAnswers = [];
@@ -132,6 +133,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return selectedOriginalIndex;
     }
 
+    // Generate player name inputs
+    function generatePlayerNameInputs(count) {
+        if (!playerNamesContainer) return;
+
+        // Save existing values if any
+        const existingValues = [];
+        const existingInputs = playerNamesContainer.querySelectorAll('input');
+        existingInputs.forEach(input => existingValues.push(input.value));
+
+        playerNamesContainer.innerHTML = '';
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+        const playerText = lang === 'it' ? 'Giocatore' : 'Player';
+
+        for (let i = 1; i <= count; i++) {
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'player-input';
+
+            const label = document.createElement('label');
+            label.textContent = `${playerText} ${i}:`;
+            label.setAttribute('for', `player-name-${i}`);
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = `player-name-${i}`;
+            input.placeholder = `${playerText} ${i}`;
+            input.autocomplete = "off";
+
+            // Restore value if available, otherwise leave empty
+            if (i <= existingValues.length && existingValues[i - 1]) {
+                input.value = existingValues[i - 1];
+            }
+
+            inputGroup.appendChild(label);
+            inputGroup.appendChild(input);
+            playerNamesContainer.appendChild(inputGroup);
+        }
+    }
+
     // Initialize the game
     function initGame() {
         // Set player count from input
@@ -145,16 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Capture player names
         gameState.playerNames = [];
-        const lang = getUserLanguage();
-        const defaultNamePrefix = lang === 'it' ? 'Giocatore' : 'Player';
-
-        for (let i = 1; i <= gameState.playerCount; i++) {
-            const input = document.getElementById(`player-name-${i}`);
-            const name = input && input.value.trim() !== ''
-                ? input.value.trim()
-                : `${defaultNamePrefix} ${i}`;
-            gameState.playerNames.push(name);
-        }
+        const nameInputs = playerNamesContainer.querySelectorAll('input');
+        nameInputs.forEach((input, index) => {
+            const defaultName = (getUserLanguage() === 'it' ? 'Giocatore ' : 'Player ') + (index + 1);
+            gameState.playerNames.push(input.value.trim() || defaultName);
+        });
 
         // Set impostor count from input
         const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
@@ -264,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameState.impostorPrompt = selectedPair.impostorPhrase;
 
                 console.log(`Game started with ${gameState.playerCount} players, ${gameState.impostorCount} impostors`);
-                console.log(`Impostors are players: ${gameState.impostorIndices.map(idx => idx + 1).join(', ')}`);
+                console.log(`Impostors are: ${gameState.impostorIndices.map(idx => gameState.playerNames[idx]).join(', ')}`);
                 console.log(`Group prompt: ${gameState.groupPrompt}`);
                 console.log(`Impostor prompt: ${gameState.impostorPrompt}`);
 
@@ -377,19 +412,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update player turn UI
     function updatePlayerTurnUI() {
-        const playerName = gameState.playerNames[gameState.currentPlayer - 1];
-        currentPlayerNum.textContent = playerName; // Now displays name instead of number
-
-        // Update pass phone text
-        const lang = getUserLanguage();
-        const translations = gameTranslations[lang] || gameTranslations['en'];
-        const passText = lang === 'it'
-            ? `Passa il telefono a ${playerName}`
-            : `Pass the phone to ${playerName}`;
-        // We need to manually update the text content since we modified the structure
-        // The original HTML had <span>Pass...</span> <span id="current...">1</span>
-        // We'll just replace the whole text content of the parent p
-        currentPlayerNumText.parentElement.textContent = passText;
+        const playerName = gameState.playerNames[gameState.currentPlayer - 1]; // Current player Index is 1-based in logic, but array 0-based
+        currentPlayerNum.textContent = playerName; // Use name instead of number
+        currentPlayerNumText.textContent = playerName; // Use name instead of number
 
         // Hide prompt container initially
         promptContainer.classList.add('hidden');
@@ -464,24 +489,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Normal game with impostors
             if (gameState.impostorIndices.length === 1) {
                 // Single impostor
-                const impostorIndex = gameState.impostorIndices[0];
-                const impostorName = gameState.playerNames[impostorIndex];
-
                 document.getElementById('impostorIsText').textContent = translations.impostorIsText;
-
-                const prefix = lang === 'it' ? 'È' : 'It is';
-                impostorRevealElement.innerHTML = `${prefix} <span id="impostor-num">${impostorName}</span>!`;
+                const impName = gameState.playerNames[gameState.impostorIndices[0]];
+                impostorRevealElement.innerHTML = `<span id="impostor-num">${impName}</span>!`;
             } else {
                 // Multiple impostors
                 document.getElementById('impostorIsText').textContent =
                     lang === 'it' ? "Gli Impostori sono..." : "The Impostors are...";
-
-                const impostorNames = gameState.impostorIndices.map(idx =>
-                    `<span class="impostor-num">${gameState.playerNames[idx]}</span>`
-                ).join(', ');
-
-                impostorRevealElement.innerHTML =
-                    lang === 'it' ? `Sono ${impostorNames}!` : `They are ${impostorNames}!`;
+                const impostorNames = gameState.impostorIndices.map(idx => `<span class="impostor-num">${gameState.playerNames[idx]}</span>`).join(', ');
+                impostorRevealElement.innerHTML = impostorNames + "!";
             }
 
             document.getElementById('theirPromptWasText').textContent =
@@ -524,12 +540,18 @@ document.addEventListener('DOMContentLoaded', () => {
         playAgainReverseBtn.textContent = translations.playAgainText;
 
         // Update author text
-        const authorText = lang === 'it'
-            ? `Autore: ${authorName}`
-            : `Author: ${authorName}`;
+        const authorTextTemplate = translations.reverseAuthorText;
+        // Basic replace {n} with name, but logic might vary if translation expects "Player X"
+        // Let's assume current translation is "It was Player {n}"
+        // We will construct new string
+        if (lang === 'it') {
+            reverseAnswerAuthor.textContent = `È stato ${authorName}!`;
+        } else {
+            reverseAnswerAuthor.textContent = `It was ${authorName}!`;
+        }
 
-        reverseAnswerAuthor.textContent = authorText;
         reverseAnswerAuthor.style.display = 'none';
+
         if (revealAuthorBtn) {
             revealAuthorBtn.textContent = translations.revealAuthorBtn;
             revealAuthorBtn.style.display = '';
@@ -614,12 +636,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add impostor count validation
+    // Add impostor count validation and player inputs generation
     playerCountInput.addEventListener('change', () => {
         const playerCount = parseInt(playerCountInput.value);
         const maxImpostors = Math.floor(playerCount / 2);
 
-        // Save the current selection if possible
+        // Generate player name inputs
+        generatePlayerNameInputs(playerCount);
+
         // Save the current selection if possible
         const currentImpostorCount = impostorCountInput.value;
 
@@ -643,7 +667,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             impostorCountInput.appendChild(option);
-            impostorCountInput.appendChild(option);
         }
 
         // Add Random Option
@@ -660,9 +683,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (impostorCountInput.selectedIndex === -1 && impostorCountInput.options.length > 0) {
             impostorCountInput.selectedIndex = 0;
         }
-
-        // Regenerate player name inputs
-        generatePlayerInputs();
     });
 
     // Initial load
@@ -675,6 +695,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get translations for the current language
     const lang = getUserLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
+
+    // Generate initial inputs
+    generatePlayerNameInputs(playerCount);
 
     // Clear current options
     impostorCountInput.innerHTML = '';
@@ -699,42 +722,4 @@ document.addEventListener('DOMContentLoaded', () => {
     randomOption.value = 'random';
     randomOption.textContent = translations.random;
     impostorCountInput.appendChild(randomOption);
-
-    // Initial load
-    generatePlayerInputs();
-});
-
-// Generate player name inputs
-function generatePlayerInputs() {
-    const count = parseInt(document.getElementById('player-count').value);
-    const container = document.getElementById('player-names-container');
-    container.innerHTML = '';
-
-    // Get translations
-    const lang = getUserLanguage();
-    const translations = gameTranslations[lang] || gameTranslations['en'];
-    const playerLabel = lang === 'it' ? 'Nome Giocatore' : 'Player Name';
-
-    for (let i = 1; i <= count; i++) {
-        const div = document.createElement('div');
-        div.className = 'form-group player-input-group';
-        div.style.marginBottom = '10px';
-
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.id = `player-name-${i}`;
-        input.className = 'player-name-input';
-        input.placeholder = `${playerLabel} ${i}`;
-        input.setAttribute('aria-label', `${playerLabel} ${i}`);
-        input.style.width = '100%';
-        input.style.padding = '10px';
-        input.style.borderRadius = '8px';
-        input.style.border = '1px solid rgba(255, 255, 255, 0.3)';
-        input.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-        input.style.color = 'white';
-        input.style.fontSize = '16px';
-
-        div.appendChild(input);
-        container.appendChild(div);
-    }
-} 
+}); 
