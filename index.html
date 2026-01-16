@@ -31,7 +31,8 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Preload splash animation for PWA -->
-    <link rel="preload" href="animazione-iniziale.png" as="image" type="image/png">
+    <!-- Preload splash animation for PWA -->
+    <!-- Video is preloaded via video tag attributes -->
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -442,7 +443,10 @@
 <body>
     <!-- Splash Screen Animation -->
     <div id="splashScreen" class="splash-screen">
-        <div class="splash-animation"></div>
+        <video id="splashVideo" class="splash-video" muted playsinline preload="auto">
+            <source src="spriterocks-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Google Tag Manager (noscript) -->
@@ -476,17 +480,20 @@
             <div class="contacts-icons">
                 <a href="mailto:partygamesdrew@gmail.com" id="nav-email" title="Email">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                     </svg>
                 </a>
                 <a href="https://instagram.com/partygamesdrew" target="_blank" id="nav-instagram" title="Instagram">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                 </a>
                 <a href="https://tiktok.com/@partygamesdrew" target="_blank" id="nav-tiktok" title="TikTok">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                        <path
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                     </svg>
                 </a>
             </div>
@@ -501,47 +508,61 @@
         <div class="game-info-header">
             <div class="game-info-players" id="gameInfoPlayers">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
                 <span id="gameInfoPlayersText">3-10 giocatori</span>
             </div>
         </div>
-        
+
         <div class="game-info-content">
             <div class="game-info-title-section">
                 <img id="gameInfoIcon" class="game-info-icon" src="" alt="Game Icon">
                 <h2 id="gameInfoTitle" class="game-info-title">Game Title</h2>
                 <p id="gameInfoCatchphrase" class="game-info-catchphrase">Catchphrase here</p>
             </div>
-            
+
             <div class="game-info-description">
-                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg> <span id="descriptionLabel">Descrizione</span></h4>
+                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                    </svg> <span id="descriptionLabel">Descrizione</span></h4>
                 <p id="gameInfoDesc">Game description here...</p>
             </div>
-            
+
             <div class="game-info-instructions">
-                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> <span id="instructionsLabel">Come Giocare</span></h4>
+                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg> <span id="instructionsLabel">Come Giocare</span></h4>
                 <ol id="gameInfoInstructions">
                     <!-- Instructions will be inserted here -->
                 </ol>
             </div>
-            
+
             <div class="game-info-features">
-                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> <span id="featuresLabel">Caratteristiche</span></h4>
+                <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg> <span id="featuresLabel">Caratteristiche</span></h4>
                 <ul id="gameInfoFeatures">
                     <!-- Features will be inserted here -->
                 </ul>
             </div>
         </div>
-        
+
         <div class="game-info-footer">
             <button class="game-info-btn game-info-btn-back" onclick="closeGameInfo()">
-                <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
                 <span id="backBtnText">Indietro</span>
             </button>
             <button class="game-info-btn game-info-btn-play" id="gameInfoPlayBtn">
                 <span id="playBtnText">Gioca</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
             </button>
         </div>
     </div>
@@ -659,7 +680,7 @@
             document.getElementById("myOverlay").style.visibility = "hidden";
         }
 
-        // Splash screen animation - robust version with sessionStorage
+        // Splash screen animation - Video version
         (function () {
             // Check if splash has already been shown in this session
             if (sessionStorage.getItem('splashShown')) {
@@ -688,56 +709,59 @@
                 }
             }
 
-            // Method 1: On window load
-            window.addEventListener('load', function () {
-                console.log('🎬 Site fully loaded. Preparing animation...');
+            // Video handling
+            document.addEventListener('DOMContentLoaded', function () {
+                const video = document.getElementById('splashVideo');
+                if (!video) {
+                    // Fallback
+                    hideSplashScreen();
+                    return;
+                }
 
-                const animElement = document.querySelector('.splash-animation');
-                if (!animElement) return;
-
-                // Create an image to force decode the sprite sheet
-                const spriteImg = new Image();
-                spriteImg.src = 'animazione-iniziale.png';
-
-                // Wait for decode before starting animation
-                spriteImg.decode().then(function () {
-                    console.log('✅ Sprite decoded. Starting animation.');
-                    animElement.classList.add('active');
-                    setTimeout(hideSplashScreen, 2500);
-                }).catch(function (err) {
-                    // Fallback if decode fails (old browsers)
-                    console.warn('⚠️ Decode failed, starting anyway:', err);
-                    animElement.classList.add('active');
-                    setTimeout(hideSplashScreen, 2500);
+                // When video ends, hide splash
+                video.addEventListener('ended', function () {
+                    console.log('🎬 Video ended');
+                    hideSplashScreen();
                 });
+
+                // Fail-safe: if video fails to play or error
+                video.addEventListener('error', function (e) {
+                    console.error('❌ Video error:', e);
+                    hideSplashScreen();
+                });
+
+                // Attempt to play
+                video.muted = true;
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        console.log('▶️ Video playing');
+                    })
+                        .catch(error => {
+                            console.warn('⚠️ Autoplay prevented:', error);
+                            setTimeout(hideSplashScreen, 1500);
+                        });
+                }
             });
 
-            // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
+            // Fallback timer
             setTimeout(function () {
                 console.log('⚠️ Fallback timer triggered');
                 hideSplashScreen();
-            }, 4000);
+            }, 6000);
 
-            // Method 3: On page visibility change (for PWA resume)
-            document.addEventListener('visibilitychange', function () {
-                if (document.visibilityState === 'visible') {
-                    const splashScreen = document.getElementById('splashScreen');
-                    if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                        console.log('👁️ Page became visible, checking splash...');
-                        setTimeout(hideSplashScreen, 500);
-                    }
-                }
-            });
-
-            // Method 4: Touch/click anywhere to dismiss (emergency fallback)
-            document.addEventListener('touchstart', function emergencyDismiss() {
+            // Click/Touch to skip
+            const dismiss = function () {
                 const splashScreen = document.getElementById('splashScreen');
                 if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                    console.log('👆 Touch detected, forcing hide...');
+                    console.log('👆 User interaction, skipping...');
                     hideSplashScreen();
-                    document.removeEventListener('touchstart', emergencyDismiss);
+                    document.removeEventListener('click', dismiss);
+                    document.removeEventListener('touchstart', dismiss);
                 }
-            }, { passive: true });
+            };
+            document.addEventListener('click', dismiss);
+            document.addEventListener('touchstart', dismiss, { passive: true });
         })();
 
         // Update navigation text based on language

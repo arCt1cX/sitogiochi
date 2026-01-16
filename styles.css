@@ -36,36 +36,13 @@
     opacity: 0 !important;
 }
 
-.splash-animation {
-    width: 200px;
-    height: 200px;
-    background-image: url('animazione-iniziale.png');
-    background-size: 1000px 200px;
-    /* 5 frames x 200px = 1000px total width */
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-repeat: no-repeat;
-    /* Animation removed here, added via class active */
-    /* PWA optimizations */
-    will-change: background-position;
+.splash-video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Ensure it plays decently on mobile */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.splash-animation.active {
-    animation: spriteAnimation 2s steps(5) forwards;
-}
-
-@keyframes spriteAnimation {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -1000px 0;
-    }
 }
 
 body {
@@ -477,10 +454,12 @@ footer {
     height: 100%;
     /* Critical for iOS PWA fullscreen */
     height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    height: 100dvh;
+    /* Dynamic viewport height for mobile browsers */
     min-height: -webkit-fill-available;
     background: #000000;
-    z-index: 10000; /* Above everything */
+    z-index: 10000;
+    /* Above everything */
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -507,9 +486,17 @@ footer {
 }
 
 @keyframes overlayGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Header with player count */
@@ -571,7 +558,8 @@ footer {
     padding: 0 20px 20px 20px;
     position: relative;
     z-index: 2;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
     scroll-behavior: smooth;
 }
 
@@ -845,46 +833,46 @@ footer {
     .game-info-header {
         padding: 12px 15px;
     }
-    
+
     .game-info-content {
         padding: 0 15px 15px 15px;
     }
-    
+
     .game-info-icon {
         width: 90px;
         height: 90px;
     }
-    
+
     .game-info-title {
         font-size: 1.6rem;
     }
-    
+
     .game-info-catchphrase {
         font-size: 0.9rem;
     }
-    
+
     .game-info-description,
     .game-info-instructions,
     .game-info-features {
         padding: 15px;
     }
-    
+
     .game-info-description p,
     .game-info-instructions li,
     .game-info-features li {
         font-size: 0.85rem;
     }
-    
+
     .game-info-footer {
         padding: 15px;
         gap: 10px;
     }
-    
+
     .game-info-btn {
         padding: 14px 15px;
         font-size: 1rem;
     }
-    
+
     .game-info-players {
         padding: 8px 14px;
         font-size: 0.85rem;
@@ -896,7 +884,7 @@ footer {
     .game-info-content {
         padding-top: 5px;
     }
-    
+
     .game-info-title-section {
         display: flex;
         align-items: center;
@@ -904,17 +892,17 @@ footer {
         text-align: left;
         margin-bottom: 15px;
     }
-    
+
     .game-info-icon {
         width: 70px;
         height: 70px;
         margin-bottom: 0;
     }
-    
+
     .game-info-footer {
         padding: 10px 20px;
     }
-    
+
     .game-info-btn {
         padding: 12px 20px;
     }
