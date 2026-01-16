@@ -31,7 +31,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Preload splash animation for PWA -->
-    <link rel="preload" href="splash-video.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="animazione-iniziale.png" as="image" type="image/png">
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
@@ -442,9 +442,7 @@
 <body>
     <!-- Splash Screen Animation -->
     <div id="splashScreen" class="splash-screen">
-        <video class="splash-video" id="splashVideo" muted playsinline preload="auto">
-            <source src="splash-video.mp4" type="video/mp4">
-        </video>
+        <div class="splash-animation" id="splashAnimation"></div>
     </div>
 
     <!-- Google Tag Manager (noscript) -->
@@ -707,43 +705,29 @@
                 }
             }
 
-            // Method 1: On window load - play video and hide when ended
+            // Method 1: On window load - start animation when image is ready
             window.addEventListener('load', function () {
-                console.log('🎬 Site fully loaded. Starting video animation...');
+                console.log('🎬 Site fully loaded. Preparing sprite animation...');
 
-                const videoElement = document.getElementById('splashVideo');
-                if (!videoElement) return;
+                const animElement = document.getElementById('splashAnimation');
+                if (!animElement) return;
 
-                // Hide splash when video ends
-                videoElement.addEventListener('ended', function() {
-                    console.log('🎬 Video ended');
-                    hideSplashScreen();
+                // Create an image to force decode the sprite sheet
+                const spriteImg = new Image();
+                spriteImg.src = 'animazione-iniziale.png';
+
+                // Wait for decode before starting animation
+                spriteImg.decode().then(function () {
+                    console.log('✅ Sprite decoded. Starting animation.');
+                    animElement.classList.add('active');
+                    // Hide after animation completes (2s animation + 0.5s buffer)
+                    setTimeout(hideSplashScreen, 2500);
+                }).catch(function (err) {
+                    // Fallback if decode fails (old browsers)
+                    console.warn('⚠️ Decode failed, starting anyway:', err);
+                    animElement.classList.add('active');
+                    setTimeout(hideSplashScreen, 2500);
                 });
-
-                // Wait for video to be ready, then play
-                function playVideo() {
-                    videoElement.currentTime = 0; // Reset to start
-                    var playPromise = videoElement.play();
-                    if (playPromise !== undefined) {
-                        playPromise.then(function() {
-                            console.log('✅ Video playing');
-                        }).catch(function(err) {
-                            console.warn('⚠️ Video autoplay blocked:', err);
-                            setTimeout(hideSplashScreen, 2000);
-                        });
-                    }
-                }
-
-                // Check if video is ready
-                if (videoElement.readyState >= 3) {
-                    // Video is ready, play immediately
-                    playVideo();
-                } else {
-                    // Wait for video to be ready
-                    videoElement.addEventListener('canplaythrough', function() {
-                        playVideo();
-                    }, { once: true });
-                }
             });
 
             // Method 2: Fallback - if video never ends, hide after 8 seconds
