@@ -142,6 +142,20 @@ document.addEventListener('DOMContentLoaded', () => {
             playerCountInput.value = 3;
         }
 
+        // Collect player names
+        gameState.players = [];
+        const lang = getUserLanguage();
+        const defaultNamePrefix = lang === 'it' ? 'Giocatore' : 'Player';
+
+        for (let i = 1; i <= gameState.playerCount; i++) {
+            const input = document.getElementById(`player-${i}`);
+            let name = input ? input.value.trim() : '';
+            if (!name) {
+                name = `${defaultNamePrefix} ${i}`;
+            }
+            gameState.players.push(name);
+        }
+
         // Set impostor count from input
         const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
 
@@ -166,22 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 90% chance: Normal range of impostors
                 // We want to allow more impostors for larger groups
                 // Scale: Random between 1 and Max(2, floor(playerCount/3))
-                // Examples: 
-                // 4-5 players -> 1-1 (Max 1) -> Actually let's ensure at least 2 is possible if players >= 6?
-                // Let's us a simple scalable max:
                 const dynamicMax = Math.max(1, Math.floor(gameState.playerCount / 3));
-                // But specifically for small groups (4-5), we usually want 1. 
-                // For 6-8, maybe 1 or 2.
-                // For 9-12, maybe 1, 2, 3, or 4?
 
                 // Let's use a slightly more generous max for "random fun":
                 // Max random impostors = floor(playerCount / 2.5)
-                // 4 players -> max 1
-                // 5 players -> max 2
-                // 6 players -> max 2
-                // 9 players -> max 3
-                // 12 players -> max 4
-
                 const randomMax = Math.max(1, Math.floor(gameState.playerCount / 2.5));
                 gameState.impostorCount = Math.floor(Math.random() * randomMax) + 1;
 
@@ -363,8 +365,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update player turn UI
     function updatePlayerTurnUI() {
-        currentPlayerNum.textContent = gameState.currentPlayer;
-        currentPlayerNumText.textContent = gameState.currentPlayer;
+        // Get player name
+        const playerIndex = gameState.currentPlayer - 1;
+        const playerName = (gameState.players && gameState.players[playerIndex])
+            ? gameState.players[playerIndex]
+            : gameState.currentPlayer;
+
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+
+        // If we have a name, we might want to adjust the text slightly depending on translation structure
+        // But simply replacing the number with the name usually works well enough
+
+        currentPlayerNum.textContent = playerName;
+        currentPlayerNumText.textContent = playerName;
 
         // Hide prompt container initially
         promptContainer.classList.add('hidden');
@@ -440,14 +454,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (gameState.impostorIndices.length === 1) {
                 // Single impostor
                 document.getElementById('impostorIsText').textContent = translations.impostorIsText;
-                impostorRevealElement.innerHTML = `${translations.playerText} <span id="impostor-num">${gameState.impostorIndices[0] + 1}</span>!`;
+                const impName = gameState.players[gameState.impostorIndices[0]];
+                impostorRevealElement.innerHTML = `${translations.playerText} <span id="impostor-num">${impName}</span>!`;
             } else {
                 // Multiple impostors
                 document.getElementById('impostorIsText').textContent =
                     lang === 'it' ? "Gli Impostori sono..." : "The Impostors are...";
-                const impostorNumbers = gameState.impostorIndices.map(idx => `<span class="impostor-num">${idx + 1}</span>`).join(', ');
-                impostorRevealElement.innerHTML =
-                    lang === 'it' ? `I giocatori ${impostorNumbers}!` : `Players ${impostorNumbers}!`;
+
+                const impostorNames = gameState.impostorIndices.map(idx => `<span class="impostor-num">${gameState.players[idx]}</span>`).join(', ');
+
+                impostorRevealElement.innerHTML = impostorNames + "!";
             }
 
             document.getElementById('theirPromptWasText').textContent =
@@ -486,7 +502,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('anonymousAnswerIs').textContent = translations.anonymousAnswerIs;
         document.getElementById('guessWhoText').textContent = translations.guessWhoText;
         playAgainReverseBtn.textContent = translations.playAgainText;
-        reverseAnswerAuthor.textContent = translations.reverseAuthorText.replace('{n}', authorIndex + 1);
+
+        const authorName = gameState.players[authorIndex];
+        // Replace {n} with name. If {n} not present, just append name? 
+        // Typically translations.reverseAuthorText might be "It was Player {n}!"
+        // We can just construct a new string if we want: "Written by: NAME"
+        // But let's try to respect the translation string if possible.
+        // Assuming translation has "{n}" for the number/name.
+
+        reverseAnswerAuthor.textContent = translations.reverseAuthorText.replace('{n}', authorName);
         reverseAnswerAuthor.style.display = 'none';
         if (revealAuthorBtn) {
             revealAuthorBtn.textContent = translations.revealAuthorBtn;
@@ -601,7 +625,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             impostorCountInput.appendChild(option);
-            impostorCountInput.appendChild(option);
         }
 
         // Add Random Option
@@ -618,10 +641,37 @@ document.addEventListener('DOMContentLoaded', () => {
         if (impostorCountInput.selectedIndex === -1 && impostorCountInput.options.length > 0) {
             impostorCountInput.selectedIndex = 0;
         }
+
+        // Regenerate player name inputs
+        generatePlayerInputs();
     });
 
     // Initial load
     loadPrompts();
+
+    // Generate player name inputs
+    function generatePlayerInputs() {
+        // Reuse count logic from init if needed, or just get value
+        const count = parseInt(playerCountInput.value);
+        const container = document.getElementById('player-names-container');
+        if (!container) return;
+
+        container.innerHTML = '';
+        const lang = getUserLanguage();
+        const placeholderText = lang === 'it' ? 'Giocatore' : 'Player';
+
+        for (let i = 1; i <= count; i++) {
+            const div = document.createElement('div');
+            // Reuse form-group style but make it a bit more compact if needed
+            div.className = 'form-group player-input-group';
+            div.style.marginBottom = '10px';
+
+            div.innerHTML = `
+                <input type="text" id="player-${i}" placeholder="${placeholderText} ${i}" maxlength="20" aria-label="${placeholderText} ${i}">
+            `;
+            container.appendChild(div);
+        }
+    }
 
     // Initialize impostor count options based on default player count
     const playerCount = parseInt(playerCountInput.value);
@@ -654,4 +704,7 @@ document.addEventListener('DOMContentLoaded', () => {
     randomOption.value = 'random';
     randomOption.textContent = translations.random;
     impostorCountInput.appendChild(randomOption);
+
+    // Generate inputs initially
+    generatePlayerInputs();
 }); 

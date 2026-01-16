@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameState.tournamentMode && gameState.tournamentPlayers[index - 1]) {
             return gameState.tournamentPlayers[index - 1].name;
         }
+        if (gameState.players && gameState.players[index - 1]) {
+            return gameState.players[index - 1];
+        }
         return `${index}`; // Just the number, the "Player"/"Giocatore" prefix is in the UI text usually
     }
 
@@ -106,6 +109,53 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start game - go to mode selection
     function startGame() {
         gameState.playerCount = parseInt(playerCountInput.value) || 4;
+
+        // Collect player names
+        gameState.players = [];
+        const lang = getUserLanguage();
+        const defaultNamePrefix = lang === 'it' ? 'Giocatore' : 'Player';
+
+        for (let i = 1; i <= gameState.playerCount; i++) {
+            const input = document.getElementById(`player-${i}`);
+            let name = input ? input.value.trim() : '';
+            if (!name) {
+                // If input is empty, maybe don't force a default here if our getPlayerName fallback isn't perfect
+                // checking getPlayerName implementation: it returns `${index}` or `gameState.players[index-1]`
+                // So if we push defaultNamePrefix here, getPlayerName returns "Giocatore 1"
+                // The UI usually says "Turno del Giocatore <NAME>"
+                // If name is "1", UI says "Turno del Giocatore 1" (correct)
+                // If name is "Giocatore 1", UI says "Turno del Giocatore Giocatore 1" (redundant?)
+                // Wait, let's check UI usage.
+                // Line 136: `document.getElementById('category-player-num').textContent = getPlayerName(gameState.currentPlayer);`
+                // HTML 154: `<p id="categoryPlayerText">Giocatore <span id="category-player-num">1</span>, scegli...`
+                // So if getPlayerName returns "Giocatore 1", it says "Giocatore Giocatore 1".
+                // So for IndovinaChi, we should defaults to just "1", "2", etc OR empty string so getPlayerName falls back?
+                // Actually my `getPlayerName` update returns `gameState.players[index-1]` if present.
+                // So if I store "Giocatore 1" it will be redundant.
+                // But if user inputs "Marco", it says "Giocatore Marco". That sounds okay.
+                // But "Giocatore Giocatore 1" is bad.
+                // So I should default to something that doesn't duplicate "Giocatore" if possible, OR I should just NOT push to gameState.players if empty?
+                // If I don't push, `gameState.players[index-1]` is undefined, falls back to `${index}`.
+                // This seems safer for IndovinaChi given the existing UI text.
+            } else {
+                gameState.players.push(name);
+            }
+        }
+        // Fill the rest with null/undefined to maintain index alignment if needed, or just let getPlayerName handle undefined
+        // Actually getPlayerName accesses index-1. Logic: `gameState.players[index-1]`.
+        // So I must ensure array is full length or use sparse array.
+        // Better to fill with nulls if empty.
+
+        // Re-evaluating:
+        // Use a loop to populate everything.
+        const currentNames = [];
+        for (let i = 1; i <= gameState.playerCount; i++) {
+            const input = document.getElementById(`player-${i}`);
+            const name = input ? input.value.trim() : '';
+            currentNames.push(name); // Push empty string if empty
+        }
+        gameState.players = currentNames;
+
         gameState.currentPlayer = 1;
         gameState.scores = [];
         showScreen(modeScreen);
@@ -217,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset change word state based on mode
         gameState.changeWordCount = 0;
         const changeBtn = document.getElementById('change-word-btn');
-        
+
         if (gameState.mode === 'custom') {
             // Hide change word button for custom mode
             changeBtn.style.display = 'none';
@@ -381,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function changeWord() {
         // Get max changes based on mode: 5 for random, 3 for chosen, 0 for custom
         const maxChanges = gameState.mode === 'random' ? 5 : (gameState.mode === 'chosen' ? 3 : 0);
-        
+
         if (gameState.changeWordCount >= maxChanges) {
             return;
         }
@@ -468,6 +518,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Generate player name inputs
+    function generatePlayerInputs() {
+        const count = parseInt(playerCountInput.value);
+        const container = document.getElementById('player-names-container');
+        if (!container) return;
+
+        container.innerHTML = '';
+        const lang = getUserLanguage();
+        const placeholderText = lang === 'it' ? 'Giocatore' : 'Player';
+
+        for (let i = 1; i <= count; i++) {
+            const div = document.createElement('div');
+            // Reuse form-group style but make it a bit more compact if needed
+            div.className = 'form-group player-input-group';
+            div.style.marginBottom = '10px';
+
+            div.innerHTML = `
+                <input type="text" id="player-${i}" placeholder="${placeholderText} ${i}" maxlength="20" aria-label="${placeholderText} ${i}">
+            `;
+            container.appendChild(div);
+        }
+    }
+
+    // Event listener for player count change
+    playerCountInput.addEventListener('change', generatePlayerInputs);
+
     // Load categories on page load
     loadCategories();
+    generatePlayerInputs();
 });

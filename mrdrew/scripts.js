@@ -108,60 +108,78 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedMode = modeSelect ? modeSelect.value : 'simple';
 
         // Ensure minimum 3 players
-        if (gameState.playerCount < 3) {
-            gameState.playerCount = 3;
-            playerCountInput.value = 3;
-        }
-
-        // Reset game state
-        gameState.currentPlayer = 1;
-
-        // Determine if undercover based on mode selection (requires at least 4 players)
-        gameState.hasUndercover = selectedMode === 'undercover' && gameState.playerCount >= 4;
-
-        // Randomly select Mr. Drew
-        gameState.mrdrewIndex = Math.floor(Math.random() * gameState.playerCount);
-
-        // Randomly select Undercover (if applicable, must be different from Mr. Drew)
-        if (gameState.hasUndercover) {
-            do {
-                gameState.undercoverIndex = Math.floor(Math.random() * gameState.playerCount);
-            } while (gameState.undercoverIndex === gameState.mrdrewIndex);
-        } else {
-            gameState.undercoverIndex = -1;
-        }
-
-        // Select a random word pair
-        const randomPairIndex = Math.floor(Math.random() * gameState.allWordPairs.length);
-        const selectedPair = gameState.allWordPairs[randomPairIndex];
-        gameState.civilWord = selectedPair.civilWord;
-        gameState.undercoverWord = selectedPair.undercoverWord;
-        gameState.theme = selectedPair.theme || '';
-
-        // Select random starting player
-        gameState.startingPlayer = Math.floor(Math.random() * gameState.playerCount) + 1;
-
-        console.log(`Game started with ${gameState.playerCount} players`);
-        console.log(`Mr. Drew is player: ${gameState.mrdrewIndex + 1}`);
-        if (gameState.hasUndercover) {
-            console.log(`Undercover is player: ${gameState.undercoverIndex + 1}`);
-        }
-        console.log(`Civil word: ${gameState.civilWord}`);
-        console.log(`Undercover word: ${gameState.undercoverWord}`);
-        console.log(`Theme: ${gameState.theme}`);
-        console.log(`Starting player: ${gameState.startingPlayer}`);
-
-        // Update UI for first player
-        updatePlayerTurnUI();
-
-        // Switch screen
-        showScreen(playerTurnScreen);
+        gameState.playerCount = 3;
+        playerCountInput.value = 3;
     }
+
+    // Collect player names
+    gameState.players = [];
+    const lang = getUserLanguage();
+    const defaultNamePrefix = lang === 'it' ? 'Giocatore' : 'Player';
+
+    for (let i = 1; i <= gameState.playerCount; i++) {
+        const input = document.getElementById(`player-${i}`);
+        let name = input ? input.value.trim() : '';
+        if (!name) {
+            name = `${defaultNamePrefix} ${i}`;
+        }
+        gameState.players.push(name);
+    }
+
+    // Reset game state
+    gameState.currentPlayer = 1;
+
+    // Determine if undercover based on mode selection (requires at least 4 players)
+    gameState.hasUndercover = selectedMode === 'undercover' && gameState.playerCount >= 4;
+
+    // Randomly select Mr. Drew
+    gameState.mrdrewIndex = Math.floor(Math.random() * gameState.playerCount);
+
+    // Randomly select Undercover (if applicable, must be different from Mr. Drew)
+    if (gameState.hasUndercover) {
+        do {
+            gameState.undercoverIndex = Math.floor(Math.random() * gameState.playerCount);
+        } while (gameState.undercoverIndex === gameState.mrdrewIndex);
+    } else {
+        gameState.undercoverIndex = -1;
+    }
+
+    // Select a random word pair
+    const randomPairIndex = Math.floor(Math.random() * gameState.allWordPairs.length);
+    const selectedPair = gameState.allWordPairs[randomPairIndex];
+    gameState.civilWord = selectedPair.civilWord;
+    gameState.undercoverWord = selectedPair.undercoverWord;
+    gameState.theme = selectedPair.theme || '';
+
+    // Select random starting player
+    gameState.startingPlayer = Math.floor(Math.random() * gameState.playerCount) + 1;
+
+    console.log(`Game started with ${gameState.playerCount} players`);
+    console.log(`Mr. Drew is player: ${gameState.mrdrewIndex + 1}`);
+    if (gameState.hasUndercover) {
+        console.log(`Undercover is player: ${gameState.undercoverIndex + 1}`);
+    }
+    console.log(`Civil word: ${gameState.civilWord}`);
+    console.log(`Undercover word: ${gameState.undercoverWord}`);
+    console.log(`Theme: ${gameState.theme}`);
+    console.log(`Starting player: ${gameState.startingPlayer}`);
+
+    // Update UI for first player
+    updatePlayerTurnUI();
+
+    // Switch screen
+    showScreen(playerTurnScreen);
+}
 
     // Update player turn UI
     function updatePlayerTurnUI() {
-        currentPlayerNum.textContent = gameState.currentPlayer;
-        currentPlayerNumText.textContent = gameState.currentPlayer;
+        const playerIndex = gameState.currentPlayer - 1;
+        const playerName = (gameState.players && gameState.players[playerIndex])
+            ? gameState.players[playerIndex]
+            : gameState.currentPlayer;
+
+        currentPlayerNum.textContent = playerName;
+        currentPlayerNumText.textContent = playerName;
 
         // Hide word container initially
         wordContainer.classList.add('hidden');
@@ -215,7 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const themeDisplay = document.getElementById('theme-display');
 
             if (startingPlayerNum) {
-                startingPlayerNum.textContent = gameState.startingPlayer;
+                // startingPlayer is 1-based index in gameState.startingPlayer, but we need 0-based for array
+                // actually gameState.startingPlayer is set as: Math.floor(...) + 1
+                const startIdx = gameState.startingPlayer - 1;
+                const startName = (gameState.players && gameState.players[startIdx])
+                    ? gameState.players[startIdx]
+                    : gameState.startingPlayer;
+                startingPlayerNum.textContent = startName;
             }
             if (themeDisplay) {
                 themeDisplay.textContent = gameState.theme || '???';
@@ -231,12 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
         // Show Mr. Drew
-        mrdrewNum.textContent = gameState.mrdrewIndex + 1;
+        const mrdrewName = gameState.players[gameState.mrdrewIndex];
+        mrdrewNum.textContent = mrdrewName;
 
         // Show Undercover if applicable
         if (gameState.hasUndercover) {
             undercoverRevealContainer.classList.remove('hidden');
-            undercoverNum.textContent = gameState.undercoverIndex + 1;
+            const undercoverName = gameState.players[gameState.undercoverIndex];
+            undercoverNum.textContent = undercoverName;
             undercoverWord.textContent = gameState.undercoverWord;
         } else {
             undercoverRevealContainer.classList.add('hidden');
@@ -271,26 +297,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listeners
     startGameBtn.addEventListener('click', initGame);
 
-    showWordBtn.addEventListener('click', showWord);
+showWordBtn.addEventListener('click', showWord);
 
-    hideWordBtn.addEventListener('click', nextPlayerOrPlaying);
+hideWordBtn.addEventListener('click', nextPlayerOrPlaying);
 
-    revealRolesBtn.addEventListener('click', revealRoles);
+revealRolesBtn.addEventListener('click', revealRoles);
 
-    revealCivilWordBtn.addEventListener('click', revealCivilWord);
+revealCivilWordBtn.addEventListener('click', revealCivilWord);
 
-    playAgainBtn.addEventListener('click', () => {
-        showScreen(setupScreen);
-    });
+playAgainBtn.addEventListener('click', () => {
+    showScreen(setupScreen);
+});
 
-    // Update role breakdown when player count or mode changes
-    playerCountInput.addEventListener('change', updateRoleBreakdown);
-    if (modeSelect) {
-        modeSelect.addEventListener('change', updateRoleBreakdown);
+// Generate player name inputs
+function generatePlayerInputs() {
+    const count = parseInt(playerCountInput.value);
+    const container = document.getElementById('player-names-container');
+    if (!container) return;
+
+    container.innerHTML = '';
+    const lang = getUserLanguage();
+    const placeholderText = lang === 'it' ? 'Giocatore' : 'Player';
+
+    for (let i = 1; i <= count; i++) {
+        const div = document.createElement('div');
+        // Reuse form-group style but make it a bit more compact if needed
+        div.className = 'form-group player-input-group';
+        div.style.marginBottom = '10px';
+
+        div.innerHTML = `
+                <input type="text" id="player-${i}" placeholder="${placeholderText} ${i}" maxlength="20" aria-label="${placeholderText} ${i}">
+            `;
+        container.appendChild(div);
     }
+}
 
-    // Initial load
-    loadWordPairs();
+// Update role breakdown when player count or mode changes
+playerCountInput.addEventListener('change', () => {
     updateRoleBreakdown();
+    generatePlayerInputs();
+});
+
+if (modeSelect) {
+    modeSelect.addEventListener('change', updateRoleBreakdown);
+}
+
+// Initial load
+loadWordPairs();
+updateRoleBreakdown();
+generatePlayerInputs();
 });
 
