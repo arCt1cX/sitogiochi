@@ -733,11 +733,14 @@
                 }
             });
 
-            // Method 2: Fallback - if load doesn't fire within 4 seconds, hide anyway
+            // Method 2: Fallback - if video never ends, hide after 8 seconds
             setTimeout(function () {
-                console.log('⚠️ Fallback timer triggered');
-                hideSplashScreen();
-            }, 4000);
+                const splashScreen = document.getElementById('splashScreen');
+                if (splashScreen && !splashScreen.classList.contains('hidden')) {
+                    console.log('⚠️ Fallback timer triggered');
+                    hideSplashScreen();
+                }
+            }, 8000);
 
             // Method 3: On page visibility change (for PWA resume)
             document.addEventListener('visibilitychange', function () {
