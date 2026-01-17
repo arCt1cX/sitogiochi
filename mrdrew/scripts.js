@@ -43,8 +43,42 @@ document.addEventListener('DOMContentLoaded', () => {
         undercoverWord: '',
         theme: '',
         startingPlayer: 1,
-        allWordPairs: []
+        startingPlayer: 1,
+        allWordPairs: [],
+        playerNames: []
     };
+
+    const playerNamesContainer = document.getElementById('player-names-container');
+
+    function updatePlayerNameInputs() {
+        const count = parseInt(playerCountInput.value) || 4;
+        const currentInputs = playerNamesContainer.querySelectorAll('input');
+        const currentValues = Array.from(currentInputs).map(input => input.value);
+
+        playerNamesContainer.innerHTML = '';
+
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+
+        for (let i = 0; i < count; i++) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = `player-name-${i}`;
+            input.className = 'form-control';
+
+            // Reuse existing value if available
+            if (i < currentValues.length) {
+                input.value = currentValues[i];
+            }
+
+            // Placeholder
+            let placeholder = translations.playerNamePlaceholder || `Player ${i + 1}`;
+            placeholder = placeholder.replace('{n}', i + 1);
+            input.placeholder = placeholder;
+
+            playerNamesContainer.appendChild(input);
+        }
+    }
 
     // Load word pairs from the text file
     async function loadWordPairs() {
@@ -113,6 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
             playerCountInput.value = 3;
         }
 
+        // Capture player names
+        const nameInputs = playerNamesContainer.querySelectorAll('input');
+        gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+
         // Reset game state
         gameState.currentPlayer = 1;
 
@@ -160,8 +198,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update player turn UI
     function updatePlayerTurnUI() {
-        currentPlayerNum.textContent = gameState.currentPlayer;
-        currentPlayerNumText.textContent = gameState.currentPlayer;
+        const currentPlayerName = gameState.playerNames[gameState.currentPlayer - 1]; // 0-indexed
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+
+        const turnH2 = document.querySelector('#player-turn-screen h2');
+        const passP = document.querySelector('#player-turn-screen p');
+
+        if (currentPlayerName && currentPlayerName !== translations.player + ' ' + gameState.currentPlayer) {
+            if (lang === 'it') {
+                turnH2.innerHTML = `Turno di <span id="current-player-num">${currentPlayerName}</span>`;
+                passP.innerHTML = `Passa il telefono a <span id="current-player-num-text">${currentPlayerName}</span>`;
+            } else {
+                turnH2.innerHTML = `<span id="current-player-num">${currentPlayerName}</span>'s Turn`;
+                passP.innerHTML = `Pass the phone to <span id="current-player-num-text">${currentPlayerName}</span>`;
+            }
+        } else {
+            // Default
+            currentPlayerNum.textContent = gameState.currentPlayer;
+            currentPlayerNumText.textContent = gameState.currentPlayer;
+
+            // Restore default text structure if needed (though IDs should handle it if structure is preserved)
+            // But since we modify innerHTML above, we should restore it fully if falling back to default?
+            // Actually, if we just update the spans, it might be fine IF the spans still exist. 
+            // BUT we replaced the spans parent content with new HTML.
+            // So we must fully reconstruct.
+
+            if (lang === 'it') {
+                turnH2.innerHTML = `<span id="playerTurnText">${translations.playerTurnText}</span> <span id="current-player-num">${gameState.currentPlayer}</span>`;
+                passP.innerHTML = `<span id="passPhoneText">${translations.passPhoneText}</span> <span id="current-player-num-text">${gameState.currentPlayer}</span>`;
+            } else {
+                // English structure might differ slightly in original? "Player Turn 1" vs "Turn of Player 1"
+                // Original HTML: <h2><span id="playerTurnText">Turno del Giocatore</span> <span id="current-player-num">1</span></h2>
+                turnH2.innerHTML = `<span id="playerTurnText">${translations.playerTurnText}</span> <span id="current-player-num">${gameState.currentPlayer}</span>`;
+                passP.innerHTML = `<span id="passPhoneText">${translations.passPhoneText}</span> <span id="current-player-num-text">${gameState.currentPlayer}</span>`;
+            }
+
+            // Re-acquire references if needed for later, though querySelector gets fresh ones.
+        }
+
 
         // Hide word container initially
         wordContainer.classList.add('hidden');
@@ -215,7 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const themeDisplay = document.getElementById('theme-display');
 
             if (startingPlayerNum) {
-                startingPlayerNum.textContent = gameState.startingPlayer;
+                const startPlayerName = gameState.playerNames[gameState.startingPlayer - 1] || gameState.startingPlayer;
+                startingPlayerNum.textContent = startPlayerName;
             }
             if (themeDisplay) {
                 themeDisplay.textContent = gameState.theme || '???';
@@ -231,12 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
         // Show Mr. Drew
-        mrdrewNum.textContent = gameState.mrdrewIndex + 1;
+        const mrdrewName = gameState.playerNames[gameState.mrdrewIndex] || (gameState.mrdrewIndex + 1);
+        mrdrewNum.textContent = mrdrewName;
 
         // Show Undercover if applicable
         if (gameState.hasUndercover) {
             undercoverRevealContainer.classList.remove('hidden');
-            undercoverNum.textContent = gameState.undercoverIndex + 1;
+            const undercoverName = gameState.playerNames[gameState.undercoverIndex] || (gameState.undercoverIndex + 1);
+            undercoverNum.textContent = undercoverName;
             undercoverWord.textContent = gameState.undercoverWord;
         } else {
             undercoverRevealContainer.classList.add('hidden');
@@ -284,7 +362,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Update role breakdown when player count or mode changes
-    playerCountInput.addEventListener('change', updateRoleBreakdown);
+    // Update role breakdown when player count or mode changes
+    playerCountInput.addEventListener('change', () => {
+        updateRoleBreakdown();
+        updatePlayerNameInputs();
+    });
     if (modeSelect) {
         modeSelect.addEventListener('change', updateRoleBreakdown);
     }
@@ -292,5 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     loadWordPairs();
     updateRoleBreakdown();
+    updatePlayerNameInputs();
 });
 

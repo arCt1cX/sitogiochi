@@ -39,7 +39,8 @@ const gameTranslations = {
         'roleUndercover': 'Undercover',
         'roleMrDrew': 'Mr. Drew',
         'wordMrDrew': '???',
-        'phrasesFile': 'parole_mrdrew.txt'
+        'phrasesFile': 'parole_mrdrew.txt',
+        'playerNamePlaceholder': 'Giocatore {n}'
     },
     'en': {
         'gameTitle': 'Mr. Drew',
@@ -80,7 +81,8 @@ const gameTranslations = {
         'roleUndercover': 'Undercover',
         'roleMrDrew': 'Mr. Drew',
         'wordMrDrew': '???',
-        'phrasesFile': 'words_mrdrew_en.txt'
+        'phrasesFile': 'words_mrdrew_en.txt',
+        'playerNamePlaceholder': 'Player {n}'
     }
 };
 

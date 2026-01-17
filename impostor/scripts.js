@@ -724,12 +724,12 @@ document.addEventListener('DOMContentLoaded', () => {
             placeholder = placeholder.replace('{n}', i + 1);
             input.placeholder = placeholder;
 
-            // Basic styling to match other inputs
-            input.style.padding = '10px';
-            input.style.borderRadius = '8px';
-            input.style.border = '1px solid #3d3d3d';
-            input.style.backgroundColor = '#2d2d2d';
-            input.style.color = '#e1e1e1';
+            // Basic styling is now handled in CSS
+            // input.style.padding = '10px';
+            // input.style.borderRadius = '8px';
+            // input.style.border = '1px solid #3d3d3d';
+            // input.style.backgroundColor = '#2d2d2d';
+            // input.style.color = '#e1e1e1';
 
             playerNamesContainer.appendChild(input);
         }

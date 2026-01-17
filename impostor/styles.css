@@ -124,7 +124,22 @@ h2 {
 
 #player-names-container input {
     background-image: none;
-    padding-right: 14px;
+    padding: 14px;
+    font-size: 16px;
+    /* Explicit 16px to prevent iOS zoom */
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    background-color: #2d2d2d;
+    color: #e1e1e1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    /* Ensure full width in grid cell */
+}
+
+#player-names-container input:focus {
+    outline: none;
+    border-color: #bb86fc;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
 }
 
 @media (max-width: 480px) {
@@ -136,6 +151,7 @@ h2 {
 .form-group select:hover {
     background-color: #333333;
 }
+
 
 .btn {
     padding: 14px 22px;
