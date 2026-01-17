@@ -584,10 +584,11 @@
                 <p id="copyright">&copy; 2025 partygamesdrew.com - Tutti i diritti riservati</p>
                 <div class="support-container">
                     <!-- Mobile-friendly BMC button implementation -->
+                    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
                     <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank"
-                        class="bmc-button-fallback">
-                        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Offrici una birra"
-                            style="height: 60px; width: 217px;">
+                        class="bmc-button-custom">
+                        <span class="bmc-emoji">🍺</span>
+                        <span class="bmc-text">Offrici una birra</span>
                     </a>
                     <script>
                         // Load the official BMC script
@@ -608,6 +609,12 @@
                             script.setAttribute('data-outline-color', '#000000');
                             script.setAttribute('data-font-color', '#ffffff');
                             script.setAttribute('data-coffee-color', '#FFDD00');
+
+                            // Update the custom button text as well
+                            const customBmcText = document.querySelector('.bmc-text');
+                            if (customBmcText) {
+                                customBmcText.textContent = bmcText;
+                            }
 
                             // On script load, hide our fallback if the official button rendered properly
                             script.onload = function () {

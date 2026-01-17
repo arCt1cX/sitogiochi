@@ -937,3 +937,40 @@ body.overlay-open {
     width: 100%;
     height: 100%;
 }
+/* Custom BMC Button */
+.bmc-button-custom {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #BD5FFF !important;
+    color: #ffffff !important;
+    font-family: 'Cookie', cursive !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    padding: 5px 15px;
+    height: 60px;
+    min-width: 217px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.bmc-button-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none !important;
+}
+
+.bmc-emoji {
+    font-size: 28px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.bmc-text {
+    font-size: 28px;
+    line-height: normal;
+    margin-top: 3px; /* Optical adjustment for Cookie font */
+}
