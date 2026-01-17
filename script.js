@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: "nonhomai",
             displayName: getTranslation('nonhomai', 'title'),
             catchphrase: getTranslation('nonhomai', 'catchphrase'),
-            image: "impostor.png", // Reusing impostor icon for now as requested/style
+            image: "nonhomai.png", // Reusing impostor icon for now as requested/style
             players: getTranslation('nonhomai', 'players'),
             time: getTranslation('nonhomai', 'time'),
             difficulty: getTranslation('nonhomai', 'difficulty'),

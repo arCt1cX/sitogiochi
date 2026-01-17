@@ -974,3 +974,16 @@ body.overlay-open {
     line-height: normal;
     margin-top: 3px; /* Optical adjustment for Cookie font */
 }
+
+/* BMC SVG Icon */
+.bmc-svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.bmc-button-custom:hover .bmc-svg {
+    transform: rotate(-10deg) scale(1.1);
+}
