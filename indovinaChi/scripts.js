@@ -187,7 +187,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
 
-        document.getElementById('category-player-num').textContent = getPlayerName(gameState.currentPlayer);
+        const playerLabel = translations.player || 'Giocatore';
+        const name = getPlayerName(gameState.currentPlayer);
+        const playerTextElement = document.getElementById('categoryPlayerText');
+
+        // Logic for display text
+        let message;
+        // Check if it's a generic name (just the index number string)
+        if (name === `${gameState.currentPlayer}`) {
+            // Default: "Giocatore 1, scegli la categoria per gli altri"
+            // Use existing translation 'categoryPlayerText' which has "Giocatore {n}..."
+            const template = translations.categoryPlayerText || 'Giocatore {n}, scegli la categoria per gli altri:';
+            message = template.replace('{n}', gameState.currentPlayer);
+        } else {
+            // Custom Name: "Davide scegli la tua categoria"
+            const template = translations.categoryChooseOwn || '{n} scegli la tua categoria';
+            message = template.replace('{n}', name);
+        }
+
+        if (playerTextElement) {
+            playerTextElement.textContent = message;
+        }
 
         // Clear and populate category list
         categoryList.innerHTML = '';
@@ -252,7 +272,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show pass phone screen
     function showPassPhoneScreen() {
-        document.getElementById('pass-player-num').textContent = getPlayerName(gameState.currentPlayer);
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+        // Use text directly from translations, no need for name replacement anymore
+        document.getElementById('passPhoneText').textContent = translations.passPhoneText;
         showScreen(passPhoneScreen);
     }
 

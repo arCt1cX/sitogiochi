@@ -5,19 +5,22 @@ const gameTranslations = {
         'pageTitleDesc': 'Wordrace - Sfida di parole a tempo | DrewGames',
         'metaDescription': 'Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!',
         'home': 'Home',
-        'playerModeTitle': 'Modalità Giocatori',
+        'setupTitle': 'Impostazioni',
+        'startGameText': 'Inizia Gioco',
+        'playerCountLabel': 'Numero di Giocatori:',
+        'gameModeLabel': 'Modalità di Gioco:',
+        'timerModeOption': 'Solo Timer',
+        'categoryModeOption': 'Con Categorie',
+        'initialTimeLabel': 'Tempo Iniziale:',
+        'time30s': '30 Secondi',
+        'time1m': '1 Minuto',
+        'time2m': '2 Minuti',
+        'time5m': '5 Minuti',
+
         'players2Text': '2 Giocatori',
         'players3Text': '3 Giocatori',
         'players4Text': '4 Giocatori',
-        'gameModeTitle': 'Modalità Gioco',
-        'timerModeText': 'Solo Timer',
-        'categoryModeText': 'Con Categorie',
-        'initialTimeTitle': 'Tempo Iniziale',
-        'seconds30Text': '30 Secondi',
-        'minute1Text': '1 Minuto',
-        'minutes2Text': '2 Minuti',
-        'minutes5Text': '5 Minuti',
-        'startGameText': 'Inizia Gioco',
+
         'howToPlayTitle': 'Come Giocare',
         'challengeDescription': 'Una sfida verbale veloce per giocatori:',
         'mode2pTitle': 'Modalità 2 Giocatori:',
@@ -61,19 +64,22 @@ const gameTranslations = {
         'pageTitleDesc': 'Wordrace - Timed Word Challenge | DrewGames',
         'metaDescription': 'Play Wordrace: a timed word challenge for 2-4 players. Race against time in this fun verbal challenge, perfect for evenings with friends!',
         'home': 'Home',
-        'playerModeTitle': 'Player Mode',
+        'setupTitle': 'Settings',
+        'startGameText': 'Start Game',
+        'playerCountLabel': 'Number of Players:',
+        'gameModeLabel': 'Game Mode:',
+        'timerModeOption': 'Timer Only',
+        'categoryModeOption': 'With Categories',
+        'initialTimeLabel': 'Initial Time:',
+        'time30s': '30 Seconds',
+        'time1m': '1 Minute',
+        'time2m': '2 Minutes',
+        'time5m': '5 Minutes',
+
         'players2Text': '2 Players',
         'players3Text': '3 Players',
         'players4Text': '4 Players',
-        'gameModeTitle': 'Game Mode',
-        'timerModeText': 'Timer Only',
-        'categoryModeText': 'With Categories',
-        'initialTimeTitle': 'Initial Time',
-        'seconds30Text': '30 Seconds',
-        'minute1Text': '1 Minute',
-        'minutes2Text': '2 Minutes',
-        'minutes5Text': '5 Minutes',
-        'startGameText': 'Start Game',
+
         'howToPlayTitle': 'How to Play',
         'challengeDescription': 'A fast-paced verbal challenge for players:',
         'mode2pTitle': '2 Player Mode:',
@@ -125,43 +131,46 @@ function applyGameTranslations() {
             element.textContent = value;
         }
     };
-    
+
     // Update page title and meta description
     document.title = translations.pageTitleDesc;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', translations.metaDescription);
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update the language toggle button
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
         // Hide language toggle on game pages as requested
         languageToggle.style.display = 'none';
     }
-    
+
     // Update home button text
     setText('homeText', translations.home);
-    
+
     // Update all start menu elements
     setText('gameTitle', translations.gameTitle);
-    setText('playerModeTitle', translations.playerModeTitle);
-    setText('players2Text', translations.players2Text);
-    setText('players3Text', translations.players3Text);
-    setText('players4Text', translations.players4Text);
-    setText('gameModeTitle', translations.gameModeTitle);
-    setText('timerModeText', translations.timerModeText);
-    setText('categoryModeText', translations.categoryModeText);
-    setText('initialTimeTitle', translations.initialTimeTitle);
-    setText('seconds30Text', translations.seconds30Text);
-    setText('minute1Text', translations.minute1Text);
-    setText('minutes2Text', translations.minutes2Text);
-    setText('minutes5Text', translations.minutes5Text);
+    // Update all start menu elements
+    setText('gameTitle', translations.gameTitle);
+
+    setText('setupTitle', translations.setupTitle);
     setText('startGameText', translations.startGameText);
-    
+    setText('playerCountLabel', translations.playerCountLabel);
+    setText('gameModeLabel', translations.gameModeLabel);
+    setText('initialTimeLabel', translations.initialTimeLabel);
+
+    setText('timerModeOption', translations.timerModeOption);
+    setText('categoryModeOption', translations.categoryModeOption);
+
+    setText('time30s', translations.time30s);
+    setText('time1m', translations.time1m);
+    setText('time2m', translations.time2m);
+    setText('time5m', translations.time5m);
+
     // Update how to play section
     setText('howToPlayTitle', translations.howToPlayTitle);
     setText('challengeDescription', translations.challengeDescription);
@@ -186,7 +195,7 @@ function applyGameTranslations() {
     setText('mode4p6', translations.mode4p6);
     setText('mode4p7', translations.mode4p7);
     setText('tipText', translations.tipText);
-    
+
     // Update game UI elements
     // Since some of these might be dynamically generated, we'll update them all
     const turnIndicators = document.querySelectorAll('.turn-indicator');
@@ -197,27 +206,27 @@ function applyGameTranslations() {
             indicator.textContent = translations.pressNow;
         }
     });
-    
+
     const playerButtons = document.querySelectorAll('.player-button');
     playerButtons.forEach(button => {
         button.textContent = translations.pressButton;
     });
-    
+
     const menuButtons = document.querySelectorAll('.menu-button');
     menuButtons.forEach(button => {
         button.textContent = translations.menuButton;
     });
-    
+
     const resetButtons = document.querySelectorAll('.reset-button');
     resetButtons.forEach(button => {
         button.textContent = translations.resetButton;
     });
-    
+
     const mainMenuButtons = document.querySelectorAll('.main-menu-button');
     mainMenuButtons.forEach(button => {
         button.textContent = translations.mainMenuButton;
     });
-    
+
     // Update results text
     const resultTexts = document.querySelectorAll('.player-result, .player-result3p, .player-result4p');
     resultTexts.forEach(result => {
@@ -233,7 +242,7 @@ function applyGameTranslations() {
             result.textContent = translations.place4;
         }
     });
-    
+
     // Update placement displays
     const placementDisplays = document.querySelectorAll('.placement-display');
     placementDisplays.forEach(display => {
@@ -247,7 +256,7 @@ function applyGameTranslations() {
             display.textContent = translations.place4;
         }
     });
-    
+
     // Update category labels
     const categoryLabels = document.querySelectorAll('.category-container h2');
     categoryLabels.forEach(label => {

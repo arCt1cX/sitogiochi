@@ -25,7 +25,7 @@ const gameTranslations = {
         'submitWordText': 'Conferma Parola',
         'customCategory': 'Personalizzata',
         'passPhoneTitle': 'Passa il Telefono',
-        'passPhoneText': 'Non mostrare il telefono al Giocatore {n}',
+        'passPhoneText': 'Passa il telefono ad un altro giocatore',
         'passPhoneInstructions': 'Quando è pronto, tocca per vedere la parola da indovinare',
         'showWordText': 'Mostra Parola',
         'currentPlayerLabel': 'Giocatore {n}',
@@ -44,7 +44,8 @@ const gameTranslations = {
         'gaveUpAlert': 'Ti sei arreso!',
         'arreso': 'Arreso (Non Indovinata)',
         'theWordWas': 'La parola era:',
-        'playerNamePlaceholder': 'Giocatore {n}'
+        'playerNamePlaceholder': 'Giocatore {n}',
+        'categoryChooseOwn': '{n} scegli la tua categoria'
     },
     'en': {
         'gameTitle': 'Guess Who',
@@ -71,7 +72,7 @@ const gameTranslations = {
         'submitWordText': 'Confirm Word',
         'customCategory': 'Custom',
         'passPhoneTitle': 'Pass the Phone',
-        'passPhoneText': 'Pass the phone to Player {n}',
+        'passPhoneText': 'Pass the phone to another player',
         'passPhoneInstructions': 'When ready, tap to see the word to guess',
         'showWordText': 'Show Word',
         'currentPlayerLabel': 'Player {n}',
@@ -90,7 +91,8 @@ const gameTranslations = {
         'gaveUpAlert': 'You gave up!',
         'arreso': 'Gave Up (Not Guessed)',
         'theWordWas': 'The word was:',
-        'playerNamePlaceholder': 'Player {n}'
+        'playerNamePlaceholder': 'Player {n}',
+        'categoryChooseOwn': '{n} choose your category'
     }
 };
 

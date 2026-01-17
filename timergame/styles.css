@@ -1,12 +1,484 @@
-html {
-    background-color: #000000;
+/* Global Styles & Variables */
+:root {
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #bb86fc;
+    --primary-variant: #3700b3;
+    --secondary-color: #03dac6;
+    --error-color: #cf6679;
+    --on-background: #ffffff;
+    --on-surface: #e1e1e1;
+    --on-primary: #000000;
+    --on-secondary: #000000;
+    --on-error: #000000;
+
+    /* Game Specific Colors */
+    --player-active: #4CD137;
+    /* Green for active turn */
+    --player-inactive: #444444;
+    /* Gray for inactive */
+    --player-ready: #bb86fc;
+    /* Purple for ready */
+
+    --gold-color: #FFC312;
+    --silver-color: #B2BEC3;
+    --bronze-color: #CD6133;
+    --pewter-color: #718093;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--on-background);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Prevent scrolling during game */
+}
+
+/* Layout Containers */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-screen {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.game-screen.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--on-surface);
+    font-weight: 500;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--surface-color);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--on-surface);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+    background-color: #9f67e0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.secondary-btn {
+    background-color: var(--surface-color);
+    color: var(--on-surface);
+    border: 1px solid var(--primary-color);
+    margin-top: 10px;
+}
+
+/* Category Display */
+.category-container {
+    text-align: center;
+    background-color: var(--surface-color);
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+}
+
+.category-container h2 {
+    font-size: 1rem;
+    color: var(--on-surface);
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.category-container p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- GAMEPLAY LAYOUTS --- */
+/* These classes define the grid for the actual timer game */
+
+/* Common Player Elements */
+.time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.player-button {
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+    border: none;
+    border-radius: 16px;
+    height: 100px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+    touch-action: manipulation;
+}
+
+.player-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* States */
+.player-button.active-turn {
+    background-color: var(--player-active);
+    /* Green */
+    box-shadow: 0 6px 0 #2D9721;
+    color: white;
+}
+
+.player-button.active-turn:active {
+    box-shadow: 0 2px 0 #2D9721;
+}
+
+.player-button.inactive-turn {
+    background-color: var(--player-inactive);
+    /* Dark Gray */
+    box-shadow: 0 6px 0 #222;
+    color: #888;
+}
+
+.player-button.inactive-turn:active {
+    box-shadow: 0 2px 0 #222;
+}
+
+/* 2 PLAYERS */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-between;
+}
+
+.player-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.player-section.rotated {
+    transform: rotate(180deg);
+}
+
+.divider {
+    height: 2px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-button {
+    position: absolute;
+    background: var(--surface-color);
+    color: var(--on-surface);
+    border: 1px solid var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+/* 3 PLAYERS */
+.timer-container3p {
+    display: grid;
+    grid-template-areas:
+        "left right"
+        "bottom bottom";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 85vh;
+    gap: 10px;
+}
+
+.player-section3p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.player-left {
+    grid-area: left;
+    transform: rotate(180deg);
+}
+
+.player-right {
+    grid-area: right;
+    transform: rotate(180deg);
+}
+
+/* Wait, top right player facing opposite? Usually 3p is: P1 TopLeft(Rot), P2 TopRight(Rot), P3 Bottom(Normal) */
+/* Actually user said: "2 ai lati e un al centro in alto" NO, user said "2 ai lati e un al centro in alto se sono 3 giocatori" -> wait.
+   "4 lati se sono 4", "2 ai lati e un al centro in alto se sono 3"??
+   Standard 3p is usually triangular. Let's stick to the previous layout logic but style it better.
+   Previous 3p layout:
+    "left right"
+    "bottom bottom"
+   Left/Right were TopLeft/TopRight. Bottom was full width.
+*/
+
+/* 4 PLAYERS */
+.timer-container4p {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 85vh;
+    gap: 10px;
+}
+
+.player-section4p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.player-top-left {
+    transform: rotate(180deg);
+}
+
+.player-top-right {
+    transform: rotate(180deg);
+}
+
+.player-bottom-left {}
+
+.player-bottom-right {}
+
+/* Center Menu in Grid */
+.center-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+/* Indicators */
+.turn-indicator {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    /* Teal */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.turn-indicator.visible {
+    opacity: 1;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Over / Results */
+.player-result,
+.player-result3p,
+.player-result4p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 50;
+    flex-direction: column;
+}
+
+/* Specific positioning for 2p results */
+#gameOverPlayer1.player-result {
+    bottom: 50%;
+    /* Top half */
+    height: 50%;
+}
+
+#gameOverPlayer2.player-result {
+    top: 50%;
+    /* Bottom half */
+    height: 50%;
+}
+
+.placement-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold-color);
+}
+
+/* Hidden Utils */
+.hidden {
+    display: none !important;
+}
+
+/* Dialog */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.dialog-content {
+    background: var(--surface-color);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+}
+
+.dialog-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Mobile Tweak */
+@media (max-width: 480px) {
+    .time-display {
+        font-size: 2.5rem;
+    }
+
+    .player-button {
+        height: 80px;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
 
 :root {

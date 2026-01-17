@@ -98,40 +98,39 @@
             id="homeText">Home</span></button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
 
-    <div id="app">
-        <!-- Start Menu -->
-        <div id="startMenu" class="screen active">
+    <div class="container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
             <h1 id="gameTitle">Wordrace</h1>
 
-            <div class="menu-option">
-                <h2 id="playerModeTitle">Modalità Giocatori</h2>
-                <div class="option-buttons">
-                    <button data-players="2" class="selected"><span id="players2Text">2 Giocatori</span></button>
-                    <button data-players="3"><span id="players3Text">3 Giocatori</span></button>
-                    <button data-players="4"><span id="players4Text">4 Giocatori</span></button>
-                </div>
+            <div class="form-group">
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
+                <select id="player-count">
+                    <option value="2">2 <span class="players-text">Giocatori</span></option>
+                    <option value="3">3 <span class="players-text">Giocatori</span></option>
+                    <option value="4">4 <span class="players-text">Giocatori</span></option>
+                </select>
             </div>
 
-            <div class="menu-option">
-                <h2 id="gameModeTitle">Modalità Gioco</h2>
-                <div class="option-buttons">
-                    <button data-mode="timer"><span id="timerModeText">Solo Timer</span></button>
-                    <button data-mode="category" class="selected"><span id="categoryModeText">Con
-                            Categorie</span></button>
-                </div>
+            <div class="form-group">
+                <label for="game-mode" id="gameModeLabel">Modalità di Gioco:</label>
+                <select id="game-mode">
+                    <option value="category" id="categoryModeOption" selected>Con Categorie</option>
+                    <option value="timer" id="timerModeOption">Solo Timer</option>
+                </select>
             </div>
 
-            <div class="menu-option">
-                <h2 id="initialTimeTitle">Tempo Iniziale</h2>
-                <div class="option-buttons">
-                    <button data-time="30"><span id="seconds30Text">30 Secondi</span></button>
-                    <button data-time="60" class="selected"><span id="minute1Text">1 Minuto</span></button>
-                    <button data-time="120"><span id="minutes2Text">2 Minuti</span></button>
-                    <button data-time="300"><span id="minutes5Text">5 Minuti</span></button>
-                </div>
+            <div class="form-group">
+                <label for="initial-time" id="initialTimeLabel">Tempo Iniziale:</label>
+                <select id="initial-time">
+                    <option value="30" id="time30s">30 Secondi</option>
+                    <option value="60" selected id="time1m">1 Minuto</option>
+                    <option value="120" id="time2m">2 Minuti</option>
+                    <option value="300" id="time5m">5 Minuti</option>
+                </select>
             </div>
 
-            <button id="startButton" class="start-button"><span id="startGameText">Inizia Gioco</span></button>
+            <button id="start-game" class="btn primary-btn"><span id="startGameText">Inizia Gioco</span></button>
         </div>
 
         <!-- Game Screen - 2 Players -->
