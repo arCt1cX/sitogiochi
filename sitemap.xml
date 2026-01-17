@@ -96,4 +96,93 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/BluffMe/?lang=it"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/BluffMe/"/>
   </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/drewnking/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/drewnking/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/drewnking/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/drewnking/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/mrdrew/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/mrdrew/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/mrdrew/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/mrdrew/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/hottakes/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/hottakes/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/hottakes/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/hottakes/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/indovinaChi/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/indovinaChi/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/indovinaChi/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/indovinaChi/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/quizzy/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/quizzy/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/quizzy/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/quizzy/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/nonhomai/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/nonhomai/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/nonhomai/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/nonhomai/"/>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/tournament/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/tournament/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/tournament/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/tournament/"/>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://www.partygamesdrew.com/about.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/privacy-policy.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/terms-of-service.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.partygamesdrew.com/cookie-policy.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset> 
