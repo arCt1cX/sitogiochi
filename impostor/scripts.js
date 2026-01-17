@@ -382,21 +382,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentPlayerName && currentPlayerName !== translations.player + ' ' + gameState.currentPlayer) {
             // "Dave's Turn" or "Turno di Dave"
             if (lang === 'it') {
-                currentPlayerNum.parentElement.innerHTML = `Turno di <span id="current-player-num">${currentPlayerName}</span>`;
+                document.querySelector('#player-turn-screen h2').innerHTML = `Turno di <span id="current-player-num">${currentPlayerName}</span>`;
             } else {
-                currentPlayerNum.parentElement.innerHTML = `<span id="current-player-num">${currentPlayerName}</span>'s Turn`;
+                document.querySelector('#player-turn-screen h2').innerHTML = `<span id="current-player-num">${currentPlayerName}</span>'s Turn`;
             }
 
             // Update pass phone text
             if (lang === 'it') {
-                currentPlayerNumText.parentElement.innerHTML = `Passa il telefono a <span id="current-player-num-text">${currentPlayerName}</span>`;
+                document.querySelector('#player-turn-screen p').innerHTML = `Passa il telefono a <span id="current-player-num-text">${currentPlayerName}</span>`;
             } else {
-                currentPlayerNumText.parentElement.innerHTML = `Pass the phone to <span id="current-player-num-text">${currentPlayerName}</span>`;
+                document.querySelector('#player-turn-screen p').innerHTML = `Pass the phone to <span id="current-player-num-text">${currentPlayerName}</span>`;
             }
         } else {
             // Revert strict structure if needed or just use number
-            currentPlayerNum.textContent = gameState.currentPlayer;
-            currentPlayerNumText.textContent = gameState.currentPlayer;
+
 
             // We need to reset the innerHTML if we messed it up above for a previous player? 
             // Actually, let's keep it simple. The HTML has spans.
