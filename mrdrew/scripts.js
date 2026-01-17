@@ -310,11 +310,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const mrdrewName = gameState.playerNames[gameState.mrdrewIndex] || (gameState.mrdrewIndex + 1);
         mrdrewNum.textContent = mrdrewName;
 
+        // Hide "The Player" prefix if custom name exists
+        const playerText = document.getElementById('playerText');
+        if (gameState.playerNames[gameState.mrdrewIndex]) {
+            playerText.style.display = 'none';
+        } else {
+            playerText.style.display = 'inline';
+        }
+
         // Show Undercover if applicable
         if (gameState.hasUndercover) {
             undercoverRevealContainer.classList.remove('hidden');
             const undercoverName = gameState.playerNames[gameState.undercoverIndex] || (gameState.undercoverIndex + 1);
             undercoverNum.textContent = undercoverName;
+
+            const undercoverPlayerText = document.getElementById('undercoverPlayerText');
+            if (gameState.playerNames[gameState.undercoverIndex]) {
+                undercoverPlayerText.style.display = 'none';
+            } else {
+                undercoverPlayerText.style.display = 'inline';
+            }
+
             undercoverWord.textContent = gameState.undercoverWord;
         } else {
             undercoverRevealContainer.classList.add('hidden');

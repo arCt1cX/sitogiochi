@@ -510,3 +510,35 @@ p {
 .category-list::-webkit-scrollbar-thumb:hover {
     background: #8a2be2;
 }
+#player-names-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#player-names-container input {
+    background-image: none;
+    padding: 14px;
+    font-size: 16px; /* Explicit 16px to prevent iOS zoom */
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    background-color: #2d2d2d;
+    color: #e1e1e1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#player-names-container input:focus {
+    outline: none;
+    border-color: #bb86fc;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
+}
+
+@media (max-width: 480px) {
+    #player-names-container {
+        grid-template-columns: 1fr;
+    }
+}
+

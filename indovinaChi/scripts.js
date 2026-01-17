@@ -11,7 +11,8 @@ let gameState = {
     changeWordCount: 0,
     giveUpConfirmationPending: false,
     tournamentMode: false,
-    tournamentPlayers: []
+    tournamentPlayers: [],
+    playerNames: []
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessedBtn = document.getElementById('guessed-btn');
     const playAgainBtn = document.getElementById('play-again');
 
+    const playerNamesContainer = document.getElementById('player-names-container');
+
     // Apply translations
     applyGameTranslations();
 
@@ -48,7 +51,47 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gameState.tournamentMode && gameState.tournamentPlayers[index - 1]) {
             return gameState.tournamentPlayers[index - 1].name;
         }
-        return `${index}`; // Just the number, the "Player"/"Giocatore" prefix is in the UI text usually
+        // Custom name if available
+        if (gameState.playerNames && gameState.playerNames[index - 1]) {
+            return gameState.playerNames[index - 1];
+        }
+        return `${index}`; // Just the number, the "Player"/"Giocatore" prefix is in the UI text usually. Wait, previously it was just index. 
+    }
+
+    function updatePlayerNameInputs() {
+        // Don't show inputs in tournament mode (names come from tournament)
+        if (gameState.tournamentMode) {
+            playerNamesContainer.innerHTML = '';
+            return;
+        }
+
+        const count = parseInt(playerCountInput.value) || 4;
+        const currentInputs = playerNamesContainer.querySelectorAll('input');
+        const currentValues = Array.from(currentInputs).map(input => input.value);
+
+        playerNamesContainer.innerHTML = '';
+
+        const lang = getUserLanguage();
+        const translations = gameTranslations[lang] || gameTranslations['en'];
+
+        for (let i = 0; i < count; i++) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.id = `player-name-${i}`;
+            input.className = 'form-control';
+
+            // Reuse existing value if available
+            if (i < currentValues.length) {
+                input.value = currentValues[i];
+            }
+
+            // Placeholder
+            let placeholder = translations.playerNamePlaceholder || `Player ${i + 1}`;
+            placeholder = placeholder.replace('{n}', i + 1);
+            input.placeholder = placeholder;
+
+            playerNamesContainer.appendChild(input);
+        }
     }
 
     // Check for tournament mode
@@ -69,6 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 startGame();
             }, 100);
         }
+    } else {
+        // Not tournament mode, initialize inputs
+        updatePlayerNameInputs();
+        playerCountInput.addEventListener('change', updatePlayerNameInputs);
     }
 
     // Load categories from JSON
@@ -105,7 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start game - go to mode selection
     function startGame() {
-        gameState.playerCount = parseInt(playerCountInput.value) || 4;
+        if (!gameState.tournamentMode) {
+            gameState.playerCount = parseInt(playerCountInput.value) || 4;
+
+            // Capture player names
+            const nameInputs = playerNamesContainer.querySelectorAll('input');
+            gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+        }
+
         gameState.currentPlayer = 1;
         gameState.scores = [];
         showScreen(modeScreen);
@@ -302,13 +356,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerLabel = translations.player || 'Giocatore';
             const questionsLabel = translations.questionsUnit || 'domande';
 
-            // Use getPlayerName for the result display too
-            let playerNameDisplay = score.player;
-            if (gameState.tournamentMode) {
-                // If it's tournament mode, score.player is the index.
-                playerNameDisplay = getPlayerName(score.player);
-            } else {
+            // Determine display name
+            let playerNameDisplay;
+            const customName = getPlayerName(score.player);
+
+            // If getPlayerName returns just the number (default), prepend "Player" label
+            if (customName === `${score.player}`) {
                 playerNameDisplay = `${playerLabel} ${score.player}`;
+            } else {
+                // Otherwise use the custom name directly (e.g., "Alberto")
+                playerNameDisplay = customName;
             }
 
             let questionsText = `${score.questions} ${questionsLabel}`;
@@ -352,6 +409,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Play again
     function playAgain() {
         showScreen(setupScreen);
+        if (!gameState.tournamentMode) {
+            updatePlayerNameInputs();
+        }
     }
 
     // Event listeners

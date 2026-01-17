@@ -43,7 +43,8 @@ const gameTranslations = {
         'noMoreChangesAlert': 'Hai finito i cambi parola!',
         'gaveUpAlert': 'Ti sei arreso!',
         'arreso': 'Arreso (Non Indovinata)',
-        'theWordWas': 'La parola era:'
+        'theWordWas': 'La parola era:',
+        'playerNamePlaceholder': 'Giocatore {n}'
     },
     'en': {
         'gameTitle': 'Guess Who',
@@ -88,7 +89,8 @@ const gameTranslations = {
         'noMoreChangesAlert': 'No more word changes allowed!',
         'gaveUpAlert': 'You gave up!',
         'arreso': 'Gave Up (Not Guessed)',
-        'theWordWas': 'The word was:'
+        'theWordWas': 'The word was:',
+        'playerNamePlaceholder': 'Player {n}'
     }
 };
 
