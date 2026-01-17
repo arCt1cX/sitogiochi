@@ -43,6 +43,7 @@ const gameTranslations = {
         'guessWhoText': 'Chi pensi abbia scritto questa risposta? Discutete tra di voi!',
         'reverseAuthorText': 'Il giocatore {n} ha scritto questa risposta!',
         'revealAuthorBtn': 'Mostra Autore',
+        'playerNamePlaceholder': 'Nome Giocatore {n}',
     },
     'en': {
         'gameTitle': 'Impostor Game',
@@ -87,6 +88,7 @@ const gameTranslations = {
         'guessWhoText': 'Who do you think wrote this answer? Discuss among yourselves!',
         'reverseAuthorText': 'Player {n} wrote this answer!',
         'revealAuthorBtn': 'Reveal Author',
+        'playerNamePlaceholder': 'Player {n} Name',
     }
 };
 

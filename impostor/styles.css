@@ -115,6 +115,24 @@ h2 {
     box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
 }
 
+#player-names-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#player-names-container input {
+    background-image: none;
+    padding-right: 14px;
+}
+
+@media (max-width: 480px) {
+    #player-names-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form-group select:hover {
     background-color: #333333;
 }
