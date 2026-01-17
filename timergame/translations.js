@@ -2,6 +2,7 @@
 const gameTranslations = {
     'it': {
         'gameTitle': 'Wordrace',
+        'gameSubtitle': 'Sfida di parole contro il tempo!',
         'pageTitleDesc': 'Wordrace - Sfida di parole a tempo | DrewGames',
         'metaDescription': 'Gioca a Wordrace: una sfida di parole a tempo per 2-4 giocatori. Corri contro il tempo in questa divertente sfida verbale, ideale per serate con amici!',
         'home': 'Home',
@@ -61,6 +62,7 @@ const gameTranslations = {
     },
     'en': {
         'gameTitle': 'Wordrace',
+        'gameSubtitle': 'Timed word challenge!',
         'pageTitleDesc': 'Wordrace - Timed Word Challenge | DrewGames',
         'metaDescription': 'Play Wordrace: a timed word challenge for 2-4 players. Race against time in this fun verbal challenge, perfect for evenings with friends!',
         'home': 'Home',
