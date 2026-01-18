@@ -482,10 +482,21 @@ input:focus {
     /* Hidden by default */
 }
 
-/* Show placement when player is eliminated */
+/* Show placement when player is eliminated and hide button */
+.player-section3p.eliminated .button-container,
+.player-section4p.eliminated .button-container {
+    display: none;
+}
+
 .player-section3p.eliminated .placement-display,
 .player-section4p.eliminated .placement-display {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Fill the space left by button */
+    font-size: 2rem;
+    /* Make it large */
 }
 
 /* Result Controls (Buttons over overlay) */
