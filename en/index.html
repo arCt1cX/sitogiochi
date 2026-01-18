@@ -67,9 +67,17 @@
 
     <!-- Redirect to main page with English language parameter -->
     <script>
-        // Set language preference and redirect to main page
-        localStorage.setItem('lang', 'en');
-        window.location.replace('https://www.partygamesdrew.com/?lang=en');
+        // Set language preference BEFORE redirect
+        try {
+            localStorage.setItem('lang', 'en');
+            console.log('Language set to English');
+        } catch (e) {
+            console.warn('Could not set localStorage:', e);
+        }
+        // Small delay to ensure localStorage is persisted, then redirect
+        setTimeout(function () {
+            window.location.replace('/?lang=en');
+        }, 50);
     </script>
 
     <!-- Fallback for users without JavaScript -->
