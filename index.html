@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<!-- The lang attribute will be set dynamically by JavaScript -->
+<html lang="it">
+<!-- Default language is Italian for SEO, JavaScript will adjust for users -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,20 +8,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
-    <!-- Dynamic meta tags based on browser language -->
-    <script>
-        // Run this before other meta tags
-        const preferredLang = navigator.language || navigator.userLanguage;
-        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-
-        if (isItalian) {
-            document.write('<title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>');
-            document.write('<meta id="pageDescription" name="description" content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">');
-        } else {
-            document.write('<title>DrewGames - Games to play with friends offline</title>');
-            document.write('<meta id="pageDescription" name="description" content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">');
-        }
-    </script>
+    <!-- Static meta tags in Italian for SEO (Googlebot will see these) -->
+    <title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>
+    <meta id="pageDescription" name="description"
+        content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
 
     <!-- Favicon and Apple Touch Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -33,25 +23,27 @@
     <!-- Preload splash animation for PWA -->
     <link rel="preload" href="animazione-iniziale.png" as="image" type="image/png">
 
-    <!-- Open Graph / Facebook Meta Tags -->
+    <!-- Open Graph / Facebook Meta Tags (Italian for SEO) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.partygamesdrew.com/">
-    <meta property="og:title" content="DrewGames - Games to play with friends offline">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="DrewGames - Giochi da fare con gli amici offline">
     <meta property="og:description"
-        content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+        content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
     <meta property="og:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter Meta Tags (Italian for SEO) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.partygamesdrew.com/">
-    <meta name="twitter:title" content="DrewGames - Games to play with friends offline">
+    <meta name="twitter:title" content="DrewGames - Giochi da fare con gli amici offline">
     <meta name="twitter:description"
-        content="DrewGames: a collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!">
+        content="DrewGames: una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!">
     <meta name="twitter:image" content="https://www.partygamesdrew.com/logo-mrdrew.jpg">
 
-    <!-- Hreflang tags for language alternatives -->
-    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/?lang=en" />
-    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/?lang=it" />
+    <!-- Hreflang tags for language alternatives - Italian first as primary -->
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/" />
     <script>
         // Set language as early as possible
@@ -102,23 +94,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.partygamesdrew.com/">
-    <meta name="keywords" content="party games, offline games, browser games, multiplayer games, social games">
+    <meta name="geo.region" content="IT" />
+    <meta name="geo.placename" content="Italia" />
+    <meta name="content-language" content="it" />
+    <link rel="canonical" href="https://www.partygamesdrew.com/" />
+    <meta name="keywords"
+        content="giochi di gruppo, giochi offline, giochi da fare con amici, party games, giochi alcolici, giochi per feste">
     <meta name="author" content="DrewGames">
 
-    <!-- JSON-LD structured data for better search results -->
+    <!-- JSON-LD structured data for better search results (Italian) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "DrewGames",
       "url": "https://www.partygamesdrew.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.partygamesdrew.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "description": "A collection of fun games to play with friends offline. Discover interactive games like Impostor, ColorGrid, GuessThePic and many more!",
+      "inLanguage": "it-IT",
+      "description": "Una collezione di giochi divertenti da fare con gli amici offline. Scopri giochi interattivi come Impostor, ColorGrid, GuessThePic e molti altri!",
       "logo": "https://www.partygamesdrew.com/logo-mrdrew.jpg",
       "image": "https://www.partygamesdrew.com/logo-mrdrew.jpg"
     }
