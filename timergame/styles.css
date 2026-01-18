@@ -438,6 +438,7 @@ input:focus {
 }
 
 /* Overlays */
+/* Overlays */
 .player-result,
 .player-result3p,
 .player-result4p {
@@ -477,6 +478,28 @@ input:focus {
     font-weight: 700;
     color: var(--gold-color);
     margin-top: 5px;
+    display: none;
+    /* Hidden by default */
+}
+
+/* Show placement when player is eliminated */
+.player-section3p.eliminated .placement-display,
+.player-section4p.eliminated .placement-display {
+    display: block;
+}
+
+/* Result Controls (Buttons over overlay) */
+.result-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 60;
+    /* Higher than overlay (50) */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
 }
 
 .turn-indicator {

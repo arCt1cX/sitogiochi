@@ -655,9 +655,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide the menu button
         menuButton3p.style.display = 'none';
 
-        // Show reset button and main menu button
-        resetButton3p.classList.remove('hidden');
-        mainMenuButton3p.classList.remove('hidden');
+        // Show reset button and main menu button container
+        const resultControls3p = document.getElementById('resultControls3p');
+        if (resultControls3p) resultControls3p.classList.remove('hidden');
     }
 
     // Player elimination for 4-player mode
@@ -735,9 +735,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide the menu button
         menuButton4p.style.display = 'none';
 
-        // Show reset button and main menu button
-        resetButton4p.classList.remove('hidden');
-        mainMenuButton4p.classList.remove('hidden');
+        // Show reset button and main menu button container
+        const resultControls4p = document.getElementById('resultControls4p');
+        if (resultControls4p) resultControls4p.classList.remove('hidden');
     }
 
     // Game start/end functions
@@ -773,7 +773,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show menu button, hide reset button
             menuButton2p.style.display = 'block';
-            resetButton2p.classList.add('hidden');
+            const resultControls2p = document.getElementById('resultControls2p');
+            if (resultControls2p) resultControls2p.classList.add('hidden');
 
             // Remove game over effect
             gameScreen2p.classList.remove('game-over');
@@ -835,7 +836,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show menu button, hide reset button
             menuButton3p.style.display = 'block';
-            resetButton3p.classList.add('hidden');
+            const resultControls3p = document.getElementById('resultControls3p');
+            if (resultControls3p) resultControls3p.classList.add('hidden');
 
             // Remove game over effect
             gameScreen3p.classList.remove('game-over');
@@ -904,7 +906,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show menu button, hide reset button
             menuButton4p.style.display = 'block';
-            resetButton4p.classList.add('hidden');
+            const resultControls4p = document.getElementById('resultControls4p');
+            if (resultControls4p) resultControls4p.classList.add('hidden');
 
             // Remove game over effect
             gameScreen4p.classList.remove('game-over');
@@ -1015,9 +1018,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide menu button
         menuButton2p.style.display = 'none';
 
-        // Show reset button and main menu button
-        resetButton2p.classList.remove('hidden');
-        mainMenuButton2p.classList.remove('hidden');
+        // Show reset button and main menu button container
+        const resultControls2p = document.getElementById('resultControls2p');
+        if (resultControls2p) resultControls2p.classList.remove('hidden');
     }
 
     // Switch active player
