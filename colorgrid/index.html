@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = navigator.language || navigator.userLanguage;
-      const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
-      
-      if (isItalian) {
-        document.write('<title>Color Grid - Indovina la cella colorata | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a Color Grid: un divertente gioco per 3+ persone dove devi indovinare la posizione della cella colorata segreta. Perfetto per le serate con amici!">');
-      } else {
-        document.write('<title>Color Grid - Guess the colored cell location | DrewGames</title>');
-        document.write('<meta name="description" content="Play the Color Grid Game: a fun game for 3+ people where you have to guess the position of the secret colored cell. Perfect for evenings with friends!">');
-      }
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Color Grid - Indovina la cella colorata | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Color Grid: un divertente gioco per 3+ persone dove devi indovinare la posizione della cella colorata segreta. Perfetto per le serate con amici!">');
+        } else {
+            document.write('<title>Color Grid - Guess the colored cell location | DrewGames</title>');
+            document.write('<meta name="description" content="Play the Color Grid Game: a fun game for 3+ people where you have to guess the position of the secret colored cell. Perfect for evenings with friends!">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/colorgrid/?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/colorgrid/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/colorgrid/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
@@ -34,7 +38,7 @@
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <style>
         .home-button {
             position: fixed;
@@ -51,30 +55,33 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
     </style>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
-    
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+
     <div class="container">
         <h1 id="gameTitle">Gioco dei Colori</h1>
-        
+
         <div id="game-setup" class="game-section">
-            <p id="gameDescription">Un gioco per 3+ giocatori. Un giocatore vedrà una cella segreta, poi gli altri dovranno indovinarla!</p>
-            
+            <p id="gameDescription">Un gioco per 3+ giocatori. Un giocatore vedrà una cella segreta, poi gli altri
+                dovranno indovinarla!</p>
+
             <div id="game-mode-selection" class="mode-selection">
                 <h3 id="selectModeTitle">Seleziona modalità:</h3>
                 <div class="mode-buttons">
@@ -82,7 +89,17 @@
                     <button id="mode-10x10" class="btn mode-btn">10×10</button>
                 </div>
             </div>
-            
+
+            <div class="setup-controls">
+                <div class="player-count-control">
+                    <label for="player-count" id="playerCountLabel">Numero di giocatori:</label>
+                    <input type="number" id="player-count" min="3" max="10" value="3">
+                </div>
+                <div id="player-names-container">
+                    <!-- Player name inputs generated here -->
+                </div>
+            </div>
+
             <button id="start-game" class="btn">Nuova Partita</button>
         </div>
 
@@ -97,6 +114,9 @@
         </div>
 
         <div id="game-play" class="game-section hidden">
+            <h2 id="turnInfo">Turno di: </h2>
+            <p id="turnInstruction">Clicca sulla casella che vuoi selezionare</p>
+
             <div id="displayed-word-container"></div>
             <div class="grid-container">
                 <div class="grid-labels-row">
@@ -118,11 +138,9 @@
                     <div id="color-grid" class="grid"></div>
                 </div>
             </div>
-            
+
             <div id="guessing-area">
-                <div id="player-inputs"></div>
-                <button id="add-player" class="btn">Aggiungi Giocatore</button>
-                <button id="reveal-answer" class="btn">Rivela Risposta</button>
+                <button id="confirm-guess" class="btn hidden">Conferma</button>
             </div>
         </div>
 
@@ -157,4 +175,5 @@
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

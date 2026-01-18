@@ -25,7 +25,20 @@ const gameTranslations = {
         'correctGuess': 'Risposta corretta!',
         'incorrectGuess': 'Sbagliato. La risposta corretta era:',
         'invalidGuess': 'Risposta non valida',
-        'selectMode': 'Seleziona modalità:'
+        'selectMode': 'Seleziona modalità:',
+        'playerCount': 'Numero di giocatori:',
+        'enterNames': 'Inserisci i nomi:',
+        'turnOf': 'Turno di:',
+        'clickInstruction': 'Clicca sulla casella che vuoi selezionare',
+        'confirm': 'Conferma',
+        'nextRound': 'Prossimo Turno',
+        'gameOver': 'Fine Partita',
+        'finalScores': 'Punteggi Finali',
+        'viewer': 'Spettatore',
+        'guesser': 'Chi indovina',
+        'round': 'Turno',
+        'waitTurn': 'Attendi il tuo turno...',
+        'selectCell': 'Seleziona una cella prima di confermare!'
     },
     'en': {
         'gameTitle': 'Color Grid',
@@ -52,7 +65,20 @@ const gameTranslations = {
         'correctGuess': 'Correct guess!',
         'incorrectGuess': 'Incorrect. The correct answer was:',
         'invalidGuess': 'Invalid guess',
-        'selectMode': 'Select mode:'
+        'selectMode': 'Select mode:',
+        'playerCount': 'Number of players:',
+        'enterNames': 'Enter names:',
+        'turnOf': 'Turn of:',
+        'clickInstruction': 'Click the cell you want to select',
+        'confirm': 'Confirm',
+        'nextRound': 'Next Round',
+        'gameOver': 'Game Over',
+        'finalScores': 'Final Scores',
+        'viewer': 'Viewer',
+        'guesser': 'Guesser',
+        'round': 'Round',
+        'waitTurn': 'Wait for your turn...',
+        'selectCell': 'Select a cell before confirming!'
     }
 };
 
@@ -60,32 +86,40 @@ const gameTranslations = {
 function applyGameTranslations() {
     const lang = getLanguage();
     const translations = gameTranslations[lang] || gameTranslations['en'];
-    
+
     // Update page title and meta description
     document.title = translations.pageTitleDesc;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
         metaDescription.setAttribute('content', translations.metaDescription);
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = lang;
-    
+
     // Update home button text
-    document.getElementById('homeText').textContent = translations.home;
-    
-    // Update all text elements
-    document.getElementById('gameTitle').textContent = translations.gameTitle;
-    document.getElementById('gameDescription').textContent = translations.gameDescription;
-    document.getElementById('start-game').textContent = translations.startGame;
-    document.getElementById('rememberCell').textContent = translations.rememberCell;
-    document.getElementById('got-it').textContent = translations.gotIt;
-    document.getElementById('add-player').textContent = translations.addPlayer;
-    document.getElementById('reveal-answer').textContent = translations.revealAnswer;
-    document.getElementById('resultsTitle').textContent = translations.resultsTitle;
-    document.getElementById('play-again').textContent = translations.playAgain;
-    document.getElementById('selectModeTitle').textContent = translations.selectMode;
+    const homeText = document.getElementById('homeText');
+    if (homeText) homeText.textContent = translations.home;
+
+    // Update all text elements if they exist
+    const elementsToUpdate = {
+        'gameTitle': 'gameTitle',
+        'gameDescription': 'gameDescription',
+        'start-game': 'startGame',
+        'rememberCell': 'rememberCell',
+        'got-it': 'gotIt',
+        'confirm-guess': 'confirm',
+        'resultsTitle': 'resultsTitle',
+        'play-again': 'playAgain',
+        'selectModeTitle': 'selectMode',
+        'playerCountLabel': 'playerCount',
+    };
+
+    for (const [id, key] of Object.entries(elementsToUpdate)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[key];
+    }
 }
 
 // Add the function to apply translations on page load
-document.addEventListener('DOMContentLoaded', applyGameTranslations); 
+document.addEventListener('DOMContentLoaded', applyGameTranslations);

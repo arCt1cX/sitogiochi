@@ -42,28 +42,36 @@ let currentLanguage = getLanguage();
 let GRID_SIZE = 5; // Default grid size
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let targetCell = null;
-let players = [];
+let players = []; // Array of { name: "Name", score: 0, id: 0 }
 let startingHue = 0; // Randomized for each game
 const HUE_RANGE = 120; // Further increased range for more distinct colors
 let colorWord = ''; // Store the word describing the color
+
+// Turn-based state
+let currentRound = 0; // 0 to players.length - 1
+let viewerIndex = 0; // Index of the player who knows the secret
+let guessingQueue = []; // Array of player indices waiting to guess
+let currentGuesserIndex = -1; // Active guesser
+let roundGuesses = {}; // { playerIndex: {row, col} }
+let selectedCell = null; // { row, col } currently selected by guesser
 
 // DOM Elements
 const gameSetupSection = document.getElementById('game-setup');
 const targetRevealSection = document.getElementById('target-reveal');
 const gamePlaySection = document.getElementById('game-play');
-const gameResultSection = document.getElementById('game-result');
+const gameResultSection = document.getElementById('game-result'); // Ensure this ID exists or use generic result section
 const startGameButton = document.getElementById('start-game');
 const gotItButton = document.getElementById('got-it');
-const addPlayerButton = document.getElementById('add-player');
-const revealAnswerButton = document.getElementById('reveal-answer');
-const playAgainButton = document.getElementById('play-again');
+const confirmGuessButton = document.getElementById('confirm-guess');
+const playAgainButton = document.getElementById('play-again'); // In results section
 const colorGrid = document.getElementById('color-grid');
-const resultGrid = document.getElementById('result-grid');
-const playerInputsArea = document.getElementById('player-inputs');
-const resultsList = document.getElementById('results-list');
 const targetCellDisplay = document.getElementById('target-cell');
 const targetCoordsDisplay = document.getElementById('target-coords');
 const colorWordInput = document.getElementById('color-word');
+const playerCountInput = document.getElementById('player-count');
+const playerNamesContainer = document.getElementById('player-names-container');
+const turnInfo = document.getElementById('turnInfo');
+const turnInstruction = document.getElementById('turnInstruction');
 
 // Game mode selection buttons
 const mode5x5Button = document.getElementById('mode-5x5');
@@ -76,18 +84,6 @@ const gridLabelsCols = document.querySelectorAll('.grid-labels-col');
 // Get language from our central language utility
 function getCurrentLanguage() {
     return getLanguage();
-}
-
-// Update player labels based on current language
-function updatePlayerLabels() {
-    const lang = getCurrentLanguage();
-    const t = gameTranslations[lang] || gameTranslations['en'];
-
-    // Update existing player labels
-    const playerInputs = document.querySelectorAll('.player-input label');
-    playerInputs.forEach((label, index) => {
-        label.textContent = `${t.player} ${index + 1}: `;
-    });
 }
 
 // Handle game mode selection
@@ -132,13 +128,20 @@ function init() {
         if (newLanguage !== currentLanguage) {
             currentLanguage = newLanguage;
             applyGameTranslations();
-            updatePlayerLabels(); // Update player labels if they exist
+            updateDynamicText();
         }
     }, 1000);
 
     // Add event listeners for mode selection
     mode5x5Button.addEventListener('click', () => selectGameMode(5));
     mode10x10Button.addEventListener('click', () => selectGameMode(10));
+
+    // Player count change listener
+    playerCountInput.addEventListener('change', updatePlayerNameInputs);
+    playerCountInput.addEventListener('input', updatePlayerNameInputs);
+
+    // Initial player inputs generation
+    updatePlayerNameInputs();
 
     // Add event listener for the color word input
     colorWordInput.addEventListener('keypress', (e) => {
@@ -147,10 +150,94 @@ function init() {
         }
     });
 
-    // Update the got-it button click handler
+    // Button listeners
+    startGameButton.addEventListener('click', validateAndStartGame);
     gotItButton.addEventListener('click', handleGotIt);
+    confirmGuessButton.addEventListener('click', confirmGuess);
 
-    resetGame();
+    // Handle result buttons if they exist
+    const nextRoundBtn = document.createElement('button');
+    nextRoundBtn.id = 'next-round-btn';
+    nextRoundBtn.className = 'btn';
+    nextRoundBtn.textContent = 'Next Round'; // Placeholder, will be translated
+    nextRoundBtn.addEventListener('click', nextRound);
+
+    // Check if we need to append it somewhere or if there is already a results structure
+    // We'll reuse game-result section but dynamically populate it
+    if (!document.getElementById('next-round-btn')) {
+        // Create a wrapper or just append to results list
+    }
+}
+
+function updateDynamicText() {
+    // Re-render UI text based on current state (e.g. turn info)
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
+    if (!gamePlaySection.classList.contains('hidden') && currentGuesserIndex !== -1) {
+        turnInfo.textContent = `${t.turnOf} ${players[currentGuesserIndex].name}`;
+        turnInstruction.textContent = t.clickInstruction;
+    }
+}
+
+// Update player name inputs based on count
+function updatePlayerNameInputs() {
+    const count = parseInt(playerCountInput.value);
+    const currentInputs = playerNamesContainer.querySelectorAll('.player-name-input');
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
+    // If we have more inputs than needed, remove them
+    if (currentInputs.length > count) {
+        for (let i = count; i < currentInputs.length; i++) {
+            currentInputs[i].remove();
+        }
+    }
+    // If we have fewer, add them
+    else if (currentInputs.length < count) {
+        for (let i = currentInputs.length; i < count; i++) {
+            const div = document.createElement('div');
+            div.className = 'player-name-input';
+
+            const label = document.createElement('label');
+            label.textContent = `${i + 1}.`;
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = `${t.player} ${i + 1}`;
+            input.dataset.index = i;
+
+            div.appendChild(label);
+            div.appendChild(input);
+            playerNamesContainer.appendChild(div);
+        }
+    }
+}
+
+
+function validateAndStartGame() {
+    const inputs = playerNamesContainer.querySelectorAll('input');
+    const tempPlayers = [];
+    let valid = true;
+
+    inputs.forEach((input, index) => {
+        let name = input.value.trim();
+        if (!name) {
+            const lang = getCurrentLanguage();
+            const t = gameTranslations[lang] || gameTranslations['en'];
+            name = `${t.player} ${index + 1}`;
+        }
+        tempPlayers.push({ name: name, score: 0, id: index });
+    });
+
+    if (valid) {
+        players = tempPlayers;
+        currentRound = 0;
+        // Randomize first viewer
+        viewerIndex = Math.floor(Math.random() * players.length);
+
+        startRound();
+    }
 }
 
 // Update grid coordinate labels based on grid size
@@ -185,10 +272,10 @@ function updateGridLabels() {
     });
 }
 
-// Start the game
-function startGame() {
-    // Use the color bases for current language
+// Start a new round
+function startRound() {
     const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
     const colorBases = colorTranslations[lang] || colorTranslations['en'];
 
     // Pick a random natural color base
@@ -200,80 +287,292 @@ function startGame() {
     const col = Math.floor(Math.random() * GRID_SIZE);
     targetCell = { row, col };
 
-    // Show target reveal to first player
+    // Reset round state
+    roundGuesses = {};
+    colorWord = '';
+
+    // Show target reveal to viewer
     showTargetReveal();
 }
 
-// Show the target cell to the first player
 function showTargetReveal() {
     // Update the target reveal screen
     const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-    targetCoordsDisplay.textContent = cellCoords;
+    targetCoordsDisplay.textContent = `${players[viewerIndex].name}: ${cellCoords}`;
 
     // Set the target cell color
     const cellColor = getColorForCell(targetCell.row, targetCell.col);
     targetCellDisplay.style.backgroundColor = cellColor;
 
-    // Set the input placeholder based on language
+    // Set input placeholder
     const lang = getCurrentLanguage();
-    if (lang === 'it') {
-        colorWordInput.placeholder = "Scrivi una parola per descrivere questo colore...";
-    } else {
-        colorWordInput.placeholder = "Type a word to describe this color...";
-    }
+    const t = gameTranslations[lang] || gameTranslations['en'];
+    colorWordInput.value = '';
+    colorWordInput.placeholder = lang === 'it'
+        ? "Scrivi una parola per descrivere questo colore..."
+        : "Type a word to describe this color...";
 
-    // Hide setup screen, show target reveal
+    // Hide other sections, show target reveal
     gameSetupSection.classList.add('hidden');
+    gamePlaySection.classList.add('hidden');
+    gameResultSection.classList.add('hidden'); // Assuming generic result section
     targetRevealSection.classList.remove('hidden');
 }
 
-// Show the game play screen with full grid
+
+// Handle the "Got it" button click
+function handleGotIt() {
+    colorWord = colorWordInput.value.trim();
+    if (!colorWord) {
+        const lang = getCurrentLanguage();
+        colorWord = lang === 'it' ? "Colore Segreto" : "Secret Color";
+    }
+
+    startGuessingPhase();
+}
+
+function startGuessingPhase() {
+    // Create queue of guessers (everyone except viewer)
+    guessingQueue = players.filter((p, i) => i !== viewerIndex).map(p => p.id);
+
+    // Shuffle queue
+    for (let i = guessingQueue.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [guessingQueue[i], guessingQueue[j]] = [guessingQueue[j], guessingQueue[i]];
+    }
+
+    nextGuesser();
+}
+
+function nextGuesser() {
+    if (guessingQueue.length === 0) {
+        showRoundResults();
+        return;
+    }
+
+    // Get next player ID
+    const nextPlayerId = guessingQueue.pop();
+    // Find index in players array
+    currentGuesserIndex = players.findIndex(p => p.id === nextPlayerId);
+
+    showGamePlay();
+}
+
 function showGamePlay() {
-    // Hide target reveal, show game play
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
     targetRevealSection.classList.add('hidden');
     gamePlaySection.classList.remove('hidden');
 
-    // Clear any previous players
-    players = [];
-    playerInputsArea.innerHTML = '';
+    // Update Turn Info
+    turnInfo.textContent = `${t.turnOf} ${players[currentGuesserIndex].name}`;
+    turnInstruction.textContent = t.clickInstruction;
 
-    // Generate the full color grid
-    generateColorGrid(colorGrid);
+    // Display word
+    const wordContainer = document.getElementById('displayed-word-container');
+    wordContainer.innerHTML = '';
+    const wordDisplay = document.createElement('div');
+    wordDisplay.classList.add('displayed-word');
+    wordDisplay.textContent = `"${colorWord}"`;
+    wordContainer.appendChild(wordDisplay);
 
-    // Display the color word over the grid
-    displayColorWord();
+    // Generate Grid
+    generateColorGrid(colorGrid, true);
 
-    // Add two players by default
-    addPlayer();
-    addPlayer();
+    // Hide confirm button until selection
+    confirmGuessButton.classList.add('hidden');
+    selectedCell = null;
 }
 
-// Generate the color grid
-function generateColorGrid(gridElement) {
+function generateColorGrid(gridElement, interactive) {
     gridElement.innerHTML = '';
 
-    // Create cells
     for (let row = 0; row < GRID_SIZE; row++) {
         for (let col = 0; col < GRID_SIZE; col++) {
             const cell = document.createElement('div');
             cell.classList.add('grid-cell');
 
-            // Get color for this cell position
             const cellColor = getColorForCell(row, col);
             cell.style.backgroundColor = cellColor;
 
-            // Add coordinates label for the results grid only
-            if (gridElement === resultGrid) {
-                // Highlight the target cell in the results grid
-                if (row === targetCell.row && col === targetCell.col) {
-                    cell.classList.add('target');
-                }
+            if (interactive) {
+                cell.addEventListener('click', () => handleCellClick(row, col, cell));
             }
 
             gridElement.appendChild(cell);
         }
     }
 }
+
+function handleCellClick(row, col, cellElement) {
+    // Deselect previous
+    const previousSelected = document.querySelectorAll('.grid-cell.selected');
+    previousSelected.forEach(el => el.classList.remove('selected'));
+
+    // Select new
+    cellElement.classList.add('selected');
+    selectedCell = { row, col };
+
+    confirmGuessButton.classList.remove('hidden');
+}
+
+function confirmGuess() {
+    if (!selectedCell) return;
+
+    // Save guess
+    roundGuesses[currentGuesserIndex] = selectedCell;
+
+    // Next player
+    nextGuesser();
+}
+
+function showRoundResults() {
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
+    gamePlaySection.classList.add('hidden');
+
+    // We can recycle the gameResultSection from original code or create a dynamic one
+    // Let's use the one we have but clear it content first tailored to this flow
+    // But structure from index.html is slightly different (result-grid, results-list)
+
+    const resultGrid = document.getElementById('result-grid') || document.createElement('div'); // fallback
+    if (!document.getElementById('result-grid')) {
+        // Just in case structure mismatch, but we saw it in view_file_outline
+        // So we assume it exists.
+        // It's inside #game-result
+    }
+
+    gameResultSection.classList.remove('hidden');
+
+    // Generate result grid
+    generateResultGrid(document.getElementById('result-grid'));
+
+    // Calculate scores and list
+    const resultsList = document.getElementById('results-list');
+    resultsList.innerHTML = '';
+
+    let anyCorrect = false;
+
+    players.forEach((player, index) => {
+        if (index === viewerIndex) return; // Skip viewer in list for now
+
+        const guess = roundGuesses[index];
+        const isCorrect = guess && guess.row === targetCell.row && guess.col === targetCell.col;
+
+        if (isCorrect) {
+            player.score += 1; // 1 point for correct guess
+            anyCorrect = true;
+        }
+
+        const item = document.createElement('div');
+        item.className = 'results-item ' + (isCorrect ? 'correct' : 'incorrect');
+        const guessStr = guess ? `${COLUMN_LABELS[guess.col]}${guess.row + 1}` : t.notSelected;
+        const correctStr = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
+
+        item.textContent = `${player.name}: ${guessStr} (${isCorrect ? t.correct : t.wrong})`;
+        resultsList.appendChild(item);
+    });
+
+    // Viewer gets points? optional rule. Let's say Viewer gets 1 point if at least one person guessed right.
+    if (anyCorrect) {
+        players[viewerIndex].score += 1;
+        const viewerItem = document.createElement('div');
+        viewerItem.className = 'results-item correct';
+        viewerItem.textContent = `${players[viewerIndex].name} (${t.viewer}): +1 point`;
+        resultsList.prepend(viewerItem);
+    } else {
+        const viewerItem = document.createElement('div');
+        viewerItem.className = 'results-item incorrect';
+        viewerItem.textContent = `${players[viewerIndex].name} (${t.viewer}): 0 points`;
+        resultsList.prepend(viewerItem);
+    }
+
+    // Button handling
+    const oldPlayAgain = document.getElementById('play-again');
+    if (oldPlayAgain) oldPlayAgain.remove();
+
+    const actionContainer = document.createElement('div');
+    actionContainer.style.display = 'flex';
+    actionContainer.style.justifyContent = 'center';
+    actionContainer.style.marginTop = '20px';
+
+    currentRound++;
+
+    if (currentRound < players.length) {
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'next-round-btn';
+        nextBtn.className = 'btn';
+        nextBtn.textContent = t.nextRound;
+        nextBtn.onclick = () => {
+            // Next viewer
+            viewerIndex = (viewerIndex + 1) % players.length;
+            startRound();
+        };
+        actionContainer.appendChild(nextBtn);
+    } else {
+        const endBtn = document.createElement('button');
+        endBtn.className = 'btn';
+        endBtn.textContent = t.gameOver;
+        endBtn.onclick = showFinalScores;
+        actionContainer.appendChild(endBtn);
+    }
+
+    gameResultSection.appendChild(actionContainer);
+}
+
+function generateResultGrid(gridElement) {
+    gridElement.innerHTML = '';
+    for (let row = 0; row < GRID_SIZE; row++) {
+        for (let col = 0; col < GRID_SIZE; col++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-cell');
+
+            const cellColor = getColorForCell(row, col);
+            cell.style.backgroundColor = cellColor;
+
+            if (row === targetCell.row && col === targetCell.col) {
+                cell.classList.add('target');
+            }
+            gridElement.appendChild(cell);
+        }
+    }
+}
+
+function showFinalScores() {
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
+    // Sort players by score
+    const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
+
+    const resultsList = document.getElementById('results-list');
+    resultsList.innerHTML = `<h3>${t.finalScores}</h3>`;
+
+    sortedPlayers.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'results-item';
+        item.style.backgroundColor = p.score === sortedPlayers[0].score ? '#27ae60' : '#2c2c2c';
+        item.textContent = `${p.name}: ${p.score} pts`;
+        resultsList.appendChild(item);
+    });
+
+    const actionContainer = gameResultSection.querySelector('div[style*="flex"]');
+    if (actionContainer) actionContainer.innerHTML = '';
+
+    const restartBtn = document.createElement('button');
+    restartBtn.className = 'btn';
+    restartBtn.textContent = t.newGame;
+    restartBtn.onclick = () => {
+        window.location.reload();
+    };
+    actionContainer.appendChild(restartBtn);
+
+    // Hide grid in final results to focus on list
+    document.getElementById('result-grid').parentElement.parentElement.classList.add('hidden');
+}
+
 
 // Get color for a specific cell position using natural colors
 function getColorForCell(row, col) {
@@ -295,152 +594,5 @@ function getColorForCell(row, col) {
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
-// Add a new player input
-function addPlayer() {
-    const lang = getCurrentLanguage();
-    const t = gameTranslations[lang] || gameTranslations['en'];
-
-    const playerCount = players.length + 1;
-
-    // Create a player object
-    players.push({
-        name: `${t.player} ${playerCount}`,
-        guess: null
-    });
-
-    const playerDiv = document.createElement('div');
-    playerDiv.classList.add('player-input');
-
-    const playerLabel = document.createElement('label');
-    playerLabel.textContent = `${t.player} ${playerCount}: `;
-
-    const playerInput = document.createElement('input');
-    playerInput.type = 'text';
-    playerInput.maxLength = GRID_SIZE < 10 ? 2 : 3; // Allow for coordinates like "J10"
-    playerInput.placeholder = 'A1';
-    playerInput.dataset.playerIndex = players.length - 1;
-
-    playerInput.addEventListener('input', (e) => {
-        const index = parseInt(e.target.dataset.playerIndex);
-        players[index].guess = e.target.value.toUpperCase();
-    });
-
-    playerDiv.appendChild(playerLabel);
-    playerDiv.appendChild(playerInput);
-
-    playerInputsArea.appendChild(playerDiv);
-}
-
-// Reveal the answer and show results
-function revealAnswer() {
-    const lang = getCurrentLanguage();
-    const t = gameTranslations[lang] || gameTranslations['en'];
-
-    generateColorGrid(resultGrid);
-
-    // Clear previous results
-    resultsList.innerHTML = '';
-
-    // Parse all guesses
-    players.forEach(player => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('result-item');
-
-        // Get the correct cell coordinates
-        const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-
-        if (!player.guess) {
-            resultItem.textContent = `${player.name}: ${t.invalidGuess}`;
-            resultItem.classList.add('invalid');
-        }
-        else if (player.guess === correctCoords) {
-            resultItem.textContent = `${player.name}: ${t.correctGuess}`;
-            resultItem.classList.add('correct');
-        }
-        else {
-            resultItem.textContent = `${player.name}: ${player.guess} - ${t.incorrectGuess} ${correctCoords}`;
-            resultItem.classList.add('incorrect');
-        }
-
-        resultsList.appendChild(resultItem);
-    });
-
-    // Show result screen
-    gamePlaySection.classList.add('hidden');
-    gameResultSection.classList.remove('hidden');
-}
-
-// Display the color word over the grid
-function displayColorWord() {
-    // Get the container for the displayed word
-    const wordContainer = document.getElementById('displayed-word-container');
-
-    // Clear any existing content
-    wordContainer.innerHTML = '';
-
-    // Create and display the new word
-    const wordDisplay = document.createElement('div');
-    wordDisplay.classList.add('displayed-word');
-    wordDisplay.textContent = `"${colorWord}"`;
-    wordContainer.appendChild(wordDisplay);
-}
-
-// Handle the "Got it" button click
-function handleGotIt() {
-    // Get the word from the input
-    colorWord = colorWordInput.value.trim();
-
-    // If no word was entered, use a default message based on language
-    if (!colorWord) {
-        const lang = getCurrentLanguage();
-        if (lang === 'it') {
-            colorWord = "Colore Segreto";
-        } else {
-            colorWord = "Secret Color";
-        }
-    }
-
-    // Show the game play screen
-    showGamePlay();
-}
-
-// Reset game to initial state
-function resetGame() {
-    // Clear the color word
-    colorWord = '';
-    colorWordInput.value = '';
-
-    // Remove any displayed word
-    const displayedWord = document.querySelector('.displayed-word');
-    if (displayedWord) {
-        displayedWord.remove();
-    }
-
-    // Clear all sections
-    targetCellDisplay.style.backgroundColor = '';
-    targetCoordsDisplay.textContent = '';
-    colorGrid.innerHTML = '';
-    resultGrid.innerHTML = '';
-    playerInputsArea.innerHTML = '';
-    resultsList.innerHTML = '';
-
-    // Reset variables
-    targetCell = null;
-    players = [];
-
-    // Show setup screen
-    gameSetupSection.classList.remove('hidden');
-    targetRevealSection.classList.add('hidden');
-    gamePlaySection.classList.add('hidden');
-    gameResultSection.classList.add('hidden');
-}
-
-// Event listeners
-startGameButton.addEventListener('click', startGame);
-gotItButton.addEventListener('click', handleGotIt);
-addPlayerButton.addEventListener('click', addPlayer);
-revealAnswerButton.addEventListener('click', revealAnswer);
-playAgainButton.addEventListener('click', resetGame);
-
 // Initialize the game when page loads
-document.addEventListener('DOMContentLoaded', init); 
+document.addEventListener('DOMContentLoaded', init);

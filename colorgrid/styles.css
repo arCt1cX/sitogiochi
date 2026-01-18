@@ -100,6 +100,59 @@ p {
     border: 2px solid white;
 }
 
+/* Setup Controls */
+.setup-controls {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player-count-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.player-count-control input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
+
+#player-names-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.player-name-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.player-name-input input {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 200px;
+}
+
 .game-section {
     margin: 20px 0;
     display: flex;
@@ -196,6 +249,12 @@ p {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+.grid-cell.selected {
+    border: 3px solid var(--primary-color-light);
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(0.95);
+}
+
 .grid-size-10 .grid-cell.target {
     border-width: 2px;
 }
@@ -229,31 +288,7 @@ p {
     align-items: center;
 }
 
-.player-input {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    width: 100%;
-    justify-content: center;
-}
-
-.player-input label {
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.player-input input {
-    background-color: #2c2c2c;
-    border: 1px solid #444;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 16px;
-    text-transform: uppercase;
-    width: 80px;
-    text-align: center;
-}
-
+/* Setup styles replace player-input styles */
 .results-item {
     margin: 5px 0;
     padding: 10px;
