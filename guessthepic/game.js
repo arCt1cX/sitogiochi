@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const playerTransitionScreen = document.getElementById('player-transition-screen');
     const gameScreen = document.getElementById('game-screen');
     const resultScreen = document.getElementById('result-screen');
+    const categorySelectionScreen = document.getElementById('category-selection-screen');
 
     const openPlayerSetupButton = document.getElementById('open-player-setup');
     const startButton = document.getElementById('start-game');
@@ -19,6 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevImageButton = document.getElementById('prev-image');
     const nextImageButton = document.getElementById('next-image');
     const startPlayerTurnButton = document.getElementById('start-player-turn');
+
+    // Mode selection elements
+    const modeClassicButton = document.getElementById('mode-classic');
+    const modeCategoriesButton = document.getElementById('mode-categories');
+    const modeDescriptionElement = document.getElementById('mode-description');
+
+    // Category selection elements
+    const categorySelectionTitle = document.getElementById('category-selection-title');
+    const categorySelectionPlayer = document.getElementById('category-selection-player');
+    const categorySelectionCounter = document.getElementById('category-selection-counter');
+    const categoriesGrid = document.getElementById('categories-grid');
+    const confirmCategoriesButton = document.getElementById('confirm-categories');
 
     const playerCountSelect = document.getElementById('player-count');
     const playerNamesContainer = document.getElementById('player-names-container');
@@ -49,6 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let timer = null;
     let timeRemaining = 60;
     let questionStatuses = []; // Array to track the status of each image: null, 'correct', 'incorrect', or 'pending'
+
+    // Game mode state
+    let gameMode = 'classic'; // 'classic' or 'categories'
+    let playerCategories = []; // Array to store each player's selected categories (for 'categories' mode)
+    let currentCategorySelection = []; // Temporary storage for current player's category selection
+    let categorySelectingPlayerIndex = 0; // Index of player currently selecting categories
 
     // Sound effects (optional)
     const correctSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAqAABHnwAFBwkMDhATFRcaHB8hJCYpKy4wMzU4Ojs+QUNGSEtNUFJVV1pcX2FkZ2lsbnFzdnl7foGDhoiLjZCSlZeanZ+ipKeprK6xtLa5vL7BxMbJy87R09bY293g4uXn6uzu8fP2+fv+AAAATGF2YzU4LjU0AAAAAAAAAAAAAAAAJAXaAAAAAAAAR5+fSpwoAAAAAAAAAAAAAAAAAAD/+0DEAAP7uuzoYwkAJ3VNOt7Pg3B7QwdgAsK6WTEsxoiWpnrJmDNDIwRtCY+g8BBIiDtHcMjAcMTCYAwCAmDkNzBIBuVP/1QLJcHgBmBYDAQMwNhmAK10MCQCzAzAcGA4AIHBMLTJm0MFgBwYBGCAHA2DphR+kDgCwSAYwFAGDgdHYZ+k14qigAYJgJAQCAAHgKHgRB/+NUB4gFwUAIwHAcS+VQj9rn//1QygNB3C//tAxAcAEn7s8f5iAAp8ZqH/sOAFLVBJ0iNTTy1DIMzIJPLTO3/xAAJDqIvGp9C5wJeJh3+LuH/5EAKjABG2aLu69F3C7sTzAEOwHBUJUNw6gdF36t80QmDIcCCFWXDtF3dF3d4O4nGQXB4MXSKlRuIgouIl3+r/yrVbiyUMDBBwfJcFYuAGTjXqP/7NKtQw2d8qsP/7QMQDARKq0uz+HgCKGFXh/5hQCbgzOYuIcUWkBIKQh/KqgxarILDEoJiYUZSfJjTaZMYU1FMy45OS41VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=');
@@ -82,6 +101,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Player count selection changes the input fields
     playerCountSelect.addEventListener('change', updatePlayerInputs);
+
+    // Mode selection event listeners
+    modeClassicButton.addEventListener('click', () => selectGameMode('classic'));
+    modeCategoriesButton.addEventListener('click', () => selectGameMode('categories'));
+    confirmCategoriesButton.addEventListener('click', confirmCategorySelection);
+
+    /**
+     * Select game mode (classic or categories)
+     */
+    function selectGameMode(mode) {
+        gameMode = mode;
+        const isItalian = getLanguage();
+
+        // Update button states
+        if (mode === 'classic') {
+            modeClassicButton.classList.add('selected');
+            modeCategoriesButton.classList.remove('selected');
+            modeDescriptionElement.textContent = isItalian ?
+                'Categorie casuali per tutti i giocatori' :
+                'Random categories for all players';
+        } else {
+            modeClassicButton.classList.remove('selected');
+            modeCategoriesButton.classList.add('selected');
+            modeDescriptionElement.textContent = isItalian ?
+                'Ogni giocatore sceglie le sue 5 categorie' :
+                'Each player chooses their 5 categories';
+        }
+    }
 
     // Update player count dropdown options with translated text
     function updatePlayerCountOptions() {
@@ -214,10 +261,16 @@ document.addEventListener('DOMContentLoaded', function () {
         startScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         playerTransitionScreen.classList.add('hidden');
+        categorySelectionScreen.classList.add('hidden');
         playerSetupScreen.classList.remove('hidden');
 
         // Reset round number
         currentRoundNumber = 1;
+
+        // Reset game mode state
+        playerCategories = [];
+        currentCategorySelection = [];
+        categorySelectingPlayerIndex = 0;
 
         // Reset player count to 1 and update inputs
         playerCountSelect.value = "1";
@@ -470,8 +523,25 @@ document.addEventListener('DOMContentLoaded', function () {
         playerRounds = []; // Reset player rounds
         currentRoundNumber = 1;
 
+        // Check game mode
+        if (gameMode === 'categories') {
+            // In categories mode, show category selection for each player first
+            playerCategories = []; // Reset player categories
+            categorySelectingPlayerIndex = 0;
+            showCategorySelection(0);
+        } else {
+            // Classic mode - start game immediately
+            startGameWithCategories();
+        }
+    }
+
+    /**
+     * Start the game after categories have been selected (or in classic mode)
+     */
+    function startGameWithCategories() {
         // Show game screen
         playerSetupScreen.classList.add('hidden');
+        categorySelectionScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         gameScreen.classList.remove('hidden');
 
@@ -480,6 +550,128 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Start first round
         startRound();
+    }
+
+    /**
+     * Show the category selection screen for a specific player
+     */
+    function showCategorySelection(playerIndex) {
+        const isItalian = getLanguage();
+        categorySelectingPlayerIndex = playerIndex;
+        currentCategorySelection = []; // Reset selection
+
+        // Hide other screens
+        playerSetupScreen.classList.add('hidden');
+        gameScreen.classList.add('hidden');
+        resultScreen.classList.add('hidden');
+        playerTransitionScreen.classList.add('hidden');
+
+        // Show category selection screen
+        categorySelectionScreen.classList.remove('hidden');
+
+        // Update title and player name
+        categorySelectionPlayer.textContent = players[playerIndex].name;
+
+        // Update counter
+        updateCategoryCounter();
+
+        // Populate categories grid
+        populateCategoriesGrid();
+
+        // Reset confirm button
+        confirmCategoriesButton.disabled = true;
+    }
+
+    /**
+     * Populate the categories grid with all available categories
+     */
+    function populateCategoriesGrid() {
+        categoriesGrid.innerHTML = ''; // Clear existing
+
+        const validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
+
+        validCategories.forEach(category => {
+            const button = document.createElement('button');
+            button.className = 'category-button';
+            button.textContent = category.name;
+            button.dataset.category = category.name;
+
+            button.addEventListener('click', () => toggleCategorySelection(category.name, button));
+
+            categoriesGrid.appendChild(button);
+        });
+    }
+
+    /**
+     * Toggle selection of a category
+     */
+    function toggleCategorySelection(categoryName, buttonElement) {
+        const index = currentCategorySelection.indexOf(categoryName);
+
+        if (index > -1) {
+            // Already selected, remove it
+            currentCategorySelection.splice(index, 1);
+            buttonElement.classList.remove('selected');
+        } else {
+            // Not selected yet, add it if we have room
+            if (currentCategorySelection.length < 5) {
+                currentCategorySelection.push(categoryName);
+                buttonElement.classList.add('selected');
+            }
+        }
+
+        // Update counter and button states
+        updateCategoryCounter();
+        updateCategoryButtonStates();
+    }
+
+    /**
+     * Update the category counter display
+     */
+    function updateCategoryCounter() {
+        const isItalian = getLanguage();
+        const count = currentCategorySelection.length;
+        categorySelectionCounter.textContent = isItalian ?
+            `Selezionate: ${count}/5` :
+            `Selected: ${count}/5`;
+
+        // Enable/disable confirm button based on selection count
+        confirmCategoriesButton.disabled = count !== 5;
+    }
+
+    /**
+     * Update category button states (disable unselected when 5 are selected)
+     */
+    function updateCategoryButtonStates() {
+        const buttons = categoriesGrid.querySelectorAll('.category-button');
+        const maxReached = currentCategorySelection.length >= 5;
+
+        buttons.forEach(button => {
+            if (maxReached && !button.classList.contains('selected')) {
+                button.classList.add('disabled');
+            } else {
+                button.classList.remove('disabled');
+            }
+        });
+    }
+
+    /**
+     * Confirm the category selection for the current player
+     */
+    function confirmCategorySelection() {
+        // Store the current player's categories
+        playerCategories[categorySelectingPlayerIndex] = [...currentCategorySelection];
+        console.log(`Player ${categorySelectingPlayerIndex + 1} selected categories:`, currentCategorySelection);
+
+        // Move to next player or start game
+        if (categorySelectingPlayerIndex < players.length - 1) {
+            // Show category selection for next player
+            showCategorySelection(categorySelectingPlayerIndex + 1);
+        } else {
+            // All players have selected, start the game
+            console.log("All players have selected categories:", playerCategories);
+            startGameWithCategories();
+        }
     }
 
     /**
@@ -494,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error("No category data available for player " + (i + 1) + ". Using fallback data.");
                 playerRounds.push(generateFallbackItems());
             } else {
-                playerRounds.push(generateRandomItems());
+                playerRounds.push(generateRandomItems(i)); // Pass player index
             }
         }
 
@@ -562,12 +754,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /**
      * Generate a set of random items for a player's round
+     * @param {number} playerIndex - The index of the player (used for filtering categories in 'categories' mode)
      */
-    function generateRandomItems() {
+    function generateRandomItems(playerIndex = 0) {
         const playerRound = [];
 
         // Get all categories that have items
-        const validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
+        let validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
+
+        // In 'categories' mode, filter to only use player's selected categories
+        if (gameMode === 'categories' && playerCategories[playerIndex] && playerCategories[playerIndex].length > 0) {
+            const selectedCategoryNames = playerCategories[playerIndex];
+            validCategories = validCategories.filter(cat => selectedCategoryNames.includes(cat.name));
+            console.log(`Player ${playerIndex + 1} using selected categories:`, selectedCategoryNames);
+        }
 
         if (validCategories.length === 0) {
             console.error("No valid categories with items found.");

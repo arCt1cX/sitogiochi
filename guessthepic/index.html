@@ -100,6 +100,23 @@
         <div id="start-screen" class="screen">
             <h1 id="game-title">Indovina l'Immagine</h1>
             <p id="game-description">Prova a indovinare cosa c'è nelle immagini!</p>
+
+            <!-- Game Mode Selection -->
+            <div class="mode-selection">
+                <p id="mode-label" class="mode-label">Seleziona modalità:</p>
+                <div class="mode-buttons">
+                    <button id="mode-classic" class="mode-button selected">
+                        <span class="mode-icon">🎲</span>
+                        <span id="mode-classic-text">Classica</span>
+                    </button>
+                    <button id="mode-categories" class="mode-button">
+                        <span class="mode-icon">📂</span>
+                        <span id="mode-categories-text">Categorie Scelte</span>
+                    </button>
+                </div>
+                <p id="mode-description" class="mode-description">Categorie casuali per tutti i giocatori</p>
+            </div>
+
             <button id="open-player-setup">Inizia Gioco</button>
         </div>
 
@@ -122,6 +139,19 @@
             <div class="buttons-row">
                 <button id="start-game" class="full-width-button">Inizia Partita</button>
             </div>
+        </div>
+
+        <!-- Category Selection Screen -->
+        <div id="category-selection-screen" class="screen hidden">
+            <h2 id="category-selection-title">Scegli le tue categorie</h2>
+            <p id="category-selection-player" class="category-player-name"></p>
+            <p id="category-selection-counter" class="category-counter">Selezionate: 0/5</p>
+
+            <div id="categories-grid" class="categories-grid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+
+            <button id="confirm-categories" class="full-width-button" disabled>Conferma Selezione</button>
         </div>
 
         <div id="player-transition-screen" class="screen hidden">
@@ -244,6 +274,15 @@
 
                 // Update input placeholder
                 document.getElementById('guess-input').placeholder = isItalian ? 'Inserisci la tua risposta...' : 'Enter your answer...';
+
+                // Update mode selection
+                document.getElementById('mode-label').textContent = isItalian ? 'Seleziona modalità:' : 'Select mode:';
+                document.getElementById('mode-classic-text').textContent = isItalian ? 'Classica' : 'Classic';
+                document.getElementById('mode-categories-text').textContent = isItalian ? 'Categorie Scelte' : 'Chosen Categories';
+
+                // Update category selection screen
+                document.getElementById('category-selection-title').textContent = isItalian ? 'Scegli le tue categorie' : 'Choose your categories';
+                document.getElementById('confirm-categories').textContent = isItalian ? 'Conferma Selezione' : 'Confirm Selection';
             }
         });
     </script>
