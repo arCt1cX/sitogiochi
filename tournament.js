@@ -7,7 +7,10 @@ const availableGames = {
     'chainreaction': { minPlayers: 3, maxPlayers: 12, url: 'chainreaction/index.html', specialRule: 'playersMultipleOf3' },
     'alphabetgame': { minPlayers: 2, maxPlayers: 8, url: 'alphabetgame/index.html' },
     'bluffme': { minPlayers: 3, maxPlayers: 8, url: 'bluffme/index.html' },
-    'quizzy': { minPlayers: 2, maxPlayers: 8, url: 'quizzy/index.html' }
+    'quizzy': { minPlayers: 2, maxPlayers: 8, url: 'quizzy/index.html' },
+    'hottakes': { minPlayers: 3, maxPlayers: 10, url: 'hottakes/index.html' },
+    'indovinaChi': { minPlayers: 2, maxPlayers: 12, url: 'indovinaChi/index.html' },
+    'mrdrew': { minPlayers: 3, maxPlayers: 12, url: 'mrdrew/index.html' }
 };
 
 function startTournament() {

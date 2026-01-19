@@ -295,3 +295,33 @@ textarea {
         font-size: 1.2rem;
     }
 }
+
+/* Add tournament return button styles */
+.tournament-return-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(138, 43, 226, 0.2);
+    /* Adjusted to Hot Takes Primary Color (BlueViolet) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tournament-return-button:hover {
+    background-color: rgba(138, 43, 226, 0.4);
+    transform: translateY(-2px);
+}
+
+.tournament-return-button.hidden {
+    display: none;
+}

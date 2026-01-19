@@ -510,6 +510,7 @@ p {
 .category-list::-webkit-scrollbar-thumb:hover {
     background: #8a2be2;
 }
+
 #player-names-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -520,7 +521,8 @@ p {
 #player-names-container input {
     background-image: none;
     padding: 14px;
-    font-size: 16px; /* Explicit 16px to prevent iOS zoom */
+    font-size: 16px;
+    /* Explicit 16px to prevent iOS zoom */
     border: 1px solid #3d3d3d;
     border-radius: 12px;
     background-color: #2d2d2d;
@@ -542,3 +544,32 @@ p {
     }
 }
 
+/* Add tournament return button styles */
+.tournament-return-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(138, 43, 226, 0.2);
+    /* Indovina Chi Primary color (DarkViolet-ish) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tournament-return-button:hover {
+    background-color: rgba(138, 43, 226, 0.4);
+    transform: translateY(-2px);
+}
+
+.tournament-return-button.hidden {
+    display: none;
+}
