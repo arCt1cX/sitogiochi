@@ -614,11 +614,11 @@ function showFinalScores() {
 
     // Hide grid and other round elements
     const gridContainer = gameResultSection.querySelector('.grid-container');
-    if (gridContainer) gridContainer.classList.add('hidden');
+    if (gridContainer) gridContainer.style.display = 'none';
 
     // Hide the round answer info if present
     const answerContainer = document.getElementById('answer-display-container');
-    if (answerContainer) answerContainer.classList.add('hidden');
+    if (answerContainer) answerContainer.style.display = 'none';
 
     const actionContainer = gameResultSection.querySelector('.action-container');
     if (actionContainer) actionContainer.innerHTML = '';
