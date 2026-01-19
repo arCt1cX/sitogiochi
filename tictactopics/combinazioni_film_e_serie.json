@@ -30,7 +30,8 @@
             "Coreano",
             "Italiano",
             "Francese",
-            "Spagnolo"
+            "Spagnolo",
+            "Svedese"
         ],
         "decennio": [
             "Anni '90",
@@ -39,7 +40,8 @@
             "Anni 2020",
             "Anni '80",
             "Anni '70",
-            "Anni '60"
+            "Anni '60",
+            "Anni '50"
         ],
         "tipo": [
             "Film",
@@ -178,7 +180,13 @@
             "Adrien Brody",
             "Dan Schneider",
             "Kevin Bacon",
-            "David Cronenberg"
+            "David Cronenberg",
+            "Marlon Brando",
+            "Vittorio De Sica",
+            "Alberto Sordi",
+            "Andy Samberg",
+            "Mads Mikkelsen",
+            "Andrew Garfield"
         ],
         "tema": [
             "Guerra",
@@ -1554,7 +1562,10 @@
             ],
             "lingua": "Inglese",
             "decennio": "Anni 2010",
-            "regista o attore": "Dan Goor & Michael Schur",
+            "regista o attore": [
+                "Dan Goor & Michael Schur",
+                "Andy Samberg"
+            ],
             "tema": "Poliziesco"
         },
         {
@@ -25063,6 +25074,272 @@
                 "David Cronenberg"
             ],
             "tema": "Videogiochi"
+        },
+        {
+            "title": "Fronte del porto",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Crime"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni '50",
+            "regista o attore": [
+                "Marlon Brando",
+                "Elia Kazan"
+            ],
+            "tema": "Crimine"
+        },
+        {
+            "title": "Una pazza giornata di vacanza",
+            "tipo": "Film",
+            "genere": [
+                "Commedia"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni '80",
+            "regista o attore": [
+                "Matthew Broderick",
+                "John Hughes"
+            ],
+            "tema": "Adolescenza"
+        },
+        {
+            "title": "More - di più ancora di più",
+            "tipo": "Film",
+            "genere": [
+                "Dramma"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni '60",
+            "regista o attore": [
+                "Barbet Schroeder",
+                "Pink Floyd"
+            ],
+            "tema": "Droghe"
+        },
+        {
+            "title": "La Vallée",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Avventura"
+            ],
+            "lingua": "Francese",
+            "decennio": "Anni '70",
+            "regista o attore": [
+                "Barbet Schroeder",
+                "Pink Floyd"
+            ],
+            "tema": "Viaggi"
+        },
+        {
+            "title": "Il settimo sigillo",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Fantasy"
+            ],
+            "lingua": "Svedese",
+            "decennio": "Anni '50",
+            "regista o attore": [
+                "Ingmar Bergman",
+                "Max von Sydow"
+            ],
+            "tema": "Morte"
+        },
+        {
+            "title": "Ladri di biciclette",
+            "tipo": "Film",
+            "genere": [
+                "Dramma"
+            ],
+            "lingua": "Italiano",
+            "decennio": "Anni '40",
+            "regista o attore": [
+                "Vittorio De Sica"
+            ],
+            "tema": "Sociale"
+        },
+        {
+            "title": "Sciuscià",
+            "tipo": "Film",
+            "genere": [
+                "Dramma"
+            ],
+            "lingua": "Italiano",
+            "decennio": "Anni '40",
+            "regista o attore": [
+                "Vittorio De Sica"
+            ],
+            "tema": "Sociale"
+        },
+        {
+            "title": "Un borghese piccolo piccolo",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Commedia"
+            ],
+            "lingua": "Italiano",
+            "decennio": "Anni '70",
+            "regista o attore": [
+                "Alberto Sordi",
+                "Mario Monicelli"
+            ],
+            "tema": "Sociale"
+        },
+        {
+            "title": "Heat - La sfida",
+            "tipo": "Film",
+            "genere": [
+                "Azione",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": [
+                "Al Pacino",
+                "Robert De Niro",
+                "Michael Mann"
+            ],
+            "tema": "Crimine"
+        },
+        {
+            "title": "Carlito's Way",
+            "tipo": "Film",
+            "genere": [
+                "Crime",
+                "Dramma"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni '90",
+            "regista o attore": [
+                "Al Pacino",
+                "Brian De Palma"
+            ],
+            "tema": "Crimine"
+        },
+        {
+            "title": "Quel nano infame",
+            "tipo": "Film",
+            "genere": [
+                "Commedia"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": [
+                "Shawn Wayans",
+                "Marlon Wayans"
+            ],
+            "tema": "Comico"
+        },
+        {
+            "title": "Manchester by the Sea",
+            "tipo": "Film",
+            "genere": [
+                "Dramma"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": [
+                "Casey Affleck",
+                "Kenneth Lonergan"
+            ],
+            "tema": "Famiglia"
+        },
+        {
+            "title": "Palm Springs - Vivi come se non ci fosse un domani",
+            "tipo": "Film",
+            "genere": [
+                "Commedia",
+                "Fantascienza",
+                "Romantico"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2020",
+            "regista o attore": [
+                "Andy Samberg",
+                "Cristin Milioti"
+            ],
+            "tema": "Viaggi nel tempo"
+        },
+        {
+            "title": "The Last 10 Years",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Romantico"
+            ],
+            "lingua": "Giapponese",
+            "decennio": "Anni 2020",
+            "regista o attore": [
+                "Nana Komatsu",
+                "Kentaro Sakaguchi",
+                "Michihito Fujii"
+            ],
+            "tema": "Amore"
+        },
+        {
+            "title": "Il sospetto",
+            "tipo": "Film",
+            "genere": [
+                "Dramma"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2010",
+            "regista o attore": [
+                "Mads Mikkelsen",
+                "Thomas Vinterberg"
+            ],
+            "tema": "Sociale"
+        },
+        {
+            "title": "Un altro giro",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Commedia"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2020",
+            "regista o attore": [
+                "Mads Mikkelsen",
+                "Thomas Vinterberg"
+            ],
+            "tema": "Drammatico"
+        },
+        {
+            "title": "We Live in Time",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Romantico"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2020",
+            "regista o attore": [
+                "Andrew Garfield",
+                "Florence Pugh"
+            ],
+            "tema": "Amore"
+        },
+        {
+            "title": "Closer",
+            "tipo": "Film",
+            "genere": [
+                "Dramma",
+                "Romantico"
+            ],
+            "lingua": "Inglese",
+            "decennio": "Anni 2000",
+            "regista o attore": [
+                "Natalie Portman",
+                "Julia Roberts",
+                "Jude Law"
+            ],
+            "tema": "Amore"
         }
     ]
 }

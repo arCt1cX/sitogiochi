@@ -30,7 +30,8 @@
             "Korean",
             "Italian",
             "French",
-            "Spanish"
+            "Spanish",
+            "Swedish"
         ],
         "decennio": [
             "90s",
@@ -39,7 +40,9 @@
             "2020s",
             "80s",
             "70s",
-            "60s"
+            "60s",
+            "50s",
+            "40s"
         ],
         "tipo": [
             "Movie",
@@ -178,7 +181,20 @@
             "Adrien Brody",
             "Dan Schneider",
             "Kevin Bacon",
-            "David Cronenberg"
+            "David Cronenberg",
+            "Marlon Brando",
+            "Elia Kazan",
+            "John Hughes",
+            "Barbet Schroeder",
+            "Ingmar Bergman",
+            "Max von Sydow",
+            "Vittorio De Sica",
+            "Alberto Sordi",
+            "Mario Monicelli",
+            "Michael Mann",
+            "Brian De Palma",
+            "Shawn Wayans",
+            "Marlon Wayans"
         ],
         "tema": [
             "War",
@@ -23329,6 +23345,272 @@
                 "David Cronenberg"
             ],
             "tema": "Video Games"
+        },
+        {
+            "title": "On the Waterfront",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Crime"
+            ],
+            "lingua": "English",
+            "decennio": "50s",
+            "regista o attore": [
+                "Marlon Brando",
+                "Elia Kazan"
+            ],
+            "tema": "Crime"
+        },
+        {
+            "title": "Ferris Bueller's Day Off",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "80s",
+            "regista o attore": [
+                "Matthew Broderick",
+                "John Hughes"
+            ],
+            "tema": "Coming of Age"
+        },
+        {
+            "title": "More",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "60s",
+            "regista o attore": [
+                "Barbet Schroeder",
+                "Pink Floyd"
+            ],
+            "tema": "Drugs"
+        },
+        {
+            "title": "The Valley (Obscured by Clouds)",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Adventure"
+            ],
+            "lingua": "French",
+            "decennio": "70s",
+            "regista o attore": [
+                "Barbet Schroeder",
+                "Pink Floyd"
+            ],
+            "tema": "Travel"
+        },
+        {
+            "title": "The Seventh Seal",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Fantasy"
+            ],
+            "lingua": "Swedish",
+            "decennio": "50s",
+            "regista o attore": [
+                "Ingmar Bergman",
+                "Max von Sydow"
+            ],
+            "tema": "Death"
+        },
+        {
+            "title": "Bicycle Thieves",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Italian",
+            "decennio": "40s",
+            "regista o attore": [
+                "Vittorio De Sica"
+            ],
+            "tema": "Social"
+        },
+        {
+            "title": "Shoeshine",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "Italian",
+            "decennio": "40s",
+            "regista o attore": [
+                "Vittorio De Sica"
+            ],
+            "tema": "Social"
+        },
+        {
+            "title": "An Average Little Man",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "Italian",
+            "decennio": "70s",
+            "regista o attore": [
+                "Alberto Sordi",
+                "Mario Monicelli"
+            ],
+            "tema": "Social"
+        },
+        {
+            "title": "Heat",
+            "tipo": "Movie",
+            "genere": [
+                "Action",
+                "Crime",
+                "Thriller"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Al Pacino",
+                "Robert De Niro",
+                "Michael Mann"
+            ],
+            "tema": "Crime"
+        },
+        {
+            "title": "Carlito's Way",
+            "tipo": "Movie",
+            "genere": [
+                "Crime",
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "90s",
+            "regista o attore": [
+                "Al Pacino",
+                "Brian De Palma"
+            ],
+            "tema": "Crime"
+        },
+        {
+            "title": "Little Man",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Shawn Wayans",
+                "Marlon Wayans"
+            ],
+            "tema": "Comedy"
+        },
+        {
+            "title": "Manchester by the Sea",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Casey Affleck",
+                "Kenneth Lonergan"
+            ],
+            "tema": "Family"
+        },
+        {
+            "title": "Palm Springs",
+            "tipo": "Movie",
+            "genere": [
+                "Comedy",
+                "Sci-Fi",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Andy Samberg",
+                "Cristin Milioti"
+            ],
+            "tema": "Time Travel"
+        },
+        {
+            "title": "The Last 10 Years",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "Japanese",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Nana Komatsu",
+                "Kentaro Sakaguchi",
+                "Michihito Fujii"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "The Hunt",
+            "tipo": "Movie",
+            "genere": [
+                "Drama"
+            ],
+            "lingua": "English",
+            "decennio": "2010s",
+            "regista o attore": [
+                "Mads Mikkelsen",
+                "Thomas Vinterberg"
+            ],
+            "tema": "Social"
+        },
+        {
+            "title": "Another Round",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Comedy"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Mads Mikkelsen",
+                "Thomas Vinterberg"
+            ],
+            "tema": "Drama"
+        },
+        {
+            "title": "We Live in Time",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2020s",
+            "regista o attore": [
+                "Andrew Garfield",
+                "Florence Pugh"
+            ],
+            "tema": "Love"
+        },
+        {
+            "title": "Closer",
+            "tipo": "Movie",
+            "genere": [
+                "Drama",
+                "Romance"
+            ],
+            "lingua": "English",
+            "decennio": "2000s",
+            "regista o attore": [
+                "Natalie Portman",
+                "Julia Roberts",
+                "Jude Law"
+            ],
+            "tema": "Love"
         }
     ]
 }
