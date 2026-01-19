@@ -457,15 +457,24 @@ function showRoundResults() {
     const resultsList = document.getElementById('results-list');
     resultsList.innerHTML = '';
 
-    // Show the correct answer explicitly
+    // Show the correct answer explicitly - ABOVE GRID
     const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-    const answerDisplay = document.createElement('div');
-    answerDisplay.className = 'results-item'; // reuse styling
-    answerDisplay.style.backgroundColor = 'var(--bg-color)';
-    answerDisplay.style.border = '1px solid var(--text-color)';
-    answerDisplay.style.marginBottom = '15px';
-    answerDisplay.innerHTML = `<strong>${t.theCellWas} ${correctCoords}</strong>`;
-    resultsList.appendChild(answerDisplay);
+
+    // Check if we have a container for the answer, or create/reset it
+    let answerContainer = document.getElementById('answer-display-container');
+    if (!answerContainer) {
+        answerContainer = document.createElement('div');
+        answerContainer.id = 'answer-display-container';
+        // Insert after title (first child is h2)
+        const title = gameResultSection.querySelector('h2');
+        title.insertAdjacentElement('afterend', answerContainer);
+    }
+
+    // Style and Content
+    answerContainer.style.marginBottom = '15px';
+    answerContainer.style.fontSize = '1.2em';
+    answerContainer.style.color = '#fff';
+    answerContainer.innerHTML = `<strong>${t.theCellWas} ${correctCoords}</strong>`;
 
     let exactMatches = 0;
 
@@ -497,7 +506,7 @@ function showRoundResults() {
 
         const item = document.createElement('div');
         // If 3 points correct, if 1 point maybe yellow/orange? let's stick to simple correct/incorrect styling for now
-        // or add 'almost' styling. Let's keep green for positive points.
+        // or add 'almost' styling. Let's make adjacent look slightly positive or just text diff
         item.className = 'results-item ' + (points === 3 ? 'correct' : (points === 1 ? 'correct' : 'incorrect'));
         // Note definition of 'correct' class is green border. Adjacent gets green border too? 
         // Or maybe modify style. Let's keep green for positive points.
@@ -506,7 +515,7 @@ function showRoundResults() {
 
         let resultText = t.wrong;
         if (points === 3) resultText = t.correct;
-        else if (points === 1) resultText = "Vicino! (+1)";
+        else if (points === 1) resultText = "Vicino!"; // Fixed duplicate (+1)
 
         item.textContent = `${player.name}: ${guessStr} - ${resultText} (+${points})`;
         resultsList.appendChild(item);
@@ -590,12 +599,28 @@ function showFinalScores() {
     sortedPlayers.forEach(p => {
         const item = document.createElement('div');
         item.className = 'results-item';
-        item.style.backgroundColor = p.score === sortedPlayers[0].score ? '#27ae60' : '#2c2c2c';
+        // Highlight winner
+        if (p.score === sortedPlayers[0].score) {
+            item.style.backgroundColor = '#27ae60';
+            item.style.fontWeight = 'bold';
+            item.style.transform = 'scale(1.05)';
+        } else {
+            item.style.backgroundColor = '#2c2c2c';
+        }
+
         item.textContent = `${p.name}: ${p.score} pts`;
         resultsList.appendChild(item);
     });
 
-    const actionContainer = gameResultSection.querySelector('div[style*="flex"]');
+    // Hide grid and other round elements
+    const gridContainer = gameResultSection.querySelector('.grid-container');
+    if (gridContainer) gridContainer.classList.add('hidden');
+
+    // Hide the round answer info if present
+    const answerContainer = document.getElementById('answer-display-container');
+    if (answerContainer) answerContainer.classList.add('hidden');
+
+    const actionContainer = gameResultSection.querySelector('.action-container');
     if (actionContainer) actionContainer.innerHTML = '';
 
     const restartBtn = document.createElement('button');
@@ -605,9 +630,6 @@ function showFinalScores() {
         window.location.reload();
     };
     actionContainer.appendChild(restartBtn);
-
-    // Hide grid in final results to focus on list
-    document.getElementById('result-grid').parentElement.parentElement.classList.add('hidden');
 }
 
 
