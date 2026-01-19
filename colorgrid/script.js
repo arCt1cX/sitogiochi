@@ -298,15 +298,28 @@ function startRound() {
 function showTargetReveal() {
     // Update the target reveal screen
     const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
-    targetCoordsDisplay.textContent = `${players[viewerIndex].name}: ${cellCoords}`;
+
+    // Changing the structure: "Name ricorda questa cella!" instead of "Ricorda questa cella!"
+    // We need to target the h2
+    const lang = getCurrentLanguage();
+    const t = gameTranslations[lang] || gameTranslations['en'];
+
+    // We update the remembering title with player name
+    const rememberTitle = document.getElementById('rememberCell');
+    if (lang === 'it') {
+        rememberTitle.textContent = `${players[viewerIndex].name} ricorda questa cella!`;
+    } else {
+        rememberTitle.textContent = `${players[viewerIndex].name} remember this cell!`;
+    }
+
+    // The coords text should be just the coords
+    targetCoordsDisplay.textContent = cellCoords;
 
     // Set the target cell color
     const cellColor = getColorForCell(targetCell.row, targetCell.col);
     targetCellDisplay.style.backgroundColor = cellColor;
 
     // Set input placeholder
-    const lang = getCurrentLanguage();
-    const t = gameTranslations[lang] || gameTranslations['en'];
     colorWordInput.value = '';
     colorWordInput.placeholder = lang === 'it'
         ? "Scrivi una parola per descrivere questo colore..."
@@ -433,16 +446,7 @@ function showRoundResults() {
 
     gamePlaySection.classList.add('hidden');
 
-    // We can recycle the gameResultSection from original code or create a dynamic one
-    // Let's use the one we have but clear it content first tailored to this flow
-    // But structure from index.html is slightly different (result-grid, results-list)
-
-    const resultGrid = document.getElementById('result-grid') || document.createElement('div'); // fallback
-    if (!document.getElementById('result-grid')) {
-        // Just in case structure mismatch, but we saw it in view_file_outline
-        // So we assume it exists.
-        // It's inside #game-result
-    }
+    const resultGrid = document.getElementById('result-grid') || document.createElement('div');
 
     gameResultSection.classList.remove('hidden');
 
@@ -453,50 +457,85 @@ function showRoundResults() {
     const resultsList = document.getElementById('results-list');
     resultsList.innerHTML = '';
 
-    let anyCorrect = false;
+    // Show the correct answer explicitly
+    const correctCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
+    const answerDisplay = document.createElement('div');
+    answerDisplay.className = 'results-item'; // reuse styling
+    answerDisplay.style.backgroundColor = 'var(--bg-color)';
+    answerDisplay.style.border = '1px solid var(--text-color)';
+    answerDisplay.style.marginBottom = '15px';
+    answerDisplay.innerHTML = `<strong>${t.theCellWas} ${correctCoords}</strong>`;
+    resultsList.appendChild(answerDisplay);
 
+    let exactMatches = 0;
+
+    // Process Guessers
     players.forEach((player, index) => {
         if (index === viewerIndex) return; // Skip viewer in list for now
 
         const guess = roundGuesses[index];
-        const isCorrect = guess && guess.row === targetCell.row && guess.col === targetCell.col;
+        let points = 0;
+        let resultType = 'incorrect';
 
-        if (isCorrect) {
-            player.score += 1; // 1 point for correct guess
-            anyCorrect = true;
+        if (guess) {
+            // Exact match
+            if (guess.row === targetCell.row && guess.col === targetCell.col) {
+                points = 3;
+                exactMatches++;
+                resultType = 'correct';
+            }
+            // Adjacent match (Up, Down, Left, Right)
+            else if (Math.abs(guess.row - targetCell.row) + Math.abs(guess.col - targetCell.col) === 1) {
+                points = 1;
+                resultType = 'almost'; // distinct class if we want, or just incorrect style with points
+            }
+        }
+
+        if (points > 0) {
+            player.score += points;
         }
 
         const item = document.createElement('div');
-        item.className = 'results-item ' + (isCorrect ? 'correct' : 'incorrect');
-        const guessStr = guess ? `${COLUMN_LABELS[guess.col]}${guess.row + 1}` : t.notSelected;
-        const correctStr = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
+        // If 3 points correct, if 1 point maybe yellow/orange? let's stick to simple correct/incorrect styling for now
+        // or add 'almost' styling. Let's keep green for positive points.
+        item.className = 'results-item ' + (points === 3 ? 'correct' : (points === 1 ? 'correct' : 'incorrect'));
+        // Note definition of 'correct' class is green border. Adjacent gets green border too? 
+        // Or maybe modify style. Let's keep green for positive points.
 
-        item.textContent = `${player.name}: ${guessStr} (${isCorrect ? t.correct : t.wrong})`;
+        const guessStr = guess ? `${COLUMN_LABELS[guess.col]}${guess.row + 1}` : t.notSelected;
+
+        let resultText = t.wrong;
+        if (points === 3) resultText = t.correct;
+        else if (points === 1) resultText = "Vicino! (+1)";
+
+        item.textContent = `${player.name}: ${guessStr} - ${resultText} (+${points})`;
         resultsList.appendChild(item);
     });
 
-    // Viewer gets points? optional rule. Let's say Viewer gets 1 point if at least one person guessed right.
-    if (anyCorrect) {
-        players[viewerIndex].score += 1;
-        const viewerItem = document.createElement('div');
-        viewerItem.className = 'results-item correct';
-        viewerItem.textContent = `${players[viewerIndex].name} (${t.viewer}): +1 point`;
-        resultsList.prepend(viewerItem);
-    } else {
-        const viewerItem = document.createElement('div');
-        viewerItem.className = 'results-item incorrect';
-        viewerItem.textContent = `${players[viewerIndex].name} (${t.viewer}): 0 points`;
-        resultsList.prepend(viewerItem);
-    }
+    // Guide Points: 1 point for every person who guessed EXACTLY right
+    const guidePoints = exactMatches;
+    players[viewerIndex].score += guidePoints;
+
+    const viewerItem = document.createElement('div');
+    viewerItem.className = 'results-item ' + (guidePoints > 0 ? 'correct' : 'incorrect');
+    viewerItem.textContent = `${players[viewerIndex].name} (${t.viewer}): +${guidePoints} pt`;
+    resultsList.prepend(viewerItem);
 
     // Button handling
     const oldPlayAgain = document.getElementById('play-again');
     if (oldPlayAgain) oldPlayAgain.remove();
 
-    const actionContainer = document.createElement('div');
-    actionContainer.style.display = 'flex';
-    actionContainer.style.justifyContent = 'center';
-    actionContainer.style.marginTop = '20px';
+    // Clear any previous action container if it exists, or create a new one/clear it
+    let actionContainer = gameResultSection.querySelector('.action-container');
+    if (!actionContainer) {
+        actionContainer = document.createElement('div');
+        actionContainer.className = 'action-container';
+        actionContainer.style.display = 'flex';
+        actionContainer.style.justifyContent = 'center';
+        actionContainer.style.marginTop = '20px';
+        gameResultSection.appendChild(actionContainer);
+    }
+    actionContainer.innerHTML = ''; // Clear previous buttons
 
     currentRound++;
 
@@ -518,8 +557,6 @@ function showRoundResults() {
         endBtn.onclick = showFinalScores;
         actionContainer.appendChild(endBtn);
     }
-
-    gameResultSection.appendChild(actionContainer);
 }
 
 function generateResultGrid(gridElement) {

@@ -34,11 +34,12 @@ const gameTranslations = {
         'nextRound': 'Prossimo Turno',
         'gameOver': 'Fine Partita',
         'finalScores': 'Punteggi Finali',
-        'viewer': 'Spettatore',
+        'viewer': 'Suggeritore',
         'guesser': 'Chi indovina',
         'round': 'Turno',
         'waitTurn': 'Attendi il tuo turno...',
-        'selectCell': 'Seleziona una cella prima di confermare!'
+        'selectCell': 'Seleziona una cella prima di confermare!',
+        'theCellWas': 'La cella era:'
     },
     'en': {
         'gameTitle': 'Color Grid',
@@ -74,11 +75,12 @@ const gameTranslations = {
         'nextRound': 'Next Round',
         'gameOver': 'Game Over',
         'finalScores': 'Final Scores',
-        'viewer': 'Viewer',
+        'viewer': 'Suggester',
         'guesser': 'Guesser',
         'round': 'Round',
         'waitTurn': 'Wait for your turn...',
-        'selectCell': 'Select a cell before confirming!'
+        'selectCell': 'Select a cell before confirming!',
+        'theCellWas': 'The cell was:'
     }
 };
 
