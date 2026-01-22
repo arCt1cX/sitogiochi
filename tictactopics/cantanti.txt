@@ -1,0 +1,187 @@
+      "Coldplay",
+      "Ed Sheeran",
+      "Taylor Swift",
+      "Vasco Rossi",
+      "Lady Gaga",
+      "Ligabue",
+      "Måneskin",
+      "The Weeknd",
+      "Adele",
+      "Jovanotti",
+      "Laura Pausini",
+      "Marracash",
+      "Fedez",
+      "Eminem",
+      "Drake",
+      "Dua Lipa",
+      "Blanco",
+      "Mahmood",
+      "BTS",
+      "Billie Eilish",
+      "Aretha Franklin",
+      "Bob Dylan",
+      "John Lennon",
+      "Marvin Gaye",
+      "Nirvana",
+      "Chuck Berry",
+      "The Beatles",
+      "Queen",
+      "Led Zeppelin",
+      "Eagles",
+      "Bruce Springsteen",
+      "Prince",
+      "The Clash",
+      "Bob Marley",
+      "Michael Jackson",
+      "Stevie Wonder",
+      "The Rolling Stones",
+      "The Who",
+      "Elvis Presley",
+      "The Doors",
+      "U2",
+      "The Kinks",
+      "Guns N' Roses",
+      "The Police",
+      "Madonna",
+      "R.E.M.",
+      "Oasis",
+      "Radiohead",
+      "Queen & David Bowie",
+      "David Bowie",
+      "Metallica",
+      "Travis Scott",
+      "Kanye West",
+      "21 Savage",
+      "A$AP Rocky",
+      "A$AP Ferg",
+      "Future",
+      "Playboi Carti",
+      "Lil Uzi Vert",
+      "Migos",
+      "Kodak Black",
+      "Pop Smoke",
+      "Gunna",
+      "Metro Boomin",
+      "Ariana Grande",
+      "50 Cent",
+      "2Pac",
+      "The Notorious B.I.G.",
+      "Kendrick Lamar",
+      "Post Malone",
+      "Lil Baby",
+      "Juice WRLD",
+      "Lil Nas X",
+      "Roddy Ricch",
+“Lil Tjay”,
+“Lil Tecca”,
+      "Olivia Rodrigo",
+      "Chris Brown",
+      "J. Cole",
+      "Jay-Z",
+      "Cardi B",
+      "Megan Thee Stallion",
+      "Nicki Minaj",
+      "Lizzo",
+      "Central Cee",
+      "Polo G",
+      "XXXTENTACION",
+      "Pop Smoke",
+      "Marshmello",
+      "Trippie Redd",
+      "Ski Mask the Slump God",
+      "The Kid LAROI",
+      "Halsey",
+      "Metro Boomin",
+“Pink Floyd”,
+AC/DC
+Aerosmith
+Bon Jovi
+Dire Straits
+Arctic Monkeys
+Red Hot Chili Peppers
+Rihanna
+Beyoncé
+Justin Bieber
+Harry Styles
+Bruno Mars
+Sia
+Katy Perry
+Shawn Mendes
+Sam Smith
+Doja Cat
+The Chainsmokers
+Imagine Dragons
+One Direction
+Dr. Dre
+Snoop Dogg
+Childish Gambino
+Tyler, The Creator
+Mac Miller
+Ray Charles
+Frank Ocean
+Linkin Park
+Iron Maiden
+Green Day
+Whitney Houston
+Mariah Carey
+Alicia Keys
+Usher
+Ice Cube
+Lana Del Rey
+Camila Cabello
+Charlie Puth
+Zayn
+Sabrina Carpenter
+Young Thug
+Jack Harlow
+NLE Choppa
+DaBaby
+A Boogie wit da Hoodie
+Don Toliver
+SZA
+Giveon
+Tame Impala
+Twenty One Pilots
+Tracy Chapman
+Avicii
+Bruce Springsteen
+Chief Keef
+The Cranberries
+Damian “Jr. Gong” Marley
+Elton John
+Eagles
+Denzel Curry
+John Denver
+Manu Chao
+Maroon 5
+Metro Boomin
+Machine Gun Kelly
+Myke Towers
+Nelly
+Oasis
+Ozuna 
+Nicky Jam  
+Enrique Iglesias
+Daddy Yankee
+6ix9ine
+Ski Mask the Slump God
+Soulja Boy
+Taio Cruz
+Tory Lanez
+The Chainsmokers
+ZERB
+Wiz Khalifa
+Maluma 
+J Balvin
+Karol G
+Anuel AA
+Bad Bunny
+Martin Garrix
+Rauw Alejandro
+Shakira
+Luis Fonsi
+Becky G
+Kygo
+Alan Walker
+Calvin Harris
+Stromae
