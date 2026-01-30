@@ -508,3 +508,14 @@ Se potessi essere un fantasma per un giorno, a casa di chi andresti per terroriz
 Qual è un film che alla maggior parte delle persone piace ma a te fa cagare? | Qual è l'ultimo film che hai visto al cinema?
 Quanti telefoni hai rotto? | Quante volte ti sei rotto un osso?
 Se potessi indossare un solo modello di scarpe per il resto della tua vita, quale sceglieresti? | Qual è un modello di scarpe che ti metti solo in occasioni particolari?
+Qual è uno sport che toglieresti dalle Olimpiadi? | Qual è lo sport più strano che hai visto alle Olimpiadi
+Qual è una città in cui sei stato e non hai la minima intenzione di tornare?| Qual è la città che ti sta più antipatica in assoluto?
+In che città hai mangiato la peggiore pizza della tua vita? | Qual è la città all'estero più bella in cui sei stato?
+Qual è una via / piazza del quartiere nota per essere un punto di spaccio di hashish? | Qual è la via / piazza più malfamata del tuo quartiere dove vivi? 
+Se dovessi vincere un premio inventato (es. miglior consumatore di vodka), quale sarebbe? | Rispondi "Miglior..." e di il tuo mestiere (esempio: miglior cameriere)
+Qual è la cosa più imbarazzante per cui hai dovuto chiedere istruzioni a Chat GPT? | Qual è la  faccenda di casa / commissione che odi di più fare?
+Qual è l'attività più divertente da fare sulla neve? | Qual è l'attività più stupida da fare sulla neve?
+Se dovessi giocare una partita di calcio da attaccante in Terza Categoria, quanti gol pensi di riuscire a fare? | Se dovessi giocare una partita di calcio da attaccante in una partita under 12, quanti gol pensi di riuscire a fare?
+Oggettivamente, chi è il più attraente tra i presenti? | Tra i presenti, chi è il più difficile da battere in una rissa?
+In quale città hai dormito nell'hotel peggiore in cui sei mai stato? | Qual è la città più brutta d'Italia?
+Se potessi eliminare un ristorante della tua città, quale sceglieresti? | Qual è l'ultimo ristorante della tua città in cui sei stato a pranzo / cena?
