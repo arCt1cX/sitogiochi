@@ -17,6 +17,12 @@ const translations = {
         'buyMeCoffee': 'Offrice una birra',
         'italianOnly': 'Solo Italiano',
 
+        // SEO Content
+        'seoH1': 'Giochi party online da fare con amici',
+        'seoTitle': 'Giochi party online e giochi alcolici per serate con amici',
+        'seoText1': 'DrewGames è una piattaforma di <strong>giochi party online</strong> pensata per rendere più divertenti le serate tra amici. Qui trovi una selezione di <strong>giochi di gruppo</strong> e <strong>giochi alcolici</strong> perfetti per feste, pre-serata e momenti di svago.',
+        'seoText2': 'Dai <strong>quiz</strong> ai <strong>giochi di parole</strong>, passando per giochi di bluff e deduzione, DrewGames offre <strong>giochi da fare con amici</strong> semplici e coinvolgenti, da giocare direttamente dal browser e, in molti casi, <strong>anche senza connessione</strong>.',
+
         // Navigation Items
         'navHome': 'Home',
         'navGames': 'Giochi',
@@ -382,8 +388,14 @@ const translations = {
         'toggleLanguage': 'EN',
         'tagline': 'Liven up the night with those "fried" friends of yours 🍺🍁',
         'subtitle': '',
-        'buyMeCoffee': 'Offrice una birra',
+        'buyMeCoffee': 'Buy us a beer',
         'italianOnly': 'Italian Only',
+
+        // SEO Content
+        'seoH1': 'Online party games to play with friends',
+        'seoTitle': 'Online party games and drinking games for nights with friends',
+        'seoText1': 'DrewGames is an <strong>online party games</strong> platform designed to make nights with friends more fun. Here you will find a selection of <strong>group games</strong> and <strong>drinking games</strong> perfect for parties, pre-drinks, and leisure time.',
+        'seoText2': 'From <strong>quizzes</strong> to <strong>word games</strong>, through bluff and deduction games, DrewGames offers simple and engaging <strong>games to play with friends</strong>, playable directly from the browser and, in many cases, <strong>even offline</strong>.',
 
         // Navigation Items
         'navHome': 'Home',
@@ -877,6 +889,20 @@ function applyTranslations() {
     if (pageDescription) {
         pageDescription.setAttribute('content', getTranslation('pageDescription'));
     }
+
+    // Update SEO elements
+    const seoH1 = document.getElementById('seoH1');
+    if (seoH1) seoH1.textContent = getTranslation('seoH1');
+
+    const seoTitle = document.getElementById('seoTitle');
+    if (seoTitle) seoTitle.textContent = getTranslation('seoTitle');
+
+    // Using innerHTML because these texts contain <strong> tags
+    const seoText1 = document.getElementById('seoText1');
+    if (seoText1) seoText1.innerHTML = getTranslation('seoText1');
+
+    const seoText2 = document.getElementById('seoText2');
+    if (seoText2) seoText2.innerHTML = getTranslation('seoText2');
 
     // Handle language toggle - only show on main page
     const languageToggle = document.getElementById('languageToggle');

@@ -135,6 +135,34 @@ h2 {
     margin-bottom: 2rem;
 }
 
+/* SEO Utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.seo-context {
+    max-width: 640px;
+    margin: 80px auto;
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.seo-context h2 {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
 /* Games Container */
 .games-container {
     display: grid;
@@ -937,6 +965,7 @@ body.overlay-open {
     width: 100%;
     height: 100%;
 }
+
 /* Custom BMC Button */
 .bmc-button-custom {
     display: inline-flex !important;
@@ -972,7 +1001,8 @@ body.overlay-open {
 .bmc-text {
     font-size: 28px;
     line-height: normal;
-    margin-top: 3px; /* Optical adjustment for Cookie font */
+    margin-top: 3px;
+    /* Optical adjustment for Cookie font */
 }
 
 /* BMC SVG Icon */
