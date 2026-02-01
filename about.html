@@ -66,14 +66,18 @@
                     return storedLang;
                 }
 
-                // Check browser language
+                // Check if we're on the English subdirectory
+                const isEnglishPath = window.location.pathname.startsWith('/en/');
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
-                    return 'it';
-                }
 
-                // Default to English
-                return 'en';
+                if (isEnglishPath) {
+                    // On /en/ path: Italian users get Italian, others get English
+                    return (browserLang === 'it' || browserLang.startsWith('it-')) ? 'it' : 'en';
+                } else {
+                    // On main path (/): English users get English, everyone else gets Italian
+                    // This ensures Googlebot sees Italian content for SEO
+                    return browserLang.startsWith('en') ? 'en' : 'it';
+                }
             }
 
             // Set the lang attribute
@@ -445,7 +449,7 @@
 
         <footer>
             <div class="footer-content">
-                <p id="copyright">&copy; 2025 partygamesdrew.com - All rights reserved</p>
+                <p id="copyright">&copy; 2026 partygamesdrew.com - All rights reserved</p>
                 <div class="support-container">
                     <!-- Mobile-friendly BMC button implementation -->
                     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -585,7 +589,7 @@
 
             if (currentLang === 'it') {
                 document.getElementById('about-title').textContent = 'Chi Siamo';
-                document.getElementById('copyright').textContent = '© 2025 partygamesdrew.com - Tutti i diritti riservati';
+                document.getElementById('copyright').textContent = '© 2026 partygamesdrew.com - Tutti i diritti riservati';
 
                 // Our Story
                 document.getElementById('our-story-title').textContent = 'La Nostra Storia';
@@ -683,7 +687,7 @@
             } else {
                 // English translations (faithful version)
                 document.getElementById('about-title').textContent = 'About Us';
-                document.getElementById('copyright').textContent = '© 2025 partygamesdrew.com - All rights reserved';
+                document.getElementById('copyright').textContent = '© 2026 partygamesdrew.com - All rights reserved';
 
                 document.getElementById('our-story-title').textContent = 'Our Story';
                 document.getElementById('our-story-content').innerHTML = `

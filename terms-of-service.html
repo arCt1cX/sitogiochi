@@ -66,14 +66,18 @@
                     return storedLang;
                 }
 
-                // Check browser language
+                // Check if we're on the English subdirectory
+                const isEnglishPath = window.location.pathname.startsWith('/en/');
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
-                    return 'it';
-                }
 
-                // Default to English
-                return 'en';
+                if (isEnglishPath) {
+                    // On /en/ path: Italian users get Italian, others get English
+                    return (browserLang === 'it' || browserLang.startsWith('it-')) ? 'it' : 'en';
+                } else {
+                    // On main path (/): English users get English, everyone else gets Italian
+                    // This ensures Googlebot sees Italian content for SEO
+                    return browserLang.startsWith('en') ? 'en' : 'it';
+                }
             }
 
             // Set the lang attribute
@@ -377,7 +381,7 @@
         <main>
             <div class="terms-container">
                 <div class="terms-section">
-                    <p id="last-updated" class="last-updated">Last Updated: May 4, 2025</p>
+                    <p id="last-updated" class="last-updated">Last Updated: May 4, 2026</p>
 
                     <h2 id="agreement-title">1. Agreement to Terms</h2>
                     <p id="agreement-p1">By accessing or using the DrewGames website (partygamesdrew.com) and its games
@@ -454,7 +458,7 @@
 
         <footer>
             <div class="footer-content">
-                <p id="copyright">&copy; 2025 partygamesdrew.com - All rights reserved</p>
+                <p id="copyright">&copy; 2026 partygamesdrew.com - All rights reserved</p>
                 <div class="support-container">
                     <!-- Mobile-friendly BMC button implementation -->
                     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -594,13 +598,13 @@
 
             // Update copyright text
             document.getElementById('copyright').textContent = currentLang === 'it' ?
-                '© 2025 partygamesdrew.com - Tutti i diritti riservati' :
-                '© 2025 partygamesdrew.com - All rights reserved';
+                '© 2026 partygamesdrew.com - Tutti i diritti riservati' :
+                '© 2026 partygamesdrew.com - All rights reserved';
 
             // Update terms of service content for Italian
             if (currentLang === 'it') {
                 document.getElementById('terms-title').textContent = 'Termini di Servizio';
-                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 4 Maggio 2025';
+                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 4 Maggio 2026';
 
                 // Agreement to Terms
                 document.getElementById('agreement-title').textContent = '1. Accettazione dei Termini';

@@ -66,14 +66,18 @@
                     return storedLang;
                 }
 
-                // Check browser language
+                // Check if we're on the English subdirectory
+                const isEnglishPath = window.location.pathname.startsWith('/en/');
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
-                    return 'it';
-                }
 
-                // Default to English
-                return 'en';
+                if (isEnglishPath) {
+                    // On /en/ path: Italian users get Italian, others get English
+                    return (browserLang === 'it' || browserLang.startsWith('it-')) ? 'it' : 'en';
+                } else {
+                    // On main path (/): English users get English, everyone else gets Italian
+                    // This ensures Googlebot sees Italian content for SEO
+                    return browserLang.startsWith('en') ? 'en' : 'it';
+                }
             }
 
             // Set the lang attribute
@@ -377,7 +381,7 @@
         <main>
             <div class="privacy-container">
                 <div class="privacy-section">
-                    <p id="last-updated" class="last-updated">Last Updated: May 4, 2025</p>
+                    <p id="last-updated" class="last-updated">Last Updated: May 4, 2026</p>
 
                     <p id="privacy-intro">Thank you for playing DrewGames! This Privacy Policy explains how we collect,
                         use, disclose, and safeguard your information when you visit our website www.partygamesdrew.com
@@ -509,7 +513,7 @@
 
         <footer>
             <div class="footer-content">
-                <p id="copyright">&copy; 2025 partygamesdrew.com - All rights reserved</p>
+                <p id="copyright">&copy; 2026 partygamesdrew.com - All rights reserved</p>
                 <div class="support-container">
                     <!-- Mobile-friendly BMC button implementation -->
                     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -649,13 +653,13 @@
 
             // Update copyright text
             document.getElementById('copyright').textContent = currentLang === 'it' ?
-                '© 2025 partygamesdrew.com - Tutti i diritti riservati' :
-                '© 2025 partygamesdrew.com - All rights reserved';
+                '© 2026 partygamesdrew.com - Tutti i diritti riservati' :
+                '© 2026 partygamesdrew.com - All rights reserved';
 
             // Update privacy policy content for Italian
             if (currentLang === 'it') {
                 document.getElementById('privacy-title').textContent = 'Informativa sulla Privacy';
-                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 4 Maggio 2025';
+                document.getElementById('last-updated').textContent = 'Ultimo aggiornamento: 4 Maggio 2026';
                 document.getElementById('privacy-intro').textContent = 'Grazie per giocare con DrewGames! Questa Informativa sulla Privacy spiega come raccogliamo, utilizziamo, divulghiamo e proteggiamo le tue informazioni quando visiti il nostro sito web www.partygamesdrew.com e utilizzi i nostri giochi (collettivamente, il "Servizio"). Ti preghiamo di leggere attentamente questa Informativa sulla Privacy. Utilizzando il Servizio, acconsenti alle pratiche relative ai dati descritte in questa informativa.';
                 document.getElementById('contact-info').innerHTML = 'Se hai domande o commenti su questa Informativa sulla Privacy, contattaci a: <a href="mailto:partygamesdrew@gmail.com">partygamesdrew@gmail.com</a>';
 

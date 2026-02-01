@@ -10,7 +10,7 @@ const translations = {
         'play': 'Gioca',
         'comingSoon': 'Coming Soon',
         'newGamesComingSoon': 'Nuovi giochi in arrivo...',
-        'copyright': '© 2025 partygamesdrew.com - Tutti i diritti riservati',
+        'copyright': '© 2026 partygamesdrew.com - Tutti i diritti riservati',
         'toggleLanguage': 'IT',
         'tagline': 'Svolta la serata con quei rimasti dei tuoi amici 🍺🍁',
         'subtitle': '',
@@ -384,7 +384,7 @@ const translations = {
         'play': 'Play',
         'comingSoon': 'Coming Soon',
         'newGamesComingSoon': 'New games coming soon...',
-        'copyright': '© 2025 partygamesdrew.com - All rights reserved',
+        'copyright': '© 2026 partygamesdrew.com - All rights reserved',
         'toggleLanguage': 'EN',
         'tagline': 'Liven up the night with those "fried" friends of yours 🍺🍁',
         'subtitle': '',
@@ -785,18 +785,34 @@ function getUserLanguage() {
         return storedLang;
     }
 
+    // Check if we're on the English subdirectory - if so, default to English
+    const isEnglishPath = window.location.pathname.startsWith('/en/');
+
     // If no stored preference, try to detect based on browser language
     const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     console.log('Detected browser language:', browserLang);
 
-    // More specific check for Italian language
-    if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
-        localStorage.setItem('lang', 'it');
-        return 'it';
+    // If on /en/ path, default to English for non-Italian browsers
+    if (isEnglishPath) {
+        // On English path: Italian users get Italian, everyone else gets English
+        if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
+            localStorage.setItem('lang', 'it');
+            return 'it';
+        } else {
+            localStorage.setItem('lang', 'en');
+            return 'en';
+        }
     } else {
-        // Default to English for any other language
-        localStorage.setItem('lang', 'en');
-        return 'en';
+        // On main path (/): English users get English, everyone else (including bots) gets Italian
+        // This ensures Googlebot sees Italian content for SEO
+        if (browserLang.startsWith('en')) {
+            localStorage.setItem('lang', 'en');
+            return 'en';
+        } else {
+            // Default to Italian for main site (better for Italian SEO)
+            localStorage.setItem('lang', 'it');
+            return 'it';
+        }
     }
 }
 

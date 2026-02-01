@@ -62,14 +62,18 @@
                     return storedLang;
                 }
 
-                // Check browser language
+                // Check if we're on the English subdirectory
+                const isEnglishPath = window.location.pathname.startsWith('/en/');
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-                if (browserLang === 'it' || browserLang === 'it-it' || browserLang.startsWith('it-')) {
-                    return 'it';
-                }
 
-                // Default to English
-                return 'en';
+                if (isEnglishPath) {
+                    // On /en/ path: Italian users get Italian, others get English
+                    return (browserLang === 'it' || browserLang.startsWith('it-')) ? 'it' : 'en';
+                } else {
+                    // On main path (/): English users get English, everyone else gets Italian
+                    // This ensures Googlebot sees Italian content for SEO
+                    return browserLang.startsWith('en') ? 'en' : 'it';
+                }
             }
 
             // Set the lang attribute
