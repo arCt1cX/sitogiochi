@@ -1,0 +1,340 @@
+/* ============================================
+   GAME OVERVIEW - Displayed before the game starts
+   SEO-friendly landing page for each game
+   ============================================ */
+
+.game-overview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    /* iOS safe areas */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+.game-overview.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Main content area - scrollable */
+.overview-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 60px 20px 20px 20px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Header section with icon and title */
+.overview-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+.overview-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    margin-bottom: 15px;
+}
+
+.overview-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #6F2AC0, #9B4DCA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.overview-catchphrase {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* Player count badge */
+.overview-players {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(111, 42, 192, 0.3);
+    border: 2px solid rgba(111, 42, 192, 0.6);
+    padding: 10px 18px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 15px;
+}
+
+.overview-players svg {
+    width: 22px;
+    height: 22px;
+    fill: #6F2AC0;
+}
+
+/* Sections (Description, Instructions, Features) */
+.overview-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overview-section h3 {
+    color: #9B4DCA;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.overview-section h3 svg {
+    width: 20px;
+    height: 20px;
+    fill: #6F2AC0;
+    flex-shrink: 0;
+}
+
+.overview-section p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Instructions list */
+.overview-section ol {
+    padding-left: 0;
+    margin: 0;
+    counter-reset: instruction-counter;
+    list-style: none;
+}
+
+.overview-section ol li {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    padding-left: 35px;
+    position: relative;
+    counter-increment: instruction-counter;
+}
+
+.overview-section ol li::before {
+    content: counter(instruction-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #6F2AC0, #9B4DCA);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Features list */
+.overview-section ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.overview-section ul li {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.overview-section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #6F2AC0;
+    font-weight: bold;
+}
+
+/* Footer with buttons */
+.overview-footer {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+.overview-btn-back,
+.overview-btn-play {
+    flex: 1;
+    padding: 16px 20px;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.overview-btn-back {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.overview-btn-back:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.overview-btn-play {
+    background: linear-gradient(135deg, #6F2AC0 0%, #9B4DCA 100%);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 15px rgba(111, 42, 192, 0.4);
+}
+
+.overview-btn-play:hover {
+    background: linear-gradient(135deg, #8035D9 0%, #A85FD4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(111, 42, 192, 0.6);
+}
+
+.overview-btn-back:active,
+.overview-btn-play:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .overview-content {
+        padding: 50px 15px 15px 15px;
+    }
+
+    .overview-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .overview-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .overview-catchphrase {
+        font-size: 0.9rem;
+    }
+
+    .overview-section {
+        padding: 15px;
+    }
+
+    .overview-section p,
+    .overview-section ol li,
+    .overview-section ul li {
+        font-size: 0.85rem;
+    }
+
+    .overview-footer {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .overview-btn-back,
+    .overview-btn-play {
+        padding: 14px 15px;
+        font-size: 1rem;
+    }
+
+    .overview-players {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .overview-content {
+        padding-top: 50px;
+    }
+
+    .overview-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .overview-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+    }
+
+    .overview-footer {
+        padding: 10px 20px;
+    }
+
+    .overview-btn-back,
+    .overview-btn-play {
+        padding: 12px 20px;
+    }
+}
+
+/* Hide game content when overview is showing */
+body.overview-active .container,
+body.overview-active #game-title {
+    display: none;
+}
+
+body.overview-active .home-button,
+body.overview-active .language-toggle {
+    z-index: 10000;
+}

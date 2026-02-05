@@ -33,6 +33,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../js/game-overview.css">
     <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/chain%20reaction/">
     <meta name="robots" content="index, follow">
@@ -82,6 +83,92 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
+
+    <!-- Game Overview - SEO friendly landing page -->
+    <div id="gameOverview" class="game-overview active">
+        <div class="overview-content">
+            <div class="overview-header">
+                <img src="../icone%20per%20giochi/chainreaction.png" alt="Chain Reaction Game Icon"
+                    class="overview-icon">
+                <h1 id="overviewTitle">Chain Reaction</h1>
+                <p id="overviewCatchphrase" class="overview-catchphrase">Indovina la parola misteriosa con i tuoi
+                    compagni!</p>
+                <div class="overview-players">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <span id="overviewPlayers">3+ giocatori</span>
+                </div>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                    </svg>
+                    <span class="section-label" data-it="Descrizione" data-en="Description">Descrizione</span>
+                </h3>
+                <p id="overviewDescription">Chain Reaction è un emozionante gioco di parole dove due suggeritori
+                    forniscono indizi alternati mentre una persona deve indovinare la parola misteriosa. Più parole
+                    indovini nel tempo limite, più punti guadagni!</p>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg>
+                    <span class="section-label" data-it="Come Giocare" data-en="How to Play">Come Giocare</span>
+                </h3>
+                <ol id="overviewInstructions">
+                    <li data-it="Due suggeritori vedono la parola sullo schermo"
+                        data-en="Two clue givers see the word on the screen">Due suggeritori vedono la parola sullo
+                        schermo</li>
+                    <li data-it="A turno, danno UN SOLO indizio ciascuno"
+                        data-en="Taking turns, they give ONE hint each">A turno, danno UN SOLO indizio ciascuno</li>
+                    <li data-it="Il terzo giocatore (o squadra) deve indovinare"
+                        data-en="The third player (or team) must guess">Il terzo giocatore (o squadra) deve indovinare
+                    </li>
+                    <li data-it="Se indovini, premi = e si passa alla parola successiva"
+                        data-en="If you guess, press = and move to the next word">Se indovini, premi = e si passa alla
+                        parola successiva</li>
+                    <li data-it="Hai 3 pass e 60 secondi di tempo!" data-en="You have 3 passes and 60 seconds!">Hai 3
+                        pass e 60 secondi di tempo!</li>
+                </ol>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <span class="section-label" data-it="Caratteristiche" data-en="Features">Caratteristiche</span>
+                </h3>
+                <ul id="overviewFeatures">
+                    <li data-it="Timer di 60 secondi per turno" data-en="60-second timer per turn">Timer di 60 secondi
+                        per turno</li>
+                    <li data-it="Sistema di pass limitati" data-en="Limited pass system">Sistema di pass limitati</li>
+                    <li data-it="Centinaia di parole diverse" data-en="Hundreds of different words">Centinaia di parole
+                        diverse</li>
+                    <li data-it="Gioco di squadra coinvolgente" data-en="Engaging team game">Gioco di squadra
+                        coinvolgente</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overview-footer">
+            <button class="overview-btn-back" onclick="window.location.href='../'">
+                <span data-it="Indietro" data-en="Back">Indietro</span>
+            </button>
+            <button class="overview-btn-play" onclick="startGame()">
+                <span data-it="Gioca" data-en="Play">Gioca</span>
+            </button>
+        </div>
+    </div>
 
     <div id="app">
         <!-- Start Screen -->
@@ -194,6 +281,7 @@
     <script src="../lang.js"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="../js/game-overview.js"></script>
 </body>
 
 </html>

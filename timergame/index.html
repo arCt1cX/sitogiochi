@@ -33,6 +33,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../js/game-overview.css">
     <script src="../js/tournament-button.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/timergame/">
@@ -98,6 +99,92 @@
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
             id="homeText">Home</span></button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <!-- Game Overview - SEO friendly landing page -->
+    <div id="gameOverview" class="game-overview active">
+        <div class="overview-content">
+            <div class="overview-header">
+                <img src="../icone%20per%20giochi/timergame.png" alt="Wordrace Game Icon" class="overview-icon">
+                <h1 id="overviewTitle">Wordrace</h1>
+                <p id="overviewCatchphrase" class="overview-catchphrase">Sfida di parole a tempo contro i tuoi amici!
+                </p>
+                <div class="overview-players">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <span id="overviewPlayers">2-4 giocatori</span>
+                </div>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                    </svg>
+                    <span class="section-label" data-it="Descrizione" data-en="Description">Descrizione</span>
+                </h3>
+                <p id="overviewDescription">Wordrace è una sfida verbale a tempo per 2-4 giocatori. Viene mostrata una
+                    categoria e ogni giocatore ha il suo timer. Passa la "bomba" all'avversario dicendo una parola
+                    valida. Chi finisce il tempo perde!</p>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg>
+                    <span class="section-label" data-it="Come Giocare" data-en="How to Play">Come Giocare</span>
+                </h3>
+                <ol id="overviewInstructions">
+                    <li data-it="Scegli il numero di giocatori e la modalità"
+                        data-en="Choose the number of players and mode">Scegli il numero di giocatori e la modalità</li>
+                    <li data-it="Il giocatore attivo dice una parola della categoria"
+                        data-en="The active player says a word from the category">Il giocatore attivo dice una parola
+                        della categoria</li>
+                    <li data-it="Premi il pulsante per passare il turno all'avversario"
+                        data-en="Press the button to pass the turn to the opponent">Premi il pulsante per passare il
+                        turno all'avversario</li>
+                    <li data-it="Il tempo scorre solo per il giocatore attivo"
+                        data-en="Time only runs for the active player">Il tempo scorre solo per il giocatore attivo</li>
+                    <li data-it="L'ultimo giocatore con tempo rimanente vince!"
+                        data-en="The last player with remaining time wins!">L'ultimo giocatore con tempo rimanente
+                        vince!</li>
+                </ol>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <span class="section-label" data-it="Caratteristiche" data-en="Features">Caratteristiche</span>
+                </h3>
+                <ul id="overviewFeatures">
+                    <li data-it="Modalità con categorie o solo timer" data-en="Mode with categories or timer only">
+                        Modalità con categorie o solo timer</li>
+                    <li data-it="Supporto per 2, 3 o 4 giocatori" data-en="Support for 2, 3 or 4 players">Supporto per
+                        2, 3 o 4 giocatori</li>
+                    <li data-it="Tempo iniziale personalizzabile" data-en="Customizable initial time">Tempo iniziale
+                        personalizzabile</li>
+                    <li data-it="Sfida avvincente e veloce" data-en="Exciting and fast-paced challenge">Sfida avvincente
+                        e veloce</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overview-footer">
+            <button class="overview-btn-back" onclick="window.location.href='../'">
+                <span data-it="Indietro" data-en="Back">Indietro</span>
+            </button>
+            <button class="overview-btn-play" onclick="startGame()">
+                <span data-it="Gioca" data-en="Play">Gioca</span>
+            </button>
+        </div>
+    </div>
 
     <div class="container">
         <!-- Setup Screen -->
@@ -338,6 +425,7 @@
     <script src="../lang.js"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="../js/game-overview.js"></script>
 </body>
 
 </html>

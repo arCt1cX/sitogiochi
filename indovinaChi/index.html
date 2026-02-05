@@ -32,6 +32,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../js/game-overview.css">
     <script src="../js/tournament-button.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/indovinaChi/">
@@ -99,6 +100,95 @@
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
             id="homeText">Home</span></button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <!-- Game Overview - SEO friendly landing page -->
+    <div id="gameOverview" class="game-overview active">
+        <div class="overview-content">
+            <div class="overview-header">
+                <img src="../icone%20per%20giochi/indovinachi.png" alt="Indovina Chi Game Icon" class="overview-icon">
+                <h1 id="overviewTitle">Indovina Chi</h1>
+                <p id="overviewCatchphrase" class="overview-catchphrase">Fai domande per indovinare la parola segreta!
+                </p>
+                <div class="overview-players">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <span id="overviewPlayers">2-12 giocatori</span>
+                </div>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                    </svg>
+                    <span class="section-label" data-it="Descrizione" data-en="Description">Descrizione</span>
+                </h3>
+                <p id="overviewDescription">Indovina Chi è un gioco di parole e domande. Un giocatore deve indovinare
+                    una parola facendo domande semplici con risposta Sì/No agli altri giocatori. Scegli tra categorie
+                    predefinite, casuali o fai scrivere parole personalizzate!</p>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg>
+                    <span class="section-label" data-it="Come Giocare" data-en="How to Play">Come Giocare</span>
+                </h3>
+                <ol id="overviewInstructions">
+                    <li data-it="Scegli una delle tre modalità: Categorie Scelte, Casuali o Personalizzate"
+                        data-en="Choose one of three modes: Chosen Categories, Random, or Custom">Scegli una delle tre
+                        modalità: Categorie Scelte, Casuali o Personalizzate</li>
+                    <li data-it="Un giocatore vede la parola (tutti gli altri la vedono sul telefono che gira)"
+                        data-en="A player sees the word (everyone else sees it on the rotating phone)">Un giocatore vede
+                        la parola (tutti gli altri la vedono sul telefono che gira)</li>
+                    <li data-it="Il giocatore che deve indovinare fa domande con risposta Sì/No"
+                        data-en="The guessing player asks Yes/No questions">Il giocatore che deve indovinare fa domande
+                        con risposta Sì/No</li>
+                    <li data-it="Conta le domande fatte: meno ne fai, migliore sei!"
+                        data-en="Count the questions asked: fewer is better!">Conta le domande fatte: meno ne fai,
+                        migliore sei!</li>
+                    <li data-it="Quando indovini, tocca 'Ho Indovinato!' e passa al giocatore successivo"
+                        data-en="When you guess, tap 'I Guessed!' and move to the next player">Quando indovini, tocca
+                        "Ho Indovinato!" e passa al giocatore successivo</li>
+                </ol>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <span class="section-label" data-it="Caratteristiche" data-en="Features">Caratteristiche</span>
+                </h3>
+                <ul id="overviewFeatures">
+                    <li data-it="Tre modalità di gioco diverse" data-en="Three different game modes">Tre modalità di
+                        gioco diverse</li>
+                    <li data-it="Centinaia di parole in diverse categorie"
+                        data-en="Hundreds of words in different categories">Centinaia di parole in diverse categorie
+                    </li>
+                    <li data-it="Contatore domande integrato" data-en="Built-in question counter">Contatore domande
+                        integrato</li>
+                    <li data-it="Possibilità di cambiare parola" data-en="Ability to change word">Possibilità di
+                        cambiare parola</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overview-footer">
+            <button class="overview-btn-back" onclick="window.location.href='../'">
+                <span data-it="Indietro" data-en="Back">Indietro</span>
+            </button>
+            <button class="overview-btn-play" onclick="startGame()">
+                <span data-it="Gioca" data-en="Play">Gioca</span>
+            </button>
+        </div>
+    </div>
 
     <div class="container">
         <div id="game-title">
@@ -224,6 +314,7 @@
     <script src="../lang.js"></script>
     <script src="translations.js"></script>
     <script src="scripts.js"></script>
+    <script src="../js/game-overview.js"></script>
 </body>
 
 </html>

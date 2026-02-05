@@ -26,13 +26,17 @@
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/quizzy/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/quizzy/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../js/game-overview.css">
     <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/quizzy/">
     <meta name="robots" content="index, follow">
@@ -69,11 +73,98 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
             id="homeText">Home</span></button>
+
+    <!-- Game Overview - SEO friendly landing page -->
+    <div id="gameOverview" class="game-overview active">
+        <div class="overview-content">
+            <div class="overview-header">
+                <img src="../icone%20per%20giochi/quizzy.png" alt="Quizzy Game Icon" class="overview-icon">
+                <h1 id="overviewTitle">Quizzy</h1>
+                <p id="overviewCatchphrase" class="overview-catchphrase">Il quiz game definitivo per sfidare i tuoi
+                    amici!</p>
+                <div class="overview-players">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                    <span id="overviewPlayers">2-8 giocatori</span>
+                </div>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                    </svg>
+                    <span class="section-label" data-it="Descrizione" data-en="Description">Descrizione</span>
+                </h3>
+                <p id="overviewDescription">Quizzy è un gioco a quiz per più giocatori dove dovrai scegliere categorie e
+                    livelli di difficoltà per rispondere alle domande. Più alta è la difficoltà, più punti guadagni! Il
+                    primo a raggiungere 25 punti vince!</p>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                    </svg>
+                    <span class="section-label" data-it="Come Giocare" data-en="How to Play">Come Giocare</span>
+                </h3>
+                <ol id="overviewInstructions">
+                    <li data-it="Scegli il numero di giocatori e i loro nomi"
+                        data-en="Choose the number of players and their names">Scegli il numero di giocatori e i loro
+                        nomi</li>
+                    <li data-it="Ogni giocatore seleziona le sue categorie preferite"
+                        data-en="Each player selects their favorite categories">Ogni giocatore seleziona le sue
+                        categorie preferite</li>
+                    <li data-it="A turno, scegli difficoltà e categoria"
+                        data-en="Take turns choosing difficulty and category">A turno, scegli difficoltà e categoria
+                    </li>
+                    <li data-it="Rispondi alla domanda entro il tempo limite"
+                        data-en="Answer the question within the time limit">Rispondi alla domanda entro il tempo limite
+                    </li>
+                    <li data-it="Il primo a raggiungere 25 punti vince!" data-en="The first to reach 25 points wins!">Il
+                        primo a raggiungere 25 punti vince!</li>
+                </ol>
+            </div>
+
+            <div class="overview-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <span class="section-label" data-it="Caratteristiche" data-en="Features">Caratteristiche</span>
+                </h3>
+                <ul id="overviewFeatures">
+                    <li data-it="Decine di categorie diverse" data-en="Dozens of different categories">Decine di
+                        categorie diverse</li>
+                    <li data-it="5 livelli di difficoltà" data-en="5 difficulty levels">5 livelli di difficoltà</li>
+                    <li data-it="Modalità AI per domande generate automaticamente"
+                        data-en="AI mode for auto-generated questions">Modalità AI per domande generate automaticamente
+                    </li>
+                    <li data-it="Sistema di punteggio dinamico" data-en="Dynamic scoring system">Sistema di punteggio
+                        dinamico</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overview-footer">
+            <button class="overview-btn-back" onclick="window.location.href='../'">
+                <span data-it="Indietro" data-en="Back">Indietro</span>
+            </button>
+            <button class="overview-btn-play" onclick="startGame()">
+                <span data-it="Gioca" data-en="Play">Gioca</span>
+            </button>
+        </div>
+    </div>
 
     <div id="app" class="app-container">
         <!-- Welcome Screen -->
@@ -94,10 +185,10 @@
         </div>
 
         <!-- Setup Screen -->
-    <div id="setup-screen" class="screen active">
+        <div id="setup-screen" class="screen active">
             <div class="screen-content">
-        <h1 id="quizzy-title" class="game-title setup-game-title">Quizzy</h1>
-        <h2 id="setup-title" class="section-title">Impostazioni del Gioco</h2>
+                <h1 id="quizzy-title" class="game-title setup-game-title">Quizzy</h1>
+                <h2 id="setup-title" class="section-title">Impostazioni del Gioco</h2>
 
                 <div class="form-group">
                     <label for="player-count" id="player-count-label">Numero di Giocatori:</label>
@@ -303,6 +394,7 @@
     <!-- Game logic -->
     <script src="scripts.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../js/game-overview.js"></script>
 </body>
 
 </html>
