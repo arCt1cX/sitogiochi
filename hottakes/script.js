@@ -33,17 +33,29 @@ const nextRoundBtn = document.getElementById('next-round');
 
 const rerollCategoryBtn = document.getElementById('reroll-category');
 
+// Helper to get current language
+function getUserLanguage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    if (langParam) return langParam;
+    return localStorage.getItem('lang') || 'it';
+}
+
 // Load Categories
 async function loadCategories() {
     try {
-        const response = await fetch('categories.txt');
+        const lang = getUserLanguage();
+        const filename = lang === 'en' ? 'categories_en.txt' : 'categories.txt';
+
+        console.log(`Loading categories from ${filename}...`);
+        const response = await fetch(filename);
         const text = await response.text();
         gameState.categories = text.split('\n').filter(line => line.trim() !== '');
         gameState.availableCategories = [...gameState.categories]; // Initialize available pool
         console.log(`Loaded ${gameState.categories.length} categories.`);
     } catch (error) {
         console.error('Error loading categories:', error);
-        gameState.categories = ['Videogiochi', 'Cibo', 'Film', 'Musica', 'Viaggi']; // Fallback
+        gameState.categories = ['Videogames', 'Food', 'Movies', 'Music', 'Travel']; // Fallback
     }
 }
 
@@ -52,13 +64,20 @@ function generatePlayerInputs() {
     const count = parseInt(playerCountSelect.value);
     playerNamesContainer.innerHTML = '';
 
+    // Refresh UI language to ensure headers are correct before adding inputs
+    // But we need to know the translations... they are in translations.js
+    const lang = getUserLanguage();
+    // Fallback if translation script hasn't run yet or isn't available
+    const playerLabel = (gameTranslations && gameTranslations[lang]) ? gameTranslations[lang].players.slice(0, -1) : 'Giocatore';
+    const playerPlaceholder = (gameTranslations && gameTranslations[lang]) ? gameTranslations[lang].playerPlaceholder : 'Nome giocatore';
+
     for (let i = 1; i <= count; i++) {
         const div = document.createElement('div');
         div.className = 'player-input';
         div.innerHTML = `
             <div class="form-group">
-                <label for="player-${i}">Giocatore ${i}:</label>
-                <input type="text" id="player-${i}" placeholder="Nome giocatore ${i}" maxlength="15">
+                <label for="player-${i}">${playerLabel} ${i}:</label>
+                <input type="text" id="player-${i}" placeholder="${playerPlaceholder} ${i}" maxlength="15">
             </div>
         `;
         playerNamesContainer.appendChild(div);
@@ -71,9 +90,13 @@ function startGame() {
     const count = parseInt(playerCountSelect.value);
     gameState.players = [];
 
+    // Get translations for default name
+    const lang = getUserLanguage();
+    const playerLabel = (gameTranslations && gameTranslations[lang]) ? gameTranslations[lang].players.slice(0, -1) : 'Giocatore';
+
     for (let i = 1; i <= count; i++) {
         const input = document.getElementById(`player-${i}`);
-        const name = input.value.trim() || `Giocatore ${i}`;
+        const name = input.value.trim() || `${playerLabel} ${i}`;
         gameState.players.push(name);
     }
 
@@ -137,6 +160,17 @@ function showPlayerInputScreen() {
     // Reset input area
     inputArea.style.display = 'none';
     revealInputBtn.style.display = 'block';
+
+    // Use translations for button if available
+    if (typeof updateUILanguage === 'function') {
+        // This ensures dynamic elements get translated
+        // But specifically for this button, let's reset its text
+        const lang = getUserLanguage();
+        if (gameTranslations && gameTranslations[lang]) {
+            revealInputBtn.textContent = gameTranslations[lang].ready;
+        }
+    }
+
     hotTakeInput.value = '';
 
     // Show/Hide reroll button: only show for first player
@@ -158,7 +192,9 @@ function revealInputArea() {
 function submitHotTake() {
     const take = hotTakeInput.value.trim();
     if (!take) {
-        alert('Scrivi qualcosa!');
+        const lang = getUserLanguage();
+        const alertMsg = (gameTranslations && gameTranslations[lang]) ? gameTranslations[lang].alertEmpty : 'Scrivi qualcosa!';
+        alert(alertMsg);
         return;
     }
 
@@ -209,8 +245,14 @@ function showScreen(screenId) {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Apply translations properly
+    if (typeof updateUILanguage === 'function') {
+        updateUILanguage();
+    }
+
     loadCategories();
-    generatePlayerInputs();
+    // Wait for translations to be applied before generating inputs
+    setTimeout(generatePlayerInputs, 100);
 
     playerCountSelect.addEventListener('change', generatePlayerInputs);
     startGameBtn.addEventListener('click', startGame);
@@ -227,3 +269,5 @@ document.addEventListener('DOMContentLoaded', () => {
         // For now, just playing normally is fine
     }
 });
+
+

@@ -1546,8 +1546,64 @@ document.addEventListener('DOMContentLoaded', function () {
             // Standard logic
             const question = getRandomQuestion();
             if (!question) {
-                alert('Error: No questions available for this category and difficulty.');
-                return;
+                console.warn(`No questions for ${gameState.currentCategory} - ${gameState.currentDifficulty}. Trying fallback...`);
+
+                // Fallback 1: Try other difficulties for this category
+                let foundFallback = false;
+                if (gameState.questions[gameState.currentCategory]) {
+                    const diffs = Object.keys(gameState.questions[gameState.currentCategory]);
+                    for (const diff of diffs) {
+                        if (diff !== gameState.currentDifficulty) {
+                            gameState.currentDifficulty = diff;
+                            const fallbackQuestion = getRandomQuestion();
+                            if (fallbackQuestion) {
+                                gameState.currentQuestion = fallbackQuestion;
+                                foundFallback = true;
+                                console.log(`Fallback successful: Switched to difficulty ${diff}`);
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (!foundFallback) {
+                    // Fallback 2: Try any other category
+                    const cats = Object.keys(gameState.questions);
+                    for (const cat of cats) {
+                        if (cat !== gameState.currentCategory && gameState.questions[cat]) {
+                            const diffs = Object.keys(gameState.questions[cat]);
+                            for (const diff of diffs) {
+                                gameState.currentCategory = cat;
+                                gameState.currentDifficulty = diff;
+                                const fallbackQuestion = getRandomQuestion();
+                                if (fallbackQuestion) {
+                                    gameState.currentQuestion = fallbackQuestion;
+                                    foundFallback = true;
+                                    console.log(`Fallback successful: Switched to category ${cat}, difficulty ${diff}`);
+                                    break;
+                                }
+                            }
+                        }
+                        if (foundFallback) break;
+                    }
+                }
+
+                if (!foundFallback) {
+                    console.error("Critical: No questions available in the entire game.");
+                    alert(getGameTranslation('noQuestionsAvailable') || "Non ci sono più domande disponibili! Il gioco terminerà.");
+                    showGameOver(findLeadingPlayer());
+                    return;
+                }
+
+                // If we found a fallback, proceed to display it
+            }
+
+            // Ensure we have a question before displaying
+            if (gameState.currentQuestion) {
+                displayQuestion(gameState.currentQuestion);
+            } else {
+                // Should be unreachable if logic above works, but safety net
+                forceNextTurn();
             }
 
             gameState.currentQuestion = question;

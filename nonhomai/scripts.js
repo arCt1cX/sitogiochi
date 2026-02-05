@@ -27,17 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
         applyGameTranslations();
     }
 
-    // Load questions from file
+    // Load questions from file based on language
     async function loadQuestions() {
         try {
-            const response = await fetch('domande.txt');
+            const lang = typeof getUserLanguage === 'function' ? getUserLanguage() : 'it';
+            const questionFile = lang === 'en' ? 'questions.txt' : 'domande.txt';
+            const response = await fetch(questionFile);
             const text = await response.text();
             // Split by new line and filter empty lines
             gameState.questions = text.split('\n').filter(line => line.trim().length > 0);
-            console.log(`Loaded ${gameState.questions.length} questions`);
+            console.log(`Loaded ${gameState.questions.length} questions from ${questionFile}`);
         } catch (error) {
             console.error('Error loading questions:', error);
-            alert('Errore nel caricamento delle domande. Ricarica la pagina.');
+            const lang = typeof getUserLanguage === 'function' ? getUserLanguage() : 'it';
+            const errorMsg = lang === 'en'
+                ? 'Error loading questions. Please reload the page.'
+                : 'Errore nel caricamento delle domande. Ricarica la pagina.';
+            alert(errorMsg);
         }
     }
 

@@ -1,0 +1,1484 @@
+{
+    "Economics": {
+        "bambino": [
+            {
+                "question": "What do you receive in exchange for work?",
+                "answers": [
+                    "Money",
+                    "Holidays",
+                    "Toys",
+                    "Houses"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the name of the place where money is kept safe?",
+                "answers": [
+                    "School",
+                    "Hospital",
+                    "Bank",
+                    "Gym"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is used to buy something?",
+                "answers": [
+                    "Time",
+                    "Friendship",
+                    "Money",
+                    "Justice"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the money set aside for the future called?",
+                "answers": [
+                    "Debt",
+                    "Savings",
+                    "Expense",
+                    "Credit"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does it mean to 'spend' money?",
+                "answers": [
+                    "Keep it",
+                    "Give it away in exchange for something",
+                    "Lose it",
+                    "Hide it"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the opposite of 'spending'?",
+                "answers": [
+                    "Saving",
+                    "Buying",
+                    "Selling",
+                    "Lending"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who sells items or services in exchange for money?",
+                "answers": [
+                    "Customer",
+                    "Seller",
+                    "Student",
+                    "Pilot"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a 'salary'?",
+                "answers": [
+                    "A prize",
+                    "Payment for work",
+                    "A gift",
+                    "A fine"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the money that a person must pay back called?",
+                "answers": [
+                    "Savings",
+                    "Credit",
+                    "Debt",
+                    "Discount"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is it called when you put money in a piggy bank?",
+                "answers": [
+                    "Investing",
+                    "Saving",
+                    "Spending",
+                    "Buying"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If you buy a snack for 1 euro and have 5 euros, how many euros are left?",
+                "answers": [
+                    "4",
+                    "3",
+                    "2",
+                    "1"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "If you sell something, what do you receive?",
+                "answers": [
+                    "A gift",
+                    "Money",
+                    "A debt",
+                    "A ticket"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What happens if you spend more money than you have?",
+                "answers": [
+                    "You get a prize",
+                    "You go into debt",
+                    "You earn money",
+                    "You save more"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a shop?",
+                "answers": [
+                    "A place to play",
+                    "A place where things are sold",
+                    "A museum",
+                    "A school"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the currency in Italy?",
+                "answers": [
+                    "Dollar",
+                    "Euro",
+                    "Yen",
+                    "Pound"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does 'buying in installments' mean?",
+                "answers": [
+                    "Paying everything at once",
+                    "Paying in multiple moments",
+                    "Receiving money",
+                    "Lending money"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who produces coins and banknotes?",
+                "answers": [
+                    "The bank",
+                    "The school",
+                    "The police",
+                    "The market"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a 'discount'?",
+                "answers": [
+                    "A price increase",
+                    "A double payment",
+                    "A decrease in price",
+                    "A gift"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "If you save today, what can you do tomorrow?",
+                "answers": [
+                    "Spend more",
+                    "Work more",
+                    "Buy less",
+                    "Lose money"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a person who buys something called?",
+                "answers": [
+                    "Seller",
+                    "Customer",
+                    "Banker",
+                    "Worker"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If you want to buy something very expensive, what should you do first?",
+                "answers": [
+                    "Save",
+                    "Ask for a loan",
+                    "Spend everything immediately",
+                    "Forget it"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "If you find a job, every month you receive...",
+                "answers": [
+                    "A fine",
+                    "A gift",
+                    "A salary",
+                    "An expense"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What do people do in a bank?",
+                "answers": [
+                    "Play soccer",
+                    "Save and take out loans",
+                    "Sell ice cream",
+                    "Study math"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When you buy something online, you use...",
+                "answers": [
+                    "A phone without connection",
+                    "Internet",
+                    "A blackboard",
+                    "A TV"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a 'bank account'?",
+                "answers": [
+                    "A movie ticket",
+                    "A place to keep money",
+                    "A phone number",
+                    "A shopping list"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If you have little money, what should you do?",
+                "answers": [
+                    "Spend everything",
+                    "Buy only what is necessary",
+                    "Throw a party",
+                    "Buy a car"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a person who lends money to others called?",
+                "answers": [
+                    "Seller",
+                    "Debtor",
+                    "Creditor",
+                    "Teacher"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a budget?",
+                "answers": [
+                    "A party",
+                    "A plan on how to spend money",
+                    "A bank",
+                    "A loan"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If a store has a 50% discount, the price will be...",
+                "answers": [
+                    "Double",
+                    "Half",
+                    "Equal",
+                    "Higher"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If you buy more things together you save because there is a...",
+                "answers": [
+                    "Promotion",
+                    "Extra expense",
+                    "Markup",
+                    "Tax"
+                ],
+                "correctIndex": 0
+            }
+        ],
+        "facile": [
+            {
+                "question": "What is the market?",
+                "answers": [
+                    "A place where goods are sold and bought",
+                    "A bank",
+                    "A post office",
+                    "A school"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What do you pay to the State for public services?",
+                "answers": [
+                    "Taxes",
+                    "Salary",
+                    "Discounts",
+                    "Debts"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the price of an object represent?",
+                "answers": [
+                    "Its weight",
+                    "Its value in money",
+                    "Its color",
+                    "Its use"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What do businesses do?",
+                "answers": [
+                    "Offer goods and services",
+                    "Save money",
+                    "Create laws",
+                    "Build roads"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who are the consumers?",
+                "answers": [
+                    "Those who buy goods and services",
+                    "Those who sell houses",
+                    "Those who make laws",
+                    "Those who create coins"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is electronic money?",
+                "answers": [
+                    "Iron coins",
+                    "Money used online or with cards",
+                    "Money in banknotes",
+                    "Plastic tokens"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What happens if demand for a product increases?",
+                "answers": [
+                    "The price may increase",
+                    "The price always decreases",
+                    "The product disappears",
+                    "No change"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a primary need?",
+                "answers": [
+                    "A superfluous need",
+                    "A necessary need, like eating",
+                    "A game",
+                    "A luxury"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What type of good is drinking water?",
+                "answers": [
+                    "Luxury good",
+                    "Primary good",
+                    "Useless good",
+                    "Rare good"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When a State exports goods, what does it do?",
+                "answers": [
+                    "Buys goods",
+                    "Sells goods to other countries",
+                    "Builds hospitals",
+                    "Saves money"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is inflation?",
+                "answers": [
+                    "A decrease in prices",
+                    "A general increase in prices",
+                    "A tax",
+                    "A failure"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a tax?",
+                "answers": [
+                    "A type of saving",
+                    "A sum paid to the State",
+                    "A win",
+                    "A prize"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these is a good?",
+                "answers": [
+                    "A lesson",
+                    "A consultation",
+                    "A bicycle",
+                    "An advice"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these is a service?",
+                "answers": [
+                    "A sandwich",
+                    "A medical visit",
+                    "A t-shirt",
+                    "A computer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a person who creates a business called?",
+                "answers": [
+                    "Customer",
+                    "Entrepreneur",
+                    "Saver",
+                    "Buyer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who sets the price of a product in the free market?",
+                "answers": [
+                    "The government",
+                    "Supply and demand",
+                    "Judges",
+                    "Professors"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When a bank lends money, what is the cost of the loan called?",
+                "answers": [
+                    "Discount",
+                    "Interest",
+                    "Expense",
+                    "Credit"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does 'credit' mean?",
+                "answers": [
+                    "A gift",
+                    "The ability to have money to pay back later",
+                    "A debt never paid",
+                    "A salary increase"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the total value of goods and services produced in a country in a year called?",
+                "answers": [
+                    "GDP",
+                    "VAT",
+                    "IMU",
+                    "TASI"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does 'working for yourself' mean?",
+                "answers": [
+                    "Working for a company",
+                    "Working as a civil servant",
+                    "Having a personal business",
+                    "Volunteering"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the virtual place where one buys and sells online called?",
+                "answers": [
+                    "Bank",
+                    "E-commerce",
+                    "Library",
+                    "Supermarket"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the minimum wage?",
+                "answers": [
+                    "The maximum possible earning",
+                    "The lowest pay one can legally receive",
+                    "A special bonus",
+                    "A prize"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When a person cannot find a job, they are said to be...",
+                "answers": [
+                    "Indebted",
+                    "Retired",
+                    "Unemployed",
+                    "On vacation"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who helps people find jobs?",
+                "answers": [
+                    "Employment agencies",
+                    "Travel agencies",
+                    "Banks",
+                    "Supermarkets"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "When two companies join together, it is called...",
+                "answers": [
+                    "Competition",
+                    "Merger",
+                    "Export",
+                    "Bankruptcy"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the gain obtained from a sale called?",
+                "answers": [
+                    "Cost",
+                    "Loss",
+                    "Profit",
+                    "Expense"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a main function of a country's central bank?",
+                "answers": [
+                    "Producing cars",
+                    "Printing money",
+                    "Building houses",
+                    "Selling supermarkets"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a fixed expense?",
+                "answers": [
+                    "An expense that changes every month",
+                    "An expense equal every month, like rent",
+                    "A rare expense",
+                    "An expense for travel"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If you save part of your salary every month, you are creating...",
+                "answers": [
+                    "A debt",
+                    "Capital",
+                    "A loan",
+                    "An expense"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who decides how much VAT is paid on a product?",
+                "answers": [
+                    "The seller",
+                    "The government",
+                    "The customer",
+                    "The bank"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "medio": [
+            {
+                "question": "What is an investment?",
+                "answers": [
+                    "Spending money without expecting anything",
+                    "Putting money into something to gain a profit",
+                    "Lending money to friends",
+                    "Buying useless things"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is demand in economics?",
+                "answers": [
+                    "The number of products available",
+                    "The desire to purchase a product or service",
+                    "The price of a product",
+                    "The amount of money issued by the State"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is supply in economics?",
+                "answers": [
+                    "The quantity of goods and services available",
+                    "The consumer demand",
+                    "A tax increase",
+                    "A bank loan"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the profit made by selling a product at a higher price than costs called?",
+                "answers": [
+                    "Debt",
+                    "Profit",
+                    "Tax",
+                    "Savings"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What influences price increases?",
+                "answers": [
+                    "Scarcity of goods",
+                    "Excess of goods",
+                    "School closures",
+                    "Improved technology"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a stock?",
+                "answers": [
+                    "A state debt",
+                    "A part of ownership of a company",
+                    "A school award",
+                    "A type of tax"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a bond?",
+                "answers": [
+                    "A debt security",
+                    "A foreign currency",
+                    "A check",
+                    "A bank prize"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the interest rate?",
+                "answers": [
+                    "The cost of borrowing or lending money",
+                    "The cost of a product",
+                    "The value of a share",
+                    "The tax for merchants"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does GDP represent?",
+                "answers": [
+                    "Total imports",
+                    "The value of goods and services produced in a country",
+                    "Number of unemployed",
+                    "Average product price"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the general increase in prices over time called?",
+                "answers": [
+                    "Deflation",
+                    "Recession",
+                    "Inflation",
+                    "Real growth"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is deflation?",
+                "answers": [
+                    "Price increase",
+                    "General decrease in prices",
+                    "Tax increase",
+                    "Decrease in production"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When production slows down for a long period, it is called...",
+                "answers": [
+                    "Inflation",
+                    "Growth",
+                    "Recession",
+                    "Expansion"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a market economy?",
+                "answers": [
+                    "Where the State controls everything",
+                    "Where supply and demand determine prices",
+                    "Where prices do not exist",
+                    "Where only gifts are exchanged"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a multinational?",
+                "answers": [
+                    "A neighborhood shop",
+                    "A company operating in many countries",
+                    "A state entity",
+                    "A national bank"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who issues monetary policies in Italy?",
+                "answers": [
+                    "The Government",
+                    "The European Central Bank",
+                    "The European Parliament",
+                    "The Ministry of Economy"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does meant by diversifying an investment?",
+                "answers": [
+                    "Buying only one type of stock",
+                    "Distributing capital across different investments",
+                    "Buying everything in cash",
+                    "Investing only in real estate"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the term 'liquidity' indicate?",
+                "answers": [
+                    "The ability of an asset to be easily sold",
+                    "The tax level",
+                    "The value of shares",
+                    "The price of water"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the purpose of a pension?",
+                "answers": [
+                    "To pay fewer taxes",
+                    "To accumulate money for the future after work",
+                    "To buy goods",
+                    "To have a second job"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is public debt?",
+                "answers": [
+                    "Money the State must pay back",
+                    "Money lent by the State",
+                    "Household savings",
+                    "Personal bank credit"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the set of tools to manage state revenue and expenditure called?",
+                "answers": [
+                    "Monetary policy",
+                    "Fiscal policy",
+                    "Family budget",
+                    "GDP"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does a currency represent?",
+                "answers": [
+                    "A tax",
+                    "An official money of a country",
+                    "A central bank",
+                    "A type of bond"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "If the inflation rate increases very rapidly, it is called...",
+                "answers": [
+                    "Deflation",
+                    "Hyperinflation",
+                    "Unemployment",
+                    "Recession"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a durable good?",
+                "answers": [
+                    "A good that lasts a long time, like a car",
+                    "A good that runs out immediately",
+                    "A service",
+                    "A bank loan"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is international trade?",
+                "answers": [
+                    "The exchange of goods and services between countries",
+                    "Trade between shops in the same city",
+                    "The sale of agricultural products",
+                    "Coin trading"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the term 'startup' indicate?",
+                "answers": [
+                    "A large established company",
+                    "A new innovative business",
+                    "A state organization",
+                    "A pension fund"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the loan to buy a house called?",
+                "answers": [
+                    "Debt",
+                    "Mortgage",
+                    "Consumer credit",
+                    "Bond"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is human capital?",
+                "answers": [
+                    "The economic value of people's skills and knowledge",
+                    "Bank capital",
+                    "Pension funds",
+                    "State gold reserves"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which of the following is an intangible asset?",
+                "answers": [
+                    "A chair",
+                    "A book",
+                    "A patent",
+                    "A car"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who sets interest rates in the Euro area?",
+                "answers": [
+                    "The European Parliament",
+                    "The European Central Bank",
+                    "The European Commission",
+                    "The International Monetary Fund"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "esperto": [
+            {
+                "question": "What is the unemployment rate?",
+                "answers": [
+                    "The number of pensioners",
+                    "The percentage of people looking for work but not finding it",
+                    "The number of university students",
+                    "The inflation rate"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the Consumer Price Index (CPI) measure?",
+                "answers": [
+                    "Amount of money issued",
+                    "Average change in prices of goods and services",
+                    "GDP growth rate",
+                    "Industrial production"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the spread between government bonds indicate?",
+                "answers": [
+                    "The difference in yield between bonds of two countries",
+                    "The value of bank shares",
+                    "The unemployment rate",
+                    "The cost of raw materials"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the main goal of monetary policy?",
+                "answers": [
+                    "Promoting exports",
+                    "Controlling inflation and financial stability",
+                    "Increasing public debt",
+                    "Creating new coins"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When speaking of real GDP, what is meant?",
+                "answers": [
+                    "GDP adjusted for inflation",
+                    "Nominal GDP without changes",
+                    "Agricultural production",
+                    "Value of exports"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the Keynesian multiplier?",
+                "answers": [
+                    "Growth in public spending",
+                    "The amplified effect of a change in spending on GDP",
+                    "A consumption index",
+                    "Income tax"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the main function of the Central Bank?",
+                "answers": [
+                    "Financing individuals",
+                    "Managing monetary policy",
+                    "Setting goods prices",
+                    "Controlling consumption"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What generally happens when the Central Bank lowers interest rates?",
+                "answers": [
+                    "Consumption and investment increase",
+                    "Inflation decreases",
+                    "Currency value increases",
+                    "Public debt decreases"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is foreign debt?",
+                "answers": [
+                    "Debt of a citizen to a bank",
+                    "Debt a country owes to foreign creditors",
+                    "Public administration debt",
+                    "Debt between Italian companies"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does a country's primary balance represent?",
+                "answers": [
+                    "Revenues minus expenses excluding interest expenses",
+                    "Total debt",
+                    "Net exports",
+                    "Value of gold reserves"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a technical recession?",
+                "answers": [
+                    "Two consecutive quarters of economic growth",
+                    "Two consecutive quarters of GDP decrease",
+                    "A banking crisis",
+                    "A drop in agricultural consumption"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the Phillips curve?",
+                "answers": [
+                    "The relationship between inflation rate and unemployment",
+                    "The relationship between exchange rate and exports",
+                    "The trend of oil prices",
+                    "Global demand for goods"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How is quantitative easing defined?",
+                "answers": [
+                    "A tax increase",
+                    "A policy of buying securities to inject liquidity",
+                    "An investment block",
+                    "A wage increase"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "When speaking of deflation, what happens to the economy?",
+                "answers": [
+                    "Prices increase",
+                    "Prices decrease",
+                    "Wages increase",
+                    "Imports grow"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a trade surplus?",
+                "answers": [
+                    "Imports exceed exports",
+                    "Exports exceed imports",
+                    "Tax revenues exceed public spending",
+                    "Unemployment decreases"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the FTSE MIB Index represent?",
+                "answers": [
+                    "Oil price",
+                    "Index of the main Italian listed companies",
+                    "Value of the euro",
+                    "European inflation rate"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is meant by sovereign default?",
+                "answers": [
+                    "Failure of a private bank",
+                    "Inability of a State to pay its debts",
+                    "Currency devaluation",
+                    "Tax reduction"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the real exchange rate?",
+                "answers": [
+                    "Nominal ratio between two currencies",
+                    "Rate adjusted for relative price levels",
+                    "Bond price",
+                    "Difference between supply and demand"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What are a State's foreign exchange reserves?",
+                "answers": [
+                    "Accumulated taxes",
+                    "Amount of foreign currency held",
+                    "Amount of gold sold",
+                    "Industrial goods production"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does debt/GDP measure?",
+                "answers": [
+                    "Public debt relative to the country's production",
+                    "Value of exports",
+                    "Household wealth",
+                    "Bank liquidity"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is stagflation?",
+                "answers": [
+                    "High growth with low inflation",
+                    "Economic recession with high inflation",
+                    "Only inflation",
+                    "Only unemployment"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does an economy of scale indicate?",
+                "answers": [
+                    "Average costs increasing with production",
+                    "Average costs decreasing as production increases",
+                    "Rising inflation",
+                    "Controlled deflation"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is meant by elasticity of demand?",
+                "answers": [
+                    "How much demand changes as price changes",
+                    "Production speed",
+                    "Quantity exported",
+                    "GDP growth"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the balance of payments represent?",
+                "answers": [
+                    "Accounting of a State's inflows and outflows to/from abroad",
+                    "Public companies balance sheet",
+                    "Tax balance of a company",
+                    "Central Bank balance"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is an expansionary fiscal policy?",
+                "answers": [
+                    "Increase in tax burden",
+                    "Increase in public spending and/or tax reduction",
+                    "Reduction of private debt",
+                    "Increase in interest rates"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a tax proportional to income called?",
+                "answers": [
+                    "VAT",
+                    "Progressive tax",
+                    "Flat tax",
+                    "Regressive tax"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What effect does increasing interest rates have on bank loans?",
+                "answers": [
+                    "Makes them more expensive",
+                    "Makes them cheaper",
+                    "Eliminates them",
+                    "Increases them at no cost"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is an inferior good?",
+                "answers": [
+                    "A luxury good",
+                    "A good whose demand drops as income rises",
+                    "An expensive good",
+                    "An exclusive good"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In a fixed exchange rate system, what can a central bank do to defend its currency?",
+                "answers": [
+                    "Buy its own currency using foreign reserves",
+                    "Print more money",
+                    "Increase public wages",
+                    "Sell government bonds abroad"
+                ],
+                "correctIndex": 0
+            }
+        ],
+        "laureato": [
+            {
+                "question": "What does the IS curve describe in an IS-LM model?",
+                "answers": [
+                    "Equilibrium in the goods market",
+                    "Equilibrium in the money market",
+                    "Equilibrium in the labor market",
+                    "State budget"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In the Solow model, what determines the long-run income level?",
+                "answers": [
+                    "Aggregate demand",
+                    "Savings rate and productivity",
+                    "Public debt",
+                    "Private consumption"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the fiscal multiplier represent in economics?",
+                "answers": [
+                    "Change in consumption due to wage change",
+                    "Effect of a change in public spending on GDP",
+                    "Ratio between savings and consumption",
+                    "Inflation response to interest rate change"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the main implication of purchasing power parity theory?",
+                "answers": [
+                    "Interest rates equalize in the long run",
+                    "Prices of identical goods must be equal in different countries (net of exchange rates)",
+                    "Bond values grow constantly",
+                    "Production is determined only by capital"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In the Mundell-Fleming model with fixed exchange rates, which policy is most effective?",
+                "answers": [
+                    "Monetary policy",
+                    "Fiscal policy",
+                    "Trade policy",
+                    "Income policy"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which theory explains investors' preference for liquid assets?",
+                "answers": [
+                    "Portfolio theory",
+                    "Expectations theory",
+                    "Liquidity preference theory",
+                    "Quantity theory of money"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "According to game theory, what is a Nash equilibrium?",
+                "answers": [
+                    "Strategy minimizing loss",
+                    "Situation where no player has incentive to change strategy",
+                    "Group profit maximization",
+                    "Maximum advantage for the first player"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What type of good is associated with the concept of positive externality?",
+                "answers": [
+                    "Tobacco",
+                    "Education",
+                    "Oil",
+                    "Cars"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does Okun's law state?",
+                "answers": [
+                    "Inverse relationship between inflation and growth",
+                    "Unemployment increases when GDP falls",
+                    "Fiscal deficit reduces growth",
+                    "Supply creates its own demand"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In a perfectly equal Lorenz curve, what would the Gini coefficient be?",
+                "answers": [
+                    "1",
+                    "0",
+                    "0.5",
+                    "2"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "According to efficient market theory, which of the following is correct?",
+                "answers": [
+                    "Market movements can be predicted with technical analysis",
+                    "All available information is already reflected in prices",
+                    "Insiders always have competitive advantage",
+                    "Prices are determined by regulators"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a pure public good?",
+                "answers": [
+                    "Good with no production cost",
+                    "Non-excludable and non-rival good",
+                    "Good offered only by private sector",
+                    "Good produced in monopoly"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In the endogenous growth model, what allows perpetual growth?",
+                "answers": [
+                    "Capital accumulation",
+                    "Internal technological innovation",
+                    "Expansion of natural resources",
+                    "Population increase"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is moral hazard in economics?",
+                "answers": [
+                    "Decreased efficiency due to high taxes",
+                    "Risky behavior incentivized by insurance",
+                    "Difficulty measuring GDP",
+                    "Lack of trust in banking system"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the concept of crowding out represent?",
+                "answers": [
+                    "Public spending reduces private investment",
+                    "Debt increase increases employment",
+                    "Central banks lower interest rates",
+                    "Consumers increase savings"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "According to the Heckscher-Ohlin model, what determines trade flows?",
+                "answers": [
+                    "Technology difference",
+                    "Difference in factors of production",
+                    "Inflation rate",
+                    "Domestic demand level"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does a negatively sloped labor supply curve mean?",
+                "answers": [
+                    "Higher wages reduce labor supply",
+                    "Lower wages increase labor supply",
+                    "No labor supply exists at low wages",
+                    "Productivity drops with wage"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is 'too big to fail'?",
+                "answers": [
+                    "Company dominating market",
+                    "Enterprise State cannot let fail without systemic damage",
+                    "Company with bad debts",
+                    "Monopolistic industry"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In AD-AS model, what does a positive supply shock entail?",
+                "answers": [
+                    "Price increase",
+                    "Price decrease and production increase",
+                    "Wage increase",
+                    "Debt increase"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In a liquidity trap context, which policy is least effective?",
+                "answers": [
+                    "Monetary policy",
+                    "Expansionary fiscal policy",
+                    "Public spending reduction",
+                    "Interest rate increase"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Pareto efficiency criterion implies that:",
+                "answers": [
+                    "Tax revenues are maximized",
+                    "No one can improve without worsening someone else",
+                    "Everyone gains equally",
+                    "GDP is at maximum"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "According to exogenous growth theory, which variable is considered exogenous?",
+                "answers": [
+                    "Capital",
+                    "Technology",
+                    "Labor",
+                    "Consumption"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the Laffer curve represent?",
+                "answers": [
+                    "Relationship between tax rate and tax revenue",
+                    "Relationship between consumption and income",
+                    "Relationship between savings and investments",
+                    "Relationship between unemployment and inflation"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In macroeconomics, what is money neutrality in the long run?",
+                "answers": [
+                    "Money affects real GDP",
+                    "Money affects only prices and not real GDP",
+                    "Money has no effect on anything",
+                    "Money generates infinite economic growth"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What represents the output gap?",
+                "answers": [
+                    "Difference between potential GDP and actual GDP",
+                    "Foreign debt",
+                    "Difference between exports and imports",
+                    "Difference between labor demand and supply"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the Pigou effect describe?",
+                "answers": [
+                    "Nominal wage reduction reduces employment",
+                    "Increase in real wealth value stimulates aggregate demand",
+                    "Internal devaluation reduces GDP",
+                    "Progressive taxation improves equity"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What role does the discount rate have in the central banking system?",
+                "answers": [
+                    "Determine long-term loans",
+                    "Determine cost of loans to banks",
+                    "Determine bond value",
+                    "Determine gold price"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "According to Ricardian equivalence principle, what happens with a public deficit increase?",
+                "answers": [
+                    "Consumers increase consumption",
+                    "Consumers increase savings",
+                    "Unemployment rate grows",
+                    "Inflation drops"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the effect of restrictive monetary policy on LM curve?",
+                "answers": [
+                    "Shifts right",
+                    "Shifts left",
+                    "Remains unchanged",
+                    "Becomes flatter"
+                ],
+                "correctIndex": 1
+            }
+        ]
+    }
+}

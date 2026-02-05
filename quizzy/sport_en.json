@@ -1,0 +1,1514 @@
+{
+    "Sport": {
+        "bambino": [
+            {
+                "question": "In which sport is a soccer ball used?",
+                "answers": [
+                    "Tennis",
+                    "Soccer",
+                    "Volleyball",
+                    "Basketball"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many players does a soccer team have on the field?",
+                "answers": [
+                    "11",
+                    "7",
+                    "5",
+                    "9"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which sport is played with a racket and a yellow ball?",
+                "answers": [
+                    "Volleyball",
+                    "Baseball",
+                    "Tennis",
+                    "Basketball"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What sport does a skier practice?",
+                "answers": [
+                    "Skiing",
+                    "Swimming",
+                    "Athletics",
+                    "Skating"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which sport do you score by shooting the ball into the basket?",
+                "answers": [
+                    "Soccer",
+                    "Basketball",
+                    "Water polo",
+                    "Rugby"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the most famous sport in Italy?",
+                "answers": [
+                    "Tennis",
+                    "Basketball",
+                    "Soccer",
+                    "Golf"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which sport is played in a pool with a ball?",
+                "answers": [
+                    "Water polo",
+                    "Diving",
+                    "Swimming",
+                    "Canoeing"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who races in a Formula 1 race?",
+                "answers": [
+                    "Cyclists",
+                    "Athletes",
+                    "Drivers",
+                    "Swimmers"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is used to hit the ball in baseball?",
+                "answers": [
+                    "With the hand",
+                    "With a foot",
+                    "With a bat",
+                    "With a racket"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What color is the jersey of the leader of the Giro d'Italia?",
+                "answers": [
+                    "Red",
+                    "Green",
+                    "Yellow",
+                    "Pink"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is used to swim faster?",
+                "answers": [
+                    "Goggles",
+                    "Feet",
+                    "Hands",
+                    "Fins"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Who has won the most Soccer World Cups?",
+                "answers": [
+                    "Germany",
+                    "Italy",
+                    "Argentina",
+                    "Brazil"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "In which sport do you jump highest using a pole?",
+                "answers": [
+                    "Discus throw",
+                    "Pole vault",
+                    "Sprinting",
+                    "Boxing"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does a boxer do in the ring?",
+                "answers": [
+                    "Plays cards",
+                    "Runs",
+                    "Swims",
+                    "Fights"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which sport is practiced on snow with two skis?",
+                "answers": [
+                    "Snowboarding",
+                    "Hockey",
+                    "Skiing",
+                    "Luge"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who uses a golf club?",
+                "answers": [
+                    "The golfer",
+                    "The soccer player",
+                    "The tennis player",
+                    "The cyclist"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which sport do you do somersaults and jumps?",
+                "answers": [
+                    "Artistic gymnastics",
+                    "Soccer",
+                    "Boules",
+                    "Water polo"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which sport is played with a net in the middle and the ball is hit with hands?",
+                "answers": [
+                    "Soccer",
+                    "Tennis",
+                    "Basketball",
+                    "Volleyball"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Who drives a racing motorcycle?",
+                "answers": [
+                    "Rider",
+                    "Referee",
+                    "Athlete",
+                    "Coach"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which sport do you do a 'dunk'?",
+                "answers": [
+                    "Soccer",
+                    "Basketball",
+                    "Tennis",
+                    "Water polo"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What sport is done with a bicycle?",
+                "answers": [
+                    "Skating",
+                    "Cycling",
+                    "Skiing",
+                    "Rugby"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the soccer field called?",
+                "answers": [
+                    "Pool",
+                    "Tennis court",
+                    "Track",
+                    "Stadium"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Who starts a race?",
+                "answers": [
+                    "The referee",
+                    "The judge",
+                    "The starter",
+                    "The fan"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is used to hit the ball in ping pong?",
+                "answers": [
+                    "Clubs",
+                    "Feet",
+                    "Small rackets",
+                    "Sticks"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the goalkeeper?",
+                "answers": [
+                    "Who runs fastest",
+                    "Who scores goals",
+                    "Who saves shots",
+                    "Who blows the whistle"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many wheels does a bicycle have?",
+                "answers": [
+                    "One",
+                    "Two",
+                    "Three",
+                    "Four"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What do you win at the Olympics?",
+                "answers": [
+                    "A ball",
+                    "A medal",
+                    "A cup",
+                    "A ticket"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the referee do in a game?",
+                "answers": [
+                    "Takes penalties",
+                    "Cheeres",
+                    "Plays",
+                    "Checks the rules"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Where is a tennis match played?",
+                "answers": [
+                    "On a tennis court",
+                    "In a pool",
+                    "On snow",
+                    "In a ring"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which sport are gloves used?",
+                "answers": [
+                    "Soccer",
+                    "Boxing",
+                    "Volleyball",
+                    "Basketball"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which sport is a surfboard used?",
+                "answers": [
+                    "Canoeing",
+                    "Swimming",
+                    "Surfing",
+                    "Fishing"
+                ],
+                "correctIndex": 2
+            }
+        ],
+        "facile": [
+            {
+                "question": "Who is Lionel Messi?",
+                "answers": [
+                    "A tennis player",
+                    "A soccer player",
+                    "A swimmer",
+                    "A driver"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which sport do you run the 100 meters sprint?",
+                "answers": [
+                    "Athletics",
+                    "Soccer",
+                    "Basketball",
+                    "Swimming"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many points is a shot from outside the area worth in basketball?",
+                "answers": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport is Novak Djokovic famous?",
+                "answers": [
+                    "Golf",
+                    "Tennis",
+                    "Boxing",
+                    "Cycling"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the top Italian soccer league called?",
+                "answers": [
+                    "Serie A",
+                    "Champions",
+                    "Premier League",
+                    "Coppa Italia"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which team has the Camp Nou stadium?",
+                "answers": [
+                    "Juventus",
+                    "Inter",
+                    "Barcelona",
+                    "Milan"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What do you win in the Wimbledon tournament?",
+                "answers": [
+                    "A medal",
+                    "A belt",
+                    "A cup",
+                    "A golden racket"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who wears the yellow jersey at the Tour de France?",
+                "answers": [
+                    "The world champion",
+                    "The stage winner",
+                    "The leader in classification",
+                    "The best young rider"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What was the sport practiced by Michael Jordan?",
+                "answers": [
+                    "Soccer",
+                    "Hockey",
+                    "Basketball",
+                    "Tennis"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport is a board used to slide on snow?",
+                "answers": [
+                    "Skiing",
+                    "Skateboarding",
+                    "Snowboarding",
+                    "Skating"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many sets are played in a men's tennis match in Grand Slam tournaments?",
+                "answers": [
+                    "3",
+                    "5",
+                    "2",
+                    "4"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What position does Gianluigi Buffon play?",
+                "answers": [
+                    "Forward",
+                    "Defender",
+                    "Midfielder",
+                    "Goalkeeper"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "How many rings does the Olympic symbol have?",
+                "answers": [
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What sport is practiced with a sabre or foil?",
+                "answers": [
+                    "Fencing",
+                    "Athletics",
+                    "Equestrianism",
+                    "Martial arts"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who won the Soccer World Cup in 2006?",
+                "answers": [
+                    "France",
+                    "Germany",
+                    "Italy",
+                    "Brazil"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport is a bow used?",
+                "answers": [
+                    "Skeet shooting",
+                    "Archery",
+                    "Golf",
+                    "Athletics"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which sport is played on ice with a puck?",
+                "answers": [
+                    "Skating",
+                    "Curling",
+                    "Ice hockey",
+                    "Alpine skiing"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the most Olympic medals in history?",
+                "answers": [
+                    "Usain Bolt",
+                    "Michael Jordan",
+                    "Simone Biles",
+                    "Michael Phelps"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the national sport of Japan?",
+                "answers": [
+                    "Karate",
+                    "Sumo",
+                    "Judo",
+                    "Kendo"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the name of the sport where artistic dives are performed?",
+                "answers": [
+                    "Synchronized swimming",
+                    "Diving",
+                    "Water polo",
+                    "Freediving"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these sports is individual?",
+                "answers": [
+                    "Rugby",
+                    "Volleyball",
+                    "Swimming",
+                    "Baseball"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is Francesco Totti?",
+                "answers": [
+                    "A tennis player",
+                    "A soccer player",
+                    "A cyclist",
+                    "A swimmer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which sport are 'ace' and 'break' made?",
+                "answers": [
+                    "Basketball",
+                    "Tennis",
+                    "Rugby",
+                    "Water polo"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many teams participate in a rugby match?",
+                "answers": [
+                    "2",
+                    "3",
+                    "4",
+                    "6"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where are the 2024 Summer Olympics held?",
+                "answers": [
+                    "Rome",
+                    "Tokyo",
+                    "Paris",
+                    "London"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is Valentino Rossi?",
+                "answers": [
+                    "A soccer player",
+                    "A motorcyclist",
+                    "A tennis player",
+                    "A boxer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does 'offside' mean in soccer?",
+                "answers": [
+                    "When a player leaves the field",
+                    "When a goal is invalid",
+                    "When a player is ahead of the opposing defense at the moment of the pass",
+                    "When a red card is given"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the most famous cycling race in Italy called?",
+                "answers": [
+                    "Giro d'Italia",
+                    "Tour de France",
+                    "Milan-San Remo",
+                    "Paris-Roubaix"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many points is a try worth in rugby?",
+                "answers": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What sport is baseball?",
+                "answers": [
+                    "A board game",
+                    "A team sport with ball and bat",
+                    "A water game",
+                    "A combat sport"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "medio": [
+            {
+                "question": "In which year did Italy win its first Soccer World Cup?",
+                "answers": [
+                    "1930",
+                    "1934",
+                    "1954",
+                    "1962"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many times did Roger Federer win Wimbledon?",
+                "answers": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the maximum number of sets in a men's Grand Slam tennis match?",
+                "answers": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which nation hosted the 2008 Olympics?",
+                "answers": [
+                    "Greece",
+                    "Australia",
+                    "China",
+                    "England"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport did Serena Williams become famous?",
+                "answers": [
+                    "Golf",
+                    "Tennis",
+                    "Athletics",
+                    "Basketball"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many people are there in a volleyball team on the court?",
+                "answers": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who won the Ballon d'Or in 2021?",
+                "answers": [
+                    "Messi",
+                    "Lewandowski",
+                    "Benzema",
+                    "Mbappé"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the world record in the men's 100 meters?",
+                "answers": [
+                    "9.58",
+                    "9.62",
+                    "9.68",
+                    "9.72"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the New Zealand rugby national team called?",
+                "answers": [
+                    "Wallabies",
+                    "All Blacks",
+                    "Springboks",
+                    "Dragons"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which team has won the most Champions Leagues?",
+                "answers": [
+                    "Milan",
+                    "Liverpool",
+                    "Real Madrid",
+                    "Bayern Munich"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What do the 5 Olympic rings represent?",
+                "answers": [
+                    "The continents",
+                    "The editions",
+                    "Sporting values",
+                    "The founding countries"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who won the Formula 1 World Championship in 2021?",
+                "answers": [
+                    "Lewis Hamilton",
+                    "Sebastian Vettel",
+                    "Max Verstappen",
+                    "Charles Leclerc"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many matchdays are there in Serie A?",
+                "answers": [
+                    "34",
+                    "36",
+                    "38",
+                    "40"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport is the 24 Hours of Le Mans held?",
+                "answers": [
+                    "MotoGP",
+                    "Formula 1",
+                    "Automobile endurance",
+                    "Cycling"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many gold medals did Usain Bolt win at the Olympics?",
+                "answers": [
+                    "6",
+                    "8",
+                    "9",
+                    "7"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which sport has a position called 'libero'?",
+                "answers": [
+                    "Volleyball",
+                    "Soccer",
+                    "Basketball",
+                    "Rugby"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which city is the Maracanã located?",
+                "answers": [
+                    "Buenos Aires",
+                    "São Paulo",
+                    "Rio de Janeiro",
+                    "Brasilia"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the most Olympic medals among women?",
+                "answers": [
+                    "Katie Ledecky",
+                    "Larisa Latynina",
+                    "Simone Biles",
+                    "Allyson Felix"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the distance of a marathon?",
+                "answers": [
+                    "40 km",
+                    "41.5 km",
+                    "42.195 km",
+                    "43 km"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which national team has the most European titles in basketball?",
+                "answers": [
+                    "France",
+                    "Spain",
+                    "Italy",
+                    "Greece"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these sports features the 'golden set'?",
+                "answers": [
+                    "Volleyball",
+                    "Tennis",
+                    "Badminton",
+                    "Ping pong"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who is the only soccer player to have won 3 (actually Pelé won 3) World Cups?",
+                "answers": [
+                    "Pelé",
+                    "Maradona",
+                    "Zidane",
+                    "Cafu"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the score measure in ski jumping?",
+                "answers": [
+                    "Speed",
+                    "Height",
+                    "Distance and style",
+                    "Number of jumps"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does a red card indicate in soccer?",
+                "answers": [
+                    "A disallowed goal",
+                    "A light foul",
+                    "An expulsion",
+                    "A penalty"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the NBA in 2023?",
+                "answers": [
+                    "Lakers",
+                    "Celtics",
+                    "Bucks",
+                    "Nuggets"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "In which sport do 'kata' and 'kumite' exist?",
+                "answers": [
+                    "Judo",
+                    "Karate",
+                    "Taekwondo",
+                    "Boxing"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which country invented baseball?",
+                "answers": [
+                    "Japan",
+                    "Cuba",
+                    "USA",
+                    "England"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the most medaled Italian Paralympic athlete?",
+                "answers": [
+                    "Alex Zanardi",
+                    "Bebe Vio",
+                    "Martina Caironi",
+                    "Francesco Bocciardo"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the standard length of an Olympic pool?",
+                "answers": [
+                    "25 meters",
+                    "33 meters",
+                    "50 meters",
+                    "100 meters"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport are MVP awards given?",
+                "answers": [
+                    "Volleyball",
+                    "Tennis",
+                    "Basketball",
+                    "Athletics"
+                ],
+                "correctIndex": 2
+            }
+        ],
+        "esperto": [
+            {
+                "question": "Who is the youngest winner of the Formula 1 world title?",
+                "answers": [
+                    "Sebastian Vettel",
+                    "Lewis Hamilton",
+                    "Fernando Alonso",
+                    "Max Verstappen"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who is the only athlete to have been Olympic champion and world champion in 3 different disciplines?",
+                "answers": [
+                    "Michael Phelps",
+                    "Usain Bolt",
+                    "Paavo Nurmi",
+                    "Carl Lewis"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which sportsman holds the record for the most Olympic medals in individual events?",
+                "answers": [
+                    "Larisa Latynina",
+                    "Michael Phelps",
+                    "Paavo Nurmi",
+                    "Carl Lewis"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many editions of the Soccer World Cup were played before 2022?",
+                "answers": [
+                    "18",
+                    "19",
+                    "20",
+                    "21"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Who is the soccer player with the most goals scored in UEFA competitions?",
+                "answers": [
+                    "Cristiano Ronaldo",
+                    "Lionel Messi",
+                    "Raúl",
+                    "Zlatan Ibrahimović"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which soccer team has won the most European Cups/Champions Leagues?",
+                "answers": [
+                    "Milan",
+                    "Bayern Munich",
+                    "Liverpool",
+                    "Real Madrid"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the world record for points scored in a single NBA game?",
+                "answers": [
+                    "81",
+                    "73",
+                    "100",
+                    "92"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the athlete with the most victories in Grand Slam tennis tournaments?",
+                "answers": [
+                    "Roger Federer",
+                    "Rafael Nadal",
+                    "Novak Djokovic",
+                    "Pete Sampras"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In what year was the women's soccer world championship established?",
+                "answers": [
+                    "1991",
+                    "1995",
+                    "2000",
+                    "2003"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many points is a try worth in rugby 15s?",
+                "answers": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the Formula 1 World Championship in 2008?",
+                "answers": [
+                    "Kimi Räikkönen",
+                    "Lewis Hamilton",
+                    "Felipe Massa",
+                    "Sebastian Vettel"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who won the Champions League as a coach and player?",
+                "answers": [
+                    "Zidane",
+                    "Beckenbauer",
+                    "Rijkaard",
+                    "Ancelotti"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In what year was the 'no ad' scoring system introduced in tennis (doubles)?",
+                "answers": [
+                    "2004",
+                    "2008",
+                    "2010",
+                    "2013"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many times has the Brazilian national soccer team won the World Cup?",
+                "answers": [
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the athlete with the most gold medals in swimming at the Olympics?",
+                "answers": [
+                    "Michael Phelps",
+                    "Mark Spitz",
+                    "Kristin Otto",
+                    "Ian Thorpe"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In what year was the 'Golden Boot' system established in the Premier League?",
+                "answers": [
+                    "1994",
+                    "1995",
+                    "1996",
+                    "1997"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who holds the record for the most goals scored in a single edition of the World Cup?",
+                "answers": [
+                    "Miroslav Klose",
+                    "Ronaldo",
+                    "Just Fontaine",
+                    "Puskás"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the only coach to win the Champions League with three different teams?",
+                "answers": [
+                    "Carlo Ancelotti",
+                    "José Mourinho",
+                    "Ottmar Hitzfeld",
+                    "Luis Enrique"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many editions of the Rugby World Cup were played until 2023?",
+                "answers": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Who won the first Formula 1 World Championship of his career in 1994?",
+                "answers": [
+                    "Michael Schumacher",
+                    "Ayrton Senna",
+                    "Nelson Piquet",
+                    "Alain Prost"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many Olympic medals has Simone Biles won?",
+                "answers": [
+                    "7",
+                    "10",
+                    "12",
+                    "14"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which team won the Soccer World Cup in 1998?",
+                "answers": [
+                    "Argentina",
+                    "Germany",
+                    "France",
+                    "Brazil"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the men's Wimbledon tournament in 2008, in an epic final against Nadal?",
+                "answers": [
+                    "Federer",
+                    "Nadal",
+                    "Murray",
+                    "Djokovic"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who won the Ballon d'Or in 2021?",
+                "answers": [
+                    "Lionel Messi",
+                    "Robert Lewandowski",
+                    "Cristiano Ronaldo",
+                    "Karim Benzema"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the world record for the men's 100 meters sprint?",
+                "answers": [
+                    "9.58",
+                    "9.62",
+                    "9.69",
+                    "9.72"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many victories did Ayrton Senna achieve in Formula 1 during his career?",
+                "answers": [
+                    "40",
+                    "41",
+                    "42",
+                    "43"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who was the first athlete to win 8 gold medals in a single edition of the Olympic Games?",
+                "answers": [
+                    "Michael Phelps",
+                    "Carl Lewis",
+                    "Mark Spitz",
+                    "Paavo Nurmi"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who holds the record for victories in Grand Slam tournaments for women's tennis?",
+                "answers": [
+                    "Serena Williams",
+                    "Venus Williams",
+                    "Steffi Graf",
+                    "Martina Navratilova"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the most Olympic medals ever in swimming?",
+                "answers": [
+                    "Michael Phelps",
+                    "Ryan Lochte",
+                    "Caeleb Dressel",
+                    "Mark Spitz"
+                ],
+                "correctIndex": 0
+            }
+        ],
+        "laureato": [
+            {
+                "question": "Who scored the golden goal that eliminated Italy from the Euro 2000?",
+                "answers": [
+                    "Trezeguet",
+                    "Henry",
+                    "Zidane",
+                    "Deschamps"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many Grand Slams has Rafael Nadal won at Roland Garros (until 2024)?",
+                "answers": [
+                    "10",
+                    "12",
+                    "14",
+                    "15"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who was the first athlete to run 100 meters under 10 seconds?",
+                "answers": [
+                    "Carl Lewis",
+                    "Leroy Burrell",
+                    "Jim Hines",
+                    "Ben Johnson"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In what year did Italy win the European Soccer Championship after 53 years?",
+                "answers": [
+                    "2016",
+                    "2021",
+                    "2008",
+                    "2012"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many stages does the Giro d'Italia (classic format) have?",
+                "answers": [
+                    "18",
+                    "20",
+                    "21",
+                    "22"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who won the gold medal in the men's 200 meters at the Tokyo 2020 Olympics?",
+                "answers": [
+                    "Noah Lyles",
+                    "Andre De Grasse",
+                    "Usain Bolt",
+                    "Erriyon Knighton"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What was the first Italian city to host the Olympics?",
+                "answers": [
+                    "Rome",
+                    "Turin",
+                    "Milan",
+                    "Naples"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many points is a try worth in rugby 15s?",
+                "answers": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who was the only Italian driver to win a Formula 1 World Championship?",
+                "answers": [
+                    "Alberto Ascari",
+                    "Riccardo Patrese",
+                    "Gilles Villeneuve",
+                    "Nino Farina"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the world record in the men's 400 meters sprint?",
+                "answers": [
+                    "43.03",
+                    "43.18",
+                    "43.29",
+                    "43.45"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which NBA team has won the most titles in history (until 2024)?",
+                "answers": [
+                    "Lakers",
+                    "Celtics",
+                    "Bulls",
+                    "Warriors"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the all-time top scorer of the Soccer World Cups?",
+                "answers": [
+                    "Miroslav Klose",
+                    "Ronaldo",
+                    "Pelé",
+                    "Gerd Müller"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In what year was VAR introduced in the Soccer World Cups?",
+                "answers": [
+                    "2014",
+                    "2018",
+                    "2022",
+                    "2006"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the only boxer to have won an Olympic gold medal and a world title in three different categories?",
+                "answers": [
+                    "Floyd Mayweather",
+                    "Muhammad Ali",
+                    "Roy Jones Jr.",
+                    "Sugar Ray Leonard"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In what sports discipline did Gregorio Paltrinieri distinguish himself?",
+                "answers": [
+                    "Cycling",
+                    "Rowing",
+                    "Swimming",
+                    "Water polo"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which team won the Super Bowl in 2023?",
+                "answers": [
+                    "Eagles",
+                    "Chiefs",
+                    "Rams",
+                    "49ers"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who holds the men's pole vault world record (as of 2024)?",
+                "answers": [
+                    "Renaud Lavillenie",
+                    "Thiago Braz",
+                    "Armand Duplantis",
+                    "Sergey Bubka"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many minutes does a regulation ice hockey game last?",
+                "answers": [
+                    "60",
+                    "70",
+                    "45",
+                    "90"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who won the Serie A top scorer award in 2022/23?",
+                "answers": [
+                    "Vlahovic",
+                    "Immobile",
+                    "Lautaro",
+                    "Osimhen"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the maximum number of personal fouls before ejection in FIBA basketball?",
+                "answers": [
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who was the first soccer player to win three Ballon d'Or awards?",
+                "answers": [
+                    "Cruijff",
+                    "Platini",
+                    "Van Basten",
+                    "Di Stefano"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does the 10-second rule indicate in basketball?",
+                "answers": [
+                    "Time to cross half court (actually 8, implies old rule or simply ball advancement)",
+                    "Time to shoot",
+                    "Time to return to defense",
+                    "Time to take the throw-in"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who is the current MotoGP world champion (until 2024)?",
+                "answers": [
+                    "Marc Márquez",
+                    "Pecco Bagnaia",
+                    "Fabio Quartararo",
+                    "Joan Mir"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In what sport do they compete in the 'Six Nations' tournament?",
+                "answers": [
+                    "Soccer",
+                    "Cricket",
+                    "Rugby",
+                    "Handball"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which Italian athlete won the gold in high jump at Tokyo 2020?",
+                "answers": [
+                    "Sara Simeoni",
+                    "Elena Vallortigara",
+                    "Antonietta Di Martino",
+                    "Gianmarco Tamberi (shared with Barshim)"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which tennis player won the first ATP tournament for Italy in the 21st century?",
+                "answers": [
+                    "Fognini",
+                    "Sinner",
+                    "Seppi",
+                    "Volandri"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which sport is 'The Masters' tournament played?",
+                "answers": [
+                    "Tennis",
+                    "Golf",
+                    "Polo",
+                    "Snooker"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many teams participate in the FIFA World Cup starting from 2026?",
+                "answers": [
+                    "32",
+                    "40",
+                    "48",
+                    "36"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a 'zamboni'?",
+                "answers": [
+                    "A tool for skiing",
+                    "A type of hockey stick",
+                    "The machine that cleans the ice",
+                    "A skating shoe"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "How many times did Michael Schumacher win the Formula 1 World Championship?",
+                "answers": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "correctIndex": 2
+            }
+        ]
+    }
+}

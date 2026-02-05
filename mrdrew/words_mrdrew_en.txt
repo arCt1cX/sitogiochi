@@ -175,3 +175,125 @@ Sushi|Ramen|Food and drinks
 Hamburger|Hot Dog|Food and drinks
 Paris|London|World and places
 Tokyo|Beijing|World and places
+Plumber|Electrician|Jobs and professions
+Mechanic|Tire Specialist|Jobs and professions
+Actor|Director|Jobs and professions
+Singer|Musician|Jobs and professions
+Taxi|Bus|Transport
+Ship|Ferry|Transport
+Truck|Van|Transport
+Motorcycle|Scooter|Transport
+Tram|Trolleybus|Transport
+Skateboard|Roller Skates|Transport
+Sailboat|Speedboat|Transport
+Refrigerator|Freezer|Appliances
+Washing Machine|Dryer|Appliances
+Oven|Microwave|Appliances
+Fan|Air Conditioner|Appliances
+Vacuum Cleaner|Robot Vacuum|Appliances
+Toothpaste|Toothbrush|Personal hygiene
+Soap|Body Wash|Personal hygiene
+Shampoo|Conditioner|Personal hygiene
+Deodorant|Perfume|Personal hygiene
+Razor|Razor Blade|Personal hygiene
+Math|Physics|School subjects
+History|Geography|School subjects
+Literature|English|School subjects
+Chemistry|Biology|School subjects
+Art|Music|School subjects
+Violin|Cello|Music
+Drums|Tambourine|Music
+Flute|Clarinet|Music
+Trumpet|Saxophone|Music
+Rock|Pop|Music genres
+Jazz|Blues|Music genres
+Rap|Trap|Music genres
+Horror|Thriller|Movie genres
+Comedy|Drama|Movie genres
+Sci-Fi|Fantasy|Movie genres
+Chess|Checkers|Board games and video games
+Monopoly|Risk|Board games and video games
+Poker|Blackjack|Board games and video games
+Socks|Tights|Fashion and clothing
+Scarf|Gloves|Fashion and clothing
+Belt|Suspenders|Fashion and clothing
+Tie|Bow Tie|Fashion and clothing
+Slippers|Flip-flops|Fashion and clothing
+Philosophy|Psychology|School subjects
+Sociology|Anthropology|School subjects
+Economics|Law|School subjects
+Medicine|Nursing|School subjects
+Latin|Greek|School subjects
+PE|Sports Science|School subjects
+Architecture|Design|School subjects
+Classical|Opera|Music genres
+Reggae|Ska|Music genres
+Techno|House|Music genres
+Country|Folk|Music genres
+Metal|Punk|Music genres
+R&B|Soul|Music genres
+Disco|Funk|Music genres
+Indie|Alternative|Music genres
+Clue|Guess Who|Board games and video games
+Taboo|Pictionary|Board games and video games
+Trivial Pursuit|Cranium|Board games and video games
+Call of Duty|Battlefield|Board games and video games
+League of Legends|Dota 2|Board games and video games
+Zelda|Final Fantasy|Board games and video games
+The Sims|Animal Crossing|Board games and video games
+Tetris|Candy Crush|Board games and video games
+Pac-Man|Space Invaders|Board games and video games
+GTA|Red Dead Redemption|Board games and video games
+Heart|Brain|Human body
+Hand|Foot|Human body
+Eye|Ear|Human body
+Nose|Mouth|Human body
+Elbow|Knee|Human body
+Rain|Snow|Weather
+Thunder|Lightning|Weather
+Hurricane|Tornado|Weather
+Fog|Hail|Weather
+Rainbow|Northern Lights|Weather
+Gold|Silver|Precious stones and metals
+Diamond|Ruby|Precious stones and metals
+Emerald|Sapphire|Precious stones and metals
+Bronze|Copper|Precious stones and metals
+Pearl|Coral|Precious stones and metals
+Fishing|Hunting|Hobbies
+Gardening|DIY|Hobbies
+Photography|Painting|Hobbies
+Sewing|Crochet|Hobbies
+Writing|Reading|Hobbies
+Tiramisu|Panna Cotta|Desserts
+Cannoli|Baba|Desserts
+Crepes|Pancakes|Desserts
+Muffin|Cupcake|Desserts
+Pudding|Jello|Desserts
+Whiskey|Rum|Alcoholic drinks
+Vodka|Gin|Alcoholic drinks
+Tequila|Mezcal|Alcoholic drinks
+Champagne|Prosecco|Alcoholic drinks
+Spritz|Mojito|Alcoholic drinks
+Rose|Tulip|Flowers
+Sunflower|Daisy|Flowers
+Orchid|Lily|Flowers
+Violet|Mimosa|Flowers
+Poppy|Lavender|Flowers
+Mouse|Keyboard|Tech accessories
+Printer|Scanner|Tech accessories
+Hard Drive|USB Drive|Tech accessories
+Router|Modem|Tech accessories
+Monitor|Projector|Tech accessories
+Ambulance|Police Car|Emergency vehicles
+Fire Truck|Rescue Helicopter|Emergency vehicles
+Napoleon|Julius Caesar|Historical Figures
+Einstein|Newton|Historical Figures
+Leonardo da Vinci|Michelangelo|Historical Figures
+Cleopatra|Nefertiti|Historical Figures
+Columbus|Magellan|Historical Figures
+Tom|Jerry|Cartoons
+Tweety|Sylvester|Cartoons
+Goofy|Pluto|Cartoons
+Homer|Marge|Cartoons
+SpongeBob|Patrick|Cartoons
+Bugs Bunny|Daffy Duck|Cartoons

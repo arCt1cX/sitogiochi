@@ -1,0 +1,1494 @@
+{
+    "Law": {
+        "bambino": [
+            {
+                "question": "Who decides if someone has followed the law?",
+                "answers": [
+                    "The cook",
+                    "The judge",
+                    "The teacher",
+                    "The postman"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What happens in a courtroom?",
+                "answers": [
+                    "People study",
+                    "People watch movies",
+                    "The truth is decided",
+                    "People play"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the person who defends an accused person called?",
+                "answers": [
+                    "The doctor",
+                    "The lawyer",
+                    "The mayor",
+                    "The firefighter"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a law?",
+                "answers": [
+                    "A song",
+                    "A rule for everyone",
+                    "A game",
+                    "A dessert"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who makes the laws in Italy?",
+                "answers": [
+                    "The Parliament",
+                    "The police",
+                    "The TV",
+                    "The teachers"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What do the police do?",
+                "answers": [
+                    "Cook",
+                    "Enforce the rules",
+                    "Build",
+                    "Teach"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the book of laws called?",
+                "answers": [
+                    "The recipe book",
+                    "The Code",
+                    "The diary",
+                    "The encyclopedia"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who decides if someone goes to prison?",
+                "answers": [
+                    "The janitor",
+                    "The judge",
+                    "The doctor",
+                    "The journalist"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who accuses someone in a trial?",
+                "answers": [
+                    "The accused",
+                    "The judge",
+                    "The prosecutor",
+                    "The witness"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who tells what they saw?",
+                "answers": [
+                    "The singer",
+                    "The witness",
+                    "The painter",
+                    "The director"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the purpose of the law?",
+                "answers": [
+                    "To draw",
+                    "To bring justice",
+                    "To have parties",
+                    "To do sports"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What happens if you do not follow the law?",
+                "answers": [
+                    "Nothing",
+                    "You are rewarded",
+                    "You are punished",
+                    "You get a gift"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who helps with a legal problem?",
+                "answers": [
+                    "The bartender",
+                    "The lawyer",
+                    "The taxi driver",
+                    "The musician"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who must follow the law?",
+                "answers": [
+                    "The king",
+                    "Every person",
+                    "Only police officers",
+                    "Children"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the President of the Republic?",
+                "answers": [
+                    "A singer",
+                    "The head of State",
+                    "An actor",
+                    "A doctor"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is needed to live in peace?",
+                "answers": [
+                    "Music",
+                    "Laws",
+                    "Sweets",
+                    "Contests"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who enforces rules on the street?",
+                "answers": [
+                    "The cook",
+                    "The traffic officer",
+                    "The pharmacist",
+                    "The postman"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a rule?",
+                "answers": [
+                    "A food",
+                    "Something to follow",
+                    "A game",
+                    "A machine"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Where do judges work?",
+                "answers": [
+                    "At school",
+                    "In court",
+                    "In hospital",
+                    "In laboratory"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a trial?",
+                "answers": [
+                    "A party",
+                    "A judgment in court",
+                    "A movie",
+                    "A video game"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who leads a trial?",
+                "answers": [
+                    "The teacher",
+                    "The judge",
+                    "The police officer",
+                    "The mayor"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who receives a punishment?",
+                "answers": [
+                    "The victim",
+                    "The accused",
+                    "The guilty person",
+                    "The winner"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What happens if a judge makes a mistake?",
+                "answers": [
+                    "Nothing",
+                    "Others review them",
+                    "They win a prize",
+                    "They become a lawyer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is an important law in Italy?",
+                "answers": [
+                    "The Constitution",
+                    "The recipe",
+                    "The manual",
+                    "The dictionary"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is used to sign laws?",
+                "answers": [
+                    "The pen",
+                    "The hammer",
+                    "The sword",
+                    "The wand"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Who checks if a law is fair?",
+                "answers": [
+                    "The mason",
+                    "The Court",
+                    "The hairdresser",
+                    "The librarian"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the ombudsman?",
+                "answers": [
+                    "A hero",
+                    "Who protects rights",
+                    "A judge",
+                    "A teacher"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the difference between law and rule?",
+                "answers": [
+                    "None",
+                    "The law is for everyone",
+                    "The rule is stronger",
+                    "The law only applies at school"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who is the guilty person in a trial?",
+                "answers": [
+                    "Who did something wrong",
+                    "The judge",
+                    "Who tells the story",
+                    "Who asks questions"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does a lawyer do for the client?",
+                "answers": [
+                    "Punishes them",
+                    "Defends them",
+                    "Teaches them",
+                    "Makes them cook"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "facile": [
+            {
+                "question": "What does the term 'Constitution' indicate?",
+                "answers": [
+                    "Tax code",
+                    "Fundamental laws of the State",
+                    "A recipe",
+                    "Sports document"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many powers of the State are there according to the Italian Constitution?",
+                "answers": [
+                    "Two",
+                    "Three",
+                    "Five",
+                    "Ten"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who makes the laws in Italy?",
+                "answers": [
+                    "President",
+                    "Government",
+                    "Parliament",
+                    "Judge"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the function of the judicial power?",
+                "answers": [
+                    "Making laws",
+                    "Controlling companies",
+                    "Applying the law",
+                    "Organizing votes"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the Head of State in Italy?",
+                "answers": [
+                    "Pope",
+                    "Premier",
+                    "President",
+                    "Minister"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In what year did the Italian Constitution come into force?",
+                "answers": [
+                    "1948",
+                    "1861",
+                    "1989",
+                    "2001"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a crime?",
+                "answers": [
+                    "Error",
+                    "Rule",
+                    "Violation of law",
+                    "Forbidden party"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who represents the prosecution in a criminal trial?",
+                "answers": [
+                    "Defender",
+                    "Witness",
+                    "Prosecutor",
+                    "Judge"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who defends the defendant?",
+                "answers": [
+                    "Prosecutor",
+                    "Judge",
+                    "Lawyer",
+                    "Jury"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is civil law?",
+                "answers": [
+                    "Military law",
+                    "Between private individuals",
+                    "Religious law",
+                    "School rule"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a contract?",
+                "answers": [
+                    "Crime",
+                    "Decision",
+                    "Legal agreement",
+                    "Secret document"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a fine?",
+                "answers": [
+                    "Promo",
+                    "Prize",
+                    "Economic sanction",
+                    "Notarial deed"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the legislator?",
+                "answers": [
+                    "Historian",
+                    "Judge",
+                    "Who makes laws",
+                    "Teacher"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is meant by 'custodial sentence'?",
+                "answers": [
+                    "Fine",
+                    "Sanction",
+                    "Prison",
+                    "Permit"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a witness?",
+                "answers": [
+                    "Who recounts a fact",
+                    "Judge",
+                    "Police officer",
+                    "Lawyer"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does it mean to be a defendant?",
+                "answers": [
+                    "Winner",
+                    "Accused",
+                    "Judge",
+                    "Lawyer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who has the right to vote in Italy?",
+                "answers": [
+                    "Even children",
+                    "Only judges",
+                    "Adults",
+                    "Public employees"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these is a civil right?",
+                "answers": [
+                    "Being hired",
+                    "Driving",
+                    "Voting",
+                    "Being rich"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a civil lawsuit?",
+                "answers": [
+                    "Between private individuals",
+                    "Criminal",
+                    "Lost",
+                    "Protest"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the set of rules of the State called?",
+                "answers": [
+                    "Ethical Code",
+                    "Law",
+                    "Constitution",
+                    "Secret Code"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who is the Minister of Justice?",
+                "answers": [
+                    "Judge",
+                    "Lawyer",
+                    "Member of the Government",
+                    "Police officer"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does a notary do?",
+                "answers": [
+                    "Arrests",
+                    "Writes laws",
+                    "Authenticates deeds",
+                    "Teaches"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a sentence (judgment)?",
+                "answers": [
+                    "Question",
+                    "Opinion",
+                    "Decision of the judge",
+                    "Book"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does 'appeal' mean in a judicial context?",
+                "answers": [
+                    "Invitation",
+                    "New trial",
+                    "New law",
+                    "Prize"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the function of the peace officer (justice of the peace)?",
+                "answers": [
+                    "Foreign cases",
+                    "Wars",
+                    "Minor disputes",
+                    "Writes laws"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a criminal code?",
+                "answers": [
+                    "Poems",
+                    "Behavior",
+                    "Laws on crimes",
+                    "List of names"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does 'self-defense' mean?",
+                "answers": [
+                    "Sports rule",
+                    "Permitted defense",
+                    "Excuse",
+                    "Right to vote"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does 'presumption of innocence' mean?",
+                "answers": [
+                    "Everyone is guilty",
+                    "Suspicion",
+                    "Innocent until proven otherwise",
+                    "No judgment"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What are human rights?",
+                "answers": [
+                    "For politicians",
+                    "For everyone",
+                    "For workers",
+                    "Religious"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who decides if a law is constitutional?",
+                "answers": [
+                    "Parliament",
+                    "Court of Auditors",
+                    "Constitutional Court",
+                    "President"
+                ],
+                "correctIndex": 2
+            }
+        ],
+        "medio": [
+            {
+                "question": "What is the main difference between intentional (dolo) and negligent (colpa) crime?",
+                "answers": [
+                    "Intentional is deliberate",
+                    "Negligent is more serious",
+                    "Intentional is civil",
+                    "Negligent concerns minors"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'statute of limitations' (prescrizione) in a criminal context?",
+                "answers": [
+                    "A fine",
+                    "Suspended sentence",
+                    "Crime extinguished by elapsed time",
+                    "Judge's suggestion"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does administrative law regulate?",
+                "answers": [
+                    "Family",
+                    "Relationships between citizens and the State",
+                    "Religion",
+                    "Banks"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which body judges the constitutionality of laws?",
+                "answers": [
+                    "Ministers",
+                    "Constitutional Court",
+                    "Parliament",
+                    "CSM (Superior Council of Judiciary)"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who exercises executive power in Italy?",
+                "answers": [
+                    "Parliament",
+                    "President",
+                    "Government",
+                    "Court of Cassation"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is an administrative act?",
+                "answers": [
+                    "Private contract",
+                    "Law",
+                    "Decision by the Public Administration",
+                    "Notarial note"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the Civil Code?",
+                "answers": [
+                    "Political document",
+                    "Criminal rules",
+                    "Rules between private individuals",
+                    "Moral code"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is habeas corpus?",
+                "answers": [
+                    "Latin phrase",
+                    "Protection of freedom",
+                    "Type of contract",
+                    "Ancient figure"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is meant by 'jurisdiction'?",
+                "answers": [
+                    "Geographic zone",
+                    "Power to judge",
+                    "Private right",
+                    "Type of crime"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who can propose a law in Parliament?",
+                "answers": [
+                    "Only the President",
+                    "Only citizens",
+                    "Parliamentarians and Government",
+                    "Only the CSM"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is criminal law?",
+                "answers": [
+                    "Rules on contracts",
+                    "Code for companies",
+                    "Rules on crimes and punishments",
+                    "Private law"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a mandatory (imperative) rule?",
+                "answers": [
+                    "Optional",
+                    "Moral",
+                    "Obligatory and non-derogable",
+                    "Advertising"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Who decides in the last instance in a civil trial?",
+                "answers": [
+                    "Justice of the peace",
+                    "Appeal",
+                    "Court of Cassation",
+                    "Prefect"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Difference between public and private law?",
+                "answers": [
+                    "State vs citizens",
+                    "Private is superior",
+                    "Public is new",
+                    "No difference"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the principle of legality?",
+                "answers": [
+                    "Everything is permitted",
+                    "Punishments only by law",
+                    "Law not equal",
+                    "Superior judge"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is meant by 'legal capacity'?",
+                "answers": [
+                    "Signing",
+                    "Having rights and duties",
+                    "Voting",
+                    "Testifying"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is an ordinance?",
+                "answers": [
+                    "State law",
+                    "Provision of PA or judge",
+                    "Municipal rule",
+                    "Parliamentary act"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Function of the Court of Auditors?",
+                "answers": [
+                    "Making laws",
+                    "Controlling public spending",
+                    "Executing sentences",
+                    "Electing the President"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Void (nullo) vs voidable (annullabile) act?",
+                "answers": [
+                    "Void is always invalid",
+                    "They are equal",
+                    "Voidable is more serious",
+                    "Void can be cured"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a real right (property right)?",
+                "answers": [
+                    "Vote",
+                    "Property",
+                    "Citizenship",
+                    "Marriage"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does labor law regulate?",
+                "answers": [
+                    "Students",
+                    "Work relationships",
+                    "Freedom of speech",
+                    "Juvenile criminal law"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is a void contract?",
+                "answers": [
+                    "Limited value",
+                    "Never existed legally",
+                    "Suspended",
+                    "Between minors"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does 'ius soli' mean?",
+                "answers": [
+                    "Right of blood",
+                    "Property",
+                    "Birth on the territory",
+                    "Paternal right"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a legal bond?",
+                "answers": [
+                    "Legal or contractual obligation",
+                    "Punishment",
+                    "Moral",
+                    "Bank guarantee"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What are property (patrimonial) rights?",
+                "answers": [
+                    "Moral",
+                    "Political",
+                    "Linked to assets",
+                    "Religious"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does Article 3 of the Constitution establish?",
+                "answers": [
+                    "Labor",
+                    "Equality of citizens",
+                    "Religion",
+                    "Education"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Self-governing body of the judiciary?",
+                "answers": [
+                    "Parliament",
+                    "Interior",
+                    "CSM",
+                    "Court of Cassation"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the adversarial principle (principio del contraddittorio)?",
+                "answers": [
+                    "Political rule",
+                    "Right to be heard",
+                    "Only criminal",
+                    "Only civil"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does jurisprudence represent?",
+                "answers": [
+                    "Law",
+                    "Isolated judgment",
+                    "Interpretations by judges",
+                    "Textbook"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is meant by 'burden of proof'?",
+                "answers": [
+                    "Responsibility of the accused",
+                    "Proving a fact in court",
+                    "Tax",
+                    "Decision of the judge"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "esperto": [
+            {
+                "question": "In a criminal context, what is meant by 'formal concurrence of crimes'?",
+                "answers": [
+                    "Multiple crimes committed with a single action or omission",
+                    "A single crime realized with different actions",
+                    "Involvement of multiple people in a crime",
+                    "Series of similar crimes over time"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In civil law, what is the difference between 'nullity' and 'voidability' of a contract?",
+                "answers": [
+                    "Nullity is absolute ineffectiveness, voidability can be cured",
+                    "Nullity is less serious compared to voidability",
+                    "Voidability only concerns oral contracts",
+                    "There is no significant difference"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does Article 97 of the Italian Constitution provide regarding public administration?",
+                "answers": [
+                    "Obligation of impartiality and efficiency of the administration",
+                    "Freedom to act with discretion",
+                    "Subject to control by Parliament",
+                    "Exempt from following the laws"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In commercial law, what is meant by 'simple limited partnership' (S.a.s.)?",
+                "answers": [
+                    "Company with general and limited partners",
+                    "Company formed only by general partners",
+                    "Partnership with limited liability",
+                    "Company with autonomous legal personality"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the main function of the Superior Council of the Judiciary (CSM)?",
+                "answers": [
+                    "Protecting the independence and autonomy of the judiciary",
+                    "Drafting binding judicial rules",
+                    "Directly controlling Parliament",
+                    "Managing the State's economic resources"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In a criminal context, what is meant by 'improper omission crime'?",
+                "answers": [
+                    "Crime for failure to act when there is a duty to act",
+                    "Crime caused by human error",
+                    "Crime sanctioned without imprisonment",
+                    "Crime destined for automatic extinction"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In civil law, what represents 'extra-contractual liability' (tort liability)?",
+                "answers": [
+                    "Compensation due for a wrong outside of a contract",
+                    "Contractual fault for breach",
+                    "Damage caused by an unconstitutional rule",
+                    "Criminal liability on a civil basis"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the principle of 'legality' establish in criminal law?",
+                "answers": [
+                    "No punishment without a law defining the crime",
+                    "The judge can punish at their discretion",
+                    "It is possible to create crimes by analogy",
+                    "Criminal rules can apply retroactively"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In administrative law, what is meant by 'silence-consent'?",
+                "answers": [
+                    "Silence equals acceptance of the request",
+                    "Silence equals rejection of the request",
+                    "Silence has no legal relevance",
+                    "Silence blocks the procedure"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'subjective right' in civil law?",
+                "answers": [
+                    "Legal situation allowing to demand a performance",
+                    "Personal obligation towards the State",
+                    "Moral faculty without legal effects",
+                    "Duty imposed by the legal system"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In criminal law, what is meant by 'punishable attempt'?",
+                "answers": [
+                    "Action directed at committing a crime not completed for external reasons",
+                    "Intentional conduct punished at discretion",
+                    "Negligent crime that has no effect",
+                    "Fact prescribed before judgment"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does Article 41 of the Italian Constitution provide regarding private economic initiative?",
+                "answers": [
+                    "It is free but must not violate social utility",
+                    "It is subordinate to a license from the State",
+                    "It is prohibited except in exceptional cases",
+                    "It is granted only to public subjects"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In commercial law, what is meant by 'order credit instrument'?",
+                "answers": [
+                    "Instrument transferable by endorsement",
+                    "Blocked registered instrument",
+                    "Anonymous bearer instrument",
+                    "Instrument excluded from assignment"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'jurisdiction' in procedural law?",
+                "answers": [
+                    "Power to apply the law to resolve disputes",
+                    "Freedom of choice of the judge by the parties",
+                    "Territorial jurisdiction of a judge",
+                    "Faculty to challenge a decision"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In criminal law, what is meant by 'mitigating circumstance'?",
+                "answers": [
+                    "Factor reducing the gravity and penalty of the crime",
+                    "Element making the penalty more severe",
+                    "Justification of conduct",
+                    "Cause of extinction of responsibility"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What represents the 'adversarial principle' in a criminal trial?",
+                "answers": [
+                    "Right to confront and reply to opposing evidence",
+                    "Possibility for the judge to decide without debate",
+                    "Obligation to confess the wrong",
+                    "Autonomous action by the public prosecutor"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In civil law, what is meant by 'joint and several obligation'?",
+                "answers": [
+                    "Each debtor can be held for the entire debt",
+                    "The debt is divided among all subjects involved",
+                    "The debt is partially extinguished with a payment",
+                    "There is no individual responsibility"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'self-defense' in criminal law?",
+                "answers": [
+                    "Proportionate reaction to an aggression to protect oneself",
+                    "Use of force to avenge a damage",
+                    "Preemptive defense against hypothetical danger",
+                    "Direct punishment of the author of a crime"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In administrative law, what is meant by 'self-remedy' (autotutela)?",
+                "answers": [
+                    "Power of the PA to annul or revoke its own unlawful acts",
+                    "Protection of the citizen by personal means",
+                    "Modification of administrative decisions by the judge",
+                    "Obligation for the PA to maintain its provisions"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What represents the 'principle of subsidiarity' in constitutional law?",
+                "answers": [
+                    "Attribution of functions to the level closest to citizens",
+                    "Centralization of functions in the State",
+                    "Limitation of the autonomy of the Regions",
+                    "Exclusion of civic participation"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'criminal judgment' (res judicata)?",
+                "answers": [
+                    "Final judgment that cannot be challenged",
+                    "Civil decision on a criminal fact",
+                    "Pronouncement modifiable by the public prosecutor",
+                    "Agreement concluded between accused and victim"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the 'legal transaction' (negozio giuridico) in private law?",
+                "answers": [
+                    "Act of private autonomy with legal effects",
+                    "Contract concluded between private companies",
+                    "State regulatory provision",
+                    "Action promoted in court"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the function of the principle of 'specificity' (tipicità) in criminal law?",
+                "answers": [
+                    "Excluding crimes not expressly provided for by law",
+                    "Allowing extension of rules to similar cases",
+                    "Establishing the phases of criminal proceedings",
+                    "Authorizing the judge to create new cases"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In a civil procedural context, what is 'lis pendens'?",
+                "answers": [
+                    "Case already pending between same parties and same object",
+                    "Archive of procedural acts in court",
+                    "Agreement reached before judgment",
+                    "Judgment before the justice of the peace"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'arbitration clause' in a contract?",
+                "answers": [
+                    "Agreement to resolve disputes with arbitration",
+                    "Provision of a penalty in case of breach",
+                    "Condition invalidating the contract",
+                    "Guarantee provided by a banking institution"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In criminal law, what is 'recidivism'?",
+                "answers": [
+                    "New commission of a crime by a convicted person",
+                    "Automatic cancellation of the penalty",
+                    "Suspension of a proceeding in progress",
+                    "Alternative sanction to detention"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What represents the 'disposition principle' in a civil trial?",
+                "answers": [
+                    "The parties must promote the action and propose evidence",
+                    "The judge leads the collection of evidence ex officio",
+                    "The proceeding takes place only by arbitration",
+                    "The process always ends with mediation"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'imputability' in criminal law?",
+                "answers": [
+                    "Capacity to understand and will at the time of the act",
+                    "Obligation to pay civil damages",
+                    "Condition of being definitively convicted",
+                    "Simple indictment"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In the law of obligations, what is 'datio in solutum' (performance in lieu)?",
+                "answers": [
+                    "Payment with performance different from the original one with agreement",
+                    "Restitution of what was received on loan",
+                    "Transfer of the right of credit",
+                    "Late payment with additional penalty"
+                ],
+                "correctIndex": 0
+            }
+        ],
+        "laureato": [
+            {
+                "question": "What does Art. 2043 of the Italian Civil Code regulate?",
+                "answers": [
+                    "Extra-contractual liability for unlawful acts and the resulting obligation to compensate",
+                    "Contractual breach in obligations arising from an agreement between parties",
+                    "Criminal liability arising from the commission of crimes provided for by law",
+                    "Intestate succession in the absence of testamentary provisions of the deceased"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In a criminal context, what does Art. 5 of the Criminal Code provide?",
+                "answers": [
+                    "Ignorance of the criminal law does not excuse and does not exempt from liability",
+                    "The principle of legality prohibiting the retroactivity of incriminating rules",
+                    "The principle of guilt requiring intent or negligence for punishability",
+                    "Recidivism as an aggravating circumstance in repeated crimes"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the difference between absolute and relative simulation in civil law?",
+                "answers": [
+                    "Absolute: no contract is intended; relative: different contract from the apparent one but with real effects",
+                    "Absolute: void contract without effects; relative: contract affected by curable defect",
+                    "Absolute: fictitious contract between parties; relative: stipulated with a hidden intention",
+                    "There is no substantial difference between the two forms, both without effects"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'legitimate interest' in administrative law?",
+                "answers": [
+                    "A subjective position protected by law when the interest is involved by the exercise of public power",
+                    "A full and exclusive right that can be enforced in court directly",
+                    "A hope not legally protected that can become a future right",
+                    "A personal interest devoid of specific regulatory or procedural protection"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the principle of 'ne bis in idem' provide in criminal law?",
+                "answers": [
+                    "No one can be tried or punished twice for the same fact, if already judged with a final sentence",
+                    "Every criminally relevant conduct can give rise to a single main sanction",
+                    "Tax crimes are not subject to statute of limitations due to their gravity",
+                    "An indictment can be freely reformulated during the hearing"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In a civil law context, what is 'legal capacity'?",
+                "answers": [
+                    "The suitability recognized for every person to be a holder of rights and duties since birth",
+                    "The capacity to act in court through legal representation or technical assistance",
+                    "The possibility of entering into valid contracts according to current law",
+                    "The faculty of carrying out professional activity for subsistence purposes"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is 'culpa in eligendo' in civil liability?",
+                "answers": [
+                    "Liability for choosing a collaborator unfit to carry out an activity in a negligent way",
+                    "Direct liability falling on the subject committing the wrong",
+                    "A form of intent manifesting in the fraudulent stipulation of a contract",
+                    "A contractual clause limiting the liability of the parties involved"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the legal nature of a final criminal conviction sentence?",
+                "answers": [
+                    "Enforcement order allowing the execution of the penalty and accessory provisions",
+                    "Judicial statement of merely compensatory value of guilt",
+                    "An administrative provision subject to confirmation by the vigilance authority",
+                    "A temporary measure awaiting confirmation by the trial judge"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "When does 'favor rei' apply?",
+                "answers": [
+                    "When multiple criminal laws exist over time and the one most favorable to the accused is applied",
+                    "When an accused subject effectively cooperates with the judicial authority",
+                    "When the victim of the crime decides to withdraw their written complaint",
+                    "When the accused has no criminal record and enjoys good conduct"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does Art. 3 of the Italian Constitution provide?",
+                "answers": [
+                    "The principle of formal and substantial equality and the State's duty to remove obstacles",
+                    "Freedom of the press and the right to free information in compliance with the law",
+                    "The right to individual and collective health protected by the National Health Service",
+                    "The right to work as an instrument of personal and social fulfillment"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the difference between 'nullity' and 'inexistence' of an administrative act?",
+                "answers": [
+                    "Nullity: flawed but existing act; inexistence: act devoid of essential requirements to be considered such",
+                    "There is no difference because both hypotheses determine the invalidity of the act",
+                    "Nullity is more serious because it entails automatic sanctioning consequences",
+                    "Inexistence can be cured through subsequent acts of validation"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does Art. 138 of the Italian Constitution represent?",
+                "answers": [
+                    "The constitutional revision procedure, establishing the methods and limits of amendment",
+                    "The discipline relating to the functioning of the Regions and local autonomies",
+                    "The powers conferred on the President of the Republic in the formation of laws",
+                    "The approval of the State budget with parliamentary majority"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a 'contract with obligations for a single contracting party'?",
+                "answers": [
+                    "A unilateral contract in which only one party assumes legally relevant obligations",
+                    "A bilateral contract with unequal clauses between the contracting parties",
+                    "A multilateral contract with collective effects on multiple subjects",
+                    "An onerous contract with performances for a single party by common will"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What are 'source-facts' (fonti-fatto) of law?",
+                "answers": [
+                    "Usages and customs recognized as binding for the community in specific areas",
+                    "Ordinary laws approved by Parliament and published in the Official Gazette",
+                    "Sentences of the Constitutional Court with general and erga omnes effectiveness",
+                    "Parliamentary regulations governing the functioning of the Houses"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "When is a rule considered 'mandatory' (precettiva)?",
+                "answers": [
+                    "When it imposes obligatory behavior or prohibits a certain conduct",
+                    "When it explicitly or implicitly repeals a previous rule",
+                    "When it defines fundamental technical legal concepts clearly",
+                    "When it is subject to a specific judicial interpretation"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'natural obligation' in civil law?",
+                "answers": [
+                    "A morally dutiful obligation, not legally enforceable but effective if fulfilled",
+                    "An ordinary contractual obligation arising from an agreement between parties",
+                    "A public debt arising from the State's spending obligations",
+                    "An obligation arising from a criminally relevant behavior"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is 'subrogation' (azione surrogatoria)?",
+                "answers": [
+                    "Action by which the creditor can substitute for the inactive debtor to exercise their rights towards thirds",
+                    "Action of a compensatory nature undertaken by an injured party against a private subject",
+                    "A modality by which hereditary rights are acquired in case of death",
+                    "The civil action with which a contract is terminated for breach"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In a procedural context, what is 'res judicata' (cosa giudicata)?",
+                "answers": [
+                    "A final decision that can no longer be subject to ordinary appeal",
+                    "Acquired testimony assuming evidentiary value in the trial",
+                    "A procedural act interrupting the statute of limitations",
+                    "A judicial provision suspending the effectiveness of a previous act"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does D.lgs. 231/2001 regulate?",
+                "answers": [
+                    "Administrative liability of entities for crimes committed in the interest or benefit of the entity itself",
+                    "The consumer code and the protection of consumer rights in contractual relationships",
+                    "The discipline of mandatory mediation in civil and commercial disputes",
+                    "The recent reform of tax justice and relative jurisdictions"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the purpose of the judgment of compliance (giudizio di ottemperanza) in administrative law?",
+                "answers": [
+                    "Ensuring the execution of administrative sentences when the administration does not comply spontaneously",
+                    "Challenging a resolution adopted by the municipal council extraordinarily",
+                    "Obtaining access to administrative records held by the public administration",
+                    "Starting a mediation procedure between citizen and public administration"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the nature of the discretionary power of the Public Administration?",
+                "answers": [
+                    "It is bound by limits set by law and must be exercised in compliance with principles of proportionality and reasonableness",
+                    "It is absolute and unquestionable as it is based on the organization autonomy of the entity",
+                    "It is subject exclusively to political and not judicial evaluations",
+                    "It has no direct legal relevance and manifests only at an internal level"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What does the principle of self-responsibility entail in the civil trial?",
+                "answers": [
+                    "The parties must bear the negative consequences arising from their own omissions and procedural errors",
+                    "The judge has the obligation to correct any errors made by the parties in the case",
+                    "The accused cannot be assisted by a defender but must defend themselves",
+                    "Witnesses can review their statements at any time"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a 'fiduciary transaction' (negozio fiduciario)?",
+                "answers": [
+                    "A contract in which a party undertakes to transfer assets in favor of a third fiduciary for a specific purpose",
+                    "A simulated agreement between two subjects with the intent to deceive thirds or evade the law",
+                    "A contract devoid of legal cause and therefore considered void by the system",
+                    "A succession agreement not allowed by the Italian legal system"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is 'extinctive prescription' (prescrizione estintiva)?",
+                "answers": [
+                    "The extinction of a subjective right for failure to exercise it within a specific legal term",
+                    "A disciplinary sanction imposed for violation of ethical rules",
+                    "The annulment of an administrative act for formal or substantial defect",
+                    "The loss of legal capacity following a judicial provision"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What represents the 'solve et repete' clause?",
+                "answers": [
+                    "The obligation to execute the requested payment before being able to start a challenge judicial action",
+                    "An agreement between parties prohibiting competition for a set period",
+                    "A contractual bond preventing the waiver of one's own subjective rights",
+                    "A modality through which a real right of easement is extinguished"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is 'declaratory of unconstitutionality'?",
+                "answers": [
+                    "A sentence of the Constitutional Court declaring the illegality of a rule with respect to the Constitution",
+                    "A second-degree judgment aimed at the reform of the challenged sentence",
+                    "A parliamentary deliberation regarding the modification of the Constitution",
+                    "An extraordinary appeal filed against an unlawful administrative act"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the difference between 'suspension' and 'interruption' of the statute of limitations?",
+                "answers": [
+                    "Suspension stops the term; interruption resets it and starts a new term",
+                    "They are two identical concepts indicating the interruption of the temporal decorum",
+                    "Interruption is provided only in criminal proceedings of particular gravity",
+                    "Suspension is definitive while interruption is temporary and revocable"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is a 'potestative right' (diritto potestativo)?",
+                "answers": [
+                    "A right allowing to modify the legal situation of others without need for their consent",
+                    "A right that can be exercised only upon specific legal conditions",
+                    "A right that can be recognized only in favor of public entities",
+                    "A right subject to a particularly short statute of limitations"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is meant by 'exclusive jurisdiction' of the administrative judge?",
+                "answers": [
+                    "When the administrative judge is competent to decide on both subjective rights and legitimate interests",
+                    "When jurisdiction is limited to the verification of legitimacy of municipal regulations",
+                    "When the administrative judge can judge also in a criminal context",
+                    "When the decision is not appealable in Cassation for procedural economy reasons"
+                ],
+                "correctIndex": 0
+            }
+        ]
+    }
+}

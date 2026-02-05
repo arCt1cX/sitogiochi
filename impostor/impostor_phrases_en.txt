@@ -291,3 +291,231 @@ A nickname you sometimes call your girlfriend or wife | name a household applian
 The university exam you wish you had gotten a higher grade in | the university exam you enjoyed the most
 The time you usually have breakfast | the best time to wake up on a chill weekend
 The best time to go to bed when you have no plans | the time you usually go out in the evening to meet your friends
+If you could test your new flamethrower on any object, what would you choose? | Name the best car among those present (e.g. ...'s car)
+What is the tease you get most often that has no basis? | What is the tease you get occasionally that you admit is accurate?
+What was your absolute worst school subject? | If you could have eliminated one school subject, which would you have chosen?
+Which of those present most needs to be beaten up by the rest of the group | Who is the most stubborn among those present?
+Your favorite Dragon Ball character | The most overrated Dragon Ball character
+Who among those present is most likely to ask you for a kidney? | Who is the most reckless among those present?
+If you had to choose a current politician to be Prime Minister, who would you choose? | A controversial current political figure that you don't mind
+An Italian political figure you can't stand | An Italian political figure who is a living meme
+If you had to play a video game to save your life, which would you choose? | A video game that makes you swear but you always play
+Which Italian soccer team do you sympathize with but not support? | Name an Italian Serie B team
+What is the worst thing that happened to you in Naples? | What is the worst thing that happened to you in Milan
+Among everyone present, what is the best nickname? | Among everyone present, what is the most embarrassing nickname?
+If you had to organize a double date with two other girls/guys, who among those present would you bring? | Among those present, who dresses the best?
+If you had to swap your job with one of those present, who would you choose? | Who among those present do you think will be richest in the future?
+Which alcoholic drink have you drunk alone most often? | What is the alcoholic drink you order most often at a restaurant
+How do you take your coffee at the bar (e.g. black, macchiato, long, cappuccino)? | Answer "black" or "corrected" (with alcohol)
+At what age did you get drunk for the first time? | At what age did you fall in love for the first time?
+The highest mountain whose summit you have climbed | Name any Italian mountain you have been to
+If you had to change the university you attended to another Italian location, which would you choose? | Name a well-known Italian city
+What app do you use to listen to music? | Answer one of: Apple Music, Spotify, Soundcloud
+Your favorite packaged ice cream | The most overrated packaged ice cream
+A person you would send to jail instantly | Who among those present is the most desperate for pussy/dick?
+Who among your friends would you never involve in a trip to Thailand? | Who among your friends is most likely to join the cast of The Hangover
+Would you work on an offshore oil rig for €5,000 a month | Answer Yes or No
+Would you work as a miner for €10,000 a month | Answer Yes or No
+If you had to do a quiz against the player on your left to save your life, what subject would you choose for the questions? | What was the subject you were strongest in at school?
+You have to defeat all present one by one in a death match but you can choose the martial arts discipline whose rules apply, which one do you choose? | A martial art you practiced or wanted to practice
+Which dinosaur would you choose as a defense weapon? | What is your favorite dinosaur?
+Which exotic animal would you like to introduce to Italy? | Which exotic animal would you release in the house of the person to your right
+Which foreign nation's flag would you steal? | Which nation has the weirdest flag you can think of?
+If you could steal a monument from a foreign nation and bring it to Italy, which would you choose? | A monument in a foreign country you visited but found overrated
+If you could train with any athlete, who would you choose? | An athlete of any sport with whom you think you would be great friends
+Which youtuber would you delete from the internet forever | Who is the most idiotic youtuber you remember?
+A totally useless job that pays very well | The job of one of your friends that you like the least
+If you weren't a fan of your soccer team, which other one would you support? | A soccer team that always goes up and down from Serie A to Serie B
+Which anime would you recommend to someone who knows nothing about it? | What is the most overrated anime
+Which object in your house can you absolutely not do without? | What is the object in your house you fear breaking the most?
+What is a strange object that represents you? | An object that only you possess among those present
+If you had to scam your past self, what type of scam would you choose? | A type of scam or fraud that one of your friends has fallen for at least once
+A social media personality that makes you crack up every time you see them | A social media personality who would die after 2 days without internet
+A cartoon character that you think everyone present has forgotten | A secondary character from the cartoon you watched when you were very little (5-7 years old)
+If you had to steal the job of one of your relatives or family members, who would you choose? | Which of your family members / relatives is most likely to end up in jail?
+Who among your friends is a serial junk food devourer? | If you knew one of your friends just shat themselves right now, who would you bet on?
+If you could add a phrase to the CV of one of those present, what would it be? | What is a phrase that one of those present would be such a clown to have added to their CV?
+If you had to be reincarnated as an animal, which would you choose? | Excluding the elephant, what do you think is the strongest land animal?
+If you had to recommend a comic to someone who doesn't read them, which would you choose? | Name a comic you have read at least once
+If you had to recommend a musical artist that those present don't listen to much, who would you choose? | A musical artist you listen to a lot currently
+How much water do you drink per day in liters? | How many liters of alcohol do you drink on average per week?
+If you were to be interviewed on a podcast, which podcast would it be? | The funniest podcast you have ever listened to
+If the person on your left were to run in the next election, which party would hire them? | Name a current Italian extremist party
+If you were a soccer player, what jersey number would you have? | Pick a number from 1 to 15
+What is the best Kinder snack / sweet? | What is the worst Kinder snack / sweet?
+Which extreme sport, if instructed well, would you try? | Which extreme sport would you never try, even with a good instructor?
+If you had to give up a common piece of clothing forever, which would you choose? | Which piece of clothing do you use only on certain occasions or conditions?
+If you had to get one of your friends' tattoos, which would you choose? | Which tattoo among your friends' would you never get?
+Who has the worst haircut among your friends? | If you had to swap your hair with one of those present, which one would you never choose?
+What is the worst channel on Italian television? | What is the TV channel on Italian television that your parents watched when you were little?
+How much time do you take on average to eat lunch? | Time range: from 5 minutes to 1 hour
+What is the perfect time to have a snack? | Pick a random afternoon time
+If you had to eat the same breakfast forever, what would you choose? | What did you eat for breakfast today? (If you didn't have it, yesterday's)
+If you could shower at only one time forever, what time would it be? | Choose one between 8 am and 8 pm
+What is your computer wallpaper? | What is your phone wallpaper?
+If you could eliminate one animal from the earth, which would you choose? | An insect that constantly enters your house
+What is the strangest animal you have seen in your life? | What is the scariest animal you have seen live?
+How many windows does your house have? | How many rooms does your house have?
+How many shots do you think you can drink before going completely drunk? | Pick a number between 2 and 20
+What is the most overrated TV series? | Which TV series could you not finish?
+Which of your friends invents the most creative and ridiculous excuses? | Who of your friends is most likely to bail on an outing at the last minute?
+What is your favorite month of the year? | Name a summer month
+If you were to write your autobiography, what would be the key turning point year? | What was the year you had the most fun in your life so far?
+Which was the most difficult high school year in terms of study load? | What was the funniest year of high school?
+If you could have a million for every centimeter of height you remove, what figure would you choose? | If you could choose your height, how many centimeters would you add or remove? (just the figure in cm)
+Who is a person who is the idol of the player on your left, but he doesn't admit it? | Who is a famous person who would be great friends with the player on your left
+If you had to be reborn in another country, which would it be? | What is the foreign country you have been to but would not return to?
+If you had to play a match in Serie A, how many minutes do you think you would last? | Range: from 2 to 90 minutes
+If you could go on vacation to only one country in your entire life, which would you choose? | Which country, if you visit it, would you like to explore for at least a few weeks?
+What was the most difficult dare you had to do for a bet or truth/dare? | Invent a particularly embarrassing dare you had to do playing truth or dare
+At what age did you discover that Santa Claus doesn't exist? | Pick a number from 3 to 14
+Which TV program you watched as a child is very underrated in your opinion? | Name a TV program you watched when you were 10 to 14 years old
+In your opinion, is it acceptable to pee in the shower? | In your opinion, should you wash your hands every time you go to the bathroom?
+What was the lowest grade you got at school? | Pick a number from 0 to 5.
+What is something that is often present in a bathroom but is not present in yours? | What is a hygiene / cosmetic product that you almost never use?
+What is a most hilarious fall or slip that happened to you? | Invent a hilarious story where you fell / slipped badly.
+If you had to move to a Third World country, which would you choose? | Answer one of: Egypt, Mexico, Kenya, India
+What cannot be missing at Christmas dinner? | What is the most overrated Christmas food?
+What is the worst thing that happened to you during a vacation? | Invent a terrifying misfortune that happened to you during a vacation
+What is the best thing that was stolen from you, so much so that you were desperate for the theft suffered? | What is an object without which you just can't leave the house?
+How many minutes does your shower last on average? | Pick a number from 1 to 15
+How long was the journey from your home to your high school? | Pick a time: from 5 minutes to 1 hour (e.g. 20 minutes, half an hour...)
+Approximately, how many euros does the t-shirt you are wearing cost? | Approximately, how many applications do you have on your phone?
+Of how many players, among those present, would you wear the clothes they are wearing, to go out in the evening, without problems? | Pick a number from 0 to 3
+What is a product that you think costs way too much at the supermarket? | What is an ingredient that is never missing from your lunch?
+What is the best drink to have when you are at a club? | A very simple drink, but one that you like.
+If you could buy only one beer at the supermarket, which would you choose? | What is, in your opinion, the absolute most underrated commercial beer?
+What is the most devastating alcoholic drink you have ever drunk? | Answer: "my grandfather's grappa"
+What was the maximum number of hours you slept in a row? | Pick a number from 7 to 15
+If you could turn into a bird for a day, which would you choose? | Do you feel more like an eagle, a crow or an owl?
+If you could land a rocket anywhere in the world, where would you crash it? | Answer: "at ...'s house" and name one of those present (e.g. at Marco's house)
+What is the worst dish you were served at lunch/dinner as a guest? | What is a combination of ingredients that many eat but you find disgusting?
+Better to live in a castle, a villa in Hollywood or a chalet in the mountains? | Answer: castle
+Which traditional cuisine (e.g. Chinese, Indian) do you like but is inedible in Italy? | If you could eat only one traditional cuisine (e.g. Chinese, Indian) besides Italian, which would you choose?
+What is a dessert that many don't like but you do? | What is a dessert you always see on menus but never order
+Which musical artist is better in features than in solo songs? | Who is a rapper of whom you like only 2-3 songs and that's it?
+What is a music album whose cover is more beautiful than the album itself? | What is the worst music album of your favorite artist (or one of your favorites, if you don't have just one)?
+Who is a person with whom you had to collaborate at least once, but with whom you would not stand working again? | Name any of your colleagues, high school / university classmates
+If you had to swap a room with the same one present in the house of the player on your left, which would you choose? | What is, in your opinion, the ugliest room in your house?
+If you could receive €1 million for every consecutive km you manage to run, how many millions do you think you would get? | Pick a number from 0 to 40
+How many emails do you send per day, currently? | Pick a number from 0 to 5
+How many Whatsapp messages do you send per day, on average | How old is the player on your right?
+In your opinion, how much would you manage to do at most in the long jump in centimeters? | If the player on your right doubled in height, how tall would they be in centimeters?
+If you had to work in any law enforcement / security body, which would it be? | What is the law enforcement body that, in your opinion, is objectively the most useful for the country?
+What is a music genre that breaks your eardrums? | Which music genre is perfect for a club?
+If you had to move to another Italian region, which would you prefer? | What is the most underrated Italian region for a vacation?
+If you could eat only one fish dish for the rest of your life, which would you choose? | What is the most expensive fish dish you have ever eaten?
+Who among those present is most likely to contract Ebola? | Who among those present gets sick most often?
+Approximately, how many steps do you have to take to walk to your apartment? | Answer one of: 0, 50, 100, 500
+What grade do you think the player on your right got on their high school diploma? | Pick a number from 70 to 100
+If you had to move to a city in the United States, which would you choose? | What is an American city that intrigues you, but where you would never live?
+If you had to describe the person on your right with one word, what would it be? | Name something the player on your right is obsessed with
+What is a little-known animal that you would really like to see live? | Answer one of: honey badger, red panda, capercaillie
+What is a gym or cardio exercise that is uncommon but you like to do? | What is a weird exercise you often see done in the gym but don't understand the point of?
+Who was your favorite soccer player when you were little? | Answer: Lionel Messi
+If you could travel to an island of your choice, where would you go? | Name any Caribbean or Pacific island
+What is the most niche skill on your resume? | What is a skill on your resume that you would be tempted to remove?
+Who among those present uses drugs most frequently? | Who among those present is most likely to rob a bank?
+What was your favorite carbonated drink as a child? | What is the most underrated carbonated drink?
+What is your ideal food for the munchies? | What is your favorite food to eat while watching a movie?
+If you could live one day in an ancient civilization, which would you choose? | Which, in your opinion, was the most ruthless ancient people in war?
+In your opinion, in which school subject was the player on your left hopeless? | In which school subject were you totally hopeless?
+Who is the clownest friend you have ever had? | Who was your desk mate in high school?
+Stand up if you have ever pooped your pants as an adult | Stand up
+Stand up if you have ever slipped on a banana | Stand up
+Have you ever been to a tranny? | Answer Yes or No
+What is a subject / topic in which, in your opinion, you are the only expert among those present? | In what sector do you work? (if you don't work, what is the university exam in which you did best?)
+How do you drink coffee (e.g. black, macchiato etc.) | Answer: black
+If you were to go on a TV show, who would you want the host to be? | Who is the host of your favorite quiz show / TV program?
+What is the best cheese? | What is the cheese you eat most often?
+Which board game does everyone like but makes you bored to death? | Which board game have you played the most times ever?
+What is the perfect alcoholic drink for a winter evening with a temperature of 0 degrees? | What is the alcoholic drink you drink most often?
+If you could receive €1,000,000 for every push-up you can do in a row, how many millions do you walk away with? | At what age would you like to get married?
+Who among those present is the biggest nerd? | Who among those present spends the most time at home?
+If you had to beat everyone present in a sport to save your life, which would you choose? | Which sport do you like, but none of those present watch?
+What is the most disgusting course you have ever eaten at all you can eat sushi? | What is a course at all you can eat sushi that you like but almost everyone finds disgusting?
+What is your favorite cuisine after Italian? | Which foreign cuisine is good but you don't like as much as everyone else?
+What is your perfect refreshing cocktail for a summer evening? | What is the two-ingredient cocktail (e.g. gin and tonic) you prefer absolutely?
+Which brands of cigarettes do you buy or have bought most often? | Answer a common cigarette brand of your choice
+Who among those present would be the worst elementary school teacher? | Who among those present smokes the most joints?
+What is the worst place you have been on vacation in Italy? | What is the worst city to be in in Italy?
+Who is a female musical artist you like? | Who is the most famous female musical artist of the moment?
+If the player on your right were ever to be arrested, what would be the most plausible reason? | If you were ever to be arrested, what would be the most plausible reason?
+If you were forced to repeat a year of high school now, which would you choose? | What is the year of high school when you had the most success with women (or men)?
+At what age did you go to school alone for the first time? | At what age did you masturbate for the first time?
+What is the digital tool you use the most, excluding the phone? | Answer one of: tablet, laptop, television
+If you could steal a food / typical dish of a foreign cuisine and make it Italian, which would you choose? | What is your favorite order at all you can eat sushi?
+What is a topic of a school subject in which you were destroyed at the oral exam? | Answer one of: Integrals, Mitosis and meiosis, The Betrothed (I Promessi Sposi)
+What sport did you do as a child but for a short time? | What sport would you have liked to do as a child but couldn't?
+What underrated character did you always use on MarioKart? | Who was the Mario Kart character you disliked the most?
+What is an Instagram page you follow but few of those present follow in your opinion? | What is the wildest page you have ever followed on Instagram?
+How many times have you been in a fight in your life? | Pick a number from 0 to 3
+What is an object that you think will become obsolete in 5 years? | What is an electronic instrument that hasn't existed for a long time?
+How many messages will you send per day on average? | Pick a number from 0 to 100 (tip: round it to a round figure)
+Of which artist have you bought a CD or vinyl at least once? | Which artist's concert was the best you've been to?
+How many phone apps do you actually use every day? | Pick a number from 0 to 10
+What is an alcoholic drink you say no to even if they offer it to you? | What is an alcoholic drink that made you vomit the first time you drank it?
+If you had to participate in a reality show, which would it be? | Which reality show do you always hear about but have never seen?
+If you had to eliminate all your hobbies and keep only one, which would it be? | What sport do you currently practice?
+What is the part of the body where you had the worst injury of your life? | What is the part of the body that hurts you most often?
+What is the city with the worst transport you have ever been to? | What is the dirtiest city you have been to?
+If you could take control of a social network for a day, which would you choose? | What is a social network that many have but you would delete without problems?
+In which Italian region did you find the ugliest beach of all? | In which Italian region did you eat the worst?
+What is an occasion or ceremony that in your opinion is celebrated in an exaggerated way in Italy? | Answer one of: wedding, first communion, eighteenth birthday
+On average, how many times do you go to the hairdresser / barber every year? | On average, how many times a month do you train or do sport?
+Where is your maternal grandmother from? | Where is your paternal grandmother from?
+How many coffees do you drink per day? | How many bathrooms are there in your house?
+What is the foreign country where you ate the worst? | What is the foreign country where you had the worst hotel / apartment during the vacation?
+In your opinion, what should be the honest price of a cocktail in Italy? | Pick a number from 0 to 10
+If you had to give yourself a vote from 0 to 10 for physical appearance, how much would you give yourself? | Give a vote from 0 to 10 to the movie "Harry Potter and the Sorcerer's Stone"
+Give a vote as objective as possible from 0 to 10 to your outfit | Give a vote from 0 to 10 to this dish: bucatini all'amatriciana
+What is the best season to go to the mountains? | What is the worst season to run outdoors?
+Which sport / hobby would you have liked to do, but you are totally hopeless? | What is a sport in which everyone sooner or later gets hurt?
+What is a little-popular European state where you would like to go on vacation? | Answer one of Estonia, Latvia or Lithuania
+If you were in charge of Italy, which food would you make illegal? | What is a food that made you very sick to your stomach?
+They offer you €1,000,000 if you finish the entire menu of a restaurant, which restaurant do you choose? | What is the fast food restaurant you have been to most often?
+What is an addiction that you think is often normalized in today's society? | What is a common drug you would try only once?
+If you could assign "a new year's resolution" to one of the players present (and he is forced to respect it), which resolution would you choose? | What is a habit you often promise yourself to start doing, but then continue not to do or postpone?
+What is an important aspect of your work in which you are objectively very poor, at the moment? | What is the part of your job in which you are better than average?
+What is an object that everyone brings to the beach but you can do without without problems? | If you could bring only one beach object when you go to the beach, which would you choose?
+They leave you in a freezing forest in northern Canada with only a coat and a lighter, how long do you survive? | Range: from 0 to 5 days (example answer: 2 days!)
+What is the bite or sting of an animal that hurt you the most? | What is in your opinion the most painful insect bite you can risk getting in Italy?
+Among those present, who is the best club dancer? | Among those present, who is the best singer?
+What is an airline that everyone criticizes but has never given you problems? | What is the worst airline to travel with
+What is the best airline you have traveled with? | What is the airline that charged you the most for a ticket?
+How many fines have you received this year? | How many times a year do you go to the dentist?
+How many pairs of shoes do you own? | How many pairs of jeans do you own?
+How many times has it happened to you to get stuck in an elevator? | Pick a number from 0 to 5
+On average, how many times do you eat pasta per week? | On average, how many times do you eat meat per week?
+In what year was the most devastating Halloween party of your life? | In what year did you have the most devastating vacation with friends of your life?
+What brand is the gas station you go to most often? | What is a brand of gas you always avoid when you have to refuel?
+What is a meme or social phenomenon that was very popular but didn't make you laugh at all? | What is a meme that is now out of fashion but made you laugh a lot?
+What is the brand of mineral water that is most often present in your home? | What is a brand of mineral water you really don't like?
+If they offered you €1 million for every consecutive year lived in Antarctica, how many millions do you think you would walk away with? | Pick a number from 0 to 10
+At what percentage does dark chocolate become inedible for you? | Pick a number from 50 to 100 (tip: round it to 0 or 5).
+What are the three applications you use most on your phone? | What are the three social / messaging apps you use absolutely the most?
+What was your best performance in the sport you played when you were younger? | Invent a great performance you did in the sport you played when you were younger
+In which supermarket chain do you shop most often? | Which supermarket chain is the supermarket closest to your home?
+If you had to spend money on only one game of chance, which would you choose? | What is the most senseless game of chance in your opinion?
+What is the best color for a man's full suit? | What is the best color for a pair of jeans?
+What is the highest hand you have ever been dealt in poker? | What is the highest hand you have seen come out in a poker game where you were a player?
+What is a terrible phrase to say at a job interview? | What is a terrible phrase to say on a first date?
+What is a terrible phrase to say at a funeral? | What is a terrible phrase to say at a wedding?
+What is a terrible phrase to say in a church? | What is a terrible phrase to say at a synagogue?
+What is a terrible phrase to yell on a plane? | What is a terrible phrase to say to a policeman?
+What is a terrible phrase to exclaim during Christmas dinner? | What is a terrible phrase to exclaim on the subway?
+If you could be a ghost for a day, whose house would you go to to terrorize them? | Who is your stingiest friend?
+What is a movie that most people like but you think sucks? | What is the last movie you saw at the cinema?
+How many phones have you broken? | How many times have you broken a bone?
+If you could wear only one model of shoes for the rest of your life, which would you choose? | What is a model of shoes you wear only on special occasions?
+What is a sport you would remove from the Olympics? | What is the strangest sport you have seen at the Olympics
+What is a city you have been to and have no intention of returning to? | What is the city you dislike the most absolutely?
+In what city did you eat the worst pizza of your life? | What is the most beautiful city abroad you have been to?
+What is a street / square in the neighborhood known for being a hashish dealing point? | What is the most infamous street / square in your neighborhood where you live?
+If you were to win an invented award (e.g. best vodka consumer), what would it be? | Answer "Best..." and say your job (example: best waiter)
+What is the most embarrassing thing you had to ask Chat GPT for instructions on? | What is the household chore / errand you hate doing the most?
+What is the most fun activity to do in the snow? | What is the stupidest activity to do in the snow?
+If you had to play a soccer match as a striker in the Third Category, how many goals do you think you would manage to score? | If you had to play a soccer match as a striker in an under 12 match, how many goals do you think you would manage to score?
+Objectively, who is the most attractive among those present? | Among those present, who is the hardest to beat in a fight?
+In which city did you sleep in the worst hotel you have ever been to? | What is the ugliest city in Italy?
+If you could eliminate one restaurant in your city, which would you choose? | What is the last restaurant in your city you went to for lunch / dinner?

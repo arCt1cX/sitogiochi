@@ -459,11 +459,11 @@ const translations = {
                 'Simple and intuitive interface'
             ],
             'instructions': [
-                'One player will be randomly chosen as the impostor',
-                'All other players are shown a secret topic',
-                'Taking turns, each player must say a word related to the topic',
-                'After several rounds, everyone votes for who they think is the impostor',
-                'The impostor wins if they remain undetected or guess the topic'
+                'All players are shown a secret question',
+                'One player will be randomly chosen as the impostor and will have a similar but different question',
+                'After all players have read their question, everyone says their answer simultaneously',
+                'From the various answers, players try to figure out who the impostor is and then vote',
+                'The impostor wins if they remain undetected or guess the question, otherwise the group wins'
             ]
         },
         'colorgrid': {
@@ -481,17 +481,17 @@ const translations = {
             ],
             'instructions': [
                 'Choose the grid size',
-                'A colored cell is randomly hidden',
-                'Players take turns guessing',
-                'After each attempt, you\'re shown how close you are',
-                'The player who finds the cell with fewer attempts wins'
+                'A randomly chosen player will see a colored cell and must write a word related to the color to help other players guess',
+                'Other players take turns guessing',
+                'Whoever guesses or gets close earns points',
+                'The player with the most points at the end wins'
             ]
         },
         'guessthepic': {
             'title': 'Guess Rush',
             'catchphrase': 'Guess what the 5 images show and score points!',
-            'description': 'Guess Rush is a fast-paced game where you need to guess what five images on the screen represent. The faster you guess, the more points you earn! Perfect for testing your observation skills and general knowledge.',
-            'players': '2-8 players',
+            'description': 'Guess Rush is a fast-paced game where you need to guess what five images on the screen represent. The more images you guess, the more points you earn! Perfect for testing your observation skills and general knowledge.',
+            'players': '1-10 players',
             'time': '5-10 minutes',
             'difficulty': 'Beginner',
             'features': [
@@ -502,29 +502,29 @@ const translations = {
             ],
             'instructions': [
                 'A series of 5 images is shown on the screen',
-                'Players must guess what the images represent',
+                'Taking turns, players must guess what the images represent',
                 'Write your answer as quickly as possible',
-                'Earn points based on how quickly you guess',
+                'Earn points based on how many images you guess correctly',
                 'The player with the most points at the end wins'
             ]
         },
         'timergame': {
             'title': 'Wordrace',
             'catchphrase': 'Race against time in this word challenge!',
-            'description': 'Wordrace is a frantic game where you need to find words that start with a specific letter before time runs out. A great way to improve your vocabulary and quick thinking under pressure!',
-            'players': '2-10 players',
+            'description': 'Wordrace is a frantic game where you need to find words in a specific category before time runs out. A great way to improve your vocabulary and quick thinking under pressure!',
+            'players': '2-4 players',
             'time': '10-15 minutes',
             'difficulty': 'Intermediate',
             'features': [
                 'Customizable timer',
-                'Random letter each round',
+                'Random category each round',
                 'Optional thematic categories',
                 'Integrated scoring system'
             ],
             'instructions': [
-                'A random letter is drawn at the beginning of each round',
+                'A random category is drawn at the beginning of each round',
                 'The timer starts immediately',
-                'Each player must say a word that starts with that letter',
+                'Each player must say a word that belongs to that category and press their button, decreasing other players\' time and increasing their own',
                 'Words cannot be repeated',
                 'If a player cannot find a word within the time limit, they are eliminated',
                 'The last player remaining wins'
@@ -544,12 +544,16 @@ const translations = {
                 'Optional timer to increase difficulty'
             ],
             'instructions': [
-                'Players divide into teams',
-                'An initial word is chosen',
-                'Taking turns, each player must say a word associated with the previously said word',
-                'If a player cannot find an association within the time, the chain breaks',
-                'The team earns points based on the length of the chain created',
-                'The team with the most points wins'
+                'Players divide into teams of 3 people',
+                'In each team: 1 player guesses and 2 help',
+                'At the start of each turn, a secret word is generated',
+                'Taking turns, the two helpers each say one word',
+                'The words must form a question to help the third player guess',
+                'The question must start with: Who, What, How, When, Which, or Why',
+                'The guessing player must answer within the time limit',
+                'Correct answers earn 1 point, wrong answers or timeout lose 1 point',
+                'Saying synonyms of the word or more than one word per turn is forbidden',
+                'The team with the most points at the end wins'
             ]
         },
         'alphabetgame': {
@@ -567,11 +571,10 @@ const translations = {
             ],
             'instructions': [
                 'A category is chosen (e.g., animals, cities, food)',
-                'A random letter is drawn',
-                'Players take turns saying a word that starts with that letter and belongs to the category',
-                'Words cannot be repeated',
+                'Players take turns saying a word that starts with a letter of the alphabet and press the corresponding letter',
+                'The letter will turn gray and cannot be used again',
                 'If a player cannot find a word within the time, they lose a point',
-                'After multiple rounds, the player with the most points wins'
+                'After multiple rounds, the player with the most points wins!'
             ]
         },
         'bluffme': {
@@ -589,10 +592,11 @@ const translations = {
             ],
             'instructions': [
                 'A category is chosen (e.g., "animals with tails")',
-                'Taking turns, each player says a number (e.g., "7") and an item in the category (e.g., "cat")',
+                'Taking turns, each player says a number (e.g., "7")',
                 'The number must be higher than the one said by the previous player',
-                'Other players can accept or doubt',
-                'Correct doubters earn points, incorrect ones lose points',
+                'The next player can accept or doubt; accepting continues the game, doubting forces the previous player to list as many items in that category as the number they said',
+                'Whoever accepts and answers correctly in time earns points, whoever fails loses points',
+                'Whoever doubts correctly earns points, whoever doubts incorrectly loses points',
                 'The first player to reach the set score wins'
             ]
         },
@@ -634,7 +638,7 @@ const translations = {
             'instructions': [
                 'The 3x3 grid contains a different topic in each square',
                 'Taking turns, players choose a square to capture',
-                'To capture the square, you must answer a question on the topic',
+                'To capture the square, you must find an answer that satisfies both the row and column topics',
                 'If you answer correctly, you capture the square with your symbol (X or O)',
                 'If you are wrong, the square remains free',
                 'The first to form a line of three symbols wins'

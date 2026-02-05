@@ -1,146 +1,297 @@
-Meme
-Brainrot
-Animals
+Memes
 Countries
 Cities
-Person names
-Foods
 Movies
 Sports
-Famous brands
-Cartoon characters
+Famous Brands
+Cartoon Characters
 Vegetables
 Fruits
 Colors
-Drinks
-Transportation
-Musical instruments
-Chemical elements
+Beverages
+Means of Transport
+Musical Instruments
+Chemical Elements
 Clothing
-Household items
-Celebrities
-Famous books
-Video games
-Rivers and lakes
+Famous Books
+Video Games
+Rivers and Lakes
 Mountains
-Famous monuments
-TV series
+Famous Monuments
+TV Series
 Actors
 Singers
-Songs
-Beach items
-Professions
+Beach Items
+Jobs
 Insects
 Flowers
 Superheroes
-Movie villains
-School subjects
-University majors
-School supplies
-Olympic sports
-European countries
-Italian cities
-Dog breeds
-Fast food chains
+Movie Villains
+School Subjects
+University Faculties
+School Supplies
+Olympic Sports
+European Countries
+Italian Cities
+Dog Breeds
+Fast Food Chains
 Desserts
-Home appliances
-Smartphone apps
+Home Appliances
+Smartphone Apps
 Websites
-Jobs
-Plants
-School items
-Car brands
-Pop music
+Professions
+School Objects
+Car Brands
 Planets
-Famous scientists
-Historical figures
-Fairy tales
-Technology
-Celebrations and holidays
-TV shows
-Board games
-Toys
+Famous Scientists
+Historical Figures
+Fairy Tales
+Holidays and Celebrations
+TV Shows
+Board Games
 Emotions
-Types of fish
-Summer activities
-Winter activities
-US states
-European capitals
-Types of pizza
-Famous artists
-Types of pasta
-Monsters and mythical creatures
-National parks
+Fish
+Summer Activities
+Winter Activities
+US States
+European Capitals
+Types of Pizza
+Famous Artists
+Types of Pasta
+Monsters and Mythological Creatures
+National Parks
 Perfumes
 Minerals
-Famous athletes
+Famous Athletes
 Philosophers
 Comics
-Fast food items
+Fast Food Items
 Trees
-Marvel comics
-DC comics
+Marvel Comics
+DC Comics
 Influencers
 Cartoons
-Music composers
-Cooking techniques
-Types of tea
-Types of coffee
-Types of beer
-Healthy habits
-Famous handbags
+Musical Composers
+Famous Bags
 Museums
 Religions
-Exotic foods
 Famous YouTubers
-Animated films
-Theater plays
-Extreme sports
-Popular vacation spots
-Art movements
+Animated Movies
+Theater Plays
+Extreme Sports Types
+Popular Vacation Spots
+Artistic Movements
 Birds
-Types and cuts of meat
-Natural landscapes
-Manual jobs
-Famous universities
-Greek mythology characters
-Typical Italian foods
-Literature classics
-Building materials
-Famous quotes
-Kitchen tools
-Types of shoes
-Amusement parks
-Japanese traditions
-Fashion icons
-Travel destinations
-Futuristic technology
-Human body parts
-Classical music composers
+Types and Cuts of Meat
+Natural Landscapes
+Manual Jobs
+Famous Universities
+Greek Mythology Characters
+Typical Italian Foods
+Classic Literature
+Construction Materials
+Kitchen Tools
+Types of Shoes
+Amusement Parks
+Fashion Icons
+Travel Destinations
+Human Body Parts
 Dinosaurs
-Jazz music
-Plastic materials
-Vintage items
-Aquarium fish
-Natural biomes
-Historical periods
-Languages spoken in the world
-Types of fabrics
-International organizations
-Myths and legends
-Photography styles
-Spacecraft
-Famous artworks
-Important inventions
-Music genres
-Popular conspiracy theories
-Ashton Hall routines
-TikTok influencers
-Strange fetishes
-Things not to do at the gym
-Things not to do when you're in a car
-Things not to do during a marathon
-Things not to do when you're at a wedding
-Things not to say on a first date
-Things not to say to a child
-Things not to say at a funeral 
+Natural Biomes
+Types of Fabrics
+International Organizations
+Myths and Legends
+Famous Artworks
+Important Inventions
+Music Genres
+Popular Conspiracy Theories
+Ashton Hall Routines
+TikTok Influencers
+Weird Fetishes
+Beer Brands
+Italian Mineral Water Brands
+Ways to Order Coffee
+Sanremo Songs
+Steroids and PEDs
+UFC Fighters
+Soccer Players Who Played for Both Inter and Milan
+NBA Basketball Players
+Organic Compound Classes (Chemistry)
+Italian Banks
+Italian Provinces
+Pasta Shapes
+Typical Roman Cuisine Dishes
+Typical Neapolitan Cuisine Dishes
+Typical Sardinian Cuisine Dishes
+Typical Sicilian Cuisine Dishes
+Dried Fruits and Nuts
+English Literature Authors
+Nightclubs in Your City
+US Cities
+North and South American Countries
+African Countries
+Reggaeton Artists
+Cigarette Brands
+Hard Liquors
+Italian Cheeses
+Italian Cold Cuts
+Fantasy Movies
+Science Fiction Movies
+Horror Movies
+McDonald's Sandwiches and Products
+Common School Classmates Among Players
+Notorious Criminals
+Social Networks
+Track and Field Events
+English Soccer Teams
+Spanish Soccer Teams
+Swimmers and Divers
+Snakes
+Often Discriminated Ethnic Groups
+CiccioGamer and Joker's Blunders
+PS4 Video Games
+Oceans and Seas
+Crimes
+Types of Cocktails/Drinks
+Cat Breeds
+Very Fast Animals
+Cell Phone Brands
+Phone Carriers
+Weapons
+Famous Churches, Basilicas and Cathedrals
+Chocolate Brands
+Panettone and Pandoro Brands
+Watch Brands
+Luxury Car Brands
+Dictators
+Teams That Won Champions League/European Cup
+World Cup Winning Soccer Players
+Common School Teachers Among Players
+Famous Journalists
+Characters from La Zanzara
+Italian Rappers
+Italian Trash TV Celebrities
+TV Hosts
+Vehicles
+TV Game Shows
+Drugs
+Car Parts
+Restaurants in Your City
+German Soccer Players
+African Soccer Players
+Famous Poems
+Handbag Brands
+Female Rappers
+Italian Soccer Coaches
+Painters
+Anime
+Sculptors
+Top TikTok Remains
+Wars Past and Present
+Places in the World Not Ideal for Vacation
+Typical Italian Appetizers
+Betting Sites and Companies
+Types of Soccer Bets
+Famous Wrestlers
+Famous Bodybuilders
+Leg Exercises at the Gym
+Gym Equipment
+Soccer Goalkeepers
+Back Exercises at the Gym
+Chest or Shoulder Exercises at the Gym
+Ball Sports
+Italian Newspapers
+Boxers
+Python Functions
+Programming Languages
+National Teams That Won World Cup or European Championship
+MasterChef Italy Characters
+Famous Chefs
+Spanish Cities
+Things to See in Paris or London
+Total Drama Characters
+Dragon Ball Characters
+Fairly OddParents Characters
+Pokemon
+Looney Tunes Characters
+Clash of Clans Structures and Troops
+Smartphone Games
+Toothpaste Brands
+Chewing Gum Brands
+Stadiums
+Cannabis Strains
+Poker Hands
+Famous Card Games
+Party Games
+Types of Boats
+Italian Ministries
+Italian Politicians
+Porn Stars
+Roman Kings and Emperors
+Geometric Shapes
+Pasta Brands
+Jobs Requiring a Uniform
+Freshwater Animals
+Music Bands
+Things Found in Space
+PC Applications
+Protein-Rich Foods
+Word Fonts
+Types and Brands of Candies
+Italian Swear Words
+Famous Paintings
+Famous Statues
+Farm Animals
+Islands
+Asian Countries
+Medicines
+Cardio Activities
+Coastal Locations
+Marine Animals
+Mammals
+Places You Don't Want to Be at Night
+Things You Can Smoke
+Mickey Mouse Characters
+Ben 10 Characters and Aliens
+Atalanta Soccer Players
+Soccer Derbies
+Italian Universities
+Latin/Greek Text Authors
+Hairstyles
+Types of Jewelry
+Ancient Peoples
+Types of Monkeys
+Computer Parts
+Household Appliances
+Outdoor Activities
+Things You Put in a Travel Bag
+Argentinian Soccer Players
+Tennis Players
+F1 Drivers
+MotoGP Riders
+Volleyball Players
+Dancers
+Legumes
+Italian Porn Actresses
+Soccer Commentators
+Programming Languages
+Meat Dishes
+Common School Classmates Among At Least 2 Players
+Nike Shoe Models
+Types and Shapes of Bread
+Gardening Tools
+Italian Supermarket Chains
+Nocturnal Animals
+Round Things
+Streets and Squares in Your City
+Harry Potter Characters
+Muscles
+Internal Body Organs
+Famous Streamers
+Wii Sports Resort Games
+Kamasutra Positions
+Schools in Your City
+Ice Cream Shops in Your City
+Pizzerias in Your City
+Non-Alcoholic Carbonated Drinks
+Chips Brands

@@ -1,0 +1,1684 @@
+{
+    "Alcohol": {
+        "bambino": [
+            {
+                "question": "What fruit is wine made from?",
+                "answers": [
+                    "Strawberry",
+                    "Grape",
+                    "Peach",
+                    "Olive"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these wines does not exist?",
+                "answers": [
+                    "Red",
+                    "Orange",
+                    "White",
+                    "Rosé"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these is a cocktail?",
+                "answers": [
+                    "Cappuccino",
+                    "Mojito",
+                    "Orange soda",
+                    "Iced tea"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is Jägermeister?",
+                "answers": [
+                    "A wine",
+                    "A bitter",
+                    "A beer",
+                    "A tea"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which country was Limoncello invented?",
+                "answers": [
+                    "Colombia",
+                    "Pakistan",
+                    "Italy",
+                    "Namibia"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What color is the Heineken beer bottle?",
+                "answers": [
+                    "Red",
+                    "Brown",
+                    "Yellow",
+                    "Green"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What color is the Peroni logo?",
+                "answers": [
+                    "Red",
+                    "Green",
+                    "Purple",
+                    "Pink"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is Weiss?",
+                "answers": [
+                    "Horse milk",
+                    "A Nazi official",
+                    "A beer",
+                    "A wine"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a Gin Tonic made of?",
+                "answers": [
+                    "Vodka and tonic water",
+                    "Gin and tonic water",
+                    "Gin and lemonade",
+                    "Rum and pear juice"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which alcoholic drink is often drunk with salt and lemon?",
+                "answers": [
+                    "Milk",
+                    "Tequila",
+                    "Seawater",
+                    "Diesel"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the alcohol content of mineral water?",
+                "answers": [
+                    "0%",
+                    "40%",
+                    "70%",
+                    "12.5%"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which region does Vermentino di Sardegna wine come from?",
+                "answers": [
+                    "Sicily",
+                    "Sardinia",
+                    "Calabria",
+                    "Puglia"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which region does Etna Rosso wine come from?",
+                "answers": [
+                    "Somalia",
+                    "Molise",
+                    "Sicily",
+                    "Democratic Republic of Congo"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is sangria made with, besides wine?",
+                "answers": [
+                    "Hamburger",
+                    "Fruit",
+                    "Cough syrup",
+                    "Neapolitan garbage"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these is an alcoholic drink?",
+                "answers": [
+                    "Goat milk",
+                    "Slushie",
+                    "Whisky",
+                    "Water"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these is NOT alcoholic?",
+                "answers": [
+                    "Amaro del Capo",
+                    "Negroni",
+                    "Spritz",
+                    "Sparkling water"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these is sparkling?",
+                "answers": [
+                    "Rum",
+                    "Sparkling wine",
+                    "Absinthe",
+                    "Vodka"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many different liquors does the Quattro Bianchi have?",
+                "answers": [
+                    "One",
+                    "Two",
+                    "Three",
+                    "Four"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where is Marsala produced?",
+                "answers": [
+                    "Afghanistan",
+                    "Marsala",
+                    "Belgrade",
+                    "Naples"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which is more alcoholic?",
+                "answers": [
+                    "Pure alcohol",
+                    "Beer",
+                    "Wine",
+                    "Water"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where is Caipirinha drunk?",
+                "answers": [
+                    "Uranus",
+                    "Neptune",
+                    "Brazil",
+                    "Naples"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What substance is wine?",
+                "answers": [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "Dark matter"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which alcoholic drink has foam?",
+                "answers": [
+                    "Vodka",
+                    "Gin",
+                    "Beer",
+                    "Tequila"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these drinks gets you dead drunk?",
+                "answers": [
+                    "Milk",
+                    "Nesquik",
+                    "Absinthe",
+                    "Milkshake"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does limoncello taste like?",
+                "answers": [
+                    "Marijuana",
+                    "Lemon",
+                    "Carrara marble",
+                    "Decaffeinated coffee"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which coffee is alcoholic?",
+                "answers": [
+                    "Black coffee",
+                    "Caffè corretto",
+                    "Cappuccino",
+                    "Shittaccino"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What happens when you drink too much?",
+                "answers": [
+                    "You win the Nobel Prize",
+                    "Schools close in Naples",
+                    "You vomit",
+                    "Nothing"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a shot?",
+                "answers": [
+                    "A dinosaur",
+                    "A pokemon",
+                    "A small glass of hard liquor",
+                    "A word in Calabrian"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does a vodka lemon contain?",
+                "answers": [
+                    "Protein",
+                    "Vodka and lemonade",
+                    "Uranium",
+                    "Wine"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How is drunkenness also defined?",
+                "answers": [
+                    "Death",
+                    "Hangover",
+                    "Snort",
+                    "Carlo Cracco"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is Nastro Azzurro?",
+                "answers": [
+                    "A medicine",
+                    "A beer",
+                    "A pizza",
+                    "An ice cream"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is drunk in a goblet?",
+                "answers": [
+                    "Diarrhea",
+                    "Hot chocolate",
+                    "Wine",
+                    "Coffee"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Where do you go to get drunk on beer?",
+                "answers": [
+                    "Nowhere",
+                    "Pub",
+                    "School",
+                    "Hospital"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What color is blond beer?",
+                "answers": [
+                    "Yellow",
+                    "Purple",
+                    "Blue",
+                    "Indigo"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What color is Aperol?",
+                "answers": [
+                    "Blue",
+                    "Yellow",
+                    "Red",
+                    "Green"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the alcohol content of grappa?",
+                "answers": [
+                    "Low",
+                    "Null",
+                    "High",
+                    "100%"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What liquor do pirates drink?",
+                "answers": [
+                    "Rum",
+                    "Negroni",
+                    "Negroni sbagliato",
+                    "Water"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which of these is not transparent?",
+                "answers": [
+                    "Water",
+                    "Wine",
+                    "Vodka",
+                    "Gin"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What does a chocolate liqueur taste like?",
+                "answers": [
+                    "Ginger",
+                    "Cinnamon",
+                    "Chocolate",
+                    "Hashish"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does Caffè Borghetti taste like?",
+                "answers": [
+                    "Nothing",
+                    "Coffee",
+                    "Mother-in-law's milk",
+                    "Oregano"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is apple cider made from?",
+                "answers": [
+                    "Pears",
+                    "Oranges",
+                    "Apples",
+                    "Plums"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What do Russians always drink?",
+                "answers": [
+                    "Vodka",
+                    "Caffè Borghetti",
+                    "Sex on the Beach",
+                    "Non-alcoholic cocktails"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Does it make sense to drink non-alcoholic cocktails?",
+                "answers": [
+                    "Yes",
+                    "Sometimes",
+                    "Always",
+                    "It makes no sense, they should be banned"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which wine is mainly drunk with fish?",
+                "answers": [
+                    "Fragolino",
+                    "None",
+                    "White wine",
+                    "Red wine"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is Guinness?",
+                "answers": [
+                    "A wine",
+                    "A beer",
+                    "A drug",
+                    "A Dragon Ball character"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What do Scots and Irish drink?",
+                "answers": [
+                    "Nothing",
+                    "Whisky",
+                    "Orange soda",
+                    "Discount Cola"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these contains alcohol?",
+                "answers": [
+                    "Cedrata",
+                    "Chinotto",
+                    "Jägermeister",
+                    "Mineral water"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What color is the Jack Daniel's bottle?",
+                "answers": [
+                    "Rainbow",
+                    "Black",
+                    "Urine color",
+                    "Does not exist"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Who cannot consume alcohol by law?",
+                "answers": [
+                    "The chavs",
+                    "Those who are driving",
+                    "Alfonso Signorini",
+                    "The Monster of Florence"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "facile": [
+            {
+                "question": "What color is Campari?",
+                "answers": [
+                    "Red",
+                    "Transparent",
+                    "Black",
+                    "Yellow"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which ingredient is always present in beer?",
+                "answers": [
+                    "Sugar",
+                    "Hops",
+                    "Milk",
+                    "Fruit"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "From which raw material is vodka obtained?",
+                "answers": [
+                    "Grape",
+                    "Apples and wheat",
+                    "Potatoes and cereals",
+                    "Sugar cane"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "In which region does Chianti wine originate?",
+                "answers": [
+                    "Lazio",
+                    "Tuscany",
+                    "Piedmont",
+                    "Veneto"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which glass is sparkling wine normally served?",
+                "answers": [
+                    "Cup",
+                    "Mug",
+                    "Flute",
+                    "Beer goblet"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these drinks has the highest alcohol content?",
+                "answers": [
+                    "Red wine",
+                    "IPA Beer",
+                    "Grappa",
+                    "Cedrata"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these famous cocktails is often prepared with Aperol?",
+                "answers": [
+                    "Gin Tonic",
+                    "Spritz",
+                    "Bloody Mary",
+                    "Mojito"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is Jack Daniel's?",
+                "answers": [
+                    "A whiskey",
+                    "A rum",
+                    "A grappa",
+                    "A wine"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the main ingredient of gin?",
+                "answers": [
+                    "Lemon",
+                    "Juniper",
+                    "Cinnamon",
+                    "Apple"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which drink is usually served in a mug?",
+                "answers": [
+                    "Wine",
+                    "Cocktail",
+                    "Bitter",
+                    "Beer"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which ingredient does the Mojito typically contain?",
+                "answers": [
+                    "Coffee",
+                    "Milk",
+                    "Mint",
+                    "Tequila"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the main ingredient of Negroni?",
+                "answers": [
+                    "Campari",
+                    "Vodka",
+                    "Red wine",
+                    "Absinthe"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What drink does the Keglevich brand produce?",
+                "answers": [
+                    "Beer",
+                    "Gin",
+                    "Vodka",
+                    "Tequila"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What drink does the Absolut brand produce?",
+                "answers": [
+                    "Gin",
+                    "Beer",
+                    "Vodka",
+                    "Grappa"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What alcoholic drink is Havana Club?",
+                "answers": [
+                    "Beer",
+                    "Rum",
+                    "Sparkling wine",
+                    "Gin"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which nation does Champagne originate from?",
+                "answers": [
+                    "Belgium",
+                    "France",
+                    "Italy",
+                    "Portugal"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is Johnnie Walker?",
+                "answers": [
+                    "A wine",
+                    "A rum",
+                    "A vodka",
+                    "A whisky"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Where does myrtle liqueur originate from?",
+                "answers": [
+                    "Veneto",
+                    "Lombardy",
+                    "Sardinia",
+                    "Naples"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Where is Ichnusa beer produced?",
+                "answers": [
+                    "Sardinia",
+                    "Sicily",
+                    "Corsica",
+                    "Tuscany"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What characterizes the man in the Birra Moretti logo?",
+                "answers": [
+                    "The horse",
+                    "The mustache",
+                    "The stick",
+                    "The glasses"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is IPA?",
+                "answers": [
+                    "A vodka",
+                    "A wine",
+                    "A beer",
+                    "A grappa"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which region does Barolo wine come from?",
+                "answers": [
+                    "Tuscany",
+                    "Piedmont",
+                    "Sardinia",
+                    "Friuli-Venezia Giulia"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Where does Paulaner beer originate from?",
+                "answers": [
+                    "Denmark",
+                    "Germany",
+                    "Austria",
+                    "Belgium"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Where does Jameson Whiskey originate from?",
+                "answers": [
+                    "Scotland",
+                    "Canada",
+                    "Ireland",
+                    "USA"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is a Radler?",
+                "answers": [
+                    "Pale ale with lemonade",
+                    "A whisky",
+                    "Red beer with orange soda",
+                    "Wine with soda"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where does sangria originate from?",
+                "answers": [
+                    "Naples",
+                    "France",
+                    "Mexico",
+                    "Spain"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is Ramazzotti?",
+                "answers": [
+                    "A bitter",
+                    "A wine",
+                    "A coffee liqueur",
+                    "A grappa"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which alcoholic drink is the Bacardi brand known for?",
+                "answers": [
+                    "Sambuca",
+                    "Rum",
+                    "Gin",
+                    "Bourbon"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which region does Cannonau wine come from?",
+                "answers": [
+                    "Sardinia",
+                    "Campania",
+                    "Veneto",
+                    "Friuli-Venezia Giulia"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where does sake originate from?",
+                "answers": [
+                    "China",
+                    "Japan",
+                    "South Korea",
+                    "Vietnam"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "medio": [
+            {
+                "question": "Where does Beck's beer originate from?",
+                "answers": [
+                    "UK",
+                    "Germany",
+                    "France",
+                    "Belgium"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the typical color of the Bombay Sapphire gin bottle?",
+                "answers": [
+                    "Transparent",
+                    "Red",
+                    "White",
+                    "Blue"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Where does Belvedere vodka originate from?",
+                "answers": [
+                    "Sweden",
+                    "Russia",
+                    "Poland",
+                    "Germany"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What does the Grey Goose brand mainly produce?",
+                "answers": [
+                    "Gin",
+                    "Vodka",
+                    "Whisky",
+                    "Sambuca"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Where does Carlsberg beer originate from?",
+                "answers": [
+                    "Sweden",
+                    "Norway",
+                    "Denmark",
+                    "Germany"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which ingredient is present in the Negroni but not in the Negroni Sbagliato?",
+                "answers": [
+                    "Vodka",
+                    "Campari",
+                    "Gin",
+                    "Prosecco"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which ingredient distinguishes the Negroski from the Negroni?",
+                "answers": [
+                    "Rum",
+                    "Vodka",
+                    "Bourbon whiskey",
+                    "Prosecco"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the main ingredient of the Margarita?",
+                "answers": [
+                    "Tequila",
+                    "Whisky",
+                    "Martini",
+                    "Prosecco"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which Italian region does Amaro del Capo originate from?",
+                "answers": [
+                    "Campania",
+                    "Puglia",
+                    "Tuscany",
+                    "Calabria"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these beers is Italian?",
+                "answers": [
+                    "Mahou",
+                    "Kozel",
+                    "Forst",
+                    "Quilmes"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Where does Ouzo originate from?",
+                "answers": [
+                    "Greece",
+                    "Italy",
+                    "Poland",
+                    "Lebanon"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the main ingredient of Daiquiri?",
+                "answers": [
+                    "Vodka",
+                    "Rum",
+                    "Gin",
+                    "Tequila"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the main ingredient of the Moscow Mule?",
+                "answers": [
+                    "Vodka",
+                    "Rum",
+                    "Gin",
+                    "Campari"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What alcohol does the Tanqueray brand produce?",
+                "answers": [
+                    "Whisky",
+                    "White rum",
+                    "Gin",
+                    "Tequila"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is Glengrant?",
+                "answers": [
+                    "A Cuban rum",
+                    "A bourbon",
+                    "A scotch whisky",
+                    "An Irish whiskey"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these is NOT a bitter?",
+                "answers": [
+                    "Averna",
+                    "Fernet Branca",
+                    "Cynar",
+                    "Molinari"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which fruit juice is added to rum and coconut milk to create the Piñacolada?",
+                "answers": [
+                    "Papaya",
+                    "Melon",
+                    "Pineapple",
+                    "Mango"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the main ingredient of the Old Fashioned?",
+                "answers": [
+                    "Whisky",
+                    "Rum",
+                    "Gin",
+                    "Martini"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which nation does Gewürztraminer wine originate from?",
+                "answers": [
+                    "Italy",
+                    "Austria",
+                    "Switzerland",
+                    "Spain"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which fruit is typically fermented to make cider?",
+                "answers": [
+                    "Strawberry",
+                    "Grape",
+                    "Apple",
+                    "Orange"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these alcoholic drinks is typically served hot?",
+                "answers": [
+                    "Cider",
+                    "Mulled wine",
+                    "Vin santo",
+                    "Sangria"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "In which Italian island is a very famous Passito DOC wine produced?",
+                "answers": [
+                    "Elba",
+                    "Ischia",
+                    "Panarea",
+                    "Pantelleria"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Where does Pilsner beer originate from?",
+                "answers": [
+                    "Belgium",
+                    "Czech Republic",
+                    "Luxembourg",
+                    "Germany"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which ingredient distinguishes Kahlúa, a known Mexican liqueur?",
+                "answers": [
+                    "Coffee",
+                    "Mint",
+                    "Coconut",
+                    "Chocolate"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "The pulp of which fruit is added to prosecco to prepare the Bellini?",
+                "answers": [
+                    "Apple",
+                    "Peach",
+                    "Pear",
+                    "Cherry"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is Desperados beer flavored with?",
+                "answers": [
+                    "Lemon",
+                    "Tequila",
+                    "Ginger",
+                    "Vodka"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Besides Jägermeister, what is used to prepare the Jägerbomb?",
+                "answers": [
+                    "Red Bull",
+                    "Cola",
+                    "Tonic water",
+                    "Kahlúa"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is Jim Beam?",
+                "answers": [
+                    "Rum",
+                    "Scotch",
+                    "Bourbon",
+                    "Bitter"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the name of the cocktail made with whiskey, coffee and cream?",
+                "answers": [
+                    "Jägerbomb",
+                    "Irish coffee",
+                    "Caffè corretto",
+                    "Kahlúa"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "How many cL of beer do the most common unfiltered Ichnusa bottles contain?",
+                "answers": [
+                    "35",
+                    "50",
+                    "66",
+                    "40"
+                ],
+                "correctIndex": 1
+            }
+        ],
+        "esperto": [
+            {
+                "question": "Which nation does Absolut Vodka originate from?",
+                "answers": [
+                    "Russia",
+                    "Kazakhstan",
+                    "Sweden",
+                    "Estonia"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which ingredient distinguishes the Boulevardier from the Negroni?",
+                "answers": [
+                    "Prosecco",
+                    "Rum",
+                    "Whiskey",
+                    "Soda"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is the main ingredient of the Cosmopolitan?",
+                "answers": [
+                    "White wine",
+                    "Gin",
+                    "Tequila",
+                    "Vodka"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these spirits has the highest alcohol content?",
+                "answers": [
+                    "Absinthe",
+                    "Latte di suocera",
+                    "Gocce imperiali",
+                    "Centerbe"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What distinguishes the Cuba Libre from the Rum & Cola?",
+                "answers": [
+                    "It also includes vodka",
+                    "It has whisky instead of rum",
+                    "It also includes lime",
+                    "It has pear juice instead of Cola"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which fruit juice is used to prepare the Tequila Sunrise?",
+                "answers": [
+                    "Orange",
+                    "Lemon",
+                    "Citron",
+                    "Lime"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What distinguishes Birra Messina?",
+                "answers": [
+                    "It is smoked with two different processes",
+                    "Addition of ginger and coriander in the preparation",
+                    "It contains salt crystals",
+                    "It is born from five different types of hops"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which region does Cirò wine come from?",
+                "answers": [
+                    "Emilia-Romagna",
+                    "Sicily",
+                    "Veneto",
+                    "Calabria"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the flavor of Triple sec liqueur?",
+                "answers": [
+                    "Juniper",
+                    "Coffee",
+                    "Orange",
+                    "Ginger"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Besides Blue Curaçao, what ingredients are used to make the Angelo Azzurro?",
+                "answers": [
+                    "Vodka and seltzer",
+                    "Gin and lime juice",
+                    "Tequila and angostura",
+                    "Gin and triple sec"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these drinks does NOT have orange juice as an ingredient?",
+                "answers": [
+                    "Mimosa",
+                    "Sex on the Beach",
+                    "Tequila Sunrise",
+                    "Old Fashioned"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these ingredients is not used to prepare a Long Island Iced Tea?",
+                "answers": [
+                    "Vodka",
+                    "Gin",
+                    "Whisky",
+                    "Tequila"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What distinguishes the Americano from the Negroni?",
+                "answers": [
+                    "It has prosecco instead of gin",
+                    "It does not have gin",
+                    "It does not have red vermouth",
+                    "It has bourbon instead of gin"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these whiskies is NOT a scotch?",
+                "answers": [
+                    "AncNoc",
+                    "RedBreast",
+                    "Lagavulin",
+                    "Glenfarclas"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these is NOT a rum?",
+                "answers": [
+                    "Pampero",
+                    "Don Papa",
+                    "Appleton Estate",
+                    "Edradour"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the alcohol content of Centerba 'Forte' Enrico Toro?",
+                "answers": [
+                    "72%",
+                    "78%",
+                    "68%",
+                    "70%"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which Italian region does Disaronno originate from?",
+                "answers": [
+                    "Piedmont",
+                    "Lombardy",
+                    "Campania",
+                    "Calabria"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "From the distillation of what product is Cognac obtained?",
+                "answers": [
+                    "Barley",
+                    "White wine",
+                    "Red grape juice",
+                    "Berries"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these beers is NOT Spanish?",
+                "answers": [
+                    "San Miguel",
+                    "Quilmes",
+                    "Estrella Damm",
+                    "Ambar"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these beers does NOT originate from Northern Italy?",
+                "answers": [
+                    "Raffo",
+                    "Menabrea",
+                    "Pedavena",
+                    "Birra Castello"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which spirit is often aged in barrels that previously contained Sherry?",
+                "answers": [
+                    "Brandy",
+                    "Scotch",
+                    "Gin",
+                    "Cognac"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Besides lime, what juice is present in the Porn star Martini?",
+                "answers": [
+                    "Papaya",
+                    "Mango",
+                    "Passion fruit",
+                    "Guava"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which fruit is used to garnish a Manhattan cocktail?",
+                "answers": [
+                    "Olive",
+                    "Cherry",
+                    "Orange",
+                    "Lime"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these is NOT a gin?",
+                "answers": [
+                    "Gordon's",
+                    "Chivas Regal",
+                    "Tanqueray",
+                    "Beefeater"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these beers is NOT Belgian?",
+                "answers": [
+                    "Leffe",
+                    "Kronenbourg",
+                    "Blanche de Namur",
+                    "La Chouffe"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these drinks usually has the lowest alcohol content?",
+                "answers": [
+                    "Sangria",
+                    "Cider",
+                    "Passito",
+                    "Tennent's Super Beer"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these beers has the highest alcohol content?",
+                "answers": [
+                    "Tennent's super",
+                    "Slalom Strong",
+                    "Faxe",
+                    "Angelo Poretti 4 Luppoli"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these beers is Mexican?",
+                "answers": [
+                    "Medalla",
+                    "Corona Extra",
+                    "San Miguel",
+                    "Estrella Galicia"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "With which alcoholic drink is Malibu Coconut liqueur made?",
+                "answers": [
+                    "Rum",
+                    "Triple sec",
+                    "Sambuca",
+                    "Bourbon"
+                ],
+                "correctIndex": 0
+            }
+        ],
+        "laureato": [
+            {
+                "question": "Which of these wines is typical of Molise?",
+                "answers": [
+                    "Lizzano",
+                    "Biferno",
+                    "Aglianico",
+                    "Trebbiano"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Where is the Black Russian cocktail believed to have been born?",
+                "answers": [
+                    "Poland",
+                    "Belgium",
+                    "Switzerland",
+                    "Russia"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these whisky distilleries is Canadian?",
+                "answers": [
+                    "Glenfarclas",
+                    "Clynelish",
+                    "Macaloney",
+                    "Deanston"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "Which of these scotches is NOT a 'cask strength'?",
+                "answers": [
+                    "The Dalmore Cigar Malt",
+                    "Aberlour A'bunadh",
+                    "Arran 'The Bodega",
+                    "Ardbeg Uigeadail"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where was Maraschino liqueur created?",
+                "answers": [
+                    "Croatia",
+                    "Spain",
+                    "Greece",
+                    "Italy"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which of these beers does not originate from Denmark?",
+                "answers": [
+                    "Ceres",
+                    "Tuborg",
+                    "Carlsberg",
+                    "Grimbergen"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which juice is used to prepare the Whiskey Sour?",
+                "answers": [
+                    "Lemon",
+                    "Pear",
+                    "Orange",
+                    "Passion fruit"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the main ingredient of the Paloma?",
+                "answers": [
+                    "Tequila",
+                    "White rum",
+                    "Gin",
+                    "Blue curaçao"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What do you get in Spain if you order a caña?",
+                "answers": [
+                    "A pale beer of about 200 ml",
+                    "A glass of sangria of about 100 ml",
+                    "A glass of red wine",
+                    "A caipirinha"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is Reposado?",
+                "answers": [
+                    "A type of Cuban white rum",
+                    "A rum barrel destined for scotch aging",
+                    "A type of Sherry preparation",
+                    "A category of tequila"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the English term for the phenomenon of downing a beer can by making a hole on the side of the can?",
+                "answers": [
+                    "Shotgunning",
+                    "Beerpinching",
+                    "Drunkshotting",
+                    "Holestriking"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Which region does Nero di Troia wine come from?",
+                "answers": [
+                    "Puglia",
+                    "Calabria",
+                    "Umbria",
+                    "Tuscany"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "In which region is Verdicchio dei Castelli di Jesi produced?",
+                "answers": [
+                    "Marche",
+                    "Piedmont",
+                    "Veneto",
+                    "Puglia"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many cL of red vermouth should be put in a Negroni according to IBA?",
+                "answers": [
+                    "3.0",
+                    "2.0",
+                    "2.5",
+                    "3.5"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "According to IBA, what percentage of tequila must there be in a Margarita?",
+                "answers": [
+                    "50%",
+                    "30%",
+                    "25%",
+                    "35%"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many cL of vodka must there be in a Moscow Mule?",
+                "answers": [
+                    "3",
+                    "4.5",
+                    "5",
+                    "3.5"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What fruit flavor is the liqueur used to prepare the Japanese slipper cocktail?",
+                "answers": [
+                    "Green apple",
+                    "Guava",
+                    "Lime",
+                    "Melon"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "Which of these ingredients is not present in a Singapore Sling?",
+                "answers": [
+                    "Triple sec",
+                    "Gin",
+                    "Grapefruit juice",
+                    "Angostura"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "According to IBA, how many cL of tomato juice should be put in a Bloody Mary?",
+                "answers": [
+                    "9",
+                    "4",
+                    "4.5",
+                    "6.5"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "How many spoons of sugar syrup should be put in a Daiquiri?",
+                "answers": [
+                    "2",
+                    "Half",
+                    "1",
+                    "3"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "At what temperature should Amaro del Capo be stored?",
+                "answers": [
+                    "4°C",
+                    "-12°C",
+                    "0°C",
+                    "-20°C"
+                ],
+                "correctIndex": 3
+            },
+            {
+                "question": "What is the alcohol content of Amaro Lucano?",
+                "answers": [
+                    "28%",
+                    "32%",
+                    "35%",
+                    "30%"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the alcohol content of Nikka From The Barrel Japanese whisky?",
+                "answers": [
+                    "50.8%",
+                    "51.4%",
+                    "46.6%",
+                    "55.5%"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "Which of these red wines is often sparkling?",
+                "answers": [
+                    "Bonarda dell'Oltrepò Pavese",
+                    "Nero d'Avola",
+                    "Nuragus",
+                    "Aglianico del Vulture DOCG"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "Where does Medalla beer originate from?",
+                "answers": [
+                    "Mexico",
+                    "Argentina",
+                    "Puerto Rico",
+                    "Cuba"
+                ],
+                "correctIndex": 2
+            },
+            {
+                "question": "What is depicted on a bottle of Latte di Suocera?",
+                "answers": [
+                    "Skull and crossbones",
+                    "Flame with ocean",
+                    "An old lady with a turban",
+                    "A shield with two burning swords"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the alcohol content of Ramazzotti bitter?",
+                "answers": [
+                    "30%",
+                    "24%",
+                    "36%",
+                    "25%"
+                ],
+                "correctIndex": 0
+            },
+            {
+                "question": "What is the alcohol content of Malibu liqueur?",
+                "answers": [
+                    "24%",
+                    "21%",
+                    "28%",
+                    "35%"
+                ],
+                "correctIndex": 1
+            },
+            {
+                "question": "What is the alcohol content of Zabov?",
+                "answers": [
+                    "24%",
+                    "26%",
+                    "15%",
+                    "21%"
+                ],
+                "correctIndex": 2
+            }
+        ]
+    }
+}
