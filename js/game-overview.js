@@ -254,6 +254,11 @@
                 position: fixed;
                 width: 100%;
                 height: 100%;
+                /* Critical fix for iOS: prevent body transform from breaking fixed positioning */
+                transform: none !important;
+                animation: none !important;
+                -webkit-transform: none !important;
+                -webkit-animation: none !important;
             }
             @media (max-width: 480px) {
                 .game-info-header { padding: 12px 15px; }
