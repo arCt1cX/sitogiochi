@@ -42,11 +42,9 @@
       "Il giocatore/i giocatori che hanno bestemmiato nel corso della serata bevono",
       "Chi ha vomitato a causa dell'alcol più recentemente beve",
       "Tutti i giocatori che nel corso della partita hanno già nominato un meme di J0k3r bevono",
-      "Tutti i giocatori che nel corso della partita hanno già nominato un meme di cicciogamer89 bevono",
       "Tutti i giocatori che nel corso della partita hanno già nominato i brainrot bevono",
       "Se hai mai paccato una obesa con i capelli rosa bevi tre sorsi",
-      "Se è presente una persona che è il coniuge di Frattesi, questa beve tre sorsi nitrendo",
-      "Hai mai cagato in palestra? Se sì, bevi tanti sorsi quanti sono i chili di massa grassa di Dodoria",
+      "Hai mai cagato in palestra? Se sì, bevi 3 sorsi",
       "Chi si è fatto una canna nell'ultima settimana beve",
       "Chi tra i presenti si è cagato nelle mutande dopo una scorreggia almeno una volta distribuisce due sorsi",
       "Ricevete tante penalità quante sigarette (normali o elettroniche) avete fumato nel corso della serata",
@@ -412,7 +410,19 @@
       "Congratulazioni {player}! Hai vinto una visita alla prostata gratuita. Bevi 1 sorso per festeggiare.",
       "Chi è mai andato dal proctologo beve 1 sorso.",
       "Tutte le notti, {player} insegue le donne che camminano da sole. Beve 1 sorso per punizione.",
-      "Il giocatore che si è fatto più sigarette da inizio serata beve 2 sorsi."
+      "Il giocatore che si è fatto più sigarette da inizio serata beve 2 sorsi.",
+      "{player}, urla più forte che puoi per far bere due sorsi a tutti. Se ti rifiuti bevi 3 sorsi.",
+      "{player} può distribuire un sorso a tutti i giocatori tranne due. Gli altri hanno 30 secondi per convincerlo a non scegliere loro. Alla fine dei 30 secondi {player} elenca i prescelti.",
+      "{player}, datti una aggiustata. Sembri un bufalo con la sindrome di down. Bevi 1 sorso e distribuiscine 2.",
+      "Chi ha mai suonato violino o pianoforte beve 1 sorso. Gli altri tengano a mente che questi esseri si mettono la bacchetta del direttore d'orchestra in culo.",
+      "{player} e {player}, bevetevi un sorso maledetti bastardi.",
+      "{player} scegli un ballo di gruppo e riproducilo col telefono. {player} lo balla per 1 minuto. Tutti i giocatori devono imitarlo alla perfezione, altrimenti bevono un bicchiere intero.",
+      "{player}, beviti un sorso mangiamerda.",
+      "{player} intinge i biscotti nelle pozzanghere. Si beve un sorso per depurare l'intestino.",
+      "{player}, bevi 3 sorsi se hai mai fatto colazione con una birra.",
+      "Chi si è mai fatto uno shot di Latte di Suocera beve 1 sorso.",
+      "Chi si ascolta uno di questi cantautori beve 3 sorsi: Ultimo, Olly, Gigi d'Alessio, Anna Pepe.",
+      "{player}, spiega dettagliatamente il tuo peggior incidente d'auto come se fossi davanti alla Polizia Municipale o bevi 3 sorsi."
     ]
   },
   "challenge": {
@@ -435,27 +445,23 @@
       "{player}, canta una canzone per 20 secondi o bevi 3 sorsi",
       "{player} deve raccontare la cosa più imbarazzante che ha fatto o bere 4 sorsi",
       "Tutti devono fare un complimento sincero a {player} o bere",
-      "Tipi di drink: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Tipi di droghe: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Pornostar: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Personaggi Brainrot: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Modi per fare serata: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Siti porno: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Discoteche della città/luogo in cui vi trovate attualmente: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Meme di cicciogamer89: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Meme di J0k3r: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Personaggi della zanzara: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Tiktoker famose: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "{player} nomina 3 calciatori come li nominerebbe J0k3r. Se non li sa beve",
+      "Tipi di drink: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Tipi di droghe: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Pornostar: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Personaggi Brainrot: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Modi per fare serata: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Siti porno: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Discoteche della città/luogo in cui vi trovate attualmente: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Personaggi della zanzara: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Tiktoker famose: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
       "{player} nomina almeno 3 elementi della routine di Ashton Hall. Se non li sa beve",
       "{player} nomina 5 personaggi della zanzara. Se non li sa beve",
       "{player} nomina 5 personaggi brainrot. Se non li sa beve",
       "{player} nomina 3 giochi di DrewGames. Se non li sa beve",
       "{player} deve fare lo spelling di 'è la mia prima volta in Sardegna'. Se sbaglia beve",
-      "A turno ripetete 5 volte 'supercalifragilistichespiralidoso'. Chi sbaglia beve. Inizia il giocatore {player}",
-      "A turno dite un meme, dopo aver ripetuto quello che è stato detto prima. Chi sbaglia beve. Inizia il giocatore {player}",
+      "A turno ripetete 5 volte 'supercalifragilistichespiralidoso'. Chi sbaglia beve. Inizia {player}",
+      "A turno dite un meme, dopo aver ripetuto quello che è stato detto prima. Chi sbaglia beve. Inizia {player}",
       "{player} dice un meme che conosce: i giocatori che non lo conoscono bevono. Se lo conoscono tutti beve {player}",
-      "Nominate una parola a testa per creare una frase di J0k3r. Il primo che dice una parola insensata o non sa più che parola dire beve. Inizia il giocatore {player}",
       "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita cicciogamer89. Chi indovina distribuisce a 2 giocatori",
       "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita parenzo. Chi indovina distribuisce a 2 giocatori",
       "ATTENZIONE: LEGGERE A MENTE SENZA FAR SENTIRE GLI ALTRI GIOCATORI. Imita il king del vintage. Chi indovina distribuisce a 2 giocatori",
@@ -465,16 +471,16 @@
       "Sfida tra {player} e {player}: verranno letti brainrot (Skibidi, Sigma, Rizz, Gyatt, Fanum Tax), create entrambi la vostra top 5. Se almeno 3 elementi coincidono, tutti gli altri bevono, altrimenti bevete voi due",
       "{player} deve creare la sua top 5 dei seguenti drink (Spritz, Vodka Lemon, Gin Tonic, Mojito, Negroni, Margarita, Whisky Cola, Tequila). Se viene condivisa dalla maggioranza non beve nessuno, altrimenti bevi tu",
       "Nominate a turno persone mongoloidi di palestra. Chi non ne trova più nessuna beve 2 sorsi. Inizia {player}",
-      "Cantate a turno una frase della canzone: Padolo 4. Chi non ricorda come continua beve 1 sorso. Inizia {player}",
+      "Cantate a turno una frase della canzone: We are Charlie Kirk. Chi non ricorda come continua beve 1 sorso. Inizia {player}",
       "{player}: bestemmia la madonna, se ti rifiuti bestemmia gesù cristo",
       "Nominate a turno una fissazione di {player}, chi non ne trova più nessuna beve 4 sorsi. Inizia {player}",
       "Sfida di Militant A: nominate a turno una qualità di birra diversa, chi non ne trova più una beve 4 sorsi. Inizia {player}",
-      "Pub della zona in cui vivete: il primo che ne ripete uno o non sa più dirne beve. Inizia il giocatore {player}",
-      "Droghe: il primo che ne ripete una o non ne trova più beve. Inizia il giocatore {player}",
+      "Pub della zona in cui vivete: il primo che ne ripete uno o non sa più dirne beve. Inizia {player}",
+      "Droghe: il primo che ne ripete una o non ne trova più beve. Inizia {player}",
       "Persone nere famose: il primo che ne ripete una o non ne trova più beve. Non valgono gli sportivi. Inizia {player}",
       "{player}, imita un gorilla impazzito o bevi 3 sorsi",
       "Obbligo o verità. {player} e {player} si sfidano uno alla volta",
-      "{player}, fatti dare un pugno sugli addominali dal giocatore {player}. Se lo fai, distribuisci 10 sorsi, altrimenti ne bevi 5",
+      "{player}, fatti dare un pugno sugli addominali da {player}. Se lo fai, distribuisci 10 sorsi, altrimenti ne bevi 5",
       "Marche di birra: il primo che non ne trova più o ne ripete una beve. Inizia {player}",
       "{player}, nomina un sito pornografico. Se nessuno lo conosce, distribuisci 5 sorsi. Sennò ne bevi 2",
       "Personaggi della Zanzara: il primo che non ne trova più o ne ripete uno beve. Inizia {player}",
@@ -626,9 +632,9 @@
       "Tutti i giocatori devono alzarsi in piedi e guardarsi in assoluto silenzio per 20 secondi. Chi sbaglia o si rifiuta si fa una massima penalità",
       "Votate il giocatore più abile a sopravvivere in natura, e poi votate invece la persona che è più l'esatto opposto. ASPETTA A LEGGERE, PRIMA VOTATE. L'eletto naturalista è un gorilla per 5 turni. Deve imitarlo bene, altrimenti riceve una massima penalità. L'altro eletto deve copiarlo",
       "Nessuno guardi il telefono. Provate ad indovinare la temperatura, poi controllate nell'app Meteo. Il/I giocatore/i che ci vanno più vicini distribuiscono 3 sorsi",
-      "Giocatore {player}, classifica queste birre dalla migliore alla peggiore: Moretti, Heineken, Ichnusa, Peroni, Corona. Se almeno due giocatori sono perfettamente d'accordo con te, sei salvo, altrimenti bevi 2 sorsi",
+      "{player}, classifica queste birre dalla migliore alla peggiore: Moretti, Heineken, Ichnusa, Peroni, Corona. Se almeno due giocatori sono perfettamente d'accordo con te, sei salvo, altrimenti bevi 2 sorsi",
       "Votate il giocatore più fissato e appassionato di CiccioGamer. L'eletto può esprimersi solo con frasi di CiccioGamer e Joker. Inoltre l'eletto deve scrivere un messaggio in direct a Ciccio o Joker confessando di essere suo fan sfegatato. Se lo fa, distribuisce 7 sorsi, se si rifiuta ne beve 2",
-      "Inizia il test del cliente maleducato. Il giocatore {player} è Bruno Barbieri. Metti alla prova la pazienza del cameriere / proprietario. Se lo fai, distribuisci 15 sorsi",
+      "Inizia il test del cliente maleducato. {player} è Bruno Barbieri. Metti alla prova la pazienza del cameriere / proprietario. Se lo fai, distribuisci 15 sorsi",
       "Il primo giocatore che urla con potenza 'ho rapito Aldo Moro' distribuisce 5 sorsi",
       "Culturisti e strongman famosi. A turno nominatene uno. Il giocatore che ne ripete uno o non ne trova più riceve 2 sorsi",
       "A turno, nominate una figura di merda di {player}. Chi non ne trova più una nuova beve 2 sorsi. Se {player} è quello che non ne trova più, finisce il bicchiere",
@@ -730,7 +736,8 @@
       "A turno, bevete tanti sorsi quanti sono i lavori diversi che avete fatto nella vita. {player} inizia.",
       "A turno, bevete tanti sorsi quanti sono i paesi esteri che avete visitato. {player} inizia, in bocca al lupo.",
       "A turno, bevete tanti sorsi quanti sono i telefoni che avete cambiato negli ultimi 10 anni. {player} inizia.",
-      "A turno, bevete tanti sorsi quanti sono i gruppi WhatsApp che avete silenziato in questo momento. {player} inizia."
+      "A turno, bevete tanti sorsi quanti sono i gruppi WhatsApp che avete silenziato in questo momento. {player} inizia.",
+      "Tutti i giocatori bevono un sorso e lo trattengono in bocca, tranne {player}. Questo ha 20 secondi per far ridere qualcuno, in qualsiasi modo. Se non ci riesce, beve 5 sorsi."
     ]
   },
   "vote": {
@@ -780,11 +787,9 @@
       "Votate il giocatore più fattone. Il votato beve 2 sorsi e distribuisce 3 sorsi",
       "Votate il giocatore più casalingo. Il votato beve 3 sorsi",
       "Press the button: Sei miliardario ma muoiono tutti i tuoi parenti. Ogni giocatore deve dire se lo farebbe o no. I giocatori in minoranza bevono",
-      "Preferiresti indossare per tutta la vita gli outfit di pantalone insano o fare lo stesso allenamento del merda per sempre? Si vota, chi è in maggioranza beve 3 sorsi",
-      "Meglio i maiali royale o il domatore di prudenzi? Si vota. Chi è in minoranza beve 1 sorso",
-      "È più alto il QI di caracci o di patel? Si vota: chi è in minoranza beve 1 sorso",
-      "È più stupido caracci o rita de crescenzo? Si vota: chi è in minoranza beve 2 sorsi",
-      "Preferiresti essere manolo alien con 1 milione di euro in banca o Dodoria con 100.000? Votate, chi è in minoranza beve 2 sorsi",
+      "Meglio i maiali royale o il domatore di cinghiali? Si vota. Chi è in minoranza beve 1 sorso",
+      "È più stupido {player} o rita de crescenzo? Si vota: chi è in minoranza beve 2 sorsi",
+      "Preferiresti essere Stephen Hawking con 1 milione di euro in banca o Beetlejuice con 100.000? Votate, chi è in minoranza beve 2 sorsi",
       "Votate tutti il più imbecille tra i presenti: l'eletto distribuisce 5 sorsi",
       "Meglio bersi 15 birre o 8 negroni? Rispondete in contemporanea, chi è in minoranza beve",
       "Votate tutti il giocatore più propenso a finire immischiato con il cartello della droga messicano. L'eletto beve 2 sorsi",
@@ -1381,7 +1386,7 @@
         "end": "STOP! Non si deve più aggiungere il suffisso '-ozzo' alle parole"
       },
       {
-        "start": "Ogni volta che {player} dice 'Clitoride', il giocatore {player} deve esclamare 'Signora i limoni SIGNORAAAA', altrimenti beve 1 sorso",
+        "start": "Ogni volta che {player} dice 'Clitoride', {player} deve esclamare 'Signora i limoni SIGNORAAAA', altrimenti beve 1 sorso",
         "end": "STOP! non si deve più rispondere 'Signora i limoni SIGNORAAAA' quando {player} dice 'Clitoride'"
       },
       {
@@ -1411,10 +1416,6 @@
       {
         "start": "Votate tutti il giocatore più esperto di Masterchef. L'eletto deve parlare imitando Iginio Massari. Inoltre, il giocatore alla sua destra, ogni volta che l'eletto parla, deve rispondere 'This dish is a piece of shit', mentre il giocatore alla sua sinistra deve replicare 'and you, my friend, are an asshole'. 1 sorso per ogni errore",
         "end": "STOP! Non si deve più imitare Iginio Massari e i giocatori accanto non devono più rispondere"
-      },
-      {
-        "start": "{player} è scimmiali, parla come lui fino a nuovo ordine. Beve 1 sorso ad ogni errore",
-        "end": "STOP! {player} non deve più parlare come scimmiali"
       },
       {
         "start": "{player} è Mike Tyson. Deve rimanere con la guardia alta da boxe fino a nuovo ordine. Beve 1 sorso ogni volta che abbassa la guardia",
@@ -1571,6 +1572,14 @@
       {
         "start": "{player} è il fantasma, nessuno può rivolgere lui la parola. Chi gli risponde beve 2 sorsi e prende il posto del fantasma. Così via fino a nuovo ordine.",
         "end": "STOP! Il gioco del fantasma è terminato."
+      },
+      {
+        "start": "{player} è Osama Bin Laden. Può esprimersi solo in arabo finto fino a nuovo ordine.",
+        "end": "STOP! {player} non è più Osama Bin Laden."
+      },
+      {
+        "start": "{player} è El Chapo. Deve provare a evadere dal luogo in cui vi trovate fino a nuovo ordine. Ogni volta che viene scoperto deve tornare al suo posto.",
+        "end": "STOP! {player} non è più El Chapo."
       }
     ]
   }
