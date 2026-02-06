@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,39 +10,43 @@
     <script src="translations.js"></script>
     <!-- Dynamic meta tags based on browser language -->
     <script>
-      // Run this before other meta tags
-      const preferredLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 
-        (navigator.language || navigator.userLanguage).startsWith('it') ? 'it' : 'en';
-      const isItalian = preferredLang === 'it';
-      
-      if (isItalian) {
-        document.write('<title>TicTacTopics - Tris con Argomenti Tematici | DrewGames</title>');
-        document.write('<meta name="description" content="Gioca a TicTacTopics: una versione divertente del tris dove inserisci argomenti che collegano categorie nelle righe e nelle colonne! Un party game perfetto da giocare con gli amici offline, con film, serie TV e altre categorie a venire!">');
-      } else {
-        document.write('<title>TicTacTopics - Tic-Tac-Toe with Thematic Topics | DrewGames</title>');
-        document.write('<meta name="description" content="Play TicTacTopics: a fun twist on classic tic-tac-toe where you place topics that connect row and column categories! A perfect party game to play with friends offline, with movies, TV shows and more categories coming soon!">');
-      }
+        // Run this before other meta tags
+        const preferredLang = window.getCurrentLanguage ? window.getCurrentLanguage() :
+            (navigator.language || navigator.userLanguage).startsWith('it') ? 'it' : 'en';
+        const isItalian = preferredLang === 'it';
+
+        if (isItalian) {
+            document.write('<title>TicTacTopics - Tris con Argomenti Tematici | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a TicTacTopics: una versione divertente del tris dove inserisci argomenti che collegano categorie nelle righe e nelle colonne! Un party game perfetto da giocare con gli amici offline, con film, serie TV e altre categorie a venire!">');
+        } else {
+            document.write('<title>TicTacTopics - Tic-Tac-Toe with Thematic Topics | DrewGames</title>');
+            document.write('<meta name="description" content="Play TicTacTopics: a fun twist on classic tic-tac-toe where you place topics that connect row and column categories! A perfect party game to play with friends offline, with movies, TV shows and more categories coming soon!">');
+        }
     </script>
     <!-- Hreflang tags for language alternatives -->
     <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/tictactopics/?lang=en" />
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/tictactopics/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/tictactopics/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/tictactopics/">
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-     crossorigin="anonymous"></script>
-    <style> 
+        crossorigin="anonymous"></script>
+    <style>
         .home-button {
             position: fixed;
             top: 10px;
@@ -58,24 +63,26 @@
             display: flex;
             align-items: center;
         }
-        
+
         .home-button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        
+
         .home-icon {
             margin-right: 5px;
             font-size: 16px;
         }
     </style>
 </head>
-<body>
+
+<body data-game-id="tictactopics">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span id="homeText">Home</span></button>
-    
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+
     <div class="container">
         <div id="game-title">
             <h1 id="gameTitle">CineTris</h1>
@@ -98,8 +105,10 @@
         <div id="instructions-screen" class="game-screen">
             <h2 id="instructionsTitle">How to Play</h2>
             <div class="instructions-container">
-                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing topics that connect a row category and a column category.</p>
-                <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching title for the cell. Get three in a row to win!</p>
+                <p id="instructionsText">Play a fun twist on classic tic-tac-toe where you mark the grid by choosing
+                    topics that connect a row category and a column category.</p>
+                <p id="rulesText">Players take turns placing either 🔴 or 🔵 by submitting a matching title for the
+                    cell. Get three in a row to win!</p>
             </div>
             <button id="go-to-topics" class="btn primary-btn">Start Game</button>
         </div>
@@ -131,21 +140,24 @@
         <div id="game-screen" class="game-screen">
             <div class="game-info">
                 <div class="player-turn">
-                    <span id="playerTurnText">Current Turn:</span> 
+                    <span id="playerTurnText">Current Turn:</span>
                     <span id="current-player" class="player-marker red">Giocatore 1</span>
                 </div>
             </div>
-            
+
             <div id="game-board" class="game-board">
                 <!-- Game board will be generated by JavaScript -->
             </div>
-            
+
             <div class="game-buttons">
-                <button id="end-game" class="btn secondary-btn action-btn"><span id="endGameText">End Game</span></button>
-                <button id="new-game" class="btn primary-btn action-btn new-game-btn"><span id="newGameText">New Game</span></button>
-                <button id="change-topic" class="btn tertiary-btn action-btn change-topic-btn"><span id="changeTopicText">Change Topic</span></button>
+                <button id="end-game" class="btn secondary-btn action-btn"><span id="endGameText">End
+                        Game</span></button>
+                <button id="new-game" class="btn primary-btn action-btn new-game-btn"><span id="newGameText">New
+                        Game</span></button>
+                <button id="change-topic" class="btn tertiary-btn action-btn change-topic-btn"><span
+                        id="changeTopicText">Change Topic</span></button>
             </div>
-            
+
             <div id="emoji-selection" class="emoji-selection hidden">
                 <h3 id="selectEmojiText">Select a matching title:</h3>
                 <div id="emoji-options" class="emoji-options">
@@ -165,6 +177,8 @@
     </div>
 
     <!-- Main scripts -->
+    <script src="../js/game-overview.js" defer></script>
     <script src="scripts.js"></script>
 </body>
-</html> 
+
+</html>

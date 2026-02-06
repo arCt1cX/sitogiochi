@@ -23,13 +23,17 @@
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/BluffMe/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/BluffMe/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/BluffMe/">
     <meta name="robots" content="index, follow">
@@ -91,10 +95,10 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body data-game-id="bluffme">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
 
@@ -219,6 +223,8 @@
         </div>
     </div>
 
+    <script src="../lang.js"></script>
+    <script src="../js/game-overview.js" defer></script>
     <script src="script.js"></script>
 </body>
 

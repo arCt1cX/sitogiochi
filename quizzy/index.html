@@ -26,13 +26,17 @@
     <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/quizzy/?lang=it" />
     <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/quizzy/" />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5KN33WJ3');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/quizzy/">
     <meta name="robots" content="index, follow">
@@ -67,10 +71,10 @@
     </style>
 </head>
 
-<body>
+<body data-game-id="quizzy">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
             id="homeText">Home</span></button>
@@ -94,10 +98,10 @@
         </div>
 
         <!-- Setup Screen -->
-    <div id="setup-screen" class="screen active">
+        <div id="setup-screen" class="screen active">
             <div class="screen-content">
-        <h1 id="quizzy-title" class="game-title setup-game-title">Quizzy</h1>
-        <h2 id="setup-title" class="section-title">Impostazioni del Gioco</h2>
+                <h1 id="quizzy-title" class="game-title setup-game-title">Quizzy</h1>
+                <h2 id="setup-title" class="section-title">Impostazioni del Gioco</h2>
 
                 <div class="form-group">
                     <label for="player-count" id="player-count-label">Numero di Giocatori:</label>
@@ -298,6 +302,7 @@
 
     <!-- Language utilities -->
     <script src="../lang.js"></script>
+    <script src="../js/game-overview.js" defer></script>
     <!-- Game translations -->
     <script src="translations.js"></script>
     <!-- Game logic -->
