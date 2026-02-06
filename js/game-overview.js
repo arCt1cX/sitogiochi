@@ -143,6 +143,7 @@
                 line-height: 1.6;
                 font-size: 0.95rem;
                 margin: 0;
+                text-align: left;
             }
             .game-info-instructions ol {
                 padding-left: 0;
@@ -158,6 +159,7 @@
                 padding-left: 35px;
                 position: relative;
                 counter-increment: instruction-counter;
+                text-align: left;
             }
             .game-info-instructions li::before {
                 content: counter(instruction-counter);
@@ -187,6 +189,7 @@
                 margin-bottom: 10px;
                 padding-left: 28px;
                 position: relative;
+                text-align: left;
             }
             .game-info-features li::before {
                 content: '✓';

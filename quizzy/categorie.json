@@ -490,6 +490,106 @@
           "Newton"
         ],
         "correctIndex": 1
+      },
+      {
+        "question": "Chi ha scoperto l’America?",
+        "answers": [
+          "Matteo Salvini",
+          "Cristoforo Colombo",
+          "Bruno Barbieri",
+          "Gue Pequeño"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale popolazione antica ha costruito le piramidi di Giza?",
+        "answers": [
+          "Romani",
+          "Sumeri",
+          "Egizi",
+          "Napoletani"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di quale popolazione antica era sovrano Gengis Khan?",
+        "answers": [
+          "Catanzaresi",
+          "Mongoli",
+          "Napoletani",
+          "Cinesi"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale era il nome di Garibaldi?",
+        "answers": [
+          "Franchino",
+          "Garibaldo",
+          "Giuseppe",
+          "Massimetto"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è stato il primo presidente degli Stati Uniti?",
+        "answers": [
+          "George Washington",
+          "Donald Pump",
+          "Kamala Harris",
+          "Giorgia Meloni"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Dove è nato Gandhi?",
+        "answers": [
+          "Cina",
+          "India",
+          "USA",
+          "Bassano del Grappa"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale dittatore italiano è spesso chiamato “Il Pelatone”?",
+        "answers": [
+          "Benito Mussolini",
+          "Claudio Bisio",
+          "Maccio Capatonda",
+          "Stefano Pioli"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Dove vivevano gli Aztechi?",
+        "answers": [
+          "Pianura Padana",
+          "California",
+          "Messico",
+          "Pescara"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di dove sono originari i Māori?",
+        "answers": [
+          "India",
+          "Nuova Zelanda",
+          "Napoli",
+          "Caltanissetta"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi ha costruito il Partenone?",
+        "answers": [
+          "I greci",
+          "I romani",
+          "I foggiani",
+          "Antonino Cannavacciuolo"
+        ],
+        "correctIndex": 0
       }
     ],
     "facile": [
@@ -790,6 +890,76 @@
           "Muro di Berlino",
           "Muro romano",
           "Muro di Varsavia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale condottiero romano sconfisse i Galli?",
+        "answers": [
+          "Romolo",
+          "Augusto",
+          "Marco Aurelio",
+          "Giulio Cesare"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In quale anno Cristoforo Colombo ha scoperto l’America?",
+        "answers": [
+          "1450",
+          "1489",
+          "1492",
+          "1505"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In che anno è scoppiata la Prima Guerra Mondiale?",
+        "answers": [
+          "1938",
+          "1918",
+          "1914",
+          "1945"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In che anno è stata proclamata l’Unità d’Italia?",
+        "answers": [
+          "1945",
+          "1879",
+          "1789",
+          "1861"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Chi è stato il più noto e importante sovrano della Macedonia?",
+        "answers": [
+          "Giulio Cesare",
+          "Alessandro Magno",
+          "Aristotele",
+          "Gengis Khan"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale presidente americano ha abolito la schiavitù nel 1863?",
+        "answers": [
+          "Thomas Jefferson",
+          "Abraham Lincoln",
+          "Richard Nixon",
+          "Theodore Roosevelt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Di quale paese è stato presidente Nelson Mandela?",
+        "answers": [
+          "Zimbabwe",
+          "Sudafrica",
+          "Mozambico",
+          "Namibia"
         ],
         "correctIndex": 1
       }
@@ -1094,6 +1264,46 @@
           "Un piano economico postbellico"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "In quale anno è caduto l’Impero Romano d’Occidente, dando inizio al Medioevo?",
+        "answers": [
+          "589",
+          "476",
+          "252",
+          "492"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale esploratore è noto per aver sconfitto l’Impero Inca con solo circa 130 soldati?",
+        "answers": [
+          "Hernan Cortés",
+          "Francisco Pizarro",
+          "James Cook",
+          "Simon Bolivar"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale presidente americano ha guidato l’invasione dell’Iraq nel 2003?",
+        "answers": [
+          "Bill Clinton",
+          "Ronald Reagan",
+          "George W. Bush",
+          "Barack Obama"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Chi è stato il leader della Resistenza francese durante la Seconda Guerra Mondiale?",
+        "answers": [
+          "Jean Moulin",
+          "Charles de Gaulle",
+          "Gustave Eiffel",
+          "Denis Diderot"
+        ],
+        "correctIndex": 1
       }
     ],
     "esperto": [
@@ -1384,6 +1594,86 @@
           "Una costituzione per la Reggenza del Carnaro",
           "Un manifesto del Partito Comunista Italiano",
           "Un trattato tra Italia e Jugoslavia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale data ci fu la Caduta di Costantinopoli e la fine dell’impero romano d’oriente?",
+        "answers": [
+          "1262",
+          "1453",
+          "1395",
+          "1392"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale imperatore romano è ricordato dagli storici come “Optimus Princeps”?",
+        "answers": [
+          "Traiano",
+          "Adriano",
+          "Marco Aurelio",
+          "Costantino"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi presidenti americani NON è stato in carica durante la guerra in Vietnam (1955-1975)?",
+        "answers": [
+          "Dwight D. Eisenhower",
+          "Ronald Reagan",
+          "John F. Kennedy",
+          "Lyndon B. Johnson"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale anno è scoppiata la guerra di Corea?",
+        "answers": [
+          "1950",
+          "1945",
+          "1976",
+          "1969"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In che anno è morto Musa I del Mali, detto Mansa Musa, considerato l’uomo più ricco della storia?",
+        "answers": [
+          "1283",
+          "1337",
+          "1451",
+          "1193"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Dove sono state combattute le guerre boere?",
+        "answers": [
+          "Congo",
+          "Sudafrica",
+          "Etiopia",
+          "Egitto"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In che anno è terminata la guerra d’Algeria?",
+        "answers": [
+          "1958",
+          "1962",
+          "1964",
+          "1968"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale anno Carlo Magno venne incoronato imperatore?",
+        "answers": [
+          "700",
+          "800",
+          "900",
+          "1000"
         ],
         "correctIndex": 1
       }
@@ -1678,6 +1968,106 @@
           "Retta da forze mercenarie"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "In quale anno si verificò il tumulto dei Ciompi?",
+        "answers": [
+          "1372",
+          "1374",
+          "1376",
+          "1378"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In che anno venne firmata la Magna charta libertatum?",
+        "answers": [
+          "1047",
+          "963",
+          "1215",
+          "1333"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiamava la sorella di Adelchi?",
+        "answers": [
+          "Baldovina",
+          "Ermengarda",
+          "Addolorata",
+          "Liutpranda"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quali di questi gerarchi nazisti non fu direttamente coinvolto nella Shoah?",
+        "answers": [
+          "Karl Donitz",
+          "Adolf Eichmann",
+          "Heinrich Himmler",
+          "Hermann Göring"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale nazione moderna si trova il sito neolitico di Catal Huyuk?",
+        "answers": [
+          "Armenia",
+          "Giordania",
+          "Bulgaria",
+          "Turchia"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di queste donne fu figlia del re Amalrico I di Gerusalemme?",
+        "answers": [
+          "Sibilla d’Angiò",
+          "Costanza d’Altavilla",
+          "Anastasia di Montfort",
+          "Adelaide di Borgogna"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di queste correnti del Cristianesimo era appoggiata da Enrico IV di Borbone?",
+        "answers": [
+          "quella ugonotta",
+          "quella valdese",
+          "quella catara",
+          "quella manichea"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual era il nome regale del faraone Pepi II?",
+        "answers": [
+          "Akhenaton",
+          "Neferkara",
+          "Usermaatra setepenra",
+          "Nebmaat"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi missionari si occupò di convertire i Goti all’Arianesimo?",
+        "answers": [
+          "Lupo di Ferrieres",
+          "Ulfila",
+          "Metodio",
+          "Martino di Tours"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di queste città non è stata abitata dai Sumeri?",
+        "answers": [
+          "Lagash",
+          "Uruk",
+          "Hattuša",
+          "Rapiqum"
+        ],
+        "correctIndex": 2
       }
     ]
   },
