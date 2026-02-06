@@ -392,11 +392,10 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.className = 'play-button';
         playButton.textContent = getTranslation('play');
 
-        // Navigate directly to game URL (overview is now part of the game page for SEO)
+        // Add event listener to open game info overlay instead of navigating directly
         playButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            const folderName = folderNameMap[game.id] || game.id;
-            window.location.href = `${folderName}/index.html`;
+            openGameInfo(game);
         });
 
         // Create catchphrase element

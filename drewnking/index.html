@@ -28,7 +28,6 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../js/game-overview.css">
     <script src="../js/tournament-button.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/drewnking/">
@@ -72,89 +71,6 @@
     <button class="home-button" onclick="window.location.href='../'">
         <span class="home-icon">⌂</span> Home
     </button>
-
-    <!-- Game Overview - SEO friendly landing page -->
-    <div id="gameOverview" class="game-overview active">
-        <div class="overview-content">
-            <div class="overview-header">
-                <img src="../icone%20per%20giochi/drewnking.png" alt="Drewnking Game Icon" class="overview-icon">
-                <h1>🍺 Drewnking Game 🍺</h1>
-                <p class="overview-catchphrase">Il gioco alcolico definitivo per feste! 🍻</p>
-                <div class="overview-players">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                    </svg>
-                    <span>2-15 giocatori</span>
-                </div>
-            </div>
-
-            <div class="overview-section">
-                <h3>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
-                    </svg>
-                    <span>Descrizione</span>
-                </h3>
-                <p id="overviewDescription">Drewnking Game è il party game perfetto per serate pazze con gli amici!
-                    Sfide imbarazzanti, votazioni esilaranti e regole folli che renderanno la vostra festa
-                    indimenticabile. Da giocare responsabilmente!</p>
-            </div>
-
-            <div class="overview-section">
-                <h3>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
-                    </svg>
-                    <span>Come Giocare</span>
-                </h3>
-                <ol id="overviewInstructions">
-                    <li data-it="Inserite i nomi dei giocatori e il numero di turni"
-                        data-en="Enter player names and number of turns">Inserite i nomi dei giocatori e il numero di
-                        turni</li>
-                    <li data-it="Ogni turno apparirà una frase sullo schermo"
-                        data-en="A phrase will appear on screen each turn">Ogni turno apparirà una frase sullo schermo
-                    </li>
-                    <li data-it="Le frasi possono essere sfide, votazioni, regole o semplici domande"
-                        data-en="Phrases can be challenges, votes, rules or simple questions">Le frasi possono essere
-                        sfide, votazioni, regole o semplici domande</li>
-                    <li data-it="Seguite le istruzioni della frase e divertitevi!"
-                        data-en="Follow the instructions and have fun!">Seguite le istruzioni della frase e divertitevi!
-                    </li>
-                    <li data-it="Solo per maggiorenni - bevete responsabilmente! (si come no!)"
-                        data-en="Adults only - drink responsibly! (yeah right!)">Solo per maggiorenni - bevete
-                        responsabilmente! (si come no!)</li>
-                </ol>
-            </div>
-
-            <div class="overview-section">
-                <h3>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <span>Caratteristiche</span>
-                </h3>
-                <ul>
-                    <li>Centinaia di frasi divertenti e scorrette</li>
-                    <li>6 categorie diverse con colori unici</li>
-                    <li>Personalizzazione nomi giocatori</li>
-                    <li>Perfetto per feste e pre-serata</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="overview-footer">
-            <button class="overview-btn-back" onclick="window.location.href='../'">
-                <span>Indietro</span>
-            </button>
-            <button class="overview-btn-play" onclick="startGame()">
-                <span>Gioca</span>
-            </button>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Setup Screen -->
@@ -319,7 +235,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="../js/game-overview.js"></script>
 </body>
 
 </html>
