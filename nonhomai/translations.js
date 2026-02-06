@@ -12,12 +12,43 @@ const gameTranslations = {
         'questions30': '30 Frasi',
         'questions50': '50 Frasi',
         'startGameText': 'Inizia Gioco',
-        'nextText': 'Prossima',
+        'btnEveryone': 'Tutti',
+        'btnSomeone': 'Qualcuno',
+        'btnNoOne': 'Nessuno',
         'finishText': 'Finisci',
         'gameOverTitle': 'Partita Finita!',
         'gameOverText': 'Speriamo vi siate divertiti (e abbiate bevuto abbastanza)!',
         'playAgainText': 'Gioca di Nuovo',
-        'backToHomeText': 'Torna alla Home'
+        'backToHomeText': 'Torna alla Home',
+        'results': {
+            'tutti': [
+                "Ragazzi, datevi una regolata!",
+                "Siete un gruppo di criminali!",
+                "Quello che succede qui, resta qui...",
+                "Sto chiamando la polizia adesso.",
+                "Avete fatto letteralmente TUTTO!",
+                "Nessun segreto tra peccatori, eh?",
+                "Questo gruppo è ufficialmente vietato ai minori."
+            ],
+            'qualcuno': [
+                "Un gruppo equilibrato tra santi e peccatori.",
+                "Qualcuno di voi nasconde dei segreti...",
+                "Perfettamente bilanciato, come tutto dovrebbe essere.",
+                "Sappiamo chi sono quelli cattivi!",
+                "Non vi giudichiamo (troppo).",
+                "Un mix di angeli e diavoli.",
+                "Abbastanza caos da essere divertente."
+            ],
+            'nessuno': [
+                "Siete un po' noiosi, eh?",
+                "Siete santi o solo bugiardi?",
+                "Dai, vivete un po'!",
+                "La partita più innocente della storia.",
+                "Non vi credo. Bevete lo stesso!",
+                "Santi. Siete dei santi.",
+                "La prossima volta portate amici più pazzi."
+            ]
+        }
     },
     'en': {
         'gameTitle': 'Never Have I Ever...',
@@ -31,12 +62,43 @@ const gameTranslations = {
         'questions30': '30 Phrases',
         'questions50': '50 Phrases',
         'startGameText': 'Start Game',
-        'nextText': 'Next',
+        'btnEveryone': 'Everyone',
+        'btnSomeone': 'Someone',
+        'btnNoOne': 'No One',
         'finishText': 'Finish',
         'gameOverTitle': 'Game Over!',
         'gameOverText': 'We hope you had fun (and drank enough)!',
         'playAgainText': 'Play Again',
-        'backToHomeText': 'Back to Home'
+        'backToHomeText': 'Back to Home',
+        'results': {
+            'tutti': [
+                "Wow, you are a wild group!",
+                "You definitely need to calm down!",
+                "What happens in this room, stays in this room...",
+                "I'm calling the police right now.",
+                "You guys have done EVERYTHING!",
+                "No secrets among sinners, right?",
+                "This group is officially rated 18+."
+            ],
+            'qualcuno': [
+                "A balanced group of saints and sinners.",
+                "Some of you are hiding secrets...",
+                "Perfectly balanced, as all things should be.",
+                "We know who the naughty ones are!",
+                "Don't worry, we won't judge (much).",
+                "A mix of angels and devils.",
+                "Just enough chaos to be fun."
+            ],
+            'nessuno': [
+                "You guys are boring!",
+                "Are you saints or just liars?",
+                "Come on, live a little!",
+                "This was the most innocent game ever.",
+                "I don't believe you. Drink anyway!",
+                "Saints. Absolute saints.",
+                "Next time, bring some wilder friends."
+            ]
+        }
     }
 };
 
@@ -71,8 +133,14 @@ function applyGameTranslations() {
     setText('nextText', translations.nextText);
     setText('gameOverTitle', translations.gameOverTitle);
     setText('gameOverText', translations.gameOverText);
+    setText('gameOverText', translations.gameOverText);
     setText('playAgainText', translations.playAgainText);
     setText('backToHomeText', translations.backToHomeText);
+
+    // Update answer buttons
+    setText('btn-everyone', translations.btnEveryone);
+    setText('btn-someone', translations.btnSomeone);
+    setText('btn-no-one', translations.btnNoOne);
 
     // Update select options
     const questionCountSelect = document.getElementById('question-count');

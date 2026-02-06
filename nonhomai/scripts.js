@@ -51,13 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         const count = parseInt(questionCountSelect.value);
         gameState.totalQuestions = count;
+        gameState.currentQuestionIndex = 0;
+
+        // Reset answer counts
+        gameState.answers = {
+            tutti: 0,
+            qualcuno: 0,
+            nessuno: 0
+        };
 
         // Shuffle and select questions
         const shuffled = [...gameState.questions].sort(() => 0.5 - Math.random());
-        // Loop questions if more requested than available (shouldn't happen often but safe to have)
+        // Loop questions if more requested than available
         if (count > shuffled.length) {
             gameState.gameQuestions = shuffled;
-            // Add more if needed by duplicating (simple fix)
             while (gameState.gameQuestions.length < count) {
                 gameState.gameQuestions = gameState.gameQuestions.concat(shuffled);
             }
@@ -66,15 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
             gameState.gameQuestions = shuffled.slice(0, count);
         }
 
-        gameState.currentQuestionIndex = 0;
-
         // Update UI
         totalQuestionsSpan.textContent = gameState.totalQuestions;
         showQuestion();
-
-        // precise UI update for next button
-        updateNextButtonText();
-
         showScreen(gameScreen);
     }
 
@@ -85,44 +86,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const question = gameState.gameQuestions[gameState.currentQuestionIndex];
-
-        // Add "Never have I ever..." prefix if in English or ensure context?
-        // Actually the file seems to have full sentences "Non ho mai...".
-        // Let's assume they are ready to display.
         questionDisplay.textContent = question;
-
         currentQuestionSpan.textContent = gameState.currentQuestionIndex + 1;
-        updateNextButtonText();
+
+        // Reset animation
+        const card = document.querySelector('.question-card');
+        card.style.animation = 'none';
+        card.offsetHeight; /* trigger reflow */
+        card.style.animation = 'fadeIn 0.5s ease';
     }
 
-    function nextQuestion() {
+    function handleAnswer(answerType) {
+        // Increment counter
+        if (gameState.answers.hasOwnProperty(answerType)) {
+            gameState.answers[answerType]++;
+        }
+
+        // Move to next question
         gameState.currentQuestionIndex++;
-        if (gameState.currentQuestionIndex < gameState.gameQuestions.length) {
-            showQuestion();
-            // Add animation class re-trigger
-            const card = document.querySelector('.question-card');
-            card.style.animation = 'none';
-            card.offsetHeight; /* trigger reflow */
-            card.style.animation = 'fadeIn 0.5s ease';
-        } else {
-            endGame();
-        }
-    }
-
-    function updateNextButtonText() {
-        const lang = getUserLanguage ? getUserLanguage() : 'it'; // safe check
-        // Check if it's the last question
-        if (gameState.currentQuestionIndex === gameState.gameQuestions.length - 1) {
-            const finishText = lang === 'it' ? 'Finisci' : 'Finish';
-            document.getElementById('nextText').textContent = finishText;
-        } else {
-            const nextText = lang === 'it' ? 'Prossima' : 'Next';
-            document.getElementById('nextText').textContent = nextText;
-        }
+        showQuestion();
     }
 
     function endGame() {
         showScreen(endScreen);
+
+        // Determine winner stats
+        const answers = gameState.answers;
+        let maxCount = -1;
+        let winner = 'qualcuno'; // default
+
+        // Find max
+        for (const [type, count] of Object.entries(answers)) {
+            if (count > maxCount) {
+                maxCount = count;
+                winner = type;
+            } else if (count === maxCount) {
+                // Tie-breaker logic (prefer crazy > balanced > boring)
+                if (type === 'tutti') winner = 'tutti';
+                else if (type === 'qualcuno' && winner === 'nessuno') winner = 'qualcuno';
+            }
+        }
+
+        // Get translation phrases
+        const lang = getUserLanguage ? getUserLanguage() : 'it';
+        const phrases = gameTranslations[lang].results[winner];
+        const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+        // Display result
+        const resultMessage = document.getElementById('result-message');
+        const resultStats = document.getElementById('result-stats');
+
+        resultMessage.textContent = randomPhrase;
+
+        // Show detailed stats
+        const labels = {
+            tutti: lang === 'it' ? 'Tutti' : 'Everyone',
+            qualcuno: lang === 'it' ? 'Qualcuno' : 'Someone',
+            nessuno: lang === 'it' ? 'Nessuno' : 'No One'
+        };
+
+        resultStats.innerHTML = `
+            ${labels.tutti}: <strong>${answers.tutti}</strong> | 
+            ${labels.qualcuno}: <strong>${answers.qualcuno}</strong> | 
+            ${labels.nessuno}: <strong>${answers.nessuno}</strong>
+        `;
     }
 
     function showScreen(screen) {
@@ -135,7 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners
     startGameBtn.addEventListener('click', startGame);
-    nextQuestionBtn.addEventListener('click', nextQuestion);
+
+    // Add listeners for new buttons
+    document.getElementById('btn-everyone').addEventListener('click', () => handleAnswer('tutti'));
+    document.getElementById('btn-someone').addEventListener('click', () => handleAnswer('qualcuno'));
+    document.getElementById('btn-no-one').addEventListener('click', () => handleAnswer('nessuno'));
+
     playAgainBtn.addEventListener('click', () => {
         showScreen(setupScreen);
     });

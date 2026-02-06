@@ -115,6 +115,70 @@
             margin-bottom: 10px;
             font-size: 1rem;
         }
+
+        /* New Styles for 3-button layout */
+        .answer-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .answer-btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .answer-btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-everyone {
+            background-color: #ff4757;
+            /* Bright Red/Pink */
+            border-bottom: 4px solid #c0392b;
+        }
+
+        .btn-someone {
+            background-color: #ffa502;
+            /* Orange */
+            border-bottom: 4px solid #e67e22;
+        }
+
+        .btn-no-one {
+            background-color: #2ed573;
+            /* Green */
+            border-bottom: 4px solid #27ae60;
+        }
+
+        .result-message {
+            font-size: 1.4rem;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            background: rgba(138, 43, 226, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #8a2be2;
+        }
+
+        .result-stats {
+            margin-bottom: 20px;
+            color: #b0b0b0;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
@@ -157,12 +221,20 @@
                 <p id="question-display" class="question-text"></p>
             </div>
 
-            <button id="next-question" class="btn primary-btn"><span id="nextText">Prossima</span></button>
+            <div id="answer-buttons" class="answer-buttons">
+                <button id="btn-everyone" class="btn answer-btn btn-everyone" data-answer="tutti">Tutti</button>
+                <button id="btn-someone" class="btn answer-btn btn-someone" data-answer="qualcuno">Qualcuno</button>
+                <button id="btn-no-one" class="btn answer-btn btn-no-one" data-answer="nessuno">Nessuno</button>
+            </div>
         </div>
 
         <!-- End Screen -->
         <div id="end-screen" class="game-screen">
             <h2 id="gameOverTitle">Partita Finita!</h2>
+            <div class="result-summary">
+                <p id="result-message" class="result-message"></p>
+                <div id="result-stats" class="result-stats"></div>
+            </div>
             <div class="info-card">
                 <p id="gameOverText">Speriamo vi siate divertiti (e abbiate bevuto abbastanza)!</p>
             </div>
