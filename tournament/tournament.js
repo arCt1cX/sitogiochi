@@ -304,6 +304,8 @@ function updateRankings() {
 
 function showFinalResults() {
     showScreen('final-results');
+
+    const podiumSection = document.getElementById('podiumSection');
     const finalRankings = document.getElementById('finalRankings');
     const sortedPlayers = tournamentState.players
         .map(player => ({
@@ -312,12 +314,60 @@ function showFinalResults() {
         }))
         .sort((a, b) => b.score - a.score);
 
-    finalRankings.innerHTML = sortedPlayers.map((player, index) => `
-        <div class="ranking-item ${index === 0 ? 'winner' : ''}">
-            <span>${index + 1}. ${player.name}</span>
-            <span>${player.score} points</span>
-        </div>
-    `).join('');
+    const medals = ['🥇', '🥈', '🥉'];
+    const podiumClasses = ['podium-first', 'podium-second', 'podium-third'];
+    const podiumHeights = ['160px', '110px', '80px'];
+    // Display order: 2nd, 1st, 3rd (classic podium layout)
+    const displayOrder = sortedPlayers.length >= 3 ? [1, 0, 2] : sortedPlayers.length === 2 ? [1, 0] : [0];
+
+    // Build podium
+    podiumSection.innerHTML = `<div class="podium-container">${displayOrder.map(i => {
+        const player = sortedPlayers[i];
+        return `
+            <div class="podium-player" style="animation-delay: ${i * 0.2}s">
+                <div class="podium-medal">${medals[i]}</div>
+                <div class="podium-name">${player.name}</div>
+                <div class="podium-score">${player.score} ${getTranslation('points')}</div>
+                <div class="podium-bar ${podiumClasses[i]}" style="height: ${podiumHeights[i]}">
+                    <span class="podium-position">${i + 1}</span>
+                </div>
+            </div>`;
+    }).join('')}</div>`;
+
+    // Build remaining rankings (4th place onwards)
+    if (sortedPlayers.length > 3) {
+        finalRankings.innerHTML = sortedPlayers.slice(3).map((player, index) => `
+            <div class="final-ranking-item" style="animation-delay: ${(index + 3) * 0.1}s">
+                <span class="final-rank">${index + 4}.</span>
+                <span class="final-rank-name">${player.name}</span>
+                <span class="final-rank-score">${player.score} ${getTranslation('points')}</span>
+            </div>
+        `).join('');
+    } else {
+        finalRankings.innerHTML = '';
+    }
+
+    // Spawn confetti
+    spawnConfetti();
+}
+
+function spawnConfetti() {
+    const container = document.getElementById('confettiContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    const colors = ['#FFD700', '#7b68ee', '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F06292'];
+    for (let i = 0; i < 60; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti-piece';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 3 + 's';
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        confetti.style.width = (Math.random() * 8 + 4) + 'px';
+        confetti.style.height = (Math.random() * 8 + 4) + 'px';
+        if (Math.random() > 0.5) confetti.style.borderRadius = '50%';
+        container.appendChild(confetti);
+    }
 }
 
 function resetTournament() {
