@@ -490,6 +490,106 @@
           "Newton"
         ],
         "correctIndex": 1
+      },
+      {
+        "question": "Who discovered America?",
+        "answers": [
+          "Matteo Salvini",
+          "Christopher Columbus",
+          "Bruno Barbieri",
+          "Gue Pequeño"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which ancient population built the pyramids of Giza?",
+        "answers": [
+          "Romans",
+          "Sumerians",
+          "Egyptians",
+          "Neapolitans"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Of which ancient population was Genghis Khan the sovereign?",
+        "answers": [
+          "Catanzarese",
+          "Mongols",
+          "Neapolitans",
+          "Chinese"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What was Garibaldi's first name?",
+        "answers": [
+          "Franchino",
+          "Garibaldo",
+          "Giuseppe",
+          "Massimetto"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who was the first president of the United States?",
+        "answers": [
+          "George Washington",
+          "Donald Pump",
+          "Kamala Harris",
+          "Giorgia Meloni"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where was Gandhi born?",
+        "answers": [
+          "China",
+          "India",
+          "USA",
+          "Bassano del Grappa"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which Italian dictator is often called 'Il Pelatone'?",
+        "answers": [
+          "Benito Mussolini",
+          "Claudio Bisio",
+          "Maccio Capatonda",
+          "Stefano Pioli"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where did the Aztecs live?",
+        "answers": [
+          "Po Valley",
+          "California",
+          "Mexico",
+          "Pescara"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Where are the Māori originally from?",
+        "answers": [
+          "India",
+          "New Zealand",
+          "Naples",
+          "Caltanissetta"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who built the Parthenon?",
+        "answers": [
+          "The Greeks",
+          "The Romans",
+          "The Foggians",
+          "Antonino Cannavacciuolo"
+        ],
+        "correctIndex": 0
       }
     ],
     "facile": [
@@ -790,6 +890,76 @@
           "Berlin Wall",
           "Roman Wall",
           "Warsaw Wall"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which Roman leader defeated the Gauls?",
+        "answers": [
+          "Romulus",
+          "Augustus",
+          "Marcus Aurelius",
+          "Julius Caesar"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In what year did Christopher Columbus discover America?",
+        "answers": [
+          "1450",
+          "1489",
+          "1492",
+          "1505"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In what year did World War I break out?",
+        "answers": [
+          "1938",
+          "1918",
+          "1914",
+          "1945"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In what year was the Unification of Italy proclaimed?",
+        "answers": [
+          "1945",
+          "1879",
+          "1789",
+          "1861"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Who was the most famous and important ruler of Macedonia?",
+        "answers": [
+          "Julius Caesar",
+          "Alexander the Great",
+          "Aristotle",
+          "Genghis Khan"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which American president abolished slavery in 1863?",
+        "answers": [
+          "Thomas Jefferson",
+          "Abraham Lincoln",
+          "Richard Nixon",
+          "Theodore Roosevelt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Of which country was Nelson Mandela president?",
+        "answers": [
+          "Zimbabwe",
+          "South Africa",
+          "Mozambique",
+          "Namibia"
         ],
         "correctIndex": 1
       }
@@ -1094,6 +1264,46 @@
           "A reconstruction plan"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "In what year did the Western Roman Empire fall, beginning the Middle Ages?",
+        "answers": [
+          "589",
+          "476",
+          "252",
+          "492"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which explorer is known for conquering the Inca Empire with only about 130 soldiers?",
+        "answers": [
+          "Hernán Cortés",
+          "Francisco Pizarro",
+          "James Cook",
+          "Simon Bolivar"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which American president led the invasion of Iraq in 2003?",
+        "answers": [
+          "Bill Clinton",
+          "Ronald Reagan",
+          "George W. Bush",
+          "Barack Obama"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who was the leader of the French Resistance during World War II?",
+        "answers": [
+          "Jean Moulin",
+          "Charles de Gaulle",
+          "Gustave Eiffel",
+          "Denis Diderot"
+        ],
+        "correctIndex": 1
       }
     ],
     "esperto": [
@@ -1396,6 +1606,76 @@
           "French domination in America"
         ],
         "correctIndex": 1
+      },
+      {
+        "question": "Which Roman emperor is remembered by historians as 'Optimus Princeps'?",
+        "answers": [
+          "Trajan",
+          "Hadrian",
+          "Marcus Aurelius",
+          "Constantine"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these American presidents was NOT in office during the Vietnam War (1955-1975)?",
+        "answers": [
+          "Dwight D. Eisenhower",
+          "Ronald Reagan",
+          "John F. Kennedy",
+          "Lyndon B. Johnson"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In what year did the Korean War break out?",
+        "answers": [
+          "1950",
+          "1945",
+          "1976",
+          "1969"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In what year did Musa I of Mali, known as Mansa Musa, considered the richest man in history, die?",
+        "answers": [
+          "1283",
+          "1337",
+          "1451",
+          "1193"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Where were the Boer Wars fought?",
+        "answers": [
+          "Congo",
+          "South Africa",
+          "Ethiopia",
+          "Egypt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In what year did the Algerian War end?",
+        "answers": [
+          "1958",
+          "1962",
+          "1964",
+          "1968"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In what year was Charlemagne crowned emperor?",
+        "answers": [
+          "700",
+          "800",
+          "900",
+          "1000"
+        ],
+        "correctIndex": 1
       }
     ],
     "laureato": [
@@ -1686,6 +1966,106 @@
           "Separated from religion",
           "Participatory and articulated in collegiate bodies",
           "Derived from Roman law"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In what year did the Ciompi Revolt occur?",
+        "answers": [
+          "1372",
+          "1374",
+          "1376",
+          "1378"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In what year was the Magna Carta Libertatum signed?",
+        "answers": [
+          "1047",
+          "963",
+          "1215",
+          "1333"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What was the name of Adelchis's sister?",
+        "answers": [
+          "Baldovina",
+          "Ermengarda",
+          "Addolorata",
+          "Liutpranda"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these Nazi hierarchs was not directly involved in the Shoah?",
+        "answers": [
+          "Karl Dönitz",
+          "Adolf Eichmann",
+          "Heinrich Himmler",
+          "Hermann Göring"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which modern nation is the Neolithic site of Catal Huyuk located?",
+        "answers": [
+          "Armenia",
+          "Jordan",
+          "Bulgaria",
+          "Turkey"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which of these women was the daughter of King Amalric I of Jerusalem?",
+        "answers": [
+          "Sibylla of Anjou",
+          "Constance of Hauteville",
+          "Anastasia of Montfort",
+          "Adelaide of Burgundy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these Christian currents was supported by Henry IV of Bourbon?",
+        "answers": [
+          "Huguenot",
+          "Waldensian",
+          "Cathar",
+          "Manichaean"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What was the regnal name of Pharaoh Pepi II?",
+        "answers": [
+          "Akhenaten",
+          "Neferkare",
+          "Usermaatre Setepenre",
+          "Nebmaat"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these missionaries was responsible for converting the Goths to Arianism?",
+        "answers": [
+          "Lupus of Ferrières",
+          "Ulfilas",
+          "Methodius",
+          "Martin of Tours"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these cities was not inhabited by the Sumerians?",
+        "answers": [
+          "Lagash",
+          "Uruk",
+          "Hattusa",
+          "Rapiqum"
         ],
         "correctIndex": 2
       }
@@ -2798,6 +3178,106 @@
           "Crete"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "What is the highest permanently inhabited city in the world?",
+        "answers": [
+          "Potosí",
+          "La Rinconada",
+          "Lhasa",
+          "El Alto"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which nation is the Darfur region located?",
+        "answers": [
+          "Ethiopia",
+          "Eritrea",
+          "Sudan",
+          "Chad"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the lowest point in Europe?",
+        "answers": [
+          "Caspian Sea",
+          "Caspian Depression",
+          "Venice Lagoon",
+          "North Sea"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the capital of New Zealand?",
+        "answers": [
+          "Auckland",
+          "Wellington",
+          "Christchurch",
+          "Hamilton"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which ocean is the island of Réunion located?",
+        "answers": [
+          "Atlantic Ocean",
+          "Indian Ocean",
+          "Pacific Ocean",
+          "Arabian Sea"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the largest island in the Mediterranean?",
+        "answers": [
+          "Cyprus",
+          "Sardinia",
+          "Sicily",
+          "Crete"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the capital of Suriname?",
+        "answers": [
+          "Georgetown",
+          "Paramaribo",
+          "Cayenne",
+          "Port of Spain"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Where is Torres del Paine National Park located?",
+        "answers": [
+          "Argentina",
+          "Chile",
+          "Peru",
+          "Colombia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the name of the southernmost Japanese archipelago?",
+        "answers": [
+          "Hokkaido",
+          "Kyushu",
+          "Okinawa",
+          "Honshu"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the deepest sea in the world?",
+        "answers": [
+          "Caribbean Sea",
+          "Arabian Sea",
+          "Philippine Sea",
+          "Bering Sea"
+        ],
+        "correctIndex": 2
       }
     ],
     "laureato": [
@@ -2948,6 +3428,156 @@
           "Iran",
           "Iraq",
           "Syria"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which Italian plain is formed by the union of several alluvial fans?",
+        "answers": [
+          "Po Valley",
+          "Sele Plain",
+          "Adige Valley",
+          "Sulmona Basin"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the youngest country in the world politically?",
+        "answers": [
+          "East Timor",
+          "Kosovo",
+          "South Sudan",
+          "Palestine"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the geological process of mountain formation called?",
+        "answers": [
+          "Orogeny",
+          "Erosion",
+          "Subsidence",
+          "Alluviation"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a volcanic 'caldera'?",
+        "answers": [
+          "A type of lava",
+          "A crustal fracture",
+          "A crater lake",
+          "A large volcanic depression"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What is the capital of the island of Vanuatu?",
+        "answers": [
+          "Port Vila",
+          "Suva",
+          "Apia",
+          "Majuro"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the longest land border between two states?",
+        "answers": [
+          "Canada-United States",
+          "Russia-China",
+          "Argentina-Chile",
+          "India-Bangladesh"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which part of the world is the Sonoran Desert located?",
+        "answers": [
+          "Africa",
+          "Australia",
+          "North America",
+          "Central Asia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is an estuary?",
+        "answers": [
+          "A river island",
+          "A delta river mouth",
+          "A funnel-shaped river mouth",
+          "A secondary river branch"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which ocean has the lowest average salinity?",
+        "answers": [
+          "Pacific",
+          "Arctic",
+          "Atlantic",
+          "Indian"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the name of the mountain range separating Europe from Asia?",
+        "answers": [
+          "Ural Mountains",
+          "Carpathian Mountains",
+          "Tatra Mountains",
+          "Altai Mountains"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How many degrees of longitude are there between two adjacent time zones?",
+        "answers": [
+          "10°",
+          "12°",
+          "15°",
+          "20°"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a tombolo?",
+        "answers": [
+          "A sandy formation between two masses",
+          "A bar connecting land and island",
+          "A relief created by sea currents",
+          "A strip of sand between two coasts"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is an 'isobar' in meteorology?",
+        "answers": [
+          "A line of equal temperature",
+          "A line of equal atmospheric pressure",
+          "A zone of high atmospheric pressure",
+          "A cold front"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these seas is considered an inland sea?",
+        "answers": [
+          "Red Sea",
+          "Black Sea",
+          "Caribbean Sea",
+          "South China Sea"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which European country has the largest forest area?",
+        "answers": [
+          "Germany",
+          "France",
+          "Sweden",
+          "Finland"
         ],
         "correctIndex": 2
       }
@@ -5874,6 +6504,106 @@
           "An ancient theatrical technique"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Who wrote 'Orlando Furioso'?",
+        "answers": [
+          "Torquato Tasso",
+          "Ludovico Ariosto",
+          "Matteo Maria Boiardo",
+          "Giovanni Boccaccio"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these works is by Luigi Pirandello?",
+        "answers": [
+          "La coscienza di Zeno",
+          "Il fu Mattia Pascal",
+          "I Malavoglia",
+          "Il piacere"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which novel does the character of Captain Ahab appear?",
+        "answers": [
+          "Treasure Island",
+          "Moby Dick",
+          "The Old Man and the Sea",
+          "Robinson Crusoe"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who is the author of 'One Hundred Years of Solitude'?",
+        "answers": [
+          "Jorge Luis Borges",
+          "Gabriel García Márquez",
+          "Pablo Neruda",
+          "Isabel Allende"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which poetic movement did Baudelaire belong to?",
+        "answers": [
+          "Futurism",
+          "Symbolism",
+          "Surrealism",
+          "Romanticism"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who wrote 'Don Quixote'?",
+        "answers": [
+          "Lope de Vega",
+          "Miguel de Cervantes",
+          "Calderón de la Barca",
+          "Tirso de Molina"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which city is James Joyce's 'Ulysses' set?",
+        "answers": [
+          "London",
+          "Dublin",
+          "Edinburgh",
+          "New York"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these novels was written by Jane Austen?",
+        "answers": [
+          "Wuthering Heights",
+          "Jane Eyre",
+          "Pride and Prejudice",
+          "Middlemarch"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who is the author of 'The Trial'?",
+        "answers": [
+          "Thomas Mann",
+          "Franz Kafka",
+          "Hermann Hesse",
+          "Robert Musil"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which work begins with the verse 'Nel mezzo del cammin di nostra vita'?",
+        "answers": [
+          "Canzoniere",
+          "Divine Comedy",
+          "Decameron",
+          "Jerusalem Delivered"
+        ],
+        "correctIndex": 1
       }
     ]
   },
@@ -17218,6 +17948,16 @@
           "Giorgio Morandi"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Who painted the 'School of Athens'?",
+        "answers": [
+          "Michelangelo",
+          "Raphael",
+          "Leonardo da Vinci",
+          "Botticelli"
+        ],
+        "correctIndex": 1
       }
     ],
     "laureato": [
@@ -23286,6 +24026,308 @@
           "Deleuze"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "What is the 'categorical imperative' for Kant?",
+        "answers": [
+          "A conditional advice",
+          "A universal moral law",
+          "A rigid social rule",
+          "A psychological need"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Schopenhauer, life is essentially:",
+        "answers": [
+          "Joy and pleasure",
+          "Pain and boredom",
+          "Discovery and progress",
+          "Order and harmony"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who wrote 'Leviathan'?",
+        "answers": [
+          "Rousseau",
+          "Hobbes",
+          "Locke",
+          "Hume"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'overman' (Übermensch) for Nietzsche?",
+        "answers": [
+          "A man with superpowers",
+          "A man who creates his own values beyond good and evil",
+          "A political dictator",
+          "A religious saint"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Popper, a scientific theory must be:",
+        "answers": [
+          "Verifiable",
+          "Falsifiable",
+          "Always true",
+          "Definitive"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is 'epoché' in Husserl's phenomenology?",
+        "answers": [
+          "Analysis of time",
+          "Suspension of judgment",
+          "Historical memory",
+          "Scientific investigation"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who is the author of 'Tractatus Logico-Philosophicus'?",
+        "answers": [
+          "Russell",
+          "Wittgenstein",
+          "Heidegger",
+          "Carnap"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Sartre, man is condemned to be:",
+        "answers": [
+          "Free",
+          "Happy",
+          "Slave",
+          "Sinful"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is 'utilitarianism'?",
+        "answers": [
+          "Pursuit of personal profit",
+          "Maximizing happiness for the greatest number of people",
+          "Use of technology",
+          "A political theory on trade"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who introduced the concept of 'liquid modernity'?",
+        "answers": [
+          "Foucault",
+          "Bauman",
+          "Baudrillard",
+          "Derrida"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Hannah Arendt, the 'banality of evil' manifests itself when:",
+        "answers": [
+          "Man is naturally bad",
+          "Man blindly obeys orders without thinking",
+          "Evil is committed by psychopaths",
+          "Society is corrupt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'veil of ignorance' for John Rawls?",
+        "answers": [
+          "A lack of education",
+          "A mental experiment on justice",
+          "A religious metaphor",
+          "A cognitive error"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who theorized the 'rhizome'?",
+        "answers": [
+          "Deleuze and Guattari",
+          "Foucault",
+          "Lacan",
+          "Lyotard"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "According to Adorno, culture industry serves to:",
+        "answers": [
+          "Educate the masses",
+          "Manipulate and conform consciences",
+          "Promote art",
+          "Create wealth"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is 'biopolitics' for Foucault?",
+        "answers": [
+          "Politics favoring biology",
+          "Power dealing with the management of biological life",
+          "Environmental defense",
+          "Genetic medicine"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Which concept is central to John Locke's political philosophy?",
+        "answers": [
+          "Private property",
+          "Popular sovereignty",
+          "Rigid social contract",
+          "Absolutist state"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Who wrote 'The Phenomenology of Spirit'?",
+        "answers": [
+          "Kant",
+          "Hegel",
+          "Nietzsche",
+          "Sartre"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'noumenon' in Kant?",
+        "answers": [
+          "The observed phenomenon",
+          "The thing-in-itself, independent of perception",
+          "The idea",
+          "Sensible reality"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What key concept do we find in Plotinus?",
+        "answers": [
+          "One",
+          "Matter",
+          "Idea",
+          "Being"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is Hegelian 'panlogism'?",
+        "answers": [
+          "Everything is matter",
+          "Everything is spirit",
+          "Everything is rational",
+          "Everything is will"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "According to Augustine, how is truth reached?",
+        "answers": [
+          "Through sensory experience",
+          "Through faith and divine illumination",
+          "Through pure reason",
+          "Through systematic doubt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main concept of Kierkegaard's thought?",
+        "answers": [
+          "The unconscious",
+          "Authenticity",
+          "Existential angst",
+          "Historical dialectic"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who elaborated the concept of 'ethics of responsibility'?",
+        "answers": [
+          "Kant",
+          "Weber",
+          "Nietzsche",
+          "Sartre"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Machiavelli, what is the main criterion of political action?",
+        "answers": [
+          "Truth",
+          "Utility",
+          "Justice",
+          "Happiness of citizens"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is 'Dasein' in Heidegger?",
+        "answers": [
+          "Human being-in-the-world",
+          "The essence of nature",
+          "Nothingness",
+          "Will to power"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does Marx mean by 'false consciousness'?",
+        "answers": [
+          "Non-knowledge of self",
+          "Bourgeois awareness",
+          "Distorted view of reality caused by ideology",
+          "Cultural nihilism"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who argues that 'to be is to be perceived'?",
+        "answers": [
+          "Locke",
+          "Hume",
+          "Berkeley",
+          "Leibniz"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In Spinoza's thought, God coincides with:",
+        "answers": [
+          "Man",
+          "Nature",
+          "Reason",
+          "Soul"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is Epicureanism?",
+        "answers": [
+          "Cult of boundless pleasure",
+          "Pursuit of simple pleasures and absence of pain",
+          "Contempt for life",
+          "Rejection of reason"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Pascal, what attitude is rational in the face of God's existence?",
+        "answers": [
+          "Atheism",
+          "Blind faith",
+          "The wager",
+          "Radical doubt"
+        ],
+        "correctIndex": 2
       }
     ]
   },
@@ -24776,6 +25818,6042 @@
           "When jurisdiction is limited to the verification of legitimacy of municipal regulations",
           "When the administrative judge can judge also in a criminal context",
           "When the decision is not appealable in Cassation for procedural economy reasons"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  "Foreign Languages": {
+    "bambino": [
+      {
+        "question": "What is the English translation for the Italian word 'cane'?",
+        "answers": [
+          "Dog",
+          "Cat",
+          "Fish",
+          "Bird"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the French word for the color 'red'?",
+        "answers": [
+          "Rouge",
+          "Bleu",
+          "Vert",
+          "Jaune"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say good morning in Spanish?",
+        "answers": [
+          "¡Buenos días!",
+          "¡Hola!",
+          "¡Adiós!",
+          "¡Gracias!"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the German word for 'cat'?",
+        "answers": [
+          "Katze",
+          "Hund",
+          "Vogel",
+          "Maus"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English word means 'felice'?",
+        "answers": [
+          "Happy",
+          "Sad",
+          "Angry",
+          "Sleepy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you count to 3 in French?",
+        "answers": [
+          "Un, deux, trois",
+          "Uno, dos, tres",
+          "One, two, three",
+          "Eins, zwei, drei"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for the Italian word 'mela'?",
+        "answers": [
+          "Apple",
+          "Banana",
+          "Orange",
+          "Grape"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the Spanish word for 'water'?",
+        "answers": [
+          "Agua",
+          "Fuego",
+          "Tierra",
+          "Aire"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'thank you' in German?",
+        "answers": [
+          "Danke",
+          "Bitte",
+          "Hallo",
+          "Tschüss"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What animal is 'elephant' in Italian?",
+        "answers": [
+          "Elefante",
+          "Leone",
+          "Giraffa",
+          "Scimmia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for 'buongiorno'?",
+        "answers": [
+          "Good morning",
+          "Good night",
+          "Hello",
+          "Goodbye"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the number 'two' in French?",
+        "answers": [
+          "Deux",
+          "Trois",
+          "Quatre",
+          "Cinq"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'sun' in Spanish?",
+        "answers": [
+          "Sol",
+          "Luna",
+          "Estrella",
+          "Cielo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German word means 'school'?",
+        "answers": [
+          "Schule",
+          "Haus",
+          "Park",
+          "Straße"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for the Italian word 'blu'?",
+        "answers": [
+          "Blue",
+          "Red",
+          "Green",
+          "Yellow"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the French word for 'boy'?",
+        "answers": [
+          "Garçon",
+          "Fille",
+          "Homme",
+          "Femme"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for 'ciao'?",
+        "answers": [
+          "Hello",
+          "Goodbye",
+          "Thank you",
+          "Please"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What animal is 'oiseau' in Italian?",
+        "answers": [
+          "Uccello",
+          "Cane",
+          "Gatto",
+          "Pesce"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'book' in Spanish?",
+        "answers": [
+          "Libro",
+          "Cuaderno",
+          "Lápiz",
+          "Mesa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the color 'green' in German?",
+        "answers": [
+          "Grün",
+          "Rot",
+          "Blau",
+          "Gelb"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the Italian word for 'ball'?",
+        "answers": [
+          "Palla",
+          "Pallone",
+          "Gioco",
+          "Sport"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English word for 'nonna'?",
+        "answers": [
+          "Grandmother",
+          "Grandfather",
+          "Mother",
+          "Father"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you count to 5 in Spanish?",
+        "answers": [
+          "Uno, dos, tres, cuatro, cinco",
+          "Un, deux, trois, quatre, cinq",
+          "One, two, three, four, five",
+          "Eins, zwei, drei, vier, fünf"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'house' in French?",
+        "answers": [
+          "Maison",
+          "École",
+          "Jardin",
+          "Voiture"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German word means 'child'?",
+        "answers": [
+          "Kind",
+          "Mann",
+          "Frau",
+          "Baby"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for the Italian word 'giallo'?",
+        "answers": [
+          "Yellow",
+          "Blue",
+          "Red",
+          "Purple"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the Spanish word for 'friend'?",
+        "answers": [
+          "Amigo",
+          "Hermano",
+          "Padre",
+          "Vecino"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'thank you' in French?",
+        "answers": [
+          "Merci",
+          "S'il vous plaît",
+          "Bonjour",
+          "Au revoir"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What animal is 'Hund' in Italian?",
+        "answers": [
+          "Cane",
+          "Gatto",
+          "Topo",
+          "Coniglio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for 'scuola'?",
+        "answers": [
+          "School",
+          "House",
+          "Park",
+          "Garden"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "facile": [
+      {
+        "question": "What is the correct Italian translation of 'I have a dog'?",
+        "answers": [
+          "Ho un cane",
+          "Vedo un cane",
+          "Amo i cani",
+          "Chiamo il cane"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'Mi piace il gelato' in English?",
+        "answers": [
+          "I like ice cream",
+          "I eat ice cream",
+          "I want ice cream",
+          "I have ice cream"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is the French translation for 'book'?",
+        "answers": [
+          "Livre",
+          "École",
+          "Page",
+          "Histoire"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Complete the Spanish phrase: 'Me llamo ___'",
+        "answers": [
+          "Juan",
+          "Gracias",
+          "Casa",
+          "Tiempo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German phrase means 'Where do you live?'",
+        "answers": [
+          "Wo wohnst du?",
+          "Wie geht's?",
+          "Wie alt bist du?",
+          "Was ist das?"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the English translation for 'oggi'?",
+        "answers": [
+          "Today",
+          "Yesterday",
+          "Tomorrow",
+          "Now"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the plural of 'mouse' in English?",
+        "answers": [
+          "Mice",
+          "Mouses",
+          "Mouse",
+          "Mices"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you write '12' in French?",
+        "answers": [
+          "Douze",
+          "Dix",
+          "Vingt",
+          "Quatorze"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English subject pronoun corresponds to 'noi'?",
+        "answers": [
+          "We",
+          "They",
+          "You",
+          "Us"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'good evening' in Spanish?",
+        "answers": [
+          "Buenas tardes",
+          "Buenos días",
+          "Buenas noches",
+          "Hola"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German article is correct for 'Mädchen' (girl)?",
+        "answers": [
+          "Das",
+          "Die",
+          "Der",
+          "Den"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English verb tense uses 'have' + past participle?",
+        "answers": [
+          "Present perfect",
+          "Past simple",
+          "Present continuous",
+          "Future"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'I eat' in French?",
+        "answers": [
+          "Je mange",
+          "J'aime",
+          "Je vais",
+          "Je prends"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English preposition completes: 'She is ___ school'?",
+        "answers": [
+          "At",
+          "In",
+          "On",
+          "To"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'How much does it cost?' in Spanish?",
+        "answers": [
+          "¿Cuánto cuesta?",
+          "¿Qué hora es?",
+          "¿Dónde está?",
+          "¿Cómo te llamas?"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German auxiliary is used for 'fahren' (to drive/go)?",
+        "answers": [
+          "Sein",
+          "Haben",
+          "Werden",
+          "Tun"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which sentence is correct in English?",
+        "answers": [
+          "She doesn't like pizza",
+          "She don't like pizza",
+          "She not likes pizza",
+          "She no like pizza"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Complete the French phrase: 'Il ___ trois sœurs' (He has three sisters)",
+        "answers": [
+          "A",
+          "Est",
+          "Va",
+          "Fait"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish pronoun means 'they'?",
+        "answers": [
+          "Ellos/Ellas",
+          "Nosotros",
+          "Vosotros",
+          "Usted"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How is the German perfect tense of 'gehen' (to go) formed?",
+        "answers": [
+          "Ist gegangen",
+          "Hat gegangen",
+          "Ist gehen",
+          "Hat gehen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English adjective is the opposite of 'expensive'?",
+        "answers": [
+          "Cheap",
+          "Big",
+          "New",
+          "Fast"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'we speak' in French?",
+        "answers": [
+          "Nous parlons",
+          "Vous parlez",
+          "Ils parlent",
+          "Je parle"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish word means 'big'?",
+        "answers": [
+          "Grande",
+          "Pequeño",
+          "Alto",
+          "Bajo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German case uses 'dem' for the masculine article?",
+        "answers": [
+          "Dative",
+          "Nominative",
+          "Accusative",
+          "Genitive"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'I would like' in English?",
+        "answers": [
+          "I would like",
+          "I want",
+          "I need",
+          "I have"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French verb means 'to take'?",
+        "answers": [
+          "Prendre",
+          "Avoir",
+          "Être",
+          "Aller"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'tomorrow' in Spanish?",
+        "answers": [
+          "Mañana",
+          "Ayer",
+          "Hoy",
+          "Semana"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German preposition means 'without'?",
+        "answers": [
+          "Ohne",
+          "Mit",
+          "Für",
+          "Gegen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which English sentence is in the Present Continuous?",
+        "answers": [
+          "She is reading",
+          "She reads",
+          "She read",
+          "She has read"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'How old are you?' in French?",
+        "answers": [
+          "Quel âge as-tu?",
+          "Comment ça va?",
+          "Qui est-ce?",
+          "Où habites-tu?"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "medio": [
+      {
+        "question": "Which English verb tense is used in 'She has been working here since 2010'?",
+        "answers": [
+          "Present Perfect Continuous",
+          "Past Simple",
+          "Future Perfect",
+          "Present Continuous"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Si vous aviez de l'argent, vous voyageriez' into English?",
+        "answers": [
+          "If you had money, you would travel",
+          "If you have money, you will travel",
+          "If you had had money, you would have traveled",
+          "If you will have money, you would travel"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which form is correct in Spanish for 'Those are their books'?",
+        "answers": [
+          "Esos son sus libros",
+          "Aquellos son tus libros",
+          "Estos son nuestros libros",
+          "Esas son sus libros"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German case requires the verb 'helfen' (to help)?",
+        "answers": [
+          "Dative",
+          "Nominative",
+          "Accusative",
+          "Genitive"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you complete: 'If I ___ richer, I ___ buy a house'?",
+        "answers": [
+          "Were / would",
+          "Am / will",
+          "Had been / would have",
+          "Would be / could"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French relative pronoun completes: 'La femme ___ je parle'?",
+        "answers": [
+          "À qui",
+          "Que",
+          "Dont",
+          "Qui"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'I should have studied' in English?",
+        "answers": [
+          "I should have studied",
+          "I must study",
+          "I had to study",
+          "I would study"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish preposition completes: 'Sueño ___ viajar'?",
+        "answers": [
+          "Con",
+          "De",
+          "A",
+          "Por"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German verb form is correct: 'Er ___ gestern angekommen'?",
+        "answers": [
+          "Ist",
+          "Hat",
+          "Wird",
+          "Habe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which conditional is: 'If you heat ice, it melts'?",
+        "answers": [
+          "Zero Conditional",
+          "First Conditional",
+          "Second Conditional",
+          "Third Conditional"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Je me suis lavé les mains' into English?",
+        "answers": [
+          "I washed my hands",
+          "I wash my hands",
+          "I was washing my hands",
+          "I had washed my hands"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish form is correct for 'had been' (era stato)?",
+        "answers": [
+          "Había sido",
+          "Fue",
+          "Era",
+          "Hubo sido"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German preposition governs the genitive: '___ des Regens'?",
+        "answers": [
+          "Wegen",
+          "Mit",
+          "Durch",
+          "Ohne"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you complete: 'By next year, they ___ the project'?",
+        "answers": [
+          "Will have finished",
+          "Will finish",
+          "Are finishing",
+          "Finished"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French auxiliary for 'je ___ descendu(e)'?",
+        "answers": [
+          "Suis",
+          "Ai",
+          "Es",
+          "Est"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'se lo hubiera sabido' in English?",
+        "answers": [
+          "If I had known",
+          "If I knew",
+          "If I will know",
+          "If I would have known"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German modal verb expresses obligation: 'Du ___ das machen'?",
+        "answers": [
+          "Musst",
+          "Kannst",
+          "Willst",
+          "Darfst"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which sentence is in the Past Perfect Continuous?",
+        "answers": [
+          "They had been waiting for hours",
+          "They were waiting for hours",
+          "They have been waiting",
+          "They would have waited"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'On aurait dit qu'il mentait' into English?",
+        "answers": [
+          "It seemed like he was lying",
+          "One would say he lies",
+          "They would have said he was lying",
+          "It is said he lied"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish form is correct for 'se lo comprarían'?",
+        "answers": [
+          "They would buy it for themselves",
+          "You bought it",
+          "We bought it",
+          "He buys it"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German case in 'Ich gebe ___ (der Mann) das Buch'?",
+        "answers": [
+          "Dem Mann",
+          "Den Mann",
+          "Des Mannes",
+          "Der Mann"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you complete: 'This time tomorrow, I ___ on the beach'?",
+        "answers": [
+          "Will be lying",
+          "Will lie",
+          "Am lying",
+          "Have lain"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French pronoun completes: '___ qui est arrivé'?",
+        "answers": [
+          "Celui",
+          "Celui-là",
+          "Celle",
+          "Ce"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'se ne erano andati' (they had gone) in Spanish?",
+        "answers": [
+          "Se habían ido",
+          "Se fueron",
+          "Se irían",
+          "Se hayan ido"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German preposition means 'despite'?",
+        "answers": [
+          "Trotz",
+          "Wegen",
+          "Während",
+          "Dank"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which sentence uses the Future Perfect?",
+        "answers": [
+          "By 2030, scientists will have discovered a cure",
+          "Scientists will discover a cure",
+          "Scientists are discovering a cure",
+          "Scientists discover cures"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Il se peut qu'il vienne'?",
+        "answers": [
+          "He might come",
+          "He came",
+          "He comes",
+          "He will come"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish form is correct for 'se lo habían dado'?",
+        "answers": [
+          "They had given it to him/her",
+          "They gave it to him",
+          "They will give it to him",
+          "They were giving it to him"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German verb governs the dative: '___ mir'?",
+        "answers": [
+          "Gehören",
+          "Kennen",
+          "Lieben",
+          "Suchen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you complete: 'Had I known, I ___ differently'?",
+        "answers": [
+          "Would have acted",
+          "Would act",
+          "Acted",
+          "Had acted"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Which construction is correct in English to express an impossible condition in the past?",
+        "answers": [
+          "If I had known, I would have helped you",
+          "If I know, I help you",
+          "If I would know, I would help you",
+          "If I would have known, I help you"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you correctly translate 'Il aurait fallu que tu le fasses' into English?",
+        "answers": [
+          "You should have done it",
+          "You had to do it",
+          "You would have done it",
+          "It would have been necessary for you to do it"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish tense is used in 'Si lo hubiera sabido, no habría venido'?",
+        "answers": [
+          "Pluperfect Subjunctive + Perfect Conditional",
+          "Past Perfect + Future Perfect",
+          "Imperfect + Simple Conditional",
+          "Present Subjunctive + Simple Future"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In German, what is the correct Konjunktiv II form for 'ich gehen'?",
+        "answers": [
+          "Ich ginge",
+          "Ich gehte",
+          "Ich gegangen wäre",
+          "Ich gehe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How is the **Future Perfect Continuous** formed in English?",
+        "answers": [
+          "Will have been + verb in -ing",
+          "Will be + verb in -ing",
+          "Have been + verb",
+          "Will have + past participle"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French sentence correctly uses the **subjonctif passé**?",
+        "answers": [
+          "Bien qu’il ait fini, il reste ici",
+          "Quand il a fini, il est parti",
+          "Il a fini rapidement",
+          "Il finirait s’il voulait"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German relative pronoun correctly completes: 'Das Buch, ___ ich gelesen habe'?",
+        "answers": [
+          "Das",
+          "Die",
+          "Dem",
+          "Der"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which sentence contains a correct causative structure in English?",
+        "answers": [
+          "I had my car repaired",
+          "I made my car to repair",
+          "I let the car repairing",
+          "I got my car to repair"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you say 'Although he was sick, he came' in French?",
+        "answers": [
+          "Bien qu’il fût malade, il est venu",
+          "Même s’il est malade, il vient",
+          "Il est venu parce qu’il est malade",
+          "Il venait bien qu’il soit malade"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which construction is correct in Spanish for the past conditional?",
+        "answers": [
+          "Habríamos ido si hubiéramos tenido tiempo",
+          "Fuimos si teníamos tiempo",
+          "Iríamos si habíamos tenido tiempo",
+          "Iremos si hubiéramos tenido tiempo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German verb governs the genitive?",
+        "answers": [
+          "Bedürfen",
+          "Sich erinnern",
+          "Warten",
+          "Fragen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the meaning of the idiomatic phrase 'to beat around the bush'?",
+        "answers": [
+          "Avoiding the topic",
+          "Taking a shortcut",
+          "Being direct",
+          "Exaggerating"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Ils auraient dû partir plus tôt'?",
+        "answers": [
+          "They should have left earlier",
+          "They would have wanted to leave earlier",
+          "They will leave earlier",
+          "They left earlier"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the passive form of the German verb 'lesen' (3rd person singular, Perfekt)?",
+        "answers": [
+          "Es ist gelesen worden",
+          "Es wurde gelesen",
+          "Es hat gelesen",
+          "Es war gelesen worden"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish sentence is correct with the present subjunctive?",
+        "answers": [
+          "Es probable que venga mañana",
+          "Es probable que viene mañana",
+          "Es probable que venía mañana",
+          "Es probable que vendrá mañana"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the past participle of the irregular verb 'to lie' (not telling the truth)?",
+        "answers": [
+          "Lied",
+          "Lay",
+          "Lain",
+          "Lieded"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In French, which sentence requires the subjunctive?",
+        "answers": [
+          "Il faut que tu viennes",
+          "Je sais qu’il vient",
+          "Il dit qu’il est là",
+          "Je crois qu’il part"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which verb tense is used in 'Had he studied more, he would have passed'?",
+        "answers": [
+          "Third Conditional",
+          "First Conditional",
+          "Second Conditional",
+          "Zero Conditional"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German Präteritum form is correct for 'sehen' (3rd person singular)?",
+        "answers": [
+          "Sah",
+          "Sieht",
+          "Gesehen",
+          "Sehete"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which represents the correct Spanish reflexive form for 'washing our hands'?",
+        "answers": [
+          "Nos lavamos las manos",
+          "Nos lavamos los manos",
+          "Lavamos nos las manos",
+          "Nos lavamos nuestras manos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'She needn’t have come'?",
+        "answers": [
+          "She didn't need to come (but she did)",
+          "She didn't come",
+          "She had to come",
+          "She couldn't come"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In German, which structure is correct with 'dass'?",
+        "answers": [
+          "Ich glaube, dass er kommt",
+          "Ich glaube, dass er kommtet",
+          "Ich glaube, dass kommt er",
+          "Ich glaube, dass er gekommen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How is the gerund of 'parler' formed in French?",
+        "answers": [
+          "En parlant",
+          "Parlé",
+          "Parlant",
+          "Parler"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish sentence expresses a wish in the past?",
+        "answers": [
+          "Ojalá hubiera venido",
+          "Ojalá viene",
+          "Ojalá vendrá",
+          "Ojalá venga"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the meaning of 'I’d rather you came earlier'?",
+        "answers": [
+          "I would prefer you to come earlier",
+          "I will come earlier",
+          "I would have preferred to come earlier",
+          "I prefer that you come later"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Er tut so, als ob er krank wäre'?",
+        "answers": [
+          "He pretends to be sick",
+          "He says he is sick",
+          "He is sick",
+          "He thinks he is sick"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the correct interrogative form in French for: 'What did you do yesterday?'",
+        "answers": [
+          "Qu’est-ce que tu as fait hier ?",
+          "Tu faisais quoi hier ?",
+          "Qu’as-tu fait hier ?",
+          "All answers are correct"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which German construct expresses an object clause?",
+        "answers": [
+          "Ich weiß, dass er kommt",
+          "Weil er kommt",
+          "Obwohl er kommt",
+          "Wenn er kommt"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'She was said to have lied'?",
+        "answers": [
+          "It was said that she had lied",
+          "She had lied",
+          "They said she was lying",
+          "She was told to lie"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish sentence correctly expresses a concession?",
+        "answers": [
+          "Aunque sea tarde, irá",
+          "Porque sea tarde, irá",
+          "Así que sea tarde, irá",
+          "Aunque está tarde, irá"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "laureato": [
+      {
+        "question": "What grammatical function does the past participle have in 'I have been given the book'?",
+        "answers": [
+          "Passive verb complex",
+          "Direct object",
+          "Verbal particle",
+          "Attributive adjective"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In French, which conditional construction is used in 'Si j'avais su, je ne serais pas venu'?",
+        "answers": [
+          "Third conditional (hypothetical past)",
+          "Second conditional",
+          "First conditional",
+          "Unrealizable condition in the present"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In Spanish, which verb is used to express 'to be happy about doing something' in 'Me alegra que hayas venido'?",
+        "answers": [
+          "Alegrar",
+          "Estar",
+          "Ser",
+          "Gustar"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following Italian verbs does NOT typically govern the subjunctive?",
+        "answers": [
+          "Sapere (to know)",
+          "Desiderare (to desire)",
+          "Temere (to fear)",
+          "Sperare (to hope)"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German case is used with the verb 'sehen' (to see) when the object is a person?",
+        "answers": [
+          "Accusative",
+          "Genitive",
+          "Dative",
+          "Nominative"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the meaning of the phrasal verb 'to bring up'?",
+        "answers": [
+          "To raise a topic",
+          "To carry something up",
+          "To collect",
+          "To support an argument"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which context is the present subjunctive used in Spanish?",
+        "answers": [
+          "Expressing desire or doubt",
+          "Speaking of certain facts",
+          "Describing past actions",
+          "Stating real situations"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In German, how do you translate 'I want you to do it'?",
+        "answers": [
+          "Ich will, dass du es machst",
+          "Ich möchte, dass du es machst",
+          "Ich werde, dass du es machst",
+          "Ich habe gewollt, dass du es machst"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following English verbs requires 'to' for the infinitive?",
+        "answers": [
+          "Want",
+          "See",
+          "Make",
+          "Help"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which sentence correctly uses the compound conditional in French?",
+        "answers": [
+          "Je serais allé si j'avais su",
+          "Je vais aller si j'avais su",
+          "J'irai si j'avais su",
+          "Je suis allé si j'avais su"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following Spanish words contains a spelling error?",
+        "answers": [
+          "Esquema",
+          "Puedo",
+          "Excesivo",
+          "Efecto"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the Italian translation of 'to deal with' in a formal context?",
+        "answers": [
+          "Occuparsi di",
+          "Trattare con",
+          "Gestire",
+          "Lavorare su"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In English, which verb form completes 'Had he known, he ___ reacted differently'?",
+        "answers": [
+          "Would have",
+          "Will have",
+          "Would",
+          "Was"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German verb form expresses a hypothetical situation in the past?",
+        "answers": [
+          "Konjunktiv II",
+          "Indikativ",
+          "Imperativ",
+          "Konjunktiv I"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In French, what is the construction for 'Although he was tired, he continued to work'?",
+        "answers": [
+          "Bien qu'il fût fatigué, il continua à travailler",
+          "Quoique il était fatigué, il continua à travailler",
+          "Même s'il était fatigué, il continua à travailler",
+          "Cependant qu'il fût fatigué, il continua à travailler"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'I had been living here for five years before I moved' into Italian?",
+        "answers": [
+          "Vivevo qui da cinque anni prima di trasferirmi",
+          "Avevo vissuto qui per cinque anni prima di trasferirmi",
+          "Vissi qui per cinque anni prima di trasferirmi",
+          "Vivevo qui da cinque anni prima di essermi trasferito"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which Spanish verb is irregular in the imperfect tense?",
+        "answers": [
+          "Ser",
+          "Haber",
+          "Ir",
+          "Tener"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which French verb means 'to grant' (to permit/give)?",
+        "answers": [
+          "Accorder",
+          "Donner",
+          "Permettre",
+          "Autoriser"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German case uses 'den' as a definite article (masculine singular)?",
+        "answers": [
+          "Accusative",
+          "Nominativo",
+          "Dativo",
+          "Genitivo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In Spanish, which sentence is correct formally for 'I hope you are well'?",
+        "answers": [
+          "Espero que estés bien",
+          "Espero que estés buena",
+          "Espero que estés malo",
+          "Espero que estuvieras bien"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which construction is in 'Present Perfect Progressive'?",
+        "answers": [
+          "I have been studying",
+          "I am studying",
+          "I had studied",
+          "I study"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the correct translation of 'He was said to be the best player'?",
+        "answers": [
+          "It was said that he was the best player",
+          "It has been said he was the best player",
+          "It will be said he is the best player",
+          "It is said he was the best player"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Although he is tired, he works hard' into German?",
+        "answers": [
+          "Obwohl er müde ist, arbeitet er hart",
+          "Obwohl er müde war, arbeitet er hart",
+          "Trotz dass er müde ist, arbeitet er hart",
+          "Trotz er müde ist, arbeitet er hart"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these Italian verbs is used intransitively?",
+        "answers": [
+          "Andare (to go)",
+          "Mangiare (to eat)",
+          "Prendere (to take)",
+          "Bere (to drink)"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How do you translate 'Si no me hubieras dicho, no lo habría creído' into English?",
+        "answers": [
+          "If you hadn't told me, I wouldn't have believed it",
+          "If you didn't tell me, I wouldn't believe it",
+          "If you hadn't told me, I didn't believe",
+          "If you didn't tell me, I don't believe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which context is the pluperfect subjunctive used in Italian?",
+        "answers": [
+          "To express doubts about the past (usually in hypothetical clauses)",
+          "To speak of certain past facts",
+          "To express a wish",
+          "To speak of a future situation"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In Spanish, which preposition completes 'En cuanto ___ terminen, podemos irnos'?",
+        "answers": [
+          " (No preposition needed, but uses subjunctive)",
+          "Cuando",
+          "Si",
+          "Mientras"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In German, which sentence is in the Future Perfect?",
+        "answers": [
+          "Ich werde gegangen sein",
+          "Ich werde gehen",
+          "Ich werde gegangen",
+          "Ich werde zu gehen haben"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which German modal verb means 'must' (moral/obligatory)?",
+        "answers": [
+          "Müssen",
+          "Können",
+          "Dürfen",
+          "Wollen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In French, which sentence uses the Future Perfect correctly?",
+        "answers": [
+          "Il aura fini avant demain",
+          "Il finira demain",
+          "Il aurait fini demain",
+          "Il finit demain"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  "Medicine": {
+    "bambino": [
+      {
+        "question": "Where does the heart beat?",
+        "answers": [
+          "In the chest",
+          "In the head",
+          "In the foot",
+          "In the belly"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the stethoscope used for?",
+        "answers": [
+          "To listen to the heart",
+          "To see the bones",
+          "To measure fever",
+          "To give injections"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is used to write a medical prescription?",
+        "answers": [
+          "A pen",
+          "A syringe",
+          "A scalpel",
+          "A spoon"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the children's doctor called?",
+        "answers": [
+          "Pediatrician",
+          "Dentist",
+          "Surgeon",
+          "Psychologist"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do we put on a wound?",
+        "answers": [
+          "A plaster",
+          "A shoe",
+          "A hat",
+          "A glove"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens if you have a fever?",
+        "answers": [
+          "You feel hot and tired",
+          "You are hungry",
+          "You are sleepy",
+          "You run fast"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ makes us breathe?",
+        "answers": [
+          "The lungs",
+          "The liver",
+          "The stomach",
+          "The bones"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How many fingers do we have in total?",
+        "answers": [
+          "20",
+          "10",
+          "15",
+          "18"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens when the doctor gives you an injection?",
+        "answers": [
+          "You receive medicine",
+          "You get a gift",
+          "They make you laugh",
+          "They remove your teeth"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the name of the body part we use to think?",
+        "answers": [
+          "Brain",
+          "Heart",
+          "Liver",
+          "Hand"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is needed to wash hands well?",
+        "answers": [
+          "Water and soap",
+          "Flour and sugar",
+          "Salt and pepper",
+          "Colored pencils"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What color is blood?",
+        "answers": [
+          "Red",
+          "Blue",
+          "Green",
+          "Yellow"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is put on the arm to measure blood pressure?",
+        "answers": [
+          "The cuff",
+          "The helmet",
+          "The bandage",
+          "The glove"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the doctor who treats teeth called?",
+        "answers": [
+          "Dentist",
+          "Oculist",
+          "Pediatrician",
+          "Cardiologist"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens when you sneeze?",
+        "answers": [
+          "Air comes out of the nose",
+          "A hair grows",
+          "Your voice changes",
+          "You get chills"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the arm bone called?",
+        "answers": [
+          "Humerus",
+          "Femur",
+          "Skull",
+          "Rib"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the thermometer used for?",
+        "answers": [
+          "To measure fever",
+          "To count fingers",
+          "To see the heart",
+          "To weigh shoes"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where are the ears located?",
+        "answers": [
+          "On the sides of the head",
+          "On the hands",
+          "On the legs",
+          "Near the feet"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the liquid called that disinfects wounds?",
+        "answers": [
+          "Disinfectant",
+          "Glue",
+          "Sparkling water",
+          "Dye"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the body part called that pumps blood?",
+        "answers": [
+          "Heart",
+          "Liver",
+          "Lung",
+          "Stomach"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a surgeon wear in the operating room?",
+        "answers": [
+          "Gown and mask",
+          "Pajamas and slippers",
+          "Tie and jacket",
+          "Swimsuit"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the skeleton do?",
+        "answers": [
+          "Supports the body",
+          "Makes you breathe",
+          "Makes us laugh",
+          "Helps us digest"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the medicine called to remove pain?",
+        "answers": [
+          "Painkiller",
+          "Limescale remover",
+          "Syrup",
+          "Sweetener"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which body part controls movement?",
+        "answers": [
+          "The brain",
+          "The foot",
+          "The nose",
+          "The ear"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is needed to see inside the body?",
+        "answers": [
+          "X-ray",
+          "Photocopy",
+          "Binoculars",
+          "Mirror"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does blood do in the body?",
+        "answers": [
+          "Transports oxygen",
+          "Plays music",
+          "Makes nails grow",
+          "Helps to sleep"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How many eyes does a person have?",
+        "answers": [
+          "Two",
+          "Three",
+          "One",
+          "Four"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the liver do?",
+        "answers": [
+          "Cleans the blood",
+          "Makes you breathe",
+          "Makes you walk",
+          "Makes the heart beat"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do you use to breathe?",
+        "answers": [
+          "The nose",
+          "The ears",
+          "The eyes",
+          "The tongue"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the doctor do when they visit you?",
+        "answers": [
+          "Checks that you are well",
+          "Makes you dance",
+          "Buys you an ice cream",
+          "Tells you a fairy tale"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "facile": [
+      {
+        "question": "What is the main function of the heart?",
+        "answers": [
+          "To pump blood",
+          "To produce oxygen",
+          "Digestion",
+          "To filter urine"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ is responsible for breathing?",
+        "answers": [
+          "Lungs",
+          "Heart",
+          "Stomach",
+          "Kidneys"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of doctor takes care of teeth?",
+        "answers": [
+          "Dentist",
+          "Orthopedist",
+          "Oculist",
+          "Pediatrician"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How many bones does an adult human body have?",
+        "answers": [
+          "206",
+          "300",
+          "150",
+          "178"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main organ of the digestive system?",
+        "answers": [
+          "Stomach",
+          "Heart",
+          "Lung",
+          "Kidney"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of red blood cells?",
+        "answers": [
+          "Transport oxygen",
+          "Defend against infections",
+          "Coagulate blood",
+          "Produce hormones"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where is the cerebellum located?",
+        "answers": [
+          "In the head",
+          "In the chest",
+          "In the leg",
+          "In the arm"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the doctor specialized in eyes called?",
+        "answers": [
+          "Ophthalmologist",
+          "Cardiologist",
+          "Neurologist",
+          "Psychiatrist"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which exam is used to see bones?",
+        "answers": [
+          "Radiography (X-ray)",
+          "Ultrasound",
+          "Tacheometry",
+          "Endoscopy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ produces insulin?",
+        "answers": [
+          "Pancreas",
+          "Liver",
+          "Heart",
+          "Kidney"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a thermometer measure?",
+        "answers": [
+          "Body temperature",
+          "Pressure",
+          "Beats",
+          "Weight"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the thigh bone called?",
+        "answers": [
+          "Femur",
+          "Tibia",
+          "Humerus",
+          "Fibula"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a vaccine do?",
+        "answers": [
+          "Protects against diseases",
+          "Makes you lose weight",
+          "Makes muscles grow",
+          "Controls vision"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of the liver?",
+        "answers": [
+          "Purifies the blood",
+          "Breathes",
+          "Pumps blood",
+          "Digests fats"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is used to listen to the heartbeat?",
+        "answers": [
+          "Stethoscope",
+          "Thermometer",
+          "Sphygmomanometer",
+          "Syringe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of doctor is a neurologist?",
+        "answers": [
+          "Specialist of the nervous system",
+          "Lung doctor",
+          "Dentist",
+          "Plastic surgeon"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a dermatologist treat?",
+        "answers": [
+          "The skin",
+          "The bones",
+          "The blood",
+          "The muscles"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ is responsible for sight?",
+        "answers": [
+          "Eye",
+          "Ear",
+          "Nose",
+          "Mouth"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main function of the kidneys?",
+        "answers": [
+          "Filter the blood",
+          "Produce saliva",
+          "Help digestion",
+          "Control nerves"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where are the lungs located?",
+        "answers": [
+          "In the chest",
+          "In the abdomen",
+          "In the legs",
+          "In the head"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'diagnosis' mean?",
+        "answers": [
+          "Identification of a disease",
+          "A medicine",
+          "An operation",
+          "A check-up"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the organ that controls the whole body?",
+        "answers": [
+          "Brain",
+          "Heart",
+          "Lungs",
+          "Liver"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What happens if you have the flu?",
+        "answers": [
+          "Fever, tiredness, sore throat",
+          "Teeth fall out",
+          "You become taller",
+          "You lose memory"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which exam checks the heartbeat?",
+        "answers": [
+          "Electrocardiogram",
+          "Ultrasound",
+          "CT scan",
+          "Endoscopy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "How many lungs do we have?",
+        "answers": [
+          "Two",
+          "One",
+          "Three",
+          "Four"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the scientific name for bones?",
+        "answers": [
+          "Skeleton",
+          "Muscle",
+          "Tendon",
+          "Organ"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the immune system do?",
+        "answers": [
+          "Defends the body against diseases",
+          "Helps to sleep",
+          "Regulates temperature",
+          "Makes the heart beat"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What are lymph nodes?",
+        "answers": [
+          "Small glands of the immune system",
+          "Neck bones",
+          "Leg muscles",
+          "Heart organs"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the nervous system do?",
+        "answers": [
+          "Transmits signals to the body",
+          "Pumps blood",
+          "Absorbs vitamins",
+          "Produces red blood cells"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the science that studies diseases called?",
+        "answers": [
+          "Pathology",
+          "Biology",
+          "Chemistry",
+          "Philosophy"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "medio": [
+      {
+        "question": "What is the main role of hemoglobin in the blood?",
+        "answers": [
+          "Transport oxygen",
+          "Fight infections",
+          "Coagulate blood",
+          "Produce hormones"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where is the sinoatrial node located, which regulates the heartbeat?",
+        "answers": [
+          "In the right atrium",
+          "In the left ventricle",
+          "In the aorta",
+          "In the interatrial septum"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which vitamin is essential for blood coagulation?",
+        "answers": [
+          "Vitamin K",
+          "Vitamin C",
+          "Vitamin D",
+          "Vitamin B12"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the thyroid produce?",
+        "answers": [
+          "Hormones that regulate metabolism",
+          "Insulin",
+          "White blood cells",
+          "Adrenaline"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which part of the nervous system is involved in automatic reflexes?",
+        "answers": [
+          "Spinal cord",
+          "Brain",
+          "Cerebellum",
+          "Peripheral nerves"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main function of the lymphatic system?",
+        "answers": [
+          "Immune defense and fluid drainage",
+          "Production of hormones",
+          "Oxygenation of tissues",
+          "Digestion of fats"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is an ECG?",
+        "answers": [
+          "A heart exam",
+          "A brain scan",
+          "A blood test",
+          "A chest X-ray"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does insulin do in the body?",
+        "answers": [
+          "Regulates blood sugar levels",
+          "Promotes digestion",
+          "Accelerates heartbeat",
+          "Increases pressure"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is peristalsis?",
+        "answers": [
+          "Involuntary movement of the intestine",
+          "Heartbeat",
+          "Voluntary muscle contraction",
+          "Urine production"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where is the pituitary gland located?",
+        "answers": [
+          "At the base of the brain",
+          "In the heart",
+          "In the liver",
+          "In the pancreas"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the process of blood formation called?",
+        "answers": [
+          "Hematopoiesis",
+          "Oxygenation",
+          "Glycolysis",
+          "Lymphocytosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is an antibiotic?",
+        "answers": [
+          "Amoxicillin",
+          "Ibuprofen",
+          "Paracetamol",
+          "Omeprazole"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the spleen for?",
+        "answers": [
+          "Filters blood and participates in immune response",
+          "Produces insulin",
+          "Oxygenates blood",
+          "Helps in digestion"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does a blood pressure of 140/90 mmHg indicate?",
+        "answers": [
+          "Hypertension",
+          "Normal values",
+          "Hypotension",
+          "Tachycardia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What are white blood cells also called?",
+        "answers": [
+          "Leukocytes",
+          "Nerve cells",
+          "Liver cells",
+          "Muscle cells"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which part of the body is the duodenum located?",
+        "answers": [
+          "Between stomach and small intestine",
+          "In the heart",
+          "In the brain",
+          "In the lung"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which hormone stimulates breast milk production?",
+        "answers": [
+          "Prolactin",
+          "Estrogen",
+          "Cortisol",
+          "Testosterone"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What are platelets?",
+        "answers": [
+          "Blood elements that favor coagulation",
+          "Nerve cells",
+          "Beneficial bacteria",
+          "Hormones"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does 'tachycardia' mean?",
+        "answers": [
+          "Accelerated heartbeat",
+          "Slowed heartbeat",
+          "Lack of heartbeat",
+          "Enlarged heart"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main function of the colon?",
+        "answers": [
+          "Absorb water and form feces",
+          "Digestion of fats",
+          "Absorb proteins",
+          "Produce digestive enzymes"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of drug is paracetamol?",
+        "answers": [
+          "Antipyretic and analgesic",
+          "Antibiotic",
+          "Anxiolytic",
+          "Anticoagulant"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of the retina?",
+        "answers": [
+          "Perception of light and images",
+          "Control of heartbeat",
+          "Regulation of temperature",
+          "Production of tears"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which structure connects muscle and bone?",
+        "answers": [
+          "Tendon",
+          "Ligament",
+          "Cartilage",
+          "Synovial capsule"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the liver produce?",
+        "answers": [
+          "Bile",
+          "Insulin",
+          "White blood cells",
+          "Lymphocytes"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is meant by anemia?",
+        "answers": [
+          "Low amount of hemoglobin or red blood cells",
+          "High blood pressure",
+          "Excess sugar in the blood",
+          "Joint inflammation"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the endocrine system regulate?",
+        "answers": [
+          "Hormones",
+          "Circulation",
+          "Respiration",
+          "Digestion"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where does gas exchange take place in the respiratory system?",
+        "answers": [
+          "In the pulmonary alveoli",
+          "In the trachea",
+          "In the bronchi",
+          "In the diaphragm"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of the cerebral cortex?",
+        "answers": [
+          "Processing thoughts and sensations",
+          "Controlling heartbeat",
+          "Regulating digestion",
+          "Producing hormones"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which part of the brain controls balance and coordination?",
+        "answers": [
+          "Cerebellum",
+          "Hypothalamus",
+          "Medulla oblongata",
+          "Frontal lobe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What type of tissue is blood?",
+        "answers": [
+          "Connective tissue",
+          "Epithelial tissue",
+          "Muscle tissue",
+          "Nervous tissue"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "esperto": [
+      {
+        "question": "Which enzyme is responsible for fat digestion in the small intestine?",
+        "answers": [
+          "Pancreatic lipase",
+          "Trypsin",
+          "Salivary amylase",
+          "Pepsin"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the complement system?",
+        "answers": [
+          "A part of the innate immune system",
+          "A peripheral nerve network",
+          "A component of the digestive system",
+          "A type of steroid hormone"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of vitamin B12?",
+        "answers": [
+          "DNA synthesis and red blood cell maturation",
+          "Bile production",
+          "Calcium absorption",
+          "Fat digestion"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What causes phenylketonuria?",
+        "answers": [
+          "A defect in phenylalanine metabolism",
+          "A vitamin C deficiency",
+          "A chronic bacterial infection",
+          "An excess of iron in the blood"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do high levels of troponin in the blood indicate?",
+        "answers": [
+          "Myocardial damage",
+          "Kidney failure",
+          "Liver infection",
+          "Multiple sclerosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main neurotransmitter of the parasympathetic nervous system?",
+        "answers": [
+          "Acetylcholine",
+          "Dopamine",
+          "Noradrenaline",
+          "Glutamate"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ is mainly affected by cirrhosis?",
+        "answers": [
+          "Liver",
+          "Kidney",
+          "Heart",
+          "Lung"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the hormone produced by the placenta detected in pregnancy tests?",
+        "answers": [
+          "hCG",
+          "LH",
+          "FSH",
+          "TSH"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which kidney structure is responsible for blood filtration?",
+        "answers": [
+          "Glomerulus",
+          "Distal nephron",
+          "Ureter",
+          "Renal pelvis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which disease is caused by a dopamine deficiency in the brain?",
+        "answers": [
+          "Parkinson's disease",
+          "Multiple sclerosis",
+          "Alzheimer's",
+          "Epilepsy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the meaning of 'iatrogenic'?",
+        "answers": [
+          "Caused by medical treatment",
+          "Of genetic origin",
+          "Autoimmune",
+          "Of infectious origin"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main side effect of NSAIDs in the long term?",
+        "answers": [
+          "Gastric ulcer",
+          "Hypoglycemia",
+          "Cardiac hypertrophy",
+          "Paresthesia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following conditions is an endocrinological medical emergency?",
+        "answers": [
+          "Thyrotoxic crisis",
+          "Hypothermia",
+          "Iron deficiency anemia",
+          "Atopic dermatitis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the Babinski sign?",
+        "answers": [
+          "Extension of the big toe upon plantar stimulation",
+          "Loss of balance with closed feet",
+          "Stiffness of the neck",
+          "Tremor at rest"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which area of the brain is Broca's area located?",
+        "answers": [
+          "Frontal lobe",
+          "Temporal lobe",
+          "Parietal lobe",
+          "Brainstem"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main risk factor for lung cancer?",
+        "answers": [
+          "Cigarette smoking",
+          "Obesity",
+          "Sedentary lifestyle",
+          "Low fiber diet"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is an arteriovenous fistula?",
+        "answers": [
+          "An abnormal connection between artery and vein",
+          "A defective heart valve",
+          "A spleen injury",
+          "A malformation of the marrow"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is meant by 'comorbidity'?",
+        "answers": [
+          "Presence of multiple diseases simultaneously",
+          "Absence of symptoms",
+          "Side effect of drugs",
+          "Rapid progression of a disease"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the Coombs test used for?",
+        "answers": [
+          "To identify anti-erythrocyte antibodies",
+          "To evaluate coagulation",
+          "To measure creatinine",
+          "To measure hemoglobin levels"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which hormone stimulates cortisol secretion?",
+        "answers": [
+          "ACTH",
+          "TSH",
+          "ADH",
+          "GH"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which pathology is associated with an excess of GH in adults?",
+        "answers": [
+          "Acromegaly",
+          "Gigantism",
+          "Addison's disease",
+          "Cretinism"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main complication of uncontrolled diabetes mellitus?",
+        "answers": [
+          "Ketoacidosis",
+          "Anemia",
+          "Hypotension",
+          "Tuberculosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What are the islets of Langerhans in the pancreas?",
+        "answers": [
+          "Groups of endocrine cells",
+          "Liver macrophages",
+          "Neurons",
+          "White blood cells"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which heart structure prevents blood reflux from the left ventricle to the left atrium?",
+        "answers": [
+          "Mitral valve",
+          "Tricuspid valve",
+          "Aortic valve",
+          "Pulmonary valve"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the function of surfactant in the lungs?",
+        "answers": [
+          "Reduces surface tension in alveoli",
+          "Promotes vasoconstriction",
+          "Stimulates coughing",
+          "Increases oxygen absorption"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which disorder is there a degeneration of the myelin sheath?",
+        "answers": [
+          "Multiple sclerosis",
+          "Crohn's disease",
+          "Lupus",
+          "Gout"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is meant by the term 'hematemesis'?",
+        "answers": [
+          "Vomiting blood",
+          "Black stools",
+          "Blood in urine",
+          "Shortness of breath"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which factor is indispensable for vitamin B12 absorption?",
+        "answers": [
+          "Intrinsic factor",
+          "Pepsin",
+          "Bile",
+          "Vitamin D"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What causes hyponatremia?",
+        "answers": [
+          "Low sodium levels in the blood",
+          "Excess potassium",
+          "High calcium levels",
+          "Glucose deficiency"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which organ is primarily responsible for acid-base homeostasis?",
+        "answers": [
+          "Kidney",
+          "Liver",
+          "Heart",
+          "Pancreas"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "laureato": [
+      {
+        "question": "Which drug is commonly used as an aldosterone antagonist in heart failure?",
+        "answers": [
+          "Spironolactone",
+          "Furosemide",
+          "Lisinopril",
+          "Amlodipine"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which pathology is an 'owl's eye cell' typically observed on histological examination?",
+        "answers": [
+          "Hodgkin lymphoma",
+          "Infectious mononucleosis",
+          "Tuberculosis",
+          "Sarcoidosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following statements describes the mechanism of action of DPP-4 inhibitors?",
+        "answers": [
+          "Prolong GLP-1 action by increasing insulin",
+          "Inhibit glucagon secretion directly",
+          "Stimulate gluconeogenesis",
+          "Increase lipolysis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main side effect of amiodarone treatment?",
+        "answers": [
+          "Pulmonary toxicity",
+          "Hypoglycemia",
+          "Alopecia",
+          "Gingival hypertrophy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the main difference between rheumatoid arthritis and osteoarthritis on radiological imaging?",
+        "answers": [
+          "Marginal erosions in affected joints",
+          "Periarticular calcifications",
+          "Thickening of the bone cortex",
+          "Presence of synovial cysts"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following conditions can lead to euvolemic hyponatremia?",
+        "answers": [
+          "Syndrome of inappropriate ADH secretion (SIADH)",
+          "Heart failure",
+          "Sodium deficiency in diet",
+          "Prolonged vomiting"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The Grey-Turner sign is indicative of which condition?",
+        "answers": [
+          "Acute hemorrhagic pancreatitis",
+          "Renal colic",
+          "Appendicitis",
+          "Portal thrombosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In the TNM classification, what does a T4 category indicate?",
+        "answers": [
+          "Invasion of adjacent organs",
+          "Tumor confined to the tissue of origin",
+          "Presence of lymph node metastases",
+          "Tumor in early stage"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which test is most indicated to confirm a diagnosis of pheochromocytoma?",
+        "answers": [
+          "Dosage of plasma metanephrines",
+          "Abdomen CT",
+          "Dexamethasone suppression test",
+          "Aldosterone/renin dosage"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Cushing's syndrome can be caused by:",
+        "answers": [
+          "ACTH-secreting pituitary adenoma",
+          "Diabetes mellitus",
+          "Hyperthyroidism",
+          "Pheochromocytoma"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which condition are non-caseating granulomas typically observed?",
+        "answers": [
+          "Sarcoidosis",
+          "Tuberculosis",
+          "Brucellosis",
+          "Aspergillosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most common complication of infective endocarditis?",
+        "answers": [
+          "Valvular insufficiency",
+          "Myocardial infarction",
+          "Ventricular arrhythmia",
+          "Cerebral hemorrhage"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of the following mutations is frequently associated with hereditary non-polyposis colorectal cancer (HNPCC)?",
+        "answers": [
+          "MLH1",
+          "BRCA1",
+          "TP53",
+          "RET"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most common etiological agent of community-acquired pneumonia?",
+        "answers": [
+          "Streptococcus pneumoniae",
+          "Haemophilus influenzae",
+          "Mycoplasma pneumoniae",
+          "Klebsiella pneumoniae"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The Valsalva maneuver is useful for evaluating:",
+        "answers": [
+          "Vagal tone and baroreflex response",
+          "Liver function",
+          "Ventricular conduction",
+          "Systolic blood pressure"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In case of inferior myocardial infarction, which ECG lead usually shows elevated ST?",
+        "answers": [
+          "DII, DIII, aVF",
+          "V1-V2",
+          "aVR",
+          "V5-V6"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Nephrotic syndrome is characterized by:",
+        "answers": [
+          "Proteinuria > 3.5 g/day, hypoalbuminemia, edema",
+          "Hematuria and mild proteinuria",
+          "Reduced glomerular filtration",
+          "Glycosuria and hyperkalemia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which score is used to assess stroke risk in patients with atrial fibrillation?",
+        "answers": [
+          "CHA2DS2-VASc",
+          "Glasgow",
+          "Wells",
+          "APACHE II"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the pathogenetic mechanism of systemic lupus erythematosus?",
+        "answers": [
+          "Autoantibodies against DNA and immune complexes",
+          "Acute viral infection",
+          "C1q complement deficiency",
+          "Acquired somatic mutation"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is meant by 'resistant hypertension'?",
+        "answers": [
+          "High blood pressure not controlled with at least 3 drugs",
+          "Secondary hypertension to tumors",
+          "Nocturnal hypertension only",
+          "Isolated systolic hypertension"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "An isolated increase in indirect bilirubin can be observed in:",
+        "answers": [
+          "Gilbert's syndrome",
+          "Obstructive jaundice",
+          "Primary biliary cirrhosis",
+          "Sclerosing cholangitis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the first-line treatment for deep vein thrombosis?",
+        "answers": [
+          "Low molecular weight heparin",
+          "Aspirin",
+          "Statins",
+          "Beta-blockers"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which condition can a positive Rovsing sign be observed?",
+        "answers": [
+          "Acute appendicitis",
+          "Ulcerative colitis",
+          "Kidney stones",
+          "Gastritis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The treatment of choice for Graves' disease hyperthyroidism is:",
+        "answers": [
+          "Methimazole",
+          "Levothyroxine",
+          "Insulin",
+          "Corticosteroids"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most feared complication of abdominal aortic aneurysm?",
+        "answers": [
+          "Rupture",
+          "Stroke",
+          "Deep vein thrombosis",
+          "Aortic dissection"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In which case is hypocalcemia with hyperphosphatemia found?",
+        "answers": [
+          "Hypoparathyroidism",
+          "Primary hyperparathyroidism",
+          "Addison's disease",
+          "Thyrotoxicosis"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Post-streptococcal glomerulonephritis is an example of what type of immune reaction?",
+        "answers": [
+          "Type III (immune complexes)",
+          "Type I (IgE)",
+          "Type II (cytotoxic)",
+          "Type IV (delayed)"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Klinefelter syndrome is due to which chromosomal anomaly?",
+        "answers": [
+          "XXY",
+          "XO",
+          "XXX",
+          "XYY"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the most effective treatment for medullary thyroid carcinoma?",
+        "answers": [
+          "Total thyroidectomy",
+          "Radioactive iodine therapy",
+          "Antibiotics",
+          "Corticosteroid therapy"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What does the presence of Reed-Sternberg cells on histological examination indicate?",
+        "answers": [
+          "Hodgkin lymphoma",
+          "Non-Hodgkin lymphoma",
+          "Myeloid leukemia",
+          "Multiple myeloma"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  "Driving License": {
+    "bambino": [
+      {
+        "question": "What must you do when the traffic light is red?",
+        "answers": [
+          "Accelerate",
+          "Stop",
+          "Honk the horn",
+          "Go slower"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What must you do before crossing the street?",
+        "answers": [
+          "Run fast",
+          "Look carefully left and right",
+          "Close your eyes",
+          "Whistle"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What color is the traffic light that says to go?",
+        "answers": [
+          "Red",
+          "Yellow",
+          "Green",
+          "Blue"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a sign with a running child mean?",
+        "answers": [
+          "Attention: school nearby",
+          "Playground",
+          "No running",
+          "Highway"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Where should the seat belt be placed?",
+        "answers": [
+          "On the steering wheel",
+          "Around the head",
+          "Around the waist",
+          "In the hands"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who can drive a car?",
+        "answers": [
+          "Whoever has a driving license",
+          "Whoever is over 5 years old",
+          "Whoever can ride a bike",
+          "Whoever wants to"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What do you do before turning in a car?",
+        "answers": [
+          "Turn off the engine",
+          "Turn on the radio",
+          "Use the turn signal",
+          "Brake hard"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the vehicle that takes children to school?",
+        "answers": [
+          "Ambulance",
+          "Truck",
+          "School bus",
+          "Tractor"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When crossing on the stripes, who has the right of way?",
+        "answers": [
+          "Cars",
+          "Trucks",
+          "Bicycles",
+          "The pedestrian"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which sign indicates STOP?",
+        "answers": [
+          "The round blue one",
+          "The triangular red one",
+          "The octagonal red one",
+          "The yellow one"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What must you do at a pedestrian crossing?",
+        "answers": [
+          "Run",
+          "Wait for the car to stop",
+          "Whistle",
+          "Jump"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which sign indicates no entry?",
+        "answers": [
+          "Red circle with a white horizontal line",
+          "Yellow triangle",
+          "Blue square",
+          "Green sign"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the person who drives a car called?",
+        "answers": [
+          "Painter",
+          "Pilot",
+          "Conductor",
+          "Driver"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What is needed to drive a car?",
+        "answers": [
+          "New shoes",
+          "A hat",
+          "A driving license",
+          "A whistle"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When must you turn on the windshield wiper?",
+        "answers": [
+          "When it gets dark",
+          "When it rains",
+          "When you are hot",
+          "When you park"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the horn do?",
+        "answers": [
+          "Washes the glass",
+          "Makes a sound",
+          "Turns on the headlights",
+          "Opens the trunk"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is on a bicycle to indicate turning?",
+        "answers": [
+          "A turn signal",
+          "A flag",
+          "A bell",
+          "Raised arm"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Which light turns on when braking?",
+        "answers": [
+          "Blue light",
+          "Green light",
+          "Red light",
+          "Orange light"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Where must children sit in a car?",
+        "answers": [
+          "In the front",
+          "On the roof",
+          "In the trunk",
+          "In the back seats"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What does a flashing arrow on a car indicate?",
+        "answers": [
+          "The horn is on",
+          "The driver wants to turn",
+          "The engine turns off",
+          "The radio is on"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What shape is the danger sign?",
+        "answers": [
+          "Square",
+          "Round",
+          "Triangular",
+          "Octagonal"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What must you do when you hear an ambulance coming?",
+        "answers": [
+          "Go faster",
+          "Stop or move over",
+          "Honk the horn",
+          "Close the windows"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is used to stop the car?",
+        "answers": [
+          "Accelerator",
+          "Clutch",
+          "Steering wheel",
+          "Brake"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What does the yellow traffic light signal?",
+        "answers": [
+          "Green light",
+          "Danger",
+          "Stop if possible",
+          "Run!"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who crosses the street with the green light for pedestrians?",
+        "answers": [
+          "Cars",
+          "Motorcycles",
+          "Pedestrians",
+          "Dogs"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What must you do before starting the car?",
+        "answers": [
+          "Wear the seat belt",
+          "Open the window",
+          "Call a friend",
+          "Eat"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What vehicle does a firefighter drive?",
+        "answers": [
+          "Ambulance",
+          "Police car",
+          "Fire truck",
+          "Tractor"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the car mirror for?",
+        "answers": [
+          "To comb hair",
+          "To look behind",
+          "To look at the sky",
+          "To look right"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the color of the rear lights when the car is in reverse?",
+        "answers": [
+          "Red",
+          "Green",
+          "White",
+          "Blue"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a sign with a bike inside a red circle mean?",
+        "answers": [
+          "Bike path",
+          "No bikes",
+          "Bike parking",
+          "Bike rental"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "facile": [
+      {
+        "question": "What does a triangular sign with a red border and white center indicate?",
+        "answers": [
+          "Prohibition",
+          "Danger",
+          "Obligation",
+          "Highway"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a round blue sign with a white arrow mean?",
+        "answers": [
+          "No entry",
+          "Obligation to go straight",
+          "Attention",
+          "Wrong way"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What must you do when you see a STOP sign?",
+        "answers": [
+          "Accelerate",
+          "Stop and give way",
+          "Look and pass",
+          "Honk the horn"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the maximum speed limit in the city (unless otherwise indicated)?",
+        "answers": [
+          "30 km/h",
+          "50 km/h",
+          "60 km/h",
+          "70 km/h"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which document is mandatory for driving a car?",
+        "answers": [
+          "Identity card",
+          "Tax code",
+          "Driving license",
+          "Passport"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a sign with a white 'P' on a blue background indicate?",
+        "answers": [
+          "Parking",
+          "Toll",
+          "Level crossing",
+          "Bridge"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When do you turn on the low beam headlights?",
+        "answers": [
+          "Only during the day",
+          "Only in tunnels",
+          "At night or in poor visibility conditions",
+          "Never"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a continuous line on the road indicate?",
+        "answers": [
+          "You can overtake",
+          "You cannot overtake",
+          "Parking",
+          "Restricted traffic zone"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is meant by safety distance?",
+        "answers": [
+          "The distance between car and sidewalk",
+          "The minimum distance to keep from the vehicle in front",
+          "The space to park",
+          "Braking time"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which case can you use the horn?",
+        "answers": [
+          "To greet a friend",
+          "To signal danger",
+          "Always in the city",
+          "Never"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When is it mandatory to wear a seat belt?",
+        "answers": [
+          "Only on the highway",
+          "Always, both front and back",
+          "Only the driver",
+          "Only in case of rain"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the color of the traffic light that requires stopping?",
+        "answers": [
+          "Yellow",
+          "Green",
+          "Red",
+          "Blue"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What must you do before overtaking?",
+        "answers": [
+          "Honk",
+          "Look in the mirrors and use the turn signal",
+          "Accelerate immediately",
+          "Move to the left"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which situation must you turn on the turn signal?",
+        "answers": [
+          "Only in curves",
+          "When changing direction or lane",
+          "Never",
+          "Only in the city"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a sign with a red triangle and a deer inside mean?",
+        "answers": [
+          "Hunting zone",
+          "Risk of wild animals crossing",
+          "No hunting",
+          "Road closed"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the function of the rearview mirror?",
+        "answers": [
+          "To see behind the car",
+          "To see the passenger",
+          "To increase speed",
+          "To illuminate the road"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What must you do before starting with the car?",
+        "answers": [
+          "Turn on the radio",
+          "Wear the seat belt and check mirrors",
+          "Open the hood",
+          "Look at the phone"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What should you do if a pedestrian crosses on the stripes?",
+        "answers": [
+          "Honk",
+          "Stop and let them pass",
+          "Accelerate",
+          "Ignore them"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who has the right of way at an intersection without signs?",
+        "answers": [
+          "Whoever arrives from the left",
+          "Whoever arrives from the right",
+          "Whoever goes faster",
+          "Whoever has the horn on"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the meaning of a flashing yellow light?",
+        "answers": [
+          "Obligation to stop",
+          "Proceed with caution",
+          "No passage",
+          "Absolute priority"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the clutch for?",
+        "answers": [
+          "To brake",
+          "To change gear",
+          "To honk",
+          "To start the windshield wipers"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the name of the document proving that the car is insured?",
+        "answers": [
+          "Logbook",
+          "Car tax",
+          "Insurance certificate",
+          "Revision"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the round red sign with a horizontal white line indicate?",
+        "answers": [
+          "One way",
+          "No entry",
+          "Roundabout",
+          "Stop"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the handbrake for?",
+        "answers": [
+          "To park safely",
+          "To honk",
+          "To change gear",
+          "To control lights"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When do you use reverse gear?",
+        "answers": [
+          "To go faster",
+          "To park or go back",
+          "To turn left",
+          "To brake better"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What do you risk if you do not respect the red traffic light?",
+        "answers": [
+          "Nothing",
+          "A fine and points deducted from the license",
+          "Only a honk",
+          "You receive a warning"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who can drive on the highway?",
+        "answers": [
+          "Bicycles",
+          "Cars and motorcycles with engine capacity above 150cc",
+          "Pedestrians",
+          "Tractors"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a sign with two cars, one red and one black, indicate?",
+        "answers": [
+          "One-way street",
+          "No overtaking",
+          "Speed limit",
+          "Highway"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Where are mandatory seat belts found?",
+        "answers": [
+          "Only in front",
+          "Only in back",
+          "Front and back",
+          "Only for the driver"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What happens if you exceed the speed limit?",
+        "answers": [
+          "You save time",
+          "You can get a fine or lose points",
+          "You double the license score",
+          "You become more experienced"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "What is the maximum speed limit on Italian highways, unless otherwise indicated?",
+        "answers": [
+          "110 km/h",
+          "120 km/h",
+          "130 km/h",
+          "140 km/h"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does an additional panel with '2 km' written under a danger sign indicate?",
+        "answers": [
+          "Distance from danger",
+          "Length of the dangerous section",
+          "Recommended distance",
+          "Speed limit"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In the presence of a faulty traffic light, who regulates traffic?",
+        "answers": [
+          "No one, priority to the right applies",
+          "The traffic policeman",
+          "The driver with more experience",
+          "The pedestrian"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a double continuous line in the center of the roadway mean?",
+        "answers": [
+          "You can overtake only on the left",
+          "No overtaking for both directions of travel",
+          "Priority to pedestrians",
+          "Reserved lane for heavy vehicles"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "At what distance must you turn on the turn signals before turning?",
+        "answers": [
+          "At least 100 meters",
+          "At least 50 meters",
+          "As soon as you turn",
+          "Only if there are cars behind"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which case can you overtake a vehicle on the right?",
+        "answers": [
+          "Never",
+          "On the highway",
+          "When the vehicle in front is turning left",
+          "If you are in a hurry"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the meaning of a round blue sign with a snow chain symbol?",
+        "answers": [
+          "Snow chains prohibited",
+          "Obligation for snow chains or winter tires",
+          "Parking zone",
+          "Pedestrian path"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If the driver has a blood alcohol level above 0.5 g/l but below 0.8 g/l, what do they risk?",
+        "answers": [
+          "A fine",
+          "Revocation of the license",
+          "An administrative sanction and license suspension",
+          "No sanction"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When must a new car be inspected?",
+        "answers": [
+          "After 2 years",
+          "After 4 years",
+          "After 5 years",
+          "Every year"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What happens if you drive with an expired license?",
+        "answers": [
+          "Nothing",
+          "Only a fine",
+          "Administrative sanction and withdrawal of the license",
+          "Loss of the vehicle"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the minimum distance to place the triangle in case of emergency outside the city?",
+        "answers": [
+          "10 meters",
+          "30 meters",
+          "50 meters",
+          "100 meters"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In an intersection with conflicting vertical and horizontal signs, which prevails?",
+        "answers": [
+          "Horizontal",
+          "Vertical",
+          "None",
+          "The newer one"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a sign in the shape of a red X on a white background with a red border indicate?",
+        "answers": [
+          "Dangerous intersection",
+          "Pedestrian crossing",
+          "Level crossing without barriers",
+          "Service station"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the total deduction of points from the license entail?",
+        "answers": [
+          "Nothing",
+          "Obligation to redo only the theory exam",
+          "License revision",
+          "Definitive revocation of the license"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In the presence of a bump, what is recommended to do?",
+        "answers": [
+          "Accelerate",
+          "Brake abruptly",
+          "Slow down and do not overtake",
+          "Turn off headlights"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When can you use high beam headlights?",
+        "answers": [
+          "Always",
+          "Only in the city",
+          "In case of fog",
+          "Outside built-up areas, if not dazzling anyone"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What does a dashed white line in the center of the roadway indicate?",
+        "answers": [
+          "No overtaking",
+          "Separation between lanes",
+          "Parking zone",
+          "Preferential lane"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a green light on the dashboard mean?",
+        "answers": [
+          "Handbrake engaged",
+          "Low beam headlights on",
+          "Turn indicators active",
+          "Fuel reserve"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does the panel with a white rectangle and a black arrow curved to the left indicate?",
+        "answers": [
+          "Roundabout",
+          "Mandatory left turn",
+          "Road interrupted",
+          "Priority to the left"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "How should the driver behave if involved in an accident with only material damage?",
+        "answers": [
+          "Leave if in a hurry",
+          "Fill out the amicable settlement form",
+          "Always call the police",
+          "Park and leave"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "How do you check tire pressure?",
+        "answers": [
+          "Looking at them",
+          "With a specific tool when cold",
+          "Kicking them",
+          "When the oil light comes on"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does overtaking involve near a curve with a continuous line?",
+        "answers": [
+          "It is allowed if in a hurry",
+          "It is prohibited",
+          "It is possible if there is space",
+          "It is mandatory"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a blue sign with a white bicycle indicate?",
+        "answers": [
+          "No bikes",
+          "Bike parking",
+          "Bike path",
+          "Bike crossing"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the maximum time to communicate the change of residence on the license?",
+        "answers": [
+          "3 days",
+          "10 days",
+          "30 days",
+          "60 days"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What must you do when facing a level crossing with lowered barriers?",
+        "answers": [
+          "Pass anyway",
+          "Wait for them to be completely raised",
+          "Honk the horn",
+          "Reverse"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What shape and color does a prohibition sign normally have?",
+        "answers": [
+          "Blue square",
+          "Yellow triangle",
+          "Red circle with white background",
+          "Green rectangle"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a square sign with a blue background and a white arrow to the right represent?",
+        "answers": [
+          "No left turn",
+          "Mandatory direction to the right",
+          "One way",
+          "Mandatory parking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If the car skids on wet road, what must you do?",
+        "answers": [
+          "Steer abruptly",
+          "Brake hard",
+          "Stay calm and gently correct the steering",
+          "Accelerate"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a fixed yellow light on the dashboard in the shape of an engine indicate?",
+        "answers": [
+          "Imminent maintenance",
+          "Engine problem",
+          "Low battery",
+          "Open door"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When are you obliged to give way?",
+        "answers": [
+          "Only on the highway",
+          "When entering from a secondary road",
+          "When on the roundabout",
+          "When turning right"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "esperto": [
+      {
+        "question": "When can a vehicle proceed in parallel rows?",
+        "answers": [
+          "Only outside the city",
+          "Only when overtaking",
+          "In case of intense traffic on roadways with multiple lanes for direction of travel",
+          "Never"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the aquaplaning effect?",
+        "answers": [
+          "An engine failure",
+          "Loss of grip on wet road",
+          "A braking technique",
+          "Impact with a puddle"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does driving under the influence with a blood alcohol level above 1.5 g/l entail?",
+        "answers": [
+          "Only a fine",
+          "License withdrawal and arrest",
+          "Deduction of 2 points",
+          "Nothing if there are no accidents"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a vehicle leaks oil on the roadway, what is the risk?",
+        "answers": [
+          "Only a fine",
+          "Obstruction to circulation",
+          "Sanctions and possible accidents due to loss of grip",
+          "Immediate license withdrawal"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the adequate safety distance on the highway at 130 km/h in optimal conditions?",
+        "answers": [
+          "15 meters",
+          "26 meters",
+          "About 100 meters",
+          "60 meters"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When is overtaking prohibited near a pedestrian crossing?",
+        "answers": [
+          "Always",
+          "Only if there are pedestrians crossing",
+          "Never",
+          "Only if there is traffic"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which device allows the lowest fuel consumption while driving?",
+        "answers": [
+          "All-wheel drive",
+          "Cruise control on flat sections",
+          "Continuous use of high beams",
+          "Abrupt braking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Failure to use lights in a tunnel can result in:",
+        "answers": [
+          "No consequence",
+          "Only a symbolic fine",
+          "Administrative sanction and points deduction",
+          "Revocation of the license"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What type of sign is the triangular sign with a truck going downhill?",
+        "answers": [
+          "Prohibition",
+          "Indication",
+          "Danger",
+          "Obligation"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When must you disengage the handbrake?",
+        "answers": [
+          "Only uphill",
+          "Always before starting",
+          "When parking",
+          "When braking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is engine braking?",
+        "answers": [
+          "An auxiliary brake",
+          "Slowing down the car by releasing the gas and downshifting",
+          "An electronic system",
+          "A type of emergency brake"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which vehicles cannot circulate on the highway?",
+        "answers": [
+          "Motorcycles with displacement >150cc",
+          "Mopeds and agricultural machinery",
+          "Trucks",
+          "Tourist buses"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In case of thick fog, which lights should be used?",
+        "answers": [
+          "High beams only",
+          "Position lights only",
+          "Front and rear fog lights",
+          "Intermittent lights"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which category does a vehicle with a mass exceeding 3.5 tons belong to?",
+        "answers": [
+          "Category M1",
+          "Category N1",
+          "Category N2 or N3",
+          "Category B"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "How can braking distance be reduced?",
+        "answers": [
+          "Steering decisively",
+          "Using deflated tires",
+          "Avoiding sudden braking and maintaining efficient tires",
+          "Driving downhill"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the function of ABS in braking?",
+        "answers": [
+          "Increases engine power",
+          "Reduces tire wear",
+          "Prevents wheel locking",
+          "Lengthens braking"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In which situations is the driver obliged to turn on the low beam headlights even during the day?",
+        "answers": [
+          "On the highway",
+          "Only in winter",
+          "On extra-urban roads and in tunnels",
+          "Never"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is meant by 'tunnel effect' while driving on the highway?",
+        "answers": [
+          "Automatic braking",
+          "Loss of attention due to the monotony of the journey",
+          "Sports driving",
+          "Wake effect"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What do you risk driving with tires worn beyond the limit?",
+        "answers": [
+          "No real risk",
+          "Fine and risk of aquaplaning",
+          "Only fuel consumption",
+          "License revocation"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a transverse zigzag strip before a crossing indicate?",
+        "answers": [
+          "School zone",
+          "Indication to slow down and attention to pedestrians",
+          "No overtaking",
+          "Reserved parking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main cause of accidents on extra-urban roads?",
+        "answers": [
+          "Rain",
+          "Animals",
+          "Excessive speed",
+          "Potholes"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "If a vehicle is involved in an accident with only material damage and obstructs traffic, what must be done?",
+        "answers": [
+          "Wait for the police to arrive",
+          "Remove the vehicle from the roadway after documenting",
+          "Leave everything as is",
+          "Leave"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the minimum tread depth by law?",
+        "answers": [
+          "1.0 mm",
+          "1.6 mm",
+          "2.0 mm",
+          "3.0 mm"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does a deflated tire entail while driving?",
+        "answers": [
+          "Better grip",
+          "Greater stability",
+          "Loss of control and increased consumption",
+          "Less friction"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a red light with an exclamation mark on the dashboard indicate?",
+        "answers": [
+          "Lights on",
+          "Brakes not working or handbrake engaged",
+          "Seat belts fastened",
+          "Wrong gear"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In case of an accident with injuries, what must be done first?",
+        "answers": [
+          "Move the injured",
+          "Provide aid and call for help",
+          "Run away",
+          "Wait for the police"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If the vehicle has brake problems while driving, what must be done?",
+        "answers": [
+          "Accelerate",
+          "Brake suddenly",
+          "Use engine braking and try to pull over safely",
+          "Honk the horn"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the effect of excessive tire pressure?",
+        "answers": [
+          "Optimal grip",
+          "Center wear and less grip",
+          "Less consumption",
+          "Better braking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which document indicates that a vehicle has passed the inspection?",
+        "answers": [
+          "Updated registration certificate",
+          "Medical certificate",
+          "Stamp",
+          "Pink slip"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When is it forbidden to use the horn?",
+        "answers": [
+          "Never",
+          "On the highway",
+          "In built-up areas unless immediate danger",
+          "During the day"
+        ],
+        "correctIndex": 2
+      }
+    ],
+    "laureato": [
+      {
+        "question": "What is 'license revocation' under Art. 130 of the Highway Code?",
+        "answers": [
+          "A temporary suspension",
+          "The definitive loss of the driving title",
+          "A formal warning",
+          "An accessory fine"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the difference between suspension and revocation of the license?",
+        "answers": [
+          "None",
+          "Suspension is temporary, revocation is permanent",
+          "Revocation is only for new drivers",
+          "Suspension implies withdrawal of the vehicle"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does Art. 186 bis of the Highway Code provide for new drivers regarding alcohol?",
+        "answers": [
+          "Maximum blood alcohol level 0.2 g/l",
+          "Zero tolerance: 0.0 g/l",
+          "Maximum 0.5 g/l like others",
+          "Up to 0.8 g/l with mild sanction"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Exceeding speed limits by more than 60 km/h entails:",
+        "answers": [
+          "Only a fine",
+          "License suspension from 6 to 12 months",
+          "Deduction of 5 points",
+          "Immediate license revocation"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main function of the brake booster?",
+        "answers": [
+          "Improves acceleration",
+          "Increases braking efficiency by reducing pedal effort",
+          "Increases brake life",
+          "Reduces tire wear"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does EU Regulation 2019/2144 establish regarding ADAS devices?",
+        "answers": [
+          "Mandatory from 2022 on all new vehicles",
+          "Prohibited in commercial vehicles",
+          "Recommendations only",
+          "Applicable only in Germany"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is the ESC (Electronic Stability Control) system?",
+        "answers": [
+          "An option for SUVs",
+          "Active stability control system",
+          "A navigation system",
+          "A type of automatic transmission"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When is vehicle confiscation provided for under the Highway Code?",
+        "answers": [
+          "Never, it is unconstitutional",
+          "In case of severe drunk driving or without a license",
+          "Only for theft",
+          "Always in case of an accident"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which rule imposes the minimum safety distance?",
+        "answers": [
+          "Art. 141 CdS",
+          "Art. 148 CdS",
+          "Art. 157 CdS",
+          "Art. 192 CdS"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Periodic technical inspection (revision) is governed by which EU directive?",
+        "answers": [
+          "2006/126/EC",
+          "2014/45/EU",
+          "2019/2144/EU",
+          "2008/68/EC"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the total loss of 20 license points without refresher courses entail?",
+        "answers": [
+          "Automatic revocation",
+          "Obligation to revise the license",
+          "Fine",
+          "Nothing"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is 'license revision'?",
+        "answers": [
+          "Document check",
+          "Theoretical and/or practical exam at the request of the authority",
+          "Change of license type",
+          "Annual medical check-up"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which type of curve involves a greater risk of skidding?",
+        "answers": [
+          "Banked curve",
+          "Curve downhill and without visibility",
+          "Left curve on flat ground",
+          "Uphill curve"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the EBD (Electronic Brakeforce Distribution) system for?",
+        "answers": [
+          "Automatically distributes braking force to the wheels",
+          "Increases speed",
+          "Emergency braking system",
+          "Locks wheels in curves"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which vehicles are subject to the digital tachograph?",
+        "answers": [
+          "Only taxis",
+          "Commercial vehicles over 3.5 t",
+          "Motorcycles over 500cc",
+          "All private vehicles"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the 'coefficient of friction'?",
+        "answers": [
+          "The engine's ability to deliver torque",
+          "The ratio between braking force and weight force",
+          "An index of tire-road grip",
+          "Centrifugal force"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "How does the drum brake act compared to the disc brake?",
+        "answers": [
+          "It is more effective",
+          "It has lower efficiency, but is cheaper",
+          "It is used only in Formula 1",
+          "It has automatic cooling"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the function of the alternator in a vehicle?",
+        "answers": [
+          "Provides torque to the wheels",
+          "Recharges the battery and powers electrical circuits",
+          "Cools the engine",
+          "Operates windshield wipers"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In what conditions does the Highway Code require the use of snow chains?",
+        "answers": [
+          "Only at the driver's request",
+          "Only in the presence of ice",
+          "On sections indicated by specific signs",
+          "In all Italian cities"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In which year was the 'points license' introduced?",
+        "answers": [
+          "2001",
+          "2003",
+          "2005",
+          "2008"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which mechanical component transmits engine rotation to the drive wheels?",
+        "answers": [
+          "Compressor",
+          "Transmission",
+          "Shock absorber",
+          "Timing belt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to ADR regulations, which vehicles are subject to special transport obligations?",
+        "answers": [
+          "Only taxis",
+          "Vehicles transporting dangerous goods",
+          "Hybrid vehicles",
+          "School buses"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In which cases does the category B license not allow driving a camper?",
+        "answers": [
+          "If the camper weighs more than 3.5 tons",
+          "If it is registered as a truck",
+          "If it exceeds 9 meters",
+          "Never"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is 'laminated windshield'?",
+        "answers": [
+          "Reinforced glass to avoid splinters",
+          "Double layer glass with internal film preventing shattering",
+          "Shatterproof glass for police",
+          "Double thermal insulation glass"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What tread value is recommended for optimal performance?",
+        "answers": [
+          "1 mm",
+          "1.6 mm",
+          "3 mm",
+          "0.5 mm"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does EU Directive 2006/126/EC govern?",
+        "answers": [
+          "Speed limits",
+          "Driving licenses",
+          "Safety devices",
+          "Environmental emissions"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "How does the car behave on a slope if the clutch is released suddenly?",
+        "answers": [
+          "Accelerates",
+          "Stays still",
+          "Stops the engine",
+          "Can rollback dangerously"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In case of a fatal accident under the influence of alcohol, what does the Highway Code provide?",
+        "answers": [
+          "License suspension 6 months",
+          "License revocation and criminal offense",
+          "Only a fine",
+          "Deduction of 10 points"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Extraordinary vehicle inspection can be ordered by:",
+        "answers": [
+          "Only by the owner",
+          "By the Motorization Office",
+          "Only by the Police",
+          "Every 5 years"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The white transverse strip on the asphalt indicates:",
+        "answers": [
+          "No entry",
+          "Stop line",
+          "Parking zone",
+          "Emergency lane"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  "Psychology": {
+    "bambino": [
+      {
+        "question": "What emotion do you feel when you receive a surprise gift?",
+        "answers": [
+          "Sadness",
+          "Anger",
+          "Joy",
+          "Fear"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When you feel scared, which part of the body often beats faster?",
+        "answers": [
+          "Hands",
+          "Feet",
+          "Heart",
+          "Eyes"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does a psychologist do?",
+        "answers": [
+          "Cures cars",
+          "Helps people feel better with thoughts and emotions",
+          "Teaches cooking",
+          "Builds houses"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of these is an emotion?",
+        "answers": [
+          "Running",
+          "Eating",
+          "Happiness",
+          "Writing"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "If you feel sad, what can help you feel better?",
+        "answers": [
+          "Yelling at friends",
+          "Talking to someone",
+          "Staying alone always",
+          "Ignoring everyone"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you are very happy, what do you tend to do?",
+        "answers": [
+          "Cry",
+          "Jump and smile",
+          "Sleep",
+          "Get angry"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If someone hugs you, what emotion might you feel?",
+        "answers": [
+          "Anger",
+          "Fear",
+          "Love",
+          "Hunger"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a kind way to resolve an argument?",
+        "answers": [
+          "Yelling",
+          "Talking calmly",
+          "Ignoring",
+          "Hitting"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a person is very scared, their heart is said to be:",
+        "answers": [
+          "Slow",
+          "Heavy",
+          "Racing",
+          "Calm"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is one thing that helps to relax?",
+        "answers": [
+          "Screaming loud",
+          "Taking deep breaths",
+          "Running fast",
+          "Jumping on the bed"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does being empathetic mean?",
+        "answers": [
+          "Eating quickly",
+          "Understanding how others feel",
+          "Writing fast",
+          "Playing soccer"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you feel angry, it is best to first:",
+        "answers": [
+          "Count to ten",
+          "Scream",
+          "Jump",
+          "Run away"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is a word that describes a happy feeling?",
+        "answers": [
+          "Anger",
+          "Sadness",
+          "Joy",
+          "Fear"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What can you do when you are nervous about a test?",
+        "answers": [
+          "Think positive",
+          "Run away",
+          "Not study",
+          "Get angry"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When you help a sad friend, you are showing:",
+        "answers": [
+          "Strength",
+          "Empathy",
+          "Cunning",
+          "Fear"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If someone laughs with you, they likely feel:",
+        "answers": [
+          "Fear",
+          "Sadness",
+          "Happiness",
+          "Anger"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a way to calm down before sleeping?",
+        "answers": [
+          "Arguing",
+          "Listening to relaxing music",
+          "Watching scary movies",
+          "Running around the house"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you are excited, you might feel like?",
+        "answers": [
+          "Calm",
+          "Lazy",
+          "Electric and full of energy",
+          "Sleepy"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "If a friend gives you a gift, you might say:",
+        "answers": [
+          "No",
+          "Thank you",
+          "Go away",
+          "Silence"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the emotion felt when losing a game?",
+        "answers": [
+          "Happiness",
+          "Sadness",
+          "Love",
+          "Surprise"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which part of the body often cries when we are very sad?",
+        "answers": [
+          "Nose",
+          "Feet",
+          "Eyes",
+          "Hands"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What can make us feel very brave?",
+        "answers": [
+          "A kind word",
+          "A scolding",
+          "Being alone",
+          "A closed door"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When helping a friend, how might one feel?",
+        "answers": [
+          "Sad",
+          "Happy",
+          "Scared",
+          "Angry"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If you see someone crying, you can:",
+        "answers": [
+          "Laugh",
+          "Ignore",
+          "Ask if they need help",
+          "Run away"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When you apologize after making a mistake, you show:",
+        "answers": [
+          "Fear",
+          "Courage",
+          "Disinterest",
+          "Anger"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is trust?",
+        "answers": [
+          "Eating a lot",
+          "Playing always",
+          "Believing in someone",
+          "Arguing"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A smile is often a sign of:",
+        "answers": [
+          "Sadness",
+          "Happiness",
+          "Anger",
+          "Fear"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you feel nervous, what can help you?",
+        "answers": [
+          "Breathing slowly",
+          "Screaming",
+          "Eating quickly",
+          "Jumping hard"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these is a negative emotion?",
+        "answers": [
+          "Happiness",
+          "Sadness",
+          "Love",
+          "Surprise"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you see a scary movie, you might feel:",
+        "answers": [
+          "Anger",
+          "Happiness",
+          "Fear",
+          "Boredom"
+        ],
+        "correctIndex": 2
+      }
+    ],
+    "facile": [
+      {
+        "question": "What is the emotion that often accompanies a positive surprise?",
+        "answers": [
+          "Anger",
+          "Sadness",
+          "Happiness",
+          "Fear"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When you are afraid, what can help you calm down?",
+        "answers": [
+          "Screaming",
+          "Taking deep breaths",
+          "Eating sweets",
+          "Running away"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the word 'motivation' mean?",
+        "answers": [
+          "Desire to achieve a goal",
+          "Fear of failure",
+          "Being tired",
+          "Feeling angry"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is self-esteem?",
+        "answers": [
+          "Having many friends",
+          "Believing in oneself",
+          "Being good at drawing",
+          "Being always happy"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If a person is very empathetic, what do they do well?",
+        "answers": [
+          "Understand others' emotions",
+          "Cook",
+          "Sing",
+          "Run fast"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What can help improve self-esteem?",
+        "answers": [
+          "Speaking badly of oneself",
+          "Believing in one's abilities",
+          "Never trying",
+          "Always comparing oneself to others"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What emotion is often felt when arguing with a friend?",
+        "answers": [
+          "Joy",
+          "Anger",
+          "Surprise",
+          "Love"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What can make a person anxious?",
+        "answers": [
+          "A surprise party",
+          "A difficult task",
+          "A fun trip",
+          "A gift"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a person is sad, they often want to:",
+        "answers": [
+          "Dance",
+          "Be alone",
+          "Scream",
+          "Run"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a habit?",
+        "answers": [
+          "An action done once",
+          "A behavior repeated over time",
+          "A fleeting emotion",
+          "A random thought"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who can help you understand your emotions better?",
+        "answers": [
+          "A mechanic",
+          "A psychologist",
+          "A baker",
+          "An engineer"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does being resilient mean?",
+        "answers": [
+          "Giving up easily",
+          "Overcoming difficulties",
+          "Avoiding problems",
+          "Having no emotions"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When talking about 'communication', it refers to:",
+        "answers": [
+          "Sleeping",
+          "Eating",
+          "Exchanging information",
+          "Cleaning the house"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "When you feel gratitude, you usually want to:",
+        "answers": [
+          "Thank someone",
+          "Argue",
+          "Scream",
+          "Sleep"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "If you dream of something bad, it is called:",
+        "answers": [
+          "Nightmare",
+          "Lucid dream",
+          "Astral travel",
+          "Positive thought"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When feeling shame, one tends to:",
+        "answers": [
+          "Blush",
+          "Smile",
+          "Dance",
+          "Sing"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which of these emotions is considered 'positive'?",
+        "answers": [
+          "Anger",
+          "Happiness",
+          "Fear",
+          "Sadness"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If a person is very stressed, what can help them?",
+        "answers": [
+          "Stop and relax",
+          "Do even more things",
+          "Ignore the problem",
+          "Get angrier"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Fear is an emotion that serves to:",
+        "answers": [
+          "Protect us from dangers",
+          "Make us run faster",
+          "Be sad",
+          "Be angry"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When a person is self-confident, they possess:",
+        "answers": [
+          "Fear",
+          "Courage",
+          "Doubts",
+          "Anxiety"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What often happens when a person laughs a lot?",
+        "answers": [
+          "Becomes more stressed",
+          "Relaxes and feels good",
+          "Cries",
+          "Gets angry"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When mentally tired, one can be said to be:",
+        "answers": [
+          "Happy",
+          "Stressed",
+          "Rested",
+          "Motivated"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The word 'frustration' indicates:",
+        "answers": [
+          "Great happiness",
+          "An obstacle creating anger or sadness",
+          "A dream",
+          "A trip"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "If you feel shy, you might want to:",
+        "answers": [
+          "Be among many strangers",
+          "Stay a bit apart",
+          "Speak loudly",
+          "Sing in public"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is meant by 'emotion management'?",
+        "answers": [
+          "Ignoring what one feels",
+          "Controlling and understanding emotions",
+          "Screaming always",
+          "Avoiding feeling emotions"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When you smile at someone, you can convey:",
+        "answers": [
+          "Fear",
+          "Friendship",
+          "Anger",
+          "Sadness"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is a 'psychologist'?",
+        "answers": [
+          "A gym teacher",
+          "An expert in emotions and the mind",
+          "A musician",
+          "A coach"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "An example of a sudden emotion is:",
+        "answers": [
+          "Boredom",
+          "Surprise",
+          "Tiredness",
+          "Slow sadness"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is meant by 'irrational fear'?",
+        "answers": [
+          "A fear without real reason",
+          "A useful fear",
+          "A funny fear",
+          "A fear that serves a purpose"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "When a person is very happy, they can say they are:",
+        "answers": [
+          "Sad",
+          "Enthusiastic",
+          "Anxious",
+          "Angry"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "medio": [
+      {
+        "question": "What is the psychological term indicating the ability to recognize and understand one's own and others' emotions?",
+        "answers": [
+          "Empathy",
+          "Aggression",
+          "Memory",
+          "Anxiety"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Who is considered the father of psychoanalysis?",
+        "answers": [
+          "Jean Piaget",
+          "Sigmund Freud",
+          "B.F. Skinner",
+          "Carl Rogers"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the defense mechanism called that consists of 'forgetting' painful events?",
+        "answers": [
+          "Repression",
+          "Projection",
+          "Sublimation",
+          "Compensation"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which area of the brain is most involved in emotion management?",
+        "answers": [
+          "Visual cortex",
+          "Amygdala",
+          "Cerebellum",
+          "Olfactory bulb"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When we talk about 'self-efficacy', we refer to:",
+        "answers": [
+          "Believing one can overcome an obstacle",
+          "Being faster than others",
+          "Having no emotions",
+          "Being indifferent"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In psychology, learning through rewards and punishments is called:",
+        "answers": [
+          "Classical conditioning",
+          "Operant conditioning",
+          "Latent learning",
+          "Social learning"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who formulated the pyramid theory of needs?",
+        "answers": [
+          "Carl Jung",
+          "Abraham Maslow",
+          "Erik Erikson",
+          "Lev Vygotsky"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When someone attributes their own unconscious thoughts or emotions to others, it is called:",
+        "answers": [
+          "Repression",
+          "Projection",
+          "Denial",
+          "Sublimation"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does cognitive psychology study?",
+        "answers": [
+          "Social behaviors",
+          "Mental processes like memory and attention",
+          "Dreams",
+          "Primary emotions"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is 'classical conditioning'?",
+        "answers": [
+          "Learning by observation",
+          "Learning by associating a neutral stimulus with a significant stimulus",
+          "Responding to rewards and punishments",
+          "Experiencing intense emotions"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the name of the theory stating that intelligence is composed of multiple different abilities?",
+        "answers": [
+          "Emotional intelligence theory",
+          "Multiple intelligences theory",
+          "Theory of mind",
+          "Personality theory"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who studied children's behavior through cognitive stages?",
+        "answers": [
+          "Freud",
+          "Piaget",
+          "Pavlov",
+          "Skinner"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "An anxiety disorder manifested by sudden panic attacks is called:",
+        "answers": [
+          "Obsessive-compulsive disorder",
+          "Panic disorder",
+          "Social phobia",
+          "Depression"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Positive psychology focuses on:",
+        "answers": [
+          "Mental illnesses",
+          "Negative emotions",
+          "People's qualities and strengths",
+          "Behavioral disorders"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is a cognitive bias?",
+        "answers": [
+          "Perfect memory",
+          "A systematic error in reasoning",
+          "A lucid dream",
+          "A mnemonic skill"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The brain area fundamental for long-term memory is:",
+        "answers": [
+          "Amygdala",
+          "Motor cortex",
+          "Hippocampus",
+          "Cerebellum"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is meant by 'positive reinforcement'?",
+        "answers": [
+          "Punishment after a mistake",
+          "Reward after correct behavior",
+          "Ignoring a behavior",
+          "Applying psychological pressure"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a person suffers from irrational fear towards a specific object or situation, they have a:",
+        "answers": [
+          "Depression",
+          "Generalized anxiety",
+          "Phobia",
+          "Amnesia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the meaning of 'emotional intelligence'?",
+        "answers": [
+          "The ability to always be happy",
+          "The ability to recognize and manage one's own and others' emotions",
+          "The ability to read quickly",
+          "The ability to solve math problems"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the placebo effect?",
+        "answers": [
+          "An improvement without a real active ingredient",
+          "A worsening after a treatment",
+          "An allergic reaction",
+          "A response to a negative stimulus"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which theorist introduced the concept of collective unconscious?",
+        "answers": [
+          "Freud",
+          "Skinner",
+          "Jung",
+          "Bandura"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In psychology, what does the 'Self' represent?",
+        "answers": [
+          "Fear of the unknown",
+          "The set of self-image and self-awareness",
+          "A primary drive",
+          "Antisocial behavior"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Internal 'locus of control' indicates that a person believes that:",
+        "answers": [
+          "Fate governs life",
+          "One's own actions influence one's destiny",
+          "Others decide everything",
+          "Nothing can be controlled"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a person imitates the behavior of an observed model, we speak of:",
+        "answers": [
+          "Operant conditioning",
+          "Observational learning",
+          "Repression",
+          "Frustration"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is burn-out?",
+        "answers": [
+          "A physical illness",
+          "Severe physical and emotional exhaustion related to work",
+          "A moment of intense happiness",
+          "Momentary anxiety"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The 'flow' is a mental state in which:",
+        "answers": [
+          "One is distracted",
+          "One is completely immersed in an activity",
+          "One feels boredom",
+          "One loses concentration"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is Bowlby's attachment theory?",
+        "answers": [
+          "A theory on aggression",
+          "A theory on the need for security in emotional relationships",
+          "A theory of memory",
+          "A theory on phobias"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "When a person interprets neutral events as negative without evidence, they are doing a:",
+        "answers": [
+          "Confirmation bias",
+          "Catastrophic thinking",
+          "Primacy effect",
+          "Positive conditioning"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is meant by the term 'assertiveness'?",
+        "answers": [
+          "Ignoring others' opinions",
+          "Being able to express one's ideas while respecting others",
+          "Being aggressive",
+          "Always agreeing"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "esperto": [
+      {
+        "question": "In which work did Freud introduce the concept of Id, Ego, and Superego?",
+        "answers": [
+          "Civilization and Its Discontents",
+          "The Interpretation of Dreams",
+          "Group Psychology and the Analysis of the Ego",
+          "The Ego and the Id"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Who developed the concept of 'zone of proximal development'?",
+        "answers": [
+          "Jean Piaget",
+          "Lev Vygotsky",
+          "Erik Erikson",
+          "Albert Bandura"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The term 'cognitivism' refers mainly to the study of:",
+        "answers": [
+          "Conditioning",
+          "Mental processes like memory and perception",
+          "Emotional states",
+          "Reinforcement and punishment"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who introduced the concept of 'archetypes' in psychology?",
+        "answers": [
+          "Sigmund Freud",
+          "Carl Jung",
+          "B.F. Skinner",
+          "William James"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The theory of the 'Ideal Self' is associated with which humanistic psychologist?",
+        "answers": [
+          "Abraham Maslow",
+          "Carl Rogers",
+          "Rollo May",
+          "Alfred Adler"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the main instrument used by behavioral psychology?",
+        "answers": [
+          "The diary",
+          "Personal reflection",
+          "Objective observation of behavior",
+          "Dream interpretation"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who formulated social learning theory?",
+        "answers": [
+          "Bandura",
+          "Freud",
+          "Pavlov",
+          "Erikson"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is 'cognitive dissonance' according to Festinger?",
+        "answers": [
+          "Adapting behaviors to stimuli",
+          "A conflict between incompatible cognitions",
+          "An unconscious fear",
+          "An intense emotion"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Piaget's clinical method consists mainly of:",
+        "answers": [
+          "Standardized observations",
+          "Free interviews with children",
+          "Personality tests",
+          "Written surveys"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the Rorschach test mainly measure?",
+        "answers": [
+          "Verbal ability",
+          "Visual memory",
+          "Unconscious projective processes",
+          "Logical knowledge"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The concept of 'classical conditioning' was discovered by:",
+        "answers": [
+          "Thorndike",
+          "Watson",
+          "Pavlov",
+          "Skinner"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "According to Erikson, which crisis characterizes adolescence?",
+        "answers": [
+          "Autonomy vs shame",
+          "Identity vs role confusion",
+          "Intimacy vs isolation",
+          "Competence vs inferiority"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which brain structure is most involved in fear regulation?",
+        "answers": [
+          "Thalamus",
+          "Amygdala",
+          "Occipital cortex",
+          "Cerebellum"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In the Big Five theory, which trait refers to the tendency to be organized and disciplined?",
+        "answers": [
+          "Openness",
+          "Agreeableness",
+          "Conscientiousness",
+          "Neuroticism"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "According to Gardner's theory, musical intelligence is:",
+        "answers": [
+          "A combination of linguistic and logical intelligence",
+          "An independent intelligence",
+          "A subtype of spatial intelligence",
+          "Not considered a true intelligence"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Operant conditioning theory is associated with:",
+        "answers": [
+          "B.F. Skinner",
+          "Albert Bandura",
+          "Jean Piaget",
+          "Sigmund Freud"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is Ellis's ABC model?",
+        "answers": [
+          "A theory of child development",
+          "An explanation of how emotions and thoughts are linked to events",
+          "A dream theory",
+          "A motor learning model"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Theory of mind typically develops in which phase of life?",
+        "answers": [
+          "During early childhood",
+          "During adolescence",
+          "In adulthood",
+          "During old age"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The term 'oral fixation' belongs to which psychological model?",
+        "answers": [
+          "Cognitive",
+          "Behavioral",
+          "Psychoanalytic",
+          "Humanistic"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In which sleep stage do most vivid dreams occur?",
+        "answers": [
+          "Stage 1",
+          "Stage 2",
+          "REM",
+          "Deep Non-REM"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The TAT (Thematic Apperception Test) assesses:",
+        "answers": [
+          "Logical ability",
+          "Primary emotions",
+          "Unconscious needs and desires",
+          "Visual memory"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who proposed the theory of 'intrinsic motivation'?",
+        "answers": [
+          "Deci and Ryan",
+          "Freud",
+          "Pavlov",
+          "Piaget"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Cognitive-behavioral therapy is based on which principle?",
+        "answers": [
+          "Dream interpretation",
+          "Classical conditioning",
+          "Relationship between thoughts, emotions, and behaviors",
+          "Past life regression"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The concept of 'Real Self' and 'Ideal Self' was proposed by:",
+        "answers": [
+          "Carl Rogers",
+          "Abraham Maslow",
+          "Erik Erikson",
+          "Albert Bandura"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The phenomenon of 'habituation' indicates:",
+        "answers": [
+          "Increased response to a repeated stimulus",
+          "Decreased response to a repeated stimulus",
+          "Observational learning",
+          "Total memory loss"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The term 'neurosis' in classical psychoanalysis refers to:",
+        "answers": [
+          "An unresolved unconscious conflict",
+          "An organic disease",
+          "A logical response to stressful events",
+          "A physical trauma"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The James-Lange theory of emotions argues that:",
+        "answers": [
+          "We feel emotions after recognizing a physical reaction",
+          "Emotions arise before the physiological response",
+          "Emotions are unconscious",
+          "Emotions are exclusively social"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "The concept of 'mindfulness' is closely linked to which practice?",
+        "answers": [
+          "Psychoanalysis",
+          "Meditation",
+          "Operant conditioning",
+          "Hypnosis"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to the Atkinson-Shiffrin model, short-term memory is limited to about how many items?",
+        "answers": [
+          "3-4",
+          "5-9",
+          "10-12",
+          "15-20"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who introduced the concept of 'individual psychology'?",
+        "answers": [
+          "Freud",
+          "Jung",
+          "Adler",
+          "Erikson"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which psychological concept describes the tendency of people to overestimate their influence on external events?",
+        "answers": [
+          "Illusion of control",
+          "Dunning-Kruger effect",
+          "Confirmation bias",
+          "Halo effect"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In the Prochaska and DiClemente transtheoretical model, which phase precedes action?",
+        "answers": [
+          "Contemplation",
+          "Preparation",
+          "Maintenance",
+          "Precontemplation"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Melanie Klein, persecutory anxiety manifests mainly in which position?",
+        "answers": [
+          "Depressive position",
+          "Paranoid-schizoid position",
+          "Oedipal position",
+          "Narcissistic position"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "What does the WAIS test measure?",
+        "answers": [
+          "Social skills",
+          "Attachment styles",
+          "Intelligence",
+          "Executive functions"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In Piaget's theory, at what age does conservation of quantity emerge?",
+        "answers": [
+          "2-3 years",
+          "4-5 years",
+          "6-7 years",
+          "8-9 years"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What is the main function of the dorsolateral prefrontal cortex?",
+        "answers": [
+          "Sensory processing",
+          "Motor control",
+          "Executive functions",
+          "Emotional processing"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In dynamic psychology, the concept of 'countertransference' indicates:",
+        "answers": [
+          "The therapist's unconscious emotions towards the patient",
+          "The patient's conscious emotions",
+          "Resistance to change",
+          "Denial of transference"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "According to Gestalt theory, the principle of 'proximity' concerns:",
+        "answers": [
+          "Physical attraction",
+          "Perception of nearby objects as belonging to the same group",
+          "Short-term memory",
+          "Attentional capacity"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In the Big Five model, the trait 'Neuroticism' measures:",
+        "answers": [
+          "Extroversion",
+          "Emotional stability",
+          "Conscientiousness",
+          "Open-mindedness"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who theorized the 'operative concept' in dynamic psychology?",
+        "answers": [
+          "Bion",
+          "Pichon Rivière",
+          "Freud",
+          "Lacan"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The concept of 'resilience' in psychology indicates:",
+        "answers": [
+          "The ability to ignore problems",
+          "The ability to adapt and overcome adversity",
+          "Avoidance tendency",
+          "Thrill-seeking"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who introduced the term 'collective unconscious'?",
+        "answers": [
+          "Freud",
+          "Jung",
+          "Skinner",
+          "Erikson"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Bowlby's 'attachment theory' is based on studies conducted mainly on:",
+        "answers": [
+          "Adults",
+          "Adolescents",
+          "Children",
+          "Elderly"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The concept of 'resistance' in psychodynamic therapy refers to:",
+        "answers": [
+          "Unconscious opposition to change",
+          "Patient's willpower",
+          "Resilience",
+          "Conscious denial"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In social psychology, the bystander effect occurs when:",
+        "answers": [
+          "An individual is more likely to act in a group",
+          "The presence of others inhibits individual action",
+          "Aggression is strengthened",
+          "Empathy is reduced"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which disorder is characterized by the presence of hallucinations and delusions?",
+        "answers": [
+          "Borderline disorder",
+          "Depressive disorder",
+          "Psychotic disorder",
+          "Avoidant disorder"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The 'cognitive dissonance theory' was proposed by:",
+        "answers": [
+          "Bandura",
+          "Festinger",
+          "Erikson",
+          "Allport"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Lacan, the passage from the mirror stage allows the child to develop:",
+        "answers": [
+          "Episodic memory",
+          "Self-perception",
+          "Causal understanding",
+          "Linguistic mastery"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Implicit memory is mainly involved in:",
+        "answers": [
+          "Autobiographical memories",
+          "Motor skills and automatic abilities",
+          "Logical thinking",
+          "Problem solving"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which of the following disorders is a neurodevelopmental disorder?",
+        "answers": [
+          "Bipolar disorder",
+          "Autism",
+          "Anxiety disorder",
+          "Schizophrenia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "According to Winnicott, the transitional object represents:",
+        "answers": [
+          "A symbol of desire for autonomy",
+          "Compensation for trauma",
+          "A substitute for the primary love object",
+          "An attachment object for adulthood"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "The MMPI test is mainly used to assess:",
+        "answers": [
+          "Intelligence",
+          "Social skills",
+          "Personality and psychological disorders",
+          "Creativity"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Who introduced the notion of 'narrative self' in psychology?",
+        "answers": [
+          "Dan P. McAdams",
+          "Jerome Bruner",
+          "Albert Ellis",
+          "Carl Jung"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "According to Bowlby's evolutionary theory, attachment has a primary function of:",
+        "answers": [
+          "Social control",
+          "Survival",
+          "Exploration",
+          "Competition"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The Zeigarnik effect describes the tendency to remember better:",
+        "answers": [
+          "Completed tasks",
+          "Incomplete or interrupted tasks",
+          "Negative experiences",
+          "Personal successes"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "The concept of 'extended mind' was proposed by:",
+        "answers": [
+          "Daniel Dennett",
+          "Andy Clark and David Chalmers",
+          "Jean Piaget",
+          "Noam Chomsky"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In psychometrics, Cronbach's alpha measures:",
+        "answers": [
+          "Validity",
+          "Internal consistency of a test",
+          "Correlation between variables",
+          "Normality of distribution"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Who elaborated the theory of the 'Dialogical Self'?",
+        "answers": [
+          "Jerome Bruner",
+          "Hubert Hermans",
+          "Lev Vygotsky",
+          "Erik Erikson"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In psychodynamic theory, the term 'acting out' refers to:",
+        "answers": [
+          "Enacting unconscious conflicts through impulsive behaviors",
+          "Conscious processing of a trauma",
+          "Emotional repression",
+          "Assertive communication"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which psychologist introduced the concept of 'force field' in social psychology?",
+        "answers": [
+          "Kurt Lewin",
+          "Leon Festinger",
+          "Albert Bandura",
+          "John Bowlby"
         ],
         "correctIndex": 0
       }
