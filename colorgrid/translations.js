@@ -39,7 +39,10 @@ const gameTranslations = {
         'round': 'Turno',
         'waitTurn': 'Attendi il tuo turno...',
         'selectCell': 'Seleziona una cella prima di confermare!',
-        'theCellWas': 'La cella era:'
+        'theCellWas': 'La cella era:',
+        'passDevice': 'Passa il dispositivo a:',
+        'revealSecret': 'Rivela Colore Segreto',
+        'viewerTurn': 'Turno del Suggeritore'
     },
     'en': {
         'gameTitle': 'Color Grid',
@@ -80,7 +83,10 @@ const gameTranslations = {
         'round': 'Round',
         'waitTurn': 'Wait for your turn...',
         'selectCell': 'Select a cell before confirming!',
-        'theCellWas': 'The cell was:'
+        'theCellWas': 'The cell was:',
+        'passDevice': 'Pass device to:',
+        'revealSecret': 'Reveal Secret Color',
+        'viewerTurn': 'Viewer\'s Turn'
     }
 };
 
@@ -115,6 +121,9 @@ function applyGameTranslations() {
         'play-again': 'playAgain',
         'selectModeTitle': 'selectMode',
         'playerCountLabel': 'playerCount',
+        'viewerTurnTitle': 'viewerTurn',
+        'passDeviceText': 'passDevice',
+        'reveal-secret-btn': 'revealSecret'
     };
 
     for (const [id, key] of Object.entries(elementsToUpdate)) {

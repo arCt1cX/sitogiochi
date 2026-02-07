@@ -57,6 +57,7 @@ let selectedCell = null; // { row, col } currently selected by guesser
 
 // DOM Elements
 const gameSetupSection = document.getElementById('game-setup');
+const viewerAnnouncementSection = document.getElementById('viewer-announcement');
 const targetRevealSection = document.getElementById('target-reveal');
 const gamePlaySection = document.getElementById('game-play');
 const gameResultSection = document.getElementById('game-result'); // Ensure this ID exists or use generic result section
@@ -150,10 +151,17 @@ function init() {
         }
     });
 
+    const viewerAnnouncementSection = document.getElementById('viewer-announcement');
+    const revealSecretButton = document.getElementById('reveal-secret-btn');
+
     // Button listeners
     startGameButton.addEventListener('click', validateAndStartGame);
     gotItButton.addEventListener('click', handleGotIt);
     confirmGuessButton.addEventListener('click', confirmGuess);
+
+    if (revealSecretButton) {
+        revealSecretButton.addEventListener('click', showTargetReveal);
+    }
 
     // Handle result buttons if they exist
     const nextRoundBtn = document.createElement('button');
@@ -291,11 +299,35 @@ function startRound() {
     roundGuesses = {};
     colorWord = '';
 
-    // Show target reveal to viewer
-    showTargetReveal();
+    // Show viewer announcement instead of direct reveal
+    showViewerAnnouncement();
+}
+
+function showViewerAnnouncement() {
+    // Hide other sections
+    gameSetupSection.classList.add('hidden');
+    gamePlaySection.classList.add('hidden');
+    gameResultSection.classList.add('hidden');
+    targetRevealSection.classList.add('hidden');
+
+    // Show announcement section
+    if (viewerAnnouncementSection) {
+        viewerAnnouncementSection.classList.remove('hidden');
+    }
+
+    // Update viewer name
+    const viewerNameDisplay = document.getElementById('viewerNameDisplay');
+    if (viewerNameDisplay && players[viewerIndex]) {
+        viewerNameDisplay.textContent = players[viewerIndex].name;
+    }
 }
 
 function showTargetReveal() {
+    // Hide announcement
+    if (viewerAnnouncementSection) {
+        viewerAnnouncementSection.classList.add('hidden');
+    }
+
     // Update the target reveal screen
     const cellCoords = `${COLUMN_LABELS[targetCell.col]}${targetCell.row + 1}`;
 

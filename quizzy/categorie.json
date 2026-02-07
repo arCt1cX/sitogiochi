@@ -2372,6 +2372,106 @@
           "Libri"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "In che continente si trova l’Italia?",
+        "answers": [
+          "Europa",
+          "Africa",
+          "America del Sud",
+          "Antartide"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale continente si trova il fiume Nilo?",
+        "answers": [
+          "Europa",
+          "Africa",
+          "America del Sud",
+          "Asia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale della Spagna?",
+        "answers": [
+          "Barcellona",
+          "Parigi",
+          "Madrid",
+          "Valencia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è il capoluogo di regione della Lombardia?",
+        "answers": [
+          "Venezia",
+          "Torino",
+          "Napoli",
+          "Milano"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Dove si trova la Tour Eiffel?",
+        "answers": [
+          "San Benedetto del Tronto",
+          "Scampia",
+          "Parigi",
+          "Prato"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale nazione si parla il bengalese?",
+        "answers": [
+          "Italia",
+          "Francia",
+          "Bangladesh",
+          "Napoli"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Dove si trova Machu Picchu?",
+        "answers": [
+          "Civitavecchia",
+          "Perù",
+          "Angri (SN)",
+          "Arabia Saudita"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Di quale continente fa parte il Madagascar?",
+        "answers": [
+          "Europa",
+          "Africa",
+          "America del Sud",
+          "Antartide"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale del Messico?",
+        "answers": [
+          "Città del Messico",
+          "Afragola",
+          "Tor Bella Monaca",
+          "Madrid"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è lo stato più grande del mondo per superficie?",
+        "answers": [
+          "Città del Vaticano",
+          "San Marino",
+          "Russia",
+          "Liechtenstein"
+        ],
+        "correctIndex": 2
       }
     ],
     "facile": [
@@ -2672,6 +2772,106 @@
           "Kiev",
           "Mosca",
           "Varsavia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è la capitale dell’Austria?",
+        "answers": [
+          "Berlino",
+          "Vienna",
+          "Madrid",
+          "Berna"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il fiume principale di Roma?",
+        "answers": [
+          "Po",
+          "Danubio",
+          "Arno",
+          "Tevere"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è il capoluogo di regione della Toscana?",
+        "answers": [
+          "Firenze",
+          "Livorno",
+          "Pisa",
+          "Siena"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è la capitale degli USA?",
+        "answers": [
+          "New York",
+          "Washington DC",
+          "Los Angeles",
+          "Chicago"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Di quale stato è capitale Varsavia?",
+        "answers": [
+          "Polonia",
+          "Austria",
+          "Repubblica Ceca",
+          "Svezia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale continente si trovano le Ande?",
+        "answers": [
+          "Africa",
+          "Asia",
+          "America del Sud",
+          "America del Nord"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è la capitale della Cina?",
+        "answers": [
+          "Shanghai",
+          "Hong Kong",
+          "Tokyo",
+          "Pechino"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In quale regione italiana si trova Trieste?",
+        "answers": [
+          "Friuli-Venezia-Giulia",
+          "Trentino-Alto Adige",
+          "Emilia-Romagna",
+          "Veneto"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale mare si trova l’isola di Cuba?",
+        "answers": [
+          "Mar Rosso",
+          "Mar Mediterraneo",
+          "Mar del Nord",
+          "Mar dei Caraibi"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di questi arcipelaghi non si trova in Italia?",
+        "answers": [
+          "Isole Eolie",
+          "Isole Tremiti",
+          "Isole Baleari",
+          "Isole Pontine"
         ],
         "correctIndex": 2
       }
@@ -2976,6 +3176,106 @@
           "Liechtenstein"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Qual è il secondo lago più grande d’Italia?",
+        "answers": [
+          "Lago Maggiore",
+          "Lago di Garda",
+          "Lago di Como",
+          "Lago Trasimeno"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è il secondo fiume più lungo d’Italia?",
+        "answers": [
+          "Tevere",
+          "Adige",
+          "Arno",
+          "Adda"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale della Svizzera?",
+        "answers": [
+          "Ginevra",
+          "Lugano",
+          "Zurigo",
+          "Berna"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è la seconda montagna più alta del mondo?",
+        "answers": [
+          "K2",
+          "Everest",
+          "Monte Bianco",
+          "Lhotse I"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quale stato americano si trova la città di Miami?",
+        "answers": [
+          "Texas",
+          "New Jersey",
+          "Florida",
+          "California"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Da quale nazione dipende il territorio della Groenlandia?",
+        "answers": [
+          "Islanda",
+          "Canada",
+          "Danimarca",
+          "Norvegia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi non è una provincia delle Marche?",
+        "answers": [
+          "Ascoli Piceno",
+          "Macerata",
+          "Fermo",
+          "Chieti"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Dove si trova la Cattedrale di Rouen?",
+        "answers": [
+          "Francia",
+          "Belgio",
+          "Lussemburgo",
+          "Austria"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale coppia di stati si divide la regione della Patagonia?",
+        "answers": [
+          "Brasile e Argentina",
+          "Argentina e Uruguay",
+          "Cile e Argentina",
+          "Brasile e Uruguay"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di quale nazionale è capitale Vilnius?",
+        "answers": [
+          "Montenegro",
+          "Bielorussia",
+          "Slovenia",
+          "Lituania"
+        ],
+        "correctIndex": 3
       }
     ],
     "esperto": [
@@ -3278,6 +3578,106 @@
           "Mar di Bering"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Qual è il monte più alto d’Europa?",
+        "answers": [
+          "Monte Elbrus",
+          "Monte Rosa",
+          "Monte Bianco",
+          "Monte Dykh-Tau"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è la capitale della Repubblica Democratica del Congo?",
+        "answers": [
+          "Karthum",
+          "Yaoundé",
+          "Kinshasa",
+          "Pretoria"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è la capitale del Kazakistan?",
+        "answers": [
+          "Almaty",
+          "Astana",
+          "Ankara",
+          "Biškek"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di queste regioni NON è attraversata dal Po?",
+        "answers": [
+          "Emilia-Romagna",
+          "Liguria",
+          "Piemonte",
+          "Veneto"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale dell’Etiopia?",
+        "answers": [
+          "Asmara",
+          "Mogadiscio",
+          "Addis Abeba",
+          "Riyadh"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi fiumi non rientra nella top 5 dei fiumi più lunghi del mondo?",
+        "answers": [
+          "Fiume Azzurro",
+          "Congo",
+          "Fiume Giallo",
+          "Mississipi-Missouri"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale oceano si trovano le isole Seychelles?",
+        "answers": [
+          "Oceano Pacifico",
+          "Oceano Atlantico",
+          "Oceano Indiano",
+          "Oceano Artico"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Dove si trova il famoso tempio buddista di Angkor Wat?",
+        "answers": [
+          "Thailandia",
+          "Cambogia",
+          "Vietnam",
+          "Myanmar"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Dove si trova la città di Baku?",
+        "answers": [
+          "Armenia",
+          "Georgia",
+          "Turchia",
+          "Azerbaigian"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In quale stato degli USA si trova Detroit?",
+        "answers": [
+          "Michigan",
+          "Illinois",
+          "Wisconsin",
+          "Massachussetts"
+        ],
+        "correctIndex": 0
       }
     ],
     "laureato": [
@@ -3580,6 +3980,106 @@
           "Finlandia"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Qual è la capitale di Samoa?",
+        "answers": [
+          "Suva",
+          "Nuku’alofa",
+          "Port Moresby",
+          "Apia"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è la capitale del Gambia?",
+        "answers": [
+          "Malabo",
+          "Banjul",
+          "Conakry",
+          "Libreville"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale della Guyana?",
+        "answers": [
+          "Caienna",
+          "Kingston",
+          "Georgetown",
+          "Asunción"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Considerando solo il monte più alto di ciascuna regione italiana, in quale regione si trova il monte più basso?",
+        "answers": [
+          "Sicilia",
+          "Puglia",
+          "Molise",
+          "Calabria"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Dove si trova il cratere Darvaza, noto come La Porta dell’Inferno?",
+        "answers": [
+          "Tagikistan",
+          "Turkmenistan",
+          "Kirghizistan",
+          "Azerbaigian"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale stato degli USA si trova Charlotte?",
+        "answers": [
+          "Virginia Occidentale",
+          "Carolina del Nord",
+          "Carolina del Sud",
+          "Arkansas"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la capitale del Tagikistan?",
+        "answers": [
+          "Ashgabat",
+          "Biškek",
+          "Tashkent",
+          "Dushanbe"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di questi fiumi non fa parte della top 10 dei fiumi più lunghi d’Italia?",
+        "answers": [
+          "Tanaro",
+          "Reno",
+          "Aniene",
+          "Oglio"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi laghi è noto per essere l’unico luogo in cui vive il chirocefalo del Marchesoni, rarissimo crostaceo brachiopode?",
+        "answers": [
+          "Lago di Pilato",
+          "Lago di Martignano",
+          "Lago Lagazuoi",
+          "Lago di Posta Fibreno"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Di quale isola sono endemici gli anoa (Bubalus depressicornis e B. quarlesi)?",
+        "answers": [
+          "Tasmania",
+          "Nuova Guinea",
+          "Timor",
+          "Sulawesi"
+        ],
+        "correctIndex": 3
       }
     ]
   },
@@ -3884,6 +4384,106 @@
           "Horton"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "In quale cartone animato compaiono i sette nani?",
+        "answers": [
+          "Biancaneve",
+          "Cenerentola",
+          "Apocalypse now",
+          "Batman"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama il burattino più famoso della Disney?",
+        "answers": [
+          "Pinocchio",
+          "Shrek",
+          "Lino Banfi",
+          "Scooby Doo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Di che colore è la pelle degli Avatar?",
+        "answers": [
+          "Blu",
+          "Fuxia",
+          "Nero",
+          "Giallo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale supereroe ha come simbolo il pipistrello?",
+        "answers": [
+          "Iron man",
+          "Batman",
+          "Wonder woman",
+          "Mike Wazowski"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il coniglio reso celebre dalla serie “Looney Toons”?",
+        "answers": [
+          "Daffy duck",
+          "Bugs Bunny",
+          "Joe Biden",
+          "Hello Kitty"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il film in cui un enorme transatlantico affonda a causa della collisione con un iceberg?",
+        "answers": [
+          "Jack and Jill",
+          "Peppa Pig",
+          "Dumbo",
+          "Titanic"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è il vero nome di Spiderman?",
+        "answers": [
+          "Mario Rossi",
+          "Celine Dion",
+          "Peter Parker",
+          "Spongebob"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama la scuola frequentata da Harry Potter?",
+        "answers": [
+          "Scuola media Antonio Vivaldi",
+          "Hogwarts",
+          "Accademia dei Lincei",
+          "Monsters University"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il padre di Luke Skywalker?",
+        "answers": [
+          "Anakin Skywalker",
+          "Palpatine",
+          "Silvio Berlusconi",
+          "Paperino"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quanti sono i film della saga de “Il signore degli anelli”?",
+        "answers": [
+          "Tre",
+          "Diciotto",
+          "Sette",
+          "Trentaquattro"
+        ],
+        "correctIndex": 0
       }
     ],
     "facile": [
@@ -4184,6 +4784,106 @@
           "Puffolandia",
           "Villaggio dei Puffi",
           "Bluville"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama l’asino parlante del film “Shrek”?",
+        "answers": [
+          "Aldo",
+          "Ciuchino",
+          "Azzurro",
+          "Brian"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi è l’attore protagonista del film “The wolf of wall street”?",
+        "answers": [
+          "Jared Leto",
+          "Pierfrancesco Favino",
+          "Hulk Hogan",
+          "Leonardo DiCaprio"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Come si chiama il preside della scuola di magia frequentata da Harry Potter?",
+        "answers": [
+          "Severus Piton",
+          "Albus Silente",
+          "Ralph Spaccatutto",
+          "Ezio Auditore"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Di che colore è Saetta McQueen, protagonista della serie di film “Cars”?",
+        "answers": [
+          "Verde",
+          "Bianco",
+          "Viola",
+          "Rosso"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di questi film narra la storia di un parco a tema sui dinosauri?",
+        "answers": [
+          "Godzilla",
+          "Jurassic Park",
+          "Sole a catinelle",
+          "C’è ancora domani"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi film appartiene al genere horror?",
+        "answers": [
+          "Barbie",
+          "Shining",
+          "Lo stagista inaspettato",
+          "Via col vento"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il protagonista de “Il re leone”?",
+        "answers": [
+          "Scar",
+          "Simba",
+          "Ermenegildo",
+          "Timon"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi film racconta la storia di un alieno lasciato per errore dai genitori sulla Terra?",
+        "answers": [
+          "Ogni maledetta domenica",
+          "E.T.",
+          "Inside out",
+          "A qualcuno piace caldo"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il cowboy giocattolo protagonista della saga di Toy Story?",
+        "answers": [
+          "Woody",
+          "Buzz Lightyear",
+          "Wolverine",
+          "Giorgio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi film è stato diretto da Quentin Tarantino?",
+        "answers": [
+          "Wall Street",
+          "Bezos",
+          "Pulp fiction",
+          "Cenerentola"
         ],
         "correctIndex": 2
       }
@@ -4488,6 +5188,106 @@
           "The Revenant"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Da quanti film è composta la saga de “Il padrino”?",
+        "answers": [
+          "due",
+          "tre",
+          "quattro",
+          "cinque"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il fratello adottivo di Mosè nel film “Il principe d’Egitto”?",
+        "answers": [
+          "Seti",
+          "Aronne",
+          "Ramses",
+          "Narmer"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il gruppo di antagonisti principali della saga di “Transformers”?",
+        "answers": [
+          "Autobot",
+          "Decepticon",
+          "Constructicon",
+          "Megabot"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi supereroi non fa parte del gruppo degli Avengers?",
+        "answers": [
+          "Thor",
+          "Deathstroke",
+          "Vedova nera",
+          "Hulk"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale attore ha interpretato il personaggio noto come “Il corvo” nell’omonimo film del 1994?",
+        "answers": [
+          "Brandon Lee",
+          "Robert De Niro",
+          "Mario Merola",
+          "Ugo Tognazzi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In che anno uscì il film “Titanic”?",
+        "answers": [
+          "1997",
+          "1981",
+          "2003",
+          "1976"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale attore interpreta il personaggio di Spiderman nella saga di “The amazing Spiderman”?",
+        "answers": [
+          "Tobey Maguire",
+          "Andrew Garfield",
+          "Ray Liotta",
+          "Tom Holland"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi film non è stato diretto da James Cameron?",
+        "answers": [
+          "Quei bravi ragazzi",
+          "Titanic",
+          "Avatar",
+          "Terminator"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama il personaggio protagonista del film “Il gobbo di Notre-Dame”?",
+        "answers": [
+          "Febo",
+          "Quasimodo",
+          "Claude",
+          "Kurt"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama la sorella di Anna nel film Disney “Frozen”?",
+        "answers": [
+          "Mary",
+          "Elizabeth",
+          "Elsa",
+          "Genoveffa"
+        ],
+        "correctIndex": 2
       }
     ],
     "esperto": [
@@ -4790,6 +5590,106 @@
           "Scott Pilgrim vs. the World"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Chi ha diretto la cosiddetta “Trilogia del dollaro”?",
+        "answers": [
+          "Martin Scorsese",
+          "Luchino Visconti",
+          "Sergio Leone",
+          "Sidney Lumet"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il protagonista del film di Mel Gibson “Braveheart”?",
+        "answers": [
+          "Robin di Locksley",
+          "William Wallace",
+          "Giovanni senza terra",
+          "Robert the Bruce"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il nome della tribù protagonista del primo film della saga di “Avatar”?",
+        "answers": [
+          "Metkayina",
+          "Omaticaya",
+          "Utraya",
+          "Na’vi delle montagne"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale di questi film il protagonista è interpretato da Alberto Sordi?",
+        "answers": [
+          "Santiago",
+          "L’armata brancaleone",
+          "Un borghese piccolo piccolo",
+          "Squadra antiscippo"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A quale gioco giocano Antonius e la Morte nel film “Il settimo sigillo”?",
+        "answers": [
+          "Scacchi",
+          "Dama",
+          "Backgammon",
+          "Carte"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale attore interpreta Dracula nel film “Dracula di Bram Stoker”?",
+        "answers": [
+          "Anthony Hopkins",
+          "Richard Gere",
+          "Gregory Peck",
+          "Gary Oldman"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Come si chiama il supercomputer antagonista del film “2001: Odissea nello spazio”?",
+        "answers": [
+          "Hal 9000",
+          "IBM723",
+          "Local Integrated System",
+          "Cray-YMP"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama la terapia comportamentale a cui viene sottoposto Alex, protagonista del film “Arancia meccanica”?",
+        "answers": [
+          "terapia socio-cognitiva",
+          "programma Ludovico",
+          "Analisi della reazione",
+          "condizionamento operante"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è stato, secondo i critici, il peggior periodo della storia della Disney?",
+        "answers": [
+          "anni duemila",
+          "anni quaranta",
+          "anni settanta",
+          "anni ottanta"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Qual è il massimo riconoscimento ottenibile da un film al Festival del cinema di Berlino?",
+        "answers": [
+          "Nastro azzurro",
+          "Orso d’oro",
+          "Berlin trophy",
+          "Coppa d’argento"
+        ],
+        "correctIndex": 1
       }
     ],
     "laureato": [
@@ -5092,6 +5992,116 @@
           "Joachim Trier"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi film è stato diretto da Orson Welles?",
+        "answers": [
+          "Quarto potere",
+          "Quo vadis",
+          "Cabiria",
+          "I quattrocento colpi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale opera del regista Fritz Lang è del 1927?",
+        "answers": [
+          "La donna del ritratto",
+          "Furia",
+          "Metropolis",
+          "L’immagine errante"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi film è stato diretto dai Fratelli Lumiere?",
+        "answers": [
+          "Viaggio nella luna",
+          "Entre Calais et Douvres",
+          "La presa di Roma",
+          "Pierrot e il fantasma"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Come si chiama il protagonista del film “Ladri di biciclette” di Vittorio De Sica?",
+        "answers": [
+          "Osvaldo",
+          "Antonio",
+          "Roberto",
+          "Giulio"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale attore interpreta Jim Morrison nel film del 1991 “The Doors”?",
+        "answers": [
+          "Val Kilmer",
+          "Kevin Bacon",
+          "Robert Redford",
+          "Jon Voight"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi film ha ricevuto pesanti critiche sui contenuti razzisti?",
+        "answers": [
+          "Intolerance",
+          "Nascita di una nazione",
+          "Fronte del porto",
+          "Il giglio infranto"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di queste attrici ha interpretato il personaggio di Angelica Sedara nel colossal “Il Gattopardo”?",
+        "answers": [
+          "Gina Lollobrigida",
+          "Lucilla Morlacchi",
+          "Sophia Loren",
+          "Claudia Cardinale"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In che modo muore il personaggio di Daniel Balint nel film “The Believer”?",
+        "answers": [
+          "Ucciso da una bomba",
+          "Strangolamento",
+          "Vecchiaia",
+          "Infarto"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "In quali di questi film non appare Meryl Streep?",
+        "answers": [
+          "Il diavolo veste Prada",
+          "Il cacciatore",
+          "Ragazze interrotte",
+          "La scelta di Sophie"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi autori ha scritto il romanzo da cui è tratto il film del 2007 “Il petroliere”?",
+        "answers": [
+          "Upton Sinclair",
+          "William Randolph Hearst",
+          "John Fante",
+          "John Steinbeck"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Per quale di questi film Al Pacino ha vinto l’Oscar al miglior attore protagonista?",
+        "answers": [
+          "Il padrino",
+          "Scarface",
+          "Scent of a woman-Profumo di donna",
+          "Carlito’s way"
+        ],
+        "correctIndex": 2
       }
     ]
   },
@@ -5396,6 +6406,46 @@
           "Inverno di nuovo"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Qual è l’animale più grande esistente?",
+        "answers": [
+          "Formica",
+          "Balenottera azzurra",
+          "Gatto",
+          "Granchio"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il “Pianeta Rosso”?",
+        "answers": [
+          "Marte",
+          "Saturno",
+          "Urano",
+          "Il Gabibbo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Cos’è una quercia?",
+        "answers": [
+          "Un dinosauro",
+          "Una signora anziana",
+          "Un albero",
+          "Un animale"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Dove vivono i canguri?",
+        "answers": [
+          "Australia",
+          "Napoli",
+          "Treviso",
+          "Norvegia"
+        ],
+        "correctIndex": 0
       }
     ],
     "facile": [
@@ -5696,6 +6746,76 @@
           "Cuore",
           "Reni",
           "Intestino"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A che famiglia di mammiferi appartengono le tigri?",
+        "answers": [
+          "Canidi",
+          "Mustelidi",
+          "Felidi",
+          "Ursidi"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è il secondo pianeta del Sistema Solare per minore distanza da Sole?",
+        "answers": [
+          "Venere",
+          "Terra",
+          "Urano",
+          "Mercurio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale specie di Homo fu probabilmente la prima a usare il fuoco?",
+        "answers": [
+          "Homo sapiens",
+          "Homo erectus",
+          "Homo habilis",
+          "Homo neanderthalensis"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "In quale di questi luoghi NON possiamo trovare i rinoceronti?",
+        "answers": [
+          "Indonesia",
+          "Brasile",
+          "Sudafrica",
+          "India"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il punto in cui un fiume termina sul mare?",
+        "answers": [
+          "Sorgente",
+          "Ripple",
+          "Foce",
+          "Fossa"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di che classe di animali fanno parte i pipistrelli?",
+        "answers": [
+          "Uccelli",
+          "Mammiferi",
+          "Insetti",
+          "Rettili"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è la differenza tra una roccia e un minerale?",
+        "answers": [
+          "Le rocce provengono dal centro della terra, i minerali non sempre",
+          "I minerali sono sempre più duri",
+          "Le rocce sono aggregati di minerali, i minerali hanno formula fissa",
+          "Nessuna differenza a livello fisico"
         ],
         "correctIndex": 2
       }
@@ -6000,6 +7120,106 @@
           "Una montagna"
         ],
         "correctIndex": 3
+      },
+      {
+        "question": "In quale regione del mondo si può trovare il caimano nero (Melanosuchus niger)?",
+        "answers": [
+          "Africa",
+          "America meridionale",
+          "Sud-est asiatico",
+          "Australia"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Qual è il minerale più duro secondo la scala di Mohs?",
+        "answers": [
+          "Quarzo",
+          "Diamante",
+          "Corindone",
+          "Apatite"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Di quale pianeta è satellite Titano?",
+        "answers": [
+          "Giove",
+          "Urano",
+          "Marte",
+          "Saturno"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di queste geomorfologie è modellata principalmente dall’azione del vento?",
+        "answers": [
+          "Terrazzi fluviali",
+          "Dune di sabbia",
+          "Conoide alluvionale",
+          "Valli a U"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi organuli cellulari NON è presente nella cellula umana?",
+        "answers": [
+          "Mitocondri",
+          "Apparato del Golgi",
+          "Parete cellulare",
+          "Membrana citoplasmatica"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Cosa distingue le felci da buona parte delle piante?",
+        "answers": [
+          "Non hanno i semi",
+          "Non fanno la fotosintesi",
+          "Non assimilano acqua",
+          "Non hanno le radici"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale classe di animali ha la più alta percentuale di specie a rischio di estinzione (>36%)?",
+        "answers": [
+          "Anfibi",
+          "Rettili",
+          "Uccelli",
+          "Pesci"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi NON è un minerale?",
+        "answers": [
+          "Talco",
+          "Gesso",
+          "Vetro",
+          "Diamante"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è l’unico stato al di fuori dell’Africa in cui possiamo ancora trovare popolazioni naturali di leoni?",
+        "answers": [
+          "Cina",
+          "Arabia Saudita",
+          "India",
+          "Russia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quali sono le tre principali categorie di rocce?",
+        "answers": [
+          "Sedimentarie, magmatiche, vulcaniche",
+          "Ignee, cristalline, sedimentarie",
+          "Magmatiche, sedimentarie e metamorfiche",
+          "Vulcaniche, cristalline e sedimentarie"
+        ],
+        "correctIndex": 2
       }
     ],
     "esperto": [
@@ -6302,6 +7522,86 @@
           "Si rompe un legame ionico"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Di quale isola è endemico il fossa (Cryptoprocta ferox)?",
+        "answers": [
+          "Sulawesi",
+          "Borneo",
+          "Madagascar",
+          "Isole Seychelles"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il satellite più grande del pianeta Marte?",
+        "answers": [
+          "Deimos",
+          "Phobos",
+          "Titano",
+          "Europa"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi tipi di eruzione vulcanica è la più devastante secondo l’indice VEI (Volcanic Explosivity Index)?",
+        "answers": [
+          "Eruzione stromboliana",
+          "Eruzione vulcaniana",
+          "Eruzione pliniana",
+          "Eruzione hawaiana"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A quale processo biologico fondamentale partecipano i ribosomi?",
+        "answers": [
+          "Ciclo di Krebs",
+          "Respirazione cellulare",
+          "Traduzione dell’mRNA",
+          "Replicazione del DNA"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A quale famiglia di piante appartiene il Leccio (Quercus ilex)?",
+        "answers": [
+          "Salicaceae",
+          "Fagaceae",
+          "Oleaceae",
+          "Rosaceae"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Che tipologia di limite di placca tettonica è la Faglia di San Andreas (California, USA)?",
+        "answers": [
+          "Convergente",
+          "Divergente",
+          "Trasforme",
+          "Mista"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Qual è l’unico stato al di fuori dell’Africa in cui possiamo trovare i ghepardi?",
+        "answers": [
+          "India",
+          "Arabia Saudita",
+          "Indonesia",
+          "Iran"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di questi mammiferi NON fa parte dell’ordine dei Perissodattili?",
+        "answers": [
+          "Cavallo",
+          "Rinoceronte",
+          "Tapiro",
+          "Elefante"
+        ],
+        "correctIndex": 3
       }
     ],
     "laureato": [
@@ -6594,6 +7894,46 @@
           "Telofase"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Qual è il nome comune dell’Eupleres goudotii, mammifero carnivoro endemico del Madagascar?",
+        "answers": [
+          "Fossa",
+          "Civetta malgascia",
+          "Falanouc",
+          "Mangusta di Grandidier"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "A quale forza di erosione sono associate le “rocce montonate”?",
+        "answers": [
+          "Erosione fluviale",
+          "Erosione chimica",
+          "Erosione glaciale",
+          "Erosione costiera"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di queste specie di pipistrelli NON è presente in Italia?",
+        "answers": [
+          "Vespertilio di Bechstein",
+          "Nottola gigante",
+          "Serotino meridionale",
+          "Rinolofo euriale"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di queste specie di Australopiteco non esiste?",
+        "answers": [
+          "Australopithecus africanus",
+          "Australopithecus tugenensis",
+          "Australopithecus sediba",
+          "Australopithecus garhi"
+        ],
+        "correctIndex": 1
       }
     ]
   },
@@ -8410,6 +9750,106 @@
           "Umberto Eco"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Che animale è Geronimo Stilton?",
+        "answers": [
+          "Topo",
+          "Gatto",
+          "Coccodrillo",
+          "Leone"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha scritto la Divina Commedia?",
+        "answers": [
+          "Dante",
+          "Fabio Volo",
+          "Coluccio Salutati",
+          "Dan Brown"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama il protagonista del poema “Eneide”?",
+        "answers": [
+          "Anchise",
+          "Enea",
+          "Pierino",
+          "Giulio Cesare"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale animale è l’antagonista della favola “I tre porcellini”?",
+        "answers": [
+          "Falco",
+          "Lupo",
+          "Pesce rosso",
+          "Dugongo"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Dove nacque Dante?",
+        "answers": [
+          "New Delhi",
+          "Pechino",
+          "Firenze",
+          "Palermo"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il cane protagonista della serie a fumetti “Peanuts”?",
+        "answers": [
+          "Snoopy",
+          "Garfield",
+          "Pig-pen",
+          "Eric Cartman"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale animale è l’antagonista del romanzo “Moby Dick” di Herman Melville?",
+        "answers": [
+          "Tigre",
+          "Coccodrillo",
+          "Pappagallo",
+          "Balena"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Come si chiama il mago consigliere di re Artù?",
+        "answers": [
+          "Merlino",
+          "Uther Pendragon",
+          "Luigi XVI",
+          "Diodoro Siculo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di queste opere è stata scritta da Ludovico Ariosto?",
+        "answers": [
+          "Morgante",
+          "I love shopping",
+          "Orlando furioso",
+          "Lettera a un bambino mai nato"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il principale antagonista de “I promessi sposi”?",
+        "answers": [
+          "John Cena",
+          "Don Rodrigo",
+          "Capitan Uncino",
+          "Federico Borromeo"
+        ],
+        "correctIndex": 1
       }
     ],
     "facile": [
@@ -8710,6 +10150,106 @@
           "Mary Shelley",
           "Stephen King",
           "Edgar Allan Poe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha scritto “I promessi sposi”?",
+        "answers": [
+          "Don Abbondio",
+          "Giovanni Verga",
+          "Riccardo cuor di leone",
+          "Alessandro Manzoni"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Come si chiama il leggendario re di Camelot, uno dei personaggi più importanti della cosiddetta Materia di Britannia?",
+        "answers": [
+          "Lancillotto",
+          "John",
+          "Filippo",
+          "Artù"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale di questi autori è noto per essere sopravvissuto ad Auschwitz?",
+        "answers": [
+          "Niccolò Ammaniti",
+          "Alessandro Baricco",
+          "Primo Levi",
+          "Paolo Brosio"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale lingua è stato scritto originariamente il poema “Paradiso perduto”?",
+        "answers": [
+          "Inglese",
+          "Creolo Haitiano",
+          "Mongolo",
+          "Spagnolo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi romanzi è stato scritto da George Orwell?",
+        "answers": [
+          "Ivanhoe",
+          "Il mondo nuovo",
+          "1984",
+          "Zanna Bianca"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama l’eroe protagonista dell’Odissea?",
+        "answers": [
+          "Aiace Telamonio",
+          "Patroclo",
+          "Ulisse",
+          "Diomede"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama la donna amata da Francesco Petrarca?",
+        "answers": [
+          "Laura",
+          "Giovanna",
+          "Paola",
+          "Elisa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Qual è l’opera della giovinezza di Dante?",
+        "answers": [
+          "Vita nova",
+          "Il padrino",
+          "Ragazzi di vita",
+          "La casa in collina"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama il protagonista del libro “Ventimila leghe sotto i mari”?",
+        "answers": [
+          "Just de la Fontaine",
+          "Bambi",
+          "Capitano Nemo",
+          "Mr. Rochester"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama il migliore amico di Harry Potter?",
+        "answers": [
+          "Ron Weasley",
+          "Draco Malfoy",
+          "Diabolik",
+          "Marco Antonio"
         ],
         "correctIndex": 0
       }
@@ -9014,6 +10554,106 @@
           "Dino Buzzati"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi componimenti non è stato scritto da Giacomo Leopardi?",
+        "answers": [
+          "La sera fiesolana",
+          "Il passero solitario",
+          "Il sabato del villaggio",
+          "Canto notturno di un pastore errante dell’Asia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi autori ha scritto il romanzo “Don Chisciotte della Mancia”?",
+        "answers": [
+          "Lope de Vega",
+          "Miguel de Cervantes",
+          "Ludovico Antonio Muratori",
+          "Carlos Ruiz Zafon"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Come si chiama il protagonista maschile del romanzo “Orgoglio e pregiudizio”?",
+        "answers": [
+          "Mr. Wickham",
+          "Mr. Darcy",
+          "Mr. Collins",
+          "Mr. Bennet"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi libri è stato scritto da Lev Tolstoj?",
+        "answers": [
+          "Le notti bianche",
+          "La solitudine dei numeri primi",
+          "L’amico ritrovato",
+          "Guerra e pace"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Dove è nato Giovanni Boccaccio?",
+        "answers": [
+          "Certaldo",
+          "Firenze",
+          "Napoli",
+          "Bologna"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha scritto il romanzo “Le ultime lettere di Jacopo Ortis”?",
+        "answers": [
+          "Ugo Foscolo",
+          "Goethe",
+          "Charles Dickens",
+          "Fedor Dostoevskij"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi personaggi letterari trascorre quasi trent’anni su un’isola deserta?",
+        "answers": [
+          "Gulliver",
+          "Robinson Crusoe",
+          "Oliver Twist",
+          "Sandokan"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi romanzi è stato scritto da Elsa Morante?",
+        "answers": [
+          "La luna e i falò",
+          "Lessico famigliare",
+          "La storia",
+          "Il fasciocomunista"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di queste opere ha vinto il premio Strega?",
+        "answers": [
+          "Cristo si è fermato a Eboli",
+          "La sposa normanna",
+          "Il nome della rosa",
+          "Un anno sull’altipiano"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di quale corrente letteraria Giovanni Pascoli è considerato uno dei caposaldi?",
+        "answers": [
+          "Manierismo",
+          "Decadentismo",
+          "Romanticismo",
+          "Modernismo"
+        ],
+        "correctIndex": 1
       }
     ],
     "esperto": [
@@ -9316,6 +10956,106 @@
           "Vita Nuova"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "Chi ha scritto “Il piccolo principe”?",
+        "answers": [
+          "Antoine de Saint-Exupery",
+          "Emile Zola",
+          "Italo Calvino",
+          "Carlo Collodi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha scritto la “Gerusalemme liberata”?",
+        "answers": [
+          "Torquato Tasso",
+          "Ludovico Ariosto",
+          "Angelo Poliziano",
+          "Matteo Maria Boiardo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi autori italiani ha vinto il premio Nobel per la letteratura?",
+        "answers": [
+          "Umberto Saba",
+          "Giuseppe Ungaretti",
+          "Salvatore Quasimodo",
+          "Alberto Moravia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "In quale anno è stata pubblicata la “Giuntina di rime antiche”, raccolta poetica di rimatori italiani del ‘200?",
+        "answers": [
+          "1527",
+          "1334",
+          "1612",
+          "1478"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di queste opere non è stata scritta da Italo Svevo?",
+        "answers": [
+          "Senilità",
+          "Una vita",
+          "La ciociara",
+          "La coscienza di Zeno"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di queste opere classiche è stata tradotta in italiano da Vincenzo Monti?",
+        "answers": [
+          "Iliade",
+          "Eneide",
+          "De rerum natura",
+          "Odissea"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Dove nacque Gabriele D’Annunzio?",
+        "answers": [
+          "Isernia",
+          "Reggio Calabria",
+          "Pescara",
+          "Napoli"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Di quanti libri si compone l’edizione ufficiale del Nuovo testamento”?",
+        "answers": [
+          "12",
+          "27",
+          "35",
+          "40"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di queste opere è considerata un capolavoro della poesia modernista?",
+        "answers": [
+          "La terra desolata",
+          "Ballate liriche",
+          "Antologia di Spoon river",
+          "Verrà la morte e avrà i tuoi occhi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale tragedia di Euripide racconta il sacrificio di una moglie per salvare la vita di suo marito?",
+        "answers": [
+          "Lisistrata",
+          "Elettra",
+          "Antigone",
+          "Alcesti"
+        ],
+        "correctIndex": 3
       }
     ],
     "laureato": [
@@ -9616,6 +11356,106 @@
           "Northrop Frye",
           "Tzvetan Todorov",
           "Frank Kermode"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi sonetti è stato scritto da Ciro di Pers?",
+        "answers": [
+          "Orologio da rote",
+          "Sudate, o fochi, a preparar metalli",
+          "L’anello d’oro, dono della sua donna",
+          "Per la monacazione di Silvia della Marra"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi poeti greci è vissuto durante il periodo meglio noto come Ellenismo?",
+        "answers": [
+          "Euripide",
+          "Nonno di Panopoli",
+          "Callimaco",
+          "Pindaro"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di queste opere non è di Seneca?",
+        "answers": [
+          "De brevitate vitae",
+          "Satyricon",
+          "De clementia",
+          "Naturales quaestiones"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Quale di questi poeti non fu mai in corrispondenza con Dante?",
+        "answers": [
+          "Guido Cavalcanti",
+          "Cino da Pistoia",
+          "Dante da Maiano",
+          "Guittone d’Arezzo"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Di quale paese era originario lo scrittore naturalizzato inglese Joseph Conrad?",
+        "answers": [
+          "Repubblica ceca",
+          "Islanda",
+          "Polonia",
+          "Grecia"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi testi costituisce la prima attestazione di Volgare italiano?",
+        "answers": [
+          "Placiti cassinesi",
+          "Memoriali bolognesi",
+          "Vulgata di San Girolamo",
+          "Cantico delle creature"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi è l’autore del trattato “De arte venandi cum avibus”?",
+        "answers": [
+          "Sennuccio dal bene",
+          "Bonagiunta Orbicciani",
+          "Federico II di Svevia",
+          "Gian Galeazzo Visconti"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Come si chiama la moglie di Zeno Cosini nel romanzo di Italo Svevo “La coscienza di Zeno”?",
+        "answers": [
+          "Augusta",
+          "Marilena",
+          "Ofelia",
+          "Vittoria"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Per quanto tempo si estende il romanzo “Ulisse” di James Joyce?",
+        "answers": [
+          "un giorno",
+          "una settimana",
+          "un mese",
+          "un anno"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Come si chiama l’unica amica di Hop-Frog, protagonista del racconto omonimo di Edgar Allan Poe?",
+        "answers": [
+          "Trippetta",
+          "Lisetta",
+          "Ligeia",
+          "Leucotea"
         ],
         "correctIndex": 0
       }
@@ -18744,6 +20584,26 @@
           "Disegnare"
         ],
         "correctIndex": 1
+      },
+      {
+        "question": "Chi ha dipinto la Monna Lisa, conosciuta anche con il nome di “Gioconda”?",
+        "answers": [
+          "Papa Francesco",
+          "La pantera rosa",
+          "Leonardo da Vinci",
+          "Giorgio Vasari"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi pittori è olandese?",
+        "answers": [
+          "Michelangelo",
+          "Paul Gaguin",
+          "Hokusai",
+          "Vincent van Gogh"
+        ],
+        "correctIndex": 3
       }
     ],
     "facile": [
@@ -18996,6 +20856,16 @@
           "Valencia"
         ],
         "correctIndex": 1
+      },
+      {
+        "question": "Quale città italiana è conosciuta per il suo famoso marmo?",
+        "answers": [
+          "Carrara",
+          "Forlì",
+          "L’Aquila",
+          "Caltanissetta"
+        ],
+        "correctIndex": 0
       }
     ],
     "medio": [
@@ -19298,6 +21168,16 @@
           "Rodin"
         ],
         "correctIndex": 0
+      },
+      {
+        "question": "In quale città statunitense si trova il Museum of modern art, abbreviato in MOMA?",
+        "answers": [
+          "New York",
+          "Chicago",
+          "Los Angeles",
+          "Philadelphia"
+        ],
+        "correctIndex": 0
       }
     ],
     "esperto": [
@@ -19520,6 +21400,36 @@
           "Giorgio Morandi"
         ],
         "correctIndex": 2
+      },
+      {
+        "question": "Come si chiamano le grotte in cui sono stati ritrovati, nel 1940, circa 6000 pitture rupestri risalenti al neolitico?",
+        "answers": [
+          "Grotte di Lascaux",
+          "Grotte di Longmen",
+          "Grotte di Elephanta",
+          "Grotte di Postumia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "A quale stile architettonico appartiene la Basilica di sant’Ambrogio a Milano?",
+        "answers": [
+          "Gotico",
+          "Romanico",
+          "Neoclassicismo",
+          "Rinascimentale"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Chi ha dipinto la “Scuola di Atene”?",
+        "answers": [
+          "Ghirlandaio",
+          "Raffaello",
+          "Caravaggio",
+          "Sandro Botticelli"
+        ],
+        "correctIndex": 1
       }
     ],
     "laureato": [
@@ -19710,6 +21620,106 @@
           "Ernst Gombrich durante il Rinascimento",
           "Heinrich Wölfflin nel periodo barocco",
           "Max J. Friedländer nel contesto fiammingo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di questi artisti ha dipinto il “Trittico di San Giovenale”?",
+        "answers": [
+          "Masaccio",
+          "Piero della Francesca",
+          "Pietro Cavallini",
+          "Masolino"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale di queste opere non è attribuibile allo scultore greco antico Skopas?",
+        "answers": [
+          "Amazzonomachia",
+          "Apollo palatino",
+          "Hermes con Dioniso",
+          "Heracles Hope"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi monumenti non fa parte delle Sette meraviglie del mondo?",
+        "answers": [
+          "Mausoleo di Alicarnasso",
+          "Torre Eiffel",
+          "Giardini pensili di Babilonia",
+          "Faro di Alessandria"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Dove è custodita la Corona Ferrea, tradizionalmente utilizzata per incoronare i sovrani italiani?",
+        "answers": [
+          "Duomo di Monza",
+          "Museo nazionale di San Marco",
+          "Basilica di San Paolo fuori le mura",
+          "Porziuncola"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Chi ha dipinto la caricatura dell’imperatore Rodolfo II in veste di Vertumno?",
+        "answers": [
+          "Cimabue",
+          "Rosso Fiorentino",
+          "Artemisia Gentileschi",
+          "Giuseppe Arcimboldo"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "In quale periodo storico la corrente artistica dell’Art Nouveau si impose come stile predominante?",
+        "answers": [
+          "Belle Epoque",
+          "Età Napoleonica",
+          "Ventennio fascista",
+          "Quarta repubblica francese"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Quale stile caratterizza l’Empire State Building?",
+        "answers": [
+          "Liberty",
+          "Gotico",
+          "Manierismo",
+          "Art déco"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "Quale artistica francese è noto per le sue illustrazioni della Divina Commedia?",
+        "answers": [
+          "Pierre Soulages",
+          "Henri de Toulouse-Lautrec",
+          "Gustave Doré",
+          "Edgar Degas"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale artista dipinse i celebri affreschi della Cappella degli Scrovegni?",
+        "answers": [
+          "Leon Battista Alberti",
+          "Cimabue",
+          "Giotto",
+          "Pietro Perugino"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "Quale di questi artisti non fa parte della corrente artistica nota come Surrealismo?",
+        "answers": [
+          "Giorgio de Chirico",
+          "Salvador Dalì",
+          "Yves Tanguy",
+          "Alberto Giacometti"
         ],
         "correctIndex": 0
       }
