@@ -45,7 +45,7 @@ let tournamentState = {
     totalGames: 5,
     currentGame: 0,
     scores: {},
-    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi'],
+    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'],
     gameWeights: {},  // New property to track game weights
     usedGames: [],     // Keep this to track history but not for filtering
     doublePointsGames: [],
@@ -108,15 +108,41 @@ function setupNextGame() {
         return;
     }
 
-    // Calculate total weight
-    const totalWeight = Object.values(tournamentState.gameWeights).reduce((a, b) => a + b, 0);
+    // Long games that shouldn't appear more than twice or twice in a row
+    const longGames = ['quizzy', 'guessthepic'];
+    const lastGame = tournamentState.usedGames.length > 0
+        ? tournamentState.usedGames[tournamentState.usedGames.length - 1]
+        : null;
+
+    // Build a filtered list: exclude games that hit their limits
+    let eligibleGames = tournamentState.availableGames.filter(game => {
+        if (longGames.includes(game)) {
+            const timesPlayed = tournamentState.usedGames.filter(g => g === game).length;
+            // Max 2 times total in the tournament
+            if (timesPlayed >= 2) return false;
+            // Never twice in a row
+            if (game === lastGame) return false;
+        }
+        return true;
+    });
+
+    // Safety fallback (should never happen)
+    if (eligibleGames.length === 0) {
+        eligibleGames = [...tournamentState.availableGames];
+    }
+
+    // Shuffle eligible games to avoid order bias
+    const shuffled = eligibleGames.sort(() => Math.random() - 0.5);
+
+    // Calculate total weight (only for eligible games)
+    const totalWeight = shuffled.reduce((sum, game) => sum + (tournamentState.gameWeights[game] || 100), 0);
 
     // Generate random value between 0 and total weight
     let random = Math.random() * totalWeight;
-    let selectedGame = tournamentState.availableGames[0]; // Default fallback
+    let selectedGame = shuffled[0]; // Default fallback
 
-    // Select game based on weights
-    for (const game of tournamentState.availableGames) {
+    // Select game based on weights (on the shuffled array)
+    for (const game of shuffled) {
         random -= tournamentState.gameWeights[game];
         if (random <= 0) {
             selectedGame = game;
@@ -124,11 +150,23 @@ function setupNextGame() {
         }
     }
 
-    // Reduce the weight for the selected game
+    // Heavily reduce the weight for the selected game so it's unlikely to repeat soon
+    // Count how many times this game has already appeared
+    const timesPlayed = tournamentState.usedGames.filter(g => g === selectedGame).length + 1;
     tournamentState.gameWeights[selectedGame] = Math.max(
-        20, // Minimum 20% chance to be picked
-        tournamentState.gameWeights[selectedGame] - 30 // Reduce by 30% each time
+        5, // Very low minimum so other games get priority
+        100 - (timesPlayed * 40) // Drop significantly with each play
     );
+
+    // Slightly boost all OTHER games to keep variety high
+    for (const game of tournamentState.availableGames) {
+        if (game !== selectedGame) {
+            tournamentState.gameWeights[game] = Math.min(
+                100,
+                tournamentState.gameWeights[game] + 10
+            );
+        }
+    }
 
     tournamentState.usedGames.push(selectedGame); // Keep for history
 
@@ -153,10 +191,14 @@ function startTournament() {
     const playerCount = playerInputs.length;
 
     // Update available games based on player count
-    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi'];
-    // Only add Chain Reaction if player count is 3 or 6
-    if (playerCount === 6) {
+    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'];
+    // Only add Chain Reaction if player count is a multiple of 3
+    if (playerCount % 3 === 0) {
         tournamentState.availableGames.push('chainreaction');
+    }
+    // Only add TicTacTopics if there are exactly 2 players
+    if (playerCount === 2) {
+        tournamentState.availableGames.push('tictactopics');
     }
 
     tournamentState.players = Array.from(playerInputs).map(input => ({
@@ -284,7 +326,7 @@ function resetTournament() {
         totalGames: 5,
         currentGame: 0,
         scores: {},
-        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'chainreaction', 'BluffMe', 'quizzy', 'alphabetgame', 'drewnking', 'hottakes', 'indovinaChi'],
+        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'],
         gameWeights: {},
         usedGames: [],
         doublePointsGames: [],
