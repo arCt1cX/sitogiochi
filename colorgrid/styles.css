@@ -372,37 +372,3 @@ p {
     font-style: italic;
 }
 
-.tournament-return-button {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.tournament-return-button:hover {
-    background-color: rgba(255, 255, 255, 1);
-    transform: translateX(-50%) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.tournament-return-button.hidden {
-    display: none;
-}
-
-.btn-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}

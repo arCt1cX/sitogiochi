@@ -1,3 +1,45 @@
+// Map folder names to display names (per language)
+const gameDisplayNames = {
+    en: {
+        'impostor': 'Impostor',
+        'colorgrid': 'Color Grid',
+        'guessthepic': 'Guess Rush',
+        'timergame': 'Wordrace',
+        'chainreaction': 'Chain Reaction',
+        'BluffMe': 'BluffMe',
+        'quizzy': 'Quizzy',
+        'alphabetgame': 'Alphabet Game',
+        'indovinaChi': 'Guess Who',
+        'nonhomai': 'Never Have I Ever',
+        'drewnking': 'Drewnking Game',
+        'hottakes': 'Hot Takes',
+        'mrdrew': 'Mr. Drew',
+        'tictactopics': 'TicTacTopics'
+    },
+    it: {
+        'impostor': 'Impostor',
+        'colorgrid': 'Color Grid',
+        'guessthepic': 'Guess Rush',
+        'timergame': 'Wordrace',
+        'chainreaction': 'Chain Reaction',
+        'BluffMe': 'BluffMe',
+        'quizzy': 'Quizzy',
+        'alphabetgame': 'Alphabet Game',
+        'indovinaChi': 'Indovina Chi',
+        'nonhomai': 'Non ho mai...',
+        'drewnking': 'Drewnking Game',
+        'hottakes': 'Hot Takes',
+        'mrdrew': 'Mr. Drew',
+        'tictactopics': 'TicTacTopics'
+    }
+};
+
+function getGameDisplayName(folderId) {
+    const userLang = navigator.language || navigator.userLanguage;
+    const lang = userLang.startsWith('it') ? 'it' : 'en';
+    return (gameDisplayNames[lang] && gameDisplayNames[lang][folderId]) || folderId;
+}
+
 let tournamentState = {
     players: [],
     totalGames: 5,
@@ -93,7 +135,7 @@ function setupNextGame() {
     document.getElementById('currentGame').textContent = tournamentState.currentGame + 1;
     // Ensure total games label stays in sync with saved state
     document.getElementById('totalGames').textContent = tournamentState.totalGames;
-    document.getElementById('selectedGame').textContent = selectedGame;
+    document.getElementById('selectedGame').textContent = getGameDisplayName(selectedGame);
 
     localStorage.setItem('tournamentState', JSON.stringify(tournamentState));
 
@@ -262,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('startTournament').addEventListener('click', startTournament);
     document.getElementById('submitScores').addEventListener('click', handleScoreSubmission);
     document.getElementById('nextGame').addEventListener('click', setupNextGame);
+    document.getElementById('endTournament').addEventListener('click', showFinalResults);
     document.getElementById('newTournament').addEventListener('click', resetTournament);
 
     generatePlayerInputs();
