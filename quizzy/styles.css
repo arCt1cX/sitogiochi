@@ -1,6 +1,8 @@
 /* Quizzy Game Styles */
 html {
-    background-color: #1a2a6c;
+    background: linear-gradient(135deg, #1a2a6c, #4b3f72, #8a508f);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
 
 * {
@@ -19,8 +21,8 @@ body {
     color: #fff;
     line-height: 1.6;
     padding: 1rem;
+    padding-top: calc(1rem + env(safe-area-inset-top));
     text-align: center;
-    
 }
 
 @keyframes pageFadeIn {
@@ -72,7 +74,8 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     min-height: 80vh;
     margin-top: 2rem;
-    animation: pageFadeIn 0.6s ease-out forwards;}
+    animation: pageFadeIn 0.6s ease-out forwards;
+}
 
 .screen-content {
     padding: 2rem;
@@ -1052,6 +1055,7 @@ select:focus {
 .answer-btn {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
+
 /* Modal Styles */
 .modal-overlay {
     position: fixed;
@@ -1059,14 +1063,13 @@ select:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: #000000;
     z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     animation: fadeIn 0.3s forwards;
-    backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -1159,11 +1162,13 @@ select:focus {
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes scaleIn {
-    to { 
+    to {
         transform: scale(1);
         opacity: 1;
     }
