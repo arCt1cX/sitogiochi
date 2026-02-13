@@ -234,8 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Select random word from random category
     function selectRandomWord() {
-        const randomCategoryIndex = Math.floor(Math.random() * gameState.categories.length);
-        const category = gameState.categories[randomCategoryIndex];
+        // Filter for Normal categories only (exclude advanced)
+        const normalCategories = gameState.categories.filter(c => c.tipo !== 'avanzata');
+        // Fallback to all categories if filter returns empty (safety check)
+        const sourceCategories = normalCategories.length > 0 ? normalCategories : gameState.categories;
+
+        const randomCategoryIndex = Math.floor(Math.random() * sourceCategories.length);
+        const category = sourceCategories[randomCategoryIndex];
         const randomWordIndex = Math.floor(Math.random() * category.parole.length);
 
         gameState.currentWord = category.parole[randomWordIndex];
@@ -485,8 +490,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // If random mode OR custom mode OR if chosen mode failed to find category
         if (!newWord) {
-            const randomCategoryIndex = Math.floor(Math.random() * gameState.categories.length);
-            const categoryObj = gameState.categories[randomCategoryIndex];
+            // Filter for Normal categories only if we are in random mode or fallback (exclude advanced)
+            const normalCategories = gameState.categories.filter(c => c.tipo !== 'avanzata');
+            const sourceCategories = normalCategories.length > 0 ? normalCategories : gameState.categories;
+
+            const randomCategoryIndex = Math.floor(Math.random() * sourceCategories.length);
+            const categoryObj = sourceCategories[randomCategoryIndex];
             const randomIndex = Math.floor(Math.random() * categoryObj.parole.length);
             newWord = categoryObj.parole[randomIndex];
             newCategory = categoryObj.nome;

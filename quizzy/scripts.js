@@ -426,152 +426,113 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Show a screen with all categories (selected and random) before proceeding
     function showCategoriesScreen(selectedCategories, randomCategories) {
-        // Create an overlay screen
+        // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
+
+        // Create modal overlay
         const overlay = document.createElement('div');
-        overlay.className = 'overlay-screen';
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = '#111';
-        overlay.style.zIndex = '1000';
-        overlay.style.display = 'flex';
-        overlay.style.flexDirection = 'column';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.color = 'white';
-        overlay.style.padding = '20px';
-        overlay.style.textAlign = 'center';
+        overlay.className = 'modal-overlay';
 
-        // Create container
-        const container = document.createElement('div');
-        container.style.maxWidth = '800px';
-        container.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-        container.style.borderRadius = '10px';
-        container.style.padding = '30px';
-        container.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+        // Create modal content
+        const modalContent = document.createElement('div');
+        modalContent.className = 'modal-content';
 
-        // Title
+        // Header
+        const header = document.createElement('div');
+        header.className = 'modal-header';
+
         const title = document.createElement('h2');
-        title.style.fontSize = '1.8rem';
-        title.style.marginBottom = '20px';
-        title.style.color = '#ffffff';
+        title.className = 'modal-title';
         title.textContent = getUserLanguage() === 'it' ?
             'Le Tue Categorie' :
             'Your Categories';
 
-        // Selected categories section
-        const selectedTitle = document.createElement('h3');
-        selectedTitle.style.fontSize = '1.3rem';
-        selectedTitle.style.marginTop = '20px';
-        selectedTitle.style.marginBottom = '15px';
-        selectedTitle.textContent = getUserLanguage() === 'it' ?
-            'Categorie Selezionate:' :
-            'Selected Categories:';
+        header.appendChild(title);
+        modalContent.appendChild(header);
 
-        // Selected categories list
-        const selectedList = document.createElement('div');
-        selectedList.style.display = 'flex';
-        selectedList.style.flexDirection = 'column';
-        selectedList.style.gap = '10px';
-        selectedList.style.marginBottom = '30px';
+        // Body
+        const body = document.createElement('div');
+        body.className = 'modal-body';
+
+        // Selected categories section
+        const selectedTitle = document.createElement('div');
+        selectedTitle.className = 'modal-section-title';
+        selectedTitle.textContent = getUserLanguage() === 'it' ?
+            'Scelte da te' :
+            'Chosen by you';
+        body.appendChild(selectedTitle);
 
         selectedCategories.forEach(category => {
-            const categoryItem = document.createElement('div');
-            categoryItem.style.fontSize = '1.6rem';
-            categoryItem.style.fontWeight = 'bold';
-            categoryItem.style.padding = '10px 20px';
-            categoryItem.style.backgroundColor = 'rgba(76, 175, 80, 0.6)'; // Green for selected
-            categoryItem.style.borderRadius = '8px';
-            categoryItem.style.display = 'flex';
-            categoryItem.style.alignItems = 'center';
-            categoryItem.style.justifyContent = 'center';
+            const item = document.createElement('div');
+            item.className = 'category-list-item selected-category';
 
-            // User icon
-            const userIcon = document.createElement('span');
-            userIcon.innerHTML = '👤 ';
-            userIcon.style.marginRight = '10px';
-            categoryItem.appendChild(userIcon);
+            const icon = document.createElement('span');
+            icon.className = 'category-icon';
+            icon.innerHTML = '👤';
 
-            // Category name
-            const catName = document.createElement('span');
-            catName.textContent = getGameTranslation('categories', category) || category;
-            categoryItem.appendChild(catName);
+            const text = document.createElement('span');
+            text.textContent = getGameTranslation('categories', category) || category;
 
-            selectedList.appendChild(categoryItem);
+            item.appendChild(icon);
+            item.appendChild(text);
+            body.appendChild(item);
         });
 
         // Random categories section
-        const randomTitle = document.createElement('h3');
-        randomTitle.style.fontSize = '1.3rem';
-        randomTitle.style.marginTop = '10px';
-        randomTitle.style.marginBottom = '15px';
+        const randomTitle = document.createElement('div');
+        randomTitle.className = 'modal-section-title';
         randomTitle.textContent = getUserLanguage() === 'it' ?
-            'Categorie Aggiunte dal Gioco:' :
-            'Categories Added by the Game:';
-
-        // Random categories list
-        const randomList = document.createElement('div');
-        randomList.style.display = 'flex';
-        randomList.style.flexDirection = 'column';
-        randomList.style.gap = '10px';
-        randomList.style.marginBottom = '40px';
+            'Dalla sorte' :
+            'From luck';
+        body.appendChild(randomTitle);
 
         randomCategories.forEach(category => {
-            const categoryItem = document.createElement('div');
-            categoryItem.style.fontSize = '1.6rem';
-            categoryItem.style.fontWeight = 'bold';
-            categoryItem.style.padding = '10px 20px';
-            categoryItem.style.backgroundColor = 'rgba(138, 80, 143, 0.6)'; // Purple for random
-            categoryItem.style.borderRadius = '8px';
-            categoryItem.style.display = 'flex';
-            categoryItem.style.alignItems = 'center';
-            categoryItem.style.justifyContent = 'center';
+            const item = document.createElement('div');
+            item.className = 'category-list-item random-category';
 
-            // Random icon
-            const randomIcon = document.createElement('span');
-            randomIcon.innerHTML = '🎲 ';
-            randomIcon.style.marginRight = '10px';
-            categoryItem.appendChild(randomIcon);
+            const icon = document.createElement('span');
+            icon.className = 'category-icon';
+            icon.innerHTML = '🎲';
 
-            // Category name
-            const catName = document.createElement('span');
-            catName.textContent = getGameTranslation('categories', category) || category;
-            categoryItem.appendChild(catName);
+            const text = document.createElement('span');
+            text.textContent = getGameTranslation('categories', category) || category;
 
-            randomList.appendChild(categoryItem);
+            item.appendChild(icon);
+            item.appendChild(text);
+            body.appendChild(item);
         });
 
-        // Continue button
+        modalContent.appendChild(body);
+
+        // Footer
+        const footer = document.createElement('div');
+        footer.className = 'modal-footer';
+
         const continueBtn = document.createElement('button');
         continueBtn.className = 'primary-button';
-        continueBtn.style.padding = '15px 30px';
-        continueBtn.style.fontSize = '1.2rem';
-        continueBtn.style.margin = '0 auto';
-        continueBtn.style.display = 'block';
+        continueBtn.style.width = '100%';
+        continueBtn.style.margin = '0';
         continueBtn.textContent = getUserLanguage() === 'it' ? 'Continua' : 'Continue';
 
-        // Add all elements to the container
-        container.appendChild(title);
-        container.appendChild(selectedTitle);
-        container.appendChild(selectedList);
-        container.appendChild(randomTitle);
-        container.appendChild(randomList);
-        container.appendChild(continueBtn);
-        overlay.appendChild(container);
-
-        // Append to body
-        document.body.appendChild(overlay);
-
-        // Add event listener to continue button
         continueBtn.addEventListener('click', function () {
-            // Remove the overlay
-            document.body.removeChild(overlay);
+            // Restore scrolling
+            document.body.style.overflow = '';
 
-            // Continue with the game flow
-            continueAfterCategorySelection();
+            // Fade out animation
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                if (document.body.contains(overlay)) {
+                    document.body.removeChild(overlay);
+                }
+                continueAfterCategorySelection();
+            }, 300);
         });
+
+        footer.appendChild(continueBtn);
+        modalContent.appendChild(footer);
+
+        overlay.appendChild(modalContent);
+        document.body.appendChild(overlay);
     }
 
     // Continue after category selection and random categories shown
@@ -1147,157 +1108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Make sure we have a valid question before proceeding
-        const question = getRandomQuestion();
-        if (!question) {
-            console.error("No question found for category:", gameState.currentCategory, "difficulty:", gameState.currentDifficulty);
-
-            // Try to find another difficulty that has questions for this category
-            if (gameState.questions && gameState.currentCategory && gameState.questions[gameState.currentCategory]) {
-                const availableDifficulties = Object.keys(gameState.questions[gameState.currentCategory])
-                    .filter(diff => gameState.questions[gameState.currentCategory][diff] &&
-                        gameState.questions[gameState.currentCategory][diff].length > 0);
-
-                if (availableDifficulties.length > 0) {
-                    gameState.currentDifficulty = availableDifficulties[0];
-                    console.log("Trying alternative difficulty:", gameState.currentDifficulty);
-
-                    // Try again with new difficulty
-                    const newQuestion = getRandomQuestion();
-                    if (newQuestion) {
-                        gameState.currentQuestion = newQuestion;
-                        console.log("Found question with alternative difficulty");
-                    } else {
-                        // Still no questions - display error and go back
-                        alert('Error: No questions available for this category and difficulty.');
-                        gameState.isShockRound = false; // Reset shock round flag
-                        showScreen(screens.gameRound); // Go back to game round screen
-                        return;
-                    }
-                } else {
-                    // No difficulties with questions for this category
-                    alert('Error: No questions available for this category.');
-                    gameState.isShockRound = false; // Reset shock round flag
-                    showScreen(screens.gameRound); // Go back to game round screen
-                    return;
-                }
-            } else {
-                // Invalid category or no difficulties
-                alert('Error: Invalid category or no difficulties available.');
-                gameState.isShockRound = false; // Reset shock round flag
-                showScreen(screens.gameRound); // Go back to game round screen
-                return;
-            }
-        } else {
-            gameState.currentQuestion = question;
-        }
-
-        // Update question display
-        const currentCategoryEl = document.getElementById('current-category');
-        const currentDifficultyEl = document.getElementById('current-difficulty');
-        const questionTextEl = document.getElementById('question-text');
-
-        if (currentCategoryEl) {
-            currentCategoryEl.textContent = getGameTranslation('categories', gameState.currentCategory) || gameState.currentCategory;
-        }
-
-        if (currentDifficultyEl) {
-            currentDifficultyEl.textContent = getGameTranslation(gameState.currentDifficulty);
-        }
-
-        if (questionTextEl) {
-            questionTextEl.textContent = gameState.currentQuestion.question;
-        }
-
-        // Remove any existing bambino warning
-        const existingWarning = document.getElementById('bambino-game-warning');
-        if (existingWarning) {
-            existingWarning.remove();
-        }
-
-        // Generate answer buttons
-        const answerButtonsContainer = document.getElementById('answer-buttons');
-        if (!answerButtonsContainer) {
-            console.error("Cannot find answer buttons container");
-            return;
-        }
-
-        answerButtonsContainer.innerHTML = '';
-
-        const letters = ['A', 'B', 'C', 'D'];
-
-        // Add difficulty warning if bambino
-        if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
-            const warningDiv = document.createElement('div');
-            warningDiv.id = 'bambino-game-warning';
-            warningDiv.style.color = 'red';
-            warningDiv.style.fontWeight = 'bold';
-            warningDiv.style.marginBottom = '10px';
-
-            // Use direct text based on language instead of translation key
-            const lang = getUserLanguage();
-            warningDiv.textContent = '⚠️ ' + (lang === 'it' ?
-                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' :
-                'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
-
-            if (answerButtonsContainer.parentNode) {
-                answerButtonsContainer.parentNode.insertBefore(warningDiv, answerButtonsContainer);
-            }
-        }
-
-        // Add shock round penalty warning
-        const shockWarningDiv = document.createElement('div');
-        shockWarningDiv.id = 'shock-warning';
-        shockWarningDiv.style.color = 'red';
-        shockWarningDiv.style.fontWeight = 'bold';
-        shockWarningDiv.style.marginBottom = '10px';
-        shockWarningDiv.style.textAlign = 'center';
-        shockWarningDiv.style.padding = '5px';
-        shockWarningDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
-        shockWarningDiv.style.borderRadius = '5px';
-
-        shockWarningDiv.textContent = getUserLanguage() === 'it' ?
-            '⚠️ TURNO SHOCK: Risposta sbagliata = Salti il prossimo turno!' :
-            '⚠️ SHOCK ROUND: Wrong answer = Skip your next turn!';
-
-        if (answerButtonsContainer.parentNode) {
-            answerButtonsContainer.parentNode.insertBefore(shockWarningDiv, answerButtonsContainer);
-        }
-
-        gameState.currentQuestion.answers.forEach((answer, index) => {
-            const button = document.createElement('button');
-            button.className = 'answer-btn';
-            button.dataset.index = index;
-
-            const letter = document.createElement('span');
-            letter.className = 'answer-letter';
-            letter.textContent = letters[index];
-
-            const text = document.createElement('span');
-            text.className = 'answer-text';
-            text.textContent = answer;
-
-            button.appendChild(letter);
-            button.appendChild(text);
-
-            button.addEventListener('click', function () {
-                handleAnswer(index);
-            });
-
-            answerButtonsContainer.appendChild(button);
-        });
-
-        // Add shock styling to timer
-        const timerContainer = document.querySelector('.timer-container');
-        if (timerContainer) {
-            timerContainer.classList.add('shock');
-        }
-
-        // Start the timer
-        startTimer();
-
-        // Show question screen
-        showScreen(screens.question);
+        // Use standard showQuestion function instead of duplicating logic
+        showQuestion();
     }
 
     // Helper function to get a random subset of an array
@@ -1598,14 +1410,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // If we found a fallback, proceed to display it
             }
 
-            // Ensure we have a question before displaying
-            if (gameState.currentQuestion) {
-                displayQuestion(gameState.currentQuestion);
-            } else {
-                // Should be unreachable if logic above works, but safety net
-                forceNextTurn();
-            }
-
+            // Set the current question
             gameState.currentQuestion = question;
 
             // Display standard question
@@ -1616,19 +1421,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function displayQuestion(question) {
+        // Set state
         gameState.currentQuestion = question;
+
         const questionText = document.getElementById('question-text');
         const answerButtons = document.getElementById('answer-buttons');
 
+        // Clear previous buttons [CRITICAL FIX]
+        answerButtons.innerHTML = '';
+
         questionText.textContent = question.question;
 
+        // Shuffle answers for standard questions
+        // For AI questions, they are already shuffled, but shuffling again doesn't hurt
+        // (as long as we update correctIndex)
+
+        // Create an array of answer objects to track the correct one
+        const answerObjects = question.answers.map((text, index) => {
+            return {
+                text: text,
+                isCorrect: index === question.correctIndex
+            };
+        });
+
+        // Shuffle the answer objects
+        // Use Fisher-Yates shuffle directly here to avoid dependency on global shuffleArray helper if it changes
+        for (let i = answerObjects.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [answerObjects[i], answerObjects[j]] = [answerObjects[j], answerObjects[i]];
+        }
+
+        // Update correctIndex to match new position
+        const newCorrectIndex = answerObjects.findIndex(a => a.isCorrect);
+        question.correctIndex = newCorrectIndex;
+
+        // Update the answers array in the question object object
+        // NOTE: This modifies the object in the questions array, which is fine as 
+        // questions shouldn't be reused in the same session without reload
+        question.answers = answerObjects.map(a => a.text);
+
+        const letters = ['A', 'B', 'C', 'D'];
+
         question.answers.forEach((answer, index) => {
-            const button = document.createElement('div');
+            const button = document.createElement('button');
             button.className = 'answer-btn';
 
             const letterSpan = document.createElement('span');
             letterSpan.className = 'answer-letter';
-            letterSpan.textContent = String.fromCharCode(65 + index);
+            letterSpan.textContent = letters[index] || String.fromCharCode(65 + index); // Fallback if >4 answers
 
             const textSpan = document.createElement('span');
             textSpan.className = 'answer-text';
@@ -1773,76 +1613,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Generate answer buttons for the question
-    function generateAnswerButtons(question) {
-        const container = document.getElementById('answer-buttons');
-        container.innerHTML = '';
-
-        const letters = ['A', 'B', 'C', 'D'];
-
-        // Add difficulty warning if bambino
-        if (gameState.currentDifficulty === 'bambino' && !document.getElementById('bambino-game-warning')) {
-            const warningDiv = document.createElement('div');
-            warningDiv.id = 'bambino-game-warning';
-            warningDiv.style.color = 'red';
-            warningDiv.style.fontWeight = 'bold';
-            warningDiv.style.marginBottom = '10px';
-
-            // Use direct text based on language instead of translation key
-            const lang = getUserLanguage();
-            warningDiv.textContent = '⚠️ ' + (lang === 'it' ?
-                'Modalità bambino: 5 secondi per rispondere! Risposta sbagliata: -2 punti!' :
-                'Child mode: 5 seconds to answer! Wrong answer: -2 points!');
-
-            container.parentNode.insertBefore(warningDiv, container);
-        }
-
-        // Create an array of answer objects with their original indexes
-        const answerObjects = question.answers.map((answer, index) => {
-            return {
-                text: answer,
-                isCorrect: index === question.correctIndex
-            };
-        });
-
-        // Shuffle the answers
-        const shuffledAnswers = shuffleArray([...answerObjects]);
-
-        // Update the current question's correct index
-        let newCorrectIndex = -1;
-
-        // Generate the answer buttons with the shuffled answers
-        shuffledAnswers.forEach((answer, index) => {
-            // Track the new index of the correct answer
-            if (answer.isCorrect) {
-                newCorrectIndex = index;
-            }
-
-            const button = document.createElement('button');
-            button.className = 'answer-btn';
-            button.dataset.index = index;
-
-            const letter = document.createElement('span');
-            letter.className = 'answer-letter';
-            letter.textContent = letters[index];
-
-            const text = document.createElement('span');
-            text.className = 'answer-text';
-            text.textContent = answer.text;
-
-            button.appendChild(letter);
-            button.appendChild(text);
-
-            button.addEventListener('click', function () {
-                handleAnswer(index);
-            });
-
-            container.appendChild(button);
-        });
-
-        // Update the correct index in the current question
-        gameState.currentQuestion.correctIndex = newCorrectIndex;
-    }
+    // Helper function to shuffle an array (moved up) is not needed here as we implemented shuffle inline in displayQuestion
+    // generateAnswerButtons function removed as it was unused and duplicate
 
     // Helper function to shuffle an array
     function shuffleArray(array) {
