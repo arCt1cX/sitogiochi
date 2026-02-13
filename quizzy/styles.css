@@ -1,6 +1,6 @@
 /* Quizzy Game Styles */
 html {
-    background-color: #000000;
+    background-color: #1a2a6c;
 }
 
 * {
@@ -19,8 +19,8 @@ body {
     color: #fff;
     line-height: 1.6;
     padding: 1rem;
-    padding-top: calc(1rem + env(safe-area-inset-top));
     text-align: center;
+
 }
 
 @keyframes pageFadeIn {
@@ -1069,8 +1069,6 @@ select:focus {
     opacity: 0;
     animation: fadeIn 0.3s forwards;
     backdrop-filter: blur(5px);
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .modal-content {
