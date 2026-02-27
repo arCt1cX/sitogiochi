@@ -45,8 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
         startingPlayer: 1,
         startingPlayer: 1,
         allWordPairs: [],
+        shuffledPairs: [],
+        shuffleIndex: 0,
         playerNames: []
     };
+
+    // Fisher-Yates shuffle
+    function shuffleArray(array) {
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    // Get next word pair without repeats
+    function getNextWordPair() {
+        if (gameState.shuffledPairs.length === 0 || gameState.shuffleIndex >= gameState.shuffledPairs.length) {
+            gameState.shuffledPairs = shuffleArray(gameState.allWordPairs);
+            gameState.shuffleIndex = 0;
+        }
+        const pair = gameState.shuffledPairs[gameState.shuffleIndex];
+        gameState.shuffleIndex++;
+        return pair;
+    }
 
     const playerNamesContainer = document.getElementById('player-names-container');
 
@@ -169,9 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gameState.undercoverIndex = -1;
         }
 
-        // Select a random word pair
-        const randomPairIndex = Math.floor(Math.random() * gameState.allWordPairs.length);
-        const selectedPair = gameState.allWordPairs[randomPairIndex];
+        // Select the next word pair (no repeats until all used)
+        const selectedPair = getNextWordPair();
         gameState.civilWord = selectedPair.civilWord;
         gameState.undercoverWord = selectedPair.undercoverWord;
         gameState.theme = selectedPair.theme || '';

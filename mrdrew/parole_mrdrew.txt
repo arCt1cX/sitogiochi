@@ -250,18 +250,13 @@ Mano|Piede|Corpo umano
 Occhio|Orecchio|Corpo umano
 Naso|Bocca|Corpo umano
 Gomito|Ginocchio|Corpo umano
-Pioggia|Neve|Meteo e fenomeni atmosferici
-Tuono|Lampo|Meteo e fenomeni atmosferici
-Uragano|Tornado|Meteo e fenomeni atmosferici
-Nebbia|Grandine|Meteo e fenomeni atmosferici
-Arcobaleno|Aurora Boreale|Meteo e fenomeni atmosferici
 Oro|Argento|Pietre preziose e metalli
 Diamante|Rubino|Pietre preziose e metalli
 Smeraldo|Zaffiro|Pietre preziose e metalli
+Rubino|Diamante|Pietre preziose e metalli
 Bronzo|Rame|Pietre preziose e metalli
 Perla|Corallo|Pietre preziose e metalli
 Pesca|Caccia|Hobby e passatempi
-Giardinaggio|Fai da te|Hobby e passatempi
 Fotografia|Pittura|Hobby e passatempi
 Cucito|Uncinetto|Hobby e passatempi
 Scrittura|Lettura|Hobby e passatempi
@@ -275,18 +270,8 @@ Vodka|Gin|Bevande alcoliche
 Tequila|Mezcal|Bevande alcoliche
 Champagne|Prosecco|Bevande alcoliche
 Spritz|Mojito|Bevande alcoliche
-Rosa|Tulipano|Fiori
-Girasole|Margherita|Fiori
-Orchidea|Giglio|Fiori
-Viola|Mimosa|Fiori
-Papavero|Lavanda|Fiori
-Mouse|Tastiera|Accessori Tech
-Stampante|Scanner|Accessori Tech
-Hard Disk|Chiavetta USB|Accessori Tech
-Router|Modem|Accessori Tech
-Monitor|Proiettore|Accessori Tech
-Ambulanza|Auto della Polizia|Mezzi di soccorso
-Camion dei Pompieri|Elicottero di salvataggio|Mezzi di soccorso
+Ambulanza|Auto della Polizia|Mezzi
+Camion dei Pompieri|Elicottero di salvataggio|Mezzi
 Napoleone|Giulio Cesare|Personaggi Storici
 Einstein|Newton|Personaggi Storici
 Leonardo da Vinci|Michelangelo|Personaggi Storici
@@ -298,3 +283,91 @@ Pippo|Pluto|Cartoni Animati
 Homer|Marge|Cartoni Animati
 SpongeBob|Patrick|Cartoni Animati
 Bugs Bunny|Daffy Duck|Cartoni Animati
+Coccodrillo|lucertola|Animali e natura
+Fenicottero|Pellicano|Animali e natura
+Koala|Canguro|Animali e natura
+Tartaruga|Lumaca|Animali e natura
+Polpo|Calamaro|Animali e natura
+Medusa|Stella marina|Animali e natura
+Cammello|Dromedario|Animali e natura
+Iguana|Camaleonte|Animali e natura
+Giraffa|Struzzo|Animali e natura
+Pipistrello|Corvo|Animali e natura
+Lasagna|Cannelloni|Cibo e bevande
+Gnocchi|Ravioli|Cibo e bevande
+Patatine|Popcorn|Cibo e bevande
+Nutella|Marmellata|Cibo e bevande
+Cornetto|Brioche|Cibo e bevande
+Tramezzino|Panino|Cibo e bevande
+Aceto|Olio|Cibo e bevande
+Zucchero|Miele|Cibo e bevande
+Sale|Pepe|Cibo e bevande
+Limone|Arancia|Cibo e bevande
+New York|Los Angeles|Mondo e luoghi
+Berlino|Vienna|Mondo e luoghi
+Napoli|Palermo|Mondo e luoghi
+Venezia|Firenze|Mondo e luoghi
+Egitto|Grecia|Mondo e luoghi
+Vulcano|Terremoto|Meteo e fenomeni atmosferici
+Maremoto|Valanga|Meteo e fenomeni atmosferici
+Ghiacciaio|Deserto|Animali e natura
+Oasi|Cascata|Animali e natura
+Isola|Penisola|Mondo e luoghi
+Pittore|Scultore|Lavori e mestieri
+Pilota|Capitano|Lavori e mestieri
+Maestro|Professore|Lavori e mestieri
+Contadino|Pastore|Lavori e mestieri
+Giornalista|Scrittore|Lavori e mestieri
+Piramide|Colosseo|Monumenti e luoghi famosi
+Torre Eiffel|Big Ben|Monumenti e luoghi famosi
+Statua della Libertà|Cristo Redentore|Monumenti e luoghi famosi
+Muraglia Cinese|Machu Picchu|Monumenti e luoghi famosi
+Stonehenge|Partenone|Monumenti e luoghi famosi
+Harry Potter|Gandalf|Personaggi di storie e racconti
+Sherlock Holmes|James Bond|Personaggi di storie e racconti
+Dracula|Frankenstein|Personaggi di storie e racconti
+Peter Pan|Robin Hood|Personaggi di storie e racconti
+Cenerentola|Biancaneve|Personaggi di storie e racconti
+Ferro da stiro|Asse da stiro|Elettrodomestici
+Tostapane|Bollitore|Elettrodomestici
+Frullatore|Centrifuga|Elettrodomestici
+Spalla|Anca|Corpo umano
+Polso|Caviglia|Corpo umano
+Dito|Pollice|Corpo umano
+Costola|Vertebra|Corpo umano
+Lingua|Palato|Corpo umano
+Sopracciglio|Ciglio|Corpo umano
+Polmone|Fegato|Corpo umano
+Stomaco|Intestino|Corpo umano
+Fronte|Mento|Corpo umano
+Unghia|Callo|Corpo umano
+Cappuccetto Rosso|Hansel e Gretel|Personaggi di storie e racconti
+Pinocchio|Geppetto|Personaggi di storie e racconti
+Alice (nel Paese delle Meraviglie)|Dorothy (Il Mago di Oz)|Personaggi di storie e racconti
+Aladdin|Sinbad|Personaggi di storie e racconti
+Zorro|D'Artagnan|Personaggi di storie e racconti
+Tarzan|Mowgli|Personaggi di storie e racconti
+Rapunzel|Raperonzolo|Personaggi di storie e racconti
+Romeo|Giulietta|Personaggi di storie e racconti
+Odisseo|Achille|Personaggi di storie e racconti
+Shrek|Fiona|Personaggi di storie e racconti
+Carbonara|Amatriciana|Cibo e bevande
+Pesto|Ragù|Cibo e bevande
+Fragola|Lampone|Cibo e bevande
+Noce|Mandorla|Cibo e bevande
+Oliva|Cappero|Cibo e bevande
+Wrestling|Scherma|Sport
+Pattinaggio|Ginnastica artistica|Sport
+Dentista|Oculista|Lavori e mestieri
+Panettiere|Pasticcere|Lavori e mestieri
+Farmacista|Veterinario|Lavori e mestieri
+Fotografo|Videomaker|Lavori e mestieri
+Autunno|Inverno|Tempo e stagioni
+Tramonto|Alba|Tempo e stagioni
+Arpa|Fisarmonica|Musica
+Ukulele|Banjo|Musica
+Sydney|Melbourne|Mondo e luoghi
+Barcellona|Madrid|Mondo e luoghi
+Dubai|Abu Dhabi|Mondo e luoghi
+Amsterdam|Bruxelles|Mondo e luoghi
+Surf|Windsurf|Sport
