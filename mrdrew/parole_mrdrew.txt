@@ -371,3 +371,78 @@ Barcellona|Madrid|Mondo e luoghi
 Dubai|Abu Dhabi|Mondo e luoghi
 Amsterdam|Bruxelles|Mondo e luoghi
 Surf|Windsurf|Sport
+Melanzana|Zucchina|Cibo e bevande
+Salmone|Tonno|Cibo e bevande
+Panettone|Pandoro|Cibo e bevande
+Castoro|Lontra|Animali e natura
+Cigno|Gabbiano|Animali e natura
+Ippopotamo|Zebra|Animali e natura
+Lisbona|Porto|Mondo e luoghi
+Microsoft|Sony|Marche famose
+Gucci|Prada|Marche famose
+Sottomarino|Aliscafo|Trasporti
+Fumetto|Manga|Intrattenimento
+Stampante|Scanner|Spazio e tecnologia
+Mouse|Tastiera|Spazio e tecnologia
+Gonna|Vestito|Moda e abbigliamento
+Stivali|Sneakers|Moda e abbigliamento
+Tappeto|Zerbino|Arredamento e parti della casa
+Tenda|Persiana|Arredamento e parti della casa
+Ciclope|Minotauro|Fantasia e creature mitologiche
+Folletto|Gnomo|Fantasia e creature mitologiche
+Re Artù|Merlino|Personaggi di storie e racconti
+Ercole|Teseo|Personaggi di storie e racconti
+Documentario|Telegiornale|Film e TV
+Uno|Scopa|Giochi da tavolo e videogiochi
+Briscola|Tressette|Giochi da tavolo e videogiochi
+Alessandro Magno|Spartaco|Personaggi Storici
+Massaggio|Sauna|Corpo e salute
+Aeroporto|Stazione|Servizi e luoghi
+Festa del papà|Festa dei nonni|Festività e celebrazioni
+Epifania|Festa della Repubblica|Festività e celebrazioni
+Arancione|Pesca|Colori
+Turchese|Indaco|Colori
+Muratore|Falegname|Lavori e mestieri
+Fabbro|Vetraio|Lavori e mestieri
+Lavastoviglie|Robot da cucina|Elettrodomestici
+Pettine|Spazzola|Igiene personale
+Informatica|Programmazione|Materie scolastiche e universitarie
+Biliardo|Freccette|Hobby e passatempi
+Collo|Nuca|Corpo umano
+Platino|Titanio|Pietre preziose e metalli
+Giardinaggio|Bricolage|Hobby e passatempi
+Camino|Stufa|Arredamento e parti della casa
+Zuppa|Minestrone|Cibo e bevande
+Bistecca|Arrosto|Cibo e bevande
+Polenta|Cous cous|Cibo e bevande
+Coriandolo|Prezzemolo|Cibo e bevande
+Mosca|Bucarest|Mondo e luoghi
+Atene|Istanbul|Mondo e luoghi
+Ferrero|Barilla|Marche famose
+Chanel|Dior|Marche famose
+Salto in alto|Salto in lungo|Sport
+Equitazione|Polo|Sport
+Monopattino|Hoverboard|Trasporti
+Radio|Stereo|Spazio e tecnologia
+Maglione|Felpa|Moda e abbigliamento
+Camicetta|Canottiera|Moda e abbigliamento
+Centauro|Satiro|Fantasia e creature mitologiche
+Orco|Troll|Fantasia e creature mitologiche
+Gatto con gli stivali|Brutto anatroccolo|Personaggi di storie e racconti
+Campanellino|Capitan Uncino|Personaggi di storie e racconti
+Jenga|Domino|Giochi da tavolo e videogiochi
+Flipper|Biliardino|Giochi da tavolo e videogiochi
+Dante Alighieri|Boccaccio|Personaggi Storici
+Garibaldi|Cavour|Personaggi Storici
+Terme|Spa|Corpo e salute
+Parrucchiere|Estetista|Servizi e luoghi
+Municipio|Tribunale|Servizi e luoghi
+Macellaio|Pescivendolo|Lavori e mestieri
+Sarto|Calzolaio|Lavori e mestieri
+Geometria|Algebra|Materie scolastiche e universitarie
+Astronomia|Scienze della Terra|Materie scolastiche e universitarie
+Cruciverba|Sudoku|Hobby e passatempi
+Polpaccio|Coscia|Corpo umano
+Grandine|Neve|Meteo e fenomeni atmosferici
+Torre di Pisa|Pantheon|Monumenti e luoghi famosi
+Ghiacciolo|Granita|Dolci e dessert
