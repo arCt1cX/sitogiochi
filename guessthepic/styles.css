@@ -553,6 +553,41 @@ button:active {
     }
 }
 
+/* Mobile: keep the image visible while the on-screen keyboard is open.
+   Shrink the image and hide non-essential controls so the picture stays
+   in view right above the answer field (vital for the reveal modes). */
+@media (max-width: 900px) {
+    body.keyboard-open .image-container {
+        height: 200px;
+        margin-bottom: 8px;
+    }
+
+    body.keyboard-open .navigation-controls,
+    body.keyboard-open .indicator-circles,
+    body.keyboard-open #feedback {
+        display: none;
+    }
+
+    body.keyboard-open .game-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+        margin-bottom: 8px;
+    }
+
+    body.keyboard-open .game-header .score,
+    body.keyboard-open .game-header .progress,
+    body.keyboard-open .game-header .current-player,
+    body.keyboard-open .game-header .timer {
+        margin-bottom: 0;
+    }
+
+    body.keyboard-open .category-display {
+        margin-bottom: 8px;
+    }
+}
+
 /* Sound indicator */
 .sound-controls {
     position: absolute;

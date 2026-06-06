@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const OBSCURE_ROWS = 6;
     // Obscure mode has its own tile-reveal pacing (independent of the pixel curve)
     const OBSCURE_HOLD_MS = 4000; // keep just the first tile for this long
-    const OBSCURE_CURVE = 1.3;    // tile ramp after the hold: ~1 = even, higher = more back-loaded
+    const OBSCURE_CURVE = 1.8;    // tile ramp after the hold: ~1 = even, higher = more back-loaded
 
     // True for the time-based reveal modes
     function isPointsMode() {
@@ -240,6 +240,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 guessInput.focus();
             }
         }
+    });
+
+    // Mobile: when the answer field is focused the on-screen keyboard can push the
+    // image off-screen. Compact the layout and keep the image in view while typing.
+    guessInput.addEventListener('focus', function () {
+        document.body.classList.add('keyboard-open');
+        // Wait for the keyboard animation, then bring the image back into view
+        setTimeout(function () {
+            const media = document.querySelector('.image-container');
+            if (media && typeof media.scrollIntoView === 'function') {
+                media.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    });
+    guessInput.addEventListener('blur', function () {
+        document.body.classList.remove('keyboard-open');
     });
 
     // Initialize the game
