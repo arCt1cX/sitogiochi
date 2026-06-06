@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let categorySelectingPlayerIndex = 0; // Index of player currently selecting categories
 
     // Reveal state (pixel / obscure modes)
-    const REVEAL_MS = 19000;   // time for an image to go from fully hidden to fully revealed (full at 5s remaining)
-    const REVEAL_CURVE = 1.5;  // ease-in exponent: gentle, gradual reveal (higher = slower start / faster finish)
-    const GRACE_MS = 5000;     // extra answerable time once fully revealed
+    const REVEAL_MS = 24000;   // time for an image to go from fully hidden to fully revealed (full only at the very end)
+    const REVEAL_CURVE = 3.0;  // ease-in exponent: stays hidden/pixelated longer, clears in the final seconds
+    const GRACE_MS = 0;        // image reaches full reveal right as the countdown ends
     const IMAGE_TOTAL_MS = REVEAL_MS + GRACE_MS; // total window per image
     let revealRaf = null;          // requestAnimationFrame handle
     let revealStartTime = 0;       // timestamp when current image reveal started
