@@ -223,23 +223,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle Enter key press
-    guessInput.addEventListener('keyup', function (e) {
-        if (e.key === 'Enter' && !submitButton.disabled) {
-            // Only check answer if the submit button is not disabled
-            // and there's text in the input
-            if (guessInput.value.trim() !== '') {
+    // Submit on Enter. Use keydown (+ keyCode fallback) for reliable mobile keyboard
+    // support, and preventDefault so the keypress can't clear/blur the field.
+    // checkAnswer() handles the empty-input case itself.
+    guessInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            e.preventDefault();
+            if (!submitButton.disabled) {
                 checkAnswer();
-            } else {
-                // Show message requiring input
-                const isItalian = getLanguage();
-                feedbackDiv.textContent = isItalian ?
-                    "Inserisci una risposta prima di inviare!" :
-                    "Enter an answer before submitting!";
-                feedbackDiv.className = "feedback incorrect";
-                feedbackDiv.classList.remove("hidden");
-                guessInput.focus();
             }
         }
+    });
+
+    // Keep the on-screen keyboard open when tapping "Invia": preventing the button's
+    // default mousedown stops it from stealing focus from the input, so the player can
+    // fire several guesses in a row without the keyboard closing.
+    submitButton.addEventListener('mousedown', function (e) {
+        e.preventDefault();
     });
 
     // Mobile: when the answer field is focused the on-screen keyboard can push the
