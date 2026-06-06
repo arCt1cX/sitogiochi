@@ -21,10 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextImageButton = document.getElementById('next-image');
     const startPlayerTurnButton = document.getElementById('start-player-turn');
 
-    // Mode selection elements
-    const modeClassicButton = document.getElementById('mode-classic');
-    const modeCategoriesButton = document.getElementById('mode-categories');
-    const modeDescriptionElement = document.getElementById('mode-description');
+    // Category source selection elements
+    const catRandomButton = document.getElementById('cat-random');
+    const catChosenButton = document.getElementById('cat-chosen');
+    const catDescriptionElement = document.getElementById('cat-description');
+
+    // Gameplay mode selection elements
+    const playClassicButton = document.getElementById('play-classic');
+    const playPixelButton = document.getElementById('play-pixel');
+    const playObscureButton = document.getElementById('play-obscure');
+    const playDescriptionElement = document.getElementById('play-description');
+
+    // Reveal canvas (pixel / obscure modes)
+    const revealCanvas = document.getElementById('reveal-canvas');
+    const scoreSuffixElement = document.getElementById('score-suffix');
 
     // Category selection elements
     const categorySelectionTitle = document.getElementById('category-selection-title');
@@ -64,10 +74,30 @@ document.addEventListener('DOMContentLoaded', function () {
     let questionStatuses = []; // Array to track the status of each image: null, 'correct', 'incorrect', or 'pending'
 
     // Game mode state
-    let gameMode = 'classic'; // 'classic' or 'categories'
-    let playerCategories = []; // Array to store each player's selected categories (for 'categories' mode)
+    let categoryMode = 'random'; // 'random' or 'chosen' (how categories are picked)
+    let playMode = 'classic';    // 'classic', 'pixel' or 'obscure' (how images are revealed)
+    let playerCategories = []; // Array to store each player's selected categories (for 'chosen' mode)
     let currentCategorySelection = []; // Temporary storage for current player's category selection
     let categorySelectingPlayerIndex = 0; // Index of player currently selecting categories
+
+    // Reveal state (pixel / obscure modes)
+    const REVEAL_MS = 20000;   // time for an image to go from fully hidden to fully revealed
+    const REVEAL_CURVE = 2.6;  // ease-in exponent: higher = stays hidden longer, reveals near the end
+    const GRACE_MS = 4000;     // extra answerable time once fully revealed
+    const IMAGE_TOTAL_MS = REVEAL_MS + GRACE_MS; // total window per image
+    let revealRaf = null;          // requestAnimationFrame handle
+    let revealStartTime = 0;       // timestamp when current image reveal started
+    let imageCountdownInterval = null; // per-image countdown display
+    let revealImg = null;          // loaded Image object for the current question
+    let revealOrder = [];          // shuffled tile order for obscure mode
+    let imageResolved = false;     // whether current image was answered/timed-out
+    const OBSCURE_COLS = 8;
+    const OBSCURE_ROWS = 6;
+
+    // True for the time-based reveal modes
+    function isPointsMode() {
+        return playMode === 'pixel' || playMode === 'obscure';
+    }
 
     // Sound effects (optional)
     const correctSound = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAqAABHnwAFBwkMDhATFRcaHB8hJCYpKy4wMzU4Ojs+QUNGSEtNUFJVV1pcX2FkZ2lsbnFzdnl7foGDhoiLjZCSlZeanZ+ipKeprK6xtLa5vL7BxMbJy87R09bY293g4uXn6uzu8fP2+fv+AAAATGF2YzU4LjU0AAAAAAAAAAAAAAAAJAXaAAAAAAAAR5+fSpwoAAAAAAAAAAAAAAAAAAD/+0DEAAP7uuzoYwkAJ3VNOt7Pg3B7QwdgAsK6WTEsxoiWpnrJmDNDIwRtCY+g8BBIiDtHcMjAcMTCYAwCAmDkNzBIBuVP/1QLJcHgBmBYDAQMwNhmAK10MCQCzAzAcGA4AIHBMLTJm0MFgBwYBGCAHA2DphR+kDgCwSAYwFAGDgdHYZ+k14qigAYJgJAQCAAHgKHgRB/+NUB4gFwUAIwHAcS+VQj9rn//1QygNB3C//tAxAcAEn7s8f5iAAp8ZqH/sOAFLVBJ0iNTTy1DIMzIJPLTO3/xAAJDqIvGp9C5wJeJh3+LuH/5EAKjABG2aLu69F3C7sTzAEOwHBUJUNw6gdF36t80QmDIcCCFWXDtF3dF3d4O4nGQXB4MXSKlRuIgouIl3+r/yrVbiyUMDBBwfJcFYuAGTjXqP/7NKtQw2d8qsP/7QMQDARKq0uz+HgCKGFXh/5hQCbgzOYuIcUWkBIKQh/KqgxarILDEoJiYUZSfJjTaZMYU1FMy45OS41VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=');
@@ -103,30 +133,58 @@ document.addEventListener('DOMContentLoaded', function () {
     playerCountSelect.addEventListener('change', updatePlayerInputs);
 
     // Mode selection event listeners
-    modeClassicButton.addEventListener('click', () => selectGameMode('classic'));
-    modeCategoriesButton.addEventListener('click', () => selectGameMode('categories'));
+    catRandomButton.addEventListener('click', () => selectCategoryMode('random'));
+    catChosenButton.addEventListener('click', () => selectCategoryMode('chosen'));
+    playClassicButton.addEventListener('click', () => selectPlayMode('classic'));
+    playPixelButton.addEventListener('click', () => selectPlayMode('pixel'));
+    playObscureButton.addEventListener('click', () => selectPlayMode('obscure'));
     confirmCategoriesButton.addEventListener('click', confirmCategorySelection);
 
     /**
-     * Select game mode (classic or categories)
+     * Select how categories are picked (random or chosen)
      */
-    function selectGameMode(mode) {
-        gameMode = mode;
+    function selectCategoryMode(mode) {
+        categoryMode = mode;
         const isItalian = getLanguage();
 
-        // Update button states
-        if (mode === 'classic') {
-            modeClassicButton.classList.add('selected');
-            modeCategoriesButton.classList.remove('selected');
-            modeDescriptionElement.textContent = isItalian ?
+        if (mode === 'random') {
+            catRandomButton.classList.add('selected');
+            catChosenButton.classList.remove('selected');
+            catDescriptionElement.textContent = isItalian ?
                 'Categorie casuali per tutti i giocatori' :
                 'Random categories for all players';
         } else {
-            modeClassicButton.classList.remove('selected');
-            modeCategoriesButton.classList.add('selected');
-            modeDescriptionElement.textContent = isItalian ?
+            catRandomButton.classList.remove('selected');
+            catChosenButton.classList.add('selected');
+            catDescriptionElement.textContent = isItalian ?
                 'Ogni giocatore sceglie le sue 5 categorie' :
                 'Each player chooses their 5 categories';
+        }
+    }
+
+    /**
+     * Select how images are revealed (classic, pixel or obscure)
+     */
+    function selectPlayMode(mode) {
+        playMode = mode;
+        const isItalian = getLanguage();
+
+        playClassicButton.classList.toggle('selected', mode === 'classic');
+        playPixelButton.classList.toggle('selected', mode === 'pixel');
+        playObscureButton.classList.toggle('selected', mode === 'obscure');
+
+        if (mode === 'classic') {
+            playDescriptionElement.textContent = isItalian ?
+                'Indovina l\'immagine completa, 60s per turno' :
+                'Guess the full image, 60s per turn';
+        } else if (mode === 'pixel') {
+            playDescriptionElement.textContent = isItalian ?
+                'L\'immagine si depixela: indovina presto per più punti!' :
+                'The image un-pixelates: guess early for more points!';
+        } else {
+            playDescriptionElement.textContent = isItalian ?
+                'L\'immagine si scopre a tasselli: indovina presto per più punti!' :
+                'The image is revealed tile by tile: guess early for more points!';
         }
     }
 
@@ -258,6 +316,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Open the player setup screen
      */
     function openPlayerSetup() {
+        stopReveal();
         startScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
         playerTransitionScreen.classList.add('hidden');
@@ -497,7 +556,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const player = {
                 name: playerName,
                 score: 0,
-                roundScores: [0, 0, 0] // Scores for each round
+                roundScores: [0, 0, 0], // Correct-image count for each round (classic)
+                roundPoints: [0, 0, 0]  // Points for each round (pixel / obscure)
             };
 
             players.push(player);
@@ -523,9 +583,9 @@ document.addEventListener('DOMContentLoaded', function () {
         playerRounds = []; // Reset player rounds
         currentRoundNumber = 1;
 
-        // Check game mode
-        if (gameMode === 'categories') {
-            // In categories mode, show category selection for each player first
+        // Check category source mode
+        if (categoryMode === 'chosen') {
+            // In chosen-categories mode, show category selection for each player first
             playerCategories = []; // Reset player categories
             categorySelectingPlayerIndex = 0;
             showCategorySelection(0);
@@ -725,8 +785,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reset question statuses for this player's turn
         questionStatuses = [null, null, null, null, null];
 
+        // Configure UI for the active play mode
+        applyPlayModeUI();
+
         // Reset UI
-        scoreElement.textContent = players[currentPlayerIndex].roundScores[currentRoundNumber - 1];
+        updateScoreDisplay();
         currentPlayerNameElement.textContent = players[currentPlayerIndex].name;
         currentQuestionIndex = 0;
 
@@ -742,14 +805,46 @@ document.addEventListener('DOMContentLoaded', function () {
         // Clear feedback
         feedbackDiv.classList.add('hidden');
 
-        // Start the timer
-        startTimer();
+        if (isPointsMode()) {
+            // Points modes use a per-image reveal timer instead of the shared 60s timer
+            updateCircleIndicators();
+            loadQuestion(false);
+        } else {
+            // Start the shared turn timer (classic)
+            startTimer();
+            updateCircleIndicators();
+            loadQuestion(false); // Don't restart timer as we just started it
+        }
+    }
 
-        // Update circle indicators
-        updateCircleIndicators();
+    /**
+     * Show/hide controls depending on the active play mode
+     */
+    function applyPlayModeUI() {
+        const points = isPointsMode();
+        // Free navigation only exists in classic mode
+        prevImageButton.style.display = points ? 'none' : '';
+        nextImageButton.style.display = points ? 'none' : '';
+        // Score is "/5" in classic, raw points otherwise
+        scoreSuffixElement.style.display = points ? 'none' : '';
+        // Swap the visible media element
+        if (points) {
+            gameImage.classList.add('hidden');
+            revealCanvas.classList.remove('hidden');
+        } else {
+            revealCanvas.classList.add('hidden');
+            gameImage.classList.remove('hidden');
+        }
+    }
 
-        // Load the first question
-        loadQuestion(false); // Don't restart timer as we just started it
+    /**
+     * Update the in-game score header for the current player/mode
+     */
+    function updateScoreDisplay() {
+        const player = players[currentPlayerIndex];
+        scoreElement.textContent = isPointsMode()
+            ? player.roundPoints[currentRoundNumber - 1]
+            : player.roundScores[currentRoundNumber - 1];
     }
 
     /**
@@ -762,8 +857,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get all categories that have items
         let validCategories = categories.filter(cat => cat.items && cat.items.length > 0);
 
-        // In 'categories' mode, filter to only use player's selected categories
-        if (gameMode === 'categories' && playerCategories[playerIndex] && playerCategories[playerIndex].length > 0) {
+        // In 'chosen' mode, filter to only use player's selected categories
+        if (categoryMode === 'chosen' && playerCategories[playerIndex] && playerCategories[playerIndex].length > 0) {
             const selectedCategoryNames = playerCategories[playerIndex];
             validCategories = validCategories.filter(cat => selectedCategoryNames.includes(cat.name));
             console.log(`Player ${playerIndex + 1} using selected categories:`, selectedCategoryNames);
@@ -945,6 +1040,12 @@ document.addEventListener('DOMContentLoaded', function () {
      * Check if the user's answer is correct
      */
     function checkAnswer() {
+        // Points modes (pixel / obscure) have their own answer flow
+        if (isPointsMode()) {
+            checkPointsAnswer();
+            return;
+        }
+
         // Get the current player's round items
         const currentPlayerRound = playerRounds[currentPlayerIndex];
 
@@ -1123,6 +1224,12 @@ document.addEventListener('DOMContentLoaded', function () {
      * Load the current question
      */
     async function loadQuestion(resetTimer = true) {
+        // Points modes have their own per-image reveal flow
+        if (isPointsMode()) {
+            loadPointsQuestion();
+            return;
+        }
+
         // If this is called with reset timer and we're in a new question, start the timer
         if (resetTimer) {
             startTimer();
@@ -1266,11 +1373,344 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // ===== Pixel / Obscure (points) mode =====
+
+    // Offscreen canvas reused for downscaling in pixel mode
+    const tmpCanvas = document.createElement('canvas');
+    const tmpCtx = tmpCanvas.getContext('2d');
+
+    /**
+     * Normalize a string for forgiving answer comparison (shared with classic logic)
+     */
+    function normalizeAnswer(str) {
+        return str
+            .normalize('NFD')
+            .replace(/[̀-ͯ]/g, '')
+            .replace(/[^a-z0-9]/gi, '')
+            .toLowerCase();
+    }
+
+    /**
+     * Does the user's answer match the correct one? (same forgiving rules as classic)
+     */
+    function answerMatches(userAnswer, correctAnswer) {
+        const u = normalizeAnswer(userAnswer);
+        const c = normalizeAnswer(correctAnswer);
+        if (!u) return false;
+        return u === c ||
+            c.includes(u) ||
+            (u.length > 3 && c.includes(u));
+    }
+
+    /**
+     * Resolve the displayable source for an image (real path or generated placeholder)
+     */
+    async function resolveImageSrc(question) {
+        if (imageCache[question.imagePath]) return imageCache[question.imagePath];
+        const exists = await checkImageExists(question.imagePath);
+        if (exists) {
+            imageCache[question.imagePath] = question.imagePath;
+            return question.imagePath;
+        }
+        const placeholder = generatePlaceholderImage(question.item, question.category);
+        imageCache[question.imagePath] = placeholder;
+        return placeholder;
+    }
+
+    /**
+     * Build a shuffled [0..n-1] array
+     */
+    function shuffledRange(n) {
+        const arr = [];
+        for (let i = 0; i < n; i++) arr.push(i);
+        shuffleArray(arr);
+        return arr;
+    }
+
+    /**
+     * Load and start the reveal for the current question (pixel / obscure modes)
+     */
+    async function loadPointsQuestion() {
+        // Stop any reveal still running from a previous image
+        stopReveal();
+        imageResolved = false;
+        revealImg = null;
+
+        // Reset controls
+        submitButton.disabled = false;
+        submitButton.style.opacity = "1";
+        submitButton.style.cursor = "pointer";
+        guessInput.disabled = false;
+        guessInput.value = '';
+        feedbackDiv.classList.add('hidden');
+
+        // Header
+        updateCircleIndicators();
+        currentQuestionElement.textContent = currentQuestionIndex + 1;
+        currentPlayerNameElement.textContent = players[currentPlayerIndex].name;
+        updateScoreDisplay();
+
+        const currentQuestion = playerRounds[currentPlayerIndex][currentQuestionIndex];
+        currentCategoryElement.textContent = (currentQuestion && currentQuestion.category) || 'Unknown';
+
+        // Clear the canvas to a neutral colour while the image loads
+        const ctx = revealCanvas.getContext('2d');
+        ctx.fillStyle = '#15151c';
+        ctx.fillRect(0, 0, revealCanvas.width, revealCanvas.height);
+
+        const indexAtLoad = currentQuestionIndex;
+        const playerAtLoad = currentPlayerIndex;
+
+        const src = await resolveImageSrc(currentQuestion);
+        const img = new Image();
+        img.onload = () => {
+            // Guard against the player/question changing while loading
+            if (indexAtLoad !== currentQuestionIndex || playerAtLoad !== currentPlayerIndex) return;
+            revealImg = img;
+            setupRevealCanvasSize(img);
+            revealOrder = shuffledRange(OBSCURE_COLS * OBSCURE_ROWS);
+            startReveal();
+        };
+        img.src = src;
+    }
+
+    /**
+     * Size the reveal canvas to the image aspect ratio (capped)
+     */
+    function setupRevealCanvasSize(img) {
+        const maxW = 600, maxH = 450;
+        const w = img.naturalWidth || maxW;
+        const h = img.naturalHeight || maxH;
+        const r = Math.min(maxW / w, maxH / h, 1);
+        revealCanvas.width = Math.max(1, Math.round(w * r));
+        revealCanvas.height = Math.max(1, Math.round(h * r));
+    }
+
+    /**
+     * Current reveal fraction (0 = fully hidden, 1 = fully revealed)
+     */
+    function currentRevealFraction() {
+        return Math.min(1, (performance.now() - revealStartTime) / REVEAL_MS);
+    }
+
+    /**
+     * Begin the reveal animation + per-image countdown
+     */
+    function startReveal() {
+        stopReveal();
+        revealStartTime = performance.now();
+
+        timeRemainingElement.textContent = Math.ceil(IMAGE_TOTAL_MS / 1000);
+        imageCountdownInterval = setInterval(() => {
+            const remaining = Math.max(0, IMAGE_TOTAL_MS - (performance.now() - revealStartTime));
+            timeRemainingElement.textContent = Math.ceil(remaining / 1000);
+        }, 250);
+
+        revealRaf = requestAnimationFrame(revealLoop);
+    }
+
+    /**
+     * Animation frame: advance reveal, resolve on timeout
+     */
+    function revealLoop() {
+        if (imageResolved) return;
+        const elapsed = performance.now() - revealStartTime;
+        renderReveal(Math.min(1, elapsed / REVEAL_MS));
+
+        if (elapsed >= IMAGE_TOTAL_MS) {
+            resolveImage(false);
+            return;
+        }
+        revealRaf = requestAnimationFrame(revealLoop);
+    }
+
+    /**
+     * Stop reveal animation + countdown
+     */
+    function stopReveal() {
+        if (revealRaf) { cancelAnimationFrame(revealRaf); revealRaf = null; }
+        if (imageCountdownInterval) { clearInterval(imageCountdownInterval); imageCountdownInterval = null; }
+    }
+
+    /**
+     * Render the current reveal frame for the active mode
+     */
+    function renderReveal(fraction) {
+        if (!revealImg) return;
+        if (playMode === 'pixel') renderPixel(fraction);
+        else renderObscure(fraction);
+    }
+
+    /**
+     * Pixelated reveal: downscale then upscale; less pixelation as fraction grows
+     */
+    function renderPixel(fraction) {
+        const ctx = revealCanvas.getContext('2d');
+        const W = revealCanvas.width, H = revealCanvas.height;
+
+        if (fraction >= 1) {
+            ctx.imageSmoothingEnabled = true;
+            ctx.clearRect(0, 0, W, H);
+            ctx.drawImage(revealImg, 0, 0, W, H);
+            return;
+        }
+
+        const minScale = 0.03;
+        const scale = minScale + (1 - minScale) * Math.pow(fraction, REVEAL_CURVE);
+        const sw = Math.max(2, Math.round(W * scale));
+        const sh = Math.max(2, Math.round(H * scale));
+
+        tmpCanvas.width = sw;
+        tmpCanvas.height = sh;
+        tmpCtx.imageSmoothingEnabled = true;
+        tmpCtx.clearRect(0, 0, sw, sh);
+        tmpCtx.drawImage(revealImg, 0, 0, sw, sh);
+
+        ctx.imageSmoothingEnabled = false;
+        ctx.clearRect(0, 0, W, H);
+        ctx.drawImage(tmpCanvas, 0, 0, sw, sh, 0, 0, W, H);
+    }
+
+    /**
+     * Obscured reveal: full image with hidden tiles covered, uncovered in random order
+     */
+    function renderObscure(fraction) {
+        const ctx = revealCanvas.getContext('2d');
+        const W = revealCanvas.width, H = revealCanvas.height;
+        const cols = OBSCURE_COLS, rows = OBSCURE_ROWS, total = cols * rows;
+
+        ctx.imageSmoothingEnabled = true;
+        ctx.clearRect(0, 0, W, H);
+        ctx.drawImage(revealImg, 0, 0, W, H);
+
+        const revealCount = Math.floor(total * Math.pow(fraction, REVEAL_CURVE));
+        const cw = W / cols, ch = H / rows;
+        ctx.fillStyle = '#15151c';
+        for (let k = revealCount; k < total; k++) {
+            const cell = revealOrder[k];
+            const cx = (cell % cols) * cw;
+            const cy = Math.floor(cell / cols) * ch;
+            ctx.fillRect(cx, cy, Math.ceil(cw), Math.ceil(ch));
+        }
+    }
+
+    /**
+     * Handle a guess submission in points mode (multiple attempts allowed)
+     */
+    function checkPointsAnswer() {
+        if (imageResolved) return;
+
+        const currentPlayerRound = playerRounds[currentPlayerIndex];
+        if (!currentPlayerRound || !currentPlayerRound[currentQuestionIndex]) return;
+
+        const currentQuestion = currentPlayerRound[currentQuestionIndex];
+        const userAnswer = guessInput.value.trim();
+        const isItalian = getLanguage();
+
+        // Require some input
+        if (!userAnswer) {
+            feedbackDiv.textContent = isItalian ?
+                "Inserisci una risposta prima di inviare!" :
+                "Enter an answer before submitting!";
+            feedbackDiv.className = "feedback incorrect";
+            feedbackDiv.classList.remove("hidden");
+            guessInput.focus();
+            return;
+        }
+
+        if (answerMatches(userAnswer, currentQuestion.item)) {
+            resolveImage(true, userAnswer);
+        } else {
+            // Wrong guess: keep going, let them try again while the image keeps revealing
+            incorrectSound.play().catch(e => console.log('Sound play error:', e));
+            feedbackDiv.textContent = isItalian ? "Riprova..." : "Try again...";
+            feedbackDiv.className = "feedback incorrect";
+            feedbackDiv.classList.remove("hidden");
+            guessInput.value = '';
+            guessInput.focus();
+        }
+    }
+
+    /**
+     * Resolve the current image (correct guess or time-out), award points, then advance
+     */
+    function resolveImage(wasCorrect, userAnswer) {
+        if (imageResolved) return;
+
+        // Capture reveal fraction at the moment of resolution before stopping
+        const fraction = currentRevealFraction();
+        imageResolved = true;
+        stopReveal();
+        renderReveal(1); // show the full image
+
+        const currentQuestion = playerRounds[currentPlayerIndex][currentQuestionIndex];
+        const player = players[currentPlayerIndex];
+        const isItalian = getLanguage();
+
+        let earned = 0;
+        if (wasCorrect) {
+            earned = Math.max(5, Math.round(100 * (1 - fraction)));
+            player.roundPoints[currentRoundNumber - 1] += earned;
+            player.score += earned;
+            questionStatuses[currentQuestionIndex] = 'correct';
+            correctSound.play().catch(e => console.log('Sound play error:', e));
+            feedbackDiv.textContent = isItalian ?
+                `Corretto! È ${currentQuestion.item} (+${earned} punti)` :
+                `Correct! It's ${currentQuestion.item} (+${earned} points)`;
+            feedbackDiv.className = 'feedback correct';
+        } else {
+            questionStatuses[currentQuestionIndex] = 'incorrect';
+            incorrectSound.play().catch(e => console.log('Sound play error:', e));
+            feedbackDiv.textContent = isItalian ?
+                `Tempo scaduto! Era ${currentQuestion.item}` :
+                `Time's up! It was ${currentQuestion.item}`;
+            feedbackDiv.className = 'feedback incorrect';
+        }
+        feedbackDiv.classList.remove('hidden');
+
+        updateScoreDisplay();
+        updateCircleIndicators();
+
+        // Record result for the summary
+        roundResults.push({
+            round: currentRoundNumber,
+            item: currentQuestion.item,
+            category: currentQuestion.category,
+            imagePath: currentQuestion.imagePath,
+            userAnswer: wasCorrect ? userAnswer : (isItalian ? '(tempo scaduto)' : '(time ran out)'),
+            isCorrect: wasCorrect,
+            points: earned,
+            player: player.name
+        });
+
+        // Lock input until the next image
+        submitButton.disabled = true;
+        guessInput.disabled = true;
+
+        setTimeout(advancePointsImage, 2200);
+    }
+
+    /**
+     * Advance to the next image, next player, or round results (points modes)
+     */
+    function advancePointsImage() {
+        if (currentQuestionIndex < 4) {
+            currentQuestionIndex++;
+            loadQuestion(false);
+        } else if (currentPlayerIndex < players.length - 1) {
+            currentPlayerIndex++;
+            showPlayerTransition(currentPlayerIndex);
+        } else {
+            showRoundResults();
+        }
+    }
+
     /**
      * Show the results for the current round
      */
     function showRoundResults() {
-        // Stop the timer if it's still running
+        // Stop any reveal animation and the timer if still running
+        stopReveal();
         stopTimer();
 
         // Hide game screen, show result screen
@@ -1296,10 +1736,13 @@ document.addEventListener('DOMContentLoaded', function () {
             checkForPerfectGame();
         }
 
+        const points = isPointsMode();
+        const unitLabel = points ? (isItalian ? ' pti' : ' pts') : '/5';
+
         // Sort players by score for the current round
         const playerRoundScores = players.map(player => ({
             name: player.name,
-            roundScore: player.roundScores[currentRoundNumber - 1],
+            roundScore: points ? player.roundPoints[currentRoundNumber - 1] : player.roundScores[currentRoundNumber - 1],
             totalScore: player.score
         }));
 
@@ -1341,12 +1784,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Show both round score and total if final round
             if (currentRoundNumber === totalRounds) {
+                const totalLabel = isItalian ? 'Totale' : 'Total';
+                const totalDisplay = points ? `${player.totalScore}${unitLabel}` : `${player.totalScore}/${5 * totalRounds}`;
                 scoreInfo.innerHTML = `
-                    <span class="round-score">${player.roundScore}/5</span>
-                    <span class="total-score">Totale: ${player.totalScore}/${5 * totalRounds}</span>
+                    <span class="round-score">${player.roundScore}${unitLabel}</span>
+                    <span class="total-score">${totalLabel}: ${totalDisplay}</span>
                 `;
             } else {
-                scoreInfo.textContent = `${player.roundScore}/5`;
+                scoreInfo.textContent = `${player.roundScore}${unitLabel}`;
             }
 
             scoreItem.appendChild(playerName);
@@ -1412,10 +1857,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 icon.className = 'result-icon';
                 icon.textContent = result.isCorrect ? '✓' : '✗';
 
+                const pointsSuffix = (isPointsMode() && result.isCorrect) ? ` (+${result.points} pti)` : '';
                 const details = document.createElement('div');
                 details.innerHTML = `
                     <strong>Domanda ${index % 5 + 1}:</strong> ${result.item} (${result.category})<br>
-                    <small>${result.player}: ${result.userAnswer || '(nessuna risposta)'}</small>
+                    <small>${result.player}: ${result.userAnswer || '(nessuna risposta)'}${pointsSuffix}</small>
                 `;
 
                 resultItem.appendChild(icon);
@@ -1617,6 +2063,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Navigate to a specific image by index, but prefer unanswered questions if clicked on an already answered one
      */
     function navigateToImage(index) {
+        if (isPointsMode()) return; // no free navigation in pixel / obscure modes
         if (index >= 0 && index < 5 && index !== currentQuestionIndex) {
             // Blur input field to prevent keyboard from opening on mobile
             guessInput.blur();
@@ -1803,6 +2250,7 @@ document.addEventListener('DOMContentLoaded', function () {
         players.forEach(player => {
             player.score = 0;
             player.roundScores = [0, 0, 0]; // Reset scores for each round
+            player.roundPoints = [0, 0, 0]; // Reset points for each round
         });
 
         // Hide result screen and show game screen
