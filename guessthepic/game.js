@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let imageResolved = false;     // whether current image was answered/timed-out
     const OBSCURE_COLS = 8;
     const OBSCURE_ROWS = 6;
+    // Obscure mode has its own tile-reveal pacing (independent of the pixel curve)
+    const OBSCURE_HOLD_MS = 4000; // keep just the first tile for this long
+    const OBSCURE_CURVE = 1.3;    // tile ramp after the hold: ~1 = even, higher = more back-loaded
 
     // True for the time-based reveal modes
     function isPointsMode() {
@@ -1428,6 +1431,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
+     * Build the tile reveal order for obscure mode.
+     * The first tile (shown from the start) sits in the inner ring:
+     * never the exact center, never on the border.
+     */
+    function buildObscureOrder() {
+        const cols = OBSCURE_COLS, rows = OBSCURE_ROWS, total = cols * rows;
+        const midC = Math.floor(cols / 2), midR = Math.floor(rows / 2);
+
+        const candidates = [];
+        for (let r = 1; r < rows - 1; r++) {       // skip top/bottom border rows
+            for (let c = 1; c < cols - 1; c++) {   // skip left/right border cols
+                const isCenter = (c === midC || c === midC - 1) && (r === midR || r === midR - 1);
+                if (!isCenter) candidates.push(r * cols + c);
+            }
+        }
+
+        const first = candidates[Math.floor(Math.random() * candidates.length)];
+        const rest = [];
+        for (let i = 0; i < total; i++) if (i !== first) rest.push(i);
+        shuffleArray(rest);
+        return [first, ...rest];
+    }
+
+    /**
      * Load and start the reveal for the current question (pixel / obscure modes)
      */
     async function loadPointsQuestion() {
@@ -1468,7 +1495,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (indexAtLoad !== currentQuestionIndex || playerAtLoad !== currentPlayerIndex) return;
             revealImg = img;
             setupRevealCanvasSize(img);
-            revealOrder = shuffledRange(OBSCURE_COLS * OBSCURE_ROWS);
+            revealOrder = playMode === 'obscure' ? buildObscureOrder() : shuffledRange(OBSCURE_COLS * OBSCURE_ROWS);
             startReveal();
         };
         img.src = src;
@@ -1583,7 +1610,15 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.clearRect(0, 0, W, H);
         ctx.drawImage(revealImg, 0, 0, W, H);
 
-        const revealCount = Math.floor(total * Math.pow(fraction, REVEAL_CURVE));
+        // Dedicated obscure pacing: hold the first tile, then ramp tiles evenly to full by the end
+        const elapsedMs = fraction * REVEAL_MS;
+        let revealCount;
+        if (elapsedMs < OBSCURE_HOLD_MS) {
+            revealCount = 1;
+        } else {
+            const p = Math.min(1, (elapsedMs - OBSCURE_HOLD_MS) / (REVEAL_MS - OBSCURE_HOLD_MS));
+            revealCount = 1 + Math.round(Math.pow(p, OBSCURE_CURVE) * (total - 1));
+        }
         const cw = W / cols, ch = H / rows;
         ctx.fillStyle = '#15151c';
         for (let k = revealCount; k < total; k++) {
