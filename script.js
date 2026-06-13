@@ -45,6 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
             instructions: getTranslation('impostor', 'instructions')
         },
         {
+            id: "taboo",
+            displayName: getTranslation('taboo', 'title'),
+            catchphrase: getTranslation('taboo', 'catchphrase'),
+            image: "taboo.png",
+            players: getTranslation('taboo', 'players'),
+            time: getTranslation('taboo', 'time'),
+            difficulty: getTranslation('taboo', 'difficulty'),
+            description: getTranslation('taboo', 'description'),
+            features: getTranslation('taboo', 'features'),
+            instructions: getTranslation('taboo', 'instructions')
+        },
+        {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Taboo - Fai indovinare la parola senza dire i tabù | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Taboo: fai indovinare la parola segreta alla tua squadra senza usare le cinque parole vietate! Un classico party game da fare con gli amici offline.">');
+        } else {
+            document.write('<title>Taboo - Make them guess without the forbidden words | DrewGames</title>');
+            document.write('<meta name="description" content="Play Taboo: make your team guess the secret word without using the five forbidden words! A classic party game to play with friends offline.">');
+        }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/taboo/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/taboo/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/taboo/" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/taboo/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .language-toggle:hover {
+            background-color: rgba(71, 60, 139, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body data-game-id="taboo">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Taboo</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="team-count" id="teamCountLabel">Numero di Squadre:</label>
+                <select id="team-count">
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div id="team-names-container">
+                <!-- Team name inputs will be generated here -->
+            </div>
+            <div class="form-group">
+                <label for="round-time" id="roundTimeLabel">Durata del Turno:</label>
+                <select id="round-time">
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                    <option value="60" selected>60</option>
+                    <option value="90">90</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="target-score" id="targetScoreLabel">Punti per Vincere:</label>
+                <select id="target-score">
+                    <option value="15">15</option>
+                    <option value="20" selected>20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skip-penalty" id="skipPenaltyLabel">Penalità per "Passa":</label>
+                <select id="skip-penalty">
+                    <option value="0" id="penaltyNoneOption" selected>Nessuna</option>
+                    <option value="1" id="penaltyMinusOption">-1 punto</option>
+                </select>
+            </div>
+            <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
+        </div>
+
+        <!-- Turn Intro Screen -->
+        <div id="turn-intro-screen" class="game-screen">
+            <h2><span id="turnIntroTitleText">Tocca a:</span></h2>
+            <p class="big-team-name" id="intro-team-name"></p>
+            <p><span id="passToDescriberText">Passa il telefono a chi descrive di</span> <span
+                    id="intro-team-name-inline"></span></p>
+            <div class="info-card">
+                <p id="describerHintText">Descrivi la parola senza dire le parole vietate. La tua squadra deve
+                    indovinare!</p>
+            </div>
+            <div id="intro-standings" class="standings-box"></div>
+            <button id="start-turn" class="btn primary-btn pulse-btn">Inizia il Turno</button>
+        </div>
+
+        <!-- Round Play Screen -->
+        <div id="play-screen" class="game-screen">
+            <div class="play-header">
+                <div class="play-team" id="play-team-name"></div>
+                <div class="timer-display" id="timer-display">60</div>
+                <div class="round-score">
+                    <span id="roundScoreLabel">Punti in questo turno</span>: <span id="round-score">0</span>
+                </div>
+            </div>
+            <div class="timer-bar-wrapper">
+                <div class="timer-bar" id="timer-bar"></div>
+            </div>
+
+            <div class="taboo-card">
+                <p class="guess-word" id="guess-word"></p>
+                <div class="taboo-divider">
+                    <span id="tabooWordsLabel">Parole Vietate</span>
+                </div>
+                <ul class="taboo-list" id="taboo-list"></ul>
+            </div>
+
+            <div class="action-buttons">
+                <button id="taboo-btn" class="btn action-btn taboo-action">
+                    <span class="action-icon">🚫</span><span id="tabooBtnText">Tabù</span>
+                </button>
+                <button id="skip-btn" class="btn action-btn skip-action">
+                    <span class="action-icon">⏭</span><span id="skipBtnText">Passa</span>
+                </button>
+                <button id="correct-btn" class="btn action-btn correct-action">
+                    <span class="action-icon">✓</span><span id="correctBtnText">Indovinato</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Round Summary Screen -->
+        <div id="summary-screen" class="game-screen">
+            <h2 id="timeUpTitle">Tempo Scaduto!</h2>
+            <p class="summary-result" id="summary-result"></p>
+            <h3 class="standings-title" id="standingsTitle">Classifica</h3>
+            <div id="summary-standings" class="standings-box"></div>
+            <button id="next-team" class="btn primary-btn glow-btn">Prossima Squadra</button>
+        </div>
+
+        <!-- Victory Screen -->
+        <div id="victory-screen" class="game-screen">
+            <div class="reveal-header">
+                <h2 id="winnerTitle">Vince...</h2>
+                <p class="winner-name" id="winner-name"></p>
+            </div>
+            <h3 class="standings-title" id="finalStandingsTitle">Classifica Finale</h3>
+            <div id="final-standings" class="standings-box"></div>
+            <button id="play-again" class="btn primary-btn">Gioca di Nuovo</button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="../js/game-overview.js" defer></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

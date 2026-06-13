@@ -424,6 +424,7 @@
         const imageMap = {
             'drewnking': 'picolo.png',
             'impostor': 'impostor.png',
+            'taboo': 'taboo.png',
             'mrdrew': 'mrdrew.png',
             'hottakes': 'hottakes.png',
             'indovinachi': 'indovinachi.png',

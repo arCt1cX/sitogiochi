@@ -92,6 +92,28 @@ const translations = {
                 'L\'impostore vince se non viene individuato o se indovina la domanda, altrimenti vince il gruppo'
             ]
         },
+        'taboo': {
+            'title': 'Taboo',
+            'catchphrase': 'Fai indovinare la parola senza dire i tabù!',
+            'description': 'Taboo è il classico gioco di parole a squadre. Un giocatore deve far indovinare la parola segreta ai suoi compagni, ma senza mai pronunciare le cinque parole vietate elencate sulla carta! Conta i secondi, accumula punti e batti le altre squadre.',
+            'players': '4+ giocatori',
+            'time': '15-30 minuti',
+            'difficulty': 'Facile',
+            'features': [
+                'Centinaia di carte con parole vietate',
+                'Squadre, timer e punteggi automatici',
+                'Durata del turno e punteggio personalizzabili',
+                'Interfaccia semplice in stile Impostor'
+            ],
+            'instructions': [
+                'Dividetevi in squadre e passate il telefono a chi deve descrivere',
+                'Fai indovinare la parola in alto alla tua squadra senza dire le cinque parole vietate',
+                'Tocca "Indovinato" per ogni parola corretta (+1 punto)',
+                'Tocca "Tabù" se dici una parola vietata (-1 punto), oppure "Passa" per saltare',
+                'Quando il tempo scade, passa il telefono alla squadra successiva',
+                'Vince la prima squadra che raggiunge il punteggio obiettivo!'
+            ]
+        },
         'colorgrid': {
             'title': 'Color Grid',
             'catchphrase': 'Indovina la cella colorata segreta!',
@@ -464,6 +486,28 @@ const translations = {
                 'After all players have read their question, everyone says their answer simultaneously',
                 'From the various answers, players try to figure out who the impostor is and then vote',
                 'The impostor wins if they remain undetected or guess the question, otherwise the group wins'
+            ]
+        },
+        'taboo': {
+            'title': 'Taboo',
+            'catchphrase': 'Make them guess without saying the forbidden words!',
+            'description': 'Taboo is the classic team word game. One player has to make their teammates guess the secret word, but without ever saying the five forbidden words listed on the card! Beat the clock, rack up points and outscore the other teams.',
+            'players': '4+ players',
+            'time': '15-30 minutes',
+            'difficulty': 'Easy',
+            'features': [
+                'Hundreds of cards with forbidden words',
+                'Teams, timer and automatic scoring',
+                'Customizable round duration and target score',
+                'Simple Impostor-style interface'
+            ],
+            'instructions': [
+                'Split into teams and pass the phone to the describer',
+                'Make your team guess the top word without saying the five forbidden words',
+                'Tap "Correct" for every word guessed right (+1 point)',
+                'Tap "Taboo" if you say a forbidden word (-1 point), or "Skip" to pass',
+                'When time runs out, pass the phone to the next team',
+                'The first team to reach the target score wins!'
             ]
         },
         'colorgrid': {
