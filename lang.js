@@ -95,23 +95,23 @@ const translations = {
         'taboo': {
             'title': 'Taboo',
             'catchphrase': 'Fai indovinare la parola senza dire i tabù!',
-            'description': 'Taboo è il classico gioco di parole a squadre. Un giocatore deve far indovinare la parola segreta ai suoi compagni, ma senza mai pronunciare le cinque parole vietate elencate sulla carta! Conta i secondi, accumula punti e batti le altre squadre.',
-            'players': '4+ giocatori',
+            'description': 'Taboo è il classico gioco di parole. Devi far indovinare la parola segreta senza mai pronunciare le cinque parole vietate elencate sulla carta! Gioca a squadre oppure in modalità "Tutti contro tutti", dove a ogni turno il gioco assegna chi descrive, chi indovina e chi controlla. Conta i secondi, accumula punti e batti gli avversari.',
+            'players': '3+ giocatori',
             'time': '15-30 minuti',
             'difficulty': 'Facile',
             'features': [
-                'Centinaia di carte con parole vietate',
-                'Squadre, timer e punteggi automatici',
-                'Durata del turno e punteggio personalizzabili',
-                'Interfaccia semplice in stile Impostor'
+                'Due modalità: a Squadre o Tutti contro tutti',
+                'Ruoli a rotazione: descrittore, indovino e controllori',
+                'Quasi 250 carte con parole vietate',
+                'Timer, punteggi e durata del turno personalizzabili'
             ],
             'instructions': [
-                'Dividetevi in squadre e passate il telefono a chi deve descrivere',
-                'Fai indovinare la parola in alto alla tua squadra senza dire le cinque parole vietate',
-                'Tocca "Indovinato" per ogni parola corretta (+1 punto)',
-                'Tocca "Tabù" se dici una parola vietata (-1 punto), oppure "Passa" per saltare',
-                'Quando il tempo scade, passa il telefono alla squadra successiva',
-                'Vince la prima squadra che raggiunge il punteggio obiettivo!'
+                'Scegli la modalità: a squadre o tutti contro tutti',
+                'Passa il telefono a chi descrive: deve far indovinare la parola senza dire le cinque parole vietate',
+                'Nel "tutti contro tutti" il gioco dice chi descrive, chi indovina e chi controlla i tabù',
+                'Tocca "Indovinato" per ogni parola corretta: il punto va a chi descrive e a chi indovina',
+                'Tocca "Tabù" se viene detta una parola vietata (-1 punto), oppure "Passa" per saltare',
+                'Quando il tempo scade si cambia turno: vince chi raggiunge per primo il punteggio obiettivo!'
             ]
         },
         'colorgrid': {
@@ -491,23 +491,23 @@ const translations = {
         'taboo': {
             'title': 'Taboo',
             'catchphrase': 'Make them guess without saying the forbidden words!',
-            'description': 'Taboo is the classic team word game. One player has to make their teammates guess the secret word, but without ever saying the five forbidden words listed on the card! Beat the clock, rack up points and outscore the other teams.',
-            'players': '4+ players',
+            'description': 'Taboo is the classic word game. You have to make others guess the secret word without ever saying the five forbidden words listed on the card! Play in teams or in "Free-for-all" mode, where every turn the game assigns who describes, who guesses and who watches for fouls. Beat the clock, rack up points and outscore your rivals.',
+            'players': '3+ players',
             'time': '15-30 minutes',
             'difficulty': 'Easy',
             'features': [
-                'Hundreds of cards with forbidden words',
-                'Teams, timer and automatic scoring',
-                'Customizable round duration and target score',
-                'Simple Impostor-style interface'
+                'Two modes: Teams or Free-for-all',
+                'Rotating roles: describer, guesser and watchers',
+                'Almost 250 cards with forbidden words',
+                'Customizable timer, scoring and round duration'
             ],
             'instructions': [
-                'Split into teams and pass the phone to the describer',
-                'Make your team guess the top word without saying the five forbidden words',
-                'Tap "Correct" for every word guessed right (+1 point)',
-                'Tap "Taboo" if you say a forbidden word (-1 point), or "Skip" to pass',
-                'When time runs out, pass the phone to the next team',
-                'The first team to reach the target score wins!'
+                'Choose the mode: teams or free-for-all',
+                'Pass the phone to the describer: make others guess the word without saying the five forbidden words',
+                'In free-for-all the game tells you who describes, who guesses and who watches for taboos',
+                'Tap "Correct" for every right guess: both the describer and the guesser earn the point',
+                'Tap "Taboo" if a forbidden word is said (-1 point), or "Skip" to pass',
+                'When time runs out the turn changes: the first to reach the target score wins!'
             ]
         },
         'colorgrid': {

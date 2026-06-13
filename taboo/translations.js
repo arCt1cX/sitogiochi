@@ -9,10 +9,17 @@ const gameTranslations = {
 
         // Setup
         'setupTitle': 'Impostazioni del Gioco',
+        'modeLabel': 'Modalità:',
+        'teamsMode': 'Squadre',
+        'ffaMode': 'Tutti contro tutti',
         'teamCountLabel': 'Numero di Squadre:',
+        'playerCountLabel': 'Numero di Giocatori:',
         'teams': 'Squadre',
         'team': 'Squadra',
+        'players': 'Giocatori',
+        'player': 'Giocatore',
         'teamNamePlaceholder': 'Nome Squadra {n}',
+        'playerNamePlaceholder': 'Nome Giocatore {n}',
         'roundTimeLabel': 'Durata del Turno:',
         'seconds': 'secondi',
         'targetScoreLabel': 'Punti per Vincere:',
@@ -24,10 +31,16 @@ const gameTranslations = {
 
         // Turn intro
         'turnIntroTitle': 'Tocca a:',
+        'turnIntroTitleFFA': 'Nuovo Turno',
         'passToDescriber': 'Passa il telefono a chi descrive di',
+        'passToDescriberFFA': 'Passa il telefono a',
         'describerHint': 'Descrivi la parola senza dire le parole vietate. La tua squadra deve indovinare!',
+        'describerHintFFA': 'Descrivi la parola solo a chi indovina, senza dire le parole vietate. Gli altri controllano che le rispetti!',
         'startTurn': 'Inizia il Turno',
         'scoreLabel': 'Punteggio',
+        'roleDescribe': 'Descrive',
+        'roleGuess': 'Indovina',
+        'roleControl': 'Controllano',
 
         // Round play
         'tabooWordsLabel': 'Parole Vietate',
@@ -35,12 +48,16 @@ const gameTranslations = {
         'skipBtn': 'Passa',
         'tabooBtn': 'Tabù',
         'roundScoreLabel': 'Punti in questo turno',
+        'playVs': 'fa indovinare',
 
         // Round summary
         'timeUpTitle': 'Tempo Scaduto!',
         'roundResultText': 'ha guadagnato',
+        'roundResultTextFFA': 'hanno guadagnato',
+        'roundResultAnd': 'e',
         'pointsThisRound': 'punti in questo turno',
         'nextTeamBtn': 'Prossima Squadra',
+        'nextTeamBtnFFA': 'Prossimo Turno',
         'standingsTitle': 'Classifica',
 
         // Victory
@@ -59,10 +76,17 @@ const gameTranslations = {
 
         // Setup
         'setupTitle': 'Game Settings',
+        'modeLabel': 'Mode:',
+        'teamsMode': 'Teams',
+        'ffaMode': 'Free-for-all',
         'teamCountLabel': 'Number of Teams:',
+        'playerCountLabel': 'Number of Players:',
         'teams': 'Teams',
         'team': 'Team',
+        'players': 'Players',
+        'player': 'Player',
         'teamNamePlaceholder': 'Team {n} Name',
+        'playerNamePlaceholder': 'Player {n} Name',
         'roundTimeLabel': 'Round Duration:',
         'seconds': 'seconds',
         'targetScoreLabel': 'Points to Win:',
@@ -74,10 +98,16 @@ const gameTranslations = {
 
         // Turn intro
         'turnIntroTitle': 'Up next:',
+        'turnIntroTitleFFA': 'New Turn',
         'passToDescriber': 'Pass the phone to the describer of',
+        'passToDescriberFFA': 'Pass the phone to',
         'describerHint': 'Describe the word without saying the forbidden words. Your team has to guess!',
+        'describerHintFFA': 'Describe the word only to the guesser, without saying the forbidden words. The others make sure you follow the rules!',
         'startTurn': 'Start Turn',
         'scoreLabel': 'Score',
+        'roleDescribe': 'Describes',
+        'roleGuess': 'Guesses',
+        'roleControl': 'Watch',
 
         // Round play
         'tabooWordsLabel': 'Forbidden Words',
@@ -85,12 +115,16 @@ const gameTranslations = {
         'skipBtn': 'Skip',
         'tabooBtn': 'Taboo',
         'roundScoreLabel': 'Points this turn',
+        'playVs': 'describes to',
 
         // Round summary
         'timeUpTitle': 'Time\'s Up!',
         'roundResultText': 'scored',
+        'roundResultTextFFA': 'scored',
+        'roundResultAnd': 'and',
         'pointsThisRound': 'points this turn',
         'nextTeamBtn': 'Next Team',
+        'nextTeamBtnFFA': 'Next Turn',
         'standingsTitle': 'Standings',
 
         // Victory
@@ -131,21 +165,23 @@ function applyGameTranslations() {
     set('homeText', t.home);
     set('gameTitle', t.gameTitle);
     set('setupTitle', t.setupTitle);
-    set('teamCountLabel', t.teamCountLabel);
+    set('modeLabel', t.modeLabel);
+    set('teamsModeOption', t.teamsMode);
+    set('ffaModeOption', t.ffaMode);
     set('roundTimeLabel', t.roundTimeLabel);
     set('targetScoreLabel', t.targetScoreLabel);
     set('skipPenaltyLabel', t.skipPenaltyLabel);
     set('start-game', t.startGame);
-    set('passToDescriberText', t.passToDescriber);
-    set('describerHintText', t.describerHint);
     set('start-turn', t.startTurn);
+    set('roleDescribeLabel', t.roleDescribe);
+    set('roleGuessLabel', t.roleGuess);
+    set('roleControlLabel', t.roleControl);
     set('tabooWordsLabel', t.tabooWordsLabel);
     set('correctBtnText', t.correctBtn);
     set('skipBtnText', t.skipBtn);
     set('tabooBtnText', t.tabooBtn);
     set('roundScoreLabel', t.roundScoreLabel);
     set('timeUpTitle', t.timeUpTitle);
-    set('next-team', t.nextTeamBtn);
     set('standingsTitle', t.standingsTitle);
     set('winnerTitle', t.winnerTitle);
     set('finalStandingsTitle', t.finalStandingsTitle);
@@ -156,15 +192,6 @@ function applyGameTranslations() {
     const penaltyMinus = document.getElementById('penaltyMinusOption');
     if (penaltyNone) penaltyNone.textContent = t.penaltyNone;
     if (penaltyMinus) penaltyMinus.textContent = t.penaltyMinusOne;
-
-    // Team count dropdown
-    const teamSelect = document.getElementById('team-count');
-    if (teamSelect) {
-        teamSelect.querySelectorAll('option').forEach(option => {
-            const value = parseInt(option.value);
-            option.textContent = `${value} ${t.teams}`;
-        });
-    }
 
     // Round time dropdown
     const timeSelect = document.getElementById('round-time');
@@ -181,6 +208,9 @@ function applyGameTranslations() {
             option.textContent = `${option.value} ${t.points}`;
         });
     }
+
+    // The count dropdown, count label and name inputs are mode-dependent and
+    // handled by scripts.js (updateModeUI), which runs after this.
 }
 
 document.addEventListener('DOMContentLoaded', applyGameTranslations);

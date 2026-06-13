@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         victory: document.getElementById('victory-screen')
     };
 
+    const modeSelect = document.getElementById('mode-select');
+    const teamCountLabel = document.getElementById('teamCountLabel');
     const teamCountSelect = document.getElementById('team-count');
     const teamNamesContainer = document.getElementById('team-names-container');
     const roundTimeSelect = document.getElementById('round-time');
@@ -15,8 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const skipPenaltySelect = document.getElementById('skip-penalty');
     const startGameBtn = document.getElementById('start-game');
 
+    const introTitle = document.getElementById('turnIntroTitleText');
     const introTeamName = document.getElementById('intro-team-name');
     const introTeamNameInline = document.getElementById('intro-team-name-inline');
+    const passToDescriberText = document.getElementById('passToDescriberText');
+    const describerHintText = document.getElementById('describerHintText');
+    const ffaRoles = document.getElementById('ffa-roles');
+    const roleDescriber = document.getElementById('role-describer');
+    const roleGuesser = document.getElementById('role-guesser');
+    const roleControllers = document.getElementById('role-controllers');
     const introStandings = document.getElementById('intro-standings');
     const startTurnBtn = document.getElementById('start-turn');
 
@@ -45,8 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let cards = [];
     let deck = [];           // shuffled indexes still to be drawn
     let gameState = {
-        teams: [],           // { name, score }
-        currentTeamIndex: 0,
+        mode: 'teams',          // 'teams' | 'ffa'
+        teams: [],              // participants: { name, score } (teams or individual players)
+        turnCount: 0,
+        currentIndex: 0,        // active team (teams mode)
+        describerIndex: 0,      // active describer (ffa mode)
+        guesserIndex: 1,        // active guesser (ffa mode)
         roundTime: 60,
         targetScore: 20,
         skipPenalty: 0,
@@ -108,10 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.abs(n) === 1 ? t.pointSingular : t.pointPlural;
     }
 
-    // ===== Setup: generate team name inputs =====
-    function generateTeamInputs() {
+    function isFFA() {
+        return gameState.mode === 'ffa';
+    }
+
+    // ===== Setup: mode + count + name inputs =====
+    function generateNameInputs() {
         const t = getGameTranslations();
         const count = parseInt(teamCountSelect.value);
+        const ffa = modeSelect.value === 'ffa';
+        const placeholder = ffa ? t.playerNamePlaceholder : t.teamNamePlaceholder;
         const existing = {};
         teamNamesContainer.querySelectorAll('input').forEach((input, i) => {
             existing[i] = input.value;
@@ -122,19 +141,38 @@ document.addEventListener('DOMContentLoaded', () => {
             input.type = 'text';
             input.id = `team-name-${i}`;
             input.maxLength = 20;
-            input.placeholder = t.teamNamePlaceholder.replace('{n}', i + 1);
+            input.placeholder = placeholder.replace('{n}', i + 1);
             input.autocomplete = 'off';
             if (existing[i]) input.value = existing[i];
             teamNamesContainer.appendChild(input);
         }
     }
 
-    teamCountSelect.addEventListener('change', generateTeamInputs);
-    generateTeamInputs();
+    function updateModeUI() {
+        const t = getGameTranslations();
+        const ffa = modeSelect.value === 'ffa';
+        teamCountLabel.textContent = ffa ? t.playerCountLabel : t.teamCountLabel;
+
+        const prev = parseInt(teamCountSelect.value);
+        const min = ffa ? 3 : 2;
+        const max = ffa ? 10 : 4;
+        teamCountSelect.innerHTML = '';
+        for (let v = min; v <= max; v++) {
+            const o = document.createElement('option');
+            o.value = String(v);
+            o.textContent = `${v} ${ffa ? t.players : t.teams}`;
+            teamCountSelect.appendChild(o);
+        }
+        teamCountSelect.value = (prev >= min && prev <= max) ? String(prev) : String(ffa ? 3 : 2);
+        generateNameInputs();
+    }
+
+    modeSelect.addEventListener('change', updateModeUI);
+    teamCountSelect.addEventListener('change', generateNameInputs);
+    updateModeUI();
 
     // ===== Standings rendering =====
-    function renderStandings(container, highlightLeader = true) {
-        const t = getGameTranslations();
+    function renderStandings(container) {
         container.innerHTML = '';
         const sorted = gameState.teams
             .map((team, idx) => ({ ...team, idx }))
@@ -143,9 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sorted.forEach(team => {
             const row = document.createElement('div');
             row.className = 'standings-row';
-            if (highlightLeader && team.score === topScore && topScore > 0) {
-                row.classList.add('leader');
-            }
+            if (team.score === topScore && topScore > 0) row.classList.add('leader');
             const name = document.createElement('span');
             name.className = 'rank-name';
             name.textContent = team.name;
@@ -158,20 +194,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ===== Free-for-all role assignment =====
+    function computeFFARoles() {
+        const n = gameState.teams.length;
+        const d = gameState.turnCount % n;
+        let g = (d + 1 + Math.floor(gameState.turnCount / n)) % n;
+        if (g === d) g = (g + 1) % n;
+        return { d, g };
+    }
+
     // ===== Start Game =====
     startGameBtn.addEventListener('click', () => {
         const t = getGameTranslations();
         const count = parseInt(teamCountSelect.value);
+        gameState.mode = modeSelect.value;
+        const unit = isFFA() ? t.player : t.team;
         const teams = [];
         for (let i = 0; i < count; i++) {
             const input = document.getElementById(`team-name-${i}`);
             const name = (input && input.value.trim())
                 ? input.value.trim()
-                : `${t.team} ${i + 1}`;
+                : `${unit} ${i + 1}`;
             teams.push({ name, score: 0 });
         }
         gameState.teams = teams;
-        gameState.currentTeamIndex = 0;
+        gameState.turnCount = 0;
+        gameState.currentIndex = 0;
         gameState.roundTime = parseInt(roundTimeSelect.value);
         gameState.targetScore = parseInt(targetScoreSelect.value);
         gameState.skipPenalty = parseInt(skipPenaltySelect.value);
@@ -182,9 +230,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== Turn Intro =====
     function showTurnIntro() {
-        const team = gameState.teams[gameState.currentTeamIndex];
-        introTeamName.textContent = team.name;
-        introTeamNameInline.textContent = team.name;
+        const t = getGameTranslations();
+        if (isFFA()) {
+            const { d, g } = computeFFARoles();
+            gameState.describerIndex = d;
+            gameState.guesserIndex = g;
+            const describer = gameState.teams[d];
+            const guesser = gameState.teams[g];
+            const controllers = gameState.teams
+                .filter((_, i) => i !== d && i !== g)
+                .map(p => p.name);
+
+            introTitle.textContent = t.turnIntroTitleFFA;
+            introTeamName.textContent = describer.name;
+            ffaRoles.classList.remove('hidden');
+            roleDescriber.textContent = describer.name;
+            roleGuesser.textContent = guesser.name;
+            roleControllers.textContent = controllers.length ? controllers.join(', ') : '—';
+            passToDescriberText.textContent = t.passToDescriberFFA;
+            introTeamNameInline.textContent = describer.name;
+            describerHintText.textContent = t.describerHintFFA;
+        } else {
+            gameState.currentIndex = gameState.turnCount % gameState.teams.length;
+            const team = gameState.teams[gameState.currentIndex];
+            introTitle.textContent = t.turnIntroTitle;
+            introTeamName.textContent = team.name;
+            ffaRoles.classList.add('hidden');
+            passToDescriberText.textContent = t.passToDescriber;
+            introTeamNameInline.textContent = team.name;
+            describerHintText.textContent = t.describerHint;
+        }
         renderStandings(introStandings);
         showScreen('intro');
     }
@@ -193,10 +268,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== Round Play =====
     function startRound() {
-        const team = gameState.teams[gameState.currentTeamIndex];
+        const t = getGameTranslations();
         gameState.roundScore = 0;
         roundScoreEl.textContent = '0';
-        playTeamName.textContent = team.name;
+
+        if (isFFA()) {
+            const describer = gameState.teams[gameState.describerIndex];
+            const guesser = gameState.teams[gameState.guesserIndex];
+            playTeamName.textContent = `${describer.name} ${t.playVs} ${guesser.name}`;
+        } else {
+            playTeamName.textContent = gameState.teams[gameState.currentIndex].name;
+        }
+
         timeLeft = gameState.roundTime;
         updateTimerUI();
         showScreen('play');
@@ -209,20 +292,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function tick() {
         timeLeft--;
         updateTimerUI();
-        if (timeLeft <= 0) {
-            endRound();
-        }
+        if (timeLeft <= 0) endRound();
     }
 
     function updateTimerUI() {
         timerDisplay.textContent = Math.max(timeLeft, 0);
         const pct = Math.max((timeLeft / gameState.roundTime) * 100, 0);
         timerBar.style.width = `${pct}%`;
-        if (timeLeft <= 10) {
-            timerDisplay.classList.add('low');
-        } else {
-            timerDisplay.classList.remove('low');
-        }
+        timerDisplay.classList.toggle('low', timeLeft <= 10);
     }
 
     function nextCard() {
@@ -237,7 +314,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Apply a score delta to the player(s) earning points this turn.
+    // In teams mode the active team earns; in FFA both describer and guesser earn.
+    function awardPoints(delta, describerOnly) {
+        if (isFFA()) {
+            gameState.teams[gameState.describerIndex].score += delta;
+            if (!describerOnly) gameState.teams[gameState.guesserIndex].score += delta;
+        } else {
+            gameState.teams[gameState.currentIndex].score += delta;
+        }
+    }
+
     correctBtn.addEventListener('click', () => {
+        awardPoints(1, false);          // both describer and guesser earn
         gameState.roundScore += 1;
         roundScoreEl.textContent = gameState.roundScore;
         nextCard();
@@ -245,6 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     skipBtn.addEventListener('click', () => {
         if (gameState.skipPenalty > 0) {
+            awardPoints(-gameState.skipPenalty, true);
             gameState.roundScore -= gameState.skipPenalty;
             roundScoreEl.textContent = gameState.roundScore;
         }
@@ -252,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     tabooBtn.addEventListener('click', () => {
+        awardPoints(-1, true);          // only the describer is penalised
         gameState.roundScore -= 1;
         roundScoreEl.textContent = gameState.roundScore;
         nextCard();
@@ -263,16 +354,26 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(timerId);
             timerId = null;
         }
-        const team = gameState.teams[gameState.currentTeamIndex];
-        team.score += gameState.roundScore;
-
         const t = getGameTranslations();
-        summaryResult.innerHTML =
-            `<span class="team-highlight">${team.name}</span> ${t.roundResultText} ` +
-            `<span class="points-highlight">${gameState.roundScore}</span> ${t.pointsThisRound}.`;
+
+        if (isFFA()) {
+            const describer = gameState.teams[gameState.describerIndex];
+            const guesser = gameState.teams[gameState.guesserIndex];
+            summaryResult.innerHTML =
+                `<span class="team-highlight">${describer.name}</span> ${t.roundResultAnd} ` +
+                `<span class="team-highlight">${guesser.name}</span> ${t.roundResultTextFFA} ` +
+                `<span class="points-highlight">${gameState.roundScore}</span> ${t.pointsThisRound}.`;
+            nextTeamBtn.textContent = t.nextTeamBtnFFA;
+        } else {
+            const team = gameState.teams[gameState.currentIndex];
+            summaryResult.innerHTML =
+                `<span class="team-highlight">${team.name}</span> ${t.roundResultText} ` +
+                `<span class="points-highlight">${gameState.roundScore}</span> ${t.pointsThisRound}.`;
+            nextTeamBtn.textContent = t.nextTeamBtn;
+        }
+
         renderStandings(summaryStandings);
 
-        // Check victory
         const winners = gameState.teams.filter(tm => tm.score >= gameState.targetScore);
         if (winners.length > 0) {
             showVictory();
@@ -282,8 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     nextTeamBtn.addEventListener('click', () => {
-        gameState.currentTeamIndex =
-            (gameState.currentTeamIndex + 1) % gameState.teams.length;
+        gameState.turnCount++;
         showTurnIntro();
     });
 
@@ -303,7 +403,8 @@ document.addEventListener('DOMContentLoaded', () => {
             timerId = null;
         }
         gameState.teams.forEach(tm => tm.score = 0);
-        gameState.currentTeamIndex = 0;
+        gameState.turnCount = 0;
+        gameState.currentIndex = 0;
         gameState.roundScore = 0;
         showScreen('setup');
     });
