@@ -102,7 +102,7 @@ const translations = {
             'features': [
                 'Due modalità: a Squadre o Tutti contro tutti',
                 'Ruoli a rotazione: descrittore, indovino e controllori',
-                'Quasi 250 carte con parole vietate',
+                'Centinaia di carte con parole vietate',
                 'Timer, punteggi e durata del turno personalizzabili'
             ],
             'instructions': [
@@ -498,7 +498,7 @@ const translations = {
             'features': [
                 'Two modes: Teams or Free-for-all',
                 'Rotating roles: describer, guesser and watchers',
-                'Almost 250 cards with forbidden words',
+                'Hundreds of cards with forbidden words',
                 'Customizable timer, scoring and round duration'
             ],
             'instructions': [

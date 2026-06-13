@@ -52,7 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== Game State =====
     let cards = [];
-    let deck = [];           // shuffled indexes still to be drawn
+    let deck = [];           // shuffled indexes still to be drawn this cycle
+    // Words already shown during this browser session: never repeat them until
+    // every card has been used, then start a fresh cycle. Persisted in
+    // sessionStorage so it survives reloads but resets when the tab is closed.
+    const USED_KEY = 'taboo_used_words';
+    function loadUsedWords() {
+        try {
+            const raw = sessionStorage.getItem(USED_KEY);
+            return new Set(raw ? JSON.parse(raw) : []);
+        } catch (e) {
+            return new Set();
+        }
+    }
+    function saveUsedWords() {
+        try {
+            sessionStorage.setItem(USED_KEY, JSON.stringify([...usedWords]));
+        } catch (e) { /* storage unavailable: keep in-memory only */ }
+    }
+    let usedWords = loadUsedWords();
     let gameState = {
         mode: 'teams',          // 'teams' | 'ffa'
         teams: [],              // participants: { name, score } (teams or individual players)
@@ -102,13 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function buildDeck() {
-        deck = shuffle(cards.map((_, i) => i));
+        // Only include cards whose word hasn't been shown yet this session.
+        let available = cards
+            .map((_, i) => i)
+            .filter(i => !usedWords.has(cards[i].word));
+        // All cards have been used this session: start a fresh cycle.
+        if (available.length === 0) {
+            usedWords = new Set();
+            saveUsedWords();
+            available = cards.map((_, i) => i);
+        }
+        deck = shuffle(available);
     }
 
     function drawCard() {
         if (deck.length === 0) buildDeck();
         const idx = deck.pop();
-        return cards[idx];
+        const card = cards[idx];
+        usedWords.add(card.word);
+        saveUsedWords();
+        return card;
     }
 
     function showScreen(name) {
