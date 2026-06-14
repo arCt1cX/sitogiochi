@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const UPPER_BONUS_THRESHOLD = 63;
     const UPPER_BONUS = 35;
     const MAX_ROLLS = 3;
+    // Distinct, dark-bg-friendly colour per player
+    const PLAYER_COLORS = ['#bb86fc', '#03dac6', '#f4be67', '#ff7eb6', '#4da3ff', '#7bd88f', '#ff8a5c', '#c08bff'];
+
+    function hexToRgba(hex, a) {
+        const h = hex.replace('#', '');
+        const r = parseInt(h.substring(0, 2), 16);
+        const g = parseInt(h.substring(2, 4), 16);
+        const b = parseInt(h.substring(4, 6), 16);
+        return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
 
     // ===== DOM =====
     const screens = {
@@ -31,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const startTurnBtn = document.getElementById('start-turn');
 
     const turnBanner = document.getElementById('turn-banner');
-    const scoreboardChips = document.getElementById('scoreboard-chips');
     const diceRow = document.getElementById('dice-row');
     const diceHint = document.getElementById('dice-hint');
     const rollBtn = document.getElementById('roll-btn');
@@ -55,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showScreen(name) {
         Object.values(screens).forEach(s => s.classList.remove('active'));
         screens[name].classList.add('active');
+        // Lock the page to the viewport while playing so the board scrolls
+        // internally and the dice stay pinned at the bottom.
+        document.body.classList.toggle('playing', name === 'play');
     }
     function pointsLabel(n) {
         const t = getGameTranslations();
@@ -148,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = (input && input.value.trim()) ? input.value.trim() : `${t.player} ${i + 1}`;
             const scores = {};
             ALL_KEYS.forEach(k => scores[k] = null);
-            players.push({ name, scores });
+            players.push({ name, scores, color: PLAYER_COLORS[i % PLAYER_COLORS.length] });
         }
         currentPlayer = 0;
         showTurnIntro();
@@ -177,16 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderScoreboardChips() {
-        scoreboardChips.innerHTML = '';
-        players.forEach((p, idx) => {
-            const chip = document.createElement('div');
-            chip.className = 'score-chip' + (idx === currentPlayer ? ' active' : '');
-            chip.innerHTML = `<span class="chip-name">${p.name}</span><span class="chip-score">${playerTotal(p)}</span>`;
-            scoreboardChips.appendChild(chip);
-        });
-    }
-
     // ===== Turn intro =====
     function showTurnIntro() {
         const p = players[currentPlayer];
@@ -204,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dice = [0, 1, 2, 3, 4].map(() => ({ value: 0, held: false }));
         renderDice();
         renderBanner();
-        renderScoreboardChips();
         renderScorecard();
         updateRollUI();
         showScreen('play');
@@ -212,7 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderBanner() {
         const t = getGameTranslations();
-        turnBanner.textContent = `${players[currentPlayer].name}`;
+        const p = players[currentPlayer];
+        turnBanner.innerHTML = `<span class="banner-dot" style="background:${p.color}"></span>` +
+            `<span class="banner-name" style="color:${p.color}">${p.name}</span>`;
     }
 
     // ===== Dice =====
@@ -291,78 +294,115 @@ document.addEventListener('DOMContentLoaded', () => {
         rollBtn.classList.toggle('disabled', rollBtn.disabled);
     }
 
-    // ===== Scorecard =====
+    // ===== Scorecard (full board: all players as columns) =====
     function renderScorecard() {
         const t = getGameTranslations();
-        const p = players[currentPlayer];
         const values = diceValues();
-        scorecard.innerHTML = '';
+        const cur = players[currentPlayer];
 
-        const makeSectionTitle = (txt) => {
-            const h = document.createElement('div');
-            h.className = 'section-title';
-            h.textContent = txt;
-            return h;
+        const table = document.createElement('table');
+        table.className = 'board';
+        table.style.setProperty('--current-color', cur.color);
+        table.style.setProperty('--current-soft', hexToRgba(cur.color, 0.16));
+        table.style.setProperty('--current-soft2', hexToRgba(cur.color, 0.28));
+
+        // ---- Header: category column + one column per player ----
+        const thead = document.createElement('thead');
+        const hr = document.createElement('tr');
+        const corner = document.createElement('th');
+        corner.className = 'cat-head';
+        hr.appendChild(corner);
+        players.forEach((p, idx) => {
+            const th = document.createElement('th');
+            th.className = 'player-head' + (idx === currentPlayer ? ' current' : '');
+            th.style.borderTopColor = p.color;
+            if (idx === currentPlayer) {
+                th.style.background = p.color;
+            } else {
+                th.style.color = p.color;
+            }
+            th.textContent = p.name;
+            hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+
+        const sectionRow = (txt) => {
+            const tr = document.createElement('tr');
+            tr.className = 'section';
+            const td = document.createElement('td');
+            td.colSpan = players.length + 1;
+            td.textContent = txt;
+            tr.appendChild(td);
+            tbody.appendChild(tr);
         };
 
-        const makeRow = (key, label) => {
-            const filled = p.scores[key] !== null;
-            const row = document.createElement('button');
-            row.className = 'score-row';
-            const nameSpan = document.createElement('span');
-            nameSpan.className = 'score-name';
-            nameSpan.textContent = label;
-            const valSpan = document.createElement('span');
-            valSpan.className = 'score-value';
+        const dataRow = (key, label) => {
+            const tr = document.createElement('tr');
+            const labelTd = document.createElement('td');
+            labelTd.className = 'cat';
+            labelTd.textContent = label;
+            tr.appendChild(labelTd);
 
-            if (filled) {
-                row.classList.add('filled');
-                valSpan.textContent = p.scores[key];
-            } else if (hasRolled) {
-                row.classList.add('available');
-                const preview = scoreFor(key, values);
-                valSpan.textContent = preview;
-                valSpan.classList.add('preview');
-                if (preview === 0) valSpan.classList.add('zero');
-                row.addEventListener('click', () => chooseCategory(key));
-            } else {
-                row.classList.add('locked');
-                valSpan.textContent = '–';
-            }
-            row.appendChild(nameSpan);
-            row.appendChild(valSpan);
-            return row;
+            players.forEach((p, idx) => {
+                const td = document.createElement('td');
+                td.className = 'cell';
+                if (idx === currentPlayer) td.classList.add('current-col');
+                const filled = p.scores[key] !== null;
+
+                if (filled) {
+                    td.classList.add('scored');
+                    td.textContent = p.scores[key];
+                } else if (idx === currentPlayer && hasRolled) {
+                    const preview = scoreFor(key, values);
+                    td.classList.add('preview');
+                    if (preview === 0) td.classList.add('zero');
+                    td.textContent = preview;
+                    td.addEventListener('click', () => chooseCategory(key));
+                } else {
+                    td.classList.add('empty');
+                    td.textContent = '·';
+                }
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        };
+
+        const totalRow = (label, valueFn, cls) => {
+            const tr = document.createElement('tr');
+            tr.className = cls;
+            const labelTd = document.createElement('td');
+            labelTd.className = 'cat';
+            labelTd.textContent = label;
+            tr.appendChild(labelTd);
+            players.forEach((p, idx) => {
+                const td = document.createElement('td');
+                td.className = 'cell';
+                if (idx === currentPlayer) td.classList.add('current-col');
+                td.textContent = valueFn(p);
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
         };
 
         // Upper section
-        scorecard.appendChild(makeSectionTitle(t.upperSection));
-        UPPER.forEach(u => scorecard.appendChild(makeRow(u.key, t.categories[u.key])));
-
-        // Upper subtotal + bonus
-        const sub = upperSubtotal(p);
-        scorecard.appendChild(makeTotalRow(t.upperTotalLabel, `${sub} / ${UPPER_BONUS_THRESHOLD}`));
-        scorecard.appendChild(makeTotalRow(t.bonusLabel, `+${upperBonus(p)}`));
+        sectionRow(t.upperSection);
+        UPPER.forEach(u => dataRow(u.key, t.categories[u.key]));
+        totalRow(t.upperTotalLabel, p => `${upperSubtotal(p)}/${UPPER_BONUS_THRESHOLD}`, 'subtotal');
+        totalRow(t.bonusLabel, p => `+${upperBonus(p)}`, 'subtotal');
 
         // Lower section
-        scorecard.appendChild(makeSectionTitle(t.lowerSection));
-        LOWER.forEach(k => scorecard.appendChild(makeRow(k, t.categories[k])));
+        sectionRow(t.lowerSection);
+        LOWER.forEach(k => dataRow(k, t.categories[k]));
 
         // Grand total
-        scorecard.appendChild(makeTotalRow(t.totalLabel, playerTotal(p), true));
-    }
+        totalRow(t.totalLabel, p => playerTotal(p), 'grand');
 
-    function makeTotalRow(label, value, grand) {
-        const row = document.createElement('div');
-        row.className = 'total-row' + (grand ? ' grand' : '');
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'score-name';
-        nameSpan.textContent = label;
-        const valSpan = document.createElement('span');
-        valSpan.className = 'score-value';
-        valSpan.textContent = value;
-        row.appendChild(nameSpan);
-        row.appendChild(valSpan);
-        return row;
+        table.appendChild(tbody);
+        scorecard.innerHTML = '';
+        scorecard.appendChild(table);
     }
 
     function chooseCategory(key) {

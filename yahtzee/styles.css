@@ -198,84 +198,243 @@ p {
     font-weight: bold;
 }
 
-/* ===== Play top: banner + chips ===== */
-.play-top {
+/* ===== Play screen: board on top, dice pinned at bottom ===== */
+/* While playing, lock the page to the viewport so only the board scrolls. */
+body.playing {
+    overflow: hidden;
+}
+
+body.playing .container {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+}
+
+#game-title {
+    flex-shrink: 0;
+}
+
+body.playing #game-title {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+}
+
+#play-screen.active {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
     gap: 12px;
+    padding: 14px;
+    margin-bottom: 0;
 }
 
 .turn-banner {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #bb86fc;
-    letter-spacing: 0.5px;
-}
-
-.scoreboard-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-}
-
-.score-chip {
     display: flex;
     align-items: center;
-    gap: 6px;
-    background-color: #2a2a2a;
-    border: 1px solid #3d3d3d;
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-size: 0.85rem;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
 }
 
-.score-chip.active {
-    border-color: #bb86fc;
-    background-color: #322a44;
-    box-shadow: 0 0 8px rgba(187, 134, 252, 0.3);
+.turn-banner .banner-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
 }
 
-.score-chip .chip-name {
-    color: #d0d0d0;
-    max-width: 90px;
+/* ===== Board (all players) ===== */
+.scorecard {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #23232f;
+    border-radius: 14px;
+    padding: 6px;
+    border: 1px solid #33334a;
+}
+
+.board {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.82rem;
+}
+
+.board th,
+.board td {
+    padding: 6px 4px;
+    text-align: center;
+}
+
+.board thead th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: #23232f;
+}
+
+.board .player-head {
+    border-top: 3px solid transparent;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.78rem;
+    font-weight: 700;
+    max-width: 70px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.score-chip .chip-score {
+.board .player-head.current {
+    color: #15151f;
+}
+
+.board .cat-head,
+.board td.cat {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    text-align: left;
+    white-space: nowrap;
+    background: #23232f;
+    color: #cfcfe0;
+    font-weight: 600;
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+.board thead .cat-head {
+    z-index: 4;
+}
+
+.board tbody tr:nth-child(even) td {
+    background-color: #282836;
+}
+
+.board tbody tr:nth-child(even) td.cat {
+    background-color: #282836;
+}
+
+.board td.cell {
+    font-weight: 700;
+    color: #d8d8e4;
+    min-width: 36px;
+}
+
+.board td.cell.empty {
+    color: #555;
+    font-weight: 400;
+}
+
+.board td.cell.scored {
     color: #03dac6;
-    font-weight: bold;
+}
+
+/* Current player's column highlight */
+.board td.current-col {
+    background-color: var(--current-soft) !important;
+}
+
+.board td.cell.preview {
+    color: var(--current-color);
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1.5px var(--current-color);
+}
+
+.board td.cell.preview.zero {
+    opacity: 0.6;
+}
+
+.board td.cell.preview:hover,
+.board td.cell.preview:active {
+    background-color: var(--current-soft2) !important;
+}
+
+.board tr.section td {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #9a7fd0;
+    padding: 10px 8px 4px 8px;
+    background: #23232f;
+    position: sticky;
+    left: 0;
+}
+
+.board tr.subtotal td {
+    color: #9a9a9a;
+    font-size: 0.76rem;
+    font-weight: 600;
+    background-color: #1f1f29;
+}
+
+.board tr.subtotal td.cat {
+    background-color: #1f1f29;
+    color: #9a9a9a;
+}
+
+.board tr.grand td {
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    background-color: #3a2470;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.board tr.grand td.cat {
+    background-color: #3a2470;
+    color: #fff;
+}
+
+.board tr.grand td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.board tr.grand td:last-child {
+    border-bottom-right-radius: 8px;
 }
 
 /* ===== Dice ===== */
 .dice-area {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     background-color: #1b1b2a;
     border-radius: 16px;
-    padding: 18px 12px;
+    padding: 12px;
     border: 1px solid #2d2d40;
 }
 
 .dice-row {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 360px;
 }
 
 .die {
-    width: 58px;
-    height: 58px;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 60px;
+    aspect-ratio: 1 / 1;
     border-radius: 14px;
     background: linear-gradient(145deg, #ffffff, #d9d9e3);
     border: none;
-    padding: 8px;
+    padding: 7px;
     cursor: pointer;
     color: #2a2a3a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
@@ -296,7 +455,7 @@ p {
 .die.held {
     background: linear-gradient(145deg, #d7c4f5, #bb9cf0);
     box-shadow: 0 0 0 3px #bb86fc, 0 4px 8px rgba(0, 0, 0, 0.45);
-    transform: translateY(4px) scale(0.96);
+    transform: translateY(3px) scale(0.96);
     color: #2a1a4a;
 }
 
@@ -318,7 +477,7 @@ p {
 }
 
 .dice-hint {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #8a8a9a;
     min-height: 1.1em;
     text-align: center;
@@ -326,123 +485,8 @@ p {
 
 .roll-btn {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
 }
-
-/* ===== Scorecard ===== */
-.scorecard {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background-color: #262633;
-    border-radius: 16px;
-    padding: 12px;
-    border: 1px solid #33334a;
-}
-
-.section-title {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #9a7fd0;
-    font-weight: 700;
-    padding: 10px 6px 4px 6px;
-}
-
-.score-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #2d2d3d;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 11px 14px;
-    font-size: 0.95rem;
-    color: #e1e1e1;
-    text-align: left;
-    transition: all 0.15s ease;
-    font-family: inherit;
-}
-
-.score-row .score-name {
-    font-weight: 600;
-}
-
-.score-row .score-value {
-    font-weight: 700;
-    min-width: 36px;
-    text-align: right;
-}
-
-.score-row.locked {
-    opacity: 0.55;
-    cursor: default;
-}
-
-.score-row.locked .score-value {
-    color: #777;
-}
-
-.score-row.filled {
-    background-color: #23232f;
-    cursor: default;
-}
-
-.score-row.filled .score-name {
-    color: #9a9a9a;
-}
-
-.score-row.filled .score-value {
-    color: #03dac6;
-}
-
-.score-row.available {
-    cursor: pointer;
-    border-color: #4a3a6a;
-    background-color: #322a48;
-}
-
-.score-row.available:hover,
-.score-row.available:focus {
-    border-color: #bb86fc;
-    background-color: #3c3358;
-    transform: translateX(3px);
-}
-
-.score-value.preview {
-    color: #bb86fc;
-}
-
-.score-value.preview.zero {
-    color: #7a6a9a;
-}
-
-.total-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 9px 14px;
-    font-size: 0.9rem;
-    color: #b0b0b0;
-}
-
-.total-row .score-value {
-    font-weight: 700;
-    color: #d0d0d0;
-}
-
-.total-row.grand {
-    margin-top: 6px;
-    background: linear-gradient(135deg, #5a2ca0, #8a2be2);
-    border-radius: 10px;
-    padding: 13px 14px;
-    color: #fff;
-    font-size: 1.05rem;
-}
-
-.total-row.grand .score-name { font-weight: 700; color: #fff; }
-.total-row.grand .score-value { font-size: 1.25rem; color: #fff; }
 
 /* ===== Standings (intro / game over) ===== */
 .standings-box {
@@ -539,7 +583,8 @@ p {
 .tournament-return-button.hidden { display: none; }
 
 @media (max-width: 360px) {
-    #game-title h1 { font-size: 1.7rem; }
-    .die { width: 50px; height: 50px; }
-    .score-row { font-size: 0.88rem; padding: 10px 12px; }
+    #game-title h1 { font-size: 1.6rem; }
+    .board { font-size: 0.76rem; }
+    .board th, .board td { padding: 5px 3px; }
+    .die { padding: 6px; }
 }
