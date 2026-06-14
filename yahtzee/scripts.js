@@ -27,18 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== DOM =====
     const screens = {
         setup: document.getElementById('setup-screen'),
-        intro: document.getElementById('turn-intro-screen'),
         play: document.getElementById('play-screen'),
         gameover: document.getElementById('gameover-screen')
     };
     const playerCountSelect = document.getElementById('player-count');
     const playerNamesContainer = document.getElementById('player-names-container');
     const startGameBtn = document.getElementById('start-game');
-
-    const introPlayerName = document.getElementById('intro-player-name');
-    const introPlayerInline = document.getElementById('intro-player-inline');
-    const introStandings = document.getElementById('intro-standings');
-    const startTurnBtn = document.getElementById('start-turn');
 
     const turnBanner = document.getElementById('turn-banner');
     const diceRow = document.getElementById('dice-row');
@@ -59,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let rollsLeft = MAX_ROLLS;
     let hasRolled = false;
     let isAnimating = false;
+    let animateTurn = false;    // play the "new player" animation on next render
 
     // ===== Helpers =====
     function showScreen(name) {
@@ -163,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             players.push({ name, scores, color: PLAYER_COLORS[i % PLAYER_COLORS.length] });
         }
         currentPlayer = 0;
-        showTurnIntro();
+        startTurn();
     });
 
     // ===== Standings =====
@@ -189,26 +184,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== Turn intro =====
-    function showTurnIntro() {
-        const p = players[currentPlayer];
-        introPlayerName.textContent = p.name;
-        introPlayerInline.textContent = p.name;
-        renderStandings(introStandings);
-        showScreen('intro');
-    }
-
-    startTurnBtn.addEventListener('click', startTurn);
-
+    // ===== Turn start =====
     function startTurn() {
         rollsLeft = MAX_ROLLS;
         hasRolled = false;
+        animateTurn = true;     // trigger the player-change animation
         dice = [0, 1, 2, 3, 4].map(() => ({ value: 0, held: false }));
+        showScreen('play');
         renderDice();
         renderBanner();
         renderScorecard();
         updateRollUI();
-        showScreen('play');
     }
 
     function renderBanner() {
@@ -301,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cur = players[currentPlayer];
 
         const table = document.createElement('table');
-        table.className = 'board';
+        table.className = 'board' + (animateTurn ? ' turn-enter' : '');
         table.style.setProperty('--current-color', cur.color);
         table.style.setProperty('--current-soft', hexToRgba(cur.color, 0.16));
         table.style.setProperty('--current-soft2', hexToRgba(cur.color, 0.28));
@@ -403,6 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         table.appendChild(tbody);
         scorecard.innerHTML = '';
         scorecard.appendChild(table);
+        animateTurn = false;    // one-shot: don't replay on subsequent re-renders (rolls)
     }
 
     function chooseCategory(key) {
@@ -420,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         currentPlayer = (currentPlayer + 1) % players.length;
-        showTurnIntro();
+        startTurn();
     }
 
     function isGameComplete() {

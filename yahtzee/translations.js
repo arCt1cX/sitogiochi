@@ -46,8 +46,8 @@ const gameTranslations = {
             'threeKind': 'Tris',
             'fourKind': 'Poker',
             'fullHouse': 'Full',
-            'smallStraight': 'Scala Piccola',
-            'largeStraight': 'Scala Grande',
+            'smallStraight': 'Scala P.',
+            'largeStraight': 'Scala G.',
             'yahtzee': 'Yahtzee',
             'chance': 'Chance'
         },
@@ -103,11 +103,11 @@ const gameTranslations = {
             'fours': 'Fours',
             'fives': 'Fives',
             'sixes': 'Sixes',
-            'threeKind': 'Three of a Kind',
-            'fourKind': 'Four of a Kind',
+            'threeKind': '3 of a Kind',
+            'fourKind': '4 of a Kind',
             'fullHouse': 'Full House',
-            'smallStraight': 'Small Straight',
-            'largeStraight': 'Large Straight',
+            'smallStraight': 'Sm. Straight',
+            'largeStraight': 'Lg. Straight',
             'yahtzee': 'Yahtzee',
             'chance': 'Chance'
         },
@@ -149,9 +149,6 @@ function applyGameTranslations() {
     set('setupTitle', t.setupTitle);
     set('playerCountLabel', t.playerCountLabel);
     set('start-game', t.startGame);
-    set('turnTitleText', t.turnTitle);
-    set('passPhoneText', t.passPhone);
-    set('start-turn', t.startTurn);
     set('gameOverTitle', t.gameOverTitle);
     set('winnerTitle', t.winnerTitle);
     set('finalStandingsTitle', t.finalStandingsTitle);

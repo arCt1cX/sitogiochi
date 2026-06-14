@@ -184,30 +184,18 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Turn intro ===== */
-.big-player-name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f1f1f1;
-    text-align: center;
-    text-shadow: 0 0 12px rgba(187, 134, 252, 0.4);
-}
-
-#intro-player-inline {
-    color: #bb86fc;
-    font-weight: bold;
-}
-
 /* ===== Play screen: board on top, dice pinned at bottom ===== */
 /* While playing, lock the page to the viewport so only the board scrolls. */
 body.playing {
     overflow: hidden;
 }
 
+/* Use the full width of the screen while playing so all columns fit. */
 body.playing .container {
     height: 100vh;
     height: 100dvh;
     min-height: 0;
+    padding: 8px 6px;
 }
 
 #game-title {
@@ -215,8 +203,12 @@ body.playing .container {
 }
 
 body.playing #game-title {
-    margin-bottom: 12px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+}
+
+body.playing #game-title h1 {
+    font-size: 1.5rem;
 }
 
 #play-screen.active {
@@ -225,8 +217,8 @@ body.playing #game-title {
     flex: 1 1 auto;
     min-height: 0;
     overflow: hidden;
-    gap: 12px;
-    padding: 14px;
+    gap: 8px;
+    padding: 6px;
     margin-bottom: 0;
 }
 
@@ -235,7 +227,7 @@ body.playing #game-title {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     flex-shrink: 0;
@@ -246,22 +238,34 @@ body.playing #game-title {
     height: 14px;
     border-radius: 50%;
     box-shadow: 0 0 8px currentColor;
+    animation: bannerIn 0.4s ease;
+}
+
+.turn-banner .banner-name {
+    animation: bannerIn 0.4s ease;
+}
+
+@keyframes bannerIn {
+    0% { opacity: 0; transform: translateY(-8px) scale(0.85); }
+    100% { opacity: 1; transform: none; }
 }
 
 /* ===== Board (all players) ===== */
 .scorecard {
     flex: 1 1 auto;
     min-height: 0;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     background-color: #23232f;
     border-radius: 14px;
-    padding: 6px;
+    padding: 5px;
     border: 1px solid #33334a;
 }
 
 .board {
     width: 100%;
+    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
     font-size: 0.82rem;
@@ -269,8 +273,18 @@ body.playing #game-title {
 
 .board th,
 .board td {
-    padding: 6px 4px;
+    padding: 5px 2px;
     text-align: center;
+    line-height: 1.05;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Category label column: fixed share, the rest split evenly between players */
+.board th.cat-head,
+.board td.cat {
+    width: 27%;
 }
 
 .board thead th {
@@ -283,16 +297,24 @@ body.playing #game-title {
 .board .player-head {
     border-top: 3px solid transparent;
     border-radius: 8px 8px 0 0;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 700;
-    max-width: 70px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .board .player-head.current {
     color: #15151f;
+}
+
+.board.turn-enter .player-head.current {
+    animation: headPop 0.45s ease;
+}
+
+@keyframes headPop {
+    0% { transform: scale(0.8); opacity: 0.4; }
+    60% { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .board .cat-head,
@@ -341,6 +363,15 @@ body.playing #game-title {
     background-color: var(--current-soft) !important;
 }
 
+.board.turn-enter td.current-col {
+    animation: colFade 0.55s ease;
+}
+
+@keyframes colFade {
+    from { background-color: transparent; }
+    to { background-color: var(--current-soft); }
+}
+
 .board td.cell.preview {
     color: var(--current-color);
     cursor: pointer;
@@ -361,10 +392,10 @@ body.playing #game-title {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    font-size: 0.68rem;
+    font-size: 0.64rem;
     font-weight: 700;
     color: #9a7fd0;
-    padding: 10px 8px 4px 8px;
+    padding: 7px 8px 3px 8px;
     background: #23232f;
     position: sticky;
     left: 0;
@@ -385,10 +416,10 @@ body.playing #game-title {
 .board tr.grand td {
     color: #fff;
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     background-color: #3a2470;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .board tr.grand td.cat {
@@ -410,10 +441,10 @@ body.playing #game-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background-color: #1b1b2a;
     border-radius: 16px;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #2d2d40;
 }
 
@@ -423,15 +454,15 @@ body.playing #game-title {
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
 }
 
 .die {
     flex: 1 1 0;
     min-width: 0;
-    max-width: 60px;
+    max-width: 54px;
     aspect-ratio: 1 / 1;
-    border-radius: 14px;
+    border-radius: 13px;
     background: linear-gradient(145deg, #ffffff, #d9d9e3);
     border: none;
     padding: 7px;
@@ -477,15 +508,17 @@ body.playing #game-title {
 }
 
 .dice-hint {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: #8a8a9a;
-    min-height: 1.1em;
+    min-height: 1.05em;
     text-align: center;
+    margin: 0;
 }
 
 .roll-btn {
     width: 100%;
     max-width: 360px;
+    padding: 12px 22px;
 }
 
 /* ===== Standings (intro / game over) ===== */
