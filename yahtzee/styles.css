@@ -250,13 +250,11 @@ body.playing #game-title h1 {
     100% { opacity: 1; transform: none; }
 }
 
-/* ===== Board (all players) ===== */
+/* ===== Board (all players) — CSS grid that always fits, never scrolls ===== */
 .scorecard {
     flex: 1 1 auto;
     min-height: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
     background-color: #23232f;
     border-radius: 14px;
     padding: 5px;
@@ -266,58 +264,59 @@ body.playing #game-title h1 {
 }
 
 .board {
-    width: 100%;
-    /* Grow to fill the available height so rows distribute and there is no
-       empty space at the bottom; if content is taller, the scorecard scrolls. */
-    flex: 1 0 auto;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    /* grid-template-columns set inline (1.5fr + one 1fr per player) */
+    /* All rows share the height equally and shrink to fit — no scroll. */
+    grid-auto-rows: minmax(0, 1fr);
+    gap: 2px;
     font-size: 0.85rem;
 }
 
-.board th,
-.board td {
-    padding: 8px 2px;
-    text-align: center;
-    line-height: 1.1;
+/* Generic grid cell */
+.gc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 2px 3px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    border-radius: 4px;
 }
 
-/* Category label column: fixed share, the rest split evenly between players */
-.board th.cat-head,
-.board td.cat {
-    width: 30%;
+/* Category label cells (first column) */
+.gc.cat {
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 8px;
+    color: #cfcfe0;
+    font-weight: 600;
 }
 
-/* Long labels (e.g. "Scala Piccola") shrink a bit to stay on one line */
-.board td.cat.long {
+.gc.cat.long {
     font-size: 0.74rem;
 }
 
-.board thead th {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    background: #23232f;
+/* Player header cells */
+.gc.cathead {
+    background: transparent;
 }
 
-.board .player-head {
+.gc.phead {
     border-top: 3px solid transparent;
-    border-radius: 8px 8px 0 0;
-    font-size: 0.76rem;
+    border-radius: 8px 8px 4px 4px;
     font-weight: 700;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    font-size: 0.8rem;
 }
 
-.board .player-head.current {
+.gc.phead.current {
     color: #15151f;
 }
 
-.board.turn-enter .player-head.current {
+.board.turn-enter .gc.phead.current {
     animation: headPop 0.45s ease;
 }
 
@@ -327,53 +326,43 @@ body.playing #game-title h1 {
     100% { transform: scale(1); opacity: 1; }
 }
 
-.board .cat-head,
-.board td.cat {
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    text-align: left;
-    white-space: nowrap;
-    background: #23232f;
-    color: #cfcfe0;
-    font-weight: 600;
+/* Section divider rows span the whole width */
+.gc.section {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 0.64rem;
+    font-weight: 700;
+    color: #9a7fd0;
     padding-left: 8px;
-    padding-right: 10px;
 }
 
-.board thead .cat-head {
-    z-index: 4;
-}
-
-.board tbody tr:nth-child(even) td {
-    background-color: #282836;
-}
-
-.board tbody tr:nth-child(even) td.cat {
-    background-color: #282836;
-}
-
-.board td.cell {
+/* Value cells */
+.gc.cell {
     font-weight: 700;
     color: #d8d8e4;
-    min-width: 36px;
 }
 
-.board td.cell.empty {
+.gc.stripe {
+    background-color: #2b2b3a;
+}
+
+.gc.cell.empty {
     color: #555;
     font-weight: 400;
 }
 
-.board td.cell.scored {
+.gc.cell.scored {
     color: #03dac6;
 }
 
 /* Current player's column highlight */
-.board td.current-col {
+.gc.current-col {
     background-color: var(--current-soft) !important;
 }
 
-.board.turn-enter td.current-col {
+.board.turn-enter .gc.current-col {
     animation: colFade 0.55s ease;
 }
 
@@ -382,67 +371,35 @@ body.playing #game-title h1 {
     to { background-color: var(--current-soft); }
 }
 
-.board td.cell.preview {
+.gc.cell.preview {
     color: var(--current-color);
     cursor: pointer;
-    border-radius: 6px;
     box-shadow: inset 0 0 0 1.5px var(--current-color);
 }
 
-.board td.cell.preview.zero {
+.gc.cell.preview.zero {
     opacity: 0.6;
 }
 
-.board td.cell.preview:hover,
-.board td.cell.preview:active {
+.gc.cell.preview:hover,
+.gc.cell.preview:active {
     background-color: var(--current-soft2) !important;
 }
 
-.board tr.section td {
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    font-size: 0.64rem;
-    font-weight: 700;
-    color: #9a7fd0;
-    padding: 7px 8px 3px 8px;
-    background: #23232f;
-    position: sticky;
-    left: 0;
-}
-
-.board tr.subtotal td {
+/* Subtotal / bonus rows */
+.gc.subtotal {
+    background-color: #1f1f29;
     color: #9a9a9a;
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    background-color: #1f1f29;
 }
 
-.board tr.subtotal td.cat {
-    background-color: #1f1f29;
-    color: #9a9a9a;
-}
-
-.board tr.grand td {
+/* Grand total row */
+.gc.grand {
+    background-color: #3a2470;
     color: #fff;
     font-weight: 800;
     font-size: 0.92rem;
-    background-color: #3a2470;
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-.board tr.grand td.cat {
-    background-color: #3a2470;
-    color: #fff;
-}
-
-.board tr.grand td:first-child {
-    border-bottom-left-radius: 8px;
-}
-
-.board tr.grand td:last-child {
-    border-bottom-right-radius: 8px;
 }
 
 /* ===== Dice ===== */
@@ -627,7 +584,8 @@ body.playing #game-title h1 {
 
 @media (max-width: 360px) {
     #game-title h1 { font-size: 1.6rem; }
-    .board { font-size: 0.76rem; }
-    .board th, .board td { padding: 5px 3px; }
+    .board { font-size: 0.78rem; }
+    .gc { padding: 2px; }
+    .gc.cat { padding-left: 6px; }
     .die { padding: 6px; }
 }

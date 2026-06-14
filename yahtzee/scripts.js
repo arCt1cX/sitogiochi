@@ -280,115 +280,80 @@ document.addEventListener('DOMContentLoaded', () => {
         rollBtn.classList.toggle('disabled', rollBtn.disabled);
     }
 
-    // ===== Scorecard (full board: all players as columns) =====
+    // ===== Scorecard (full board: all players as columns, CSS grid) =====
     function renderScorecard() {
         const t = getGameTranslations();
         const values = diceValues();
         const cur = players[currentPlayer];
 
-        const table = document.createElement('table');
-        table.className = 'board' + (animateTurn ? ' turn-enter' : '');
-        table.style.setProperty('--current-color', cur.color);
-        table.style.setProperty('--current-soft', hexToRgba(cur.color, 0.16));
-        table.style.setProperty('--current-soft2', hexToRgba(cur.color, 0.28));
+        const board = document.createElement('div');
+        board.className = 'board' + (animateTurn ? ' turn-enter' : '');
+        board.style.gridTemplateColumns = `1.5fr repeat(${players.length}, 1fr)`;
+        board.style.setProperty('--current-color', cur.color);
+        board.style.setProperty('--current-soft', hexToRgba(cur.color, 0.16));
+        board.style.setProperty('--current-soft2', hexToRgba(cur.color, 0.28));
 
-        // ---- Header: category column + one column per player ----
-        const thead = document.createElement('thead');
-        const hr = document.createElement('tr');
-        const corner = document.createElement('th');
-        corner.className = 'cat-head';
-        hr.appendChild(corner);
-        players.forEach((p, idx) => {
-            const th = document.createElement('th');
-            th.className = 'player-head' + (idx === currentPlayer ? ' current' : '');
-            th.style.borderTopColor = p.color;
-            if (idx === currentPlayer) {
-                th.style.background = p.color;
-            } else {
-                th.style.color = p.color;
-            }
-            th.textContent = p.name;
-            hr.appendChild(th);
-        });
-        thead.appendChild(hr);
-        table.appendChild(thead);
-
-        const tbody = document.createElement('tbody');
-
-        const sectionRow = (txt) => {
-            const tr = document.createElement('tr');
-            tr.className = 'section';
-            const td = document.createElement('td');
-            td.colSpan = players.length + 1;
-            td.textContent = txt;
-            tr.appendChild(td);
-            tbody.appendChild(tr);
+        const addCell = (cls, text) => {
+            const d = document.createElement('div');
+            d.className = cls;
+            if (text !== undefined) d.textContent = text;
+            board.appendChild(d);
+            return d;
         };
 
+        // ---- Header: empty corner + one cell per player ----
+        addCell('gc cathead');
+        players.forEach((p, idx) => {
+            const th = addCell('gc phead' + (idx === currentPlayer ? ' current' : ''), p.name);
+            th.style.borderTopColor = p.color;
+            if (idx === currentPlayer) th.style.background = p.color;
+            else th.style.color = p.color;
+        });
+
+        const section = (txt) => addCell('gc section', txt);
+
+        let dataIndex = 0;
         const dataRow = (key, label) => {
-            const tr = document.createElement('tr');
-            const labelTd = document.createElement('td');
-            labelTd.className = 'cat' + (label.length > 8 ? ' long' : '');
-            labelTd.textContent = label;
-            tr.appendChild(labelTd);
-
+            const stripe = (dataIndex++ % 2 === 1) ? ' stripe' : '';
+            addCell('gc cat' + (label.length > 8 ? ' long' : '') + stripe, label);
             players.forEach((p, idx) => {
-                const td = document.createElement('td');
-                td.className = 'cell';
-                if (idx === currentPlayer) td.classList.add('current-col');
+                const isCur = idx === currentPlayer;
+                const base = 'gc cell' + stripe + (isCur ? ' current-col' : '');
                 const filled = p.scores[key] !== null;
-
                 if (filled) {
-                    td.classList.add('scored');
-                    td.textContent = p.scores[key];
-                } else if (idx === currentPlayer && hasRolled) {
+                    addCell(base + ' scored', p.scores[key]);
+                } else if (isCur && hasRolled) {
                     const preview = scoreFor(key, values);
-                    td.classList.add('preview');
-                    if (preview === 0) td.classList.add('zero');
-                    td.textContent = preview;
-                    td.addEventListener('click', () => chooseCategory(key));
+                    const c = addCell(base + ' preview' + (preview === 0 ? ' zero' : ''), preview);
+                    c.addEventListener('click', () => chooseCategory(key));
                 } else {
-                    td.classList.add('empty');
-                    td.textContent = '·';
+                    addCell(base + ' empty', '·');
                 }
-                tr.appendChild(td);
             });
-            tbody.appendChild(tr);
         };
 
         const totalRow = (label, valueFn, cls) => {
-            const tr = document.createElement('tr');
-            tr.className = cls;
-            const labelTd = document.createElement('td');
-            labelTd.className = 'cat' + (label.length > 8 ? ' long' : '');
-            labelTd.textContent = label;
-            tr.appendChild(labelTd);
+            addCell('gc cat ' + cls + (label.length > 8 ? ' long' : ''), label);
             players.forEach((p, idx) => {
-                const td = document.createElement('td');
-                td.className = 'cell';
-                if (idx === currentPlayer) td.classList.add('current-col');
-                td.textContent = valueFn(p);
-                tr.appendChild(td);
+                addCell('gc cell ' + cls + (idx === currentPlayer ? ' current-col' : ''), valueFn(p));
             });
-            tbody.appendChild(tr);
         };
 
         // Upper section
-        sectionRow(t.upperSection);
+        section(t.upperSection);
         UPPER.forEach(u => dataRow(u.key, t.categories[u.key]));
         totalRow(t.upperTotalLabel, p => `${upperSubtotal(p)}/${UPPER_BONUS_THRESHOLD}`, 'subtotal');
         totalRow(t.bonusLabel, p => `+${upperBonus(p)}`, 'subtotal');
 
         // Lower section
-        sectionRow(t.lowerSection);
+        section(t.lowerSection);
         LOWER.forEach(k => dataRow(k, t.categories[k]));
 
         // Grand total
         totalRow(t.totalLabel, p => playerTotal(p), 'grand');
 
-        table.appendChild(tbody);
         scorecard.innerHTML = '';
-        scorecard.appendChild(table);
+        scorecard.appendChild(board);
         animateTurn = false;    // one-shot: don't replay on subsequent re-renders (rolls)
     }
 
