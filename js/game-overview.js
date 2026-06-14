@@ -425,6 +425,7 @@
             'drewnking': 'picolo.png',
             'impostor': 'impostor.png',
             'taboo': 'taboo.png',
+            'yahtzee': 'yahtzee.png',
             'mrdrew': 'mrdrew.png',
             'hottakes': 'hottakes.png',
             'indovinachi': 'indovinachi.png',

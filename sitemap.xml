@@ -35,6 +35,15 @@
   
   <!-- Games -->
   <url>
+    <loc>https://www.partygamesdrew.com/yahtzee/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/yahtzee/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/yahtzee/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/yahtzee/"/>
+  </url>
+  <url>
     <loc>https://www.partygamesdrew.com/taboo/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>

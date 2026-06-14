@@ -114,6 +114,28 @@ const translations = {
                 'Quando il tempo scade si cambia turno: vince chi raggiunge per primo il punteggio obiettivo!'
             ]
         },
+        'yahtzee': {
+            'title': 'Yahtzee',
+            'catchphrase': 'Lancia i dadi e cerca le combinazioni!',
+            'description': 'Yahtzee è il classico gioco di dadi. A turno lanci cinque dadi fino a tre volte, bloccando quelli che vuoi tenere, e scegli in quale combinazione segnare il punteggio. Riempi tutta la scheda e fai più punti degli avversari: occhio alla scala, al full e soprattutto allo Yahtzee!',
+            'players': '1-8 giocatori',
+            'time': '15-30 minuti',
+            'difficulty': 'Facile',
+            'features': [
+                'Tabellone e dadi grafici curati',
+                'Animazione veloce di lancio dei dadi',
+                'Da 1 a 8 giocatori, a turni sullo stesso telefono',
+                'Punteggi e bonus calcolati in automatico'
+            ],
+            'instructions': [
+                'A turno, lancia i cinque dadi (fino a tre lanci per turno)',
+                'Tocca i dadi che vuoi bloccare e rilancia gli altri',
+                'Scegli una casella libera della scheda dove segnare il punteggio',
+                'La sezione superiore dà un bonus se arrivi a 63 punti',
+                'Combinazioni speciali: tris, poker, full, scale e Yahtzee',
+                'Quando tutte le caselle sono piene, vince chi ha più punti!'
+            ]
+        },
         'colorgrid': {
             'title': 'Color Grid',
             'catchphrase': 'Indovina la cella colorata segreta!',
@@ -508,6 +530,28 @@ const translations = {
                 'Tap "Correct" for every right guess: both the describer and the guesser earn the point',
                 'Tap "Taboo" if a forbidden word is said (-1 point), or "Skip" to pass',
                 'When time runs out the turn changes: the first to reach the target score wins!'
+            ]
+        },
+        'yahtzee': {
+            'title': 'Yahtzee',
+            'catchphrase': 'Roll the dice and chase the combos!',
+            'description': 'Yahtzee is the classic dice game. On your turn you roll five dice up to three times, holding the ones you want to keep, then choose which combination to score. Fill in the whole scorecard and outscore your rivals: watch out for straights, full houses and above all the Yahtzee!',
+            'players': '1-8 players',
+            'time': '15-30 minutes',
+            'difficulty': 'Easy',
+            'features': [
+                'Polished board and graphical dice',
+                'Quick dice-roll animation',
+                '1 to 8 players, taking turns on the same phone',
+                'Scores and bonuses calculated automatically'
+            ],
+            'instructions': [
+                'On your turn, roll the five dice (up to three rolls per turn)',
+                'Tap the dice you want to hold and roll the rest',
+                'Pick an empty box on the scorecard to record your score',
+                'The upper section gives a bonus if you reach 63 points',
+                'Special combos: three of a kind, four of a kind, full house, straights and Yahtzee',
+                'When every box is filled, the highest score wins!'
             ]
         },
         'colorgrid': {

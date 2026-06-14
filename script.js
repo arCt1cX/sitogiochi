@@ -57,6 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
             instructions: getTranslation('taboo', 'instructions')
         },
         {
+            id: "yahtzee",
+            displayName: getTranslation('yahtzee', 'title'),
+            catchphrase: getTranslation('yahtzee', 'catchphrase'),
+            image: "yahtzee.png",
+            players: getTranslation('yahtzee', 'players'),
+            time: getTranslation('yahtzee', 'time'),
+            difficulty: getTranslation('yahtzee', 'difficulty'),
+            description: getTranslation('yahtzee', 'description'),
+            features: getTranslation('yahtzee', 'features'),
+            instructions: getTranslation('yahtzee', 'instructions')
+        },
+        {
             id: "mrdrew",
             displayName: getTranslation('mrdrew', 'title'),
             catchphrase: getTranslation('mrdrew', 'catchphrase'),

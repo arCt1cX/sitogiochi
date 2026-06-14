@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+        if (isItalian) {
+            document.write('<title>Yahtzee - Il classico gioco di dadi | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Yahtzee: lancia i cinque dadi, scegli le combinazioni e fai più punti degli avversari! Il classico gioco di dadi da fare con gli amici offline.">');
+        } else {
+            document.write('<title>Yahtzee - The classic dice game | DrewGames</title>');
+            document.write('<meta name="description" content="Play Yahtzee: roll the five dice, pick your combinations and outscore your rivals! The classic dice game to play with friends offline.">');
+        }
+    </script>
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/yahtzee/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/yahtzee/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/yahtzee/" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.partygamesdrew.com/yahtzee/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+    <style>
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .home-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(71, 60, 139, 0.8);
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body data-game-id="yahtzee">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
+            id="homeText">Home</span></button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Yahtzee</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
+                <select id="player-count">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div id="player-names-container"></div>
+            <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
+        </div>
+
+        <!-- Turn Intro Screen -->
+        <div id="turn-intro-screen" class="game-screen">
+            <h2><span id="turnTitleText">Tocca a:</span></h2>
+            <p class="big-player-name" id="intro-player-name"></p>
+            <p><span id="passPhoneText">Passa il telefono a</span> <span id="intro-player-inline"></span></p>
+            <div id="intro-standings" class="standings-box"></div>
+            <button id="start-turn" class="btn primary-btn pulse-btn">Inizia il Turno</button>
+        </div>
+
+        <!-- Play Screen -->
+        <div id="play-screen" class="game-screen">
+            <div class="play-top">
+                <div class="turn-banner" id="turn-banner"></div>
+                <div class="scoreboard-chips" id="scoreboard-chips"></div>
+            </div>
+
+            <div class="dice-area">
+                <div class="dice-row" id="dice-row"></div>
+                <p class="dice-hint" id="dice-hint"></p>
+                <button id="roll-btn" class="btn primary-btn roll-btn"></button>
+            </div>
+
+            <div class="scorecard" id="scorecard"></div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="game-screen">
+            <div class="reveal-header">
+                <h2 id="gameOverTitle">Partita Finita!</h2>
+                <p class="subtitle-text" id="winnerTitle">Vince...</p>
+                <p class="winner-name" id="winner-name"></p>
+            </div>
+            <h3 class="standings-title" id="finalStandingsTitle">Classifica Finale</h3>
+            <div id="final-standings" class="standings-box"></div>
+            <button id="play-again" class="btn primary-btn">Gioca di Nuovo</button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="../js/game-overview.js" defer></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
