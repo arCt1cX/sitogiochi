@@ -261,21 +261,26 @@ body.playing #game-title h1 {
     border-radius: 14px;
     padding: 5px;
     border: 1px solid #33334a;
+    display: flex;
+    flex-direction: column;
 }
 
 .board {
     width: 100%;
+    /* Grow to fill the available height so rows distribute and there is no
+       empty space at the bottom; if content is taller, the scorecard scrolls. */
+    flex: 1 0 auto;
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
 }
 
 .board th,
 .board td {
-    padding: 5px 2px;
+    padding: 8px 2px;
     text-align: center;
-    line-height: 1.05;
+    line-height: 1.1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -284,7 +289,12 @@ body.playing #game-title h1 {
 /* Category label column: fixed share, the rest split evenly between players */
 .board th.cat-head,
 .board td.cat {
-    width: 27%;
+    width: 30%;
+}
+
+/* Long labels (e.g. "Scala Piccola") shrink a bit to stay on one line */
+.board td.cat.long {
+    font-size: 0.74rem;
 }
 
 .board thead th {

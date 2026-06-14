@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataRow = (key, label) => {
             const tr = document.createElement('tr');
             const labelTd = document.createElement('td');
-            labelTd.className = 'cat';
+            labelTd.className = 'cat' + (label.length > 8 ? ' long' : '');
             labelTd.textContent = label;
             tr.appendChild(labelTd);
 
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tr = document.createElement('tr');
             tr.className = cls;
             const labelTd = document.createElement('td');
-            labelTd.className = 'cat';
+            labelTd.className = 'cat' + (label.length > 8 ? ' long' : '');
             labelTd.textContent = label;
             tr.appendChild(labelTd);
             players.forEach((p, idx) => {
