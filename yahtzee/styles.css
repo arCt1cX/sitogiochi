@@ -278,6 +278,23 @@ body.playing #game-title h1 {
     font-size: 0.74rem;
 }
 
+/* Category icon cells (dice faces / symbols instead of words) */
+.gc.icon-cell {
+    justify-content: center;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #e7e7f2;
+}
+
+.cat-icon {
+    height: 74%;
+    width: auto;
+    max-width: 94%;
+    max-height: 30px;
+    display: block;
+    overflow: visible;
+}
+
 /* Player header cells */
 .gc.cathead {
     background: transparent;

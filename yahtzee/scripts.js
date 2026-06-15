@@ -234,6 +234,82 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${pips}</svg>`;
     }
 
+    // ===== Category icons (drawn, tinted via currentColor) =====
+    const UPPER_FACE = { ones: 1, twos: 2, threes: 3, fours: 4, fives: 5, sixes: 6 };
+
+    function svgWrap(inner) {
+        return `<svg class="cat-icon" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+    }
+
+    function rowDots(n, r) {
+        let s = '';
+        for (let i = 0; i < n; i++) {
+            const cx = (i + 1) * 100 / (n + 1);
+            s += `<circle cx="${cx}" cy="30" r="${r}" fill="currentColor"/>`;
+        }
+        return s;
+    }
+
+    function starPath(cx, cy, R) {
+        const r = R * 0.42;
+        let pts = '';
+        for (let i = 0; i < 10; i++) {
+            const ang = -Math.PI / 2 + i * Math.PI / 5;
+            const rad = i % 2 === 0 ? R : r;
+            pts += `${cx + Math.cos(ang) * rad},${cy + Math.sin(ang) * rad} `;
+        }
+        return `<polygon points="${pts.trim()}" fill="currentColor"/>`;
+    }
+
+    function categoryIconSVG(key) {
+        // Upper section: a die with the matching number of pips
+        if (UPPER_FACE[key] !== undefined) {
+            const face = UPPER_FACE[key];
+            const map = {
+                1: [[50, 30]],
+                2: [[30, 16], [70, 44]],
+                3: [[26, 14], [50, 30], [74, 46]],
+                4: [[30, 14], [70, 14], [30, 46], [70, 46]],
+                5: [[30, 14], [70, 14], [50, 30], [30, 46], [70, 46]],
+                6: [[30, 13], [70, 13], [30, 30], [70, 30], [30, 47], [70, 47]]
+            };
+            const pips = map[face].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="6.5" fill="currentColor"/>`).join('');
+            return svgWrap(`<rect x="24" y="4" width="52" height="52" rx="11" fill="none" stroke="currentColor" stroke-width="4.5"/>${pips}`);
+        }
+        switch (key) {
+            case 'threeKind': return svgWrap(rowDots(3, 11));
+            case 'fourKind': return svgWrap(rowDots(4, 9.5));
+            case 'fullHouse': {
+                // three circles + two circles (3 + 2)
+                let s = '';
+                [20, 34, 48].forEach(cx => { s += `<circle cx="${cx}" cy="30" r="9" fill="currentColor"/>`; });
+                [70, 84].forEach(cx => { s += `<circle cx="${cx}" cy="30" r="9" fill="currentColor"/>`; });
+                return svgWrap(s);
+            }
+            case 'smallStraight':
+            case 'largeStraight': {
+                const n = key === 'smallStraight' ? 4 : 5;
+                let s = '';
+                const w = 11, base = 54, gap = (100 - n * w) / (n + 1);
+                for (let i = 0; i < n; i++) {
+                    const x = gap + i * (w + gap);
+                    const h = 16 + i * (38 / (n - 1));
+                    s += `<rect x="${x}" y="${base - h}" width="${w}" height="${h}" rx="2.5" fill="currentColor"/>`;
+                }
+                return svgWrap(s);
+            }
+            case 'yahtzee': {
+                let s = '';
+                [14, 32, 50, 68, 86].forEach(cx => { s += starPath(cx, 30, 9); });
+                return svgWrap(s);
+            }
+            case 'chance':
+                return svgWrap(`<rect x="24" y="4" width="52" height="52" rx="11" fill="none" stroke="currentColor" stroke-width="4.5"/><text x="50" y="44" font-size="40" font-weight="700" text-anchor="middle" fill="currentColor" font-family="Montserrat, sans-serif">?</text>`);
+            default:
+                return '';
+        }
+    }
+
     function renderDice() {
         diceRow.innerHTML = '';
         dice.forEach((d, i) => {
@@ -354,12 +430,13 @@ document.addEventListener('DOMContentLoaded', () => {
             else th.style.color = p.color;
         });
 
-        const section = (txt) => addCell('gc section', txt);
-
         let dataIndex = 0;
         const dataRow = (key, label) => {
             const stripe = (dataIndex++ % 2 === 1) ? ' stripe' : '';
-            addCell('gc cat' + (label.length > 8 ? ' long' : '') + stripe, label);
+            const labelCell = addCell('gc cat icon-cell' + stripe);
+            labelCell.innerHTML = categoryIconSVG(key);
+            labelCell.setAttribute('aria-label', label);
+            labelCell.title = label;
             players.forEach((p, idx) => {
                 const isCur = idx === currentPlayer;
                 const base = 'gc cell' + stripe + (isCur ? ' current-col' : '');
@@ -383,14 +460,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Upper section
-        section(t.upperSection);
+        // Upper section (dice-face icons, no section header)
         UPPER.forEach(u => dataRow(u.key, t.categories[u.key]));
         totalRow(t.upperTotalLabel, p => `${upperSubtotal(p)}/${UPPER_BONUS_THRESHOLD}`, 'subtotal');
         totalRow(t.bonusLabel, p => `+${upperBonus(p)}`, 'subtotal');
 
-        // Lower section
-        section(t.lowerSection);
+        // Lower section (symbol icons)
         LOWER.forEach(k => dataRow(k, t.categories[k]));
 
         // Grand total
