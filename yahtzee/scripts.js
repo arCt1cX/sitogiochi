@@ -34,11 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerNamesContainer = document.getElementById('player-names-container');
     const startGameBtn = document.getElementById('start-game');
 
-    const turnBanner = document.getElementById('turn-banner');
     const diceRow = document.getElementById('dice-row');
-    const diceHint = document.getElementById('dice-hint');
     const rollBtn = document.getElementById('roll-btn');
     const scorecard = document.getElementById('scorecard');
+    const sparkleLayer = document.getElementById('sparkle-layer');
 
     const winnerNameEl = document.getElementById('winner-name');
     const finalStandings = document.getElementById('final-standings');
@@ -192,16 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
         dice = [0, 1, 2, 3, 4].map(() => ({ value: 0, held: false }));
         showScreen('play');
         renderDice();
-        renderBanner();
         renderScorecard();
         updateRollUI();
-    }
-
-    function renderBanner() {
-        const t = getGameTranslations();
-        const p = players[currentPlayer];
-        turnBanner.innerHTML = `<span class="banner-dot" style="background:${p.color}"></span>` +
-            `<span class="banner-name" style="color:${p.color}">${p.name}</span>`;
     }
 
     // ===== Dice =====
@@ -263,6 +254,10 @@ document.addEventListener('DOMContentLoaded', () => {
             renderDice();
             renderScorecard();
             updateRollUI();
+            // Sparkle feedback: a small burst on every roll, a big golden
+            // celebration when the five dice make a Yahtzee.
+            const isYahtzee = counts(diceValues()).some(c => c === 5);
+            spawnSparkles(isYahtzee);
         }, 450);
     }
 
@@ -270,14 +265,45 @@ document.addEventListener('DOMContentLoaded', () => {
         const t = getGameTranslations();
         if (!hasRolled) {
             rollBtn.textContent = t.rollBtn;
-            diceHint.textContent = t.rollToStart;
         } else {
             const rollNum = MAX_ROLLS - rollsLeft;
             rollBtn.textContent = `${t.rollAgainBtn} (${t.rollLabel} ${rollNum} ${t.of} ${MAX_ROLLS})`;
-            diceHint.textContent = rollsLeft > 0 ? t.holdHint : t.chooseHint;
         }
         rollBtn.disabled = rollsLeft <= 0 || isAnimating;
         rollBtn.classList.toggle('disabled', rollBtn.disabled);
+        // Colour the roll button with the current player's colour so it's
+        // always clear whose turn it is (greys out when no rolls are left).
+        if (rollBtn.disabled) {
+            rollBtn.style.background = '';
+            rollBtn.style.color = '';
+        } else {
+            rollBtn.style.background = players[currentPlayer].color;
+            rollBtn.style.color = '#15151f';
+        }
+    }
+
+    // ===== Sparkle effect =====
+    function spawnSparkles(big) {
+        if (!sparkleLayer) return;
+        const colors = big
+            ? ['#ffd166', '#ffe9a8', '#ffffff', players[currentPlayer].color]
+            : [players[currentPlayer].color, '#ffd166', '#ffffff'];
+        const count = big ? 28 : 12;
+        for (let i = 0; i < count; i++) {
+            const s = document.createElement('span');
+            s.className = 'sparkle';
+            const size = (big ? 14 : 8) + Math.random() * (big ? 16 : 10);
+            s.style.width = s.style.height = `${size}px`;
+            s.style.left = `${5 + Math.random() * 90}%`;
+            s.style.top = `${Math.random() * 75}%`;
+            s.style.background = colors[Math.floor(Math.random() * colors.length)];
+            s.style.setProperty('--dx', `${(Math.random() - 0.5) * (big ? 120 : 70)}px`);
+            s.style.setProperty('--dy', `${-20 - Math.random() * (big ? 90 : 50)}px`);
+            s.style.setProperty('--rot', `${(Math.random() - 0.5) * 240}deg`);
+            s.style.animationDelay = `${Math.random() * (big ? 180 : 100)}ms`;
+            sparkleLayer.appendChild(s);
+            setTimeout(() => s.remove(), 1000);
+        }
     }
 
     // ===== Scorecard (full board: all players as columns, CSS grid) =====

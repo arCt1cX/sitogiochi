@@ -222,34 +222,6 @@ body.playing #game-title h1 {
     margin-bottom: 0;
 }
 
-.turn-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
-}
-
-.turn-banner .banner-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    box-shadow: 0 0 8px currentColor;
-    animation: bannerIn 0.4s ease;
-}
-
-.turn-banner .banner-name {
-    animation: bannerIn 0.4s ease;
-}
-
-@keyframes bannerIn {
-    0% { opacity: 0; transform: translateY(-8px) scale(0.85); }
-    100% { opacity: 1; transform: none; }
-}
-
 /* ===== Board (all players) — CSS grid that always fits, never scrolls ===== */
 .scorecard {
     flex: 1 1 auto;
@@ -404,6 +376,7 @@ body.playing #game-title h1 {
 
 /* ===== Dice ===== */
 .dice-area {
+    position: relative;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -474,18 +447,37 @@ body.playing #game-title h1 {
     100% { transform: translateY(0) rotate(360deg); }
 }
 
-.dice-hint {
-    font-size: 0.78rem;
-    color: #8a8a9a;
-    min-height: 1.05em;
-    text-align: center;
-    margin: 0;
-}
-
 .roll-btn {
     width: 100%;
     max-width: 360px;
-    padding: 12px 22px;
+    padding: 13px 22px;
+}
+
+/* ===== Sparkles (dice roll / Yahtzee celebration) ===== */
+.sparkle-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 5;
+}
+
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 2px;
+    /* star shape */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: sparklePop 0.85s ease-out forwards;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes sparklePop {
+    0% { transform: translate(0, 0) scale(0) rotate(0deg); opacity: 0; }
+    25% { opacity: 1; }
+    100% { transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); opacity: 0; }
 }
 
 /* ===== Standings (intro / game over) ===== */
