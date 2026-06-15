@@ -287,12 +287,12 @@ body.playing #game-title h1 {
 }
 
 .cat-icon {
-    height: 74%;
+    height: 88%;
     width: auto;
-    max-width: 94%;
-    max-height: 30px;
+    max-width: 88%;
+    max-height: 34px;
+    aspect-ratio: 1 / 1;
     display: block;
-    overflow: visible;
 }
 
 /* Player header cells */
@@ -305,6 +305,13 @@ body.playing #game-title h1 {
     border-radius: 8px 8px 4px 4px;
     font-weight: 700;
     font-size: 0.8rem;
+}
+
+.gc.phead .phead-name {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .gc.phead.current {

@@ -234,77 +234,90 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${pips}</svg>`;
     }
 
-    // ===== Category icons (drawn, tinted via currentColor) =====
+    // ===== Category icons (drawn as a real die / clean symbols) =====
     const UPPER_FACE = { ones: 1, twos: 2, threes: 3, fours: 4, fives: 5, sixes: 6 };
+    // Standard dice pip layout on a 0..100 grid (columns/rows at 28/50/72)
+    const DIE_PIPS = {
+        1: [[50, 50]],
+        2: [[30, 30], [70, 70]],
+        3: [[30, 30], [50, 50], [70, 70]],
+        4: [[30, 30], [70, 30], [30, 70], [70, 70]],
+        5: [[30, 30], [70, 30], [50, 50], [30, 70], [70, 70]],
+        6: [[30, 30], [70, 30], [30, 50], [70, 50], [30, 70], [70, 70]]
+    };
 
-    function svgWrap(inner) {
-        return `<svg class="cat-icon" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+    function svg(inner) {
+        return `<svg class="cat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
     }
 
-    function rowDots(n, r) {
-        let s = '';
-        for (let i = 0; i < n; i++) {
-            const cx = (i + 1) * 100 / (n + 1);
-            s += `<circle cx="${cx}" cy="30" r="${r}" fill="currentColor"/>`;
+    // A white die with dark pips (like the reference). `content` overrides pips.
+    function dieIcon(face, questionMark) {
+        const body = `<rect x="8" y="8" width="84" height="84" rx="18" fill="#eef0f7" stroke="#c4c6d4" stroke-width="2"/>`;
+        let inner = '';
+        if (questionMark) {
+            inner = `<text x="50" y="72" font-size="62" font-weight="800" text-anchor="middle" fill="#2b2b3a" font-family="Montserrat, Arial, sans-serif">?</text>`;
+        } else {
+            inner = DIE_PIPS[face].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="8.5" fill="#2b2b3a"/>`).join('');
         }
-        return s;
+        return svg(body + inner);
     }
 
-    function starPath(cx, cy, R) {
-        const r = R * 0.42;
+    function star(cx, cy, R) {
+        const r = R * 0.4;
         let pts = '';
         for (let i = 0; i < 10; i++) {
             const ang = -Math.PI / 2 + i * Math.PI / 5;
             const rad = i % 2 === 0 ? R : r;
-            pts += `${cx + Math.cos(ang) * rad},${cy + Math.sin(ang) * rad} `;
+            pts += `${(cx + Math.cos(ang) * rad).toFixed(1)},${(cy + Math.sin(ang) * rad).toFixed(1)} `;
         }
         return `<polygon points="${pts.trim()}" fill="currentColor"/>`;
     }
 
     function categoryIconSVG(key) {
-        // Upper section: a die with the matching number of pips
-        if (UPPER_FACE[key] !== undefined) {
-            const face = UPPER_FACE[key];
-            const map = {
-                1: [[50, 30]],
-                2: [[30, 16], [70, 44]],
-                3: [[26, 14], [50, 30], [74, 46]],
-                4: [[30, 14], [70, 14], [30, 46], [70, 46]],
-                5: [[30, 14], [70, 14], [50, 30], [30, 46], [70, 46]],
-                6: [[30, 13], [70, 13], [30, 30], [70, 30], [30, 47], [70, 47]]
-            };
-            const pips = map[face].map(([cx, cy]) => `<circle cx="${cx}" cy="${cy}" r="6.5" fill="currentColor"/>`).join('');
-            return svgWrap(`<rect x="24" y="4" width="52" height="52" rx="11" fill="none" stroke="currentColor" stroke-width="4.5"/>${pips}`);
-        }
+        if (UPPER_FACE[key] !== undefined) return dieIcon(UPPER_FACE[key], false);
+
         switch (key) {
-            case 'threeKind': return svgWrap(rowDots(3, 11));
-            case 'fourKind': return svgWrap(rowDots(4, 9.5));
-            case 'fullHouse': {
-                // three circles + two circles (3 + 2)
+            case 'threeKind': {
+                // three squares in a row
                 let s = '';
-                [20, 34, 48].forEach(cx => { s += `<circle cx="${cx}" cy="30" r="9" fill="currentColor"/>`; });
-                [70, 84].forEach(cx => { s += `<circle cx="${cx}" cy="30" r="9" fill="currentColor"/>`; });
-                return svgWrap(s);
+                [22, 50, 78].forEach(cx => { s += `<rect x="${cx - 11}" y="39" width="22" height="22" rx="4" fill="currentColor"/>`; });
+                return svg(s);
+            }
+            case 'fourKind': {
+                // four circles in a row
+                let s = '';
+                [16, 39, 61, 84].forEach(cx => { s += `<circle cx="${cx}" cy="50" r="10.5" fill="currentColor"/>`; });
+                return svg(s);
+            }
+            case 'fullHouse': {
+                // three circles on top + two circles below (3 + 2)
+                let s = '';
+                [28, 50, 72].forEach(cx => { s += `<circle cx="${cx}" cy="33" r="11" fill="currentColor"/>`; });
+                [39, 61].forEach(cx => { s += `<circle cx="${cx}" cy="68" r="11" fill="currentColor"/>`; });
+                return svg(s);
             }
             case 'smallStraight':
             case 'largeStraight': {
+                // rising bars (a run); 4 bars for small, 5 for large
                 const n = key === 'smallStraight' ? 4 : 5;
                 let s = '';
-                const w = 11, base = 54, gap = (100 - n * w) / (n + 1);
+                const gap = 8, w = (100 - 16 - gap * (n - 1)) / n, base = 84;
                 for (let i = 0; i < n; i++) {
-                    const x = gap + i * (w + gap);
-                    const h = 16 + i * (38 / (n - 1));
-                    s += `<rect x="${x}" y="${base - h}" width="${w}" height="${h}" rx="2.5" fill="currentColor"/>`;
+                    const x = 8 + i * (w + gap);
+                    const h = 26 + i * (52 / (n - 1));
+                    s += `<rect x="${x.toFixed(1)}" y="${(base - h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="currentColor"/>`;
                 }
-                return svgWrap(s);
+                return svg(s);
             }
             case 'yahtzee': {
+                // five stars (two on top, three below) for a clean fit
                 let s = '';
-                [14, 32, 50, 68, 86].forEach(cx => { s += starPath(cx, 30, 9); });
-                return svgWrap(s);
+                [30, 70].forEach(cx => { s += star(cx, 30, 15); });
+                [22, 50, 78].forEach(cx => { s += star(cx, 68, 15); });
+                return svg(s);
             }
             case 'chance':
-                return svgWrap(`<rect x="24" y="4" width="52" height="52" rx="11" fill="none" stroke="currentColor" stroke-width="4.5"/><text x="50" y="44" font-size="40" font-weight="700" text-anchor="middle" fill="currentColor" font-family="Montserrat, sans-serif">?</text>`);
+                return dieIcon(0, true);
             default:
                 return '';
         }
@@ -408,7 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const board = document.createElement('div');
         board.className = 'board' + (animateTurn ? ' turn-enter' : '');
-        board.style.gridTemplateColumns = `1.5fr repeat(${players.length}, 1fr)`;
+        // minmax(0,..) lets the columns shrink so long names never push the
+        // board wider than the screen (they ellipsize instead).
+        board.style.gridTemplateColumns = `minmax(0, 1.4fr) repeat(${players.length}, minmax(0, 1fr))`;
         board.style.setProperty('--current-color', cur.color);
         board.style.setProperty('--current-soft', hexToRgba(cur.color, 0.16));
         board.style.setProperty('--current-soft2', hexToRgba(cur.color, 0.28));
@@ -421,13 +436,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return d;
         };
 
+        // Smaller name font as the number of players grows, so names fit
+        const nameFont = players.length <= 4 ? '0.8rem' : players.length <= 6 ? '0.7rem' : '0.62rem';
+
         // ---- Header: empty corner + one cell per player ----
         addCell('gc cathead');
         players.forEach((p, idx) => {
-            const th = addCell('gc phead' + (idx === currentPlayer ? ' current' : ''), p.name);
+            const th = addCell('gc phead' + (idx === currentPlayer ? ' current' : ''));
             th.style.borderTopColor = p.color;
             if (idx === currentPlayer) th.style.background = p.color;
             else th.style.color = p.color;
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'phead-name';
+            nameSpan.style.fontSize = nameFont;
+            nameSpan.textContent = p.name;
+            th.appendChild(nameSpan);
         });
 
         let dataIndex = 0;
