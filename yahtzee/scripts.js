@@ -254,10 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
             renderDice();
             renderScorecard();
             updateRollUI();
-            // Sparkle feedback: a small burst on every roll, a big golden
-            // celebration when the five dice make a Yahtzee.
-            const isYahtzee = counts(diceValues()).some(c => c === 5);
-            spawnSparkles(isYahtzee);
+            // Star celebration only when the five dice make a Yahtzee.
+            if (counts(diceValues()).some(c => c === 5)) spawnSparkles(true);
         }, 450);
     }
 
