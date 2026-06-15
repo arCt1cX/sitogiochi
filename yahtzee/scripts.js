@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let hasRolled = false;
     let isAnimating = false;
     let animateTurn = false;    // play the "new player" animation on next render
+    let autoRotate = true;      // rotate the screen for players on the opposite side
 
     // ===== Helpers =====
     function showScreen(name) {
@@ -148,17 +149,35 @@ document.addEventListener('DOMContentLoaded', () => {
     startGameBtn.addEventListener('click', () => {
         const t = getGameTranslations();
         const count = parseInt(playerCountSelect.value);
+        const rotateSel = document.getElementById('auto-rotate');
+        autoRotate = rotateSel ? rotateSel.value === 'on' : true;
+        // Players split into two table sides: the first half sit on one side
+        // (upright), the second half on the opposite side (flipped 180°).
+        const half = Math.ceil(count / 2);
         players = [];
         for (let i = 0; i < count; i++) {
             const input = document.getElementById(`player-name-${i}`);
             const name = (input && input.value.trim()) ? input.value.trim() : `${t.player} ${i + 1}`;
             const scores = {};
             ALL_KEYS.forEach(k => scores[k] = null);
-            players.push({ name, scores, color: PLAYER_COLORS[i % PLAYER_COLORS.length] });
+            players.push({
+                name,
+                scores,
+                color: PLAYER_COLORS[i % PLAYER_COLORS.length],
+                flip: autoRotate && i >= half   // sits on the opposite side
+            });
         }
         currentPlayer = 0;
         startTurn();
     });
+
+    // Orient the play screen toward the current player. Because we only set
+    // the transform to each player's side, it animates (spins) only when the
+    // side actually changes between consecutive turns.
+    function applyOrientation() {
+        const flipped = !!players[currentPlayer].flip;
+        screens.play.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
 
     // ===== Standings =====
     function renderStandings(container) {
@@ -190,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateTurn = true;     // trigger the player-change animation
         dice = [0, 1, 2, 3, 4].map(() => ({ value: 0, held: false }));
         showScreen('play');
+        applyOrientation();
         renderDice();
         renderScorecard();
         updateRollUI();

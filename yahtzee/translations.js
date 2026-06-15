@@ -12,6 +12,9 @@ const gameTranslations = {
         'players': 'Giocatori',
         'player': 'Giocatore',
         'playerNamePlaceholder': 'Nome Giocatore {n}',
+        'autoRotateLabel': 'Rotazione automatica schermo:',
+        'autoRotateOn': 'Attiva',
+        'autoRotateOff': 'Disattiva',
         'startGame': 'Inizia Gioco',
 
         // Turn intro
@@ -72,6 +75,9 @@ const gameTranslations = {
         'players': 'Players',
         'player': 'Player',
         'playerNamePlaceholder': 'Player {n} Name',
+        'autoRotateLabel': 'Auto-rotate screen:',
+        'autoRotateOn': 'On',
+        'autoRotateOff': 'Off',
         'startGame': 'Start Game',
 
         // Turn intro
@@ -148,6 +154,9 @@ function applyGameTranslations() {
     set('gameTitle', t.gameTitle);
     set('setupTitle', t.setupTitle);
     set('playerCountLabel', t.playerCountLabel);
+    set('autoRotateLabel', t.autoRotateLabel);
+    set('autoRotateOn', t.autoRotateOn);
+    set('autoRotateOff', t.autoRotateOff);
     set('start-game', t.startGame);
     set('gameOverTitle', t.gameOverTitle);
     set('winnerTitle', t.winnerTitle);
