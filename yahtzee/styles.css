@@ -287,11 +287,9 @@ body.playing #game-title h1 {
 }
 
 .cat-icon {
-    height: 88%;
+    height: 90%;
     width: auto;
-    max-width: 88%;
-    max-height: 34px;
-    aspect-ratio: 1 / 1;
+    max-height: 40px;
     display: block;
 }
 

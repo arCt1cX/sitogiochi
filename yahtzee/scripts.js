@@ -246,8 +246,25 @@ document.addEventListener('DOMContentLoaded', () => {
         6: [[30, 30], [70, 30], [30, 50], [70, 50], [30, 70], [70, 70]]
     };
 
-    function svg(inner) {
-        return `<svg class="cat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+    function svg(inner, w = 100, h = 100) {
+        return `<svg class="cat-icon" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+    }
+
+    // A horizontal row of equal-spaced shapes in a wide viewBox so they stay
+    // big and never touch. types: 'circle' | 'square' | 'diamond' | 'star'
+    function rowIcon(types) {
+        const D = 30, G = 9, M = 8, r = D / 2, cy = 50;
+        const m = types.length;
+        const vbW = 2 * M + m * D + (m - 1) * G;
+        let inner = '';
+        types.forEach((tp, i) => {
+            const cx = M + r + i * (D + G);
+            if (tp === 'circle') inner += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="currentColor"/>`;
+            else if (tp === 'square') inner += `<rect x="${cx - r}" y="${cy - r}" width="${D}" height="${D}" rx="5" fill="currentColor"/>`;
+            else if (tp === 'diamond') inner += `<polygon points="${cx},${cy - r} ${cx + r},${cy} ${cx},${cy + r} ${cx - r},${cy}" fill="currentColor"/>`;
+            else if (tp === 'star') inner += star(cx, cy, r);
+        });
+        return svg(inner, vbW, 100);
     }
 
     // A white die with dark pips (like the reference). `content` overrides pips.
@@ -277,45 +294,33 @@ document.addEventListener('DOMContentLoaded', () => {
         if (UPPER_FACE[key] !== undefined) return dieIcon(UPPER_FACE[key], false);
 
         switch (key) {
-            case 'threeKind': {
-                // three squares in a row
-                let s = '';
-                [22, 50, 78].forEach(cx => { s += `<rect x="${cx - 11}" y="39" width="22" height="22" rx="4" fill="currentColor"/>`; });
-                return svg(s);
-            }
-            case 'fourKind': {
-                // four circles in a row
-                let s = '';
-                [16, 39, 61, 84].forEach(cx => { s += `<circle cx="${cx}" cy="50" r="10.5" fill="currentColor"/>`; });
-                return svg(s);
-            }
-            case 'fullHouse': {
-                // three circles on top + two circles below (3 + 2)
-                let s = '';
-                [28, 50, 72].forEach(cx => { s += `<circle cx="${cx}" cy="33" r="11" fill="currentColor"/>`; });
-                [39, 61].forEach(cx => { s += `<circle cx="${cx}" cy="68" r="11" fill="currentColor"/>`; });
-                return svg(s);
-            }
+            case 'threeKind':
+                return rowIcon(['square', 'square', 'square']);
+            case 'fourKind':
+                return rowIcon(['circle', 'circle', 'circle', 'circle']);
+            case 'fullHouse':
+                // three diamonds + two squares, all on one row (like the reference)
+                return rowIcon(['diamond', 'diamond', 'diamond', 'square', 'square']);
             case 'smallStraight':
             case 'largeStraight': {
-                // rising bars (a run); 4 bars for small, 5 for large
+                // rising bars (a run); 4 bars for small, 5 for large.
+                // Bars keep the SAME width in both so the large straight's
+                // bars aren't thinner than the small straight's.
                 const n = key === 'smallStraight' ? 4 : 5;
                 let s = '';
-                const gap = 8, w = (100 - 16 - gap * (n - 1)) / n, base = 84;
+                const w = 14, gap = 6, base = 88;
+                const total = n * w + (n - 1) * gap;
+                const startX = (100 - total) / 2;
                 for (let i = 0; i < n; i++) {
-                    const x = 8 + i * (w + gap);
-                    const h = 26 + i * (52 / (n - 1));
-                    s += `<rect x="${x.toFixed(1)}" y="${(base - h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="currentColor"/>`;
+                    const x = startX + i * (w + gap);
+                    const h = 30 + i * (58 / (n - 1));
+                    s += `<rect x="${x.toFixed(1)}" y="${(base - h).toFixed(1)}" width="${w}" height="${h.toFixed(1)}" rx="3" fill="currentColor"/>`;
                 }
                 return svg(s);
             }
-            case 'yahtzee': {
-                // five stars (two on top, three below) for a clean fit
-                let s = '';
-                [30, 70].forEach(cx => { s += star(cx, 30, 15); });
-                [22, 50, 78].forEach(cx => { s += star(cx, 68, 15); });
-                return svg(s);
-            }
+            case 'yahtzee':
+                // five stars on a single row, big and spaced
+                return rowIcon(['star', 'star', 'star', 'star', 'star']);
             case 'chance':
                 return dieIcon(0, true);
             default:
