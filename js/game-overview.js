@@ -14,269 +14,123 @@
         return;
     }
 
-    // Inject CSS styles directly (to avoid importing main styles.css which affects layout)
+    // Inject CSS styles directly (Cinema theme; scoped under .go-overlay so it
+    // overrides the home-page overlay rules in dg-ui.css without conflicts).
     function injectStyles() {
         const style = document.createElement('style');
         style.id = 'game-overview-styles';
         style.textContent = `
-            /* Game Info Overlay - Full Screen Modal */
-            .game-info-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                height: 100vh;
-                height: 100dvh;
+            .go-overlay.game-info-overlay {
+                position: fixed; inset: 0; width: 100%; height: 100vh; height: 100dvh;
                 min-height: -webkit-fill-available;
-                background: #000000;
-                z-index: 10000;
-                display: flex;
-                flex-direction: column;
-                opacity: 0;
-                visibility: hidden;
+                background:
+                    radial-gradient(120% 38% at 50% -6%, rgba(71,60,139,.45), transparent 60%),
+                    #0b0810;
+                z-index: 10000; display: flex; flex-direction: column;
+                opacity: 0; visibility: hidden;
                 transition: opacity 0.3s ease, visibility 0.3s ease;
-                overflow: hidden;
-                overscroll-behavior: contain;
-                padding-top: env(safe-area-inset-top);
-                padding-bottom: env(safe-area-inset-bottom);
-                padding-left: env(safe-area-inset-left);
-                padding-right: env(safe-area-inset-right);
-                font-family: 'Poppins', 'Segoe UI', sans-serif;
+                overflow: hidden; overscroll-behavior: contain; transform: none;
+                padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom);
+                font-family: 'Space Grotesk', sans-serif;
             }
-            .game-info-overlay.active {
-                opacity: 1;
-                visibility: visible;
+            .go-overlay.game-info-overlay.active { opacity: 1; visibility: visible; }
+            .go-overlay .game-info-header {
+                display: flex; justify-content: flex-end; align-items: center;
+                padding: 16px 20px; position: relative; z-index: 2; flex-shrink: 0;
+                background: none; height: auto; overflow: visible;
             }
-            .game-info-header {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                padding: 15px 20px;
-                position: relative;
-                z-index: 2;
-                flex-shrink: 0;
+            .go-overlay .game-info-players {
+                display: inline-flex; align-items: center; gap: 7px; position: static;
+                background: rgba(123,104,238,.16); border: 1px solid rgba(123,104,238,.4);
+                padding: 7px 13px; border-radius: 999px; color: #e6dff5; font-weight: 600; font-size: .82rem;
+                backdrop-filter: none;
             }
-            .game-info-players {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                background: rgba(111, 42, 192, 0.3);
-                border: 2px solid rgba(111, 42, 192, 0.6);
-                padding: 10px 18px;
-                border-radius: 25px;
-                color: white;
-                font-weight: 600;
-                font-size: 0.95rem;
+            .go-overlay .game-info-players svg { width: 16px; height: 16px; fill: #9c8bff; }
+            .go-overlay .game-info-content {
+                flex: 1; overflow-y: auto; overflow-x: hidden; padding: 0 20px 20px;
+                position: relative; z-index: 2; -webkit-overflow-scrolling: touch;
             }
-            .game-info-players svg {
-                width: 22px;
-                height: 22px;
-                fill: #6F2AC0;
+            .go-overlay .game-info-title-section {
+                position: static; text-align: center; margin: 0 0 22px; padding: 6px 0 0;
             }
-            .game-info-content {
-                flex: 1;
-                overflow-y: auto;
-                overflow-x: hidden;
-                padding: 0 20px 20px 20px;
-                position: relative;
-                z-index: 2;
-                -webkit-overflow-scrolling: touch;
-                scroll-behavior: smooth;
+            .go-overlay .game-info-icon {
+                display: block; width: 108px; height: 108px; object-fit: cover; border-radius: 24px;
+                border: 2px solid #7b68ee; box-shadow: 0 0 26px rgba(123,104,238,.45);
+                margin: 0 auto 14px;
             }
-            .game-info-title-section {
-                text-align: center;
-                margin-bottom: 25px;
-                padding-top: 10px;
+            .go-overlay .game-info-title {
+                font-family: 'Bricolage Grotesque', sans-serif; font-size: 2rem; font-weight: 800;
+                text-transform: uppercase; margin: 0 0 6px; color: #fff;
+                -webkit-text-fill-color: #fff; background: none; text-shadow: 0 3px 14px rgba(0,0,0,.5);
             }
-            .game-info-icon {
-                width: 120px;
-                height: 120px;
-                object-fit: contain;
-                filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
-                margin-bottom: 15px;
+            .go-overlay .game-info-catchphrase { font-size: .95rem; color: #d8cfe9; font-style: italic; margin: 0; text-shadow: none; }
+            .go-overlay .game-info-description,
+            .go-overlay .game-info-instructions,
+            .go-overlay .game-info-features {
+                background: #181122; border-radius: 16px; padding: 18px; margin: 0 0 16px;
+                border: 1px solid #33274c;
             }
-            .game-info-title {
-                font-size: 2rem;
-                font-weight: 700;
-                margin-bottom: 8px;
-                background: linear-gradient(90deg, #6F2AC0, #9B4DCA);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+            .go-overlay .game-info-content h4 {
+                font-family: 'Bricolage Grotesque', sans-serif; color: #9c8bff; font-size: 15px;
+                margin: 0 0 11px; display: flex; align-items: center; gap: 8px;
+                text-transform: uppercase; letter-spacing: .5px; font-weight: 700;
             }
-            .game-info-catchphrase {
-                font-size: 1rem;
-                color: rgba(255, 255, 255, 0.8);
-                font-style: italic;
-                margin-bottom: 5px;
+            .go-overlay .section-icon { width: 18px; height: 18px; fill: #7b68ee; flex-shrink: 0; }
+            .go-overlay .game-info-description p { color: #cdc4df; line-height: 1.6; font-size: 13.5px; margin: 0; text-align: left; }
+            .go-overlay .game-info-instructions ol { padding: 0; margin: 0; counter-reset: instruction-counter; list-style: none; }
+            .go-overlay .game-info-instructions li {
+                color: #cdc4df; line-height: 1.5; font-size: 13px; margin-bottom: 13px;
+                padding: 0 0 0 40px; position: relative; counter-increment: instruction-counter; text-align: left;
             }
-            .game-info-description,
-            .game-info-instructions,
-            .game-info-features {
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 15px;
-                padding: 20px;
-                margin-bottom: 20px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
+            .go-overlay .game-info-instructions li::before {
+                content: counter(instruction-counter); position: absolute; left: 0; top: -2px;
+                width: 27px; height: 27px; background: linear-gradient(135deg, #7b68ee, #473c8b);
+                border-radius: 50%; display: flex; align-items: center; justify-content: center;
+                font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; color: #fff;
+                -webkit-mask: none; mask: none;
             }
-            .game-info-description h4,
-            .game-info-instructions h4,
-            .game-info-features h4 {
-                color: #9B4DCA;
-                font-size: 1.1rem;
-                margin-bottom: 12px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
+            .go-overlay .game-info-features ul { padding: 0; margin: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+            .go-overlay .game-info-features li {
+                color: #cdc4df; line-height: 1.4; font-size: 13px; margin: 0;
+                padding: 0 0 0 26px; position: relative; text-align: left;
             }
-            .section-icon {
-                width: 20px;
-                height: 20px;
-                fill: #6F2AC0;
-                flex-shrink: 0;
+            .go-overlay .game-info-features li::before {
+                content: '✓'; position: absolute; left: 0; top: 0; width: auto; height: auto;
+                color: #9be14d; font-weight: bold; background: none;
+                -webkit-mask: none; mask: none; border-radius: 0;
             }
-            .game-info-description p {
-                color: rgba(255, 255, 255, 0.85);
-                line-height: 1.6;
-                font-size: 0.95rem;
-                margin: 0;
-                text-align: left;
+            .go-overlay .game-info-footer {
+                display: flex; gap: 12px; padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+                position: relative; z-index: 2; flex-shrink: 0;
+                background: linear-gradient(0deg, #0b0810 60%, transparent); border-top: none;
             }
-            .game-info-instructions ol {
-                padding-left: 0;
-                margin: 0;
-                counter-reset: instruction-counter;
-                list-style: none;
+            .go-overlay .game-info-btn {
+                flex: 1; padding: 16px 20px; border-radius: 16px; border: none;
+                font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; font-weight: 800;
+                cursor: pointer; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 1px;
+                display: flex; align-items: center; justify-content: center; gap: 9px; width: auto;
             }
-            .game-info-instructions li {
-                color: rgba(255, 255, 255, 0.85);
-                line-height: 1.5;
-                font-size: 0.9rem;
-                margin-bottom: 12px;
-                padding-left: 35px;
-                position: relative;
-                counter-increment: instruction-counter;
-                text-align: left;
+            .go-overlay .game-info-btn .btn-icon { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+            .go-overlay .game-info-btn-back {
+                background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: #e7e0f5; flex: 0 0 auto; width: 58px; padding: 16px 0;
             }
-            .game-info-instructions li::before {
-                content: counter(instruction-counter);
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 24px;
-                height: 24px;
-                background: linear-gradient(135deg, #6F2AC0, #9B4DCA);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 0.75rem;
-                font-weight: 700;
-                color: white;
+            .go-overlay .game-info-btn-back span { display: none; }
+            .go-overlay .game-info-btn-back:hover { background: rgba(255,255,255,.12); }
+            .go-overlay .game-info-btn-play {
+                background: #7b68ee; color: #fff; flex: 1;
+                box-shadow: 0 10px 26px -8px rgba(123,104,238,.7), inset 0 1px 0 rgba(255,255,255,.25);
             }
-            .game-info-features ul {
-                padding-left: 0;
-                margin: 0;
-                list-style: none;
-            }
-            .game-info-features li {
-                color: rgba(255, 255, 255, 0.85);
-                line-height: 1.5;
-                font-size: 0.9rem;
-                margin-bottom: 10px;
-                padding-left: 28px;
-                position: relative;
-                text-align: left;
-            }
-            .game-info-features li::before {
-                content: '✓';
-                position: absolute;
-                left: 0;
-                color: #6F2AC0;
-                font-weight: bold;
-            }
-            .game-info-footer {
-                display: flex;
-                gap: 15px;
-                padding: 20px;
-                background: rgba(0, 0, 0, 0.3);
-                border-top: 1px solid rgba(255, 255, 255, 0.1);
-                position: relative;
-                z-index: 2;
-                flex-shrink: 0;
-                padding-bottom: calc(20px + env(safe-area-inset-bottom));
-            }
-            .game-info-btn {
-                flex: 1;
-                padding: 16px 20px;
-                border-radius: 15px;
-                font-family: 'Poppins', sans-serif;
-                font-size: 1.1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-            }
-            .game-info-btn .btn-icon {
-                width: 20px;
-                height: 20px;
-                fill: white;
-                flex-shrink: 0;
-            }
-            .game-info-btn-back {
-                background: rgba(255, 255, 255, 0.1);
-                border: 2px solid rgba(255, 255, 255, 0.3);
-                color: white;
-            }
-            .game-info-btn-back:hover {
-                background: rgba(255, 255, 255, 0.2);
-                border-color: rgba(255, 255, 255, 0.5);
-                transform: translateY(-2px);
-            }
-            .game-info-btn-play {
-                background: linear-gradient(135deg, #6F2AC0 0%, #9B4DCA 100%);
-                border: none;
-                color: white;
-                box-shadow: 0 4px 15px rgba(111, 42, 192, 0.4);
-            }
-            .game-info-btn-play:hover {
-                background: linear-gradient(135deg, #8035D9 0%, #A85FD4 100%);
-                transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(111, 42, 192, 0.6);
-            }
+            .go-overlay .game-info-btn-play:hover { background: #9c8bff; transform: translateY(-1px); }
             body.overlay-open {
-                overflow: hidden;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                /* Critical fix for iOS: prevent body transform from breaking fixed positioning */
-                transform: none !important;
-                animation: none !important;
-                -webkit-transform: none !important;
-                -webkit-animation: none !important;
+                overflow: hidden; position: fixed; width: 100%; height: 100%;
+                transform: none !important; animation: none !important;
+                -webkit-transform: none !important; -webkit-animation: none !important;
             }
             @media (max-width: 480px) {
-                .game-info-header { padding: 12px 15px; }
-                .game-info-content { padding: 0 15px 15px 15px; }
-                .game-info-icon { width: 90px; height: 90px; }
-                .game-info-title { font-size: 1.6rem; }
-                .game-info-catchphrase { font-size: 0.9rem; }
-                .game-info-description,
-                .game-info-instructions,
-                .game-info-features { padding: 15px; }
-                .game-info-description p,
-                .game-info-instructions li,
-                .game-info-features li { font-size: 0.85rem; }
-                .game-info-footer { padding: 15px; gap: 10px; padding-bottom: calc(15px + env(safe-area-inset-bottom)); }
-                .game-info-btn { padding: 14px 15px; font-size: 1rem; }
+                .go-overlay .game-info-content { padding: 0 16px 16px; }
+                .go-overlay .game-info-icon { width: 92px; height: 92px; }
+                .go-overlay .game-info-title { font-size: 1.6rem; }
+                .go-overlay .game-info-btn-back span { display: none; }
             }
         `;
         document.head.appendChild(style);
@@ -307,7 +161,7 @@
 
         const overlay = document.createElement('div');
         overlay.id = 'gameInfoOverlay';
-        overlay.className = 'game-info-overlay active';
+        overlay.className = 'game-info-overlay go-overlay active';
 
         overlay.innerHTML = `
             <div class="game-info-header">
@@ -400,6 +254,14 @@
 
     // Initialize when DOM is ready
     function init() {
+        // If the user launched from the home-page detail, the overview was already
+        // shown there — skip it and go straight to the game.
+        try {
+            if (sessionStorage.getItem('dg_skip_overview') === '1') {
+                sessionStorage.removeItem('dg_skip_overview');
+                return;
+            }
+        } catch (e) {}
         waitForTranslations(function () {
             // Get game data from translations
             const gameIdLower = gameId.toLowerCase();

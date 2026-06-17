@@ -57,36 +57,11 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.partygamesdrew.com/guessthepic/">
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body data-game-id="guessthepic">
@@ -94,7 +69,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> Home</button>
+    <button class="home-button" onclick="window.location.href='../'">
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+    </button>
 
     <div class="container">
         <div id="start-screen" class="screen">
@@ -106,11 +84,11 @@
                 <p id="cat-label" class="mode-label">Categorie:</p>
                 <div class="mode-buttons">
                     <button id="cat-random" class="mode-button selected">
-                        <span class="mode-icon">🎲</span>
+                        <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7.5 9A1.5 1.5 0 116 7.5 1.5 1.5 0 017.5 9zm0 7.5A1.5 1.5 0 116 15a1.5 1.5 0 011.5 1.5zM12 13.5A1.5 1.5 0 1113.5 12 1.5 1.5 0 0112 13.5zm4.5 3A1.5 1.5 0 1118 15a1.5 1.5 0 01-1.5 1.5zm0-7.5A1.5 1.5 0 1118 7.5 1.5 1.5 0 0116.5 9z"/></svg></span>
                         <span id="cat-random-text">Casuali</span>
                     </button>
                     <button id="cat-chosen" class="mode-button">
-                        <span class="mode-icon">📂</span>
+                        <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg></span>
                         <span id="cat-chosen-text">Scelte</span>
                     </button>
                 </div>
@@ -122,15 +100,15 @@
                 <p id="play-label" class="mode-label">Modalità:</p>
                 <div class="mode-buttons">
                     <button id="play-classic" class="mode-button selected">
-                        <span class="mode-icon">🖼️</span>
+                        <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg></span>
                         <span id="play-classic-text">Classica</span>
                     </button>
                     <button id="play-pixel" class="mode-button">
-                        <span class="mode-icon">🟦</span>
+                        <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg></span>
                         <span id="play-pixel-text">Pixelata</span>
                     </button>
                     <button id="play-obscure" class="mode-button">
-                        <span class="mode-icon">⬛</span>
+                        <span class="mode-icon"><svg viewBox="0 0 24 24"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM12 17c-2.76 0-5-2.24-5-5 0-.77.18-1.5.49-2.14l1.57 1.57c-.03.18-.06.37-.06.57 0 1.66 1.34 3 3 3 .2 0 .38-.03.57-.07L14.13 16.5c-.64.32-1.37.5-2.13.5z"/></svg></span>
                         <span id="play-obscure-text">Oscurata</span>
                     </button>
                 </div>
@@ -315,7 +293,6 @@
     </script>
 
     <script src="../lang.js"></script>
-    <script src="../js/game-overview.js" defer></script>
     <script src="game.js"></script>
 </body>
 

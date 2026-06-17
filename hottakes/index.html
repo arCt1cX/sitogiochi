@@ -38,38 +38,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body data-game-id="hottakes">
@@ -78,14 +49,15 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'">
-        <span class="home-icon">⌂</span> Home
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
     </button>
 
     <div class="container">
         <!-- Setup Screen -->
         <div id="setup-screen" class="screen active">
             <div class="game-header">
-                <h1>🔥 Hot Takes 🔥</h1>
+                <h1>Hot Takes</h1>
                 <p class="subtitle">Esprimi la tua opinione controversa!</p>
             </div>
 
@@ -118,7 +90,9 @@
                 <h2>Categoria:</h2>
                 <div class="category-container">
                     <h1 id="current-category" class="category-display">...</h1>
-                    <button id="reroll-category" class="btn-icon" title="Cambia categoria">🎲</button>
+                    <button id="reroll-category" class="btn-icon" title="Cambia categoria" aria-label="Cambia categoria">
+                        <svg viewBox="0 0 24 24"><path d="M12 6V3L8 7l4 4V8c2.76 0 5 2.24 5 5a5 5 0 01-9.58 2H5.29A7 7 0 1012 6z"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -139,7 +113,7 @@
         <!-- Reveal Screen -->
         <div id="reveal-screen" class="screen">
             <div class="game-header">
-                <h1>🔥 Hot Take Estratta 🔥</h1>
+                <h1>Hot Take Estratta</h1>
                 <p class="subtitle">Di chi sarà?</p>
             </div>
 
@@ -148,16 +122,15 @@
             </div>
 
             <div class="reveal-controls">
-                <button id="reveal-author" class="btn secondary-btn">Svela Autore 🕵️</button>
+                <button id="reveal-author" class="btn secondary-btn">Svela Autore</button>
                 <p id="author-display" class="author-display" style="display: none;">È di: <span
                         id="author-name">...</span></p>
-                <button id="next-round" class="btn primary-btn">Prossimo Round ➜</button>
+                <button id="next-round" class="btn primary-btn">Prossimo Round</button>
             </div>
         </div>
     </div>
 
     <script src="../lang.js"></script>
-    <script src="../js/game-overview.js" defer></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

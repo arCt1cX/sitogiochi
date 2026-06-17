@@ -32,6 +32,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
     <link rel="canonical" href="https://www.partygamesdrew.com/colorgrid/">
@@ -39,32 +40,6 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body data-game-id="colorgrid">
@@ -72,8 +47,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
-            id="homeText">Home</span></button>
+    <button class="home-button" onclick="window.location.href='../'">
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span id="homeText">Home</span>
+    </button>
 
     <div class="container">
         <h1 id="gameTitle">Gioco dei Colori</h1>
@@ -179,7 +156,6 @@
     </div>
 
     <script src="../lang.js"></script>
-    <script src="../js/game-overview.js" defer></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

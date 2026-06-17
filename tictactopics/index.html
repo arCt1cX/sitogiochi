@@ -37,41 +37,14 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/tictactopics/">
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body data-game-id="tictactopics">
@@ -79,8 +52,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
-            id="homeText">Home</span></button>
+    <button class="home-button" onclick="window.location.href='../'">
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span id="homeText">Home</span></button>
 
     <div class="container">
         <div id="game-title">
@@ -117,18 +91,18 @@
             <h2 id="topicSelectionTitle">Select a Topic</h2>
             <div class="topics-container">
                 <div class="topic-card" data-topic="movies-tv">
-                    <div class="topic-icon">🎬</div>
+                    <div class="topic-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 4v2h2.5l1.5-2H6L4.5 6H4v2zm5.5 0L11 6H8.5L7 8h2.5zm4 0L15 6h-2.5L11 8h2.5zm4 0L19 6h-2.5L15 8h2.5zM4 12v6h16v-6H4z"/></svg></div>
                     <h3 id="moviesTVTitle">Movies & TV Shows</h3>
                     <p id="moviesTVDesc">Play with movie and TV show titles</p>
                 </div>
                 <!-- Additional topic cards will be added here in the future -->
                 <div class="topic-card" data-topic="songs">
-                    <div class="topic-icon">🎵</div>
+                    <div class="topic-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg></div>
                     <h3 id="songsTitle">Songs</h3>
                     <p id="songsDesc">Play with song titles</p>
                 </div>
                 <div class="topic-card coming-soon">
-                    <div class="topic-icon">🎮</div>
+                    <div class="topic-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h10a5 5 0 0 1 5 5v.5a3.5 3.5 0 0 1-6.36 2H8.36A3.5 3.5 0 0 1 2 11.5V11a5 5 0 0 1 5-5zm-.5 3v1.5H5V12h1.5v1.5H8V12h1.5v-1.5H8V9H6.5zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2.5 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg></div>
                     <h3 id="videoGamesTitle">Video Games</h3>
                     <p id="comingSoonText2">Coming Soon</p>
                 </div>
@@ -176,7 +150,6 @@
     </div>
 
     <!-- Main scripts -->
-    <script src="../js/game-overview.js" defer></script>
     <script src="scripts.js"></script>
 </body>
 

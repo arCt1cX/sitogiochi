@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#0b0810">
     <!-- Static meta tags in Italian for SEO (Googlebot will see these) -->
     <title id="pageTitle">DrewGames - Giochi da fare con gli amici offline</title>
     <meta id="pageDescription" name="description"
@@ -49,34 +49,23 @@
         // Set language as early as possible
         (function () {
             function getInitialLang() {
-                // Check URL parameter first
                 const urlParams = new URLSearchParams(window.location.search);
                 const urlLang = urlParams.get('lang');
                 if (urlLang === 'en' || urlLang === 'it') {
                     return urlLang;
                 }
-
-                // Check localStorage
                 const storedLang = localStorage.getItem('lang');
                 if (storedLang) {
                     return storedLang;
                 }
-
-                // Check if we're on the English subdirectory
                 const isEnglishPath = window.location.pathname.startsWith('/en/');
                 const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-
                 if (isEnglishPath) {
-                    // On /en/ path: Italian users get Italian, others get English
                     return (browserLang === 'it' || browserLang.startsWith('it-')) ? 'it' : 'en';
                 } else {
-                    // On main path (/): English users get English, everyone else gets Italian
-                    // This ensures Googlebot sees Italian content for SEO
                     return browserLang.startsWith('en') ? 'en' : 'it';
                 }
             }
-
-            // Set the lang attribute
             document.documentElement.lang = getInitialLang();
         })();
     </script>
@@ -93,10 +82,9 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dg-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="robots" content="index, follow">
     <meta name="geo.region" content="IT" />
     <meta name="geo.placename" content="Italia" />
@@ -119,320 +107,6 @@
       "image": "https://www.partygamesdrew.com/logo-mrdrew.jpg"
     }
     </script>
-
-    <style>
-        /* Sidebar Navigation Styles */
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1001;
-            top: 0;
-            left: 0;
-            background-color: rgba(35, 30, 65, 0.97);
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
-            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-        }
-
-        .sidenav a {
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #f1f1f1;
-            display: block;
-            transition: 0.3s;
-            white-space: nowrap;
-            border-left: 3px solid transparent;
-        }
-
-        .sidenav a:hover {
-            color: #7b68ee;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-left: 3px solid #7b68ee;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-            border-left: none;
-            padding: 8px 16px;
-        }
-
-        .sidenav .closebtn:hover {
-            background-color: transparent;
-            border-left: none;
-        }
-
-        .sidenav-section {
-            margin-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
-        }
-
-        .sidenav-header {
-            color: #aaa;
-            font-size: 14px;
-            padding: 5px 25px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-icon {
-            width: 28px;
-            height: 28px;
-            fill: #f1f1f1;
-            transition: 0.3s;
-        }
-
-        .contacts-icons {
-            display: flex;
-            gap: 15px;
-            padding: 10px 25px;
-        }
-
-        .contacts-icons a {
-            padding: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-left: none !important;
-        }
-
-        .contacts-icons a:hover {
-            background: rgba(111, 42, 192, 0.5);
-            border-left: none !important;
-        }
-
-        .contacts-icons a:hover .contact-icon {
-            fill: #fff;
-        }
-
-        .hamburger-menu {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 30px;
-            height: 25px;
-            cursor: pointer;
-            z-index: 1000;
-            padding: 5px;
-            gap: 5px;
-        }
-
-        .hamburger-menu div {
-            width: 100%;
-            height: 3.5px;
-            background-color: #7b68ee;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
-        }
-
-        .hamburger-menu div:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Overlay when sidebar is open */
-        .overlay {
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow-x: hidden;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.2s ease;
-        }
-
-
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 16px;
-            }
-        }
-
-        .tagline {
-            position: relative;
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            font-style: italic;
-            background: linear-gradient(90deg,
-                    #473c8b,
-                    #614dc2,
-                    #7b68ee,
-                    #473c8b);
-            background-size: 300% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
-            filter: drop-shadow(0 0 2px rgba(71, 60, 139, 0.7));
-            text-shadow: 0 0 15px rgba(71, 60, 139, 0.5);
-        }
-
-        @keyframes shine {
-            0% {
-                background-position: 0% center;
-            }
-
-            100% {
-                background-position: 300% center;
-            }
-        }
-
-        h2 {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #aaa;
-            margin-bottom: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            h2 {
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .tagline {
-                font-size: 0.85rem;
-                line-height: 1.2;
-            }
-
-            h2 {
-                font-size: 0.8rem;
-            }
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .support-container {
-            margin-top: 10px;
-        }
-
-        .bmc-button-fallback {
-            display: inline-block;
-            line-height: 0;
-            text-decoration: none;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .bmc-button-fallback:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .bmc-button-fallback:active {
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 480px) {
-            .footer-content {
-                gap: 15px;
-            }
-        }
-
-        .language-toggle {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: rgba(71, 60, 139, 0.8);
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 8px 12px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 28px;
-        }
-
-        .language-toggle:hover {
-            background-color: rgba(71, 60, 139, 0.95);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .flag-icon {
-            width: 24px;
-            height: 16px;
-            border-radius: 2px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Social media icons styling */
-        .social-media-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 15px;
-        }
-
-        .social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(71, 60, 139, 0.8);
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .social-icon:hover {
-            transform: translateY(-3px);
-            background-color: rgba(71, 60, 139, 0.95);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .social-icon svg {
-            width: 24px;
-            height: 24px;
-        }
-    </style>
 </head>
 
 <body>
@@ -445,47 +119,54 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger-menu" onclick="openNav()" role="button" aria-label="Open navigation menu">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 
     <!-- Sidebar Navigation -->
     <div id="mySidenav" class="sidenav" role="navigation" aria-label="Main navigation">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html" id="nav-home">Home</a>
-        <a href="games.html" id="nav-games">Games</a>
-        <a href="tournament/index.html" id="nav-tournament">Tournament Mode</a>
-        <a href="about.html" id="nav-about">About Us</a>
+        <button class="closebtn" onclick="closeNav()" aria-label="Close menu">&times;</button>
+        <div class="nav-head">
+            <img src="app-icon.png" alt="">
+            <div>
+                <div class="t">DrewGames</div>
+                <div class="s">party offline 🍺🍁</div>
+            </div>
+        </div>
+        <a href="index.html" id="nav-home">
+            <svg class="navico" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg><span class="lbl">Home</span></a>
+        <a href="games.html" id="nav-games">
+            <svg class="navico" viewBox="0 0 24 24"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg><span class="lbl">Games</span></a>
+        <a href="tournament/index.html" id="nav-tournament">
+            <svg class="navico" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5a2 2 0 00-2 2v1a4 4 0 004 4 5 5 0 004 3 5 5 0 004-3 4 4 0 004-4V7a2 2 0 00-2-2zM5 8V7h2v3a2 2 0 01-2-2zm14 0a2 2 0 01-2 2V7h2zM8 19h8v2H8zm3-3h2v3h-2z"/></svg><span class="lbl">Tournament Mode</span></a>
+        <a href="about.html" id="nav-about">
+            <svg class="navico" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg><span class="lbl">About Us</span></a>
 
         <div class="sidenav-section">
             <div class="sidenav-header" id="legal-header">Legal</div>
-            <a href="privacy-policy.html" id="nav-privacy">Privacy Policy</a>
-            <a href="terms-of-service.html" id="nav-terms">Terms of Service</a>
-            <a href="cookie-policy.html" id="nav-cookies">Cookie Policy</a>
+            <a href="privacy-policy.html" id="nav-privacy">
+                <svg class="navico" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5z"/></svg><span class="lbl">Privacy Policy</span></a>
+            <a href="terms-of-service.html" id="nav-terms">
+                <svg class="navico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg><span class="lbl">Terms of Service</span></a>
+            <a href="cookie-policy.html" id="nav-cookies">
+                <svg class="navico" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10 4 4 0 01-5-5 4 4 0 01-5-5zm-3 6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-2 6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm7 1a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg><span class="lbl">Cookie Policy</span></a>
         </div>
+
+        <div class="nav-spacer"></div>
 
         <div class="sidenav-section contacts-section">
             <div class="sidenav-header" id="contacts-header">Contatti</div>
             <div class="contacts-icons">
                 <a href="mailto:partygamesdrew@gmail.com" id="nav-email" title="Email">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                     </svg>
                 </a>
                 <a href="https://instagram.com/partygamesdrew" target="_blank" id="nav-instagram" title="Instagram">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                 </a>
                 <a href="https://tiktok.com/@partygamesdrew" target="_blank" id="nav-tiktok" title="TikTok">
                     <svg class="contact-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                     </svg>
                 </a>
             </div>
@@ -495,51 +176,47 @@
     <!-- Overlay for when sidebar is open -->
     <div id="myOverlay" class="overlay" onclick="closeNav()"></div>
 
-    <!-- Game Info Overlay - Fullscreen Modal -->
+    <!-- Game Info Overlay - slide-up detail -->
     <div id="gameInfoOverlay" class="game-info-overlay">
         <div class="game-info-header">
+            <img id="gameInfoHeaderBg" class="d-hero-bg" src="" alt="">
+            <div class="d-scrim"></div>
+            <button class="d-back" onclick="closeGameInfo()" aria-label="Back">
+                <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+            </button>
             <div class="game-info-players" id="gameInfoPlayers">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V18h14v-1.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V18h6v-1.5c0-2.33-4.67-3.5-7-3.5z"/>
                 </svg>
                 <span id="gameInfoPlayersText">3-10 giocatori</span>
             </div>
-        </div>
-
-        <div class="game-info-content">
             <div class="game-info-title-section">
                 <img id="gameInfoIcon" class="game-info-icon" src="" alt="Game Icon">
                 <h2 id="gameInfoTitle" class="game-info-title">Game Title</h2>
                 <p id="gameInfoCatchphrase" class="game-info-catchphrase">Catchphrase here</p>
             </div>
+        </div>
 
+        <div class="game-info-content">
             <div class="game-info-description">
                 <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                        <path d="M18 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
                     </svg> <span id="descriptionLabel">Descrizione</span></h4>
                 <p id="gameInfoDesc">Game description here...</p>
             </div>
 
             <div class="game-info-instructions">
                 <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                        <path d="M3 13h2v-2H3zm0 4h2v-2H3zm0-8h2V7H3zm4 4h14v-2H7zm0 4h14v-2H7zM7 7v2h14V7z" />
                     </svg> <span id="instructionsLabel">Come Giocare</span></h4>
-                <ol id="gameInfoInstructions">
-                    <!-- Instructions will be inserted here -->
-                </ol>
+                <ol id="gameInfoInstructions"></ol>
             </div>
 
             <div class="game-info-features">
                 <h4><svg class="section-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg> <span id="featuresLabel">Caratteristiche</span></h4>
-                <ul id="gameInfoFeatures">
-                    <!-- Features will be inserted here -->
-                </ul>
+                <ul id="gameInfoFeatures"></ul>
             </div>
         </div>
 
@@ -548,7 +225,7 @@
                 <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
                 </svg>
-                <span id="backBtnText">Indietro</span>
+                <span id="backBtnText" class="visually-hidden">Indietro</span>
             </button>
             <button class="game-info-btn game-info-btn-play" id="gameInfoPlayBtn">
                 <span id="playBtnText">Gioca</span>
@@ -560,12 +237,18 @@
     </div>
 
     <!-- Main Content Wrapper -->
-    <div id="main">
-        <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
-            <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-                <!-- The country flag SVG will be inserted here by JavaScript -->
-            </svg>
-        </button>
+    <div id="main" class="dg-app">
+        <div class="topbar">
+            <div class="hamburger-menu" onclick="openNav()" role="button" aria-label="Open navigation menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" aria-label="Change language">
+                <svg id="currentFlag" class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"></svg>
+                <span id="langLabel">IT</span>
+            </button>
+        </div>
 
         <header>
             <h1 id="seoH1" class="visually-hidden">Giochi party online da fare con amici</h1>
@@ -573,21 +256,26 @@
             <div id="tagline" class="tagline">giochi da fare con i tuoi amici rimasti per svoltare la serata 🍺🍁</div>
         </header>
 
+        <!-- Mascot speech bubble -->
+        <div class="bubble">
+            <span class="av"><img src="app-icon.png" alt="Drew"></span>
+            <span class="say" id="mascotSay">Scegli, fra… io non sento più le gambe 😵‍💫</span>
+        </div>
+
         <main>
-            <!-- Leaderboard desktop -->
-            <div
-                style="width: 100%; max-width: 1200px; margin: 0 auto 10px auto; text-align: center; max-height: 100px; overflow: hidden;">
-                <script async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
-                    crossorigin="anonymous"></script>
+            <div class="sec"><span class="l" id="gamesSecLabel">I GIOCHI</span></div>
+
+            <!-- Leaderboard ad -->
+            <div style="width:100%;margin:0 auto 14px;text-align:center;max-height:100px;overflow:hidden;padding:0 16px;">
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1877136537382240"
                     data-ad-slot="9021516721" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
             <div class="games-container" id="gamesContainer">
-                <!-- Game cards will be inserted here by JavaScript -->
+                <!-- Cinema game cards inserted here by JavaScript -->
             </div>
 
             <section class="seo-context visually-hidden">
@@ -610,125 +298,31 @@
                 <div class="social-media-container">
                     <a href="https://www.instagram.com/partygamesdrew?igsh=MXNjZXM0b2Z2MTA0Mw==" target="_blank"
                         class="social-icon" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                     <a href="https://youtube.com/@drewgames-x5e?si=24OZlWz0AlbBFRCB" target="_blank" class="social-icon"
                         aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                         </svg>
                     </a>
                     <a href="https://www.tiktok.com/@partygamesdrew?_t=ZN-8w8IirJpb2E&_r=1" target="_blank"
                         class="social-icon" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
                         </svg>
                     </a>
                 </div>
-                <p id="copyright">&copy; 2026 partygamesdrew.com - Tutti i diritti riservati</p>
-                <div class="support-container">
-                    <!-- Mobile-friendly BMC button implementation -->
+                <p id="copyright" class="cp">&copy; 2026 partygamesdrew.com - Tutti i diritti riservati</p>
+                <div class="support-container" style="margin-top:6px;">
                     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
                     <a id="bmc-link" href="https://www.buymeacoffee.com/partygamesdrew" target="_blank"
-                        class="bmc-button-custom">
-                        <svg class="bmc-svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M735.8 763.7h-130c-62.2 0-112.9-50.6-112.9-112.9v-52.3c0-62.2 50.6-112.9 112.9-112.9h130c62.2 0 112.9 50.6 112.9 112.9v52.3c0 62.3-50.7 112.9-112.9 112.9z m-130-216.2c-28.1 0-51 22.9-51 51v52.3c0 28.1 22.9 51 51 51h130c28.1 0 51-22.9 51-51v-52.3c0-28.1-22.9-51-51-51h-130z"
-                                fill="#262626" />
-                            <path
-                                d="M636.9 849.9H317.2c-34 0-61.9-27.8-61.9-61.9V358.1c0-34 27.8-61.9 61.9-61.9h319.7c34 0 61.9 27.8 61.9 61.9V788c0 34.1-27.8 61.9-61.9 61.9z"
-                                fill="#F4BE67" />
-                            <path
-                                d="M636.9 875.7H317.2c-48.3 0-87.7-39.3-87.7-87.7V358.1c0-48.3 39.3-87.7 87.7-87.7h319.7c48.3 0 87.7 39.3 87.7 87.7V788c0 48.4-39.3 87.7-87.7 87.7zM317.2 322c-19.9 0-36.1 16.2-36.1 36.1V788c0 19.9 16.2 36.1 36.1 36.1h319.7c19.9 0 36.1-16.2 36.1-36.1V358.1c0-19.9-16.2-36.1-36.1-36.1H317.2z"
-                                fill="#262626" />
-                            <path
-                                d="M378 705.4h-41.9c-1.2 0-2.2-1-2.2-2.3V499.7c0-1.2 1-2.3 2.2-2.3H378c1.2 0 2.3 1 2.3 2.3v203.5c0 1.2-1 2.2-2.3 2.2zM500.9 705.4H459c-1.2 0-2.3-1-2.3-2.3V499.7c0-1.2 1-2.3 2.3-2.3h41.9c1.2 0 2.3 1 2.3 2.3v203.5c0 1.2-1 2.2-2.3 2.2zM623.8 705.4h-41.9c-1.2 0-2.3-1-2.3-2.3V499.7c0-1.2 1-2.3 2.3-2.3h41.9c1.2 0 2.3 1 2.3 2.3v203.5c0 1.2-1 2.2-2.3 2.2z"
-                                fill="#EAA35E" />
-                            <path
-                                d="M801 361.4c0-49.1-39.8-88.9-88.9-88.9-25.5 0-48.1 8.7-64.3 25.9-6.1-6.5-26.6-86.8-113.4-66.5-7 1.6-14.2 1-20.9 2.6-24.4-39.3-67.9-65.6-117.6-65.6-71.8 0-130.8 54.6-137.8 124.6-5.4-2.3-11.3-3.6-17.5-3.6-24.6 0-44.7 20.1-44.7 44.7v195c0 24.6 20.1 44.7 44.7 44.7s44.7-20.1 44.7-44.7v-79.3h0.2c1.3 23.5 20.8 42.5 44.7 42.5s43.3-18.9 44.7-42.5h89.6c5.6 20.3 24 35.3 46.1 35.3 21.5 0 39.6-14.3 45.6-33.9 13.5 25.5 40.2 43 70.9 43 31.2 0 58.4-18.2 71.6-44.4H715v-0.1c47.7-1.6 86-40.7 86-88.8z"
-                                fill="#FFFFFF" />
-                            <path
-                                d="M240.6 594.9c-36 0-65.3-29.3-65.3-65.3v-195c0-36 29.3-65.3 65.3-65.3h0.7c17.1-70.4 80-121 154.5-121 50.8 0 97.6 23.8 127.6 64.3 2.4-0.2 4.6-0.3 6.2-0.7 54.4-12.7 96.3 5.8 124.9 55.1 16.6-9.8 36.3-15 57.6-15 60.4 0 109.5 49.1 109.5 109.5 0 58.5-45.2 106-103.3 109.2-1.1 0.2-2.2 0.3-3.3 0.3h-4.5c-18.6 27.7-49.5 44.4-83.4 44.4-26.3 0-51-10.2-69.4-27.9-12.4 11.8-29 18.8-47.1 18.8-25.1 0-47.9-13.9-59.8-35.3h-59.4c-9.4 24.9-33.3 42.5-61.2 42.5-8.6 0-16.8-1.7-24.3-4.7v20.9c0 35.9-29.3 65.2-65.3 65.2z m0-284.4c-13.3 0-24 10.8-24 24v195c0 13.3 10.8 24 24 24 13.3 0 24-10.8 24-24v-79.3c0-11.4 9.2-20.6 20.6-20.6 10.9 0 20.2 8.6 20.8 19.5 0.7 12.9 11.3 23 24.1 23s23.3-10.1 24.1-23c0.6-10.9 9.6-19.5 20.6-19.5h89.6c9.3 0 17.4 6.2 19.9 15.2 3.3 11.9 14 20.2 26.2 20.2 11.9 0 22.3-7.8 25.9-19.3 2.5-8 9.5-13.7 17.8-14.4 8.3-0.8 16.3 3.5 20.1 10.9 10.4 19.7 30.6 32 52.6 32 22.5 0 42.9-12.7 53.2-33.1 3.5-7 10.6-11.4 18.4-11.4h13.9c0.6-0.1 1.2-0.1 1.8-0.1 37-1.2 66.1-31.1 66.1-68.1 0-37.6-30.6-68.2-68.2-68.2-20.3 0-37.4 6.7-49.3 19.4-3.9 4.2-9.5 6.8-15.1 6.5-5.7 0-11.2-2.4-15-6.6-3.1-3.3-4.8-7-7.5-12.6-14.9-31.8-35.6-59.7-86.1-47.9-5.1 1.2-9.8 1.5-13.9 1.8-2.7 0.2-5.2 0.4-6.9 0.8-8.6 2.1-17.7-1.6-22.4-9.2-21.7-35-59.1-55.8-100.1-55.8-60.8 0-111.2 45.6-117.3 106-0.7 6.5-4.4 12.4-10 15.7-5.7 3.3-12.6 3.8-18.6 1.2-2.9-1.4-6.1-2.1-9.3-2.1z"
-                                fill="#262626" />
-                            <path d="M352.9 751.3m-15.2 0a15.2 15.2 0 1 0 30.4 0 15.2 15.2 0 1 0-30.4 0Z"
-                                fill="#F7D5A4" />
-                            <path d="M586.5 734.5m-15.2 0a15.2 15.2 0 1 0 30.4 0 15.2 15.2 0 1 0-30.4 0Z"
-                                fill="#F7D5A4" />
-                            <path d="M480 751.3m-15.2 0a15.2 15.2 0 1 0 30.4 0 15.2 15.2 0 1 0-30.4 0Z"
-                                fill="#F7D5A4" />
-                            <path d="M535.3 614.7m-15.2 0a15.2 15.2 0 1 0 30.4 0 15.2 15.2 0 1 0-30.4 0Z"
-                                fill="#F7D5A4" />
-                            <path
-                                d="M387.176197 634.353299a9.5 9.5 0 1 0 16.782693-8.907367 9.5 9.5 0 1 0-16.782693 8.907367Z"
-                                fill="#F7D5A4" />
-                            <path
-                                d="M424.569562 547.767487a6.7 6.7 0 1 0 11.836216-6.282037 6.7 6.7 0 1 0-11.836216 6.282037Z"
-                                fill="#F7D5A4" />
-                            <path
-                                d="M524.241715 554.639061a8.1 8.1 0 1 0 14.309455-7.594702 8.1 8.1 0 1 0-14.309455 7.594702Z"
-                                fill="#F7D5A4" />
-                            <path
-                                d="M642.652289 578.111536a8.1 8.1 0 1 0 14.309454-7.594702 8.1 8.1 0 1 0-14.309454 7.594702Z"
-                                fill="#F7D5A4" />
-                            <path
-                                d="M305.449238 628.515283a8.1 8.1 0 1 0 14.309455-7.594703 8.1 8.1 0 1 0-14.309455 7.594703Z"
-                                fill="#F7D5A4" />
-                        </svg>
-                        <span class="bmc-text">Offrici una birra</span>
+                        class="bmc-button-fallback">
+                        <img src="https://img.buymeacoffee.com/button-api/?text=Offrici una birra&emoji=🍺&slug=partygamesdrew&button_colour=7b68ee&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
+                            alt="Buy us a beer" style="height:44px;border-radius:10px;">
                     </a>
-                    <script>
-                        // Load the official BMC script
-                        (function () {
-                            const script = document.createElement('script');
-                            script.type = 'text/javascript';
-                            script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
-                            // Determine text based on language
-                            const isItalian = document.documentElement.lang === 'it';
-                            const bmcText = isItalian ? 'Offrici una birra' : 'Buy us a beer';
-
-                            script.setAttribute('data-name', 'bmc-button');
-                            script.setAttribute('data-slug', 'partygamesdrew');
-                            script.setAttribute('data-color', '#BD5FFF');
-                            script.setAttribute('data-emoji', '🍺');
-                            script.setAttribute('data-font', 'Cookie');
-                            script.setAttribute('data-text', bmcText);
-                            script.setAttribute('data-outline-color', '#000000');
-                            script.setAttribute('data-font-color', '#ffffff');
-                            script.setAttribute('data-coffee-color', '#FFDD00');
-
-                            // Update the custom button text as well
-                            const customBmcText = document.querySelector('.bmc-text');
-                            if (customBmcText) {
-                                customBmcText.textContent = bmcText;
-                            }
-
-                            // On script load, hide our fallback if the official button rendered properly
-                            script.onload = function () {
-                                setTimeout(function () {
-                                    const bmcButton = document.querySelector('.bmc-btn');
-                                    if (bmcButton) {
-                                        // If the official button is present, hide our fallback
-                                        document.getElementById('bmc-link').style.display = 'none';
-
-                                        // Add touchend event listener for mobile devices
-                                        bmcButton.addEventListener('touchend', function (e) {
-                                            window.open('https://www.buymeacoffee.com/partygamesdrew', '_blank');
-                                        });
-                                    }
-                                }, 1000); // Wait a second for the button to render
-                            };
-
-                            document.body.appendChild(script);
-                        })();
-                    </script>
                 </div>
             </div>
         </footer>
@@ -737,106 +331,88 @@
     <script src="script.js" defer></script>
     <script src="lang.js" defer></script>
 
-    <!-- JavaScript for Sidebar Navigation -->
+    <!-- Sidebar + splash behaviour -->
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("myOverlay").style.opacity = "1";
-            document.getElementById("myOverlay").style.visibility = "visible";
+            document.getElementById("mySidenav").classList.add("open");
+            document.getElementById("myOverlay").classList.add("open");
         }
-
         function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("myOverlay").style.opacity = "0";
-            document.getElementById("myOverlay").style.visibility = "hidden";
+            document.getElementById("mySidenav").classList.remove("open");
+            document.getElementById("myOverlay").classList.remove("open");
         }
 
-        // Splash screen animation - robust version with sessionStorage
+        // Splash screen animation (sprite sheet)
         (function () {
-            // Check if splash has already been shown in this session
             if (sessionStorage.getItem('splashShown')) {
-                // If shown, hide immediately and do nothing else
                 const splashScreen = document.getElementById('splashScreen');
-                if (splashScreen) {
-                    splashScreen.style.display = 'none';
-                    splashScreen.classList.add('hidden');
-                }
+                if (splashScreen) { splashScreen.style.display = 'none'; splashScreen.classList.add('hidden'); }
                 return;
             }
-
-            // If not shown, mark as shown for next time
             sessionStorage.setItem('splashShown', 'true');
 
             function hideSplashScreen() {
                 const splashScreen = document.getElementById('splashScreen');
                 if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                    console.log('⏱️ Hiding splash screen...');
                     splashScreen.classList.add('fade-out');
                     setTimeout(function () {
                         splashScreen.classList.add('hidden');
-                        splashScreen.style.display = 'none'; // Force hide as backup
-                        console.log('✅ Splash screen hidden');
+                        splashScreen.style.display = 'none';
                     }, 350);
                 }
             }
 
-            // Method 1: On window load - start animation when image is ready
             window.addEventListener('load', function () {
-                console.log('🎬 Site fully loaded. Preparing sprite animation...');
-
                 const animElement = document.getElementById('splashAnimation');
                 if (!animElement) return;
-
-                // Create an image to force decode the sprite sheet
                 const spriteImg = new Image();
                 spriteImg.src = 'animazione-iniziale.png';
-
-                // Wait for decode before starting animation
                 spriteImg.decode().then(function () {
-                    console.log('✅ Sprite decoded. Starting animation.');
                     animElement.classList.add('active');
-                    // Hide after animation completes (2s animation + 0.5s buffer)
                     setTimeout(hideSplashScreen, 2500);
-                }).catch(function (err) {
-                    // Fallback if decode fails (old browsers)
-                    console.warn('⚠️ Decode failed, starting anyway:', err);
+                }).catch(function () {
                     animElement.classList.add('active');
                     setTimeout(hideSplashScreen, 2500);
                 });
             });
 
-            // Method 2: Fallback - if video never ends, hide after 8 seconds
             setTimeout(function () {
                 const splashScreen = document.getElementById('splashScreen');
                 if (splashScreen && !splashScreen.classList.contains('hidden')) {
-                    console.log('⚠️ Fallback timer triggered');
                     hideSplashScreen();
                 }
             }, 8000);
         })();
 
-        // Update navigation text based on language
+        // Update navigation + bubble text when translations are applied
         document.addEventListener('DOMContentLoaded', function () {
-            // Navigation will be updated when translations are applied
-            if (typeof applyTranslations === 'function') {
-                const originalApply = applyTranslations;
-                applyTranslations = function () {
-                    originalApply();
-                    updateNavigationText();
-                };
+            function updateChrome() {
+                if (typeof getTranslation !== 'function') return;
+                const set = (id, val) => { const el = document.getElementById(id); if (!el || !val) return; const lbl = el.querySelector('.lbl'); if (lbl) lbl.textContent = val; else el.textContent = val; };
+                set('nav-home', getTranslation('navHome'));
+                set('nav-games', getTranslation('navGames'));
+                set('nav-tournament', getTranslation('navTournament'));
+                set('nav-about', getTranslation('navAbout'));
+                set('legal-header', getTranslation('navLegalHeader'));
+                set('nav-privacy', getTranslation('navPrivacy'));
+                set('nav-terms', getTranslation('navTerms'));
+                set('nav-cookies', getTranslation('navCookies'));
+                set('contacts-header', getTranslation('navContactsHeader'));
+                const lang = (typeof getUserLanguage === 'function') ? getUserLanguage() : 'it';
+                set('langLabel', lang.toUpperCase());
+                set('gamesSecLabel', (lang === 'it' ? 'I GIOCHI' : 'THE GAMES'));
+                const say = document.getElementById('mascotSay');
+                if (say) say.textContent = (lang === 'it'
+                    ? 'Scegli, fra… io non sento più le gambe 😵‍💫'
+                    : "Pick one, bro… I can't feel my legs anymore 😵‍💫");
+                // re-add nav icons stripped by textContent
+                document.querySelectorAll('#mySidenav a .navico, #mySidenav a .contact-icon');
             }
-
-            function updateNavigationText() {
-                if (typeof getTranslation === 'function') {
-                    document.getElementById('nav-home').textContent = getTranslation('navHome') || 'Home';
-                    document.getElementById('nav-games').textContent = getTranslation('navGames') || 'Games';
-                    document.getElementById('nav-about').textContent = getTranslation('navAbout') || 'About Us';
-                    document.getElementById('legal-header').textContent = getTranslation('navLegalHeader') || 'Legal';
-                    document.getElementById('nav-privacy').textContent = getTranslation('navPrivacy') || 'Privacy Policy';
-                    document.getElementById('nav-terms').textContent = getTranslation('navTerms') || 'Terms of Service';
-                    document.getElementById('nav-cookies').textContent = getTranslation('navCookies') || 'Cookie Policy';
-                    document.getElementById('contacts-header').textContent = getTranslation('navContactsHeader') || 'Contacts';
-                }
+            // run now and whenever language changes via applyTranslations
+            updateChrome();
+            if (typeof applyTranslations === 'function') {
+                const orig = applyTranslations;
+                window.applyTranslations = function () { orig(); updateChrome(); };
             }
         });
     </script>

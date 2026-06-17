@@ -27,40 +27,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/drewnking/">
     <meta name="robots" content="index, follow">
-
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body data-game-id="drewnking">
@@ -69,15 +40,16 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <button class="home-button" onclick="window.location.href='../'">
-        <span class="home-icon">⌂</span> Home
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
     </button>
 
     <div class="container">
         <!-- Setup Screen -->
         <div id="setup-screen" class="screen active">
             <div class="game-header">
-                <h1>🍺 Drewnking Game 🍺</h1>
-                <p class="warning">⚠️ Bevi irresponsabilmente! Solo per maggiorenni ⚠️</p>
+                <h1>Drewnking Game</h1>
+                <p class="warning">Bevi irresponsabilmente · Solo per maggiorenni</p>
             </div>
 
             <div class="setup-form">
@@ -170,7 +142,7 @@
 
                         <div class="percentage-total">
                             Totale: <span id="percentage-total">100</span>%
-                            <span id="percentage-warning" class="percentage-warning" style="display: none;">⚠️ Deve
+                            <span id="percentage-warning" class="percentage-warning" style="display: none;">Deve
                                 essere 100%</span>
                         </div>
                     </div>
@@ -178,7 +150,7 @@
 
 
 
-                <button id="start-game" class="btn primary-btn">Inizia il Gioco! 🎉</button>
+                <button id="start-game" class="btn primary-btn">Inizia il Gioco</button>
             </div>
         </div>
 
@@ -219,23 +191,25 @@
 
 
 
-            <button id="next-phrase" class="btn next-btn">Prossima Frase ➜</button>
+            <button id="next-phrase" class="btn next-btn">
+                <span>Prossima Frase</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6 8.6 7.4 13.2 12l-4.6 4.6L10 18l6-6z"/></svg>
+            </button>
         </div>
 
         <!-- End Screen -->
         <div id="end-screen" class="screen">
             <div class="game-header">
-                <h1>🎊 Fine del Gioco! 🎊</h1>
-                <p class="end-message">Spero vi siate divertiti! 🍻</p>
-                <p class="reminder">Ricordati di bere acqua e di tornare a casa in sicurezza! </p>
+                <h1>Fine del Gioco</h1>
+                <p class="end-message">Spero vi siate divertiti!</p>
+                <p class="reminder">Ricordati di bere acqua e di tornare a casa in sicurezza.</p>
             </div>
 
-            <button id="play-again" class="btn primary-btn">Gioca Ancora 🔄</button>
+            <button id="play-again" class="btn primary-btn">Gioca Ancora</button>
         </div>
     </div>
 
     <script src="../lang.js"></script>
-    <script src="../js/game-overview.js" defer></script>
     <script src="script.js"></script>
 </body>
 

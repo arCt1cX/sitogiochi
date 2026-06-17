@@ -1,327 +1,74 @@
-:root {
-    --primary-color: #8a2be2;
-    /* BlueViolet */
-    --secondary-color: #4b0082;
-    /* Indigo */
-    --background-color: #1a1a1a;
-    --card-bg: #2d2d2d;
-    --text-color: #ffffff;
-    --accent-color: #9370db;
-    /* MediumPurple */
+/* ============================================================
+   Hot Takes · Cinema restyle (frontend only)
+   Tokens/fonts from ../dg-ui.css. All class/id hooks preserved.
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: var(--ui); color: var(--txt); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; animation: pageFadeIn 0.6s ease-out forwards; padding: 20px 0; }
+@keyframes pageFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.container { width: 100%; max-width: 480px; padding: 40px 18px; text-align: center; }
+.screen { display: none; flex-direction: column; align-items: center; width: 100%; animation: fadeIn 0.5s ease; }
+.screen.active { display: flex; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.game-header { margin-bottom: 24px; }
+h1 { font-family: var(--disp); font-size: 2.2rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .5px; text-shadow: 0 4px 18px rgba(123, 104, 238, 0.5); margin-bottom: 8px; }
+h2 { font-family: var(--disp); font-size: 1rem; color: var(--muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .5px; }
+.subtitle { font-size: 1rem; color: var(--muted); }
+
+.category-container { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.btn-icon { background: rgba(255,255,255,.05); border: 1px solid var(--line); width: 42px; height: 42px; border-radius: 12px; cursor: pointer; transition: .2s; padding: 0; display: grid; place-items: center; color: var(--violet-2); }
+.btn-icon:hover { background: rgba(123,104,238,.2); transform: rotate(90deg); }
+.btn-icon svg { width: 22px; height: 22px; fill: currentColor; }
+.category-display { font-family: var(--disp); font-size: 2rem; font-weight: 800; color: #fff; margin-top: 8px; word-wrap: break-word; }
+
+.setup-form { width: 100%; background: linear-gradient(180deg, var(--surface), #140e22); padding: 22px 18px; border-radius: 18px; border: 1px solid #2c2042; box-shadow: 0 24px 48px -28px #000; }
+.form-group { margin-bottom: 16px; text-align: left; }
+label { display: block; margin-bottom: 8px; font-weight: 600; color: #b3a8cd; font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; }
+select, input, textarea {
+    width: 100%; padding: 13px 14px; border-radius: 13px; border: 1px solid #33274c; background: var(--surface); color: var(--txt);
+    font-family: var(--ui); font-size: 1rem; font-weight: 500; transition: .18s;
 }
+select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239c8bff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 40px; }
+select:focus, input:focus, textarea:focus { outline: none; border-color: var(--violet); box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.2); }
+input::placeholder, textarea::placeholder { color: #6c6486; }
+.player-input { margin-bottom: 10px; }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+.btn { padding: 15px 24px; border: none; border-radius: 15px; font-family: var(--disp); font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; cursor: pointer; transition: transform 0.18s, box-shadow 0.18s, background 0.18s; width: 100%; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn:active { transform: scale(0.98); }
+.primary-btn { background: var(--violet); color: #fff; box-shadow: 0 10px 24px -10px rgba(123, 104, 238, 0.7), inset 0 1px 0 rgba(255,255,255,.22); }
+.primary-btn:hover { background: var(--violet-2); transform: translateY(-1px); }
+.secondary-btn { background: rgba(255,255,255,.06); color: #e7e0f5; border: 1px solid var(--line); }
+.secondary-btn:hover { background: rgba(255,255,255,.12); }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: pageFadeIn 0.6s ease-out forwards;
-}
+.player-turn-info { background: var(--surface); border: 1px solid #33274c; padding: 18px; border-radius: 16px; margin-bottom: 18px; width: 100%; }
+.highlight-name { font-family: var(--disp); color: var(--violet-2); font-weight: 800; font-size: 1.3rem; }
+.instruction { margin-top: 8px; font-style: italic; color: var(--muted); }
 
-@keyframes pageFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+.input-area { width: 100%; margin-bottom: 18px; }
+.prompt { margin-bottom: 10px; font-weight: 600; color: #d8cfe9; }
+textarea { resize: none; margin-bottom: 12px; min-height: 110px; }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+.hot-take-card { background: linear-gradient(135deg, var(--surface2), #140e22); padding: 30px 24px; border-radius: 20px; width: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 24px 48px -24px #000; border: 1px solid var(--line); border-top: 5px solid var(--violet); position: relative; }
+.take-text { font-family: var(--disp); font-size: 1.5rem; font-weight: 700; line-height: 1.35; color: #fff; }
 
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-}
+.reveal-controls { width: 100%; }
+.author-display { font-family: var(--disp); font-size: 1.3rem; font-weight: 700; margin: 16px 0; color: #fff; animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+@keyframes popIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+#author-name { color: var(--violet-2); font-weight: 800; }
 
-.screen {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    animation: fadeIn 0.5s ease;
-}
+/* Home + tournament buttons */
+.home-button { position: fixed; top: 12px; left: 12px; background: rgba(255, 255, 255, 0.05); color: #e7e0f5; border: 1px solid var(--line); border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 7px; transition: all 0.2s ease; backdrop-filter: blur(6px); }
+.home-button:hover { background: rgba(123, 104, 238, 0.2); }
+.home-icon { width: 17px; height: 17px; fill: var(--violet-2); }
+.tournament-return-button { position: fixed; top: 12px; right: 12px; background: rgba(123, 104, 238, 0.16); color: #e6dff5; border: 1px solid rgba(123,104,238,.4); border-radius: 12px; padding: 8px 12px; cursor: pointer; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 6px; transition: all 0.2s ease; font-family: var(--ui); }
+.tournament-return-button:hover { background: rgba(123, 104, 238, 0.3); transform: translateY(-2px); }
+.tournament-return-button.hidden { display: none; }
 
-.screen.active {
-    display: flex;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.game-header {
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-.category-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.btn-icon {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.2s;
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.btn-icon:hover {
-    transform: rotate(180deg);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.category-display {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-top: 10px;
-    word-wrap: break-word;
-}
-
-.setup-form {
-    width: 100%;
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-select,
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background-color: #333;
-    color: white;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-select:focus,
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
-}
-
-.player-input {
-    margin-bottom: 15px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.primary-btn {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
-}
-
-.primary-btn:hover {
-    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
-    transform: translateY(-2px);
-}
-
-.secondary-btn {
-    background-color: #444;
-    color: white;
-}
-
-.secondary-btn:hover {
-    background-color: #555;
-}
-
-.player-turn-info {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.highlight-name {
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-.instruction {
-    margin-top: 10px;
-    font-style: italic;
-    color: #aaa;
-}
-
-.input-area {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.prompt {
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-textarea {
-    resize: none;
-    margin-bottom: 15px;
-}
-
-.hot-take-card {
-    background: linear-gradient(135deg, #2d2d2d, #3a3a3a);
-    padding: 30px;
-    border-radius: 15px;
-    width: 100%;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 2px solid var(--primary-color);
-    position: relative;
-}
-
-.take-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.author-display {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes popIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-#author-name {
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .category-display {
-        font-size: 1.5rem;
-    }
-
-    .take-text {
-        font-size: 1.2rem;
-    }
-}
-
-/* Add tournament return button styles */
-.tournament-return-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(138, 43, 226, 0.2);
-    /* Adjusted to Hot Takes Primary Color (BlueViolet) */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.tournament-return-button:hover {
-    background-color: rgba(138, 43, 226, 0.4);
-    transform: translateY(-2px);
-}
-
-.tournament-return-button.hidden {
-    display: none;
+    h1 { font-size: 1.8rem; }
+    .category-display { font-size: 1.6rem; }
+    .take-text { font-size: 1.25rem; }
 }

@@ -32,64 +32,14 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
     <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="../dg-ui.css">
     <link rel="stylesheet" href="styles.css">
     <script src="../js/tournament-button.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://www.partygamesdrew.com/impostor/">
     <meta name="robots" content="index, follow">
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
         crossorigin="anonymous"></script>
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .home-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .home-icon {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-
-        .language-toggle {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(71, 60, 139, 0.8);
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .language-toggle:hover {
-            background-color: rgba(71, 60, 139, 0.95);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-    </style>
 </head>
 
 <body data-game-id="impostor">
@@ -97,8 +47,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <button class="home-button" onclick="window.location.href='../'"><span class="home-icon">⌂</span> <span
-            id="homeText">Home</span></button>
+    <button class="home-button" onclick="window.location.href='../'">
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span id="homeText">Home</span>
+    </button>
     <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
 
     <div class="container">
@@ -147,24 +99,35 @@
             <button id="start-game" class="btn primary-btn">Inizia Gioco</button>
         </div>
 
-        <!-- Player Turn Screen (add answer input for reverse mode) -->
+        <!-- Player Turn Screen (tap-to-flip card reveals the prompt) -->
         <div id="player-turn-screen" class="game-screen">
             <h2><span id="playerTurnText">Player Turn</span> <span id="current-player-num">1</span></h2>
             <p><span id="passPhoneText">Pass the phone to player</span> <span id="current-player-num-text">1</span></p>
-            <button id="show-prompt" class="btn primary-btn pulse-btn"><span id="showPromptText">Show my
-                    Prompt</span></button>
 
-            <div id="prompt-container" class="hidden">
-                <p class="prompt-text" id="player-prompt"></p>
-                <!-- Answer input for reverse mode -->
-                <div id="reverse-answer-container" class="hidden">
-                    <label for="reverse-answer-input" id="typeYourAnswer">Type your answer:</label>
-                    <textarea id="reverse-answer-input" maxlength="200" autocomplete="off" rows="3"
-                        style="resize:vertical;"></textarea>
-                    <button id="submit-reverse-answer" class="btn secondary-btn"><span id="submitAnswer">Submit
-                            Answer</span></button>
+            <div class="im-flip" id="im-flip">
+                <div class="flip-inner">
+                    <div class="flip-face im-front">
+                        <div class="im-mark">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17a5 5 0 110-10 5 5 0 010 10zm0-8a3 3 0 100 6 3 3 0 000-6z"/></svg>
+                        </div>
+                        <div class="im-tap"><span id="showPromptText">Show my Prompt</span></div>
+                    </div>
+                    <div class="flip-face flip-back im-back">
+                        <div id="prompt-container" class="hidden">
+                            <p class="prompt-text" id="player-prompt"></p>
+                            <!-- Answer input for reverse mode -->
+                            <div id="reverse-answer-container" class="hidden">
+                                <label for="reverse-answer-input" id="typeYourAnswer">Type your answer:</label>
+                                <textarea id="reverse-answer-input" maxlength="200" autocomplete="off" rows="3"
+                                    style="resize:vertical;"></textarea>
+                                <button id="submit-reverse-answer" class="btn secondary-btn"><span id="submitAnswer">Submit
+                                        Answer</span></button>
+                            </div>
+                            <button id="hide-prompt" class="btn secondary-btn"><span id="seenItText">I've Seen It</span></button>
+                        </div>
+                    </div>
                 </div>
-                <button id="hide-prompt" class="btn secondary-btn"><span id="seenItText">I've Seen It</span></button>
+                <button id="show-prompt" class="im-tap-target" aria-label="Reveal prompt"></button>
             </div>
         </div>
 
@@ -224,9 +187,20 @@
     </div>
 
     <script src="../lang.js"></script>
-    <script src="../js/game-overview.js" defer></script>
     <script src="translations.js"></script>
     <script src="scripts.js"></script>
+
+    <!-- Visual-only: flip the reveal card whenever the prompt is shown/hidden by the game logic -->
+    <script>
+        (function () {
+            const flip = document.getElementById('im-flip');
+            const pc = document.getElementById('prompt-container');
+            if (!flip || !pc) return;
+            const sync = () => flip.classList.toggle('flipped', !pc.classList.contains('hidden'));
+            new MutationObserver(sync).observe(pc, { attributes: true, attributeFilter: ['class'] });
+            sync();
+        })();
+    </script>
 </body>
 
 </html>
