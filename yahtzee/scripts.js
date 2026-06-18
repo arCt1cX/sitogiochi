@@ -177,7 +177,24 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyOrientation() {
         const flipped = !!players[currentPlayer].flip;
         screens.play.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)';
-        var hb = document.querySelector('.home-button'); if (hb) { hb.style.transition = 'transform 0.6s ease'; hb.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)'; }
+        var hb = document.querySelector('.home-button');
+        if (hb) {
+            hb.style.transition = 'transform 0.6s ease';
+            if (flipped) {
+                // move the button to the opposite corner so it lands top-left for the flipped player
+                hb.style.top = 'auto';
+                hb.style.left = 'auto';
+                hb.style.bottom = 'max(12px, env(safe-area-inset-bottom))';
+                hb.style.right = '12px';
+                hb.style.transform = 'rotate(180deg)';
+            } else {
+                hb.style.top = '';
+                hb.style.left = '';
+                hb.style.bottom = '';
+                hb.style.right = '';
+                hb.style.transform = 'rotate(0deg)';
+            }
+        }
     }
 
     // ===== Standings =====
