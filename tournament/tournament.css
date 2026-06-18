@@ -486,7 +486,7 @@ select:focus {
 
 /* ---------- home button ---------- */
 .home-button {
-    position: fixed; top: 12px; left: 12px;
+    position: fixed; top: calc(12px + env(safe-area-inset-top)); left: 12px;
     background: rgba(255, 255, 255, 0.05);
     color: #e7e0f5;
     border: 1px solid var(--line);
