@@ -25,7 +25,13 @@
 }
 
 *{box-sizing:border-box;}
-html{background-color:#0b0810;}
+html{
+  background:
+    radial-gradient(120% 42% at 50% -8%, rgba(71,60,139,.5), transparent 60%),
+    radial-gradient(70% 30% at 88% 6%, rgba(123,104,238,.16), transparent 60%),
+    #0b0810;
+  background-attachment:fixed;
+}
 html,body{margin:0;padding:0;min-height:100%;}
 body{
   font-family:var(--ui);color:var(--txt);
