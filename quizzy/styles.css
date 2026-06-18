@@ -27,7 +27,7 @@ body {
 /* Screen system */
 .screen { display: none; }
 .screen.active { display: block; animation: qzFade 0.35s ease-out; }
-#question-screen.active { display: flex; flex-direction: column; justify-content: center; flex: 1; }
+#question-screen.active, #game-round-screen.active { display: flex; flex-direction: column; justify-content: center; flex: 1; }
 @keyframes qzFade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 .screen-content {
     background: linear-gradient(180deg, var(--surface), #140e22);
@@ -137,7 +137,7 @@ body {
     flex: none; font-family: var(--ui); font-size: .8rem; font-weight: 600; letter-spacing: .2px;
     color: var(--muted); background: none; border: none; padding: 0; white-space: nowrap;
 }
-.category-buttons { display: flex; flex-direction: column; gap: 11px; }
+.category-buttons { display: flex; flex-direction: column; gap: 16px; }
 .player-category-btn {
     width: 100%; background: var(--surface); border: 1px solid #33274c; border-radius: 14px; padding: 14px 14px; cursor: pointer;
     color: #e7e0f5; font-family: var(--disp); font-weight: 700; font-size: 1rem; transition: .16s; text-align: center;
