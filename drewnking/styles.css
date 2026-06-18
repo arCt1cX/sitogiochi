@@ -323,7 +323,7 @@ body.game-active { overflow-y: auto; }
 
 /* Rules badge */
 .rules-badge {
-    position: fixed; top: 14px; right: 14px;
+    position: fixed; top: max(14px, env(safe-area-inset-top)); right: 14px;
     background: rgba(255, 215, 0, 0.16); border: 1px solid rgba(255, 215, 0, 0.45);
     color: #FFD700; width: 46px; height: 46px; border-radius: 14px;
     display: flex; align-items: center; justify-content: center;

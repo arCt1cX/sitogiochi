@@ -112,7 +112,10 @@ input[type="text"]::placeholder { color: #6c6486; }
 .next-player-info p { color: var(--muted); font-size: .9rem; }
 
 /* Game header */
-.game-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.game-header { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "player player" "score timer"; gap: 8px 10px; align-items: center; margin-bottom: 14px; }
+.game-header .current-player { grid-area: player; justify-self: center; font-size: .92rem; padding: 8px 18px; }
+.game-header .score { grid-area: score; justify-self: start; }
+.game-header .timer { grid-area: timer; justify-self: end; }
 .score, .progress, .current-player, .timer {
     display: inline-flex; align-items: center; gap: 5px; background: var(--surface); border: 1px solid #33274c;
     border-radius: 999px; padding: 6px 12px; font-size: .78rem; color: var(--muted);

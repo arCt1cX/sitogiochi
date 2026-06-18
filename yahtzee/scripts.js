@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyOrientation() {
         const flipped = !!players[currentPlayer].flip;
         screens.play.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)';
+        var hb = document.querySelector('.home-button'); if (hb) { hb.style.transition = 'transform 0.6s ease'; hb.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)'; }
     }
 
     // ===== Standings =====

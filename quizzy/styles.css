@@ -27,6 +27,7 @@ body {
 /* Screen system */
 .screen { display: none; }
 .screen.active { display: block; animation: qzFade 0.35s ease-out; }
+#question-screen.active { display: flex; flex-direction: column; justify-content: center; flex: 1; }
 @keyframes qzFade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 .screen-content {
     background: linear-gradient(180deg, var(--surface), #140e22);
@@ -96,7 +97,7 @@ body {
 /* Category selection */
 .category-instruction { text-align: center; color: #d8cfe9; margin-bottom: 14px; }
 .category-instruction #player-name-display { font-family: var(--disp); font-weight: 800; color: var(--violet-2); }
-.category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+.category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
 .category-card {
     position: relative; background: var(--surface); border: 1px solid #33274c; border-radius: 14px;
     padding: 15px 12px; cursor: pointer; text-align: center; transition: .16s; font-size: .9rem; font-weight: 600; color: #d8cfe9;
@@ -248,5 +249,5 @@ body.shock-round .screen-content { border-color: rgba(255,60,90,.4); }
     .app-container, .container { padding: max(50px, env(safe-area-inset-top) + 44px) 14px 24px; }
     .game-title, #game-title { font-size: 1.6rem; }
     .question-text { font-size: 1.15rem; }
-    .category-grid { gap: 8px; }
+    .category-grid { gap: 14px; }
 }
