@@ -228,7 +228,7 @@ input[type="text"]::placeholder { color: #6c6486; }
 /* Responsive */
 @media (max-width: 480px) {
     body { padding: 10px; }
-    .container { padding: max(50px, env(safe-area-inset-top) + 44px) 14px 22px; }
+    .container { padding: 50px 14px 22px; }
     #game-title, #setup-title, #category-selection-title, #result-title { font-size: 1.55rem; }
     .categories-grid { gap: 8px; }
     .sweep-text { font-size: 3.4rem; }

@@ -44,6 +44,10 @@ body{
 }
 a{color:inherit;}
 img{max-width:100%;}
+/* Reserve room below the fixed top-corner buttons (home/lang/tournament) + iOS safe area,
+   so page content starts under them. Higher specificity than a game's `body{padding}`,
+   so it overrides only padding-top and leaves the other sides intact. */
+body[data-game-id]{box-sizing:border-box;padding-top:calc(max(12px,env(safe-area-inset-top)) + 44px);}
 ::selection{background:rgba(123,104,238,.4);color:#fff;}
 
 /* page column — mobile-first PWA; centered on wider screens */
