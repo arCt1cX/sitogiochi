@@ -245,7 +245,7 @@ body.shock-round .screen-content { border-color: rgba(255,60,90,.4); }
 
 /* Responsive */
 @media (max-width: 480px) {
-    .app-container, .container { padding: 50px 14px 24px; }
+    .app-container, .container { padding: max(50px, env(safe-area-inset-top) + 44px) 14px 24px; }
     .game-title, #game-title { font-size: 1.6rem; }
     .question-text { font-size: 1.15rem; }
     .category-grid { gap: 8px; }

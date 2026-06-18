@@ -381,7 +381,7 @@ body.game-active { overflow-y: auto; }
 
 /* Responsive */
 @media (max-width: 768px) {
-    body { padding: 10px; }
+    body { padding: max(10px, env(safe-area-inset-top)) 10px 10px; }
     .container { padding: 20px 16px 22px; }
     body.game-active .container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
     #game-screen { overflow: visible; }

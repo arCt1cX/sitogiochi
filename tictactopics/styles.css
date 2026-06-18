@@ -715,7 +715,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .container { padding: 0.4rem; }
+    .container { padding: max(0.4rem, env(safe-area-inset-top)) 0.4rem 0.4rem; }
     #game-title h1 { font-size: 1.7rem; }
     .game-screen { padding: 1rem; border-radius: 16px; }
     .game-board {

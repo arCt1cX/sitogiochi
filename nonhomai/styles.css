@@ -23,7 +23,7 @@ body {
 .container {
     max-width: 480px;
     margin: 0 auto;
-    padding: 60px 18px 28px;
+    padding: max(60px, env(safe-area-inset-top) + 44px) 18px 28px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

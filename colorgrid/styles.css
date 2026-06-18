@@ -460,7 +460,7 @@ p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 480px) {
-    body { padding: 60px 10px 24px; }
+    body { padding: max(60px, env(safe-area-inset-top) + 44px) 10px 24px; }
 
     .btn { padding: 12px 18px; font-size: 0.95rem; }
 
