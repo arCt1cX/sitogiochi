@@ -15,7 +15,7 @@ body { font-family: var(--ui); color: var(--txt); min-height: 100vh; }
     min-height: 100vh;
     min-height: 100dvh;
     position: relative;
-    padding: max(64px, env(safe-area-inset-top) + 44px) 18px 28px;
+    padding: 64px 18px 28px;
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
