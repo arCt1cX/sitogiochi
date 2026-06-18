@@ -103,12 +103,12 @@ p { color: var(--muted); font-size: 1rem; text-align: center; }
 .hidden { display: none !important; }
 
 /* Home + language buttons */
-.home-button { position: fixed; top: calc(12px + env(safe-area-inset-top)); left: 12px; background: rgba(255, 255, 255, 0.05); color: #e7e0f5; border: 1px solid var(--line); border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 7px; transition: all 0.2s ease; backdrop-filter: blur(6px); }
+.home-button { position: fixed; top: max(12px, env(safe-area-inset-top)); left: 12px; background: rgba(255, 255, 255, 0.05); color: #e7e0f5; border: 1px solid var(--line); border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 7px; transition: all 0.2s ease; backdrop-filter: blur(6px); }
 .home-button:hover { background: rgba(123, 104, 238, 0.2); }
 .home-icon { width: 17px; height: 17px; fill: var(--violet-2); }
-.language-toggle { position: fixed; top: calc(12px + env(safe-area-inset-top)); right: 12px; background: rgba(123, 104, 238, 0.14); color: #e6dff5; border: 1px solid rgba(123, 104, 238, 0.4); border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px; z-index: 1000; transition: all 0.2s ease; }
+.language-toggle { position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px; background: rgba(123, 104, 238, 0.14); color: #e6dff5; border: 1px solid rgba(123, 104, 238, 0.4); border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px; z-index: 1000; transition: all 0.2s ease; }
 .language-toggle:hover { background: rgba(123, 104, 238, 0.26); transform: translateY(-1px); }
-.tournament-return-button { position: fixed; top: calc(12px + env(safe-area-inset-top)); right: 12px; background: rgba(123,104,238,.16); color: #e6dff5; border: 1px solid rgba(123,104,238,.4); border-radius: 12px; padding: 8px 12px; cursor: pointer; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 6px; font-family: var(--ui); font-weight: 600; }
+.tournament-return-button { position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px; background: rgba(123,104,238,.16); color: #e6dff5; border: 1px solid rgba(123,104,238,.4); border-radius: 12px; padding: 8px 12px; cursor: pointer; font-size: 13px; z-index: 1000; display: flex; align-items: center; gap: 6px; font-family: var(--ui); font-weight: 600; }
 .tournament-return-button:hover { background: rgba(123,104,238,.3); transform: translateY(-1px); }
 .tournament-return-button.hidden { display: none; }
 

@@ -206,7 +206,7 @@ p {
 /* ---------- Home button ---------- */
 .home-button {
     position: fixed;
-    top: calc(12px + env(safe-area-inset-top));
+    top: max(12px, env(safe-area-inset-top));
     left: 12px;
     background: rgba(255, 255, 255, 0.05);
     color: #e7e0f5;
@@ -231,7 +231,7 @@ p {
 /* ---------- Language / tournament buttons ---------- */
 .language-toggle {
     position: fixed;
-    top: calc(12px + env(safe-area-inset-top));
+    top: max(12px, env(safe-area-inset-top));
     right: 12px;
     background: rgba(123, 104, 238, 0.14);
     color: #e6dff5;
@@ -253,7 +253,7 @@ p {
 
 .tournament-return-button {
     position: fixed;
-    top: calc(12px + env(safe-area-inset-top));
+    top: max(12px, env(safe-area-inset-top));
     right: 12px;
     background: rgba(123, 104, 238, .16);
     color: #e6dff5;

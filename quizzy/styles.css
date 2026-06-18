@@ -225,7 +225,7 @@ body.shock-round .screen-content { border-color: rgba(255,60,90,.4); }
 
 /* Home button */
 .home-button {
-    position: fixed; top: calc(12px + env(safe-area-inset-top)); left: 12px;
+    position: fixed; top: max(12px, env(safe-area-inset-top)); left: 12px;
     background: rgba(255, 255, 255, 0.05); color: #e7e0f5; border: 1px solid var(--line);
     border-radius: 12px; padding: 8px 13px; cursor: pointer; font-family: var(--ui); font-weight: 600; font-size: 13px;
     z-index: 1000; display: flex; align-items: center; gap: 7px; transition: all 0.2s ease; backdrop-filter: blur(6px);
@@ -235,7 +235,7 @@ body.shock-round .screen-content { border-color: rgba(255,60,90,.4); }
 
 /* Tournament return button */
 .tournament-return-button {
-    position: fixed; top: calc(12px + env(safe-area-inset-top)); right: 12px;
+    position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px;
     background: rgba(123, 104, 238, 0.16); color: #e6dff5; border: 1px solid rgba(123,104,238,.4);
     border-radius: 12px; padding: 8px 12px; cursor: pointer; font-size: 13px; z-index: 1000;
     display: flex; align-items: center; gap: 6px; transition: all 0.2s ease;
