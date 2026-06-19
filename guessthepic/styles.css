@@ -131,8 +131,9 @@ input[type="text"]::placeholder { color: #6c6486; }
     position: relative; border-radius: 18px; overflow: hidden; border: 1px solid #33274c;
     background: #0e0a16; display: grid; place-items: center; margin-bottom: 14px; min-height: 180px;
 }
-/* adaptive: the box takes the shape of the image — whole image, never cropped, no letterbox bands */
-#game-image, #reveal-canvas { width: 100%; height: auto; display: block; }
+/* adaptive: the box takes the shape of the image — whole image, never cropped.
+   Wide images fill the width; very tall images shrink to fit (capped, not cropped). */
+#game-image, #reveal-canvas { width: 100%; height: auto; max-height: 60vh; object-fit: contain; display: block; }
 
 /* Navigation */
 .navigation-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
