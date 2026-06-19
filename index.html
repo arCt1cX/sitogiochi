@@ -375,6 +375,115 @@
             }, 8000);
         })();
 
+        // Pool of mascot bubble phrases (picked once per page load, stays stable across language toggles)
+        const mascotPhrases = {
+            it: [
+                'Scegli, fra… io non sento più le gambe 😵‍💫',
+                'Dai su, scegli un gioco prima che svenga 🥴',
+                'Ho già perso il conto dei drink, scegli te 🍺',
+                'Oh fra, la stanza gira… premi qualcosa 🌀',
+                'Scegli te, io vedo doppio 👀',
+                'Veloce, prima che finisca le birre 🍻',
+                'Un gioco a caso? Tanto non ricordo niente 🤷',
+                'Tocca a te decidere, io non reggo più 🥴',
+                'Forza, scegli! La serata non si svolta da sola 🔥',
+                'Premi un gioco, fra, ho le gambe di gelatina 🍮',
+                'Scegli prima che mi addormenti sul divano 😴',
+                'Io ci sono… più o meno. Scegli tu 🍃',
+                'Un altro giro? Prima scegliamo il gioco però 🎲',
+                'Fra, la testa mi pesa… decidi tu 🪨',
+                'Dai che stasera si distrugge qualcuno, scegli 😈',
+                'Scegli un gioco, io intanto cerco l\'equilibrio ⚖️',
+                'Coraggio, premi! Non ho tutta la notte… o forse sì 🌙',
+                'Sono pronto a perdere, tu scegli come 🍺',
+                'Scegli, che ho ancora un fegato da sacrificare 🫀',
+                'Muoviti fra, le birre si scaldano 🍺',
+                'Io scelgo te per scegliere. Logica da ubriaco 🧠',
+                'Premi qualcosa, prima che parta a freestyle 🎤',
+                'Dai, un gioco! Il pavimento mi chiama 🛌',
+                'Scegli fra, che sono in modalità leggenda 🦸',
+                'Stasera nessuno torna a casa sobrio, scegli 🍻',
+                'Un gioco, dai! Ho già scordato come mi chiamo 🤪',
+                'Scegli, che il caos non aspetta 🌪️',
+                'Forza fra, fammi vedere che sai scegliere 😏',
+                'Io reggo l\'alcol, tu reggi la decisione. Scegli 🍷',
+                'Premi, prima che inizi a piangere senza motivo 😭',
+                'Scegli un gioco e prepara i bicchieri 🥃',
+                'Dai su, che la notte è giovane e io no 👴',
+                'Scegli, fra, ho bisogno di adrenalina 🎢',
+                'Un gioco a caso e via, si parte 🚀',
+                'Premi qualcosa, le mie gambe han mollato 🦵',
+                'Scegli, che voglio vedere gente piangere 😂',
+                'Forza, decidi! Io ho già deciso di bere 🍺',
+                'Scegli fra, modalità ignorante attivata 🤯',
+                'Tocca a te, io ho finito i neuroni 🧠💀',
+                'Un gioco! Prima che il divano mi inghiotta 🛋️',
+                'Scegli, che stasera siamo leggenda 🏆',
+                'Dai fra, premi, che sento già il giramento 🌀',
+                'Scegli un gioco, il resto lo rovino io 😎',
+                'Forza, decidi! La birra non si beve da sola 🍺',
+                'Premi qualcosa, fra, sono in trance 🌫️',
+                'Scegli, che ho voglia di gridare 📢',
+                'Un gioco e poi si vede chi crolla prima 🥴',
+                'Scegli fra, io sono già andato 🛸',
+                'Dai, premi! La serata epica inizia ora ⚡',
+                'Scegli, che senza di te non accendo manco il telefono 📱'
+            ],
+            en: [
+                "Pick one, bro… I can't feel my legs anymore 😵‍💫",
+                'Come on, choose a game before I pass out 🥴',
+                'Lost count of my drinks, you pick 🍺',
+                "Bro, the room's spinning… tap something 🌀",
+                "You choose, I'm seeing double 👀",
+                'Quick, before I run out of beers 🍻',
+                "Random game? I won't remember anyway 🤷",
+                "Your turn to decide, I'm done 🥴",
+                "Come on, pick! The night won't save itself 🔥",
+                'Tap a game, bro, my legs are jelly 🍮',
+                'Choose before I crash on the couch 😴',
+                "I'm here… kinda. You pick 🍃",
+                "Another round? Let's pick the game first 🎲",
+                "Bro, my head's heavy… you decide 🪨",
+                "Tonight someone's getting wrecked, pick 😈",
+                "Pick a game, I'll look for my balance ⚖️",
+                "Go on, tap! I don't have all night… or do I 🌙",
+                "I'm ready to lose, you pick how 🍺",
+                "Choose, I've still got a liver to sacrifice 🫀",
+                'Hurry bro, the beers are getting warm 🍺',
+                'I choose you to choose. Drunk logic 🧠',
+                'Tap something before I start freestyling 🎤',
+                'Come on, a game! The floor is calling me 🛌',
+                "Pick bro, I'm in legend mode 🦸",
+                "Nobody's going home sober, pick 🍻",
+                'A game, come on! I already forgot my name 🤪',
+                "Choose, chaos won't wait 🌪️",
+                'Come on bro, show me you can choose 😏',
+                'I hold the booze, you hold the decision. Pick 🍷',
+                'Tap before I start crying for no reason 😭',
+                'Pick a game and grab the glasses 🥃',
+                "Come on, the night's young and I'm not 👴",
+                'Choose bro, I need adrenaline 🎢',
+                "Random game and let's go 🚀",
+                'Tap something, my legs gave up 🦵',
+                'Pick, I wanna see people cry laughing 😂',
+                'Decide! I already decided to drink 🍺',
+                'Pick bro, dumb mode activated 🤯',
+                "Your turn, I'm out of neurons 🧠💀",
+                'A game! Before the couch swallows me 🛋️',
+                "Choose, tonight we're legends 🏆",
+                "Come on bro, tap, I'm already dizzy 🌀",
+                "Pick a game, I'll ruin the rest 😎",
+                "Decide! The beer won't drink itself 🍺",
+                "Tap something bro, I'm in a trance 🌫️",
+                'Choose, I feel like screaming 📢',
+                'A game, then we see who drops first 🥴',
+                "Pick bro, I'm already gone 🛸",
+                'Come on, tap! The epic night starts now ⚡',
+                "Choose, without you I can't even unlock my phone 📱"
+            ]
+        };
+        const mascotIdx = Math.floor(Math.random() * mascotPhrases.it.length);
+
         // Update navigation + bubble text when translations are applied
         document.addEventListener('DOMContentLoaded', function () {
             function updateChrome() {
@@ -393,9 +502,7 @@
                 set('langLabel', lang.toUpperCase());
                 set('gamesSecLabel', (lang === 'it' ? 'I GIOCHI' : 'THE GAMES'));
                 const say = document.getElementById('mascotSay');
-                if (say) say.textContent = (lang === 'it'
-                    ? 'Scegli, fra… io non sento più le gambe 😵‍💫'
-                    : "Pick one, bro… I can't feel my legs anymore 😵‍💫");
+                if (say) { const pool = mascotPhrases[lang] || mascotPhrases.it; say.textContent = pool[mascotIdx] || pool[0]; }
                 // re-add nav icons stripped by textContent
                 document.querySelectorAll('#mySidenav a .navico, #mySidenav a .contact-icon');
             }
