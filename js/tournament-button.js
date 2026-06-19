@@ -4,16 +4,15 @@ function initTournamentButton() {
         const button = document.createElement('button');
         button.id = 'tournamentReturn';
         button.className = 'tournament-return-button';
-        button.innerHTML = `
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Return to Tournament</span>
-        `;
 
         // Detect language
         const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         const isItalian = userLang.startsWith('it');
+
+        button.innerHTML = `
+            <span class="btn-icon">🏆</span>
+            <span>${isItalian ? 'Assegna punti' : 'Score points'}</span>
+        `;
 
         // Add styles
         const style = document.createElement('style');
@@ -42,9 +41,8 @@ function initTournamentButton() {
             }
 
             .tournament-return-button .btn-icon {
-                width: 18px;
-                height: 18px;
-                opacity: 0.9;
+                font-size: 16px;
+                line-height: 1;
             }
 
             /* Tournament confirm dialog */
@@ -154,14 +152,14 @@ function initTournamentButton() {
         overlay.innerHTML = `
             <div class="tournament-confirm-dialog">
                 <div class="tournament-confirm-icon">🏆</div>
-                <div class="tournament-confirm-title">${isItalian ? 'Tornare al torneo?' : 'Return to tournament?'}</div>
-                <div class="tournament-confirm-message">${isItalian ? 'La partita in corso verrà interrotta. Sei sicuro?' : 'The current game will be interrupted. Are you sure?'}</div>
+                <div class="tournament-confirm-title">${isItalian ? 'Partita finita?' : 'Game finished?'}</div>
+                <div class="tournament-confirm-message">${isItalian ? 'Vai all\'assegnazione dei punti e poi alla prossima partita del torneo.' : 'Go to score assignment and then the next tournament game.'}</div>
                 <div class="tournament-confirm-buttons">
                     <button class="tournament-confirm-btn tournament-confirm-btn-cancel" id="tournamentConfirmCancel">
-                        ${isItalian ? 'Annulla' : 'Cancel'}
+                        ${isItalian ? 'Non ancora' : 'Not yet'}
                     </button>
                     <button class="tournament-confirm-btn tournament-confirm-btn-confirm" id="tournamentConfirmYes">
-                        ${isItalian ? 'Sì, torna' : 'Yes, return'}
+                        ${isItalian ? 'Assegna punti' : 'Score points'}
                     </button>
                 </div>
             </div>
