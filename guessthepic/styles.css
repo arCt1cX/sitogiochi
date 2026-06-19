@@ -129,11 +129,10 @@ input[type="text"]::placeholder { color: #6c6486; }
 /* Image */
 .image-container {
     position: relative; border-radius: 18px; overflow: hidden; border: 1px solid #33274c;
-    background: #0e0a16; aspect-ratio: 4/3; display: grid; place-items: center; margin-bottom: 14px;
+    background: #0e0a16; display: grid; place-items: center; margin-bottom: 14px; min-height: 180px;
 }
-/* contain (not cover): show the whole image, never crop/zoom — works for any aspect ratio */
-#game-image, #reveal-canvas { width: 100%; height: 100%; object-fit: contain; display: block; }
-#reveal-canvas { position: absolute; inset: 0; }
+/* adaptive: the box takes the shape of the image — whole image, never cropped, no letterbox bands */
+#game-image, #reveal-canvas { width: 100%; height: auto; display: block; }
 
 /* Navigation */
 .navigation-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
