@@ -14,7 +14,9 @@ const gameDisplayNames = {
         'drewnking': 'Drewnking Game',
         'hottakes': 'Hot Takes',
         'mrdrew': 'Mr. Drew',
-        'tictactopics': 'TicTacTopics'
+        'tictactopics': 'TicTacTopics',
+        'taboo': 'Taboo',
+        'yahtzee': 'Yahtzee'
     },
     it: {
         'impostor': 'Impostor',
@@ -30,7 +32,9 @@ const gameDisplayNames = {
         'drewnking': 'Drewnking Game',
         'hottakes': 'Hot Takes',
         'mrdrew': 'Mr. Drew',
-        'tictactopics': 'TicTacTopics'
+        'tictactopics': 'TicTacTopics',
+        'taboo': 'Taboo',
+        'yahtzee': 'Yahtzee'
     }
 };
 
@@ -45,7 +49,7 @@ let tournamentState = {
     totalGames: 5,
     currentGame: 0,
     scores: {},
-    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'],
+    availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew', 'yahtzee'],
     gameWeights: {},  // New property to track game weights
     usedGames: [],     // Keep this to track history but not for filtering
     doublePointsGames: [],
@@ -191,7 +195,7 @@ function startTournament() {
     const playerCount = playerInputs.length;
 
     // Update available games based on player count
-    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'];
+    tournamentState.availableGames = ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew', 'yahtzee'];
     // Only add Chain Reaction if player count is a multiple of 3
     if (playerCount % 3 === 0) {
         tournamentState.availableGames.push('chainreaction');
@@ -199,6 +203,10 @@ function startTournament() {
     // Only add TicTacTopics if there are exactly 2 players
     if (playerCount === 2) {
         tournamentState.availableGames.push('tictactopics');
+    }
+    // Taboo runs in free-for-all mode, which needs at least 3 players
+    if (playerCount >= 3) {
+        tournamentState.availableGames.push('taboo');
     }
 
     tournamentState.players = Array.from(playerInputs).map(input => ({
@@ -376,7 +384,7 @@ function resetTournament() {
         totalGames: 5,
         currentGame: 0,
         scores: {},
-        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew'],
+        availableGames: ['impostor', 'colorgrid', 'guessthepic', 'timergame', 'BluffMe', 'quizzy', 'alphabetgame', 'indovinaChi', 'hottakes', 'mrdrew', 'yahtzee'],
         gameWeights: {},
         usedGames: [],
         doublePointsGames: [],

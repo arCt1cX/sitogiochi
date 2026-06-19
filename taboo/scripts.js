@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const skipPenaltySelect = document.getElementById('skip-penalty');
     const startGameBtn = document.getElementById('start-game');
 
+    // Tournament mode detection (self-contained, read-only)
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);
+    const __tCount = __tNames.length;
+
     const introTitle = document.getElementById('turnIntroTitleText');
     const introTeamName = document.getElementById('intro-team-name');
     const introTeamNameInline = document.getElementById('intro-team-name-inline');
@@ -201,6 +208,25 @@ document.addEventListener('DOMContentLoaded', () => {
     modeSelect.addEventListener('change', updateModeUI);
     teamCountSelect.addEventListener('change', generateNameInputs);
     updateModeUI();
+
+    // Tournament mode: play free-for-all with the tournament roster. Force FFA,
+    // lock the player count to the roster and pre-fill the names, so the user
+    // only confirms the game options (round time / target / penalty) and starts.
+    if (__isTournament && __tCount >= 3) {
+        modeSelect.value = 'ffa';
+        updateModeUI();                       // rebuild count options + inputs for FFA
+        const c = Math.min(10, Math.max(3, __tCount));
+        teamCountSelect.value = String(c);
+        generateNameInputs();
+        __tNames.slice(0, c).forEach((n, i) => {
+            const inp = document.getElementById(`team-name-${i}`);
+            if (inp && n) inp.value = n;
+        });
+        // Lock participant setup so the roster can't be altered.
+        modeSelect.disabled = true;
+        teamCountSelect.disabled = true;
+        teamNamesContainer.querySelectorAll('input').forEach(inp => inp.disabled = true);
+    }
 
     // ===== Standings rendering =====
     function renderStandings(container) {

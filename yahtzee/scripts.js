@@ -34,6 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerNamesContainer = document.getElementById('player-names-container');
     const startGameBtn = document.getElementById('start-game');
 
+    // Tournament mode detection (self-contained, read-only)
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);
+    const __tCount = __tNames.length;
+
     const diceRow = document.getElementById('dice-row');
     const rollBtn = document.getElementById('roll-btn');
     const scorecard = document.getElementById('scorecard');
@@ -170,6 +177,21 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer = 0;
         startTurn();
     });
+
+    // Tournament mode: pre-fill the roster and auto-start, skipping the setup
+    // screen (Yahtzee has no required human choice — names + count are enough).
+    if (__isTournament && __tCount > 0) {
+        const opts = Array.from(playerCountSelect.options).map(o => parseInt(o.value));
+        const lo = Math.min(...opts), hi = Math.max(...opts);
+        const c = Math.min(Math.max(__tCount, lo), hi);
+        playerCountSelect.value = String(c);
+        generatePlayerInputs();
+        __tNames.slice(0, c).forEach((n, i) => {
+            const inp = document.getElementById(`player-name-${i}`);
+            if (inp && n) inp.value = n;
+        });
+        setTimeout(() => startGameBtn.click(), 0);
+    }
 
     // Orient the play screen toward the current player. Because we only set
     // the transform to each player's side, it animates (spins) only when the
