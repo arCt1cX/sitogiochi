@@ -75,8 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create and append cinema cards
     games.forEach((game, index) => {
-        const meta = gameMeta[game.id] || { hue: 270, kind: { it: '', en: '' } };
-        const kind = (meta.kind && meta.kind[lang]) || '';
+        const meta = gameMeta[game.id] || { hue: 270 };
         const card = document.createElement('article');
         card.className = 'gcard';
         card.style.background = `linear-gradient(115deg, hsl(${meta.hue} 56% 27%), #120c1f 72%)`;
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `<img class="bg" src="icone%20per%20giochi/${esc(game.image)}" alt="" onerror="this.style.display='none'">` +
             `<div class="scrim"></div>` +
             `<span class="chip">${PEOPLE_SVG}<span>${esc(game.players || '')}</span></span>` +
-            (kind ? `<span class="kind">${esc(kind)}</span>` : '') +
             `<div class="txt"><h3>${esc(game.displayName || game.id)}</h3><p>${esc(game.catchphrase || '')}</p></div>` +
             `<span class="gioca">${esc(playLabel)} ${CHEV_SVG}</span>`;
         card.addEventListener('click', () => openGameInfo(game));
