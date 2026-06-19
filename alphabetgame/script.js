@@ -47,9 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
+    // Tournament mode detection (read-only; never writes tournamentState)
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Initialize the game
     init();
-    
+
     // Event Listeners
     startButton.addEventListener('click', startGame);
     tryAgainButton.addEventListener('click', resetGame);
@@ -67,8 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Watch for language changes
         watchLanguageChanges();
-        
+
         // We'll create the alphabet buttons when the game starts, not on init
+
+        // Tournament mode: this game has no player-count or name setup, so the
+        // only redundant setup screen is the start screen. Auto-start to skip it.
+        // The category is picked randomly (no human choice required), so we can
+        // go straight into gameplay. Guarded so non-tournament flow is unchanged.
+        if (__isTournament && __tCount > 0) {
+            startGame();
+        }
     }
     
     // Detect language from localStorage or URL parameter

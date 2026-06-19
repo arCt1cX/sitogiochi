@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
         applyGameTranslations();
     }
 
+    // Tournament mode detection (self-contained, read-only)
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Game State
     let gameState = {
         playerCount: 4,
@@ -74,6 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerNamesContainer = document.getElementById('player-names-container');
 
     function updatePlayerNameInputs() {
+        // In tournament mode names come from the roster: don't render name inputs.
+        if (__isTournament && __tCount > 0) {
+            playerNamesContainer.innerHTML = '';
+            return;
+        }
+
         const count = parseInt(playerCountInput.value) || 4;
         const currentInputs = playerNamesContainer.querySelectorAll('input');
         const currentValues = Array.from(currentInputs).map(input => input.value);
@@ -139,7 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update role breakdown display
     function updateRoleBreakdown() {
-        const playerCount = parseInt(playerCountInput.value) || 4;
+        const playerCount = (__isTournament && __tCount > 0)
+            ? __tCount
+            : (parseInt(playerCountInput.value) || 4);
         const selectedMode = modeSelect ? modeSelect.value : 'simple';
         const lang = getUserLanguage();
         const translations = gameTranslations[lang] || gameTranslations['en'];
@@ -161,18 +176,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize the game
     function initGame() {
-        gameState.playerCount = parseInt(playerCountInput.value) || 4;
+        if (__isTournament && __tCount > 0) {
+            // Player count is fixed by the tournament roster.
+            gameState.playerCount = __tCount;
+        } else {
+            gameState.playerCount = parseInt(playerCountInput.value) || 4;
+
+            // Ensure minimum 3 players
+            if (gameState.playerCount < 3) {
+                gameState.playerCount = 3;
+                playerCountInput.value = 3;
+            }
+        }
         const selectedMode = modeSelect ? modeSelect.value : 'simple';
 
-        // Ensure minimum 3 players
-        if (gameState.playerCount < 3) {
-            gameState.playerCount = 3;
-            playerCountInput.value = 3;
-        }
-
         // Capture player names
-        const nameInputs = playerNamesContainer.querySelectorAll('input');
-        gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+        if (__isTournament && __tCount > 0) {
+            // Names come from the tournament roster, not from input fields.
+            gameState.playerNames = __tNames.slice();
+        } else {
+            const nameInputs = playerNamesContainer.querySelectorAll('input');
+            gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+        }
 
         // Reset game state
         gameState.currentPlayer = 1;
@@ -411,6 +436,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial load
     loadWordPairs();
+
+    // Tournament mode: pre-fill player count from the roster and skip the
+    // redundant player-setup. The user still chooses the game mode
+    // (with / without Undercover) and presses Start, so we land them on the
+    // setup screen with everything but the mode pre-decided.
+    if (__isTournament && __tCount > 0) {
+        gameState.playerCount = __tCount;
+        gameState.playerNames = __tNames.slice();
+
+        // Reflect the roster count in the select (if it exists as an option),
+        // and prevent changing it since the roster is fixed.
+        const optionExists = Array.from(playerCountInput.options)
+            .some(opt => parseInt(opt.value) === __tCount);
+        if (optionExists) {
+            playerCountInput.value = String(__tCount);
+        }
+        playerCountInput.disabled = true;
+    }
+
     updateRoleBreakdown();
     updatePlayerNameInputs();
 });

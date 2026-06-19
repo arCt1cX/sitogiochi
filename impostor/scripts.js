@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         applyGameTranslations();
     }
 
+    // --- Tournament mode integration (read-only) ---
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Game State
     let gameState = {
         playerCount: 4,
@@ -137,6 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Set player count from input
         gameState.playerCount = parseInt(playerCountInput.value) || 4;
 
+        if (__isTournament && __tCount > 0) {
+            // Tournament mode: count and names come from the tournament roster
+            gameState.playerCount = __tCount;
+        }
+
         // Ensure minimum 3 players
         if (gameState.playerCount < 3) {
             gameState.playerCount = 3;
@@ -144,8 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Capture player names
-        const nameInputs = document.querySelectorAll('#player-names-container input');
-        gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+        if (__isTournament && __tCount > 0) {
+            gameState.playerNames = __tNames.slice();
+        } else {
+            const nameInputs = document.querySelectorAll('#player-names-container input');
+            gameState.playerNames = Array.from(nameInputs).map(input => input.value.trim());
+        }
 
         // Set impostor count from input
         const maxImpostors = Math.floor(gameState.playerCount / 2); // Define maxImpostors locally
@@ -700,6 +716,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerNamesContainer = document.getElementById('player-names-container');
 
     function updatePlayerNameInputs() {
+        // Tournament mode: names come from the tournament roster, so we don't
+        // render the per-player name inputs (the user must not re-enter them).
+        if (__isTournament && __tCount > 0) {
+            playerNamesContainer.innerHTML = '';
+            return;
+        }
+
         const count = parseInt(playerCountInput.value) || 4;
         const currentInputs = playerNamesContainer.querySelectorAll('input');
         const currentValues = Array.from(currentInputs).map(input => input.value);
@@ -754,6 +777,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Wait, I can just edit initGame in the ReplacementChunks above!
     // But I missed it in the previous chunk planning.
     // I'll add the logic to capture names inside the initGame function content itself in a proper chunk.
+
+    // Tournament mode: lock the player count to the tournament roster so the
+    // impostor-count options below are built from the correct number of players,
+    // and the user can't re-choose how many players there are.
+    if (__isTournament && __tCount > 0) {
+        let optionExists = Array.from(playerCountInput.options).some(o => parseInt(o.value) === __tCount);
+        if (!optionExists) {
+            const opt = document.createElement('option');
+            opt.value = String(__tCount);
+            opt.textContent = String(__tCount);
+            playerCountInput.appendChild(opt);
+        }
+        playerCountInput.value = String(__tCount);
+        // Prevent changing player count; names/count are fixed by the tournament.
+        playerCountInput.disabled = true;
+    }
 
     // Initial load
     loadPrompts();

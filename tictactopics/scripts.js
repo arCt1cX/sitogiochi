@@ -158,9 +158,42 @@ async function fetchTopicData(topicId) {
     }
 }
 
+// Tournament mode state (read-only; populated from tournamentState in localStorage)
+const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+let __tPlayers = [];
+if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+const __tNames = __tPlayers.map(p => p.name);   // array of strings (expect 2)
+const __tCount = __tNames.length;
+
+// Resolve the display label for a player ("red" = player 1, "blue" = player 2).
+// In tournament mode (exactly 2 named players) use the roster names; otherwise use
+// the existing default localized "Player 1"/"Player 2" / "Giocatore N" labels.
+function getPlayerLabel(player, suffix) {
+    suffix = suffix || '';
+    if (__isTournament && __tCount > 0) {
+        const name = player === "red" ? __tNames[0] : __tNames[1];
+        if (name) return name + suffix;
+    }
+    const lang = window.getCurrentLanguage();
+    const base = player === "red"
+        ? (lang === 'en' ? "Player 1" : "Giocatore 1")
+        : (lang === 'en' ? "Player 2" : "Giocatore 2");
+    return base + suffix;
+}
+
 // Initialize the game
 document.addEventListener("DOMContentLoaded", async () => {
     await fetchTopicData('movies-tv');
+
+    // Tournament mode: the roster (exactly 2 named players) is already set up by the
+    // tournament page, so skip the redundant password + instructions gates and land
+    // the user directly on the topic-selection screen, which is a required human choice
+    // (Movies & TV / Songs) and must NOT be auto-picked.
+    if (__isTournament && __tCount > 0) {
+        updateGameButtonsTranslations();
+        showTopicSelection();
+        return;
+    }
 
     // Check if there's a password saved in localStorage
     const savedPassword = localStorage.getItem("tictactopics_password");
@@ -259,12 +292,8 @@ function resetGameState() {
     // Reset preventInteraction flag
     gameState.preventInteraction = false;
 
-    // Get current language and player text
-    const lang = window.getCurrentLanguage();
-    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
-
     // Update player marker
-    currentPlayerEl.textContent = player1Text;
+    currentPlayerEl.textContent = getPlayerLabel("red");
     currentPlayerEl.className = "player-marker red";
     currentPlayerEl.style.display = ""; // Show player marker again
 
@@ -1075,7 +1104,7 @@ function showTitleOptions(row, col) {
                 showWrongAnswerMessage();
                 // Pass turn to next player
                 gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
-                currentPlayerEl.textContent = gameState.currentPlayer === "red" ? "Giocatore 1" : "Giocatore 2";
+                currentPlayerEl.textContent = getPlayerLabel(gameState.currentPlayer);
                 currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
                 // Hide selection after a delay
                 setTimeout(() => {
@@ -1250,12 +1279,8 @@ function makeMove(title) {
     // Switch player
     gameState.currentPlayer = gameState.currentPlayer === "red" ? "blue" : "red";
 
-    // Update player marker text and class based on current language
-    const lang = window.getCurrentLanguage();
-    const player1Text = lang === 'en' ? "Player 1" : "Giocatore 1";
-    const player2Text = lang === 'en' ? "Player 2" : "Giocatore 2";
-
-    currentPlayerEl.textContent = gameState.currentPlayer === "red" ? player1Text : player2Text;
+    // Update player marker text and class
+    currentPlayerEl.textContent = getPlayerLabel(gameState.currentPlayer);
     currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
 }
 
@@ -1366,9 +1391,8 @@ function endGame(isDraw) {
         currentPlayerEl.className = "player-marker draw";
     } else {
         // Show the winning player in the current player element
-        const player1Text = lang === 'en' ? "Player 1 Wins!" : "Giocatore 1 Vince!";
-        const player2Text = lang === 'en' ? "Player 2 Wins!" : "Giocatore 2 Vince!";
-        currentPlayerEl.textContent = gameState.currentPlayer === "red" ? player1Text : player2Text;
+        const winsSuffix = lang === 'en' ? " Wins!" : " Vince!";
+        currentPlayerEl.textContent = getPlayerLabel(gameState.currentPlayer, winsSuffix);
         currentPlayerEl.className = `player-marker ${gameState.currentPlayer}`;
     }
 

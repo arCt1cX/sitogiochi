@@ -38,6 +38,13 @@ const colorTranslations = {
 // Track current language
 let currentLanguage = getLanguage();
 
+// Tournament mode detection (read-only; roster comes from the tournament page)
+const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+let __tPlayers = [];
+if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+const __tNames = __tPlayers.map(p => p.name);   // array of strings
+const __tCount = __tNames.length;
+
 // Game variables
 let GRID_SIZE = 5; // Default grid size
 const COLUMN_LABELS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -175,6 +182,27 @@ function init() {
     if (!document.getElementById('next-round-btn')) {
         // Create a wrapper or just append to results list
     }
+
+    // Tournament mode: pre-fill players from roster and auto-start, skipping setup.
+    // colorgrid has no required human choice after player setup (grid size defaults
+    // to 5x5 and is optional), so we start the game directly.
+    if (__isTournament && __tCount > 0) {
+        startTournamentGame();
+    }
+}
+
+// Build the players array from the tournament roster and start the game,
+// bypassing the player-count / name-input setup screen.
+function startTournamentGame() {
+    players = __tNames.map((name, index) => ({
+        name: name && name.trim() ? name.trim() : `Player ${index + 1}`,
+        score: 0,
+        id: index
+    }));
+    currentRound = 0;
+    // Randomize first viewer
+    viewerIndex = Math.floor(Math.random() * players.length);
+    startRound();
 }
 
 function updateDynamicText() {
@@ -190,6 +218,11 @@ function updateDynamicText() {
 
 // Update player name inputs based on count
 function updatePlayerNameInputs() {
+    // In tournament mode, names come from the tournament roster; skip rendering inputs
+    if (__isTournament && __tCount > 0) {
+        playerNamesContainer.innerHTML = '';
+        return;
+    }
     const count = parseInt(playerCountInput.value);
     const currentInputs = playerNamesContainer.querySelectorAll('.player-name-input');
     const lang = getCurrentLanguage();

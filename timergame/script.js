@@ -8,6 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameModeInput = document.getElementById('game-mode');
     const initialTimeInput = document.getElementById('initial-time');
 
+    // --- Tournament mode integration ---
+    // Read roster from the tournament setup (read-only). Wordrace does not use
+    // individual named players; it only needs a player COUNT (2-4). So in
+    // tournament mode we pre-set the count from the roster and hide the count
+    // selector, then leave the user on the setup screen to pick game mode +
+    // initial time (these are genuine choices the tournament does not provide).
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
+    if (__isTournament && __tCount > 0) {
+        // Wordrace only supports 2-4 players; clamp the roster count into range.
+        const __clampedCount = Math.min(4, Math.max(2, __tCount));
+        playerCountInput.value = String(__clampedCount);
+        // Hide the now-redundant player-count selector (its enclosing form-group).
+        const __countGroup = playerCountInput.closest('.form-group');
+        if (__countGroup) {
+            __countGroup.style.display = 'none';
+        } else {
+            playerCountInput.style.display = 'none';
+        }
+    }
+    // --- End tournament mode integration ---
+
     // DOM Elements - 2 Player Mode
     const gameScreen2p = document.getElementById('gameScreen2p');
     const resetButton2p = document.getElementById('resetButton2p');

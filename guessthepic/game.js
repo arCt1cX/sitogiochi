@@ -80,6 +80,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentCategorySelection = []; // Temporary storage for current player's category selection
     let categorySelectingPlayerIndex = 0; // Index of player currently selecting categories
 
+    // --- Tournament mode (read-only roster from the tournament page) ---
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Reveal state (pixel / obscure modes)
     const REVEAL_MS = 24000;   // time for an image to go from fully hidden to fully revealed (full only at the very end)
     const REVEAL_CURVE = 3.0;  // ease-in exponent: stays hidden/pixelated longer, clears in the final seconds
@@ -335,6 +342,24 @@ document.addEventListener('DOMContentLoaded', function () {
      * Open the player setup screen
      */
     function openPlayerSetup() {
+        // Tournament mode: players come from the tournament roster, so skip the
+        // player-count/name setup screen entirely. The category-source and play-mode
+        // choices have already been made by the user on the start screen, so we can
+        // jump straight into the game (or per-player category selection for 'chosen').
+        if (__isTournament && __tCount > 0) {
+            stopReveal();
+            startScreen.classList.add('hidden');
+            resultScreen.classList.add('hidden');
+            playerTransitionScreen.classList.add('hidden');
+            categorySelectionScreen.classList.add('hidden');
+            currentRoundNumber = 1;
+            playerCategories = [];
+            currentCategorySelection = [];
+            categorySelectingPlayerIndex = 0;
+            startGame();
+            return;
+        }
+
         stopReveal();
         startScreen.classList.add('hidden');
         resultScreen.classList.add('hidden');
@@ -563,9 +588,26 @@ document.addEventListener('DOMContentLoaded', function () {
      * Setup players based on input fields
      */
     function setupPlayers() {
-        const playerCount = parseInt(playerCountSelect.value);
         players = [];
         allPlayers = []; // Reset the stored players
+
+        // Tournament mode: build players from the roster (the name inputs were skipped).
+        if (__isTournament && __tCount > 0) {
+            for (let i = 0; i < __tCount; i++) {
+                const player = {
+                    name: __tNames[i] || `Player ${i + 1}`,
+                    score: 0,
+                    roundScores: [0, 0, 0],
+                    roundPoints: [0, 0, 0]
+                };
+                players.push(player);
+                allPlayers.push(player);
+            }
+            console.log("Players setup (tournament):", players);
+            return;
+        }
+
+        const playerCount = parseInt(playerCountSelect.value);
 
         for (let i = 1; i <= playerCount; i++) {
             const nameInput = document.getElementById(`player${i}-name`);

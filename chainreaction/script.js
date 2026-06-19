@@ -75,12 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // --- Tournament mode detection (read-only, self-contained) ---
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Initialize the game
     async function initGame() {
         words = await fetchWords();
         usedWords = []; // Reset used words when initializing
         console.log("Loaded words:", words.length); // Debug log
-        
+
         // Button event listeners
         startButton.addEventListener('click', startGame);
         pauseResumeButton.addEventListener('click', togglePauseResume);
@@ -91,6 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
         continueButton.addEventListener('click', continueGame);
         playAgainButton.addEventListener('click', resetGame);
         mainMenuButton.addEventListener('click', showStartScreen);
+
+        // Tournament mode: skip the start screen and launch the game directly.
+        // Chain Reaction has no player-count or name inputs of its own and forms
+        // no teams in-app (teams are decided physically by the players), so there
+        // is no roster to fill and no human choice screen to land on. We only
+        // auto-start so the player does not have to tap "Inizia Gioco".
+        if (__isTournament && __tCount > 0) {
+            startGame();
+        }
     }
     
     // Start the game

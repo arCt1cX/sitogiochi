@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeRemaining = 0;
     let isTimerRunning = false;
     let currentLanguage = 'it'; // Default language is Italian
+    let isTournamentMode = false; // True when launched from tournament (?mode=tournament)
 
     // Language-specific text
     const translations = {
@@ -124,6 +125,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Load saved player names if available
             loadSavedPlayerNames();
+
+            // --- Tournament mode integration ---
+            const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+            let __tPlayers = [];
+            if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+            const __tNames = __tPlayers.map(p => p.name);   // array of strings
+            const __tCount = __tNames.length;
+
+            if (__isTournament && __tCount > 0) {
+                isTournamentMode = true;
+                // Use the tournament roster instead of the manual player setup.
+                // The player-count <select> only offers 2-6; clamp to that range
+                // for the score-area layout while keeping every named player.
+                players = __tNames.slice();
+                const clampedCount = Math.min(Math.max(__tCount, 2), 6);
+                playerCount.value = String(clampedCount);
+
+                // Bookkeeping that the normal flow does before the game starts.
+                // (startGame -> createPlayerScoreElements rebuilds the score
+                // widgets and their references, so do this BEFORE auto-starting.)
+                initializePlayerElements();
+                watchLanguageChanges();
+
+                // Skip the redundant player-setup screen and start the game.
+                // No human choice is required before play (category & time are
+                // picked at random), so we auto-start.
+                startGame();
+
+                return;
+            }
+            // --- End tournament mode integration ---
 
             // Add initial player elements
             updatePlayerInputs();
@@ -314,6 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Save player names to localStorage
     function savePlayerNames() {
+        // In tournament mode the names come from the tournament roster and the
+        // setup inputs are not rendered; don't overwrite the user's own saved
+        // names in localStorage.
+        if (isTournamentMode) {
+            return;
+        }
         try {
             // Update players array with current input values
             const count = parseInt(playerCount.value);

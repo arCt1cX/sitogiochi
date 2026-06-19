@@ -37,11 +37,45 @@ document.addEventListener('DOMContentLoaded', function () {
         gameOver: document.getElementById('game-over-screen')
     };
 
+    // --- Tournament mode roster (read-only) ---
+    const __isTournament = new URLSearchParams(location.search).get('mode') === 'tournament';
+    let __tPlayers = [];
+    if (__isTournament) { try { __tPlayers = (JSON.parse(localStorage.getItem('tournamentState')) || {}).players || []; } catch (e) {} }
+    const __tNames = __tPlayers.map(p => p.name);   // array of strings
+    const __tCount = __tNames.length;
+
     // Initialize event listeners
     initEventListeners();
 
     // Load questions
     loadQuestions();
+
+    // In tournament mode, pre-fill the player roster and skip the redundant
+    // "number of players + names" entry. The user is left on the setup screen so
+    // they can still make the required choices (game mode, then categories).
+    if (__isTournament && __tCount > 0) {
+        setupTournamentRoster();
+    }
+
+    function setupTournamentRoster() {
+        const playerCountSelect = document.getElementById('player-count');
+        const namesContainer = document.getElementById('player-names-container');
+
+        // Quizzy supports 2-8 players; clamp the roster size to that range so the
+        // select stays valid (extra roster names are still applied to inputs).
+        const clamped = Math.min(Math.max(__tCount, 2), 8);
+        playerCountSelect.value = String(clamped);
+
+        // Build the name inputs and fill them from the roster.
+        generatePlayerInputs(__tCount);
+
+        // Reveal the names + game-mode section (normally shown by "Continua").
+        namesContainer.classList.remove('hidden');
+
+        // Land on the setup screen (game mode + categories are real human choices,
+        // so we do NOT auto-start).
+        showScreen(screens.setup);
+    }
 
     function initEventListeners() {
         // Welcome screen
@@ -109,7 +143,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Game Over screen
         document.getElementById('play-again').addEventListener('click', function () {
             resetGame();
-            showScreen(screens.setup);
+            // In tournament mode, re-apply the roster so a new round keeps the
+            // same players without re-asking for names.
+            if (__isTournament && __tCount > 0) {
+                setupTournamentRoster();
+            } else {
+                showScreen(screens.setup);
+            }
         });
     }
 
@@ -191,6 +231,11 @@ document.addEventListener('DOMContentLoaded', function () {
             input.id = `player-${i + 1}`;
             input.className = 'player-name-input';
             input.placeholder = `${getGameTranslation('playerNameLabel')} ${i + 1}`;
+
+            // In tournament mode, pre-fill the name from the roster.
+            if (__isTournament && __tCount > 0 && __tNames[i]) {
+                input.value = __tNames[i];
+            }
 
             inputGroup.appendChild(label);
             inputGroup.appendChild(input);
