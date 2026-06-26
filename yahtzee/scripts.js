@@ -530,8 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Upper section (dice-face icons, no section header)
         UPPER.forEach(u => dataRow(u.key, t.categories[u.key]));
-        totalRow(t.upperTotalLabel, p => `${upperSubtotal(p)}/${UPPER_BONUS_THRESHOLD}`, 'subtotal');
-        totalRow(t.bonusLabel, p => `+${upperBonus(p)}`, 'subtotal');
+        totalRow(t.bonusLabel, p => upperSubtotal(p) >= UPPER_BONUS_THRESHOLD ? `+${UPPER_BONUS}` : `${upperSubtotal(p)}/${UPPER_BONUS_THRESHOLD}`, 'subtotal');
 
         // Lower section (symbol icons)
         LOWER.forEach(k => dataRow(k, t.categories[k]));
