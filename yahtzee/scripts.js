@@ -372,7 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
         diceRow.innerHTML = '';
         dice.forEach((d, i) => {
             const die = document.createElement('button');
-            die.className = 'die' + (d.held ? ' held' : '') + (d.value === 0 ? ' empty' : '');
+            // Once the last roll is used up, holding is irrelevant, so drop the
+            // highlight to avoid implying the dice are still selectable.
+            const showHeld = d.held && rollsLeft > 0;
+            die.className = 'die' + (showHeld ? ' held' : '') + (d.value === 0 ? ' empty' : '');
             die.setAttribute('aria-label', `die ${i + 1}`);
             die.innerHTML = dieFaceSVG(d.value);
             die.addEventListener('click', () => toggleHold(i));
