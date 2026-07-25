@@ -14,6 +14,7 @@ const gameDisplayNames = {
         'drewnking': 'Drewnking Game',
         'hottakes': 'Hot Takes',
         'mrdrew': 'Mr. Drew',
+        'fakedrew': 'Fake Drew',
         'tictactopics': 'TicTacTopics',
         'taboo': 'Taboo',
         'yahtzee': 'Yahtzee'
@@ -32,6 +33,7 @@ const gameDisplayNames = {
         'drewnking': 'Drewnking Game',
         'hottakes': 'Hot Takes',
         'mrdrew': 'Mr. Drew',
+        'fakedrew': 'Fake Drew',
         'tictactopics': 'TicTacTopics',
         'taboo': 'Taboo',
         'yahtzee': 'Yahtzee'
@@ -207,6 +209,10 @@ function startTournament() {
     // Taboo runs in free-for-all mode, which needs at least 3 players
     if (playerCount >= 3) {
         tournamentState.availableGames.push('taboo');
+    }
+    // Fake Drew needs at least 3 players (one of them is the Fake Artist)
+    if (playerCount >= 3) {
+        tournamentState.availableGames.push('fakedrew');
     }
 
     tournamentState.players = Array.from(playerInputs).map(input => ({

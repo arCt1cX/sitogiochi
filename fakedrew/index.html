@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0810">
+    <!-- Dynamic meta tags based on browser language -->
+    <script>
+        // Run this before other meta tags
+        const preferredLang = navigator.language || navigator.userLanguage;
+        const isItalian = preferredLang && (preferredLang.startsWith('it') || preferredLang === 'it');
+
+        if (isItalian) {
+            document.write('<title>Fake Drew - Chi è il Falso Artista? | DrewGames</title>');
+            document.write('<meta name="description" content="Gioca a Fake Drew: tutti conoscono la parola tranne uno. Ognuno disegna una sola linea sul foglio: scoprite chi è il Falso Artista! Party game da fare con gli amici offline.">');
+        } else {
+            document.write('<title>Fake Drew - Who is the Fake Artist? | DrewGames</title>');
+            document.write('<meta name="description" content="Play Fake Drew: everybody knows the word except one player. Each player draws a single line on the sheet: find out who the Fake Artist is! A party game to play with friends offline.">');
+        }
+    </script>
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://www.partygamesdrew.com/fakedrew/?lang=en" />
+    <link rel="alternate" hreflang="it" href="https://www.partygamesdrew.com/fakedrew/?lang=it" />
+    <link rel="alternate" hreflang="x-default" href="https://www.partygamesdrew.com/fakedrew/" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5KN33WJ3');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="../dg-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/tournament-button.js" defer></script>
+    <link rel="canonical" href="https://www.partygamesdrew.com/fakedrew/">
+    <meta name="robots" content="index, follow">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1877136537382240"
+        crossorigin="anonymous"></script>
+</head>
+
+<body data-game-id="fakedrew">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KN33WJ3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <button class="home-button" onclick="window.location.href='../'">
+        <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span id="homeText">Home</span>
+    </button>
+    <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+
+    <div class="container">
+        <div id="game-title">
+            <h1 id="gameTitle">Fake Drew</h1>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="game-screen active">
+            <h2 id="setupTitle">Impostazioni del Gioco</h2>
+            <div class="form-group">
+                <label for="player-count" id="playerCountLabel">Numero di Giocatori:</label>
+                <select id="player-count">
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rounds-select" id="roundsLabel">Tratti per giocatore:</label>
+                <select id="rounds-select">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div id="player-names-container"></div>
+            <div class="info-card" id="role-info">
+                <p id="roleInfoText">Con questo numero di giocatori ci saranno: <strong><span id="roleBreakdown">3
+                            Artisti, 1 Falso Artista</span></strong></p>
+            </div>
+            <button id="start-game" class="btn primary-btn"><span id="startGameText">Inizia Gioco</span></button>
+        </div>
+
+        <!-- Player Turn Screen -->
+        <div id="player-turn-screen" class="game-screen">
+            <h2><span id="playerTurnText">Turno del Giocatore</span> <span id="current-player-num">1</span></h2>
+            <p><span id="passPhoneText">Passa il telefono al giocatore</span> <span
+                    id="current-player-num-text">1</span></p>
+            <div class="im-flip" id="mr-flip">
+                <div class="flip-inner">
+                    <div class="flip-face im-front">
+                        <div class="im-mark">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                        </div>
+                        <div class="im-tap"><span id="showWordText">Scopri la tua Parola</span></div>
+                    </div>
+                    <div class="flip-face flip-back im-back">
+                        <div id="word-container" class="hidden">
+                            <p class="role-badge" id="player-role"></p>
+                            <p class="card-theme"><span id="cardThemeText">Tema:</span> <strong
+                                    id="card-theme-value">???</strong></p>
+                            <p class="word-text" id="player-word"></p>
+                            <p class="fake-hint hidden" id="fake-hint">Non conosci la parola: fingi e improvvisa!</p>
+                            <button id="hide-word" class="btn secondary-btn"><span id="seenItText">Ho Visto</span></button>
+                        </div>
+                    </div>
+                </div>
+                <button id="show-word" class="im-tap-target" aria-label="Scopri la tua parola"></button>
+            </div>
+        </div>
+
+        <!-- Drawing Screen -->
+        <div id="drawing-screen" class="game-screen">
+            <div class="draw-topbar">
+                <span class="draw-chip theme-chip-sm"><span id="drawThemeLabel">Tema</span><strong
+                        id="draw-theme">???</strong></span>
+                <span class="draw-chip round-chip"><span id="drawRoundLabel">Giro</span><strong
+                        id="draw-round">1/2</strong></span>
+            </div>
+
+            <div class="turn-banner" id="turn-banner">
+                <span class="turn-dot" id="turn-dot"></span>
+                <span class="turn-banner-text"><span id="drawTurnText">Tocca a</span> <strong
+                        id="draw-player">Giocatore 1</strong></span>
+            </div>
+
+            <div class="paper-wrap">
+                <canvas id="paper"></canvas>
+                <div class="paper-hint" id="paper-hint">Disegna UNA sola linea, senza staccare il dito</div>
+            </div>
+
+            <div class="draw-actions">
+                <button id="undo-stroke" class="btn secondary-btn hidden"><span id="undoStrokeText">Rifai il
+                        tratto</span></button>
+                <button id="next-turn" class="btn primary-btn" disabled><span id="nextTurnText">Disegna il tuo
+                        tratto</span></button>
+            </div>
+        </div>
+
+        <!-- Discussion Screen -->
+        <div id="discuss-screen" class="game-screen">
+            <h2 id="discussTitle">Chi è il Falso Artista?</h2>
+
+            <div class="drawing-preview">
+                <img id="drawing-preview-img" alt="">
+            </div>
+
+            <div class="info-card">
+                <p id="discussInstructionsText">Il disegno è finito. Ora parlate a voce: discutete e votate a mano
+                    alzata chi pensate sia il Falso Artista.</p>
+                <p id="discussTipText"><strong>Consiglio:</strong> Guardate i tratti esitanti... ma occhio, chi conosce
+                    la parola potrebbe disegnare male apposta!</p>
+            </div>
+
+            <div class="info-card theme-card">
+                <p id="discussThemeText">Tema:</p>
+                <p class="theme-display" id="discuss-theme">???</p>
+            </div>
+
+            <button id="reveal-roles" class="btn primary-btn glow-btn"><span id="revealRolesText">Rivela il Falso
+                    Artista</span></button>
+        </div>
+
+        <!-- Reveal Screen -->
+        <div id="reveal-screen" class="game-screen">
+            <div class="reveal-header">
+                <h2 id="fakeIsText">Il Falso Artista era...</h2>
+                <p class="fake-reveal"><span id="playerText">Il giocatore</span> <span id="fake-num">X</span>!</p>
+            </div>
+
+            <div class="drawing-preview small">
+                <img id="reveal-preview-img" alt="">
+            </div>
+
+            <div class="shared-prompt-container" id="word-reveal-container">
+                <p id="wordWasText">La parola era:</p>
+                <p id="secret-word" class="word-text hidden">???</p>
+                <button id="reveal-word" class="btn secondary-btn"><span id="revealWordText">Rivela la
+                        Parola</span></button>
+            </div>
+
+            <div class="info-card fake-card">
+                <p id="fakeGuessText">Falso Artista, prova a indovinare la parola! Se la indovini, vinci tu!</p>
+            </div>
+
+            <button id="play-again" class="btn primary-btn"><span id="playAgainText">Gioca di Nuovo</span></button>
+        </div>
+    </div>
+
+    <script src="../lang.js"></script>
+    <script src="translations.js"></script>
+    <script src="scripts.js"></script>
+
+    <!-- Visual-only: flip the reveal card whenever the word is shown/hidden by the game logic -->
+    <script>
+        (function () {
+            const flip = document.getElementById('mr-flip');
+            const wc = document.getElementById('word-container');
+            if (!flip || !wc) return;
+            const sync = () => flip.classList.toggle('flipped', !wc.classList.contains('hidden'));
+            new MutationObserver(sync).observe(wc, { attributes: true, attributeFilter: ['class'] });
+            sync();
+        })();
+    </script>
+</body>
+
+</html>

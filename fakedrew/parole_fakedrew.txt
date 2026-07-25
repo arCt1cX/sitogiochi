@@ -1,0 +1,635 @@
+Melanzana|Cibo e bevande
+Salmone|Cibo e bevande
+Panettone|Cibo e bevande
+Mela|Cibo e bevande
+Banana|Cibo e bevande
+Pomodoro|Cibo e bevande
+Pane|Cibo e bevande
+Formaggio|Cibo e bevande
+Prosciutto|Cibo e bevande
+Cioccolato|Cibo e bevande
+Torta|Cibo e bevande
+Latte|Cibo e bevande
+Acqua|Cibo e bevande
+Birra|Cibo e bevande
+Pizza|Cibo e bevande
+Gelato|Cibo e bevande
+Pasta|Cibo e bevande
+Caffè|Cibo e bevande
+Lasagna|Cibo e bevande
+Gnocchi|Cibo e bevande
+Patatine|Cibo e bevande
+Nutella|Cibo e bevande
+Cornetto|Cibo e bevande
+Tramezzino|Cibo e bevande
+Aceto|Cibo e bevande
+Zucchero|Cibo e bevande
+Sale|Cibo e bevande
+Limone|Cibo e bevande
+Zuppa|Cibo e bevande
+Bistecca|Cibo e bevande
+Polenta|Cibo e bevande
+Origano|Cibo e bevande
+Sushi|Cibo e bevande
+Hamburger|Cibo e bevande
+Carbonara|Cibo e bevande
+Pesto|Cibo e bevande
+Fragola|Cibo e bevande
+Noce|Cibo e bevande
+Tiramisù|Cibo e bevande
+Cannolo|Cibo e bevande
+Crepes|Cibo e bevande
+Muffin|Cibo e bevande
+Budino|Cibo e bevande
+Ghiacciolo|Cibo e bevande
+Kiwi|Cibo e bevande
+Uva|Cibo e bevande
+Pesca|Cibo e bevande
+Anguria|Cibo e bevande
+Cocco|Cibo e bevande
+Fico|Cibo e bevande
+Avocado|Cibo e bevande
+Mirtillo|Cibo e bevande
+Patata|Cibo e bevande
+Cipolla|Cibo e bevande
+Lattuga|Cibo e bevande
+Broccoli|Cibo e bevande
+Cetriolo|Cibo e bevande
+Zucca|Cibo e bevande
+Piselli|Cibo e bevande
+Lenticchie|Cibo e bevande
+Mais|Cibo e bevande
+Farro|Cibo e bevande
+Mozzarella|Cibo e bevande
+Parmigiano|Cibo e bevande
+Gorgonzola|Cibo e bevande
+Burro|Cibo e bevande
+Uovo|Cibo e bevande
+Bacon|Cibo e bevande
+Salsiccia|Cibo e bevande
+Pollo|Cibo e bevande
+Tonno|Cibo e bevande
+Gambero|Cibo e bevande
+Cozze|Cibo e bevande
+Calamaro|Cibo e bevande
+Risotto|Cibo e bevande
+Spaghetti|Cibo e bevande
+Tagliatelle|Cibo e bevande
+Tortellini|Cibo e bevande
+Cous cous|Cibo e bevande
+Kebab|Cibo e bevande
+Tacos|Cibo e bevande
+Toast|Cibo e bevande
+Piadina|Cibo e bevande
+Cracker|Cibo e bevande
+Marmellata|Cibo e bevande
+Miele|Cibo e bevande
+Brioche|Cibo e bevande
+Cheesecake|Cibo e bevande
+Brownie|Cibo e bevande
+Donut|Cibo e bevande
+Granita|Cibo e bevande
+Aranciata|Cibo e bevande
+Coca cola|Cibo e bevande
+Camomilla|Cibo e bevande
+Cappuccino|Cibo e bevande
+Espresso|Cibo e bevande
+Ketchup|Cibo e bevande
+Senape|Cibo e bevande
+Rosmarino|Cibo e bevande
+Peperoncino|Cibo e bevande
+Oliva|Cibo e bevande
+Pistacchio|Cibo e bevande
+Mandorla|Cibo e bevande
+Croissant|Cibo e bevande
+Waffle|Cibo e bevande
+Gelato alla vaniglia|Cibo e bevande
+Calzini|Moda e abbigliamento
+Sciarpa|Moda e abbigliamento
+Cintura|Moda e abbigliamento
+Cravatta|Moda e abbigliamento
+Pantofole|Moda e abbigliamento
+Scarpe|Moda e abbigliamento
+Jeans|Moda e abbigliamento
+Maglietta|Moda e abbigliamento
+Giacca|Moda e abbigliamento
+Cappello|Moda e abbigliamento
+Occhiali|Moda e abbigliamento
+Orologio|Moda e abbigliamento
+Gonna|Moda e abbigliamento
+Stivali|Moda e abbigliamento
+Anello|Moda e abbigliamento
+Borsa|Moda e abbigliamento
+Portafoglio|Moda e abbigliamento
+Maglione|Moda e abbigliamento
+Camicetta|Moda e abbigliamento
+Sedia|Arredamento e parti della casa
+Tavolo|Arredamento e parti della casa
+Letto|Arredamento e parti della casa
+Armadio|Arredamento e parti della casa
+Lampada|Arredamento e parti della casa
+Specchio|Arredamento e parti della casa
+Finestra|Arredamento e parti della casa
+Muro|Arredamento e parti della casa
+Giardino|Arredamento e parti della casa
+Tappeto|Arredamento e parti della casa
+Tenda|Arredamento e parti della casa
+Camino|Arredamento e parti della casa
+Gabinetto|Arredamento e parti della casa
+Cane|Animali
+Coccodrillo|Animali
+Fenicottero|Animali
+Tartaruga|Animali
+Polpo|Animali
+Medusa|Animali
+Cammello|Animali
+Giraffa|Animali
+Pipistrello|Animali
+Balena|Animali
+Tigre|Animali
+Libellula|Animali
+Delfino|Animali
+Leone|Animali
+Elefante|Animali
+Castoro|Animali
+Cigno|Animali
+Ippopotamo|Animali
+Scimmia|Animali
+Vipera|Animali
+Ragno|Animali
+Ape|Animali
+Mosca|Animali
+Coniglio|Animali
+Cavallo|Animali
+Mucca|Animali
+Maiale|Animali
+Pecora|Animali
+Anatra|Animali
+Aquila|Animali
+Gufo|Animali
+Pappagallo|Animali
+Pinguino|Animali
+Orso polare|Animali
+Lupo|Animali
+Cervo|Animali
+Giaguaro|Animali
+Grillo|Animali
+Rana|Animali
+Volpe|Animali
+Alligatore|Animali
+Piccione|Animali
+Scoiattolo|Animali
+Coccinella|Animali
+Riccio|Animali
+Pantera|Animali
+Marmotta|Animali
+Puma|Animali
+Drago|Fantasia e creature mitologiche
+Unicorno|Fantasia e creature mitologiche
+Sirena|Fantasia e creature mitologiche
+Vampiro|Fantasia e creature mitologiche
+Fantasma|Fantasia e creature mitologiche
+Strega|Fantasia e creature mitologiche
+Fata|Fantasia e creature mitologiche
+Centauro|Fantasia e creature mitologiche
+Orco|Fantasia e creature mitologiche
+Goblin|Fantasia e creature mitologiche
+Yeti|Fantasia e creature mitologiche
+Bigfoot|Fantasia e creature mitologiche
+Minotauro|Fantasia e creature mitologiche
+Ciclope|Fantasia e creature mitologiche
+McDonald's|Marche famose
+Coca-Cola|Marche famose
+Nike|Marche famose
+IKEA|Marche famose
+Fiat|Marche famose
+Ferrero|Marche famose
+Chanel|Marche famose
+Ferrari|Marche Famose
+Microsoft|Marche famose
+Gucci|Marche famose
+Apple|Marche famose
+Adidas|Marche famose
+Sony|Marche famose
+Volkswagen|Marche famose
+Porsche|Marche famose
+Tesla|Marche famose
+Ford|Marche famose
+H&M|Marche famose
+Prada|Marche famose
+Levi's|Marche famose
+KFC|Marche famose
+Red Bull|Marche famose
+Versace|Marche famose
+Eurospin|Marche famose
+The North Face|Marche famose
+Barilla|Marche famose
+Pringles|Marche famose
+Oreo|Marche famose
+Lavazza|Marche famose
+Starbucks|Marche famose
+MasterCard|Marche famose
+Rolex|Marche famose
+Haribo|Marche famose
+Campari|Marche famose
+Peroni|Marche famose
+Algida|Marche famose
+Autogrill|Marche famose
+Trenitalia|Marche famose
+Ferrarelle|Marche famose
+Mulino Bianco|Marche famose
+Guinness|Marche famose
+Nespresso|Marche famose
+Nintendo|Marche famose
+Kinder|Marche famose
+Airbnb|Marche famose
+Ray-Ban|Marche famose
+Tennis|Sport
+Nuoto|Sport
+Sci|Sport
+Pallavolo|Sport
+Rugby|Sport
+Calcio|Sport
+Salto in alto|Sport
+Equitazione|Sport
+Wrestling|Sport
+Pattinaggio|Sport
+Surf|Sport
+Basket|Sport
+Ping Pong|Sport
+Hockey|Sport
+Baseball|Sport
+Golf|Sport
+Boxe|Sport
+Karate|Sport
+Judo|Sport
+Formula 1|Sport
+Moto GP|Sport
+Ciclismo|Sport
+Ginnastica artistica|Sport
+Palla prigioniera|Sport
+Snowboard|Sport
+Tiro con l'arco|Sport
+Sollevamento pesi|Sport
+MMA|Sport
+Canottaggio|Sport
+Motocross|Sport
+Lancio del martello|Sport
+Beach volley|Sport
+Bowling|Sport
+Padel|Sport
+Skateboard|Sport
+Curling|Sport
+Freccette|Sport
+Matrimonio|Festività e celebrazioni
+Compleanno|Festività e celebrazioni
+Halloween|Festività e celebrazioni
+Pasqua|Festività e celebrazioni
+San Valentino|Festività e celebrazioni
+Festa del papà|Festività e celebrazioni
+Epifania|Festività e celebrazioni
+Pasquetta|Festività e celebrazioni
+25 Aprile|Festività e celebrazioni
+Ferragosto|Festività e celebrazioni
+Natale|Festività e celebrazioni
+Capodanno|Festività e celebrazioni
+Festa della Donna|Festività e celebrazioni
+Carnevale|Festività e celebrazioni
+Prima comunione|Festività e celebrazioni
+Battesimo|Festività e celebrazioni
+Diciottesimo compleanno|Festività e celebrazioni
+Vigilia di Natale|Festività e celebrazioni
+Laurea|Festività e celebrazioni
+Addio al celibato|Festività e celebrazioni
+Hanukkah|Festività e celebrazioni
+Ramadan|Festività e celebrazioni
+Gender reveal|Festività e celebrazioni
+Dottore|Lavori e mestieri
+Avvocato|Lavori e mestieri
+Pompiere|Lavori e mestieri
+Cuoco|Lavori e mestieri
+Ingegnere|Lavori e mestieri
+Idraulico|Lavori e mestieri
+Meccanico|Lavori e mestieri
+Attore|Lavori e mestieri
+Cantante|Lavori e mestieri
+Veterinario|Lavori e mestieri
+Psicologo|Lavori e mestieri
+Architetto|Lavori e mestieri
+Regista|Lavori e mestieri
+Giornalista|Lavori e mestieri
+Pasticcere|Lavori e mestieri
+Panettiere|Lavori e mestieri
+Cameriere|Lavori e mestieri
+Barista|Lavori e mestieri
+Elettricista|Lavori e mestieri
+Fabbro|Lavori e mestieri
+Sommelier|Lavori e mestieri
+Hostess|Lavori e mestieri
+Pilota di aerei|Lavori e mestieri
+Carabiniere|Lavori e mestieri
+Vigile del fuoco|Lavori e mestieri
+Agente immobiliare|Lavori e mestieri
+YouTuber|Lavori e mestieri
+Parrucchiere|Lavori e mestieri
+Personal trainer|Lavori e mestieri
+Nutrizionista|Lavori e mestieri
+Chimico|Lavori e mestieri
+Giardiniere|Lavori e mestieri
+Baby sitter|Lavori e mestieri
+Arbitro|Lavori e mestieri
+Pittore|Lavori e mestieri
+Ottico|Lavori e mestieri
+Sarto|Lavori e mestieri
+Podologo|Lavori e mestieri
+Tatuatore|Lavori e mestieri
+Pianista|Lavori e mestieri
+Giornalaio|Lavori e mestieri
+Contadino|Lavori e mestieri
+Tabaccaio|Lavori e mestieri
+Ginecologo|Lavori e mestieri
+Corriere|Lavori e mestieri
+Falegname|Lavori e mestieri
+DJ|Lavori e mestieri
+Giudice|Lavori e mestieri
+Notaio|Lavori e mestieri
+Gioielliere|Lavori e mestieri
+Pilota|Lavori e mestieri
+Maestro|Lavori e mestieri
+Dentista|Lavori e mestieri
+Farmacista|Lavori e mestieri
+Fotografo|Lavori e mestieri
+Muratore|Lavori e mestieri
+Macellaio|Lavori e mestieri
+Astronauta|Lavori e mestieri
+Bibliotecario|Lavori e mestieri
+Programmatore|Lavori e mestieri
+Biologo|Lavori e mestieri
+Attore teatrale|Lavori e mestieri
+Pescatore|Lavori e mestieri
+Taxi|Trasporti
+Nave|Trasporti
+Camion|Trasporti
+Moto|Trasporti
+Tram|Trasporti
+Barca a vela|Trasporti
+Aereo|Trasporti
+Treno|Trasporti
+Bicicletta|Trasporti
+Ambulanza|Trasporti
+Camion dei Pompieri|Trasporti
+Monopattino|Trasporti
+Sottomarino|Trasporti
+Autobus|Trasporti
+Pullman|Trasporti
+Elicottero|Trasporti
+Seggiovia|Trasporti
+Metropolitana|Trasporti
+Moto d'acqua|Trasporti
+Canoa|Trasporti
+Kayak|Trasporti
+Ruspa|Trasporti
+Mongolfiera|Trasporti
+Limousine|Trasporti
+Jet ski|Trasporti
+Carro armato|Trasporti
+Camper|Trasporti
+Frigorifero|Elettrodomestici
+Lavatrice|Elettrodomestici
+Forno|Elettrodomestici
+Ventilatore|Elettrodomestici
+Aspirapolvere|Elettrodomestici
+Lavastoviglie|Elettrodomestici
+Frullatore|Elettrodomestici
+Macchina del caffè|Elettrodomestici
+Tostapane|Elettrodomestici
+Stufa|Elettrodomestici
+Termosifone|Elettrodomestici
+Ferro da stiro|Elettrodomestici
+Friggitrice ad aria|Elettrodomestici
+Dentifricio|Igiene personale
+Sapone|Igiene personale
+Shampoo|Igiene personale
+Deodorante|Igiene personale
+Rasoio|Igiene personale
+Pettine|Igiene personale
+Balsamo|Igiene personale
+Salviette umidificate|Igiene personale
+Filo interdentale|Igiene personale
+Cotton fioc|Igiene personale
+Dopobarba|Igiene personale
+Saponetta|Igiene personale
+Gel disinfettante|Igiene personale
+Spugna|Igiene personale
+Violino|Strumenti musicali
+Chitarra|Strumenti musicali
+Batteria|Strumenti musicali
+Arpa|Strumenti musicali
+Flauto|Strumenti musicali
+Tromba|Strumenti musicali
+Pianoforte|Strumenti musicali
+Fisarmonica|Strumenti musicali
+Sassofono|Strumenti musicali
+Clarinetto|Strumenti musicali
+Xilofono|Strumenti musicali
+Mandolino|Strumenti musicali
+Cluedo|Giochi e videogiochi
+Taboo|Giochi e videogiochi
+Trivial Pursuit|Giochi e videogiochi
+Call of Duty|Giochi e videogiochi
+League of Legends|Giochi e videogiochi
+Zelda|Giochi e videogiochi
+The Sims|Giochi e videogiochi
+Tetris|Giochi e videogiochi
+Pac-Man|Giochi e videogiochi
+Roblox|Giochi e videogiochi
+Scacchi|Giochi e videogiochi
+Dama|Giochi e videogiochi
+Gioco dell'oca|Giochi e videogiochi
+Nascondino|Giochi e videogiochi
+Risiko|Giochi e videogiochi
+Scarabeo|Giochi e videogiochi
+Nomi Cose Città|Giochi e videogiochi
+DrewGames|Giochi e videogiochi
+Picolo|Giochi e videogiochi
+Pictionary|Giochi e videogiochi
+Uno|Giochi e videogiochi
+Yu-Gi-Oh!|Giochi e videogiochi
+Burraco|Giochi e videogiochi
+Twister|Giochi e videogiochi
+Sudoku|Giochi e videogiochi
+Cruciverba|Giochi e videogiochi
+Escape Room|Giochi e videogiochi
+GTA|Giochi e videogiochi
+Monopoli|Giochi e videogiochi
+Poker|Giochi e videogiochi
+Super Mario|Giochi e videogiochi
+Mario Kart|Giochi e videogiochi
+Geometry Dash|Giochi e videogiochi
+Tresette|Giochi e videogiochi
+Blackjack|Giochi e videogiochi
+Minecraft|Giochi e videogiochi
+Jenga|Giochi e videogiochi
+Briscola|Giochi e videogiochi
+Flipper|Giochi e videogiochi
+FIFA|Giochi e videogiochi
+NBA 2k|Giochi e videogiochi
+Clash Royale|Giochi e videogiochi
+Among Us|Giochi e videogiochi
+Domino|Giochi e videogiochi
+Rocket League|Giochi e videogiochi
+Cuore|Corpo umano
+Mano|Corpo umano
+Occhio|Corpo umano
+Naso|Corpo umano
+Gomito|Corpo umano
+Spalla|Corpo umano
+Polso|Corpo umano
+Dito|Corpo umano
+Costola|Corpo umano
+Lingua|Corpo umano
+Sopracciglio|Corpo umano
+Polmone|Corpo umano
+Stomaco|Corpo umano
+Fronte|Corpo umano
+Unghia|Corpo umano
+Polpaccio|Corpo umano
+Collo|Corpo umano
+Fegato|Corpo umano
+Capelli|Corpo umano
+Culo|Corpo umano
+Vagina|Corpo umano
+Pene|Corpo umano
+Testicoli|Corpo umano
+Addominali|Corpo umano
+Cervello|Corpo umano
+Orecchio|Corpo umano
+Pelle|Corpo umano
+Bicipite|Corpo umano
+Ombelico|Corpo umano
+Ano|Corpo umano
+Labbra|Corpo umano
+Rene|Corpo umano
+Tallone|Corpo umano
+Mascella|Corpo umano
+Retina|Corpo umano
+Gluteo|Corpo umano
+Oro|Pietre preziose e metalli
+Diamante|Pietre preziose e metalli
+Smeraldo|Pietre preziose e metalli
+Rubino|Pietre preziose e metalli
+Bronzo|Pietre preziose e metalli
+Perla|Pietre preziose e metalli
+Platino|Pietre preziose e metalli
+Argento|Pietre preziose e metalli
+Ferro|Pietre preziose e metalli
+Acciaio|Pietre preziose e metalli
+Rame|Pietre preziose e metalli
+Zaffiro|Pietre preziose e metalli
+Piombo|Pietre preziose e metalli
+Nichel|Pietre preziose e metalli
+Quarzo|Pietre preziose e metalli
+Whisky|Bevande alcoliche
+Vodka|Bevande alcoliche
+Tequila|Bevande alcoliche
+Champagne|Bevande alcoliche
+Spritz|Bevande alcoliche
+Gin Tonic|Bevande alcoliche
+Amaro del Capo|Bevande alcoliche
+Jägermeister|Bevande alcoliche
+Gin|Bevande alcoliche
+Negroni|Bevande alcoliche
+Mojito|Bevande alcoliche
+Rum|Bevande alcoliche
+Prosecco|Bevande alcoliche
+Fragolino|Bevande alcoliche
+Sangria|Bevande alcoliche
+Quattro Bianchi|Bevande alcoliche
+Latte di Suocera|Bevande alcoliche
+Assenzio|Bevande alcoliche
+Limoncello|Bevande alcoliche
+Moretti|Bevande alcoliche
+Heineken|Bevande alcoliche
+Poretti|Bevande alcoliche
+Ichnusa|Bevande alcoliche
+Vino rosato|Bevande alcoliche
+Sakè|Bevande alcoliche
+Tom|Personaggi dei cartoni animati
+Titti|Personaggi dei cartoni animati
+Pippo|Personaggi dei cartoni animati
+Homer Simpson|Personaggi dei cartoni animati
+SpongeBob|Personaggi dei cartoni animati
+Daffy Duck|Personaggi dei cartoni animati
+Bugs Bunny|Personaggi dei cartoni animati
+Scooby-Doo|Personaggi dei cartoni animati
+Bart Simpson|Personaggi dei cartoni animati
+Pikachu|Personaggi dei cartoni animati
+Lisa Simpson|Personaggi dei cartoni animati
+Bulbasaur|Personaggi dei cartoni animati
+Marge Simpson|Personaggi dei cartoni animati
+Gohan|Personaggi dei cartoni animati
+Vegeta|Personaggi dei cartoni animati
+Fred Flintstone|Personaggi dei cartoni animati
+Orso Yoghi|Personaggi dei cartoni animati
+Winnie the Pooh|Personaggi dei cartoni animati
+Paperino|Personaggi dei cartoni animati
+Topolino|Personaggi dei cartoni animati
+Obelix|Personaggi dei cartoni animati
+Asterix|Personaggi dei cartoni animati
+Dexter|Personaggi dei cartoni animati
+Johnny Bravo|Personaggi dei cartoni animati
+Braccio di Ferro|Personaggi dei cartoni animati
+Wile E. Coyote|Personaggi dei cartoni animati
+Beep Beep|Personaggi dei cartoni animati
+Garfield|Personaggi dei cartoni animati
+Doraemon|Personaggi dei cartoni animati
+Minnie|Personaggi dei cartoni animati
+Cosmo|Personaggi dei cartoni animati
+Mowgli|Personaggi dei cartoni animati
+Shrek|Personaggi dei cartoni animati
+Po (Kong Fu Panda)|Personaggi dei cartoni animati
+Woody|Personaggi dei cartoni animati
+Nemo|Personaggi dei cartoni animati
+Taz|Personaggi dei cartoni animati
+Olaf|Personaggi dei cartoni animati
+Simba|Personaggi dei cartoni animati
+Pumbaa|Personaggi dei cartoni animati
+Denzel Crocker|Personaggi dei cartoni animati
+Mufasa|Personaggi dei cartoni animati
+Peter Griffin|Personaggi dei cartoni animati
+Goku|Personaggi dei cartoni animati
+Naruto|Personaggi dei cartoni animati
+Hello Kitty|Personaggi dei cartoni animati
+Ben 10|Personaggi dei cartoni animati
+Perry l'Ornitorinco|Personaggi dei cartoni animati
+Ferb|Personaggi dei cartoni animati
+Phineas|Personaggi dei cartoni animati
+Piramide|Monumenti e luoghi famosi
+Torre Eiffel|Monumenti e luoghi famosi
+Statua della Libertà|Monumenti e luoghi famosi
+Muraglia Cinese|Monumenti e luoghi famosi
+Stonehenge|Monumenti e luoghi famosi
+Torre di Pisa|Monumenti e luoghi famosi
+Taj Mahal|Monumenti e luoghi famosi
+Colosseo|Monumenti e luoghi famosi
+Muro di Berlino|Monumenti e luoghi famosi
+Muro del Pianto|Monumenti e luoghi famosi
+London Eye|Monumenti e luoghi famosi
+Big Ben|Monumenti e luoghi famosi
+Cristo Redentore di Rio|Monumenti e luoghi famosi
+Museo del Louvre|Monumenti e luoghi famosi
+Empire State Building|Monumenti e luoghi famosi
+Torri Gemelle|Monumenti e luoghi famosi
+Monte Everest|Monumenti e luoghi famosi
+Kilimanjaro|Monumenti e luoghi famosi
+Arco di Trionfo|Monumenti e luoghi famosi
+Fontana di Trevi|Monumenti e luoghi famosi
+Monte Rushmore|Monumenti e luoghi famosi
+Burj Khalifa|Monumenti e luoghi famosi
+Sydney Opera House|Monumenti e luoghi famosi
+Machu Picchu|Monumenti e luoghi famosi
+Duomo di Milano|Monumenti e luoghi famosi
+Golden Gate Bridge|Monumenti e luoghi famosi
+Canale di Panama|Monumenti e luoghi famosi
+Cascate del Niagara|Monumenti e luoghi famosi
+Monte Fuji|Monumenti e luoghi famosi

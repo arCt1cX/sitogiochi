@@ -289,6 +289,7 @@
             'taboo': 'taboo.png',
             'yahtzee': 'yahtzee.png',
             'mrdrew': 'mrdrew.png',
+            'fakedrew': 'fakedrew.svg',
             'hottakes': 'hottakes.png',
             'indovinachi': 'indovinachi.png',
             'quizzy': 'quizzy.png',

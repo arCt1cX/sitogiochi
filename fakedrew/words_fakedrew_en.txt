@@ -1,0 +1,254 @@
+Pizza|Food and drinks
+Ice Cream|Food and drinks
+Pasta|Food and drinks
+Coffee|Food and drinks
+Dog|Animals and nature
+Sea|Animals and nature
+Mountain|Animals and nature
+Ferrari|Famous brands
+Soccer|Sports
+Guitar|Music
+Beer|Food and drinks
+Sun|Animals and nature
+Airplane|Transport
+Train|Transport
+Bicycle|Transport
+Apple|Food and drinks
+Banana|Food and drinks
+Tomato|Food and drinks
+Bread|Food and drinks
+Cheese|Food and drinks
+Ham|Food and drinks
+Chocolate|Food and drinks
+Cake|Food and drinks
+Milk|Food and drinks
+Water|Food and drinks
+Book|Entertainment
+Movie|Entertainment
+Music|Entertainment
+Phone|Technology
+Computer|Technology
+Shoes|Fashion and clothing
+Jeans|Fashion and clothing
+T-shirt|Fashion and clothing
+Jacket|Fashion and clothing
+Hat|Fashion and clothing
+Glasses|Fashion and clothing
+Watch|Fashion and clothing
+Ring|Fashion and clothing
+Bag|Fashion and clothing
+Wallet|Fashion and clothing
+Umbrella|Useful objects
+Chair|Furniture and home
+Table|Furniture and home
+Bed|Furniture and home
+Wardrobe|Furniture and home
+Lamp|Furniture and home
+Mirror|Furniture and home
+Window|Furniture and home
+Wall|Furniture and home
+Garden|Furniture and home
+Tree|Animals and nature
+Flower|Animals and nature
+Grass|Animals and nature
+Bird|Animals and nature
+Fish|Animals and nature
+Lion|Animals and nature
+Elephant|Animals and nature
+Monkey|Animals and nature
+Snake|Animals and nature
+Spider|Animals and nature
+Bee|Animals and nature
+Fly|Animals and nature
+Rabbit|Animals and nature
+Horse|Animals and nature
+Cow|Animals and nature
+Pig|Animals and nature
+Sheep|Animals and nature
+Chicken|Animals and nature
+Duck|Animals and nature
+Eagle|Animals and nature
+Owl|Animals and nature
+Parrot|Animals and nature
+Penguin|Animals and nature
+Bear|Animals and nature
+Wolf|Animals and nature
+Deer|Animals and nature
+Dragon|Fantasy and mythical creatures
+Unicorn|Fantasy and mythical creatures
+Mermaid|Fantasy and mythical creatures
+Vampire|Fantasy and mythical creatures
+Ghost|Fantasy and mythical creatures
+Witch|Fantasy and mythical creatures
+Fairy|Fantasy and mythical creatures
+King|Story characters
+Prince|Story characters
+Knight|Story characters
+Pirate|Story characters
+Astronaut|Space and technology
+Robot|Space and technology
+Superhero|Film and TV
+Spiderman|Film and TV
+Superman|Film and TV
+Ironman|Film and TV
+Hulk|Film and TV
+Mario|Board games and video games
+Sonic|Board games and video games
+Minecraft|Board games and video games
+PlayStation|Board games and video games
+Netflix|Film and TV
+Instagram|Technology
+WhatsApp|Technology
+Google|Technology
+Amazon|Technology
+McDonald's|Famous brands
+Coca-Cola|Famous brands
+Nike|Famous brands
+IKEA|Famous brands
+Ford|Famous brands
+Yankees|Sports
+Lakers|Sports
+Real Madrid|Sports
+Messi|Famous people
+Tennis|Sports
+Swimming|Sports
+Skiing|Sports
+Volleyball|Sports
+Rugby|Sports
+Golf|Sports
+Boxing|Sports
+Yoga|Body and health
+Gym|Sports
+Stadium|Sports
+Cinema|Film and TV
+Museum|Services and places
+Library|Services and places
+School|Services and places
+Hospital|Body and health
+Pharmacy|Body and health
+Bank|Services and places
+Supermarket|Services and places
+Restaurant|Services and places
+Bar|Services and places
+Club|Services and places
+Hotel|Services and places
+Beach|Services and places
+Park|Services and places
+Zoo|Services and places
+Amusement Park|Services and places
+Concert|Music
+Wedding|Holidays and celebrations
+Birthday|Holidays and celebrations
+Halloween|Holidays and celebrations
+Easter|Holidays and celebrations
+Valentine's Day|Holidays and celebrations
+Breakfast|Food and drinks
+Dinner|Food and drinks
+Appetizer|Food and drinks
+Main Course|Food and drinks
+Dessert|Food and drinks
+Espresso|Food and drinks
+Doctor|Jobs and professions
+Lawyer|Jobs and professions
+Firefighter|Jobs and professions
+Chef|Jobs and professions
+Whale|Animals and nature
+Tiger|Animals and nature
+Sushi|Food and drinks
+Hamburger|Food and drinks
+Plumber|Jobs and professions
+Mechanic|Jobs and professions
+Actor|Jobs and professions
+Singer|Jobs and professions
+Taxi|Transport
+Ship|Transport
+Truck|Transport
+Motorcycle|Transport
+Tram|Transport
+Skateboard|Transport
+Sailboat|Transport
+Refrigerator|Appliances
+Washing Machine|Appliances
+Oven|Appliances
+Fan|Appliances
+Vacuum Cleaner|Appliances
+Toothpaste|Personal hygiene
+Soap|Personal hygiene
+Shampoo|Personal hygiene
+Deodorant|Personal hygiene
+Razor|Personal hygiene
+Violin|Music
+Drums|Music
+Flute|Music
+Trumpet|Music
+Chess|Board games and video games
+Monopoly|Board games and video games
+Poker|Board games and video games
+Socks|Fashion and clothing
+Scarf|Fashion and clothing
+Belt|Fashion and clothing
+Tie|Fashion and clothing
+Slippers|Fashion and clothing
+Clue|Board games and video games
+Taboo|Board games and video games
+Trivial Pursuit|Board games and video games
+Call of Duty|Board games and video games
+League of Legends|Board games and video games
+Zelda|Board games and video games
+The Sims|Board games and video games
+Tetris|Board games and video games
+Pac-Man|Board games and video games
+GTA|Board games and video games
+Heart|Human body
+Hand|Human body
+Eye|Human body
+Nose|Human body
+Elbow|Human body
+Rain|Weather
+Thunder|Weather
+Hurricane|Weather
+Fog|Weather
+Rainbow|Weather
+Gold|Precious stones and metals
+Diamond|Precious stones and metals
+Emerald|Precious stones and metals
+Bronze|Precious stones and metals
+Pearl|Precious stones and metals
+Fishing|Hobbies
+Gardening|Hobbies
+Photography|Hobbies
+Sewing|Hobbies
+Writing|Hobbies
+Tiramisu|Desserts
+Cannoli|Desserts
+Crepes|Desserts
+Muffin|Desserts
+Pudding|Desserts
+Whiskey|Alcoholic drinks
+Vodka|Alcoholic drinks
+Tequila|Alcoholic drinks
+Champagne|Alcoholic drinks
+Spritz|Alcoholic drinks
+Rose|Flowers
+Sunflower|Flowers
+Orchid|Flowers
+Violet|Flowers
+Poppy|Flowers
+Mouse|Tech accessories
+Printer|Tech accessories
+Hard Drive|Tech accessories
+Router|Tech accessories
+Monitor|Tech accessories
+Ambulance|Emergency vehicles
+Fire Truck|Emergency vehicles
+Napoleon|Historical Figures
+Einstein|Historical Figures
+Leonardo da Vinci|Historical Figures
+Cleopatra|Historical Figures
+Columbus|Historical Figures
+Tom|Cartoons
+Tweety|Cartoons
+Goofy|Cartoons
+Homer|Cartoons
+SpongeBob|Cartoons
+Bugs Bunny|Cartoons

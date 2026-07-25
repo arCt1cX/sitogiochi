@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <defs>
+    <linearGradient id="fdPaper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9e4d8"/>
+    </linearGradient>
+    <linearGradient id="fdPencil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4c35a"/>
+      <stop offset="1" stop-color="#d99b1f"/>
+    </linearGradient>
+    <linearGradient id="fdHood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2c5e"/>
+      <stop offset="1" stop-color="#241a3c"/>
+    </linearGradient>
+    <filter id="fdShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Sheet of paper on the easel -->
+  <g filter="url(#fdShadow)" transform="rotate(-4 205 150)">
+    <rect x="96" y="42" width="216" height="212" rx="10" fill="url(#fdPaper)" stroke="#15101f" stroke-width="6"/>
+    <!-- clip at the top of the sheet -->
+    <rect x="176" y="30" width="56" height="20" rx="6" fill="#b9b0cc" stroke="#15101f" stroke-width="6"/>
+
+    <!-- Each stroke is one player's single line -->
+    <g stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="9">
+      <path d="M130 196c8-46 26-76 52-90" stroke="#1f6fd0"/>
+      <path d="M182 106c22-11 44-6 58 12" stroke="#d63b3b"/>
+      <path d="M240 118c14 20 18 46 12 74" stroke="#2f9e5f"/>
+      <path d="M132 200c30 14 66 16 120 -8" stroke="#8c4bd8"/>
+      <!-- the fake artist's hesitant, out-of-place scribble -->
+      <path d="M172 152c12-6 24 4 12 14s-4 20 10 14" stroke="#e08a17" stroke-dasharray="1 0"/>
+    </g>
+  </g>
+
+  <!-- Pencil -->
+  <g transform="rotate(38 300 214)">
+    <rect x="252" y="196" width="118" height="34" rx="7" fill="url(#fdPencil)" stroke="#15101f" stroke-width="6"/>
+    <path d="M252 196l-30 17 30 17z" fill="#f6e2b6" stroke="#15101f" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M232 207l-10 6 10 6z" fill="#2a2136" stroke="#15101f" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="344" y="196" width="26" height="34" rx="7" fill="#e2607a" stroke="#15101f" stroke-width="6"/>
+  </g>
+
+  <!-- Fake artist peeking from behind the sheet -->
+  <g transform="translate(6 0)">
+    <ellipse cx="66" cy="268" rx="46" ry="9" fill="#000" opacity="0.35"/>
+    <path d="M28 268c0-40 12-58 38-58s38 18 38 58z" fill="url(#fdHood)" stroke="#15101f" stroke-width="6" stroke-linejoin="round"/>
+    <circle cx="66" cy="176" r="38" fill="#3b2c5e" stroke="#15101f" stroke-width="6"/>
+    <path d="M34 168c18-16 46-16 64 0" stroke="#15101f" stroke-width="6" stroke-linecap="round"/>
+    <text x="66" y="196" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="52" fill="#ff9fb0" text-anchor="middle">?</text>
+  </g>
+</svg>

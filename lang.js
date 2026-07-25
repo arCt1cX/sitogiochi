@@ -336,6 +336,28 @@ const translations = {
                 'Se Mr. Drew viene scoperto, può provare a indovinare la parola per vincere!'
             ]
         },
+        'fakedrew': {
+            'title': 'Fake Drew',
+            'catchphrase': 'Un tratto a testa: chi non sa cosa state disegnando?',
+            'description': 'Fake Drew è il fratello disegnato di Mr. Drew. Tutti vedono la stessa parola segreta, tranne uno: il Falso Artista, che conosce solo il tema. Il telefono diventa un foglio bianco e, a turno, ogni giocatore aggiunge UNA sola linea al disegno. Alla fine si discute a voce e si vota chi non sapeva cosa stava disegnando!',
+            'players': '3-12 giocatori',
+            'time': '10-15 minuti',
+            'difficulty': 'Principiante',
+            'features': [
+                'Foglio da disegno condiviso direttamente sul telefono',
+                'Un colore diverso per ogni giocatore',
+                'Centinaia di parole facili da disegnare, divise per tema',
+                'Da 1 a 3 tratti a testa per partite più lunghe o veloci'
+            ],
+            'instructions': [
+                'Scegli il numero di giocatori e quanti tratti fa ciascuno',
+                'Ogni giocatore guarda in segreto la parola: il Falso Artista vede "???" e solo il tema',
+                'Appare un foglio bianco: a turno, ognuno disegna UNA sola linea senza staccare il dito',
+                'Il Falso Artista deve fingere di sapere cosa si sta disegnando',
+                'Finito il disegno, discutete a voce e votate a mano alzata chi è il Falso Artista',
+                'Se viene scoperto, può ancora vincere indovinando la parola!'
+            ]
+        },
         'drewnking': {
             'title': 'Drewnking Game',
             'catchphrase': 'Il gioco alcolico definitivo per feste! 🍻',
@@ -752,6 +774,28 @@ const translations = {
                 'Taking turns, each player says ONE word that describes their term',
                 'Discuss and vote on who you think is Mr. Drew',
                 'If Mr. Drew is caught, they can try to guess the word to win!'
+            ]
+        },
+        'fakedrew': {
+            'title': 'Fake Drew',
+            'catchphrase': 'One stroke each: who has no idea what you are drawing?',
+            'description': 'Fake Drew is the drawing brother of Mr. Drew. Everybody sees the same secret word, except one player: the Fake Artist, who only knows the theme. The phone turns into a blank sheet and, in turns, every player adds ONE single line to the drawing. At the end you talk it out and vote for whoever didn\'t know what they were drawing!',
+            'players': '3-12 players',
+            'time': '10-15 minutes',
+            'difficulty': 'Beginner',
+            'features': [
+                'Shared drawing sheet right on the phone',
+                'A different ink colour for each player',
+                'Hundreds of easy-to-draw words, sorted by theme',
+                'From 1 to 3 strokes each for longer or quicker games'
+            ],
+            'instructions': [
+                'Choose the number of players and how many strokes each one draws',
+                'Every player secretly views the word: the Fake Artist sees "???" and only the theme',
+                'A blank sheet appears: in turns, each player draws ONE single line without lifting their finger',
+                'The Fake Artist has to pretend they know what is being drawn',
+                'Once the drawing is done, discuss out loud and vote by a show of hands for the Fake Artist',
+                'If they get caught, they can still win by guessing the word!'
             ]
         },
         'drewnking': {
